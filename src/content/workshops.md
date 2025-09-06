@@ -21,50 +21,27 @@ sections:
 
   - type: "highlight"
     class: "services"
-    title: "AI Lead Machine™"
-    description: "Turn AI into your in-house marketing assistant. Design a marketing engine powered by AI—without losing the human creativity and judgment your business depends on."
+    title: "100-Day Lead Generation Sprint"
+    description: "Build a predictable lead generation system that delivers 5+ qualified leads per month through systematic daily execution and weekly optimization."
     button:
-      text: "Learn More"
-      url: "workshops/ai-lead-machine/"
+      text: "Join the Sprint"
+      url: "/contact/"
 
   - type: "features"
     class: "services"
     items:
-      - title: "What You'll Learn"
+      - title: "What You'll Build"
         description: |
-          • Map your customer journey and align it with AI-powered execution
-          • Create AI workflows for content, prospecting, and nurturing leads at scale
-          • Cut marketing costs while improving speed and consistency
-          • Access tested prompt libraries you can immediately adapt
-      - title: "What You'll Get"
+          • A complete lead generation system tailored to your business and target market
+          • Systematic daily execution routines that compound into predictable results
+          • Optimized messaging and positioning that resonates with your ideal clients
+          • Performance tracking and optimization processes for continuous improvement
+      - title: "100% Guarantee"
         description: |
-          • A custom AI-enabled lead generation system for your business
-          • Pre-built templates, workflows, and prompts for daily operations
-          • Clear framework for balancing human creativity with AI automation
-        highlight: true
-
-  - type: "highlight"
-    class: "audience"
-    title: "100 Days Lead Generation Sprint"
-    description: "Design, test, and implement your lead generation system in 100 days. Built for businesses that want results quickly and are ready to put in focused effort."
-    button:
-      text: "Learn More"
-      url: "workshops/100-days-sprint/"
-
-  - type: "features"
-    class: "audience"
-    items:
-      - title: "Strategic Foundation"
-        description: |
-          • Clarify your positioning and messaging for maximum impact
-          • Pick the right channels and tactics for your specific market
-          • Design a 12-month lead generation plan with 100-day sprint cycles
-          • Build tracking systems to refine and optimize continuously
-      - title: "Guaranteed Outcomes"
-        description: |
-          • A 100-day actionable roadmap for consistent lead generation
-          • Messaging frameworks and channel strategies tailored to your market
-          • Team confidence to execute systematically without firefighting
+          • 5+ qualified leads by day 90 or we work with you 60 more days free
+          • Weekly 1-on-1 strategy and optimization sessions
+          • Custom messaging frameworks and positioning development
+          • Complete system to generate 10+ leads monthly after 100 days
         highlight: true
 
   - type: "stats"
@@ -100,9 +77,9 @@ sections:
         description: "Tailored sessions for in-house teams implementing together."
 
 cta:
-  title: "Ready to Build Your Lead Generation System?"
-  subtitle: "Choose the workshop that fits your business needs and let's get started."
+  title: "Ready to Start Your 100-Day Sprint?"
+  subtitle: "Join the next cohort and build your predictable lead generation system."
   button:
-    text: "Get Started"
-    url: "contact/"
+    text: "Join the Sprint"
+    url: "/contact/"
 ---

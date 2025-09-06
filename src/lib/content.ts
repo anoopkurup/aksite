@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const CONTENT_PATH = '/Users/anoopkurup/Documents/anoopkurup-website/content';
+const CONTENT_PATH = path.join(process.cwd(), 'src/content');
 
 export interface ContentSection {
   type: string;

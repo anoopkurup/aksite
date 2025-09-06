@@ -32,6 +32,52 @@ export default function ConsultingPage() {
     }
   ];
 
+  const corePrinciples = [
+    {
+      iconType: "target",
+      title: "Strategy First",
+      description: "Clarity on positioning, messaging, and customer journey comes before campaigns."
+    },
+    {
+      iconType: "cpu",
+      title: "Systems Thinking",
+      description: "Marketing should run like a machine: structured, consistent, and scalable."
+    },
+    {
+      iconType: "handshake",
+      title: "AI as an Enabler",
+      description: "AI makes execution faster, cheaper, and more consistent—while keeping human creativity at the center."
+    }
+  ];
+
+  const methodSteps = [
+    {
+      number: "1",
+      title: "Diagnose",
+      description: "Understand your business model, customer journey, and current marketing challenges."
+    },
+    {
+      number: "2",
+      title: "Define",
+      description: "Clarify positioning, messaging, and differentiation that resonates with your ideal clients."
+    },
+    {
+      number: "3",
+      title: "Design",
+      description: "Create a marketing system that connects strategy with AI-enabled execution."
+    },
+    {
+      number: "4",
+      title: "Deploy",
+      description: "Implement workflows, templates, and tools with your team for consistent execution."
+    },
+    {
+      number: "5",
+      title: "Scale",
+      description: "Measure, refine, and expand the system so it grows without overwhelming your team."
+    }
+  ];
+
   const solutions = [
     {
       iconType: "target",
@@ -47,34 +93,6 @@ export default function ConsultingPage() {
       iconType: "cpu",
       title: "Builds Repeatable Lead Generation Systems",
       description: "We'll identify the most effective channels for your business and create sustainable workflows that generate qualified leads consistently. This includes content strategies, AI-powered automation, referral systems, and partnership development—all working together to reduce your dependence on any single source."
-    }
-  ];
-
-  const process = [
-    {
-      number: "1",
-      title: "Discovery & Diagnosis",
-      description: "We start by understanding your current marketing, challenges, and growth goals."
-    },
-    {
-      number: "2",
-      title: "Strategy & Positioning",
-      description: "We define your unique positioning and map the customer journey that fits your business."
-    },
-    {
-      number: "3",
-      title: "System Design",
-      description: "I create a structured marketing plan that combines strategy with AI-driven execution."
-    },
-    {
-      number: "4",
-      title: "Implementation Support",
-      description: "I work with your team to set up workflows, templates, and tools so they can run the system confidently."
-    },
-    {
-      number: "5",
-      title: "Review & Scale",
-      description: "We refine, measure results, and set up your system to scale without you being stuck in daily operations."
     }
   ];
 
@@ -125,25 +143,38 @@ export default function ConsultingPage() {
     }
   ];
 
+  const differences = [
+    {
+      title: "For Leaders",
+      description: "Confidence that marketing is running on a repeatable system, not random effort. You're no longer stuck in daily firefighting."
+    },
+    {
+      title: "For Teams",
+      description: "Clear playbooks, AI-powered workflows, and messaging frameworks make execution faster and less stressful. Everyone knows what to do, and why."
+    }
+  ];
+
   return (
     <PageTemplate 
-      title="Fix Your Marketing"
-      subtitle="Your marketing isn't broken. It's just scattered. I help professional services and tech-enabled businesses fix their marketing by creating clarity, focus, and a repeatable system for generating leads."
-      heroBackground="white"
+      title="Consulting: The Lead Machine Method™"
+      subtitle="Fix your scattered marketing with a structured, AI-enabled approach that transforms chaotic tactics into a predictable, scalable lead generation system."
+      heroBackground="gradient"
+      heroIcon="target"
     >
       {/* The 6 Most Common Marketing Problems */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">The 6 Most Common Marketing Problems</h2>
-            <p className="text-xl text-charcoal max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-oxford-blue mb-4">Why Most Marketing Doesn't Work</h2>
+            <p className="text-xl text-charcoal mb-6 font-medium">It's not about effort. It's about structure.</p>
+            <p className="text-lg text-charcoal max-w-4xl mx-auto">
               Most businesses don't fail at marketing because they lack effort. They fail because of these systematic issues:
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {marketingProblems.map((problem, index) => (
-              <Card key={index} className="p-6 bg-light-gray shadow-soft">
+              <Card key={index} className="p-6 bg-slate-50 shadow-soft">
                 <CardContent className="p-0">
                   <h3 className="text-lg font-bold text-oxford-blue mb-3">{problem.title}</h3>
                   <p className="text-charcoal text-sm leading-relaxed">{problem.description}</p>
@@ -152,33 +183,33 @@ export default function ConsultingPage() {
             ))}
           </div>
 
-          <div className="bg-light-gray p-8 rounded-xl text-center">
+          <div className="bg-slate-50 p-8 rounded-xl text-center">
             <p className="text-lg text-charcoal">
-              <strong>The result?</strong> Marketing feels like chaos. Teams work harder but see diminishing returns. Leads are inconsistent. Growth plateaus. Founders feel stuck in the day-to-day instead of building strategic value.
+              <strong>The outcome?</strong> Campaigns that fizzle out, growth that feels random, and leaders stuck in the weeds. Marketing feels like chaos. Teams work harder but see diminishing returns.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Fix Your Marketing with a System */}
-      <section className="py-16 px-6 bg-light-gray">
+      {/* Core Principles */}
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">Fix Your Marketing with a System</h2>
-            <p className="text-xl text-charcoal max-w-4xl mx-auto">
-              Instead of more tactics, you need strategic clarity and systematic execution. When we work together, we'll build a clear, structured marketing engine that transforms scattered efforts into predictable growth.
+            <h2 className="text-3xl font-bold text-oxford-blue mb-4">The Lead Machine Method™: Core Principles</h2>
+            <p className="text-xl text-charcoal">
+              My approach is built on three foundational principles that transform scattered marketing into systematic growth.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
-              <Card key={index} className="p-8 bg-white shadow-soft hover:shadow-medium transition-shadow">
+            {corePrinciples.map((principle, index) => (
+              <Card key={index} className="p-8 bg-white shadow-soft text-center hover:shadow-medium transition-shadow">
                 <CardContent className="p-0">
                   <div className="mb-6">
-                    <LineIcon type={solution.iconType} className="text-gamboge" size={56} />
+                    <LineIcon type={principle.iconType} className="text-gamboge mx-auto" size={56} />
                   </div>
-                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{solution.title}</h3>
-                  <p className="text-charcoal leading-relaxed">{solution.description}</p>
+                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{principle.title}</h3>
+                  <p className="text-charcoal leading-relaxed">{principle.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -186,16 +217,19 @@ export default function ConsultingPage() {
         </div>
       </section>
 
-      {/* My Consulting Process */}
-      <section className="py-16 px-6 bg-white">
+      {/* The Method Timeline */}
+      <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">My Consulting Process</h2>
+            <h2 className="text-3xl font-bold text-oxford-blue mb-4">How The Lead Machine Method™ Works</h2>
+            <p className="text-xl text-charcoal">
+              A systematic 5-step process that takes you from scattered tactics to predictable growth.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-5 gap-8">
-            {process.map((step, index) => (
-              <Card key={index} className="p-6 bg-light-gray text-center">
+            {methodSteps.map((step, index) => (
+              <Card key={index} className="p-6 bg-slate-50 text-center">
                 <CardContent className="p-0">
                   <div className="w-12 h-12 bg-azure text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {step.number}
@@ -209,8 +243,113 @@ export default function ConsultingPage() {
         </div>
       </section>
 
+      {/* What Makes This Different */}
+      <section className="py-16 px-6 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-oxford-blue mb-6">What Makes This Different</h2>
+            <p className="text-xl text-charcoal mb-8">
+              Most marketing approaches focus on tactics or tools. The Lead Machine Method™ starts with strategy and builds systems that last.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
+            <Card className="p-8 bg-white shadow-soft">
+              <CardContent className="p-0">
+                <h3 className="text-xl font-bold text-oxford-blue mb-6">Traditional Marketing Approach:</h3>
+                <ul className="space-y-3 text-charcoal">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    Campaign-focused
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    Tool-dependent
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    Requires constant management
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    Results are unpredictable
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 bg-azure text-white">
+              <CardContent className="p-0">
+                <h3 className="text-xl font-bold text-white mb-6">The Lead Machine Method™:</h3>
+                <ul className="space-y-3 text-blue-100">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-gamboge rounded-full mr-3"></div>
+                    System-focused
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-gamboge rounded-full mr-3"></div>
+                    Strategy-driven
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-gamboge rounded-full mr-3"></div>
+                    Scales with minimal oversight
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-gamboge rounded-full mr-3"></div>
+                    Delivers predictable results
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {differences.map((diff, index) => (
+              <Card key={index} className="p-8 bg-white shadow-soft">
+                <CardContent className="p-0">
+                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{diff.title}</h3>
+                  <p className="text-charcoal leading-relaxed">{diff.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-charcoal">
+              <strong>The difference is structure.</strong> When marketing operates as a system rather than a collection of campaigns, it becomes an asset that compounds over time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Fix Your Marketing with a System */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-oxford-blue mb-4">How I'll Fix Your Marketing</h2>
+            <p className="text-xl text-charcoal max-w-4xl mx-auto">
+              Instead of more tactics, you need strategic clarity and systematic execution. When we work together, we'll build a clear, structured marketing engine that transforms scattered efforts into predictable growth.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {solutions.map((solution, index) => (
+              <Card key={index} className="p-8 bg-slate-50 shadow-soft hover:shadow-medium transition-shadow">
+                <CardContent className="p-0">
+                  <div className="mb-6">
+                    <LineIcon type={solution.iconType} className="text-gamboge" size={56} />
+                  </div>
+                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{solution.title}</h3>
+                  <p className="text-charcoal leading-relaxed">{solution.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* I Work Best With */}
-      <section className="py-16 px-6 bg-light-gray">
+      <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-oxford-blue mb-6">I Work Best With:</h2>
@@ -232,7 +371,7 @@ export default function ConsultingPage() {
                   <h3 className="text-xl font-bold text-oxford-blue mb-2">{item.title}</h3>
                   <p className="text-azure font-semibold mb-4">{item.subheading}</p>
                   <p className="text-charcoal mb-6 leading-relaxed">{item.description}</p>
-                  <div className="bg-light-gray p-4 rounded-lg">
+                  <div className="bg-slate-50 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-oxford-blue">{item.results}</p>
                   </div>
                 </CardContent>
@@ -254,7 +393,7 @@ export default function ConsultingPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {deliverables.map((deliverable, index) => (
-              <Card key={index} className="p-8 bg-light-gray shadow-soft">
+              <Card key={index} className="p-8 bg-slate-50 shadow-soft">
                 <CardContent className="p-0">
                   <div className="mb-6">
                     <LineIcon type={deliverable.iconType} className="text-gamboge" size={48} />
@@ -271,12 +410,12 @@ export default function ConsultingPage() {
       {/* CTA Section */}
       <section className="py-16 px-6 bg-gradient-to-br from-azure to-blue-700">
         <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-3xl font-bold mb-6">Let's Fix Your Marketing</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Build Your Lead Machine?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            You don't need more tactics. You need a system.
+            You don't need more tactics. You need a system. Let's transform your scattered marketing into predictable growth.
           </p>
           <Button asChild size="lg" className="bg-gamboge text-oxford-blue hover:bg-yellow-400 px-8 py-4 rounded-full font-bold text-lg">
-            <Link href="/contact">Book a Call</Link>
+            <Link href="/contact">Work With Me</Link>
           </Button>
         </div>
       </section>

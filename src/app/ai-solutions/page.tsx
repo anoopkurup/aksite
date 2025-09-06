@@ -8,5 +8,5 @@ export default function AISolutionsPage() {
     return <div>Content not found</div>;
   }
 
-  return <ContentPage contentData={contentData} heroBackground="gradient" />;
+  return <ContentPage contentData={contentData} heroBackground="gradient" heroIcon="cpu" />;
 }

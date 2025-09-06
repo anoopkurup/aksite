@@ -8,5 +8,5 @@ export default function ContactPage() {
     return <div>Content not found</div>;
   }
 
-  return <ContentPage contentData={contentData} heroBackground="white" />;
+  return <ContentPage contentData={contentData} heroBackground="gradient" heroIcon="handshake" />;
 }

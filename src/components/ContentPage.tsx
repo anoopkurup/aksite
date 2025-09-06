@@ -7,9 +7,10 @@ import { ContentPage as ContentPageType } from "@/lib/content";
 interface ContentPageProps {
   contentData: ContentPageType;
   heroBackground?: "white" | "gradient" | "light";
+  heroIcon?: string;
 }
 
-export default function ContentPage({ contentData, heroBackground = "white" }: ContentPageProps) {
+export default function ContentPage({ contentData, heroBackground = "white", heroIcon = "cpu" }: ContentPageProps) {
   const { frontmatter } = contentData;
 
   return (
@@ -17,6 +18,7 @@ export default function ContentPage({ contentData, heroBackground = "white" }: C
       title={frontmatter.title}
       subtitle={frontmatter.description}
       heroBackground={heroBackground}
+      heroIcon={heroIcon}
     >
       {/* Render content sections */}
       {frontmatter.sections && (

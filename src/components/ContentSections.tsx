@@ -24,9 +24,9 @@ interface ContentSectionRendererProps {
 
 function ContentSectionRenderer({ section }: ContentSectionRendererProps) {
   const bgClass = section.class?.includes('light-gray') || section.class?.includes('services') 
-    ? 'bg-light-gray' 
+    ? 'bg-slate-50' 
     : section.class?.includes('audience') || section.class?.includes('approach')
-    ? 'bg-light-gray'
+    ? 'bg-slate-50'
     : 'bg-white';
 
   switch (section.type) {
@@ -138,7 +138,7 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
                   </ul>
                 )}
                 {item.results && (
-                  <div className="bg-light-gray p-4 rounded-lg mb-4">
+                  <div className="bg-slate-50 p-4 rounded-lg mb-4">
                     <p className="text-sm font-semibold text-oxford-blue">{item.results}</p>
                   </div>
                 )}
@@ -266,7 +266,7 @@ function TimelineSection({ section, bgClass }: { section: ContentSection; bgClas
 
         <div className={`grid ${gridCols} gap-8`}>
           {section.items.map((item, index) => (
-            <Card key={index} className="p-6 bg-light-gray text-center">
+            <Card key={index} className="p-6 bg-slate-50 text-center">
               <CardContent className="p-0">
                 <div className="w-12 h-12 bg-azure text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {item.number}

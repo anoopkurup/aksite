@@ -99,12 +99,24 @@ export default function AboutPage() {
     <PageTemplate 
       title="Marketing That Actually Works"
       subtitle="Most brilliant businesses struggle with marketing not because they don't try, but because their efforts are scattered, tactical, and disconnected from any coherent strategy."
-      heroBackground="white"
+      heroBackground="gradient"
+      heroIcon="handshake"
     >
       {/* Story Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative">
+              <div className="w-full aspect-square bg-gradient-to-br from-oxford-blue/20 to-azure/20 rounded-2xl shadow-lg flex items-center justify-center">
+                <LineIcon type="target" className="text-gamboge" size={120} />
+              </div>
+              <Card className="absolute -bottom-6 -right-6 bg-gamboge p-4 rounded-xl shadow-lg">
+                <CardContent className="p-0 text-center">
+                  <div className="text-2xl font-bold text-oxford-blue">15+</div>
+                  <div className="text-sm text-oxford-blue">Years Experience</div>
+                </CardContent>
+              </Card>
+            </div>
             <div>
               <h2 className="text-3xl font-bold text-oxford-blue mb-6">My Story and Approach</h2>
               <p className="text-charcoal mb-6 leading-relaxed">
@@ -117,23 +129,12 @@ export default function AboutPage() {
                 For the past 15+ years, I've been helping businesses fix this fundamental problem. Working with over 200 companies, I've developed a systematic approach that transforms marketing from a necessary evil into a strategic growth engine.
               </p>
             </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-oxford-blue/20 to-azure/20 rounded-2xl shadow-lg flex items-center justify-center">
-                <LineIcon type="target" className="text-gamboge" size={120} />
-              </div>
-              <Card className="absolute -bottom-6 -right-6 bg-gamboge p-4 rounded-xl shadow-lg">
-                <CardContent className="p-0 text-center">
-                  <div className="text-2xl font-bold text-oxford-blue">15+</div>
-                  <div className="text-sm text-oxford-blue">Years Experience</div>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-16 px-6 bg-light-gray">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-oxford-blue mb-6">Businesses I Help</h2>
@@ -166,7 +167,7 @@ export default function AboutPage() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-oxford-blue mb-4">Proven Results Across Industries</h2>
@@ -208,7 +209,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Principles Section */}
-      <section className="py-16 px-6 bg-light-gray">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-oxford-blue mb-4">My Core Principles</h2>
@@ -231,7 +232,7 @@ export default function AboutPage() {
       </section>
 
       {/* Work Process Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-oxford-blue mb-4">How I Work With Clients</h2>
@@ -263,7 +264,7 @@ export default function AboutPage() {
       </section>
 
       {/* Working Together Section */}
-      <section className="py-16 px-6 bg-light-gray">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-oxford-blue mb-6">Working Together</h2>
           <p className="text-lg text-charcoal mb-6 leading-relaxed">

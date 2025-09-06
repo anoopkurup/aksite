@@ -89,15 +89,15 @@ resources:
   items:
     - title: "Marketing System Blueprint"
       description: "A 12-page guide to building your lead generation system from strategy to execution."
-      link: "ebooks/"
+      link: "contact/"
       type: "PDF Guide"
-    - title: "AI Content Workflows"
-      description: "Ready-to-use prompts and workflows for creating marketing content with AI."
-      link: "ai-workflows/"
+    - title: "AI Content Templates"
+      description: "Ready-to-use prompts and templates for creating marketing content with AI."
+      link: "contact/"
       type: "Templates"
     - title: "Lead Qualification Framework"
       description: "Simple framework to identify and qualify your best prospects systematically."
-      link: "ebooks/"
+      link: "contact/"
       type: "Worksheet"
 
 approach:

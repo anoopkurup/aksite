@@ -109,7 +109,7 @@ workshop_highlight:
   location: "3-day intensive workshop | Online & Interactive"
   cta:
     text: "Register Now"
-    url: "/workshops/ai-lead-machine/"
+    url: "/workshops/"
 
 testimonials:
   title: "What Clients Say"
@@ -169,20 +169,20 @@ resources:
       description: "A 12-page guide to building your lead generation system from strategy to execution."
       type: "PDF Guide"
       cta:
-        text: "Download Free"
-        url: "/ebooks/"
-    - title: "AI Content Workflows"
-      description: "Ready-to-use prompts and workflows for creating marketing content with AI."
+        text: "Get Free Guide"
+        url: "/contact/"
+    - title: "AI Content Templates"
+      description: "Ready-to-use prompts and templates for creating marketing content with AI."
       type: "Templates"
       cta:
         text: "Get Templates"
-        url: "/ai-workflows/"
+        url: "/contact/"
     - title: "Lead Qualification Framework"
       description: "Simple framework to identify and qualify your best prospects systematically."
       type: "Worksheet"
       cta:
-        text: "Download Free"
-        url: "/ebooks/"
+        text: "Get Free Guide"
+        url: "/contact/"
 
 about:
   title: "Meet Anoop Kurup"

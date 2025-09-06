@@ -37,21 +37,12 @@ sections:
       - icon: "icon-chart"
         title: "Professional Service Firms"
         description: "Marketing agencies, law firms, consulting practices, and training companies that moved beyond referrals to systematic lead generation."
-        link:
-          url: "professional-services/"
-          text: "View Case Studies"
       - icon: "icon-computer"
         title: "Tech-Enabled Businesses"
         description: "SaaS companies, IT service providers, and productized service businesses that scaled their marketing systems efficiently."
-        link:
-          url: "tech-enabled/"
-          text: "View Case Studies"
       - icon: "icon-target"
         title: "Consultants & Experts"
         description: "Independent professionals and boutique consultancies that built predictable pipeline generation systems."
-        link:
-          url: "consultants-experts/"
-          text: "View Case Studies"
 
   - type: "content"
     class: "approach"

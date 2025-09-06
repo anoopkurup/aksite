@@ -14,9 +14,10 @@ export default function BlogPage() {
     <PageTemplate 
       title="Blog"
       subtitle="Practical strategies and frameworks to scale your service business. Real insights from 200+ client engagements."
-      heroBackground="white"
+      heroBackground="gradient"
+      heroIcon="monitor"
     >
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             {categories.map((category, index) => (
@@ -74,7 +75,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-light-gray">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-oxford-blue mb-6">
             Get Weekly Marketing Insights
