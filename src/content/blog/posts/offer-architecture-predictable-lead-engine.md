@@ -5,7 +5,7 @@ description: "Turn scattered services into a laddered offer suite that shortens 
 tags: ["Strategy", "Offers", "Lead Generation"]
 read_time: "8 min read"
 author: "Anoop Kurup"
-hero_image: "/images/offer-architecture.png"
+hero_image: "/images/blog/offer-architecture.webp"
 category: "Strategy"
 ---
 

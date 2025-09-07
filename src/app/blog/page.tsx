@@ -37,8 +37,18 @@ export default function BlogPage() {
           <div className="grid lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
               <Card key={index} className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="w-full h-48 bg-gradient-to-br from-azure/20 to-gamboge/20 flex items-center justify-center">
-                  <LineIcon type="chart" className="text-azure" size={64} />
+                <div className="w-full h-48 bg-gradient-to-br from-azure/20 to-gamboge/20 overflow-hidden">
+                  {(post.frontmatter.hero_image || post.frontmatter.featured_image) ? (
+                    <img 
+                      src={post.frontmatter.hero_image || post.frontmatter.featured_image}
+                      alt={post.frontmatter.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <LineIcon type="chart" className="text-azure" size={64} />
+                    </div>
+                  )}
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-3">
@@ -72,31 +82,6 @@ export default function BlogPage() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-oxford-blue mb-6">
-            Get Weekly Marketing Insights
-          </h2>
-          <p className="text-xl text-charcoal mb-8">
-            Join 2,500+ service business owners who get practical, actionable insights every Tuesday.
-          </p>
-          <div className="max-w-md mx-auto flex gap-4">
-            <input 
-              type="email" 
-              placeholder="Enter your email address" 
-              className="flex-grow px-4 py-3 rounded-full text-oxford-blue focus:outline-none focus:ring-4 focus:ring-azure/30 border border-border-gray"
-            />
-            <button className="bg-azure text-white px-6 py-3 rounded-full font-semibold hover:bg-oxford-blue transition-colors whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-sm text-charcoal mt-4">
-            <LineIcon type="shield" className="inline mr-2" size={16} />
-            No spam. Practical insights only. Unsubscribe anytime.
-          </p>
         </div>
       </section>
     </PageTemplate>

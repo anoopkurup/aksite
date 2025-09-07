@@ -1,11 +1,11 @@
 ---
 title: "Clarity. Strategy. Systems."
 description: "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution."
-hero_image: "images/homepage-heroimage-anoopkurup.jpg"
+hero_image: "/images/hero/homepage-heroimage.webp"
 
 about:
   title: "About Me"
-  image: "images/anoop-bw.jpg"
+  image: "/images/about/anoop-bw.webp"
   content: |
     I'm Anoop Kurup — a strategist, consultant, and builder. Over the years, I've worked with founders of knowledge services, technical services, and consulting companies to simplify lead generation and marketing.
     

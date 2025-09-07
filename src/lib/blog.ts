@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const BLOG_POSTS_PATH = '/Users/anoopkurup/Documents/anoopkurup-website/content/blog/posts';
+const BLOG_POSTS_PATH = path.join(process.cwd(), 'src/content/blog/posts');
 
 export interface BlogPost {
   slug: string;
@@ -16,6 +16,8 @@ export interface BlogPost {
     readTime?: string;
     featured?: boolean;
     author?: string;
+    hero_image?: string;
+    featured_image?: string;
   };
   content: string;
 }

@@ -30,7 +30,7 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { number: "15+", label: "Years of Experience", description: "Helping businesses build systematic marketing approaches" },
+    { number: "20+", label: "Years of Experience", description: "Helping businesses build systematic marketing approaches" },
     { number: "200+", label: "Companies Helped", description: "From startups to established professional services firms" },
     { number: "40-60%", label: "Average Lead Increase", description: "Typical results within 90 days of implementation" }
   ];
@@ -108,11 +108,15 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
               <div className="w-full aspect-square bg-gradient-to-br from-oxford-blue/20 to-azure/20 rounded-2xl shadow-lg flex items-center justify-center">
-                <LineIcon type="target" className="text-gamboge" size={120} />
+                <img 
+                  src="/images/about/anoop-bw.webp" 
+                  alt="Anoop Kurup"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
               <Card className="absolute -bottom-6 -right-6 bg-gamboge p-4 rounded-xl shadow-lg">
                 <CardContent className="p-0 text-center">
-                  <div className="text-2xl font-bold text-oxford-blue">15+</div>
+                  <div className="text-2xl font-bold text-oxford-blue">20+</div>
                   <div className="text-sm text-oxford-blue">Years Experience</div>
                 </CardContent>
               </Card>
@@ -126,7 +130,7 @@ export default function AboutPage() {
                 This journey taught me that marketing success isn't about following the latest trends or using the fanciest tools. It's about building systems that work consistently, regardless of market conditions or team changes.
               </p>
               <p className="text-charcoal mb-6 leading-relaxed">
-                For the past 15+ years, I've been helping businesses fix this fundamental problem. Working with over 200 companies, I've developed a systematic approach that transforms marketing from a necessary evil into a strategic growth engine.
+                For the past 20+ years, I've been helping businesses fix this fundamental problem. Working with over 200 companies, I've developed a systematic approach that transforms marketing from a necessary evil into a strategic growth engine.
               </p>
             </div>
           </div>

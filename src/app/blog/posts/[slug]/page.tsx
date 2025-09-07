@@ -5,7 +5,6 @@ import { markdownToHtml, formatDate, estimateReadingTime } from '@/lib/markdown'
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import LineIcon from '@/components/LineIcon';
-import Newsletter from '@/components/Newsletter';
 
 export async function generateStaticParams() {
   const slugs = getAllBlogSlugs();
@@ -36,9 +35,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="relative min-h-[60vh] flex items-end">
         {/* Background Image with Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-oxford-blue via-azure to-oxford-blue">
-          {post.frontmatter.featured_image && (
+          {(post.frontmatter.hero_image || post.frontmatter.featured_image) && (
             <img 
-              src={post.frontmatter.featured_image}
+              src={post.frontmatter.hero_image || post.frontmatter.featured_image}
               alt={post.frontmatter.title}
               className="w-full h-full object-cover opacity-30"
             />
@@ -101,9 +100,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
         </div>
       </div>
-
-      {/* Newsletter Subscription */}
-      <Newsletter showWorkButtons={false} />
     </article>
   );
 }

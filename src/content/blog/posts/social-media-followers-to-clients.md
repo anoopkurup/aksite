@@ -5,7 +5,7 @@ description: "Is the follower count on social media just a vanity metric or do t
 tags: ["Linkedin", "Lead Generation"]
 read_time: "5 min read"
 author: "Anoop Kurup"
-hero_image: "/images/social-media-future-clients.png"
+hero_image: "/images/blog/social-media-future-clients.webp"
 category: "Lead Generation"
 ---
 
