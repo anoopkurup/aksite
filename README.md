@@ -7,6 +7,7 @@ A modern, fast, and SEO-optimized professional website showcasing expertise in p
 - **Modern Stack**: Next.js 14 with App Router, TypeScript, and Tailwind CSS
 - **Content Management**: MDX-based blog and content system
 - **Professional Focus**: B2B professional services marketing with "Clarity. Strategy. Systems." approach
+- **Social Media Integration**: Professional social media icons and contact integration
 - **SEO Optimized**: Built for search engine visibility and performance
 - **Responsive Design**: Mobile-first, professional aesthetic
 - **Component Library**: shadcn/ui components for consistent design
