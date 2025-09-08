@@ -34,3 +34,14 @@ next-env.d.ts
 
 # content management files
 CONTENT_MANAGEMENT.md
+
+# Claude Code and development files
+.claude/
+.playwright-mcp/
+Social-icons-svg.md
+context/
+
+# prototype pages
+src/app/home-indigo/
+src/app/home-navy/
+src/app/home-teal/
