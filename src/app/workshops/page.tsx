@@ -169,7 +169,7 @@ export default function WorkshopsPage() {
                   <ul className="space-y-3">
                     {feature.features.map((item, idx) => (
                       <li key={idx} className={`flex items-start ${feature.highlight ? 'text-blue-100' : 'text-charcoal'}`}>
-                        <div className={`w-2 h-2 ${feature.highlight ? 'bg-gamboge' : 'bg-gamboge'} rounded-full mt-2 mr-3 flex-shrink-0`}></div>
+                        <div className={`w-2 h-2 ${feature.highlight ? 'bg-[#e6a817]' : 'bg-[#e6a817]'} rounded-full mt-2 mr-3 flex-shrink-0`}></div>
                         {item}
                       </li>
                     ))}
@@ -238,7 +238,7 @@ export default function WorkshopsPage() {
           <p className="text-xl text-blue-100 mb-8">
             Join the next cohort and build your predictable lead generation system.
           </p>
-          <Button asChild size="lg" className="bg-gamboge text-oxford-blue hover:bg-yellow-400 px-8 py-4 rounded-full font-bold text-lg">
+          <Button asChild size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-4 rounded-full font-bold text-lg">
             <Link href="/contact">Join the Sprint</Link>
           </Button>
         </div>

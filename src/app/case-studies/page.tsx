@@ -202,7 +202,7 @@ export default function CaseStudiesPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gamboge/10 p-3 rounded-lg">
+                  <div className="bg-[#e6a817]/10 p-3 rounded-lg">
                     <div className="text-sm font-semibold text-oxford-blue">Key Result:</div>
                     <div className="text-sm text-charcoal">{study.results}</div>
                   </div>
@@ -270,7 +270,7 @@ export default function CaseStudiesPage() {
           <p className="text-xl text-blue-100 mb-8">
             If you're ready to move from chaotic marketing to systematic growth, let's discuss how we can work together.
           </p>
-          <Button asChild size="lg" className="bg-gamboge text-oxford-blue hover:bg-yellow-400 px-8 py-4 rounded-full font-bold text-lg">
+          <Button asChild size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-4 rounded-full font-bold text-lg">
             <Link href="/contact">Schedule a Strategy Call</Link>
           </Button>
         </div>

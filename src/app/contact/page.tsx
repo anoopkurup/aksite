@@ -133,7 +133,7 @@ export default function ContactPage() {
               </p>
             )}
             {frontmatter.cta.button && (
-              <Button asChild size="lg" className="bg-gamboge text-oxford-blue hover:bg-yellow-400 px-8 py-4 rounded-full font-bold text-lg">
+              <Button asChild size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-4 rounded-full font-bold text-lg">
                 <Link href={frontmatter.cta.button.url || '/contact'}>
                   {frontmatter.cta.button.text || 'Get Started'}
                 </Link>
