@@ -3,8 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
+import { getContentPage, processHeroMedia } from "@/lib/content";
 
 export default function AboutPage() {
+  // Get about page content from MDX (if exists)
+  const aboutContent = getContentPage('about');
+  const heroMedia = processHeroMedia(aboutContent?.frontmatter || {});
   const audienceItems = [
     {
       iconType: "chart",
@@ -101,35 +105,36 @@ export default function AboutPage() {
       subtitle="Most brilliant businesses struggle with marketing not because they don't try, but because their efforts are scattered, tactical, and disconnected from any coherent strategy."
       heroBackground="gradient"
       heroIcon="handshake"
+      heroMedia={heroMedia}
     >
       {/* Story Section */}
-      <section className="py-16 px-6 bg-slate-50">
+      <section className="py-16 px-6 bg-[#fef7ed]">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
-              <div className="w-full aspect-square bg-gradient-to-br from-oxford-blue/20 to-azure/20 rounded-2xl shadow-lg flex items-center justify-center">
+              <div className="w-full aspect-square bg-gradient-to-br from-[#1e3a8a]/20 to-[#8fb4ff]/20 rounded-2xl shadow-lg flex items-center justify-center">
                 <img 
                   src="/images/about/anoop-bw.webp" 
                   alt="Anoop Kurup"
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
-              <Card className="absolute -bottom-6 -right-6 bg-gamboge p-4 rounded-xl shadow-lg">
+              <Card className="absolute -bottom-6 -right-6 bg-[#e6a817] p-4 rounded-xl shadow-lg">
                 <CardContent className="p-0 text-center">
-                  <div className="text-2xl font-bold text-oxford-blue">20+</div>
-                  <div className="text-sm text-oxford-blue">Years Experience</div>
+                  <div className="text-2xl font-bold text-white">20+</div>
+                  <div className="text-sm text-white">Years Experience</div>
                 </CardContent>
               </Card>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-oxford-blue mb-6">My Story and Approach</h2>
-              <p className="text-charcoal mb-6 leading-relaxed">
+              <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">My Story and Approach</h2>
+              <p className="text-[#374151] mb-6 leading-relaxed">
                 I started my career in research engineering at a technology startup, where I quickly learned that great products don't sell themselves. I moved into intellectual property analysis, helping companies understand competitive landscapes and protect their innovations. Then I made the leap into building businesses of my own—and that's when I truly understood the marketing challenge firsthand.
               </p>
-              <p className="text-charcoal mb-6 leading-relaxed">
+              <p className="text-[#374151] mb-6 leading-relaxed">
                 This journey taught me that marketing success isn't about following the latest trends or using the fanciest tools. It's about building systems that work consistently, regardless of market conditions or team changes.
               </p>
-              <p className="text-charcoal mb-6 leading-relaxed">
+              <p className="text-[#374151] mb-6 leading-relaxed">
                 For the past 20+ years, I've been helping businesses fix this fundamental problem. Working with over 200 companies, I've developed a systematic approach that transforms marketing from a necessary evil into a strategic growth engine.
               </p>
             </div>
@@ -138,30 +143,30 @@ export default function AboutPage() {
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-6">Businesses I Help</h2>
-            <p className="text-xl text-charcoal max-w-4xl mx-auto mb-4">
+            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">Businesses I Help</h2>
+            <p className="text-xl text-[#374151] max-w-4xl mx-auto mb-4">
               I specialize in professional services and knowledge-driven companies that need systematic approaches to marketing.
             </p>
-            <p className="text-charcoal max-w-4xl mx-auto">
+            <p className="text-[#374151] max-w-4xl mx-auto">
               Not every business is ready for what I do. The companies that see dramatic improvements share three characteristics: they value expertise over price, they're willing to invest in systems that compound over time, and they understand that sustainable growth comes from consistent execution, not silver bullets.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {audienceItems.map((item, index) => (
-              <Card key={index} className="p-8 bg-white shadow-soft hover:shadow-medium transition-shadow">
+              <Card key={index} className="p-8 bg-white shadow-navy-soft hover:shadow-navy-medium transition-shadow">
                 <CardContent className="p-0">
                   <div className="mb-6">
-                    <LineIcon type={item.iconType} className="text-gamboge" size={56} />
+                    <LineIcon type={item.iconType} className="text-[#e6a817]" size={56} />
                   </div>
-                  <h3 className="text-xl font-bold text-oxford-blue mb-2">{item.title}</h3>
-                  <p className="text-azure font-semibold mb-4">{item.subheading}</p>
-                  <p className="text-charcoal mb-6 leading-relaxed">{item.description}</p>
-                  <div className="bg-light-gray p-4 rounded-lg">
-                    <p className="text-sm font-semibold text-oxford-blue">{item.results}</p>
+                  <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{item.title}</h3>
+                  <p className="text-[#1e40af] font-semibold mb-4">{item.subheading}</p>
+                  <p className="text-[#374151] mb-6 leading-relaxed">{item.description}</p>
+                  <div className="bg-[#8fb4ff]/10 border border-[#8fb4ff]/30 p-4 rounded-lg">
+                    <p className="text-sm font-semibold text-[#1e3a8a]">{item.results}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -171,11 +176,11 @@ export default function AboutPage() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-16 px-6 bg-slate-50">
+      <section className="py-16 px-6 bg-[#fef7ed]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">Proven Results Across Industries</h2>
-            <p className="text-xl text-charcoal">
+            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">Proven Results Across Industries</h2>
+            <p className="text-xl text-[#374151]">
               Real numbers and real feedback from businesses that transformed their marketing approach.
             </p>
           </div>
@@ -183,7 +188,7 @@ export default function AboutPage() {
           {/* Stats */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {stats.map((stat, index) => (
-              <Card key={index} className="p-6 bg-azure text-white text-center">
+              <Card key={index} className="p-6 bg-[#1e3a8a] text-white text-center">
                 <CardContent className="p-0">
                   <div className="text-3xl font-bold mb-2">{stat.number}</div>
                   <div className="text-lg font-semibold text-blue-100 mb-2">{stat.label}</div>
@@ -196,14 +201,14 @@ export default function AboutPage() {
           {/* Testimonials */}
           <div className="grid lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6 bg-light-gray shadow-soft">
+              <Card key={index} className="p-6 bg-white border-[#8fb4ff]/20 shadow-soft">
                 <CardContent className="p-0">
-                  <blockquote className="text-charcoal mb-6 leading-relaxed">
+                  <blockquote className="text-[#374151] mb-6 leading-relaxed">
                     "{testimonial.quote}"
                   </blockquote>
                   <div>
-                    <p className="font-semibold text-oxford-blue">{testimonial.author}</p>
-                    <p className="text-sm text-azure">{testimonial.role}</p>
+                    <p className="font-semibold text-[#1e3a8a]">{testimonial.author}</p>
+                    <p className="text-sm text-[#1e40af]">{testimonial.role}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -213,11 +218,11 @@ export default function AboutPage() {
       </section>
 
       {/* Core Principles Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">My Core Principles</h2>
-            <p className="text-xl text-charcoal">
+            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">My Core Principles</h2>
+            <p className="text-xl text-[#374151]">
               These beliefs guide everything I do and every system I build.
             </p>
           </div>
@@ -226,8 +231,8 @@ export default function AboutPage() {
             {principles.map((principle, index) => (
               <Card key={index} className="p-8 bg-white shadow-soft">
                 <CardContent className="p-0">
-                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{principle.title}</h3>
-                  <p className="text-charcoal leading-relaxed">{principle.description}</p>
+                  <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{principle.title}</h3>
+                  <p className="text-[#374151] leading-relaxed">{principle.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -236,11 +241,11 @@ export default function AboutPage() {
       </section>
 
       {/* Work Process Section */}
-      <section className="py-16 px-6 bg-slate-50">
+      <section className="py-16 px-6 bg-[#fef7ed]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">How I Work With Clients</h2>
-            <p className="text-xl text-charcoal">
+            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">How I Work With Clients</h2>
+            <p className="text-xl text-[#374151]">
               My approach combines the fundamentals of good marketing with modern AI-driven workflows and automation.
             </p>
           </div>
@@ -251,13 +256,13 @@ export default function AboutPage() {
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-12 gap-6 items-center">
                     <div className="md:col-span-2 text-center md:text-left">
-                      <div className="w-16 h-16 bg-azure text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto md:mx-0 mb-4 md:mb-0">
+                      <div className="w-16 h-16 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto md:mx-0 mb-4 md:mb-0">
                         {step.number}
                       </div>
                     </div>
                     <div className="md:col-span-10">
-                      <h3 className="text-xl font-bold text-oxford-blue mb-4">{step.title}</h3>
-                      <p className="text-charcoal leading-relaxed">{step.description}</p>
+                      <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{step.title}</h3>
+                      <p className="text-[#374151] leading-relaxed">{step.description}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -268,27 +273,30 @@ export default function AboutPage() {
       </section>
 
       {/* Working Together Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-oxford-blue mb-6">Working Together</h2>
-          <p className="text-lg text-charcoal mb-6 leading-relaxed">
+          <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">Working Together</h2>
+          <p className="text-lg text-[#374151] mb-6 leading-relaxed">
             When I work with you, I'm hands-on and practical. I'll help you think through positioning and strategy, but I'll also roll up my sleeves to help you implement workflows, set up automation, and optimize processes. I bring both strategic thinking and tactical execution to every engagement.
           </p>
-          <p className="text-lg text-charcoal mb-8 leading-relaxed">
+          <p className="text-lg text-[#374151] mb-8 leading-relaxed">
             Most importantly, I focus on marketing that aligns with who you are as a business. I'm not trying to turn every client into a social media influencer or content creation machine. Instead, I help you find marketing approaches that feel authentic, sustainable, and effective for your specific business model and goals.
           </p>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-azure to-blue-700">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#1e3a8a] to-[#1e40af]">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Marketing from Chaos to System?</h2>
           <p className="text-xl text-blue-100 mb-8">
             If you're tired of scattered marketing efforts and ready to build systematic approaches that deliver predictable growth, let's discuss how I can help your business.
           </p>
-          <Button asChild size="lg" className="bg-gamboge text-oxford-blue hover:bg-yellow-400 px-8 py-4 rounded-full font-bold text-lg">
-            <Link href="/contact">Schedule a Strategy Call</Link>
+          <Button asChild size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-4 rounded-full font-bold text-lg shadow-lg">
+            <Link href="/contact" className="flex items-center">
+              Schedule a Strategy Call
+              <LineIcon type="arrow-right" className="ml-2" size={16} />
+            </Link>
           </Button>
         </div>
       </section>

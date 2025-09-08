@@ -2,6 +2,9 @@
 title: "Clarity. Strategy. Systems."
 description: "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution."
 hero_image: "/images/hero/homepage-heroimage.webp"
+# hero_media_type: "image"  # Options: "image" | "video"
+# hero_video_url: "https://www.youtube.com/watch?v=EXAMPLE_VIDEO_ID"
+# hero_video_thumbnail: "/images/hero/video-thumbnail.webp"
 
 about:
   title: "About Me"
@@ -20,7 +23,7 @@ audience:
       title: "Professional Service Firms"
       subheading: "Beyond Referrals"
       description: "Marketing agencies, law firms, consulting practices, training companies, and specialized B2B services firms with 10-50 employees. These are businesses built on expertise and relationships, but they've hit the ceiling of what referrals alone can deliver. They need systematic approaches to demonstrate thought leadership, build authority, and generate predictable demand without compromising their professional reputation or appearing 'salesy' to their sophisticated clients."
-      results: "Typical results: 40-60% increase in qualified leads within 90 days, 25-35% improvement in close rates through better positioning."
+      results: "40-60% increase in qualified leads within 90 days, 25-35% improvement in close rates through better positioning."
       link:
         url: "case-studies/professional-services/"
         text: "View Success Stories"
@@ -28,7 +31,7 @@ audience:
       title: "Tech-Enabled Businesses"
       subheading: "Scale Without Chaos"
       description: "SaaS companies, IT service providers, digital agencies, and productized service businesses experiencing rapid growth or planning for it. These companies understand technology but struggle with marketing systems that can keep pace with their ambitions. They have solid products and early traction but need marketing processes that scale efficiently, generate qualified leads consistently, and support their sales team with better-qualified prospects."
-      results: "Typical results: 50-80% reduction in sales cycle length, 3x improvement in marketing-qualified lead conversion rates."
+      results: "50-80% reduction in sales cycle length, 3x improvement in marketing-qualified lead conversion rates."
       link:
         url: "case-studies/tech-enabled/"
         text: "View Success Stories"
@@ -36,7 +39,7 @@ audience:
       title: "Consultants & Experts"  
       subheading: "Systematic Growth"
       description: "Independent professionals, boutique consultancies, and subject matter experts earning $150K+ annually who are ready to scale beyond personal capacity. These are recognized experts in their fields who've outgrown the feast-or-famine cycle of networking and referrals. They want to build personal brands and systematic lead generation that attracts ideal clients automatically, without constant networking, speaking, or cold outreach that doesn't scale."
-      results: "Typical results: 2-3x increase in inbound inquiries, 50-70% improvement in project value and client quality."
+      results: "2-3x increase in inbound inquiries, 50-70% improvement in project value and client quality."
       link:
         url: "case-studies/consultants-experts/"
         text: "View Success Stories"

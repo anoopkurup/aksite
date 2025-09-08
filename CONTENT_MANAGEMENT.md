@@ -84,7 +84,7 @@ function example() {
 
 - Bullet points for features
 - Keep paragraphs focused and scannable
-```
+
 
 ### 4. Creating a New Blog Post
 
@@ -315,58 +315,105 @@ Replace with:
 
 ## Newsletter Functionality Setup
 
-The website includes a fully functional newsletter subscription system integrated with ConvertKit. Here's how to set it up and manage it:
+The website includes a newsletter subscription system using HTML embed codes from email service providers. This approach is simpler, more reliable, and perfect for static sites.
 
-### 1. ConvertKit Account Setup
+### 1. Choose Your Email Service Provider
 
-1. **Create a ConvertKit Account**:
-   - Sign up at https://convertkit.com/
-   - Choose a plan (Creator plan recommended for professional use)
+**Recommended Options:**
 
+#### ConvertKit (Recommended for Professional Services)
+- Professional features and automation
+- Great for service-based businesses
+- Excellent deliverability
+- Advanced segmentation
+
+#### Mailchimp
+- Popular and user-friendly
+- Good free plan
+- Wide integration options
+- Built-in analytics
+
+#### EmailOctopus
+- Cost-effective option
+- Simple and clean
+- Good deliverability
+- Easy setup
+
+### 2. Create Your Newsletter Form
+
+#### For ConvertKit:
+1. **Sign up** at https://convertkit.com/
 2. **Create a Form**:
    - Go to ConvertKit Dashboard → Forms
-   - Click "Create Form" → Choose "Newsletter" type
-   - Design your form (the website form will override the design)
-   - Save and note the Form ID
+   - Click "Create Form" → Choose "Inline" or "Modal" type
+   - Customize the form design (optional - your site will override most styling)
+3. **Get Embed Code**:
+   - Go to "Publish" tab → "Embed"
+   - Copy the HTML embed code
 
-3. **Get API Credentials**:
-   - Go to Settings → Advanced → API Keys
-   - Copy your API Key (starts with "ck_")
-   - Copy your Form ID from the form settings
+#### For Mailchimp:
+1. **Sign up** at https://mailchimp.com/
+2. **Create a Form**:
+   - Go to Audience → Signup Forms → Form Builder
+   - Design your form
+3. **Get Embed Code**:
+   - Go to Signup Forms → Embedded Forms
+   - Copy the HTML embed code
 
-### 2. Environment Variables Configuration
+#### For EmailOctopus:
+1. **Sign up** at https://emailoctopus.com/
+2. **Create a Form**:
+   - Go to Forms → Create Form
+   - Design and configure your form
+3. **Get Embed Code**:
+   - Click on your form → Embed
+   - Copy the HTML embed code
 
-1. **Update Local Environment**:
-   Edit `/Users/anoopkurup/Documents/aksite-nextjs/.env.local`:
+### 3. Add Embed Code to Your Website
+
+1. **Open the Newsletter Component**:
+   Edit `/src/components/Newsletter.tsx`
+
+2. **Replace the Placeholder**:
+   Find this section:
+   ```jsx
+   <div className="newsletter-placeholder border-2 border-dashed...">
+     Replace this div with your email provider's embed code
+   </div>
    ```
-   CONVERTKIT_API_KEY=ck_your_actual_api_key_here
-   CONVERTKIT_FORM_ID=1234567
+
+3. **Add Your Embed Code**:
+   Replace the entire placeholder div with your HTML embed code:
+   ```jsx
+   {/* Replace with your actual embed code */}
+   <form action="https://your-provider.com/subscribe" method="post" className="newsletter-form">
+     <input type="email" name="email" placeholder="Enter your email address" required />
+     <button type="submit">Subscribe</button>
+   </form>
    ```
 
-2. **Vercel Deployment Setup**:
-   - Go to Vercel Dashboard → Your Project → Settings → Environment Variables
-   - Add the same variables:
-     - `CONVERTKIT_API_KEY`: Your ConvertKit API key
-     - `CONVERTKIT_FORM_ID`: Your ConvertKit form ID
+4. **Add the CSS Class**:
+   Make sure your form element has the class `newsletter-form` to apply the custom styling.
 
-### 3. Testing Newsletter Functionality
+### 4. Testing Your Newsletter
 
-1. **Local Testing**:
+1. **Start Development Server**:
    ```bash
    npm run dev
    ```
-   - Navigate to any page with the newsletter form
-   - Enter a test email and click Subscribe
-   - Check ConvertKit dashboard for new subscriber
 
-2. **Test API Directly** (optional):
-   ```bash
-   curl -X POST http://localhost:3000/api/newsletter \
-     -H "Content-Type: application/json" \
-     -d '{"email":"test@example.com"}'
-   ```
+2. **Navigate to Newsletter Section**:
+   - Visit http://localhost:3000 (homepage)
+   - Or any blog post page
+   - Scroll to the newsletter section
 
-### 4. Newsletter Component Usage
+3. **Test Subscription**:
+   - Enter a test email address
+   - Click Subscribe
+   - Check your email provider dashboard for new subscriber
+   - Verify confirmation email is sent (if configured)
+
+### 5. Newsletter Component Usage
 
 The Newsletter component is already integrated throughout the site:
 
@@ -387,74 +434,88 @@ import Newsletter from "@/components/Newsletter";
 <Newsletter showWorkButtons={false} />
 ```
 
-### 5. Newsletter Management
+### 6. Customizing the Design
 
-#### Adding Tags to Subscribers:
-The API automatically adds the tag `website-newsletter` to all subscribers. To modify tags:
+The Newsletter component includes built-in CSS styling that automatically applies to embedded forms:
 
-Edit `/src/app/api/newsletter/route.ts`:
-```typescript
-body: JSON.stringify({
-  api_key: CONVERTKIT_API_KEY,
-  email: email,
-  tags: ['website-newsletter', 'blog-readers'], // Add more tags
-}),
+#### Styling Features:
+- **Rounded Input Fields**: Matches your site's design
+- **Custom Button Styling**: Azure blue background with hover effects
+- **Responsive Design**: Works on all screen sizes
+- **Focus States**: Proper accessibility support
+
+#### To Modify Styling:
+Edit the `<style jsx>` section in `/src/components/Newsletter.tsx`:
+
+```jsx
+:global(.newsletter-form input[type="email"]) {
+  /* Customize input styling */
+  background-color: your-color !important;
+  border-color: your-border-color !important;
+}
+
+:global(.newsletter-form button) {
+  /* Customize button styling */
+  background-color: your-brand-color !important;
+}
 ```
 
-#### Customizing Success Messages:
-Edit the API route response messages in `/src/app/api/newsletter/route.ts`:
-```typescript
-return NextResponse.json(
-  { 
-    success: true, 
-    message: 'Your custom success message here!' 
-  },
-  { status: 200 }
-);
-```
+### 7. Newsletter Management
 
-#### Monitoring Subscriptions:
-- Check ConvertKit Dashboard → Subscribers for new signups
-- View API logs in Vercel Dashboard → Functions → Logs
-- Monitor error rates and success rates
+#### Subscriber Management:
+- **ConvertKit**: Dashboard → Subscribers → View all subscribers, segments, and tags
+- **Mailchimp**: Audience → All Contacts → Manage subscribers and segments
+- **EmailOctopus**: Lists → [Your List] → View subscribers and manage segments
 
-### 6. Troubleshooting
+#### Creating Email Campaigns:
+1. **ConvertKit**: Campaigns → Create Campaign → Design your email
+2. **Mailchimp**: Campaigns → Create Campaign → Choose your audience
+3. **EmailOctopus**: Campaigns → New Campaign → Select your list
+
+#### Adding Welcome Sequences:
+- Set up automated welcome emails in your provider's automation section
+- Include links to your best content or services
+- Provide clear value from the first email
+
+### 8. Advanced Configuration
+
+#### Custom Thank You Pages:
+Most email providers allow you to redirect to a custom thank you page after subscription.
+
+#### Double Opt-in Setup:
+Enable double opt-in in your email provider settings for better deliverability and compliance.
+
+#### Analytics Integration:
+Add tracking pixels or integrate with Google Analytics to track newsletter conversion rates.
+
+### 9. Troubleshooting
 
 #### Common Issues:
 
-**"Newsletter service configuration error"**:
-- Check that environment variables are set correctly
-- Verify ConvertKit API key is valid
-- Ensure Form ID exists and is active
+**Form not submitting:**
+- Check that the embed code is properly formatted
+- Ensure the `newsletter-form` class is added to the form element
+- Verify the form action URL is correct
 
-**"This email address is already subscribed"**:
-- This is normal ConvertKit behavior
-- The user will see this message and can check their email
+**Styling looks wrong:**
+- Check that custom CSS is being applied
+- Inspect the form elements to see if provider CSS is overriding
+- Add `!important` to CSS rules if needed
 
-**Network errors**:
-- Check internet connection
-- Verify Vercel deployment is working
-- Check ConvertKit API status
+**Subscribers not appearing:**
+- Check your email provider's dashboard
+- Verify the form is pointing to the correct list/audience
+- Check spam folder for confirmation emails
 
 #### Testing Checklist:
-- [ ] Environment variables configured
-- [ ] ConvertKit form created and active
-- [ ] Local development server working
-- [ ] Production deployment successful
-- [ ] Test email subscription works
-- [ ] Success/error messages display correctly
-- [ ] New subscribers appear in ConvertKit
-
-### 7. Advanced Configuration
-
-#### Custom Email Templates:
-Configure in ConvertKit Dashboard → Sequences to send welcome emails to new subscribers.
-
-#### Analytics Integration:
-The newsletter API logs successful subscriptions. You can extend this to integrate with Google Analytics or other tracking tools.
-
-#### Rate Limiting:
-For high-traffic sites, consider adding rate limiting to the API route to prevent abuse.
+- [ ] Email provider account set up
+- [ ] Form created and configured
+- [ ] Embed code added to Newsletter component
+- [ ] `newsletter-form` class added to form element
+- [ ] Local testing completed successfully
+- [ ] Form styling looks correct
+- [ ] Test subscription appears in provider dashboard
+- [ ] Confirmation emails working (if enabled)
 
 ---
 
@@ -463,6 +524,5 @@ For high-traffic sites, consider adding rate limiting to the API route to preven
 - Images: `/public/images/`
 - Blog components: `/src/app/blog/`
 - Page templates: `/src/components/PageTemplate.tsx`
-- Newsletter API: `/src/app/api/newsletter/route.ts`
 - Newsletter Component: `/src/components/Newsletter.tsx`
-- Environment Variables: `/.env.local` (local), Vercel Dashboard (production)
+- Environment Variables: No longer needed (HTML embed approach)

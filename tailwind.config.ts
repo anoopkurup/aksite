@@ -54,14 +54,49 @@ const config: Config = {
   				DEFAULT: "hsl(var(--card))",
   				foreground: "hsl(var(--card-foreground))"
   			},
-  			'oxford-blue': '#0a2540',
-  			azure: '#3b82f6',
-  			gamboge: '#f59e0b',
-  			'antiflash-white': '#f4f4f5',
+  			// Navy Theme Core Colors
+  			navy: {
+  				'50': '#f0f4ff',
+  				'100': '#e0eaff',
+  				'200': '#c3d5ff',
+  				'300': '#8fb4ff',
+  				'400': '#5d8aff',
+  				'500': '#3d6fff',
+  				'600': '#2563eb',
+  				'700': '#1e40af',
+  				'800': '#1e3a8a',
+  				'900': '#1a237e',
+  				'950': '#0f172a'
+  			},
+  			periwinkle: {
+  				'50': '#f0f4ff',
+  				'100': '#e0eaff',
+  				'200': '#c3d5ff',
+  				'300': '#8fb4ff',
+  				'400': '#60a5fa',
+  				'500': '#3b82f6',
+  				'600': '#2563eb',
+  				'700': '#1d4ed8',
+  				'800': '#1e40af',
+  				'900': '#1e3a8a'
+  			},
+  			cream: {
+  				'50': '#fefefe',
+  				'100': '#fef7ed',
+  				'200': '#fde68a',
+  				'300': '#fcd34d',
+  				'400': '#fbbf24',
+  				'500': '#f59e0b'
+  			},
+  			// Legacy colors updated for Navy theme
+  			'oxford-blue': '#1e3a8a',
+  			azure: '#8fb4ff',
+  			gamboge: '#e6a817',
+  			'antiflash-white': '#fef7ed',
   			charcoal: '#374151',
   			white: '#ffffff',
-  			'light-gray': '#f9fafb',
-  			'border-gray': '#e5e7eb',
+  			'light-gray': '#fef7ed',
+  			'border-gray': '#c3d5ff',
   			brand: {
   				'50': '#f0f9ff',
   				'100': '#dbeafe',
@@ -108,6 +143,39 @@ const config: Config = {
   			]
   		},
   		fontSize: {
+  			// Hero title - 48px (matches style guide)
+  			'hero': [
+  				'3rem',
+  				{
+  					lineHeight: '1.08',
+  					letterSpacing: '-0.02em'
+  				}
+  			],
+  			// Page title - 36px (matches style guide)  
+  			'page-title': [
+  				'2.25rem',
+  				{
+  					lineHeight: '1.11',
+  					letterSpacing: '-0.01em'
+  				}
+  			],
+  			// Section title - 30px (matches style guide)
+  			'section-title': [
+  				'1.875rem',
+  				{
+  					lineHeight: '1.2',
+  					letterSpacing: '-0.01em'
+  				}
+  			],
+  			// Subsection - 24px (matches style guide)
+  			'subsection': [
+  				'1.5rem',
+  				{
+  					lineHeight: '1.33',
+  					letterSpacing: '0em'
+  				}
+  			],
+  			// Keep existing display sizes for legacy support
   			'display-xl': [
   				'4.5rem',
   				{
@@ -154,9 +222,12 @@ const config: Config = {
   			'gradient-subtle': 'linear-gradient(135deg, #f9fafb 0%, #f4f4f5 100%)'
   		},
   		boxShadow: {
-  			soft: '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
-  			medium: '0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-  			strong: '0 10px 40px -10px rgba(0, 0, 0, 0.12), 0 2px 6px 0px rgba(0, 0, 0, 0.04)'
+  			soft: '0 2px 15px -3px rgba(30, 58, 138, 0.08), 0 10px 20px -2px rgba(30, 58, 138, 0.05)',
+  			medium: '0 4px 25px -5px rgba(30, 58, 138, 0.12), 0 10px 10px -5px rgba(30, 58, 138, 0.06)',
+  			strong: '0 10px 40px -10px rgba(30, 58, 138, 0.15), 0 2px 6px 0px rgba(30, 58, 138, 0.08)',
+  			'navy-soft': '0 2px 15px -3px rgba(30, 58, 138, 0.1), 0 10px 20px -2px rgba(30, 58, 138, 0.06)',
+  			'navy-medium': '0 4px 25px -5px rgba(30, 58, 138, 0.15), 0 10px 10px -5px rgba(30, 58, 138, 0.08)',
+  			'navy-strong': '0 10px 40px -10px rgba(30, 58, 138, 0.2), 0 2px 6px 0px rgba(30, 58, 138, 0.1)'
   		},
   		keyframes: {
   			'accordion-down': {

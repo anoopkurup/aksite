@@ -21,7 +21,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-oxford-blue">
+            <Link href="/" className="text-2xl font-bold text-oxford-blue focus-enhanced">
               Anoop Kurup
             </Link>
           </div>
@@ -32,7 +32,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-charcoal hover:text-azure transition-colors duration-200 font-medium"
+                className="text-charcoal hover:text-azure transition-colors duration-200 font-medium focus-enhanced"
               >
                 {item.name}
               </Link>
@@ -43,7 +43,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="bg-azure text-white px-6 py-2.5 rounded-lg hover:bg-oxford-blue transition-all duration-200 font-medium shadow-soft hover:shadow-medium"
+              className="bg-azure text-white px-6 py-2.5 rounded-lg hover:bg-oxford-blue transition-all duration-200 font-medium shadow-soft hover:shadow-medium focus-enhanced"
             >
               Work With Me
             </Link>
@@ -53,8 +53,9 @@ export default function Header() {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-charcoal hover:text-oxford-blue"
+              className="text-charcoal hover:text-oxford-blue focus-enhanced"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle mobile menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
@@ -75,7 +76,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-charcoal hover:text-azure transition-colors duration-200 font-medium px-2 py-2"
+                  className="text-charcoal hover:text-azure transition-colors duration-200 font-medium px-2 py-2 focus-enhanced"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -83,7 +84,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="bg-azure text-white px-6 py-2.5 rounded-lg hover:bg-oxford-blue transition-all duration-200 font-medium text-center mt-4"
+                className="bg-azure text-white px-6 py-2.5 rounded-lg hover:bg-oxford-blue transition-all duration-200 font-medium text-center mt-4 focus-enhanced"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Work With Me

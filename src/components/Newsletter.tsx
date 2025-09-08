@@ -10,14 +10,14 @@ interface NewsletterProps {
 
 export default function Newsletter({ showWorkButtons = true }: NewsletterProps) {
   return (
-    <section className="py-20 px-6 bg-slate-50">
+    <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
       <div className="max-w-4xl mx-auto">
         <Card className="p-12 bg-white shadow-lg">
           <CardContent className="p-0 text-center">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-6">
+            <h2 id="newsletter-title" className="text-section-title font-bold text-[#1e3a8a] mb-6">
               Grow your service business
             </h2>
-            <p className="text-xl text-charcoal mb-8">
+            <p className="text-xl text-[#374151] mb-8">
               Join 2,500+ service business owners who get practical, actionable insights every Tuesday.
             </p>
             
@@ -34,6 +34,8 @@ export default function Newsletter({ showWorkButtons = true }: NewsletterProps) 
                 action="https://app.kit.com/forms/8528693/subscriptions" 
                 className="seva-form formkit-form" 
                 method="post" 
+                role="form"
+                aria-labelledby="newsletter-title"
                 data-sv-form="8528693" 
                 data-uid="e15bdc70e2" 
                 data-format="inline" 
@@ -64,7 +66,9 @@ export default function Newsletter({ showWorkButtons = true }: NewsletterProps) 
                     <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
                     <div data-element="fields" className="seva-fields formkit-fields">
                       <div className="formkit-field">
+                        <label htmlFor="first-name" className="sr-only">First Name</label>
                         <input 
+                          id="first-name"
                           className="formkit-input" 
                           aria-label="First Name" 
                           name="fields[first_name]" 
@@ -74,7 +78,9 @@ export default function Newsletter({ showWorkButtons = true }: NewsletterProps) 
                         />
                       </div>
                       <div className="formkit-field">
+                        <label htmlFor="email-address" className="sr-only">Email Address</label>
                         <input 
+                          id="email-address"
                           className="formkit-input" 
                           name="email_address" 
                           aria-label="Email Address" 
@@ -87,6 +93,8 @@ export default function Newsletter({ showWorkButtons = true }: NewsletterProps) 
                       <button 
                         data-element="submit" 
                         className="formkit-submit formkit-submit" 
+                        type="submit"
+                        aria-describedby="form-description"
                         style={{color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(245, 158, 11)', borderRadius: '24px', fontWeight: 700}}
                       >
                         <div className="formkit-spinner">
@@ -98,7 +106,7 @@ export default function Newsletter({ showWorkButtons = true }: NewsletterProps) 
                       </button>
                     </div>
                     <div className="formkit-guarantee" data-element="guarantee" style={{color: 'rgb(77, 77, 77)', fontSize: '13px', fontWeight: 400}}>
-                      <p>We respect your privacy. Unsubscribe at any time.</p>
+                      <p id="form-description">We respect your privacy. Unsubscribe at any time.</p>
                     </div>
                     <div className="formkit-powered-by-convertkit-container">
                       <a 
@@ -123,11 +131,17 @@ export default function Newsletter({ showWorkButtons = true }: NewsletterProps) 
             </div>
             {showWorkButtons && (
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-gamboge text-oxford-blue hover:bg-yellow-400 px-8 py-3 rounded-full font-bold">
-                  <Link href="/consulting">Work With Me</Link>
+                <Button asChild size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-3 rounded-full font-bold">
+                  <Link href="/consulting" className="flex items-center">
+                    Work With Me
+                    <LineIcon type="arrow-right" className="ml-2" size={16} />
+                  </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-azure text-azure hover:bg-azure hover:text-white px-8 py-3 rounded-full font-bold">
-                  <Link href="/workshops">Join a Workshop</Link>
+                <Button asChild size="lg" className="bg-[#1e3a8a] text-white hover:bg-[#1e40af] px-8 py-3 rounded-full font-bold">
+                  <Link href="/workshops" className="flex items-center">
+                    Join a Workshop
+                    <LineIcon type="arrow-right" className="ml-2" size={16} />
+                  </Link>
                 </Button>
               </div>
             )}

@@ -96,6 +96,13 @@ export default function LineIcon({ type, className = "", size = 48 }: LineIconPr
             <path d="M19 12H5" />
           </svg>
         );
+      case "arrow-right":
+        return (
+          <svg style={iconStyle} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path d="m12 5 7 7-7 7" />
+            <path d="M5 12h14" />
+          </svg>
+        );
       default:
         return (
           <svg style={iconStyle} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

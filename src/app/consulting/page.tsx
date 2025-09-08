@@ -3,8 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
+import { getContentPage, convertIconName, processHeroMedia } from "@/lib/content";
 
 export default function ConsultingPage() {
+  // Get consulting page content from MDX
+  const consultingContent = getContentPage('consulting');
+  const heroMedia = processHeroMedia(consultingContent?.frontmatter || {});
   const marketingProblems = [
     {
       title: "Scattered & Generic Messaging",
@@ -156,35 +160,36 @@ export default function ConsultingPage() {
 
   return (
     <PageTemplate 
-      title="Consulting: The Lead Machine Method™"
-      subtitle="Fix your scattered marketing with a structured, AI-enabled approach that transforms chaotic tactics into a predictable, scalable lead generation system."
+      title={consultingContent?.frontmatter?.title || "Fix Your Marketing"}
+      subtitle={consultingContent?.frontmatter?.description || "Your marketing isn't broken. It's just scattered. I help professional services and tech-enabled businesses fix their marketing by creating clarity, focus, and a repeatable system for generating leads."}
       heroBackground="gradient"
       heroIcon="target"
+      heroMedia={heroMedia}
     >
       {/* The 6 Most Common Marketing Problems */}
-      <section className="py-16 px-6 bg-slate-50">
+      <section className="py-16 px-6 bg-navy-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">Why Most Marketing Doesn't Work</h2>
-            <p className="text-xl text-charcoal mb-6 font-medium">It's not about effort. It's about structure.</p>
-            <p className="text-lg text-charcoal max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-navy-800 mb-4">Why Most Marketing Doesn't Work</h2>
+            <p className="text-xl text-neutral-700 mb-6 font-medium">It's not about effort. It's about structure.</p>
+            <p className="text-lg text-neutral-700 max-w-4xl mx-auto">
               Most businesses don't fail at marketing because they lack effort. They fail because of these systematic issues:
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {marketingProblems.map((problem, index) => (
-              <Card key={index} className="p-6 bg-slate-50 shadow-soft">
+              <Card key={index} className="p-6 bg-navy-100 shadow-navy-soft">
                 <CardContent className="p-0">
-                  <h3 className="text-lg font-bold text-oxford-blue mb-3">{problem.title}</h3>
-                  <p className="text-charcoal text-sm leading-relaxed">{problem.description}</p>
+                  <h3 className="text-lg font-bold text-navy-800 mb-3">{problem.title}</h3>
+                  <p className="text-neutral-700 text-sm leading-relaxed">{problem.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="bg-slate-50 p-8 rounded-xl text-center">
-            <p className="text-lg text-charcoal">
+          <div className="bg-navy-100 p-8 rounded-xl text-center">
+            <p className="text-lg text-neutral-700">
               <strong>The outcome?</strong> Campaigns that fizzle out, growth that feels random, and leaders stuck in the weeds. Marketing feels like chaos. Teams work harder but see diminishing returns.
             </p>
           </div>
@@ -195,21 +200,21 @@ export default function ConsultingPage() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">The Lead Machine Method™: Core Principles</h2>
-            <p className="text-xl text-charcoal">
+            <h2 className="text-3xl font-bold text-navy-800 mb-4">The Lead Machine Method™: Core Principles</h2>
+            <p className="text-xl text-neutral-700">
               My approach is built on three foundational principles that transform scattered marketing into systematic growth.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {corePrinciples.map((principle, index) => (
-              <Card key={index} className="p-8 bg-white shadow-soft text-center hover:shadow-medium transition-shadow">
+              <Card key={index} className="p-8 bg-white shadow-navy-soft text-center hover:shadow-navy-medium transition-shadow">
                 <CardContent className="p-0">
                   <div className="mb-6">
-                    <LineIcon type={principle.iconType} className="text-gamboge mx-auto" size={56} />
+                    <LineIcon type={principle.iconType} className="text-accent mx-auto" size={56} />
                   </div>
-                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{principle.title}</h3>
-                  <p className="text-charcoal leading-relaxed">{principle.description}</p>
+                  <h3 className="text-xl font-bold text-navy-800 mb-4">{principle.title}</h3>
+                  <p className="text-neutral-700 leading-relaxed">{principle.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -218,24 +223,24 @@ export default function ConsultingPage() {
       </section>
 
       {/* The Method Timeline */}
-      <section className="py-16 px-6 bg-slate-50">
+      <section className="py-16 px-6 bg-navy-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">How The Lead Machine Method™ Works</h2>
-            <p className="text-xl text-charcoal">
+            <h2 className="text-3xl font-bold text-navy-800 mb-4">How The Lead Machine Method™ Works</h2>
+            <p className="text-xl text-neutral-700">
               A systematic 5-step process that takes you from scattered tactics to predictable growth.
             </p>
           </div>
 
           <div className="grid md:grid-cols-5 gap-8">
             {methodSteps.map((step, index) => (
-              <Card key={index} className="p-6 bg-slate-50 text-center">
+              <Card key={index} className="p-6 bg-navy-100 text-center">
                 <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-azure text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                  <div className="w-12 h-12 bg-periwinkle-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {step.number}
                   </div>
-                  <h3 className="font-bold text-oxford-blue mb-3">{step.title}</h3>
-                  <p className="text-charcoal text-sm leading-relaxed">{step.description}</p>
+                  <h3 className="font-bold text-navy-800 mb-3">{step.title}</h3>
+                  <p className="text-neutral-700 text-sm leading-relaxed">{step.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -244,20 +249,20 @@ export default function ConsultingPage() {
       </section>
 
       {/* What Makes This Different */}
-      <section className="py-16 px-6 bg-slate-50">
+      <section className="py-16 px-6 bg-navy-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-6">What Makes This Different</h2>
-            <p className="text-xl text-charcoal mb-8">
+            <h2 className="text-3xl font-bold text-navy-800 mb-6">What Makes This Different</h2>
+            <p className="text-xl text-neutral-700 mb-8">
               Most marketing approaches focus on tactics or tools. The Lead Machine Method™ starts with strategy and builds systems that last.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <Card className="p-8 bg-white shadow-soft">
+            <Card className="p-8 bg-white shadow-navy-soft">
               <CardContent className="p-0">
-                <h3 className="text-xl font-bold text-oxford-blue mb-6">Traditional Marketing Approach:</h3>
-                <ul className="space-y-3 text-charcoal">
+                <h3 className="text-xl font-bold text-navy-800 mb-6">Traditional Marketing Approach:</h3>
+                <ul className="space-y-3 text-neutral-700">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
                     Campaign-focused
@@ -278,24 +283,24 @@ export default function ConsultingPage() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 bg-azure text-white">
+            <Card className="p-8 bg-periwinkle-600 text-white">
               <CardContent className="p-0">
                 <h3 className="text-xl font-bold text-white mb-6">The Lead Machine Method™:</h3>
-                <ul className="space-y-3 text-blue-100">
+                <ul className="space-y-3 text-periwinkle-100">
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-gamboge rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
                     System-focused
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-gamboge rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
                     Strategy-driven
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-gamboge rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
                     Scales with minimal oversight
                   </li>
                   <li className="flex items-center">
-                    <div className="w-2 h-2 bg-gamboge rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
                     Delivers predictable results
                   </li>
                 </ul>
@@ -305,17 +310,17 @@ export default function ConsultingPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {differences.map((diff, index) => (
-              <Card key={index} className="p-8 bg-white shadow-soft">
+              <Card key={index} className="p-8 bg-white shadow-navy-soft">
                 <CardContent className="p-0">
-                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{diff.title}</h3>
-                  <p className="text-charcoal leading-relaxed">{diff.description}</p>
+                  <h3 className="text-xl font-bold text-navy-800 mb-4">{diff.title}</h3>
+                  <p className="text-neutral-700 leading-relaxed">{diff.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg text-charcoal">
+            <p className="text-lg text-neutral-700">
               <strong>The difference is structure.</strong> When marketing operates as a system rather than a collection of campaigns, it becomes an asset that compounds over time.
             </p>
           </div>
@@ -326,21 +331,21 @@ export default function ConsultingPage() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">How I'll Fix Your Marketing</h2>
-            <p className="text-xl text-charcoal max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-navy-800 mb-4">How I'll Fix Your Marketing</h2>
+            <p className="text-xl text-neutral-700 max-w-4xl mx-auto">
               Instead of more tactics, you need strategic clarity and systematic execution. When we work together, we'll build a clear, structured marketing engine that transforms scattered efforts into predictable growth.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
-              <Card key={index} className="p-8 bg-slate-50 shadow-soft hover:shadow-medium transition-shadow">
+              <Card key={index} className="p-8 bg-navy-50 shadow-navy-soft hover:shadow-navy-medium transition-shadow">
                 <CardContent className="p-0">
                   <div className="mb-6">
-                    <LineIcon type={solution.iconType} className="text-gamboge" size={56} />
+                    <LineIcon type={solution.iconType} className="text-accent" size={56} />
                   </div>
-                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{solution.title}</h3>
-                  <p className="text-charcoal leading-relaxed">{solution.description}</p>
+                  <h3 className="text-xl font-bold text-navy-800 mb-4">{solution.title}</h3>
+                  <p className="text-neutral-700 leading-relaxed">{solution.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -408,13 +413,13 @@ export default function ConsultingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-azure to-blue-700">
+      <section className="py-16 px-6 bg-gradient-to-br from-navy-600 to-navy-800">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl font-bold mb-6">Ready to Build Your Lead Machine?</h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-navy-100 mb-8">
             You don't need more tactics. You need a system. Let's transform your scattered marketing into predictable growth.
           </p>
-          <Button asChild size="lg" className="bg-gamboge text-oxford-blue hover:bg-yellow-400 px-8 py-4 rounded-full font-bold text-lg">
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 rounded-full font-bold text-lg shadow-navy-strong">
             <Link href="/contact">Work With Me</Link>
           </Button>
         </div>

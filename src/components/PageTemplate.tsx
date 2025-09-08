@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import LineIcon from "@/components/LineIcon";
+import HeroMedia, { HeroMedia as HeroMediaType } from "@/components/HeroMedia";
 
 interface PageTemplateProps {
   title: string;
@@ -8,6 +9,7 @@ interface PageTemplateProps {
   children: ReactNode;
   heroBackground?: "gradient" | "light" | "white";
   heroIcon?: string;
+  heroMedia?: HeroMediaType | null;
 }
 
 export default function PageTemplate({ 
@@ -15,18 +17,19 @@ export default function PageTemplate({
   subtitle, 
   children, 
   heroBackground = "light",
-  heroIcon = "target"
+  heroIcon = "target",
+  heroMedia
 }: PageTemplateProps) {
   const bgClasses = {
-    gradient: "bg-gradient-to-br from-primary to-primary/80 text-primary-foreground",
-    light: "bg-slate-50",
-    white: "bg-slate-50"
+    gradient: "bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white",
+    light: "bg-[#fef7ed]",
+    white: "bg-[#fef7ed]"
   };
 
   const textClasses = {
-    gradient: "text-primary-foreground",
-    light: "text-oxford-blue",
-    white: "text-oxford-blue"
+    gradient: "text-white",
+    light: "text-[#1e3a8a]",
+    white: "text-[#1e3a8a]"
   };
 
   return (
@@ -40,32 +43,40 @@ export default function PageTemplate({
                 {title}
               </h1>
               {subtitle && (
-                <p className={`text-xl ${heroBackground === 'gradient' ? 'text-primary-foreground/80' : 'text-charcoal'} leading-relaxed`}>
+                <p className={`text-xl ${heroBackground === 'gradient' ? 'text-blue-100' : 'text-[#374151]'} leading-relaxed`}>
                   {subtitle}
                 </p>
               )}
             </div>
             <div className="relative">
               <Card className={`${heroBackground === 'gradient' 
-                ? 'bg-primary-foreground/15 border-primary-foreground/30 backdrop-blur-sm' 
+                ? 'bg-white/15 border-white/30 backdrop-blur-sm' 
                 : 'bg-white border-slate-200'} shadow-2xl`}>
                 <CardContent className="p-8">
                   <div className="text-center space-y-6">
-                    <div className="w-full h-64 bg-slate-100 rounded-lg flex items-center justify-center border-2 border-dashed border-slate-300">
-                      <div className="text-center space-y-3">
-                        <LineIcon 
-                          type={heroIcon} 
-                          className={heroBackground === 'gradient' ? 'text-primary-foreground/60' : 'text-gamboge'} 
-                          size={48} 
-                        />
-                        <p className={`${heroBackground === 'gradient' ? 'text-primary-foreground/80' : 'text-oxford-blue'} text-sm font-medium`}>
-                          {title}
-                        </p>
-                        <p className={`${heroBackground === 'gradient' ? 'text-primary-foreground/60' : 'text-charcoal'} text-xs`}>
-                          Professional services solution
-                        </p>
+                    {heroMedia ? (
+                      <HeroMedia 
+                        media={heroMedia} 
+                        className="w-full"
+                        priority={false}
+                      />
+                    ) : (
+                      <div className="w-full h-64 bg-[#8fb4ff]/20 rounded-lg flex items-center justify-center border-2 border-dashed border-[#8fb4ff]/30">
+                        <div className="text-center space-y-3">
+                          <LineIcon 
+                            type={heroIcon} 
+                            className={heroBackground === 'gradient' ? 'text-white/60' : 'text-[#e6a817]'} 
+                            size={48} 
+                          />
+                          <p className={`${heroBackground === 'gradient' ? 'text-white/80' : 'text-[#1e3a8a]'} text-sm font-medium`}>
+                            {title}
+                          </p>
+                          <p className={`${heroBackground === 'gradient' ? 'text-white/60' : 'text-[#374151]'} text-xs`}>
+                            Professional services solution
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>

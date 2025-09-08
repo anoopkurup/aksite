@@ -50,12 +50,23 @@ export interface ContentSection {
   };
 }
 
+export interface HeroMedia {
+  type: 'image' | 'video';
+  url: string;
+  thumbnail?: string;
+  alt?: string;
+}
+
 export interface ContentPage {
   slug: string;
   frontmatter: {
     title: string;
     description: string;
     content_class?: string;
+    hero_image?: string;
+    hero_video_url?: string;
+    hero_video_thumbnail?: string;
+    hero_media_type?: 'image' | 'video';
     sections?: ContentSection[];
     cta?: {
       title?: string;
@@ -120,4 +131,39 @@ export function convertIconName(iconName?: string): string {
   };
 
   return iconMap[iconName] || iconName.replace('icon-', '') || 'chart';
+}
+
+
+// Helper function to process hero media configuration from frontmatter
+export function processHeroMedia(frontmatter: ContentPage['frontmatter']): HeroMedia | null {
+  // Check for explicit media type first
+  if (frontmatter.hero_media_type === 'video' && frontmatter.hero_video_url) {
+    return {
+      type: 'video',
+      url: frontmatter.hero_video_url,
+      thumbnail: frontmatter.hero_video_thumbnail,
+      alt: `Video: ${frontmatter.title}`
+    };
+  }
+  
+  // Check for video URL (backwards compatibility)
+  if (frontmatter.hero_video_url) {
+    return {
+      type: 'video',
+      url: frontmatter.hero_video_url,
+      thumbnail: frontmatter.hero_video_thumbnail,
+      alt: `Video: ${frontmatter.title}`
+    };
+  }
+  
+  // Check for image (existing behavior)
+  if (frontmatter.hero_image) {
+    return {
+      type: 'image',
+      url: frontmatter.hero_image,
+      alt: frontmatter.title
+    };
+  }
+  
+  return null;
 }

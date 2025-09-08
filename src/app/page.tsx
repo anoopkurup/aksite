@@ -5,12 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import LineIcon from "@/components/LineIcon";
-import { getContentPage, convertIconName } from "@/lib/content";
+import HeroMedia from "@/components/HeroMedia";
+import { getContentPage, convertIconName, processHeroMedia } from "@/lib/content";
 
 export default function Home() {
   // Get homepage content from MDX
   const homepageContent = getContentPage('_index');
-  const heroImage = homepageContent?.frontmatter?.hero_image || "/images/hero/homepage-heroimage.webp";
+  const heroMedia = processHeroMedia(homepageContent?.frontmatter || {});
   const heroTitle = homepageContent?.frontmatter?.title || "Clarity. Strategy. Systems.";
   const heroDescription = homepageContent?.frontmatter?.description || "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution.";
   
@@ -116,44 +117,42 @@ export default function Home() {
 
   return (
     <div className="bg-background">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-24 px-6 min-h-[700px] flex items-center">
+      {/* Hero Section - Modern Navy Theme */}
+      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white py-24 px-6 min-h-[700px] flex items-center">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <Badge variant="secondary" className="mb-6">
+              <Badge className="mb-6 bg-[#8fb4ff] text-[#1e3a8a] border-[#8fb4ff] hover:bg-[#8fb4ff]/90">
                 <LineIcon type="target" className="mr-2" size={16} />
                 Trusted by 200+ Professional Services Firms
               </Badge>
-              <h1 className="text-display-lg md:text-display-xl font-bold leading-tight mb-6 text-primary-foreground">
+              <h1 className="text-hero font-bold leading-tight mb-6 text-white">
                 {heroTitle}
               </h1>
-              <p className="text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl">
+              <p className="text-lg text-blue-100 mb-8 leading-relaxed max-w-2xl">
                 {heroDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+                <Button size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] font-semibold shadow-lg">
                   <Link href="/contact" className="flex items-center">
                     Work With Me
                     <LineIcon type="arrow-right" className="ml-2" size={16} />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary bg-primary-foreground/10 font-semibold">
+                <Button variant="outline" size="lg" className="border-blue-200 text-blue-200 hover:bg-blue-200/20 hover:text-white bg-white/10 font-semibold">
                   <Link href="/workshops">Explore Workshops</Link>
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <Card className="bg-primary-foreground/15 border-primary-foreground/30 backdrop-blur-sm shadow-2xl">
+              <Card className="bg-white/15 border-white/30 backdrop-blur-sm shadow-2xl">
                 <CardContent className="p-8">
                   <div className="text-center space-y-6">
-                    <div className="w-full h-64 rounded-lg overflow-hidden">
-                      <img 
-                        src={heroImage} 
-                        alt="Professional services marketing solutions"
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
+                    <HeroMedia 
+                      media={heroMedia} 
+                      className="w-full"
+                      priority={true}
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -164,28 +163,28 @@ export default function Home() {
 
       {/* About Section */}
       {aboutSection && (
-        <section className="py-20 px-6 bg-white">
+        <section className="py-16 px-6 bg-[#fef7ed]">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-12 items-start">
               {aboutSection.image && (
                 <div className="relative md:col-span-1">
-                  <div className="w-full max-w-xs mx-auto aspect-square bg-gradient-to-br from-oxford-blue/20 to-azure/20 rounded-2xl shadow-lg flex items-center justify-center">
+                  <div className="w-full max-w-xs mx-auto aspect-square bg-gradient-to-br from-[#1e3a8a]/20 to-[#8fb4ff]/20 rounded-2xl shadow-lg flex items-center justify-center">
                     <img 
                       src={aboutSection.image.startsWith('/') ? aboutSection.image : `/${aboutSection.image}`} 
-                      alt="About Anoop Kurup"
+                      alt="Anoop Kurup, marketing strategist and consultant, professional headshot in black and white"
                       className="w-full h-full object-cover rounded-2xl"
                     />
                   </div>
                 </div>
               )}
               <div className="md:col-span-2">
-                <h2 className="text-3xl font-bold text-oxford-blue mb-6">{aboutSection.title}</h2>
-                <div className="text-charcoal leading-relaxed space-y-4 mb-6">
+                <h2 className="text-section-title font-bold text-[#1e3a8a] mb-6">{aboutSection.title}</h2>
+                <div className="text-[#374151] leading-relaxed space-y-4 mb-6">
                   {aboutSection.content.split('\n\n').map((paragraph: string, index: number) => (
                     <p key={index} dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
                   ))}
                 </div>
-                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button asChild className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white shadow-lg">
                   <Link href="/about">
                     Read More
                     <LineIcon type="arrow-right" className="ml-2" size={16} />
@@ -198,16 +197,16 @@ export default function Home() {
       )}
 
       {/* Target Audience Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-muted/20 to-muted/40">
+      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-display-md font-bold text-foreground">I Work Best With</h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+            <h2 className="text-section-title font-bold text-[#1e3a8a]">I Work Best With</h2>
+            <p className="text-xl text-[#374151] max-w-4xl mx-auto">
               Over 200+ engagements, I've discovered which types of businesses get the most transformative results from systematic marketing approaches.
             </p>
-            <Card className="max-w-4xl mx-auto bg-muted/50">
+            <Card className="max-w-4xl mx-auto bg-[#8fb4ff]/20 border-[#8fb4ff]/30">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">
+                <p className="text-[#374151]">
                   Not every business is ready for what I do. The companies that see dramatic improvements share three characteristics: they value expertise over price, they're willing to invest in systems that compound over time, and they understand that sustainable growth comes from consistent execution, not silver bullets.
                 </p>
               </CardContent>
@@ -216,31 +215,33 @@ export default function Home() {
           
           <div className="grid lg:grid-cols-3 gap-8">
             {audienceSegments.map((segment: any, index: number) => (
-              <Card key={index} className="h-full hover:shadow-lg transition-shadow flex flex-col">
+              <Card key={index} className="h-full hover:shadow-xl transition-shadow flex flex-col bg-white border-[#8fb4ff]/20">
                 <CardHeader>
                   <div className="mb-4">
-                    <LineIcon type={convertIconName(segment.iconType || segment.icon)} className="text-accent mb-4" size={48} />
-                    <CardTitle className="text-xl">{segment.title}</CardTitle>
-                    <CardDescription className="text-primary font-semibold">
+                    <LineIcon type={convertIconName(segment.iconType || segment.icon)} className="text-[#e6a817] mb-4" size={48} />
+                    <CardTitle className="text-xl text-[#1e3a8a]">{segment.title}</CardTitle>
+                    <CardDescription className="text-[#1e40af] font-semibold">
                       {segment.subheading}
                     </CardDescription>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4 flex-grow">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-[#374151] leading-relaxed">
                     {segment.description}
                   </p>
-                  <Card className="bg-accent/20 border border-accent/30">
+                  <Card className="bg-[#e6a817]/10 border border-[#e6a817]/30">
                     <CardContent className="p-4">
-                      <p className="text-sm font-semibold text-foreground">
+                      <p className="text-sm font-semibold text-[#1e3a8a]">
                         Typical results: {segment.results}
                       </p>
                     </CardContent>
                   </Card>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all duration-200">
-                    <Link href={segment.link}>View Success Stories</Link>
+                  <Button asChild className="w-full bg-[#1e3a8a] hover:bg-[#1e40af] text-white shadow-lg">
+                    <Link href={segment.link?.url || segment.link || ""}>
+                      {segment.link?.text || "View Success Stories"}
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -250,29 +251,29 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-slate-50 to-slate-100">
+      <section className="py-16 px-6 bg-[#fef7ed]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-display-md font-bold text-foreground">What I Offer</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="text-section-title font-bold text-[#1e3a8a]">What I Offer</h2>
+            <p className="text-xl text-[#374151]">
               Multiple ways to work together, tailored to your needs and stage of growth.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service: any, index: number) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-accent/20">
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-[#e6a817] bg-white">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <LineIcon type={convertIconName(service.iconType || service.icon)} className="text-accent-foreground" size={32} />
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#e6a817] to-[#d69e15] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <LineIcon type={convertIconName(service.iconType || service.icon)} className="text-white" size={32} />
                   </div>
-                  <CardTitle className="text-2xl">{service.title}</CardTitle>
+                  <CardTitle className="text-subsection text-[#1e3a8a]">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  <p className="text-[#374151] leading-relaxed">{service.description}</p>
                 </CardContent>
                 <CardFooter>
-                  <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-200">
-                    <Link href={service.link}>{service.link_text}</Link>
+                  <Button asChild className="w-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white shadow-lg">
+                    <Link href={service.link}>{service.linkText || service.link_text}</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -282,33 +283,33 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-muted/30 to-muted/50">
+      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-display-md font-bold text-foreground">What Clients Say</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="text-section-title font-bold text-[#1e3a8a]">What Clients Say</h2>
+            <p className="text-xl text-[#374151]">
               Real results from businesses that transformed their marketing approach.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial: any, index: number) => (
-              <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 border-l-4 border-l-accent/10">
+              <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 border-l-4 border-l-[#8fb4ff] bg-white">
                 <CardContent className="p-6 space-y-4">
-                  <p className="text-muted-foreground italic leading-relaxed">
+                  <p className="text-[#374151] italic leading-relaxed">
                     "{testimonial.quote}"
                   </p>
-                  <Separator />
+                  <Separator className="bg-[#8fb4ff]/30" />
                   <div className="flex items-center space-x-4">
                     <Avatar>
                       <AvatarImage src={testimonial.avatar} />
-                      <AvatarFallback>
+                      <AvatarFallback className="bg-[#8fb4ff] text-[#1e3a8a]">
                         {testimonial.author.split(' ').map((n: string) => n[0]).join('')}
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold text-foreground">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                      <p className="font-semibold text-[#1e3a8a]">{testimonial.author}</p>
+                      <p className="text-sm text-[#374151]">{testimonial.role}</p>
+                      <p className="text-sm text-[#374151]">{testimonial.company}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -319,25 +320,25 @@ export default function Home() {
       </section>
 
       {/* My Approach Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-slate-100 to-slate-200">
+      <section className="py-16 px-6 bg-[#fef7ed]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-display-md font-bold text-foreground">My Approach</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="text-section-title font-bold text-[#1e3a8a]">My Approach</h2>
+            <p className="text-xl text-[#374151]">
               My work is built on three principles that drive real results:
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {approachPrinciples.map((principle, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center bg-white border-[#8fb4ff]/20">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-accent-foreground">{principle.number}</span>
+                  <div className="w-16 h-16 bg-[#e6a817] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-white">{principle.number}</span>
                   </div>
-                  <CardTitle className="text-xl">{principle.title}</CardTitle>
+                  <CardTitle className="text-xl text-[#1e3a8a]">{principle.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">{principle.description}</p>
+                  <p className="text-[#374151] leading-relaxed">{principle.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -347,14 +348,14 @@ export default function Home() {
 
 
       {/* Final CTA */}
-      <section className="py-20 px-6 bg-gradient-to-br from-azure to-blue-700">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#1e3a8a] to-[#1e40af]">
         <div className="max-w-4xl mx-auto text-center">
           <div className="p-12">
-            <h2 className="text-display-sm font-bold text-white mb-6">Ready to simplify your marketing and lead generation?</h2>
+            <h2 className="text-page-title font-bold text-white mb-6">Ready to simplify your marketing and lead generation?</h2>
             <p className="text-xl text-blue-100 mb-8">
               Let's design a system that works for your business.
             </p>
-            <Button size="lg" asChild className="bg-gamboge text-oxford-blue hover:bg-yellow-400 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200">
+            <Button size="lg" asChild className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200">
               <Link href="/contact" className="flex items-center">
                 Work With Me
                 <LineIcon type="arrow-right" className="ml-2" size={16} />

@@ -82,21 +82,20 @@ anoopkurup-nextjs/
 ## Design Requirements
 
 ### Visual Style
-- Clean, professional aesthetic
+- Clean, professional aesthetic following `/context/style-guide.md`
 - B2B-focused design language
-- Trust-building elements
-- Results and data emphasis
-- Mobile-responsive
+- Trust-building elements with "Clarity. Strategy. Systems." brand identity
+- Results and data emphasis (40-60% lead increases, 25-35% close rates)
+- Mobile-responsive design
+- Professional services marketing focus
 
-### Color Scheme
-- Professional color palette
-- Consistent with current branding
-- High contrast for readability
-
-### Typography
-- Professional, readable fonts
-- Clear hierarchy
-- Optimized for business content
+### Design System
+- **Style Guide**: Complete specifications in `/context/style-guide.md`
+- **Design Principles**: Comprehensive checklist in `/context/design-principles.md`
+- **UI Framework**: shadcn/ui components with Tailwind CSS
+- **Color Palette**: Professional blues and grays optimized for B2B
+- **Typography**: Inter font family with clear hierarchy
+- **Spacing**: 8px grid system for consistent layouts
 
 ## MDX Blog Structure
 
@@ -205,13 +204,30 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 6. Migrate existing content
 7. Deploy to Vercel and configure domain
 
-## Claude Code Integration
-This project will leverage Claude Code for:
-- Component development and styling
-- MDX configuration and optimization
-- Performance improvements
-- SEO implementation
-- Bug fixes and feature additions
+## Design & Development Guidelines
+
+### Design Review Process
+- Follow comprehensive design principles in `/context/design-principles.md`
+- Use style guide specifications from `/context/style-guide.md`
+- Conduct design reviews using `/design-review` slash command for UI changes
+- Ensure all components meet WCAG 2.1 AA accessibility standards
+
+### Visual Development Workflow
+When implementing UI changes:
+1. Reference style guide for colors, typography, and spacing
+2. Follow design principles checklist for professional services websites
+3. Test across desktop (1440px), tablet (768px), and mobile (375px) viewports
+4. Validate accessibility and keyboard navigation
+5. Capture screenshots for visual verification
+
+### Claude Code Integration
+This project leverages Claude Code for:
+- Component development with shadcn/ui and Tailwind CSS
+- Professional services marketing website optimization
+- MDX blog system configuration and content management
+- SEO implementation following best practices
+- Design system adherence and accessibility compliance
+- Performance optimization for professional websites
 
 ---
 

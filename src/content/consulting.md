@@ -2,6 +2,10 @@
 title: "Fix Your Marketing"
 description: "Your marketing isn't broken. It's just scattered. I help professional services and tech-enabled businesses fix their marketing by creating clarity, focus, and a repeatable system for generating leads."
 content_class: "about hidden-section"
+# hero_media_type: "image"  # Options: "image" | "video"
+# hero_image: "/images/hero/consulting-hero.webp"
+# hero_video_url: "https://www.youtube.com/watch?v=EXAMPLE_VIDEO_ID"
+# hero_video_thumbnail: "/images/hero/consulting-video-thumbnail.webp"
 
 sections:
   - type: "grid"
