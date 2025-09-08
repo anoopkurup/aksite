@@ -8,7 +8,7 @@ import { getContentPage, convertIconName, processHeroMedia } from "@/lib/content
 export default function ConsultingPage() {
   // Get consulting page content from MDX
   const consultingContent = getContentPage('consulting');
-  const heroMedia = processHeroMedia(consultingContent?.frontmatter || {});
+  const heroMedia = consultingContent ? processHeroMedia(consultingContent.frontmatter) : null;
   const marketingProblems = [
     {
       title: "Scattered & Generic Messaging",

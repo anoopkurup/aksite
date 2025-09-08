@@ -11,7 +11,7 @@ import { getContentPage, convertIconName, processHeroMedia } from "@/lib/content
 export default function Home() {
   // Get homepage content from MDX
   const homepageContent = getContentPage('_index');
-  const heroMedia = processHeroMedia(homepageContent?.frontmatter || {});
+  const heroMedia = homepageContent ? processHeroMedia(homepageContent.frontmatter) : null;
   const heroTitle = homepageContent?.frontmatter?.title || "Clarity. Strategy. Systems.";
   const heroDescription = homepageContent?.frontmatter?.description || "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution.";
   

@@ -8,7 +8,7 @@ import { getContentPage, processHeroMedia } from "@/lib/content";
 export default function AboutPage() {
   // Get about page content from MDX (if exists)
   const aboutContent = getContentPage('about');
-  const heroMedia = processHeroMedia(aboutContent?.frontmatter || {});
+  const heroMedia = aboutContent ? processHeroMedia(aboutContent.frontmatter) : null;
   const audienceItems = [
     {
       iconType: "chart",
