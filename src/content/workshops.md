@@ -21,9 +21,11 @@ sections:
     class: "about alt-bg"
     title: "What is the 100-Day Lead Generation Sprint?"
     description: "An intensive 100-day program where we'll build and optimize your complete lead generation system through daily execution, weekly strategy sessions, and systematic improvements. The goal: 5+ qualified leads every month."
-    button:
-      text: "Join the Sprint"
-      url: "#pricing"
+    buttons:
+      - text: "Pay Once - ₹39,600 (Save ₹5,400)"
+        url: "https://rzp.io/rzp/one-time-payment"
+      - text: "3 Installments - ₹15,000 each"
+        url: "https://rzp.io/rzp/installment-plan"
 
   - type: "checklist"
     class: "about"
@@ -102,17 +104,39 @@ sections:
         title: "Days 61-100: Predictable Results"
         description: "Achieve consistent lead flow and prepare for long-term success. Focus on automation, advanced strategies, and building sustainable growth systems."
 
-  - type: "stats"
+  - type: "grid"
     class: "services alt-bg"
     header:
-      title: "Program Investment & Details"
+      title: "Investment Options"
+      subtitle: "Choose the payment plan that works best for you"
+    grid_class: "grid-2"
     items:
-      - number: "₹45,000"
-        label: "Complete Program"
-        description: "One-time investment for 100 days"
+      - title: "One-Time Payment"
+        description: |
+          **₹39,600 (Save ₹5,400)**
+          - 12% discount on full program price
+          - Complete access to all 100 days
+          - All bonuses and support included
+          - Best value option
+      - title: "3-Payment Plan"
+        description: |
+          **₹15,000 × 3 payments**
+          - Total: ₹45,000
+          - Payment 1: At enrollment
+          - Payment 2: Day 30
+          - Payment 3: Day 60
+
+  - type: "stats"
+    class: "services"
+    header:
+      title: "Program Details"
+    items:
       - number: "30min"
         label: "Daily Commitment"
         description: "Monday-Friday execution tasks"
+      - number: "1hr"
+        label: "Weekly Strategy"
+        description: "Personal coaching sessions"
       - number: "10"
         label: "Spots Available"
         description: "Limited enrollment per cohort"
@@ -184,9 +208,11 @@ sections:
     class: "testimonials"
     title: "Ready to Start Your 100-Day Sprint?"
     description: "Join the next cohort and build your predictable lead generation system. Limited spots available - secure your place today and transform your marketing from chaos to consistent results."
-    button:
-      text: "Join the Sprint"
-      url: "https://rzp.io/rzp/e2dPamL"
+    buttons:
+      - text: "Pay Once - ₹39,600 (Save ₹5,400)"
+        url: "https://rzp.io/rzp/one-time-payment"
+      - text: "3 Installments - ₹15,000 each"
+        url: "https://rzp.io/rzp/installment-plan"
 
 pricing:
   amount: "₹49,000"

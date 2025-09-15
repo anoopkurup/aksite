@@ -275,6 +275,28 @@ function HighlightSection({ section, bgClass }: { section: ContentSection; bgCla
             </Link>
           </Button>
         )}
+        {section.buttons && section.buttons.length > 0 && (
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {section.buttons.map((button, index) => (
+              <Button
+                key={index}
+                asChild
+                className={`px-8 py-3 rounded-full font-semibold transition-all ${
+                  index === 0
+                    ? 'bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309]'
+                    : isNavyBackground
+                    ? 'bg-gradient-to-br from-[#93c5fd] to-[#60a5fa] text-[#1e3a8a] hover:from-[#60a5fa] hover:to-[#3b82f6] border-2 border-blue-300'
+                    : 'bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white hover:from-[#1e40af] hover:to-[#1d4ed8]'
+                }`}
+              >
+                <Link href={button.url || '#'} className="flex items-center">
+                  {button.text || 'Learn More'}
+                  <LineIcon type="arrow-right" className="ml-2" size={16} />
+                </Link>
+              </Button>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -48,6 +48,10 @@ export interface ContentSection {
     text?: string;
     url?: string;
   };
+  buttons?: Array<{
+    text?: string;
+    url?: string;
+  }>;
 }
 
 export interface HeroMedia {
