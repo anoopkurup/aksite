@@ -70,17 +70,16 @@ sections:
         label: "Days to Freedom"
         description: "System to get 10+ leads/month"
 
-  - type: "checklist"
+  - type: "value-stack"
     class: "services alt-bg"
-    header:
-      title: "Everything Included (Worth ₹1,25,000+)"
+    title: "Everything Included (Worth ₹1,25,000+)"
     items:
-      - "Complete Lead Generation System Setup & Strategy"
-      - "Daily Task Sequences & Execution Framework"
-      - "Weekly 1-on-1 Strategy & Optimization Sessions"
-      - "Custom Messaging & Positioning Development"
-      - "Automated Follow-up Systems & Templates"
-      - "Performance Tracking & Analytics Setup"
+      - description: "Complete Lead Generation System Setup & Strategy"
+      - description: "Daily Task Sequences & Execution Framework"
+      - description: "Weekly 1-on-1 Strategy & Optimization Sessions"
+      - description: "Custom Messaging & Positioning Development"
+      - description: "Automated Follow-up Systems & Templates"
+      - description: "Performance Tracking & Analytics Setup"
 
   - type: "guarantee"
     class: "testimonials"
@@ -180,14 +179,6 @@ sections:
           - Don't have established services to promote
           - Expect results without systematic effort
 
-  - type: "highlight"
-    class: "testimonials"
-    title: "Ready to Start Your 100-Day Sprint?"
-    description: "Join the next cohort and build your predictable lead generation system. Limited spots available - secure your place today and transform your marketing from chaos to consistent results."
-    button:
-      text: "Join the Sprint"
-      url: "https://rzp.io/rzp/e2dPamL"
-
 pricing:
   amount: "₹49,000"
   commitment: "One-time investment for complete 100-day program"
@@ -208,11 +199,4 @@ target_results:
   primary: "5+ qualified leads per month"
   secondary: "Predictable lead generation system"
   timeline: "Within 100 days"
-
-cta:
-  title: "Ready to Start Your 100-Day Sprint?"
-  subtitle: "Join the next cohort and build your predictable lead generation system."
-  button:
-    text: "Join the Sprint - ₹49,000"
-    url: "https://rzp.io/rzp/e2dPamL"
 ---

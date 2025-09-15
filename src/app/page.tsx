@@ -133,7 +133,7 @@ export default function Home() {
                 {heroDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] font-semibold shadow-lg">
+                <Button size="lg" className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] font-semibold shadow-lg">
                   <Link href="/contact" className="flex items-center">
                     Work With Me
                     <LineIcon type="arrow-right" className="ml-2" size={16} />
@@ -218,7 +218,7 @@ export default function Home() {
               <Card key={index} className="h-full hover:shadow-xl transition-shadow flex flex-col bg-white border-[#8fb4ff]/20">
                 <CardHeader>
                   <div className="mb-4">
-                    <LineIcon type={convertIconName(segment.iconType || segment.icon)} className="text-[#e6a817] mb-4" size={48} />
+                    <LineIcon type={convertIconName(segment.iconType || segment.icon)} className="text-[#f59e0b] mb-4" size={48} />
                     <CardTitle className="text-xl text-[#1e3a8a]">{segment.title}</CardTitle>
                     <CardDescription className="text-[#1e40af] font-semibold">
                       {segment.subheading}
@@ -229,7 +229,7 @@ export default function Home() {
                   <p className="text-[#374151] leading-relaxed">
                     {segment.description}
                   </p>
-                  <Card className="bg-[#e6a817]/10 border border-[#e6a817]/30">
+                  <Card className="bg-[#f59e0b]/10 border border-[#f59e0b]/30">
                     <CardContent className="p-4">
                       <p className="text-sm font-semibold text-[#1e3a8a]">
                         Typical results: {segment.results}
@@ -261,9 +261,9 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service: any, index: number) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-[#e6a817] bg-white">
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-[#f59e0b] bg-white">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#e6a817] to-[#d69e15] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#f59e0b] to-[#d97706] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <LineIcon type={convertIconName(service.iconType || service.icon)} className="text-white" size={32} />
                   </div>
                   <CardTitle className="text-subsection text-[#1e3a8a]">{service.title}</CardTitle>
@@ -332,7 +332,7 @@ export default function Home() {
             {approachPrinciples.map((principle, index) => (
               <Card key={index} className="text-center bg-white border-[#8fb4ff]/20">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#e6a817] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-[#f59e0b] rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold text-white">{principle.number}</span>
                   </div>
                   <CardTitle className="text-xl text-[#1e3a8a]">{principle.title}</CardTitle>
@@ -355,7 +355,7 @@ export default function Home() {
             <p className="text-xl text-blue-100 mb-8">
               Let's design a system that works for your business.
             </p>
-            <Button size="lg" asChild className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200">
+            <Button size="lg" asChild className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200">
               <Link href="/contact" className="flex items-center">
                 Work With Me
                 <LineIcon type="arrow-right" className="ml-2" size={16} />

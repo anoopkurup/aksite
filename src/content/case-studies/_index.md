@@ -2,67 +2,130 @@
 title: "Case Studies"
 description: "Real results from businesses that transformed their marketing with systematic approaches. See how companies like yours achieved predictable growth."
 
-sections:
-  - type: "content"
-    class: "about"
-    content: |
-      ## Proven Results Across Industries
-      
-      Over 15 years and 200+ engagements, I've helped businesses transform chaotic marketing into systematic growth engines. These case studies show the specific strategies, implementations, and results achieved across different industries and business types.
-      
-      Each case study demonstrates how strategic marketing systems, combined with AI-powered workflows, create predictable and scalable growth for professional services and tech-enabled businesses.
+intro:
+  title: "Proven Results Across Industries"
+  content: |
+    Over 15 years and 200+ engagements, I've helped businesses transform chaotic marketing into systematic growth engines. These case studies show the specific strategies, implementations, and results achieved across different industries and business types.
+    
+    Each case study demonstrates how strategic marketing systems, combined with AI-powered workflows, create predictable and scalable growth for professional services and tech-enabled businesses.
 
-  - type: "stats"
-    class: "services"
-    header:
-      title: "Results That Matter"
-      subtitle: "Consistent outcomes across different industries and business models."
-    items:
-      - number: "40-60%"
-        label: "Average Lead Increase"
-        description: "Within 90 days of implementation"
-      - number: "35%"
-        label: "Close Rate Improvement"
-        description: "Through better positioning and qualification"
-      - number: "3x"
-        label: "Marketing Efficiency"
-        description: "Qualified lead conversion rate improvement"
+stats:
+  title: "Results That Matter"
+  subtitle: "Consistent outcomes across different industries and business models."
+  items:
+    - number: "40-60%"
+      label: "Average Lead Increase"
+      description: "Within 90 days of implementation"
+    - number: "35%"
+      label: "Close Rate Improvement"
+      description: "Through better positioning and qualification"
+    - number: "3x"
+      label: "Marketing Efficiency"
+      description: "Qualified lead conversion rate improvement"
 
-  - type: "grid"
-    class: "audience"
-    header:
-      title: "Case Studies by Business Type"
-      subtitle: "Explore results from businesses similar to yours."
-    items:
-      - icon: "icon-chart"
-        title: "Professional Service Firms"
-        description: "Marketing agencies, law firms, consulting practices, and training companies that moved beyond referrals to systematic lead generation."
-      - icon: "icon-computer"
-        title: "Tech-Enabled Businesses"
-        description: "SaaS companies, IT service providers, and productized service businesses that scaled their marketing systems efficiently."
-      - icon: "icon-target"
-        title: "Consultants & Experts"
-        description: "Independent professionals and boutique consultancies that built predictable pipeline generation systems."
+case_studies:
+  title: "Success Stories by Industry"
+  subtitle: "Real businesses, real challenges, real solutions, and measurable results."
+  items:
+    - id: "marketing-agencies"
+      title: "Marketing Agencies"
+      category: "Professional Services"
+      description: "Marketing agencies solved the 'cobbler's children' problem and built systematic lead generation for their own practices while serving clients."
+      testimonial: "Anoop's approach helped us practice what we preach. We went from sporadic new business to a consistent 5-8 qualified inquiries per month."
+      author: "Sarah Chen"
+      role: "Marketing Agency Founder"
+      results: "5-8 qualified inquiries per month"
+      icon: "chart"
+    - id: "legal-firms"
+      title: "Legal & IP Firms"
+      category: "Professional Services"
+      description: "Law firms built thought leadership platforms that attract ideal clients while maintaining professional standards and ethical compliance."
+      testimonial: "Anoop helped us build a thought leadership platform that generates 3-4 qualified corporate inquiries per month while staying within our professional guidelines."
+      author: "David Thompson"
+      role: "Managing Partner, IP Law Practice"
+      results: "3-4 qualified corporate inquiries per month"
+      icon: "handshake"
+    - id: "saas-companies"
+      title: "SaaS Companies"
+      category: "Tech-Enabled"
+      description: "SaaS companies scaled their marketing systems efficiently, reducing sales cycles and improving lead quality through systematic approaches."
+      testimonial: "The systematic approach reduced our sales cycle by 50% and tripled our marketing-qualified lead conversion rate."
+      author: "Michael Rodriguez"
+      role: "SaaS CEO"
+      results: "50% shorter sales cycle, 3x conversion rate"
+      icon: "monitor"
+    - id: "it-services"
+      title: "IT Service Providers"
+      category: "Tech-Enabled"
+      description: "IT service companies moved beyond technical expertise to build marketing systems that consistently generate qualified enterprise clients."
+      testimonial: "Finally, marketing that makes technical sense. Our pipeline became predictable and our close rate improved by 40%."
+      author: "James Kumar"
+      role: "IT Services Director"
+      results: "40% improvement in close rates"
+      icon: "cpu"
+    - id: "strategy-consultants"
+      title: "Strategy Consultants"
+      category: "Consultants & Experts"
+      description: "Independent strategy consultants built personal brands and systematic lead generation that attracts Fortune 500 clients automatically."
+      testimonial: "Moved from feast-or-famine to predictable $50K+ project inquiries every month through systematic thought leadership."
+      author: "Lisa Park"
+      role: "Strategy Consultant"
+      results: "$50K+ project inquiries monthly"
+      icon: "target"
+    - id: "training-companies"
+      title: "Training Companies"
+      category: "Professional Services"
+      description: "Corporate training companies transformed their business development from event-dependent to systematically generated corporate contracts."
+      testimonial: "We went from chasing conferences to having enterprise clients find us. Revenue increased 200% in 18 months."
+      author: "Robert Chen"
+      role: "Training Company CEO"
+      results: "200% revenue increase in 18 months"
+      icon: "graduation"
+    - id: "financial-advisors"
+      title: "Financial Advisors"
+      category: "Professional Services"
+      description: "Financial advisory practices built compliant marketing systems that attract high-net-worth clients while meeting regulatory requirements."
+      testimonial: "Built a compliant marketing system that generates 2-3 qualified high-net-worth prospects per month consistently."
+      author: "Patricia Williams"
+      role: "Financial Advisor"
+      results: "2-3 high-net-worth prospects monthly"
+      icon: "dollar-sign"
+    - id: "tech-consultants"
+      title: "Tech Consultants"
+      category: "Consultants & Experts"
+      description: "Technology consultants leveraged their expertise to build systematic lead generation that attracts enterprise clients seeking digital transformation."
+      testimonial: "Transformed from networking-dependent to systematic lead generation. Now booking $100K+ digital transformation projects consistently."
+      author: "Alex Chen"
+      role: "Technology Consultant"
+      results: "$100K+ projects consistently"
+      icon: "code"
+    - id: "productized-services"
+      title: "Productized Service Businesses"
+      category: "Tech-Enabled"
+      description: "Productized service businesses scaled their marketing to support rapid growth while maintaining service quality and client satisfaction."
+      testimonial: "Scaled from $10K to $100K monthly recurring revenue with systematic marketing that actually scales with the business."
+      author: "Jordan Taylor"
+      role: "Productized Service Founder"
+      results: "$10K to $100K MRR growth"
+      icon: "package"
 
-  - type: "content"
-    class: "approach"
-    content: |
-      ## What Makes These Results Possible
-      
-      These case studies represent more than just good outcomes—they demonstrate what happens when businesses commit to systematic approaches to marketing. Each success story follows a similar pattern:
-      
-      **Strategic Foundation First**: We start with positioning, market analysis, and customer journey mapping before touching any tactics or tools.
-      
-      **Systems Over Campaigns**: Rather than running individual marketing campaigns, we build repeatable processes that generate consistent results month after month.
-      
-      **AI Integration Done Right**: We implement AI workflows that enhance human creativity and strategic thinking, making marketing more efficient without sacrificing quality.
-      
-      **Measurement and Optimization**: Every system includes clear metrics and feedback loops, allowing for continuous improvement and predictable scaling.
+approach:
+  title: "What Makes These Results Possible"
+  subtitle: "These case studies represent more than just good outcomes—they demonstrate what happens when businesses commit to systematic approaches to marketing. Each success story follows a similar pattern:"
+  items:
+    - title: "Strategic Foundation First"
+      description: "We start with positioning, market analysis, and customer journey mapping before touching any tactics or tools."
+    - title: "Systems Over Campaigns"
+      description: "Rather than running individual marketing campaigns, we build repeatable processes that generate consistent results month after month."
+    - title: "AI Integration Done Right"
+      description: "We implement AI workflows that enhance human creativity and strategic thinking, making marketing more efficient without sacrificing quality."
+    - title: "Measurement and Optimization"
+      description: "Every system includes clear metrics and feedback loops, allowing for continuous improvement and predictable scaling."
 
 cta:
   title: "Ready to Create Your Own Success Story?"
   subtitle: "If you're ready to move from chaotic marketing to systematic growth, let's discuss how we can work together."
   button:
     text: "Schedule a Strategy Call"
-    url: "contact/"
+    url: "/contact"
 ---

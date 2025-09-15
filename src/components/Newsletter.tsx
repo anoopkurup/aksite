@@ -131,7 +131,7 @@ export default function Newsletter({ showWorkButtons = true }: NewsletterProps) 
             </div>
             {showWorkButtons && (
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-3 rounded-full font-bold">
+                <Button asChild size="lg" className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] px-8 py-3 rounded-full font-bold">
                   <Link href="/consulting" className="flex items-center">
                     Work With Me
                     <LineIcon type="arrow-right" className="ml-2" size={16} />

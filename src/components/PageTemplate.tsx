@@ -65,7 +65,7 @@ export default function PageTemplate({
                         <div className="text-center space-y-3">
                           <LineIcon 
                             type={heroIcon} 
-                            className={heroBackground === 'gradient' ? 'text-white/60' : 'text-[#e6a817]'} 
+                            className={heroBackground === 'gradient' ? 'text-white/60' : 'text-[#f59e0b]'} 
                             size={48} 
                           />
                           <p className={`${heroBackground === 'gradient' ? 'text-white/80' : 'text-[#1e3a8a]'} text-sm font-medium`}>

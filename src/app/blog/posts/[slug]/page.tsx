@@ -60,7 +60,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             
             <div className="flex items-center gap-4 mb-6">
               {post.frontmatter.category && (
-                <span className="text-sm font-semibold text-white bg-[#e6a817] px-3 py-1 rounded-full">
+                <span className="text-sm font-semibold text-white bg-[#f59e0b] px-3 py-1 rounded-full">
                   {post.frontmatter.category}
                 </span>
               )}

@@ -35,6 +35,9 @@ next-env.d.ts
 # content management files
 CONTENT_MANAGEMENT.md
 
+# content instruction guides folder
+Content-Instructions/
+
 # Claude Code and development files
 .claude/
 .playwright-mcp/

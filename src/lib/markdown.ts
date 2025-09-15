@@ -30,3 +30,16 @@ export function formatDate(dateString: string): string {
     day: 'numeric'
   });
 }
+
+/**
+ * Convert basic markdown formatting to HTML for use in components
+ * Currently supports: **bold** and *italic* text
+ */
+export function processInlineMarkdown(text: string): string {
+  if (!text) return '';
+  
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em>$1</em>')
+    .replace(/\n/g, '<br />');
+}

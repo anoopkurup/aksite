@@ -55,10 +55,21 @@ sections:
 
 # Optional: Add testimonials or FAQ
 testimonials:
-  - quote: "Anoop's approach to marketing strategy completely transformed how we think about lead generation. Clear, practical, and results-driven."
-    author: "Sarah Chen, Marketing Agency Founder"
-  - quote: "Working with Anoop gave us the structure we needed to scale our marketing without constant firefighting."
-    author: "Michael Rodriguez, SaaS CEO"
+  title: "What Clients Say"
+  subtitle: "Real results from businesses that transformed their marketing approach."
+  items:
+    - quote: "Anoop helped us move from chaotic, reactive marketing to a systematic approach that consistently generates qualified leads. Our close rate improved by 35% within 90 days."
+      author: "Nisha P"
+      role: "Founder"
+      company: "Marketing Agency, 25 employees"
+    - quote: "The AI workflows Anoop designed save our team 15 hours per week on content creation while maintaining quality. It's like having an extra team member focused on marketing."
+      author: "A Mehta"
+      role: "CEO"
+      company: "SaaS Platform"
+    - quote: "Finally, marketing that makes sense for professional services. Anoop's approach helped us articulate our value clearly and build a pipeline that doesn't depend on just referrals."
+      author: "Govind K"
+      role: "Managing Partner"
+      company: "IPR Advisors"
 
 faq:
   - question: "What types of businesses do you work with?"

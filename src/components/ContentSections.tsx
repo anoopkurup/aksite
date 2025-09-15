@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
 import { ContentSection, convertIconName } from "@/lib/content";
+import { processInlineMarkdown, markdownToHtml } from "@/lib/markdown";
 
 interface ContentSectionsProps {
   sections: ContentSection[];
@@ -23,11 +24,13 @@ interface ContentSectionRendererProps {
 }
 
 function ContentSectionRenderer({ section }: ContentSectionRendererProps) {
-  const bgClass = section.class?.includes('light-gray') || section.class?.includes('services') 
+  const bgClass = section.class?.includes('alt-bg') || section.class?.includes('services') 
     ? 'bg-gradient-to-b from-blue-50 to-blue-100' 
     : section.class?.includes('audience') || section.class?.includes('approach')
     ? 'bg-[#fef7ed]'
-    : 'bg-[#fef7ed]';
+    : section.class?.includes('testimonials')
+    ? 'bg-[#1e3a8a]'
+    : 'bg-white';
 
   switch (section.type) {
     case 'content':
@@ -48,26 +51,53 @@ function ContentSectionRenderer({ section }: ContentSectionRendererProps) {
       return <FAQSection section={section} bgClass={bgClass} />;
     case 'pricing':
       return <PricingSection section={section} bgClass={bgClass} />;
+    case 'checklist':
+      return <ChecklistSection section={section} bgClass={bgClass} />;
+    case 'value-stack':
+      return <ValueStackSection section={section} bgClass={bgClass} />;
+    case 'guarantee':
+      return <GuaranteeSection section={section} bgClass={bgClass} />;
     default:
       return null;
   }
 }
 
 function ContentBlock({ section, bgClass }: { section: ContentSection; bgClass: string }) {
-  const htmlContent = section.content ? section.content : '';
-  
+  if (!section.content) return null;
+
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div 
-          className="prose prose-lg prose-[#1e3a8a] max-w-none
-            prose-headings:text-[#1e3a8a] prose-headings:font-bold
-            prose-p:text-[#374151] prose-p:leading-relaxed
-            prose-a:text-[#1e40af] prose-a:no-underline hover:prose-a:text-[#1e3a8a]
-            prose-strong:text-[#1e3a8a]
-            prose-ul:text-[#374151] prose-li:text-[#374151]
-            prose-blockquote:text-[#374151] prose-blockquote:border-l-[#8fb4ff]"
-          dangerouslySetInnerHTML={{ __html: htmlContent }}
+          className="max-w-none"
+          dangerouslySetInnerHTML={{ 
+            __html: section.content
+              .split('\n\n')
+              .map(paragraph => {
+                paragraph = paragraph.trim();
+                if (paragraph.startsWith('## ')) {
+                  return `<h2 class="text-4xl font-bold text-[#1e3a8a] mb-8 text-center">${paragraph.replace('## ', '')}</h2>`;
+                } else if (paragraph.startsWith('### ')) {
+                  return `<h3 class="text-2xl font-bold text-[#1e3a8a] mb-4">${paragraph.replace('### ', '')}</h3>`;
+                } else if (paragraph.includes('- ')) {
+                  const listItems = paragraph.split('\n')
+                    .filter(line => line.trim().startsWith('- '))
+                    .map(line => {
+                      const text = line.trim().replace('- ', '');
+                      return `<li class="flex items-start mb-2 text-[#374151] leading-relaxed"><div class="w-2 h-2 bg-[#f59e0b] rounded-full mt-2 mr-3 flex-shrink-0"></div><span>${text}</span></li>`;
+                    })
+                    .join('');
+                  return `<ul class="mb-4">${listItems}</ul>`;
+                } else if (paragraph.trim()) {
+                  // Process bold text
+                  const processedText = paragraph.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#1e3a8a]">$1</strong>');
+                  return `<p class="text-[#374151] leading-relaxed mb-4">${processedText}</p>`;
+                }
+                return '';
+              })
+              .filter(html => html)
+              .join('')
+          }}
         />
       </div>
     </section>
@@ -83,6 +113,9 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
                   section.items.length >= 5 ? 'md:grid-cols-2 lg:grid-cols-3' :
                   'md:grid-cols-2';
 
+  // Determine if we should center items for 3-column layout
+  const shouldCenter = section.items.length === 3;
+
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
       <div className="max-w-6xl mx-auto">
@@ -97,15 +130,15 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
           </div>
         )}
 
-        <div className={`grid ${gridCols} gap-8`}>
+        <div className={`grid ${gridCols} gap-8 ${shouldCenter ? 'justify-items-center' : ''}`}>
           {section.items.map((item, index) => (
-            <Card key={index} className="p-8 bg-white shadow-soft hover:shadow-medium transition-shadow">
+            <Card key={index} className={`p-8 bg-white shadow-soft hover:shadow-medium transition-shadow text-center ${shouldCenter ? 'w-full max-w-sm' : ''}`}>
               <CardContent className="p-0">
                 {(item.icon || item.iconType) && (
                   <div className="mb-6">
                     <LineIcon 
                       type={convertIconName(item.icon || item.iconType)} 
-                      className="text-[#e6a817]" 
+                      className="text-[#f59e0b] mx-auto" 
                       size={56} 
                     />
                   </div>
@@ -118,20 +151,18 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
                 )}
                 {item.description && (
                   <div 
-                    className="text-[#374151] mb-6 leading-relaxed prose prose-sm max-w-none prose-p:mb-2 prose-ul:mb-2 prose-li:mb-1 prose-strong:text-[#1e3a8a]"
+                    className="text-[#374151] mb-6 leading-relaxed prose prose-sm max-w-none prose-p:mb-2 prose-ul:mb-2 prose-li:mb-1 prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic text-left"
                     dangerouslySetInnerHTML={{ 
-                      __html: item.description
-                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                        .replace(/✓/g, '<span class="text-[#e6a817] font-semibold">✓</span>')
-                        .replace(/\n/g, '<br />')
+                      __html: processInlineMarkdown(item.description)
+                        .replace(/✓/g, '<span class="text-[#f59e0b] font-semibold">✓</span>')
                     }}
                   />
                 )}
                 {item.features && (
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-2 mb-6 text-left">
                     {item.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-[#374151]">
-                        <div className="w-2 h-2 bg-[#e6a817] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-[#f59e0b] rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
@@ -162,26 +193,45 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
 function FeaturesSection({ section, bgClass }: { section: ContentSection; bgClass: string }) {
   if (!section.items) return null;
 
+  // Determine grid layout based on number of items
+  const gridCols = section.items.length === 3 ? 'md:grid-cols-3' : 
+                   section.items.length === 2 ? 'md:grid-cols-2' : 
+                   'md:grid-cols-2';
+
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8">
+        {section.header && (
+          <div className="text-center mb-16">
+            {section.header.title && (
+              <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">{section.header.title}</h2>
+            )}
+            {section.header.subtitle && (
+              <p className="text-xl text-[#374151] max-w-4xl mx-auto">{section.header.subtitle}</p>
+            )}
+          </div>
+        )}
+
+        <div className={`grid ${gridCols} gap-8`}>
           {section.items.map((item, index) => (
-            <Card key={index} className={`p-8 shadow-soft ${item.highlight ? 'bg-[#1e3a8a] text-white' : 'bg-white'}`}>
+            <Card key={index} className={`p-8 shadow-soft text-center ${item.highlight ? 'bg-[#1e3a8a] text-white border-2 border-[#8fb4ff]' : 'bg-white'}`}>
               <CardContent className="p-0">
                 <h3 className={`text-xl font-bold mb-4 ${item.highlight ? 'text-white' : 'text-[#1e3a8a]'}`}>
                   {item.title}
                 </h3>
                 {item.description && (
-                  <p className={`leading-relaxed ${item.highlight ? 'text-blue-100' : 'text-[#374151]'}`}>
-                    {item.description}
-                  </p>
+                  <div 
+                    className={`leading-relaxed prose prose-sm max-w-none prose-em:italic text-left ${item.highlight ? 'text-blue-100 prose-strong:text-white prose-em:text-blue-200' : 'text-[#374151] prose-strong:text-[#1e3a8a] prose-em:text-[#374151]'}`}
+                    dangerouslySetInnerHTML={{ 
+                      __html: processInlineMarkdown(item.description)
+                    }}
+                  />
                 )}
                 {item.features && (
-                  <ul className="space-y-3 mt-4">
+                  <ul className="space-y-3 mt-4 text-left">
                     {item.features.map((feature, idx) => (
                       <li key={idx} className={`flex items-start ${item.highlight ? 'text-blue-100' : 'text-[#374151]'}`}>
-                        <div className={`w-2 h-2 bg-[#e6a817] rounded-full mt-2 mr-3 flex-shrink-0`}></div>
+                        <div className={`w-2 h-2 bg-[#f59e0b] rounded-full mt-2 mr-3 flex-shrink-0`}></div>
                         {feature}
                       </li>
                     ))}
@@ -197,19 +247,28 @@ function FeaturesSection({ section, bgClass }: { section: ContentSection; bgClas
 }
 
 function HighlightSection({ section, bgClass }: { section: ContentSection; bgClass: string }) {
+  const isNavyBackground = section.class?.includes('testimonials');
+  
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
       <div className="max-w-6xl mx-auto text-center">
         {section.title && (
-          <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">{section.title}</h2>
+          <h2 className={`text-3xl font-bold mb-6 ${isNavyBackground ? 'text-white' : 'text-[#1e3a8a]'}`}>{section.title}</h2>
         )}
         {section.description && (
-          <p className="text-xl text-[#374151] mb-8 max-w-4xl mx-auto leading-relaxed">
-            {section.description}
-          </p>
+          <div 
+            className={`text-xl mb-8 max-w-4xl mx-auto leading-relaxed prose prose-xl max-w-none prose-em:italic ${
+              isNavyBackground 
+                ? 'text-blue-100 prose-strong:text-white prose-em:text-blue-200' 
+                : 'text-[#374151] prose-strong:text-[#1e3a8a] prose-em:text-[#374151]'
+            }`}
+            dangerouslySetInnerHTML={{ 
+              __html: processInlineMarkdown(section.description)
+            }}
+          />
         )}
         {section.button && (
-          <Button asChild className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-3 rounded-full font-semibold">
+          <Button asChild className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] px-8 py-3 rounded-full font-semibold">
             <Link href={section.button.url || '#'} className="flex items-center">
               {section.button.text || 'Learn More'}
               <LineIcon type="arrow-right" className="ml-2" size={16} />
@@ -257,7 +316,8 @@ function StatsSection({ section, bgClass }: { section: ContentSection; bgClass: 
 function TimelineSection({ section, bgClass }: { section: ContentSection; bgClass: string }) {
   if (!section.items) return null;
 
-  const gridCols = section.items.length === 5 ? 'md:grid-cols-5' : 'md:grid-cols-4';
+  const gridCols = section.items.length === 3 ? 'md:grid-cols-3' : 
+                   section.items.length === 5 ? 'md:grid-cols-5' : 'md:grid-cols-4';
 
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
@@ -270,15 +330,20 @@ function TimelineSection({ section, bgClass }: { section: ContentSection; bgClas
           </div>
         )}
 
-        <div className={`grid ${gridCols} gap-8`}>
+        <div className={`grid ${gridCols} gap-8 justify-center`}>
           {section.items.map((item, index) => (
-            <Card key={index} className="p-6 bg-white border-[#8fb4ff]/20 text-center">
+            <Card key={index} className="p-6 bg-white border-[#8fb4ff]/20 text-center shadow-soft hover:shadow-medium transition-shadow max-w-sm mx-auto">
               <CardContent className="p-0">
                 <div className="w-12 h-12 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {item.number}
                 </div>
                 <h3 className="font-bold text-[#1e3a8a] mb-3">{item.title}</h3>
-                <p className="text-[#374151] text-sm leading-relaxed">{item.description}</p>
+                <div 
+                  className="text-[#374151] text-sm leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic"
+                  dangerouslySetInnerHTML={{ 
+                    __html: processInlineMarkdown(item.description || '')
+                  }}
+                />
               </CardContent>
             </Card>
           ))}
@@ -306,9 +371,12 @@ function TestimonialsSection({ section, bgClass }: { section: ContentSection; bg
           {section.items.map((item, index) => (
             <Card key={index} className="p-6 bg-white shadow-soft">
               <CardContent className="p-0">
-                <blockquote className="text-[#374151] mb-6 leading-relaxed">
-                  "{item.quote}"
-                </blockquote>
+                <blockquote 
+                  className="text-[#374151] mb-6 leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic"
+                  dangerouslySetInnerHTML={{ 
+                    __html: `"${processInlineMarkdown(item.quote || '')}"` 
+                  }}
+                />
                 <div>
                   <p className="font-semibold text-[#1e3a8a]">{item.author}</p>
                   {item.role && <p className="text-sm text-[#1e40af]">{item.role}</p>}
@@ -341,7 +409,12 @@ function FAQSection({ section, bgClass }: { section: ContentSection; bgClass: st
             <Card key={index} className="p-6 bg-white shadow-soft">
               <CardContent className="p-0">
                 <h3 className="text-lg font-bold text-[#1e3a8a] mb-3">{(item as any).question}</h3>
-                <p className="text-[#374151] leading-relaxed">{(item as any).answer}</p>
+                <div 
+                  className="text-[#374151] leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic"
+                  dangerouslySetInnerHTML={{ 
+                    __html: processInlineMarkdown((item as any).answer || '')
+                  }}
+                />
               </CardContent>
             </Card>
           ))}
@@ -380,7 +453,7 @@ function PricingSection({ section, bgClass }: { section: ContentSection; bgClass
               >
                 {pricingItem.featured && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-[#e6a817] text-white px-4 py-2 rounded-full text-sm font-bold">
+                    <span className="bg-[#f59e0b] text-white px-4 py-2 rounded-full text-sm font-bold">
                       Most Popular
                     </span>
                   </div>
@@ -395,13 +468,13 @@ function PricingSection({ section, bgClass }: { section: ContentSection; bgClass
                   <ul className="space-y-3 mb-8">
                     {pricingItem.features?.map((feature: string, idx: number) => (
                       <li key={idx} className={`flex items-center justify-center ${pricingItem.featured ? 'text-blue-100' : 'text-[#374151]'}`}>
-                        <div className="w-2 h-2 bg-[#e6a817] rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-[#f59e0b] rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                   {pricingItem.button && (
-                    <Button asChild className={`w-full ${pricingItem.featured ? 'bg-[#e6a817] text-white hover:bg-[#d69e15]' : 'bg-[#1e3a8a] text-white hover:bg-[#1e40af]'}`}>
+                    <Button asChild className={`w-full ${pricingItem.featured ? 'bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309]' : 'bg-[#1e3a8a] text-white hover:bg-[#1e40af]'}`}>
                       <Link href={pricingItem.button.url || '#'}>{pricingItem.button.text || 'Get Started'}</Link>
                     </Button>
                   )}
@@ -410,6 +483,108 @@ function PricingSection({ section, bgClass }: { section: ContentSection; bgClass
             );
           })}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function ChecklistSection({ section, bgClass }: { section: ContentSection; bgClass: string }) {
+  if (!section.items) return null;
+
+  return (
+    <section className={`py-16 px-6 ${bgClass}`}>
+      <div className="max-w-4xl mx-auto">
+        {section.header && (
+          <div className="text-center mb-16">
+            {section.header.title && (
+              <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">{section.header.title}</h2>
+            )}
+            {section.header.subtitle && (
+              <p className="text-xl text-[#374151]">{section.header.subtitle}</p>
+            )}
+          </div>
+        )}
+
+        <Card className="p-8 bg-white shadow-soft">
+          <CardContent className="p-0">
+            <ul className="space-y-4">
+              {section.items.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#f59e0b] rounded-full flex items-center justify-center mr-4 mt-1">
+                    <LineIcon type="check" className="text-white" size={16} />
+                  </div>
+                  <div 
+                    className="text-[#374151] leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic"
+                    dangerouslySetInnerHTML={{ 
+                      __html: processInlineMarkdown(typeof item === 'string' ? item : (item as any).description || '')
+                    }}
+                  />
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  );
+}
+
+function ValueStackSection({ section, bgClass }: { section: ContentSection; bgClass: string }) {
+  if (!section.items) return null;
+
+  return (
+    <section className={`py-16 px-6 ${bgClass}`}>
+      <div className="max-w-4xl mx-auto text-center">
+        {section.title && (
+          <h2 className="text-3xl font-bold text-[#1e3a8a] mb-12">{section.title}</h2>
+        )}
+
+        <Card className="p-8 bg-white shadow-soft border-2 border-[#8fb4ff]/30">
+          <CardContent className="p-0">
+            <ul className="space-y-4">
+              {section.items.map((item, index) => (
+                <li key={index} className="flex items-center justify-between py-3 border-b border-gray-100 last:border-b-0">
+                  <div 
+                    className="text-[#374151] leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic flex-1 text-left"
+                    dangerouslySetInnerHTML={{ 
+                      __html: processInlineMarkdown(typeof item === 'string' ? item : (item as any).description || '')
+                    }}
+                  />
+                  <div className="flex-shrink-0 ml-4">
+                    <LineIcon type="check" className="text-[#f59e0b]" size={20} />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  );
+}
+
+function GuaranteeSection({ section, bgClass }: { section: ContentSection; bgClass: string }) {
+  return (
+    <section className={`py-16 px-6 ${bgClass}`}>
+      <div className="max-w-4xl mx-auto">
+        <Card className="p-8 bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white shadow-soft border-2 border-[#8fb4ff]/30">
+          <CardContent className="p-0 text-center">
+            <div className="mb-6">
+              <LineIcon type="shield" className="text-[#f59e0b] mx-auto" size={64} />
+            </div>
+            {section.title && (
+              <h2 className="text-3xl font-bold mb-6">{section.title}</h2>
+            )}
+            {section.description && (
+              <div 
+                className="text-xl text-blue-100 leading-relaxed prose prose-xl max-w-none prose-strong:text-white prose-em:text-blue-200 prose-em:italic"
+                dangerouslySetInnerHTML={{ 
+                  __html: processInlineMarkdown(section.description)
+                }}
+              />
+            )}
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

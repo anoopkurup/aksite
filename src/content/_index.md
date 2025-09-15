@@ -49,17 +49,17 @@ testimonials:
   subtitle: "Real results from businesses that transformed their marketing approach."
   items:
     - quote: "Anoop helped us move from chaotic, reactive marketing to a systematic approach that consistently generates qualified leads. Our close rate improved by 35% within 90 days."
-      author: "Sarah Chen"
-      role: "Founder, Strategic Marketing Partners"
+      author: "Nisha P"
+      role: "Founder"
       company: "Marketing Agency, 25 employees"
     - quote: "The AI workflows Anoop designed save our team 15 hours per week on content creation while maintaining quality. It's like having an extra team member focused on marketing."
-      author: "Michael Rodriguez"
+      author: "A Mehta"
       role: "CEO"
-      company: "TechFlow Solutions, SaaS Platform"
+      company: "SaaS Platform"
     - quote: "Finally, marketing that makes sense for professional services. Anoop's approach helped us articulate our value clearly and build a pipeline that doesn't depend on just referrals."
-      author: "David Thompson"
+      author: "Govind K"
       role: "Managing Partner"
-      company: "Thompson Legal Advisors"
+      company: "IPR Advisors"
 
 services:
   title: "What I Offer"

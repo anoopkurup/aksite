@@ -38,7 +38,7 @@ export default function ContentPage({ contentData, heroBackground = "white", her
               </p>
             )}
             {frontmatter.cta.button && (
-              <Button asChild size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-4 rounded-full font-bold text-lg">
+              <Button asChild size="lg" className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] px-8 py-4 rounded-full font-bold text-lg">
                 <Link href={frontmatter.cta.button.url || '/contact'}>
                   {frontmatter.cta.button.text || 'Get Started'}
                 </Link>

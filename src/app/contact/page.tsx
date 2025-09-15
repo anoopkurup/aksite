@@ -44,7 +44,7 @@ export default function ContactPage() {
             {/* Email Card */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-blue-100">
               <div className="text-center">
-                <div className="bg-[#e6a817] text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="bg-[#f59e0b] text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Mail size={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">Email Me Directly</h3>
@@ -63,7 +63,7 @@ export default function ContactPage() {
             {/* Social Media Card */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-blue-100">
               <div className="text-center">
-                <div className="bg-[#e6a817] text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="bg-[#f59e0b] text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0zm5.568 8.16c-.169 1.858-.896 3.433-2.057 4.178-1.194.768-2.814.873-4.617.873-1.848 0-3.482-.105-4.676-.873-1.161-.745-1.888-2.32-2.057-4.178-.156-1.716-.156-3.604 0-5.32C4.33 4.687 5.057 3.112 6.218 2.367 7.412 1.599 9.046 1.494 10.894 1.494c1.803 0 3.423.105 4.617.873 1.161.745 1.888 2.32 2.057 4.178.156 1.716.156 3.604 0 5.32z"/>
                   </svg>
@@ -133,7 +133,7 @@ export default function ContactPage() {
               </p>
             )}
             {frontmatter.cta.button && (
-              <Button asChild size="lg" className="bg-[#e6a817] text-white hover:bg-[#d69e15] px-8 py-4 rounded-full font-bold text-lg">
+              <Button asChild size="lg" className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] px-8 py-4 rounded-full font-bold text-lg">
                 <Link href={frontmatter.cta.button.url || '/contact'}>
                   {frontmatter.cta.button.text || 'Get Started'}
                 </Link>
