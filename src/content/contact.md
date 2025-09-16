@@ -8,8 +8,8 @@ contact_info:
     linkedin: "https://www.linkedin.com/in/anoopkurup/"
     youtube: "https://www.youtube.com/@anoopkurup"
     instagram: "https://www.instagram.com/anoopkurup/"
-    spotify: "https://open.spotify.com/show/anoopkurup"
-    whatsapp: "https://wa.me/1234567890"
+    spotify: "https://open.spotify.com/show/7lnAk0uJ73hwr7AVN93nv3"
+    whatsapp: "https://chat.whatsapp.com/Lefk372OfrkAGT3QiTWuqp"
 
 form:
   method: "POST"

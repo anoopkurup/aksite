@@ -20,7 +20,7 @@ export default function ContactPage() {
   const socialLinks = [
     { platform: "linkedin" as const, href: "https://linkedin.com/in/anoopkurup" },
     { platform: "instagram" as const, href: "https://instagram.com/anoopkurup" },
-    { platform: "whatsapp" as const, href: "https://wa.me/+1234567890" },
+    { platform: "whatsapp" as const, href: "https://chat.whatsapp.com/Lefk372OfrkAGT3QiTWuqp" },
   ];
 
   return (

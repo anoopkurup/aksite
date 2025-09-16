@@ -1,6 +1,6 @@
 ---
 title: "100-Day Lead Generation Sprint"
-description: "Build a predictable lead generation system that delivers 5+ qualified leads per month through systematic daily execution and weekly optimization."
+description: "Build a predictable lead generation system that delivers 10+ qualified leads per month through systematic daily execution and weekly optimization."
 
 sections:
   - type: "content"
@@ -20,12 +20,12 @@ sections:
   - type: "highlight"
     class: "about alt-bg"
     title: "What is the 100-Day Lead Generation Sprint?"
-    description: "An intensive 100-day program where we'll build and optimize your complete lead generation system through daily execution, weekly strategy sessions, and systematic improvements. The goal: 5+ qualified leads every month."
+    description: "An intensive 100-day program where we'll build and optimize your complete lead generation system through daily execution, weekly strategy sessions, and systematic improvements. The goal: 10+ qualified leads every month."
     buttons:
       - text: "Pay Once - ₹39,600 (Save ₹5,400)"
-        url: "https://rzp.io/rzp/one-time-payment"
+        url: "https://rzp.io/rzp/e2dPamL"
       - text: "3 Installments - ₹15,000 each"
-        url: "https://rzp.io/rzp/installment-plan"
+        url: "https://rzp.io/rzp/GVmbLGJS"
 
   - type: "checklist"
     class: "about"
@@ -87,7 +87,7 @@ sections:
   - type: "guarantee"
     class: "testimonials"
     title: "100% Results Guarantee"
-    description: "If you follow the daily execution plan for 100 days and don't generate at least 5 qualified leads by day 90, we'll work with you for an additional 60 days at no extra cost until you achieve consistent monthly lead flow. Your success is guaranteed."
+    description: "If you follow the daily execution plan for 100 days and don't generate at least 10 qualified leads by day 90, we'll work with you for an additional 60 days at no extra cost until you achieve consistent monthly lead flow. Your success is guaranteed."
 
   - type: "timeline"
     class: "approach"
@@ -210,35 +210,8 @@ sections:
     description: "Join the next cohort and build your predictable lead generation system. Limited spots available - secure your place today and transform your marketing from chaos to consistent results."
     buttons:
       - text: "Pay Once - ₹39,600 (Save ₹5,400)"
-        url: "https://rzp.io/rzp/one-time-payment"
+        url: "https://rzp.io/rzp/e2dPamL"
       - text: "3 Installments - ₹15,000 each"
-        url: "https://rzp.io/rzp/installment-plan"
+        url: "https://rzp.io/rzp/GVmbLGJS"
 
-pricing:
-  amount: "₹49,000"
-  commitment: "One-time investment for complete 100-day program"
-  spots: 5
-  cohort_based: true
-
-program:
-  duration: "100 days"
-  daily_commitment: "30 minutes"
-  weekly_sessions: "1 hour (1-on-1)"
-  communication: "WhatsApp support + weekly strategy calls"
-
-guarantee:
-  title: "100% Results Guarantee"
-  description: "If you follow the daily execution plan for 100 days and don't generate at least 5 qualified leads by day 90, we'll work with you for an additional 60 days at no extra cost until you achieve consistent monthly lead flow."
-
-target_results:
-  primary: "5+ qualified leads per month"
-  secondary: "Predictable lead generation system"
-  timeline: "Within 100 days"
-
-cta:
-  title: "Ready to Start Your 100-Day Sprint?"
-  subtitle: "Join the next cohort and build your predictable lead generation system."
-  button:
-    text: "Join the Sprint - ₹49,000"
-    url: "https://rzp.io/rzp/e2dPamL"
 ---

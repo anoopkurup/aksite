@@ -9,8 +9,8 @@ export default function Footer() {
     { platform: "linkedin" as const, href: "https://linkedin.com/in/anoopkurup" },
     { platform: "youtube" as const, href: "https://youtube.com/@anoopkurup" },
     { platform: "instagram" as const, href: "https://instagram.com/anoopkurup" },
-    { platform: "spotify" as const, href: "https://open.spotify.com/user/anoopkurup" },
-    { platform: "whatsapp" as const, href: "https://wa.me/+1234567890" },
+    { platform: "spotify" as const, href: "https://open.spotify.com/show/7lnAk0uJ73hwr7AVN93nv3" },
+    { platform: "whatsapp" as const, href: "https://chat.whatsapp.com/Lefk372OfrkAGT3QiTWuqp" },
   ];
 
   const footerSections = [
