@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
 import { getContentPage, processHeroMedia } from "@/lib/content";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Anoop Kurup - Marketing Strategy for Professional Services",
+  description: "Learn how I help professional services firms create systematic marketing approaches that scale beyond referrals and deliver predictable lead generation.",
+};
 
 export default function AboutPage() {
   // Get about page content from MDX

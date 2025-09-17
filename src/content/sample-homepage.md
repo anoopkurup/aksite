@@ -138,28 +138,28 @@ insights:
       image_alt: "AI marketing automation dashboard with charts and analytics"
       cta:
         text: "Read More"
-        url: "/blog/posts/ai-tools-service-business-2025/"
+        url: "/blog/ai-tools-service-business-2025/"
     - title: "The Positioning Framework That Actually Works"
       description: "Step-by-step guide to positioning your service business for maximum market impact..."
       image: "https://storage.googleapis.com/uxpilot-auth.appspot.com/ae809c88cc-b2c24b752b62e3cc3e6e.png"
       image_alt: "business positioning strategy framework with target audience visualization"
       cta:
         text: "Read More"
-        url: "/blog/posts/positioning-framework-service-business/"
+        url: "/blog/positioning-framework-service-business/"
     - title: "Building Your First Lead Generation System"
       description: "From zero to consistent leads: a practical blueprint for service businesses..."
       image: "https://storage.googleapis.com/uxpilot-auth.appspot.com/e6b73038d7-c22597ca656979accaea.png"
       image_alt: "lead generation funnel diagram with conversion metrics"
       cta:
         text: "Read More"
-        url: "/blog/posts/building-lead-generation-system/"
+        url: "/blog/building-lead-generation-system/"
     - title: "Content Strategy for B2B Services"
       description: "Create content that converts prospects into clients with this proven framework..."
       image: "https://storage.googleapis.com/uxpilot-auth.appspot.com/fda5ae7ce8-83a3bb6e4954d5c1ebc4.png"
       image_alt: "content marketing strategy planning session with team collaboration"
       cta:
         text: "Read More"
-        url: "/blog/posts/content-strategy-b2b-services/"
+        url: "/blog/content-strategy-b2b-services/"
 
 resources:
   title: "Free Resources"

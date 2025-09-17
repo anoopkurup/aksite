@@ -4,12 +4,13 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
+import ClientLayout from "@/components/ClientLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anoop Kurup - Clarity. Strategy. Systems.",
-  description: "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution.",
+  title: "Anoop Kurup - Marketing Systems for Professional Services",
+  description: "I help professional services create clear, consistent marketing systems powered by fundamentals and AI.",
 };
 
 export default function RootLayout({
@@ -24,7 +25,7 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        <Newsletter showWorkButtons={false} />
+        <ClientLayout />
         <Footer />
       </body>
     </html>

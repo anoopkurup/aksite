@@ -54,7 +54,7 @@ sections:
           url: "/ai-solutions/"
           text: "Explore Solutions"
       - title: "Workshops"
-        description: "AI Lead Machine and 100 Day Sprint programs designed to scale your lead generation system."
+        description: "100 Day Lead Generation Sprint program designed to scale your lead generation system and create a process."
         link:
           url: "/workshops/"
           text: "View Workshops"
@@ -64,16 +64,10 @@ sections:
           url: "/blog/"
           text: "Read Articles"
 
-  - type: "highlight"
-    class: "cta"
-    style: "margin-bottom: 4rem;"
-    title: "Stay Connected"
-    description: "Follow me for daily insights, behind-the-scenes content, and actionable business strategies that you can implement immediately."
-
   - type: "content"
     class: "about"
     content: |
       ### Need Help?
       
-      **Questions?** Feel free to [contact me directly](/contact/) anytime. I read and respond to every message personally.
+      **Questions?** Feel free to send an email to me anytime. I read and respond to every message personally.
 ---

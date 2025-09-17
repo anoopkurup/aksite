@@ -6,6 +6,12 @@ import ContentSections from "@/components/ContentSections";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Mail } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Anoop Kurup - Marketing Strategy Discussion",
+  description: "Get in touch to discuss how we can work together on your marketing strategy and lead generation system. Schedule a consultation today.",
+};
 
 export default function ContactPage() {
   const contentData = getContentPage('contact');

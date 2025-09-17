@@ -4,6 +4,12 @@ import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
 import { getAllBlogPosts, getBlogCategories } from "@/lib/blog";
 import { formatDate, estimateReadingTime } from "@/lib/markdown";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Marketing Strategy Blog - Professional Services Lead Generation",
+  description: "Practical strategies and frameworks to scale your service business. Real insights from 200+ client engagements on systematic marketing and lead generation.",
+};
 
 export default function BlogPage() {
   const blogPosts = getAllBlogPosts();
@@ -72,7 +78,7 @@ export default function BlogPage() {
                       {formatDate(post.frontmatter.date)}
                     </span>
                     <Link 
-                      href={`/blog/posts/${post.slug}`} 
+                      href={`/blog/${post.slug}`} 
                       className="text-azure font-semibold text-sm hover:text-blue-600 transition-colors"
                     >
                       Read More →

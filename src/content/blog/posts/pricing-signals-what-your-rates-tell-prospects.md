@@ -1,5 +1,5 @@
 ---
-title: "Pricing Signals: What Your Rates Tell Prospects"
+title: "Pricing Signals: What Your Rates Really Tell Prospects"
 date: 2025-08-26
 description: "Use pricing to reinforce your positioning, not sabotage it—without competing on discounts."
 tags: ["Strategy", "Pricing", "Positioning"]

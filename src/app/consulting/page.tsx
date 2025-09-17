@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
 import { getContentPage, convertIconName, processHeroMedia } from "@/lib/content";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Marketing Consulting - Fix Your Scattered Marketing Strategy",
+  description: "Transform scattered marketing efforts into systematic lead generation. Strategic consulting for professional services and tech-enabled businesses.",
+};
 
 export default function ConsultingPage() {
   // Get consulting page content from MDX

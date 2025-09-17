@@ -1,5 +1,5 @@
 ---
-title: "The Complete Guide to Building Marketing Systems That Scale Beyond Referrals"
+title: "Complete Guide: Marketing Systems That Scale Beyond Referrals"
 date: 2025-09-16
 description: "Transform unpredictable referral-dependent growth into systematic lead generation that delivers 40-60% more qualified prospects through proven frameworks and strategic implementation."
 tags: ["Marketing Systems", "Lead Generation", "Professional Services", "Business Growth"]
@@ -42,7 +42,7 @@ In my experience with over 200 implementations, effective marketing systems typi
 
 **Qualification and nurturing processes** that move prospects from initial interest to purchase readiness. This includes automated follow-up sequences, educational content that builds trust, and structured conversations that identify fit and timing.
 
-**Conversion mechanisms** that turn qualified prospects into clients through clear processes rather than hoping the right opportunity comes along at the right time. This includes [offer architecture that creates natural progression](/blog/posts/offer-architecture-predictable-lead-engine/) from low-commitment to high-commitment engagements.
+**Conversion mechanisms** that turn qualified prospects into clients through clear processes rather than hoping the right opportunity comes along at the right time. This includes [offer architecture that creates natural progression](/blog/offer-architecture-predictable-lead-engine/) from low-commitment to high-commitment engagements.
 
 **Performance measurement and optimization** that provides data-driven insights into what's working and what needs improvement. This creates a feedback loop that makes the system stronger over time rather than relying on intuition about what might be effective.
 
@@ -134,7 +134,7 @@ Created a content library including "The Manufacturing Marketing Playbook," case
 Implemented systematic LinkedIn engagement with manufacturing executives, speaking opportunities at industry events, and partnerships with business development consultants serving their target market.
 
 **Stage 4: Conversion Systems (Months 4-7)**
-Developed their [offer architecture](/blog/posts/offer-architecture-predictable-lead-engine/) starting with "Market Expansion Readiness Assessments" leading to "90-Day Market Entry Strategies" and full implementation programs. This created clear progression paths for prospects.
+Developed their [offer architecture](/blog/offer-architecture-predictable-lead-engine/) starting with "Market Expansion Readiness Assessments" leading to "90-Day Market Entry Strategies" and full implementation programs. This created clear progression paths for prospects.
 
 **Stage 5: Optimization (Months 6-12)**
 Tracked which content topics generated the most qualified leads, which networking venues produced the best prospects, and which offer combinations had the highest conversion rates.

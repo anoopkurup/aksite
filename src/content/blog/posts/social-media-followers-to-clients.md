@@ -1,5 +1,5 @@
 ---
-title: "Do Followers on Social Media Translate Into Future Clients?"
+title: "Do Social Media Followers Actually Convert to Clients?"
 date: 2025-08-20
 description: "Is the follower count on social media just a vanity metric or do they convert to clients? Answering with question with some experiments I conducted on Linkedin."
 tags: ["Linkedin", "Lead Generation"]

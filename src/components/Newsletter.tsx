@@ -6,9 +6,12 @@ import Script from "next/script";
 
 interface NewsletterProps {
   showWorkButtons?: boolean;
+  show?: boolean;
 }
 
-export default function Newsletter({ showWorkButtons = true }: NewsletterProps) {
+export default function Newsletter({ showWorkButtons = true, show = true }: NewsletterProps) {
+  if (!show) return null;
+
   return (
     <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
       <div className="max-w-4xl mx-auto">

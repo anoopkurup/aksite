@@ -84,13 +84,14 @@ function ContentBlock({ section, bgClass }: { section: ContentSection; bgClass: 
                     .filter(line => line.trim().startsWith('- '))
                     .map(line => {
                       const text = line.trim().replace('- ', '');
-                      return `<li class="flex items-start mb-2 text-[#374151] leading-relaxed"><div class="w-2 h-2 bg-[#f59e0b] rounded-full mt-2 mr-3 flex-shrink-0"></div><span>${text}</span></li>`;
+                      const processedText = processInlineMarkdown(text);
+                      return `<li class="flex items-start mb-2 text-[#374151] leading-relaxed"><div class="w-2 h-2 bg-[#f59e0b] rounded-full mt-2 mr-3 flex-shrink-0"></div><span>${processedText}</span></li>`;
                     })
                     .join('');
                   return `<ul class="mb-4">${listItems}</ul>`;
                 } else if (paragraph.trim()) {
-                  // Process bold text
-                  const processedText = paragraph.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#1e3a8a]">$1</strong>');
+                  // Process inline markdown (bold, italic, links)
+                  const processedText = processInlineMarkdown(paragraph);
                   return `<p class="text-[#374151] leading-relaxed mb-4">${processedText}</p>`;
                 }
                 return '';

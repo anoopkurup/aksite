@@ -114,7 +114,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   }
 
   return {
-    title: `${post.frontmatter.title} | Anoop Kurup`,
+    title: post.frontmatter.title,
     description: post.frontmatter.description,
     openGraph: {
       title: post.frontmatter.title,
