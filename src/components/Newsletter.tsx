@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -15,8 +13,8 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
   return (
     <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
       <div className="max-w-4xl mx-auto">
-        <Card className="p-12 bg-white shadow-lg">
-          <CardContent className="p-0 text-center">
+        <div className="p-12 bg-white">
+          <div className="text-center">
             <h2 id="newsletter-title" className="text-section-title font-bold text-[#1e3a8a] mb-6">
               Grow your service business
             </h2>
@@ -67,46 +65,48 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
                   </div>
                   <div data-element="column" className="formkit-column">
                     <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-                    <div data-element="fields" className="seva-fields formkit-fields">
-                      <div className="formkit-field">
+                    <div data-element="fields" className="seva-fields formkit-fields flex flex-col md:flex-row gap-3 md:gap-4">
+                      <div className="formkit-field flex-1">
                         <label htmlFor="first-name" className="sr-only">First Name</label>
-                        <input 
+                        <input
                           id="first-name"
-                          className="formkit-input" 
-                          aria-label="First Name" 
-                          name="fields[first_name]" 
-                          placeholder="First Name" 
-                          type="text" 
-                          style={{color: 'rgb(0, 0, 0)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400}} 
+                          className="formkit-input"
+                          aria-label="First Name"
+                          name="fields[first_name]"
+                          placeholder="First Name"
+                          type="text"
+                          style={{color: 'rgb(0, 0, 0)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400}}
                         />
                       </div>
-                      <div className="formkit-field">
+                      <div className="formkit-field flex-1">
                         <label htmlFor="email-address" className="sr-only">Email Address</label>
-                        <input 
+                        <input
                           id="email-address"
-                          className="formkit-input" 
-                          name="email_address" 
-                          aria-label="Email Address" 
-                          placeholder="Email Address" 
-                          required 
-                          type="email" 
-                          style={{color: 'rgb(0, 0, 0)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400}} 
+                          className="formkit-input"
+                          name="email_address"
+                          aria-label="Email Address"
+                          placeholder="Email Address"
+                          required
+                          type="email"
+                          style={{color: 'rgb(0, 0, 0)', borderColor: 'rgb(227, 227, 227)', borderRadius: '4px', fontWeight: 400}}
                         />
                       </div>
-                      <button 
-                        data-element="submit" 
-                        className="formkit-submit formkit-submit" 
-                        type="submit"
-                        aria-describedby="form-description"
-                        style={{color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(245, 158, 11)', borderRadius: '24px', fontWeight: 700}}
-                      >
-                        <div className="formkit-spinner">
-                          <div></div>
-                          <div></div>
-                          <div></div>
-                        </div>
-                        <span>Subscribe</span>
-                      </button>
+                      <div className="formkit-field flex-shrink-0">
+                        <button
+                          data-element="submit"
+                          className="formkit-submit formkit-submit"
+                          type="submit"
+                          aria-describedby="form-description"
+                          style={{color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(245, 158, 11)', borderRadius: '24px', fontWeight: 700}}
+                        >
+                          <div className="formkit-spinner">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                          </div>
+                          <span>Subscribe</span>
+                        </button>
+                      </div>
                     </div>
                     <div className="formkit-guarantee" data-element="guarantee" style={{color: 'rgb(77, 77, 77)', fontSize: '13px', fontWeight: 400}}>
                       <p id="form-description">We respect your privacy. Unsubscribe at any time.</p>
@@ -134,22 +134,26 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
             </div>
             {showWorkButtons && (
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] px-8 py-3 rounded-full font-bold">
+                <Button asChild size="lg" className="bg-[#f59e0b] text-white hover:bg-[#d97706] px-8 py-3 rounded-full font-bold">
                   <Link href="/consulting" className="flex items-center">
                     Work With Me
-                    <LineIcon type="arrow-right" className="ml-2" size={16} />
+                    <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m9 18 6-6-6-6"/>
+                    </svg>
                   </Link>
                 </Button>
                 <Button asChild size="lg" className="bg-[#1e3a8a] text-white hover:bg-[#1e40af] px-8 py-3 rounded-full font-bold">
                   <Link href="/workshops" className="flex items-center">
                     Join a Workshop
-                    <LineIcon type="arrow-right" className="ml-2" size={16} />
+                    <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m9 18 6-6-6-6"/>
+                    </svg>
                   </Link>
                 </Button>
               </div>
             )}
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
     </section>
   );

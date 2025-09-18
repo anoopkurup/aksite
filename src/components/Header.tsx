@@ -43,7 +43,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white px-6 py-2.5 rounded-lg hover:from-[#d97706] hover:to-[#b45309] transition-all duration-200 font-medium shadow-soft hover:shadow-medium focus-enhanced"
+              className="bg-[#f59e0b] text-white px-6 py-2.5 rounded-lg hover:bg-[#d97706] transition-all duration-200 font-medium focus-enhanced"
             >
               Work With Me
             </Link>
@@ -84,7 +84,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white px-6 py-2.5 rounded-lg hover:from-[#d97706] hover:to-[#b45309] transition-all duration-200 font-medium text-center mt-4 focus-enhanced"
+                className="bg-[#f59e0b] text-white px-6 py-2.5 rounded-lg hover:bg-[#d97706] transition-all duration-200 font-medium text-center mt-4 focus-enhanced"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Work With Me

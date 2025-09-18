@@ -1,6 +1,4 @@
 import { ReactNode } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import LineIcon from "@/components/LineIcon";
 import HeroMedia, { HeroMedia as HeroMediaType } from "@/components/HeroMedia";
 
 interface PageTemplateProps {
@@ -49,37 +47,37 @@ export default function PageTemplate({
               )}
             </div>
             <div className="relative">
-              <Card className={`${heroBackground === 'gradient' 
-                ? 'bg-white/15 border-white/30 backdrop-blur-sm' 
-                : 'bg-white border-slate-200'} shadow-2xl`}>
-                <CardContent className="p-8">
-                  <div className="text-center space-y-6">
-                    {heroMedia ? (
-                      <HeroMedia 
-                        media={heroMedia} 
-                        className="w-full"
-                        priority={false}
-                      />
-                    ) : (
-                      <div className="w-full h-64 bg-[#8fb4ff]/20 rounded-lg flex items-center justify-center border-2 border-dashed border-[#8fb4ff]/30">
-                        <div className="text-center space-y-3">
-                          <LineIcon 
-                            type={heroIcon} 
-                            className={heroBackground === 'gradient' ? 'text-white/60' : 'text-[#f59e0b]'} 
-                            size={48} 
-                          />
-                          <p className={`${heroBackground === 'gradient' ? 'text-white/80' : 'text-[#1e3a8a]'} text-sm font-medium`}>
-                            {title}
-                          </p>
-                          <p className={`${heroBackground === 'gradient' ? 'text-white/60' : 'text-[#374151]'} text-xs`}>
-                            Professional services solution
-                          </p>
+              <div className={`${heroBackground === 'gradient'
+                ? 'bg-white/15 backdrop-blur-sm'
+                : 'bg-white'} rounded-lg p-8`}>
+                <div className="text-center space-y-6">
+                  {heroMedia ? (
+                    <HeroMedia
+                      media={heroMedia}
+                      className="w-full"
+                      priority={false}
+                    />
+                  ) : (
+                    <div className="w-full h-64 bg-[#8fb4ff]/20 rounded-lg flex items-center justify-center">
+                      <div className="text-center space-y-3">
+                        <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto">
+                          <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                          </svg>
                         </div>
+                        <p className={`${heroBackground === 'gradient' ? 'text-white/80' : 'text-[#1e3a8a]'} text-sm font-medium`}>
+                          {title}
+                        </p>
+                        <p className={`${heroBackground === 'gradient' ? 'text-white/60' : 'text-[#374151]'} text-xs`}>
+                          Professional services solution
+                        </p>
                       </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>

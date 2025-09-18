@@ -1,9 +1,89 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
 import { ContentSection, convertIconName } from "@/lib/content";
 import { processInlineMarkdown, markdownToHtml } from "@/lib/markdown";
+
+// SVG Icon renderer for flat design
+function renderIconSVG(iconType: string) {
+  const iconProps = {
+    className: "w-8 h-8",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const
+  };
+
+  switch (iconType) {
+    case 'target':
+      return (
+        <svg {...iconProps}>
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="12" r="6"/>
+          <circle cx="12" cy="12" r="2"/>
+        </svg>
+      );
+    case 'users':
+    case 'handshake':
+      return (
+        <svg {...iconProps}>
+          <path d="M20 7h-9"/>
+          <path d="M14 17H5"/>
+          <circle cx="17" cy="17" r="3"/>
+          <circle cx="7" cy="7" r="3"/>
+        </svg>
+      );
+    case 'settings':
+    case 'cog':
+      return (
+        <svg {...iconProps}>
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v6m0 6v6"/>
+          <path d="m21 12-6-6-6 6-6-6"/>
+        </svg>
+      );
+    case 'chart':
+    case 'trending-up':
+      return (
+        <svg {...iconProps}>
+          <polyline points="22,6 13.5,14.5 8.5,9.5 2,16"/>
+          <polyline points="16,6 22,6 22,12"/>
+        </svg>
+      );
+    case 'shield':
+      return (
+        <svg {...iconProps}>
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      );
+    case 'lightbulb':
+      return (
+        <svg {...iconProps}>
+          <path d="M9 21h6"/>
+          <path d="M12 17h.01"/>
+          <path d="M7 7a5 5 0 0 1 10 0c0 1.5-.8 2.8-2 3.7V17H9v-6.3C7.8 9.8 7 8.5 7 7z"/>
+        </svg>
+      );
+    case 'monitor':
+      return (
+        <svg {...iconProps}>
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+      );
+    default:
+      return (
+        <svg {...iconProps}>
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="12" r="6"/>
+          <circle cx="12" cy="12" r="2"/>
+        </svg>
+      );
+  }
+}
 
 interface ContentSectionsProps {
   sections: ContentSection[];
@@ -133,57 +213,55 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
 
         <div className={`grid ${gridCols} gap-8 ${shouldCenter ? 'justify-items-center' : ''}`}>
           {section.items.map((item, index) => (
-            <Card key={index} className={`p-8 bg-white shadow-soft hover:shadow-medium transition-shadow text-center ${shouldCenter ? 'w-full max-w-sm' : ''}`}>
-              <CardContent className="p-0">
-                {(item.icon || item.iconType) && (
-                  <div className="mb-6">
-                    <LineIcon 
-                      type={convertIconName(item.icon || item.iconType)} 
-                      className="text-[#f59e0b] mx-auto" 
-                      size={56} 
-                    />
+            <div key={index} className={`text-center ${shouldCenter ? 'w-full max-w-sm' : ''}`}>
+              {(item.icon || item.iconType) && (
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto mb-4">
+                    {renderIconSVG(convertIconName(item.icon || item.iconType))}
                   </div>
-                )}
-                {item.title && (
-                  <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{item.title}</h3>
-                )}
-                {item.subheading && (
-                  <p className="text-[#1e40af] font-semibold mb-4">{item.subheading}</p>
-                )}
-                {item.description && (
-                  <div 
-                    className="text-[#374151] mb-6 leading-relaxed prose prose-sm max-w-none prose-p:mb-2 prose-ul:mb-2 prose-li:mb-1 prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic text-left"
-                    dangerouslySetInnerHTML={{ 
-                      __html: processInlineMarkdown(item.description)
-                        .replace(/✓/g, '<span class="text-[#f59e0b] font-semibold">✓</span>')
-                    }}
-                  />
-                )}
-                {item.features && (
-                  <ul className="space-y-2 mb-6 text-left">
-                    {item.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start text-[#374151]">
-                        <div className="w-2 h-2 bg-[#f59e0b] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                {item.results && (
-                  <div className="bg-[#8fb4ff]/10 border border-[#8fb4ff]/30 p-4 rounded-lg mb-4">
-                    <p className="text-sm font-semibold text-[#1e3a8a]">{item.results}</p>
-                  </div>
-                )}
-                {item.link && (
-                  <Button asChild className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white">
-                    <Link href={item.link.url || '#'} className="flex items-center">
-                      {item.link.text || 'Learn More'}
-                      <LineIcon type="arrow-right" className="ml-2" size={16} />
-                    </Link>
-                  </Button>
-                )}
-              </CardContent>
-            </Card>
+                </div>
+              )}
+              {item.title && (
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{item.title}</h3>
+              )}
+              {item.subheading && (
+                <p className="text-[#1e40af] font-semibold mb-4">{item.subheading}</p>
+              )}
+              {item.description && (
+                <div
+                  className="text-[#374151] mb-6 leading-relaxed prose prose-sm max-w-none prose-p:mb-2 prose-ul:mb-2 prose-li:mb-1 prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic text-left"
+                  dangerouslySetInnerHTML={{
+                    __html: processInlineMarkdown(item.description)
+                      .replace(/✓/g, '<span class="text-[#f59e0b] font-semibold">✓</span>')
+                  }}
+                />
+              )}
+              {item.features && (
+                <ul className="space-y-2 mb-6 text-left">
+                  {item.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start text-[#374151]">
+                      <div className="w-2 h-2 bg-[#f59e0b] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {item.results && (
+                <div className="bg-[#8fb4ff]/10 p-4 rounded-lg mb-4">
+                  <p className="text-sm font-semibold text-[#1e3a8a]">{item.results}</p>
+                </div>
+              )}
+              {item.link && (
+                <Button asChild className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white">
+                  <Link href={item.link.url || '#'} className="flex items-center">
+                    {item.link.text || 'Learn More'}
+                    <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m9 18 6-6-6-6"/>
+                    </svg>
+                  </Link>
+                </Button>
+              )}
+            </div>
           ))}
         </div>
       </div>
@@ -215,31 +293,29 @@ function FeaturesSection({ section, bgClass }: { section: ContentSection; bgClas
 
         <div className={`grid ${gridCols} gap-8`}>
           {section.items.map((item, index) => (
-            <Card key={index} className={`p-8 shadow-soft text-center ${item.highlight ? 'bg-[#1e3a8a] text-white border-2 border-[#8fb4ff]' : 'bg-white'}`}>
-              <CardContent className="p-0">
-                <h3 className={`text-xl font-bold mb-4 ${item.highlight ? 'text-white' : 'text-[#1e3a8a]'}`}>
-                  {item.title}
-                </h3>
-                {item.description && (
-                  <div 
-                    className={`leading-relaxed prose prose-sm max-w-none prose-em:italic text-left ${item.highlight ? 'text-blue-100 prose-strong:text-white prose-em:text-blue-200' : 'text-[#374151] prose-strong:text-[#1e3a8a] prose-em:text-[#374151]'}`}
-                    dangerouslySetInnerHTML={{ 
-                      __html: processInlineMarkdown(item.description)
-                    }}
-                  />
-                )}
-                {item.features && (
-                  <ul className="space-y-3 mt-4 text-left">
-                    {item.features.map((feature, idx) => (
-                      <li key={idx} className={`flex items-start ${item.highlight ? 'text-blue-100' : 'text-[#374151]'}`}>
-                        <div className={`w-2 h-2 bg-[#f59e0b] rounded-full mt-2 mr-3 flex-shrink-0`}></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </CardContent>
-            </Card>
+            <div key={index} className={`p-8 text-center ${item.highlight ? 'bg-[#1e3a8a] text-white rounded-lg' : 'bg-white'}`}>
+              <h3 className={`text-xl font-bold mb-4 ${item.highlight ? 'text-white' : 'text-[#1e3a8a]'}`}>
+                {item.title}
+              </h3>
+              {item.description && (
+                <div
+                  className={`leading-relaxed prose prose-sm max-w-none prose-em:italic text-left ${item.highlight ? 'text-blue-100 prose-strong:text-white prose-em:text-blue-200' : 'text-[#374151] prose-strong:text-[#1e3a8a] prose-em:text-[#374151]'}`}
+                  dangerouslySetInnerHTML={{
+                    __html: processInlineMarkdown(item.description)
+                  }}
+                />
+              )}
+              {item.features && (
+                <ul className="space-y-3 mt-4 text-left">
+                  {item.features.map((feature, idx) => (
+                    <li key={idx} className={`flex items-start ${item.highlight ? 'text-blue-100' : 'text-[#374151]'}`}>
+                      <div className={`w-2 h-2 bg-[#f59e0b] rounded-full mt-2 mr-3 flex-shrink-0`}></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           ))}
         </div>
       </div>
@@ -272,7 +348,9 @@ function HighlightSection({ section, bgClass }: { section: ContentSection; bgCla
           <Button asChild className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] px-8 py-3 rounded-full font-semibold">
             <Link href={section.button.url || '#'} className="flex items-center">
               {section.button.text || 'Learn More'}
-              <LineIcon type="arrow-right" className="ml-2" size={16} />
+              <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
             </Link>
           </Button>
         )}
@@ -292,7 +370,9 @@ function HighlightSection({ section, bgClass }: { section: ContentSection; bgCla
               >
                 <Link href={button.url || '#'} className="flex items-center">
                   {button.text || 'Learn More'}
-                  <LineIcon type="arrow-right" className="ml-2" size={16} />
+                  <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
                 </Link>
               </Button>
             ))}
@@ -322,13 +402,11 @@ function StatsSection({ section, bgClass }: { section: ContentSection; bgClass: 
 
         <div className="grid md:grid-cols-3 gap-8">
           {section.items.map((item, index) => (
-            <Card key={index} className="p-6 bg-[#1e3a8a] text-white text-center">
-              <CardContent className="p-0">
-                <div className="text-3xl font-bold mb-2">{item.number}</div>
-                <div className="text-lg font-semibold text-blue-100 mb-2">{item.label}</div>
-                <div className="text-sm text-blue-200">{item.description}</div>
-              </CardContent>
-            </Card>
+            <div key={index} className="p-6 bg-[#1e3a8a] text-white text-center rounded-lg">
+              <div className="text-3xl font-bold mb-2">{item.number}</div>
+              <div className="text-lg font-semibold text-blue-100 mb-2">{item.label}</div>
+              <div className="text-sm text-blue-200">{item.description}</div>
+            </div>
           ))}
         </div>
       </div>
@@ -355,20 +433,18 @@ function TimelineSection({ section, bgClass }: { section: ContentSection; bgClas
 
         <div className={`grid ${gridCols} gap-8 justify-center`}>
           {section.items.map((item, index) => (
-            <Card key={index} className="p-6 bg-white border-[#8fb4ff]/20 text-center shadow-soft hover:shadow-medium transition-shadow max-w-sm mx-auto">
-              <CardContent className="p-0">
-                <div className="w-12 h-12 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {item.number}
-                </div>
-                <h3 className="font-bold text-[#1e3a8a] mb-3">{item.title}</h3>
-                <div 
-                  className="text-[#374151] text-sm leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic"
-                  dangerouslySetInnerHTML={{ 
-                    __html: processInlineMarkdown(item.description || '')
-                  }}
-                />
-              </CardContent>
-            </Card>
+            <div key={index} className="p-6 bg-white text-center max-w-sm mx-auto">
+              <div className="w-12 h-12 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                {item.number}
+              </div>
+              <h3 className="font-bold text-[#1e3a8a] mb-3">{item.title}</h3>
+              <div
+                className="text-[#374151] text-sm leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic"
+                dangerouslySetInnerHTML={{
+                  __html: processInlineMarkdown(item.description || '')
+                }}
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -392,20 +468,18 @@ function TestimonialsSection({ section, bgClass }: { section: ContentSection; bg
 
         <div className="grid lg:grid-cols-2 gap-8">
           {section.items.map((item, index) => (
-            <Card key={index} className="p-6 bg-white shadow-soft">
-              <CardContent className="p-0">
-                <blockquote 
-                  className="text-[#374151] mb-6 leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic"
-                  dangerouslySetInnerHTML={{ 
-                    __html: `"${processInlineMarkdown(item.quote || '')}"` 
-                  }}
-                />
-                <div>
-                  <p className="font-semibold text-[#1e3a8a]">{item.author}</p>
-                  {item.role && <p className="text-sm text-[#1e40af]">{item.role}</p>}
-                </div>
-              </CardContent>
-            </Card>
+            <div key={index} className="p-6 bg-[#fef7ed] rounded-lg">
+              <blockquote
+                className="text-[#374151] mb-6 leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic"
+                dangerouslySetInnerHTML={{
+                  __html: `"${processInlineMarkdown(item.quote || '')}"`
+                }}
+              />
+              <div>
+                <p className="font-semibold text-[#1e3a8a]">{item.author}</p>
+                {item.role && <p className="text-sm text-[#1e40af]">{item.role}</p>}
+              </div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,8 +1,5 @@
 import PageTemplate from "@/components/PageTemplate";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
 import Newsletter from "@/components/Newsletter";
 import { getContentPage, processHeroMedia } from "@/lib/content";
@@ -30,8 +27,8 @@ export default function CaseStudiesPage() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-6">{frontmatter.intro?.title}</h2>
-            <div className="text-xl text-charcoal max-w-4xl mx-auto leading-relaxed space-y-4">
+            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">{frontmatter.intro?.title}</h2>
+            <div className="text-xl text-[#374151] max-w-4xl mx-auto leading-relaxed space-y-4">
               {frontmatter.intro?.content.split('\n\n').map((paragraph: string, index: number) => (
                 <p key={index}>{paragraph.trim()}</p>
               ))}
@@ -41,24 +38,22 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-6 bg-slate-50">
+      <section className="py-16 px-6 bg-[#f9fafb]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">{frontmatter.stats?.title}</h2>
-            <p className="text-xl text-charcoal">
+            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">{frontmatter.stats?.title}</h2>
+            <p className="text-xl text-[#374151]">
               {frontmatter.stats?.subtitle}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {frontmatter.stats?.items?.map((stat: any, index: number) => (
-              <Card key={index} className="p-6 bg-azure text-white text-center">
-                <CardContent className="p-0">
-                  <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                  <div className="text-lg font-semibold text-blue-100 mb-2">{stat.label}</div>
-                  <div className="text-sm text-blue-200">{stat.description}</div>
-                </CardContent>
-              </Card>
+              <div key={index} className="p-6 bg-[#1e3a8a] rounded-lg text-white text-center">
+                <div className="text-3xl font-bold mb-2">{stat.number}</div>
+                <div className="text-lg font-semibold text-blue-100 mb-2">{stat.label}</div>
+                <div className="text-sm text-blue-200">{stat.description}</div>
+              </div>
             ))}
           </div>
         </div>
@@ -68,81 +63,88 @@ export default function CaseStudiesPage() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-6">{frontmatter.case_studies?.title}</h2>
-            <p className="text-xl text-charcoal">
+            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">{frontmatter.case_studies?.title}</h2>
+            <p className="text-xl text-[#374151]">
               {frontmatter.case_studies?.subtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study: any) => (
-              <Card key={study.id} className="p-6 bg-white shadow-soft hover:shadow-medium transition-shadow">
-                <CardContent className="p-0">
-                  <div className="mb-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <LineIcon type={study.icon} className="text-gamboge" size={48} />
-                      <Badge variant="secondary" className="bg-azure/10 text-azure">
-                        {study.category}
-                      </Badge>
+              <div key={study.id} className="p-6 bg-white rounded-lg">
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-[#FFBF00] rounded-full flex items-center justify-center">
+                      <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 3v18h18"/>
+                        <path d="m19 9-5 5-4-4-3 3"/>
+                      </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-oxford-blue mb-3">{study.title}</h3>
-                    <p className="text-charcoal mb-6 leading-relaxed">{study.description}</p>
-                  </div>
-
-                  <div className="bg-slate-50 p-4 rounded-lg mb-6">
-                    <blockquote className="text-sm text-charcoal mb-3 italic">
-                      "{study.testimonial}"
-                    </blockquote>
-                    <div className="text-xs text-oxford-blue font-semibold">
-                      — {study.author}, {study.role}
+                    <div className="bg-[#1e40af]/10 text-[#1e40af] px-3 py-1 rounded-full text-sm font-medium">
+                      {study.category}
                     </div>
                   </div>
+                  <h3 className="text-xl font-bold text-[#1e3a8a] mb-3">{study.title}</h3>
+                  <p className="text-[#374151] mb-6 leading-relaxed">{study.description}</p>
+                </div>
 
-                  <div className="bg-[#f59e0b]/10 p-3 rounded-lg">
-                    <div className="text-sm font-semibold text-oxford-blue">Key Result:</div>
-                    <div className="text-sm text-charcoal">{study.results}</div>
+                <div className="bg-[#f9fafb] p-4 rounded-lg mb-6">
+                  <blockquote className="text-sm text-[#374151] mb-3 italic">
+                    "{study.testimonial}"
+                  </blockquote>
+                  <div className="text-xs text-[#1e3a8a] font-semibold">
+                    — {study.author}, {study.role}
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+
+                <div className="bg-[#f59e0b]/10 p-3 rounded-lg">
+                  <div className="text-sm font-semibold text-[#1e3a8a]">Key Result:</div>
+                  <div className="text-sm text-[#374151]">{study.results}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* What Makes Results Possible */}
-      <section className="py-16 px-6 bg-slate-50">
+      <section className="py-16 px-6 bg-[#f9fafb]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-6">{frontmatter.approach?.title}</h2>
-            <p className="text-xl text-charcoal max-w-4xl mx-auto mb-8">
+            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">{frontmatter.approach?.title}</h2>
+            <p className="text-xl text-[#374151] max-w-4xl mx-auto mb-8">
               {frontmatter.approach?.subtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {frontmatter.approach?.items?.map((item: any, index: number) => (
-              <Card key={index} className="p-8 bg-white shadow-soft">
-                <CardContent className="p-0">
-                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{item.title}</h3>
-                  <p className="text-charcoal leading-relaxed">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <div key={index} className="p-8 bg-white rounded-lg">
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{item.title}</h3>
+                <p className="text-[#374151] leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-azure to-blue-700">
+      <section className="py-16 px-6 bg-gradient-to-br from-[#1e3a8a] to-[#1e40af]">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl font-bold mb-6">{frontmatter.cta?.title}</h2>
           <p className="text-xl text-blue-100 mb-8">
             {frontmatter.cta?.subtitle}
           </p>
-          <Button asChild size="lg" className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] px-8 py-4 rounded-full font-bold text-lg">
-            <Link href={frontmatter.cta?.button?.url || "/contact"}>{frontmatter.cta?.button?.text || "Schedule a Strategy Call"}</Link>
+          <Button asChild size="lg" className="bg-[#f59e0b] text-white hover:bg-[#d97706] px-8 py-4 rounded-lg font-bold text-lg">
+            <Link href={frontmatter.cta?.button?.url || "/contact"} className="flex items-center">
+              {frontmatter.cta?.button?.text || "Schedule a Strategy Call"}
+              <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m12 5 7 7-7 7"/>
+                <path d="M5 12h14"/>
+              </svg>
+            </Link>
           </Button>
         </div>
       </section>

@@ -1,9 +1,7 @@
 import PageTemplate from "@/components/PageTemplate";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import LineIcon from "@/components/LineIcon";
 import Link from "next/link";
-import { getContentPage, convertIconName, processHeroMedia } from "@/lib/content";
+import { getContentPage, processHeroMedia } from "@/lib/content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -185,17 +183,15 @@ export default function ConsultingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {marketingProblems.map((problem, index) => (
-              <Card key={index} className="p-6 bg-navy-100 shadow-navy-soft">
-                <CardContent className="p-0">
-                  <h3 className="text-lg font-bold text-navy-800 mb-3">{problem.title}</h3>
-                  <p className="text-neutral-700 text-sm leading-relaxed">{problem.description}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="p-6 bg-[#f9fafb] rounded-lg">
+                <h3 className="text-lg font-bold text-[#1e3a8a] mb-3">{problem.title}</h3>
+                <p className="text-[#374151] text-sm leading-relaxed">{problem.description}</p>
+              </div>
             ))}
           </div>
 
-          <div className="bg-navy-100 p-8 rounded-xl text-center">
-            <p className="text-lg text-neutral-700">
+          <div className="bg-[#f9fafb] p-8 rounded-lg text-center">
+            <p className="text-lg text-[#374151]">
               <strong>The outcome?</strong> Campaigns that fizzle out, growth that feels random, and leaders stuck in the weeds. Marketing feels like chaos. Teams work harder but see diminishing returns.
             </p>
           </div>
@@ -214,15 +210,44 @@ export default function ConsultingPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {corePrinciples.map((principle, index) => (
-              <Card key={index} className="p-8 bg-white shadow-navy-soft text-center hover:shadow-navy-medium transition-shadow">
-                <CardContent className="p-0">
-                  <div className="mb-6">
-                    <LineIcon type={principle.iconType} className="text-accent mx-auto" size={56} />
+              <div key={index} className="p-8 bg-white rounded-lg text-center">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto">
+                    {principle.iconType === 'target' && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                      </svg>
+                    )}
+                    {principle.iconType === 'cpu' && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="4" y="4" width="16" height="16" rx="2"/>
+                        <rect x="9" y="9" width="6" height="6"/>
+                        <path d="m9 1 0 6"/>
+                        <path d="m15 1 0 6"/>
+                        <path d="m9 17 0 6"/>
+                        <path d="m15 17 0 6"/>
+                        <path d="m1 9 6 0"/>
+                        <path d="m17 9 6 0"/>
+                        <path d="m1 15 6 0"/>
+                        <path d="m17 15 6 0"/>
+                      </svg>
+                    )}
+                    {principle.iconType === 'handshake' && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+                        <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+                        <path d="m21 3 1 11h-2"/>
+                        <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
+                        <path d="M3 4h8"/>
+                      </svg>
+                    )}
                   </div>
-                  <h3 className="text-xl font-bold text-navy-800 mb-4">{principle.title}</h3>
-                  <p className="text-neutral-700 leading-relaxed">{principle.description}</p>
-                </CardContent>
-              </Card>
+                </div>
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{principle.title}</h3>
+                <p className="text-[#374151] leading-relaxed">{principle.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -240,15 +265,13 @@ export default function ConsultingPage() {
 
           <div className="grid md:grid-cols-5 gap-8">
             {methodSteps.map((step, index) => (
-              <Card key={index} className="p-6 bg-navy-100 text-center">
-                <CardContent className="p-0">
-                  <div className="w-12 h-12 bg-periwinkle-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                    {step.number}
-                  </div>
-                  <h3 className="font-bold text-navy-800 mb-3">{step.title}</h3>
-                  <p className="text-neutral-700 text-sm leading-relaxed">{step.description}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="p-6 bg-[#f9fafb] rounded-lg text-center">
+                <div className="w-12 h-12 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                  {step.number}
+                </div>
+                <h3 className="font-bold text-[#1e3a8a] mb-3">{step.title}</h3>
+                <p className="text-[#374151] text-sm leading-relaxed">{step.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -265,68 +288,62 @@ export default function ConsultingPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <Card className="p-8 bg-white shadow-navy-soft">
-              <CardContent className="p-0">
-                <h3 className="text-xl font-bold text-navy-800 mb-6">Traditional Marketing Approach:</h3>
-                <ul className="space-y-3 text-neutral-700">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-                    Campaign-focused
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-                    Tool-dependent
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-                    Requires constant management
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-                    Results are unpredictable
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="p-8 bg-white rounded-lg">
+              <h3 className="text-xl font-bold text-[#1e3a8a] mb-6">Traditional Marketing Approach:</h3>
+              <ul className="space-y-3 text-[#374151]">
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                  Campaign-focused
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                  Tool-dependent
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                  Requires constant management
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                  Results are unpredictable
+                </li>
+              </ul>
+            </div>
 
-            <Card className="p-8 bg-periwinkle-600 text-white">
-              <CardContent className="p-0">
-                <h3 className="text-xl font-bold text-white mb-6">The Lead Machine Method™:</h3>
-                <ul className="space-y-3 text-periwinkle-100">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                    System-focused
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                    Strategy-driven
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                    Scales with minimal oversight
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                    Delivers predictable results
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="p-8 bg-[#1e3a8a] rounded-lg text-white">
+              <h3 className="text-xl font-bold text-white mb-6">The Lead Machine Method™:</h3>
+              <ul className="space-y-3 text-blue-100">
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#f59e0b] rounded-full mr-3"></div>
+                  System-focused
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#f59e0b] rounded-full mr-3"></div>
+                  Strategy-driven
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#f59e0b] rounded-full mr-3"></div>
+                  Scales with minimal oversight
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#f59e0b] rounded-full mr-3"></div>
+                  Delivers predictable results
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {differences.map((diff, index) => (
-              <Card key={index} className="p-8 bg-white shadow-navy-soft">
-                <CardContent className="p-0">
-                  <h3 className="text-xl font-bold text-navy-800 mb-4">{diff.title}</h3>
-                  <p className="text-neutral-700 leading-relaxed">{diff.description}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="p-8 bg-white rounded-lg">
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{diff.title}</h3>
+                <p className="text-[#374151] leading-relaxed">{diff.description}</p>
+              </div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg text-neutral-700">
+            <p className="text-lg text-[#374151]">
               <strong>The difference is structure.</strong> When marketing operates as a system rather than a collection of campaigns, it becomes an asset that compounds over time.
             </p>
           </div>
@@ -345,15 +362,41 @@ export default function ConsultingPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
-              <Card key={index} className="p-8 bg-navy-50 shadow-navy-soft hover:shadow-navy-medium transition-shadow">
-                <CardContent className="p-0">
-                  <div className="mb-6">
-                    <LineIcon type={solution.iconType} className="text-accent" size={56} />
+              <div key={index} className="p-8 bg-[#fef7ed] rounded-lg">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto">
+                    {solution.iconType === 'target' && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                      </svg>
+                    )}
+                    {solution.iconType === 'chart' && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 3v18h18"/>
+                        <path d="m19 9-5 5-4-4-3 3"/>
+                      </svg>
+                    )}
+                    {solution.iconType === 'cpu' && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="4" y="4" width="16" height="16" rx="2"/>
+                        <rect x="9" y="9" width="6" height="6"/>
+                        <path d="m9 1 0 6"/>
+                        <path d="m15 1 0 6"/>
+                        <path d="m9 17 0 6"/>
+                        <path d="m15 17 0 6"/>
+                        <path d="m1 9 6 0"/>
+                        <path d="m17 9 6 0"/>
+                        <path d="m1 15 6 0"/>
+                        <path d="m17 15 6 0"/>
+                      </svg>
+                    )}
                   </div>
-                  <h3 className="text-xl font-bold text-navy-800 mb-4">{solution.title}</h3>
-                  <p className="text-neutral-700 leading-relaxed">{solution.description}</p>
-                </CardContent>
-              </Card>
+                </div>
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{solution.title}</h3>
+                <p className="text-[#374151] leading-relaxed">{solution.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -374,19 +417,41 @@ export default function ConsultingPage() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {audienceItems.map((item, index) => (
-              <Card key={index} className="p-8 bg-white shadow-soft hover:shadow-medium transition-shadow">
-                <CardContent className="p-0">
-                  <div className="mb-6">
-                    <LineIcon type={item.iconType} className="text-gamboge" size={56} />
+              <div key={index} className="p-8 bg-white rounded-lg">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto">
+                    {item.iconType === 'handshake' && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+                        <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+                        <path d="m21 3 1 11h-2"/>
+                        <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
+                        <path d="M3 4h8"/>
+                      </svg>
+                    )}
+                    {item.iconType === 'monitor' && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                      </svg>
+                    )}
+                    {item.iconType === 'target' && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                      </svg>
+                    )}
                   </div>
-                  <h3 className="text-xl font-bold text-oxford-blue mb-2">{item.title}</h3>
-                  <p className="text-azure font-semibold mb-4">{item.subheading}</p>
-                  <p className="text-charcoal mb-6 leading-relaxed">{item.description}</p>
-                  <div className="bg-slate-50 p-4 rounded-lg">
-                    <p className="text-sm font-semibold text-oxford-blue">{item.results}</p>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{item.title}</h3>
+                <p className="text-[#1e40af] font-semibold mb-4">{item.subheading}</p>
+                <p className="text-[#374151] mb-6 leading-relaxed">{item.description}</p>
+                <div className="bg-[#8fb4ff]/10 p-4 rounded-lg">
+                  <p className="text-sm font-semibold text-[#1e3a8a]">{item.results}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -404,15 +469,43 @@ export default function ConsultingPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {deliverables.map((deliverable, index) => (
-              <Card key={index} className="p-8 bg-slate-50 shadow-soft">
-                <CardContent className="p-0">
-                  <div className="mb-6">
-                    <LineIcon type={deliverable.iconType} className="text-gamboge" size={48} />
+              <div key={index} className="p-8 bg-[#f9fafb] rounded-lg">
+                <div className="mb-6">
+                  <div className="w-14 h-14 bg-[#FFBF00] rounded-full flex items-center justify-center">
+                    {deliverable.iconType === 'target' && (
+                      <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                      </svg>
+                    )}
+                    {deliverable.iconType === 'handshake' && (
+                      <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+                        <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+                        <path d="m21 3 1 11h-2"/>
+                        <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
+                        <path d="M3 4h8"/>
+                      </svg>
+                    )}
+                    {deliverable.iconType === 'chart' && (
+                      <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 3v18h18"/>
+                        <path d="m19 9-5 5-4-4-3 3"/>
+                      </svg>
+                    )}
+                    {deliverable.iconType === 'monitor' && (
+                      <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                      </svg>
+                    )}
                   </div>
-                  <h3 className="text-xl font-bold text-oxford-blue mb-4">{deliverable.title}</h3>
-                  <p className="text-charcoal leading-relaxed">{deliverable.description}</p>
-                </CardContent>
-              </Card>
+                </div>
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{deliverable.title}</h3>
+                <p className="text-[#374151] leading-relaxed">{deliverable.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -425,8 +518,14 @@ export default function ConsultingPage() {
           <p className="text-xl text-navy-100 mb-8">
             You don't need more tactics. You need a system. Let's transform your scattered marketing into predictable growth.
           </p>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 rounded-full font-bold text-lg shadow-navy-strong">
-            <Link href="/contact">Work With Me</Link>
+          <Button asChild size="lg" className="bg-[#f59e0b] text-white hover:bg-[#d97706] px-8 py-4 rounded-lg font-bold text-lg">
+            <Link href="/contact" className="flex items-center">
+              Work With Me
+              <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m12 5 7 7-7 7"/>
+                <path d="M5 12h14"/>
+              </svg>
+            </Link>
           </Button>
         </div>
       </section>

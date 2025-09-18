@@ -1,12 +1,9 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import LineIcon from "@/components/LineIcon";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import HeroMedia from "@/components/HeroMedia";
-import { getContentPage, convertIconName, processHeroMedia } from "@/lib/content";
+import { getContentPage, processHeroMedia } from "@/lib/content";
 
 export default function Home() {
   // Get homepage content from MDX
@@ -117,14 +114,43 @@ export default function Home() {
 
   return (
     <div className="bg-background">
-      {/* Hero Section - Modern Navy Theme */}
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white py-24 px-6 min-h-[700px] flex items-center">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-16 items-center">
+            {/* Hero Image/Illustration Area - Shows first on mobile */}
+            <div className="relative order-first md:order-2">
+              <div className="text-center space-y-6">
+                <div className="w-full aspect-video md:aspect-video bg-gradient-to-br from-[#8fb4ff]/30 to-[#1e3a8a]/30 rounded-lg flex items-center justify-center relative overflow-hidden min-h-[280px] md:min-h-[240px]">
+                  {heroMedia ? (
+                    <HeroMedia
+                      media={heroMedia}
+                      className="w-full h-full object-cover"
+                      priority={true}
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center space-y-3">
+                        <div className="w-20 h-20 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                          <svg className="w-10 h-10 md:w-8 md:h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                          </svg>
+                        </div>
+                        <div className="text-white/80 text-base md:text-sm font-medium">Professional Services Marketing</div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <p className="text-blue-100 text-sm italic">(Marketing systems that scale beyond referrals)</p>
+              </div>
+            </div>
+
+            <div className="order-last md:order-1">
               <Badge className="mb-6 bg-[#8fb4ff] text-[#1e3a8a] border-[#8fb4ff] hover:bg-[#8fb4ff]/90">
-                <LineIcon type="target" className="mr-2" size={16} />
-                Trusted by 200+ Professional Services Firms
+                <svg className="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L13.09 8.26L22 9L17 14L18.18 21L12 18L5.82 21L7 14L2 9L10.91 8.26L12 2Z"/>
+                </svg>
+                For Professional Service Firms
               </Badge>
               <h1 className="text-hero font-bold leading-tight mb-6 text-white">
                 {heroTitle}
@@ -133,29 +159,68 @@ export default function Home() {
                 {heroDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] font-semibold shadow-lg">
+                <Button size="lg" className="bg-gradient-to-br from-[#f59e0b] to-[#FFBF00] text-white hover:from-[#FFBF00] hover:to-[#f59e0b] font-semibold shadow-lg">
                   <Link href="/contact" className="flex items-center">
-                    Work With Me
-                    <LineIcon type="arrow-right" className="ml-2" size={16} />
+                    Build Your Lead Generation Plan
+                    <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="m12 5 7 7-7 7"/>
+                      <path d="M5 12h14"/>
+                    </svg>
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-blue-200 text-blue-200 hover:bg-blue-200/20 hover:text-white bg-white/10 font-semibold">
-                  <Link href="/workshops">Explore Workshops</Link>
-                </Button>
+              </div>
+
+              {/* Social Proof */}
+              <div className="mt-8 flex items-center space-x-4">
+                <div className="flex -space-x-2">
+                  <Avatar className="border-2 border-white">
+                    <AvatarFallback className="bg-[#8fb4ff] text-[#1e3a8a]">SC</AvatarFallback>
+                  </Avatar>
+                  <Avatar className="border-2 border-white">
+                    <AvatarFallback className="bg-[#8fb4ff] text-[#1e3a8a]">MR</AvatarFallback>
+                  </Avatar>
+                  <Avatar className="border-2 border-white">
+                    <AvatarFallback className="bg-[#8fb4ff] text-[#1e3a8a]">DT</AvatarFallback>
+                  </Avatar>
+                </div>
+                <div>
+                  <div className="flex text-amber-400">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-blue-100 text-sm">Trusted by 500+ business owners</p>
+                </div>
               </div>
             </div>
-            <div className="relative">
-              <Card className="bg-white/15 border-white/30 backdrop-blur-sm shadow-2xl">
-                <CardContent className="p-8">
-                  <div className="text-center space-y-6">
-                    <HeroMedia 
-                      media={heroMedia} 
-                      className="w-full"
-                      priority={true}
-                    />
-                  </div>
-                </CardContent>
-              </Card>
+          </div>
+
+          {/* Dream Outcomes */}
+          <div className="mt-16 bg-black/20 rounded-lg p-6">
+            <div className="grid md:grid-cols-3 gap-4 text-center">
+              <div className="flex items-center justify-center space-x-2">
+                <svg className="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="#28a745"/>
+                  <path d="M8 12l3 3 5-6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+                <span className="text-blue-100">More qualified leads in 90 days</span>
+              </div>
+              <div className="flex items-center justify-center space-x-2">
+                <svg className="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="#28a745"/>
+                  <path d="M8 12l3 3 5-6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+                <span className="text-blue-100">Shorter sales cycles, higher conversions</span>
+              </div>
+              <div className="flex items-center justify-center space-x-2">
+                <svg className="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="#28a745"/>
+                  <path d="M8 12l3 3 5-6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+                <span className="text-blue-100">Attract better clients at higher value</span>
+              </div>
             </div>
           </div>
         </div>
@@ -184,10 +249,12 @@ export default function Home() {
                     <p key={index} dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
                   ))}
                 </div>
-                <Button asChild className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white shadow-lg">
-                  <Link href="/about">
+                <Button asChild className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white">
+                  <Link href="/about" className="flex items-center">
                     Read More
-                    <LineIcon type="arrow-right" className="ml-2" size={16} />
+                    <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m9 18 6-6-6-6"/>
+                    </svg>
                   </Link>
                 </Button>
               </div>
@@ -197,54 +264,65 @@ export default function Home() {
       )}
 
       {/* Target Audience Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-section-title font-bold text-[#1e3a8a]">I Work Best With</h2>
             <p className="text-xl text-[#374151] max-w-4xl mx-auto">
               Over 200+ engagements, I've discovered which types of businesses get the most transformative results from systematic marketing approaches.
             </p>
-            <Card className="max-w-4xl mx-auto bg-[#8fb4ff]/20 border-[#8fb4ff]/30">
-              <CardContent className="p-6">
-                <p className="text-[#374151]">
-                  Not every business is ready for what I do. The companies that see dramatic improvements share three characteristics: they value expertise over price, they're willing to invest in systems that compound over time, and they understand that sustainable growth comes from consistent execution, not silver bullets.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="max-w-4xl mx-auto bg-[#8fb4ff]/10 p-6 rounded-lg">
+              <p className="text-[#374151]">
+                Not every business is ready for what I do. The companies that see dramatic improvements share three characteristics: they value expertise over price, they're willing to invest in systems that compound over time, and they understand that sustainable growth comes from consistent execution, not silver bullets.
+              </p>
+            </div>
           </div>
-          
+
           <div className="grid lg:grid-cols-3 gap-8">
             {audienceSegments.map((segment: any, index: number) => (
-              <Card key={index} className="h-full hover:shadow-xl transition-shadow flex flex-col bg-white border-[#8fb4ff]/20">
-                <CardHeader>
-                  <div className="mb-4">
-                    <LineIcon type={convertIconName(segment.iconType || segment.icon)} className="text-[#f59e0b] mb-4" size={48} />
-                    <CardTitle className="text-xl text-[#1e3a8a]">{segment.title}</CardTitle>
-                    <CardDescription className="text-[#1e40af] font-semibold">
-                      {segment.subheading}
-                    </CardDescription>
+              <div key={index} className="text-center">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto mb-4">
+                    {index === 0 && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M20 7h-9"/>
+                        <path d="M14 17H5"/>
+                        <circle cx="17" cy="17" r="3"/>
+                        <circle cx="7" cy="7" r="3"/>
+                      </svg>
+                    )}
+                    {index === 1 && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                      </svg>
+                    )}
+                    {index === 2 && (
+                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                      </svg>
+                    )}
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-grow">
-                  <p className="text-[#374151] leading-relaxed">
-                    {segment.description}
+                  <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{segment.title}</h3>
+                  <p className="text-[#1e40af] font-semibold mb-4">{segment.subheading}</p>
+                </div>
+                <p className="text-[#374151] leading-relaxed mb-6">
+                  {segment.description}
+                </p>
+                <div className="bg-[#f59e0b]/10 p-4 rounded-lg mb-6">
+                  <p className="text-sm font-semibold text-[#1e3a8a]">
+                    Typical results: {segment.results}
                   </p>
-                  <Card className="bg-[#f59e0b]/10 border border-[#f59e0b]/30">
-                    <CardContent className="p-4">
-                      <p className="text-sm font-semibold text-[#1e3a8a]">
-                        Typical results: {segment.results}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </CardContent>
-                <CardFooter className="mt-auto">
-                  <Button asChild className="w-full bg-[#1e3a8a] hover:bg-[#1e40af] text-white shadow-lg">
-                    <Link href={segment.link?.url || segment.link || ""}>
-                      {segment.link?.text || "View Success Stories"}
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+                </div>
+                <Button asChild className="w-full bg-[#1e3a8a] hover:bg-[#1e40af] text-white">
+                  <Link href={segment.link?.url || segment.link || ""}>
+                    {segment.link?.text || "View Success Stories"}
+                  </Link>
+                </Button>
+              </div>
             ))}
           </div>
         </div>
@@ -261,29 +339,53 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service: any, index: number) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-[#f59e0b] bg-white">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#f59e0b] to-[#d97706] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <LineIcon type={convertIconName(service.iconType || service.icon)} className="text-white" size={32} />
-                  </div>
-                  <CardTitle className="text-subsection text-[#1e3a8a]">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-[#374151] leading-relaxed">{service.description}</p>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild className="w-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white shadow-lg">
-                    <Link href={service.link}>{service.linkText || service.link_text}</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto mb-4">
+                  {index === 0 && (
+                    <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 7h-9"/>
+                      <path d="M14 17H5"/>
+                      <circle cx="17" cy="17" r="3"/>
+                      <circle cx="7" cy="7" r="3"/>
+                    </svg>
+                  )}
+                  {index === 1 && (
+                    <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="3"/>
+                      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                      <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                    </svg>
+                  )}
+                  {index === 2 && (
+                    <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                      <rect x="9" y="9" width="6" height="6"/>
+                      <line x1="9" y1="1" x2="9" y2="4"/>
+                      <line x1="15" y1="1" x2="15" y2="4"/>
+                      <line x1="9" y1="20" x2="9" y2="23"/>
+                      <line x1="15" y1="20" x2="15" y2="23"/>
+                      <line x1="20" y1="9" x2="23" y2="9"/>
+                      <line x1="20" y1="14" x2="23" y2="14"/>
+                      <line x1="1" y1="9" x2="4" y2="9"/>
+                      <line x1="1" y1="14" x2="4" y2="14"/>
+                    </svg>
+                  )}
+                </div>
+                <h3 className="text-subsection text-[#1e3a8a] mb-4">{service.title}</h3>
+                <p className="text-[#374151] leading-relaxed mb-6">{service.description}</p>
+                <Button asChild className="w-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white">
+                  <Link href={service.link}>{service.linkText || service.link_text}</Link>
+                </Button>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-section-title font-bold text-[#1e3a8a]">What Clients Say</h2>
@@ -293,27 +395,21 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial: any, index: number) => (
-              <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 border-l-4 border-l-[#8fb4ff] bg-white">
-                <CardContent className="p-6 space-y-4">
-                  <p className="text-[#374151] italic leading-relaxed">
-                    "{testimonial.quote}"
-                  </p>
-                  <Separator className="bg-[#8fb4ff]/30" />
-                  <div className="flex items-center space-x-4">
-                    <Avatar>
-                      <AvatarImage src={testimonial.avatar} />
-                      <AvatarFallback className="bg-[#8fb4ff] text-[#1e3a8a]">
-                        {testimonial.author.split(' ').map((n: string) => n[0]).join('')}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="font-semibold text-[#1e3a8a]">{testimonial.author}</p>
-                      <p className="text-sm text-[#374151]">{testimonial.role}</p>
-                      <p className="text-sm text-[#374151]">{testimonial.company}</p>
-                    </div>
+              <div key={index} className="bg-[#fef7ed] p-6 rounded-lg">
+                <p className="text-[#374151] italic leading-relaxed mb-6">
+                  "{testimonial.quote}"
+                </p>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-[#8fb4ff] rounded-full flex items-center justify-center text-[#1e3a8a] font-bold">
+                    {testimonial.author.split(' ').map((n: string) => n[0]).join('')}
                   </div>
-                </CardContent>
-              </Card>
+                  <div>
+                    <p className="font-semibold text-[#1e3a8a]">{testimonial.author}</p>
+                    <p className="text-sm text-[#374151]">{testimonial.role}</p>
+                    <p className="text-sm text-[#374151]">{testimonial.company}</p>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -330,17 +426,13 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {approachPrinciples.map((principle, index) => (
-              <Card key={index} className="text-center bg-white border-[#8fb4ff]/20">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-[#f59e0b] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{principle.number}</span>
-                  </div>
-                  <CardTitle className="text-xl text-[#1e3a8a]">{principle.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-[#374151] leading-relaxed">{principle.description}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-[#f59e0b] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">{principle.number}</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{principle.title}</h3>
+                <p className="text-[#374151] leading-relaxed">{principle.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -355,10 +447,12 @@ export default function Home() {
             <p className="text-xl text-blue-100 mb-8">
               Let's design a system that works for your business.
             </p>
-            <Button size="lg" asChild className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] text-white hover:from-[#d97706] hover:to-[#b45309] px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200">
+            <Button size="lg" asChild className="bg-[#f59e0b] text-white hover:bg-[#d97706] px-8 py-4 rounded-full font-bold text-lg">
               <Link href="/contact" className="flex items-center">
                 Work With Me
-                <LineIcon type="arrow-right" className="ml-2" size={16} />
+                <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m9 18 6-6-6-6"/>
+                </svg>
               </Link>
             </Button>
           </div>
