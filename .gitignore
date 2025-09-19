@@ -43,6 +43,7 @@ Content-Instructions/
 .playwright-mcp/
 Social-icons-svg.md
 context/
+QWEN.md
 
 # prototype pages
 src/app/home-indigo/
