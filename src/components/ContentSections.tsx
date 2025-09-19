@@ -1,7 +1,45 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { ContentSection, convertIconName } from "@/lib/content";
-import { processInlineMarkdown, markdownToHtml } from "@/lib/markdown";
+import { processInlineMarkdown } from "@/lib/markdown";
+
+// Custom icon component to replace LineIcon
+function CustomIcon({ type, className, size = 24 }: { type: string; className?: string; size?: number }) {
+  const iconProps = {
+    className: className || "w-6 h-6",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    width: size,
+    height: size
+  };
+
+  switch (type) {
+    case 'check':
+      return (
+        <svg {...iconProps}>
+          <polyline points="20,6 9,17 4,12"/>
+        </svg>
+      );
+    case 'shield':
+      return (
+        <svg {...iconProps}>
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      );
+    default:
+      return (
+        <svg {...iconProps}>
+          <circle cx="12" cy="12" r="10"/>
+        </svg>
+      );
+  }
+}
 
 // SVG Icon renderer for flat design
 function renderIconSVG(iconType: string) {
@@ -50,6 +88,12 @@ function renderIconSVG(iconType: string) {
         <svg {...iconProps}>
           <polyline points="22,6 13.5,14.5 8.5,9.5 2,16"/>
           <polyline points="16,6 22,6 22,12"/>
+        </svg>
+      );
+    case 'check':
+      return (
+        <svg {...iconProps}>
+          <polyline points="20,6 9,17 4,12"/>
         </svg>
       );
     case 'shield':
@@ -608,7 +652,7 @@ function ChecklistSection({ section, bgClass }: { section: ContentSection; bgCla
               {section.items.map((item, index) => (
                 <li key={index} className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-[#f59e0b] rounded-full flex items-center justify-center mr-4 mt-1">
-                    <LineIcon type="check" className="text-white" size={16} />
+                    <CustomIcon type="check" className="text-white" size={16} />
                   </div>
                   <div 
                     className="text-[#374151] leading-relaxed prose prose-sm max-w-none prose-strong:text-[#1e3a8a] prose-em:text-[#374151] prose-em:italic"
@@ -648,7 +692,7 @@ function ValueStackSection({ section, bgClass }: { section: ContentSection; bgCl
                     }}
                   />
                   <div className="flex-shrink-0 ml-4">
-                    <LineIcon type="check" className="text-[#f59e0b]" size={20} />
+                    <CustomIcon type="check" className="text-[#f59e0b]" size={20} />
                   </div>
                 </li>
               ))}
@@ -667,7 +711,7 @@ function GuaranteeSection({ section, bgClass }: { section: ContentSection; bgCla
         <Card className="p-8 bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white shadow-soft border-2 border-[#8fb4ff]/30">
           <CardContent className="p-0 text-center">
             <div className="mb-6">
-              <LineIcon type="shield" className="text-[#f59e0b] mx-auto" size={64} />
+              <CustomIcon type="shield" className="text-[#f59e0b] mx-auto" size={64} />
             </div>
             {section.title && (
               <h2 className="text-3xl font-bold mb-6">{section.title}</h2>

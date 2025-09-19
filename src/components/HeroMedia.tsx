@@ -29,12 +29,16 @@ export default function HeroMedia({ media, className = "", priority = false }: H
 
   if (!media) {
     return (
-      <div className={`relative bg-slate-100 rounded-lg flex items-center justify-center border-2 border-dashed border-slate-300 ${className}`}>
-        <div className="text-center space-y-3">
-          <div className="w-12 h-12 bg-slate-300 rounded-full flex items-center justify-center mx-auto">
-            <Play className="text-slate-500" size={24} />
+      <div className={`relative bg-gradient-to-br from-slate-50 to-slate-100 rounded-lg flex items-center justify-center border border-slate-200 ${className}`}>
+        <div className="text-center space-y-2">
+          <div className="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center mx-auto">
+            <svg className="w-4 h-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
           </div>
-          <p className="text-slate-500 text-sm font-medium">No media configured</p>
+          <p className="text-slate-400 text-xs font-medium">Media placeholder</p>
         </div>
       </div>
     );
