@@ -19,15 +19,15 @@ export default function PageTemplate({
   heroMedia
 }: PageTemplateProps) {
   const bgClasses = {
-    gradient: "bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white",
-    light: "bg-[#fef7ed]",
-    white: "bg-[#fef7ed]"
+    gradient: "bg-gradient-to-br from-solarized-base03 to-solarized-base02 text-white",
+    light: "bg-solarized-base02",
+    white: "bg-solarized-base02"
   };
 
   const textClasses = {
     gradient: "text-white",
-    light: "text-[#1e3a8a]",
-    white: "text-[#1e3a8a]"
+    light: "text-white",
+    white: "text-white"
   };
 
   return (
@@ -41,10 +41,10 @@ export default function PageTemplate({
               <div className="text-center space-y-6">
                 <div className={`w-full aspect-video bg-gradient-to-br ${
                   heroBackground === 'gradient'
-                    ? 'from-[#8fb4ff]/30 to-[#1e3a8a]/30'
+                    ? 'from-solarized-blue/30 to-solarized-base02/30'
                     : heroBackground === 'light'
-                    ? 'from-[#f59e0b]/20 to-[#FFBF00]/20'
-                    : 'from-[#8fb4ff]/20 to-[#1e3a8a]/20'
+                    ? 'from-solarized-blue/20 to-solarized-cyan/20'
+                    : 'from-solarized-blue/20 to-solarized-base02/20'
                 } rounded-lg flex items-center justify-center relative overflow-hidden min-h-[280px] md:min-h-[240px]`}>
                   {heroMedia ? (
                     <HeroMedia
@@ -56,16 +56,16 @@ export default function PageTemplate({
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center space-y-3">
                         <div className={`w-20 h-20 md:w-16 md:h-16 ${
-                          heroBackground === 'gradient' ? 'bg-white/20' : 'bg-[#1e3a8a]/20'
+                          heroBackground === 'gradient' ? 'bg-solarized-base03/20' : 'bg-solarized-base02/20'
                         } rounded-full flex items-center justify-center mx-auto`}>
                           <svg className={`w-10 h-10 md:w-8 md:h-8 ${
-                            heroBackground === 'gradient' ? 'text-white' : 'text-[#1e3a8a]'
+                            heroBackground === 'gradient' ? 'text-white' : 'text-white'
                           }`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                           </svg>
                         </div>
                         <div className={`${
-                          heroBackground === 'gradient' ? 'text-white/80' : 'text-[#1e3a8a]/80'
+                          heroBackground === 'gradient' ? 'text-white/80' : 'text-white/80'
                         } text-base md:text-sm font-medium`}>
                           {title}
                         </div>
@@ -74,7 +74,7 @@ export default function PageTemplate({
                   )}
                 </div>
                 <p className={`${
-                  heroBackground === 'gradient' ? 'text-blue-100' : 'text-[#374151]'
+                  heroBackground === 'gradient' ? 'text-blue-100' : 'text-white/80'
                 } text-sm italic`}>
                   (Professional services solution)
                 </p>
@@ -87,7 +87,7 @@ export default function PageTemplate({
                 {title}
               </h1>
               {subtitle && (
-                <p className={`text-xl ${heroBackground === 'gradient' ? 'text-blue-100' : 'text-[#374151]'} leading-relaxed`}>
+                <p className={`text-xl ${heroBackground === 'gradient' ? 'text-blue-100' : 'text-white/80'} leading-relaxed`}>
                   {subtitle}
                 </p>
               )}

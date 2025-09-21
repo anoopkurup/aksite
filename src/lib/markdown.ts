@@ -40,9 +40,9 @@ export function processInlineMarkdown(text: string): string {
 
   return text
     // Handle links first to avoid conflicts with other formatting
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-[#1e3a8a] hover:text-[#f59e0b] underline font-medium transition-colors">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-solarized-blue hover:text-solarized-cyan underline font-medium transition-colors">$1</a>')
     // Handle bold text with proper styling
-    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#1e3a8a]">$1</strong>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-solarized-base0">$1</strong>')
     // Handle italic text
     .replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em class="italic">$1</em>')
     // Convert line breaks

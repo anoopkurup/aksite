@@ -17,11 +17,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-border-gray sticky top-0 z-50">
+    <header className="bg-solarized-base02/95 backdrop-blur-sm border-b border-solarized-base01 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-oxford-blue focus-enhanced">
+            <Link href="/" className="text-2xl font-bold text-white focus-enhanced">
               Anoop Kurup
             </Link>
           </div>
@@ -32,7 +32,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-charcoal hover:text-azure transition-colors duration-200 font-medium focus-enhanced"
+                className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium focus-enhanced"
               >
                 {item.name}
               </Link>
@@ -43,7 +43,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="bg-[#f59e0b] text-white px-6 py-2.5 rounded-lg hover:bg-[#d97706] transition-all duration-200 font-medium focus-enhanced"
+              className="bg-solarized-magenta text-black px-6 py-2.5 rounded-lg hover:bg-solarized-cyan transition-all duration-200 font-medium focus-enhanced"
             >
               Work With Me
             </Link>
@@ -53,7 +53,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-charcoal hover:text-oxford-blue focus-enhanced"
+              className="text-white hover:text-solarized-blue focus-enhanced"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -70,13 +70,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border-gray">
+          <div className="md:hidden py-4 border-t border-solarized-base01">
             <div className="flex flex-col space-y-3">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-charcoal hover:text-azure transition-colors duration-200 font-medium px-2 py-2 focus-enhanced"
+                  className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium px-2 py-2 focus-enhanced"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -84,7 +84,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="bg-[#f59e0b] text-white px-6 py-2.5 rounded-lg hover:bg-[#d97706] transition-all duration-200 font-medium text-center mt-4 focus-enhanced"
+                className="bg-solarized-magenta text-black px-6 py-2.5 rounded-lg hover:bg-solarized-cyan transition-all duration-200 font-medium text-center mt-4 focus-enhanced"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Work With Me

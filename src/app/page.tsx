@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -11,117 +12,29 @@ export default function Home() {
   const heroMedia = homepageContent ? processHeroMedia(homepageContent.frontmatter) : null;
   const heroTitle = homepageContent?.frontmatter?.title || "Clarity. Strategy. Systems.";
   const heroDescription = homepageContent?.frontmatter?.description || "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution.";
-  
-  // Get about section from MDX
-  const aboutSection = homepageContent?.frontmatter?.about;
-  
-  // Get audience segments from MDX or fallback to hardcoded
-  const audienceSegments = homepageContent?.frontmatter?.audience?.items || [
-    {
-      iconType: "handshake",
-      title: "Professional Service Firms",
-      subheading: "Beyond Referrals",
-      description: "Marketing agencies, law firms, consulting practices, and specialized B2B services firms with 10-50 employees who've hit the ceiling of what referrals alone can deliver.",
-      results: "40-60% increase in qualified leads within 90 days",
-      link: "/case-studies/professional-services"
-    },
-    {
-      iconType: "monitor",
-      title: "Tech-Enabled Businesses",
-      subheading: "Scale Without Chaos",
-      description: "SaaS companies, IT service providers, and digital agencies experiencing rapid growth but struggling with marketing systems that scale efficiently.",
-      results: "50-80% reduction in sales cycle length",
-      link: "/case-studies/tech-enabled"
-    },
-    {
-      iconType: "target",
-      title: "Consultants & Experts",
-      subheading: "Systematic Growth",
-      description: "Independent professionals and boutique consultancies earning $150K+ annually, ready to scale beyond personal capacity and networking cycles.",
-      results: "2-3x increase in inbound inquiries",
-      link: "/case-studies/consultants-experts"
-    }
-  ];
 
-  // Get services from MDX or fallback to hardcoded
-  const services = homepageContent?.frontmatter?.services?.items || [
-    {
-      iconType: "handshake",
-      title: "Consulting",
-      description: "Hands-on strategy and positioning for marketing, lead generation, and growth. Get clarity on your market position and build predictable revenue streams.",
-      link: "/consulting",
-      linkText: "Learn More"
-    },
-    {
-      iconType: "graduation", 
-      title: "Workshops",
-      description: "Intensive, practical sessions to build your lead generation machine. Learn frameworks and tools to scale with confidence.",
-      link: "/workshops",
-      linkText: "Explore Workshops"
-    },
-    {
-      iconType: "cpu",
-      title: "AI Solutions", 
-      description: "AI-enabled tools that make marketing faster, cheaper, and more consistent. Simple automation for content and lead generation.",
-      link: "/ai-solutions",
-      linkText: "View Solutions"
-    }
-  ];
-
-  // Get testimonials from MDX or fallback to hardcoded
-  const testimonials = homepageContent?.frontmatter?.testimonials?.items || [
-    {
-      quote: "Anoop helped us move from chaotic, reactive marketing to a systematic approach that consistently generates qualified leads. Our close rate improved by 35% within 90 days.",
-      author: "Sarah Chen",
-      role: "Founder",
-      company: "Strategic Marketing Partners",
-      avatar: "/api/placeholder/40/40"
-    },
-    {
-      quote: "The AI workflows Anoop designed save our team 15 hours per week on content creation while maintaining quality. It's like having an extra team member focused on marketing.",
-      author: "Michael Rodriguez",
-      role: "CEO",
-      company: "TechFlow Solutions",
-      avatar: "/api/placeholder/40/40"
-    },
-    {
-      quote: "Finally, marketing that makes sense for professional services. Anoop's approach helped us articulate our value clearly and build a pipeline that doesn't depend on just referrals.",
-      author: "David Thompson",
-      role: "Managing Partner", 
-      company: "Thompson Legal Advisors",
-      avatar: "/api/placeholder/40/40"
-    }
-  ];
-
-
-  const approachPrinciples = [
-    {
-      number: "1",
-      title: "Clarity before tools",
-      description: "Strategy first, tech second. We start with understanding your business, not picking tools."
-    },
-    {
-      number: "2", 
-      title: "AI without hype",
-      description: "Practical, everyday workflows that cut costs and save time — no buzzwords, just results."
-    },
-    {
-      number: "3",
-      title: "Systems over heroics", 
-      description: "Repeatable processes that outlast founder energy and scale with your team."
-    }
-  ];
+  // Get all content sections from MDX
+  const problemSection = homepageContent?.frontmatter?.problem;
+  const solutionSection = homepageContent?.frontmatter?.solution;
+  const benefitsSection = homepageContent?.frontmatter?.benefits;
+  const testimonials = homepageContent?.frontmatter?.testimonials?.items || [];
+  const howItWorksSection = homepageContent?.frontmatter?.how_it_works;
+  const whyChooseSection = homepageContent?.frontmatter?.why_choose;
+  const comparisonSection = homepageContent?.frontmatter?.comparison;
+  const featuresSection = homepageContent?.frontmatter?.features;
+  const faqSection = homepageContent?.frontmatter?.faq;
+  const ctaSection = homepageContent?.frontmatter?.cta;
 
   return (
     <div className="bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#1e40af] text-white py-24 px-6 min-h-[700px] flex items-center">
+      <section className="bg-gradient-to-br from-solarized-base03 to-solarized-base02 text-white py-24 px-6 min-h-[700px] flex items-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="flex flex-col md:grid md:grid-cols-2 gap-16 items-center">
             {/* Hero Image/Illustration Area - Shows first on mobile */}
             <div className="relative order-first md:order-2">
               <div className="text-center space-y-6">
-                <div className="w-full aspect-video md:aspect-video bg-gradient-to-br from-[#8fb4ff]/30 to-[#1e3a8a]/30 rounded-lg flex items-center justify-center relative overflow-hidden min-h-[280px] md:min-h-[240px]">
+                <div className="w-full aspect-video md:aspect-video bg-gradient-to-br from-solarized-blue/30 to-solarized-base02/30 rounded-lg flex items-center justify-center relative overflow-hidden min-h-[280px] md:min-h-[240px]">
                   {heroMedia ? (
                     <HeroMedia
                       media={heroMedia}
@@ -131,35 +44,35 @@ export default function Home() {
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center space-y-3">
-                        <div className="w-20 h-20 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                        <div className="w-20 h-20 md:w-16 md:h-16 bg-solarized-base0/20 rounded-full flex items-center justify-center mx-auto">
                           <svg className="w-10 h-10 md:w-8 md:h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                           </svg>
                         </div>
-                        <div className="text-white/80 text-base md:text-sm font-medium">Professional Services Marketing</div>
+                        <div className="text-white/80 text-base md:text-sm font-medium">Video / Image Placeholder</div>
                       </div>
                     </div>
                   )}
                 </div>
-                <p className="text-blue-100 text-sm italic">(Marketing systems that scale beyond referrals)</p>
+                <p className="text-white/80 text-sm italic">(Replace with your hero video or illustration)</p>
               </div>
             </div>
 
             <div className="order-last md:order-1">
-              <Badge className="mb-6 bg-[#8fb4ff] text-[#1e3a8a] border-[#8fb4ff] hover:bg-[#8fb4ff]/90">
+              <div className="mb-6 flex items-center text-sm text-white/80">
                 <svg className="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2L13.09 8.26L22 9L17 14L18.18 21L12 18L5.82 21L7 14L2 9L10.91 8.26L12 2Z"/>
                 </svg>
                 For Professional Service Firms
-              </Badge>
+              </div>
               <h1 className="text-hero font-bold leading-tight mb-6 text-white">
                 {heroTitle}
               </h1>
-              <p className="text-lg text-blue-100 mb-8 leading-relaxed max-w-2xl">
+              <p className="text-lg text-white mb-8 leading-relaxed max-w-2xl">
                 {heroDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-br from-[#f59e0b] to-[#FFBF00] text-white hover:from-[#FFBF00] hover:to-[#f59e0b] font-semibold shadow-lg">
+                <Button size="lg" className="bg-solarized-magenta text-white3 hover:bg-solarized-cyan font-semibold shadow-lg">
                   <Link href="/contact" className="flex items-center">
                     Build Your Lead Generation Plan
                     <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -173,291 +86,323 @@ export default function Home() {
               {/* Social Proof */}
               <div className="mt-8 flex items-center space-x-4">
                 <div className="flex -space-x-2">
-                  <Avatar className="border-2 border-white">
-                    <AvatarFallback className="bg-[#8fb4ff] text-[#1e3a8a]">SC</AvatarFallback>
+                  <Avatar className="border-2 border-solarized-base0">
+                    <AvatarFallback className="bg-solarized-magenta text-white3">NP</AvatarFallback>
                   </Avatar>
-                  <Avatar className="border-2 border-white">
-                    <AvatarFallback className="bg-[#8fb4ff] text-[#1e3a8a]">MR</AvatarFallback>
+                  <Avatar className="border-2 border-solarized-base0">
+                    <AvatarFallback className="bg-solarized-magenta text-white3">AM</AvatarFallback>
                   </Avatar>
-                  <Avatar className="border-2 border-white">
-                    <AvatarFallback className="bg-[#8fb4ff] text-[#1e3a8a]">DT</AvatarFallback>
+                  <Avatar className="border-2 border-solarized-base0">
+                    <AvatarFallback className="bg-solarized-magenta text-white3">GK</AvatarFallback>
                   </Avatar>
                 </div>
                 <div>
-                  <div className="flex text-amber-400">
+                  <div className="flex text-solarized-yellow">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                       </svg>
                     ))}
                   </div>
-                  <p className="text-blue-100 text-sm">Trusted by 500+ business owners</p>
+                  <p className="text-white/80 text-sm">Trusted by 500+ business owners</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Dream Outcomes */}
-          <div className="mt-16 bg-black/20 rounded-lg p-6">
+          <div className="mt-16 bg-solarized-base03/60 rounded-lg p-6">
             <div className="grid md:grid-cols-3 gap-4 text-center">
               <div className="flex items-center justify-center space-x-2">
                 <svg className="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" fill="#28a745"/>
                   <path d="M8 12l3 3 5-6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
-                <span className="text-blue-100">More qualified leads in 90 days</span>
+                <span className="text-white">More qualified leads in 90 days</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <svg className="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" fill="#28a745"/>
                   <path d="M8 12l3 3 5-6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
-                <span className="text-blue-100">Shorter sales cycles, higher conversions</span>
+                <span className="text-white">Shorter sales cycles, higher conversions</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <svg className="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" fill="#28a745"/>
                   <path d="M8 12l3 3 5-6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
-                <span className="text-blue-100">Attract better clients at higher value</span>
+                <span className="text-white">Attract better clients at higher value</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      {aboutSection && (
-        <section className="py-16 px-6 bg-[#fef7ed]">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-12 items-start">
-              {aboutSection.image && (
-                <div className="relative md:col-span-1">
-                  <div className="w-full max-w-xs mx-auto aspect-square bg-gradient-to-br from-[#1e3a8a]/20 to-[#8fb4ff]/20 rounded-2xl shadow-lg flex items-center justify-center">
-                    <img 
-                      src={aboutSection.image.startsWith('/') ? aboutSection.image : `/${aboutSection.image}`} 
-                      alt="Anoop Kurup, marketing strategist and consultant, professional headshot in black and white"
-                      className="w-full h-full object-cover rounded-2xl"
-                    />
+      {/* Problem Section */}
+      {problemSection && (
+        <section className="py-16 px-6 bg-solarized-base03">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-section-title font-bold text-white mb-8">
+              {problemSection.title}
+            </h2>
+            <p className="text-xl text-white/80 mb-12">
+              {problemSection.subtitle}
+            </p>
+
+            <div className="space-y-6 text-left max-w-3xl mx-auto">
+              {problemSection.items?.map((item: any, index: number) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-6 h-6 bg-solarized-green rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-white/80"><strong>{item.title}</strong> — {item.description}</p>
                   </div>
                 </div>
-              )}
-              <div className="md:col-span-2">
-                <h2 className="text-section-title font-bold text-[#1e3a8a] mb-6">{aboutSection.title}</h2>
-                <div className="text-[#374151] leading-relaxed space-y-4 mb-6">
-                  {aboutSection.content.split('\n\n').map((paragraph: string, index: number) => (
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Solution Section */}
+      {solutionSection && (
+        <section className="py-16 px-6 bg-solarized-base02">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative order-first md:order-2">
+                <div className="text-center">
+                  <div className="w-full aspect-square rounded-lg overflow-hidden min-h-[320px] md:min-h-[280px] relative">
+                    <Image
+                      src={solutionSection.image}
+                      alt="Anoop Kurup - Marketing Systems Expert"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="text-white/80 text-sm text-center mt-4 italic">Anoop Kurup</p>
+                </div>
+              </div>
+
+              <div className="order-last md:order-1">
+                <h2 className="text-section-title font-bold text-white mb-6">
+                  {solutionSection.title}
+                </h2>
+                <div className="text-lg text-white/80 leading-relaxed space-y-4">
+                  {solutionSection.content.split('\n\n').map((paragraph: string, index: number) => (
                     <p key={index} dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
                   ))}
                 </div>
-                <Button asChild className="bg-[#1e3a8a] hover:bg-[#1e40af] text-white">
-                  <Link href="/about" className="flex items-center">
-                    Read More
-                    <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="m9 18 6-6-6-6"/>
-                    </svg>
-                  </Link>
-                </Button>
               </div>
             </div>
           </div>
         </section>
       )}
 
-      {/* Target Audience Section */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-section-title font-bold text-[#1e3a8a]">I Work Best With</h2>
-            <p className="text-xl text-[#374151] max-w-4xl mx-auto">
-              Over 200+ engagements, I've discovered which types of businesses get the most transformative results from systematic marketing approaches.
-            </p>
-            <div className="max-w-4xl mx-auto bg-[#8fb4ff]/10 p-6 rounded-lg">
-              <p className="text-[#374151]">
-                Not every business is ready for what I do. The companies that see dramatic improvements share three characteristics: they value expertise over price, they're willing to invest in systems that compound over time, and they understand that sustainable growth comes from consistent execution, not silver bullets.
-              </p>
+      {/* Benefits Section */}
+      {benefitsSection && (
+        <section className="py-16 px-6 bg-solarized-base03">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-section-title font-bold text-white mb-6">
+                {benefitsSection.title}
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {benefitsSection.items?.map((benefit: any, index: number) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-solarized-magenta rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      {benefit.icon === "package" && (
+                        <>
+                          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                          <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                          <line x1="12" y1="22.08" x2="12" y2="12"/>
+                          <circle cx="12" cy="12" r="2" fill="white"/>
+                        </>
+                      )}
+                      {benefit.icon === "zap" && (
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                      )}
+                      {benefit.icon === "settings" && (
+                        <>
+                          <circle cx="12" cy="12" r="3"/>
+                          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </>
+                      )}
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-white/80 leading-relaxed">{benefit.description}</p>
+                </div>
+              ))}
             </div>
           </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {audienceSegments.map((segment: any, index: number) => (
-              <div key={index} className="text-center">
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto mb-4">
-                    {index === 0 && (
-                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20 7h-9"/>
-                        <path d="M14 17H5"/>
-                        <circle cx="17" cy="17" r="3"/>
-                        <circle cx="7" cy="7" r="3"/>
-                      </svg>
-                    )}
-                    {index === 1 && (
-                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                        <line x1="8" y1="21" x2="16" y2="21"/>
-                        <line x1="12" y1="17" x2="12" y2="21"/>
-                      </svg>
-                    )}
-                    {index === 2 && (
-                      <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <circle cx="12" cy="12" r="6"/>
-                        <circle cx="12" cy="12" r="2"/>
-                      </svg>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{segment.title}</h3>
-                  <p className="text-[#1e40af] font-semibold mb-4">{segment.subheading}</p>
-                </div>
-                <p className="text-[#374151] leading-relaxed mb-6">
-                  {segment.description}
-                </p>
-                <div className="bg-[#f59e0b]/10 p-4 rounded-lg mb-6">
-                  <p className="text-sm font-semibold text-[#1e3a8a]">
-                    Typical results: {segment.results}
-                  </p>
-                </div>
-                <Button asChild className="w-full bg-[#1e3a8a] hover:bg-[#1e40af] text-white">
-                  <Link href={segment.link?.url || segment.link || ""}>
-                    {segment.link?.text || "View Success Stories"}
-                  </Link>
-                </Button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 px-6 bg-[#fef7ed]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-section-title font-bold text-[#1e3a8a]">What I Offer</h2>
-            <p className="text-xl text-[#374151]">
-              Multiple ways to work together, tailored to your needs and stage of growth.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service: any, index: number) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto mb-4">
-                  {index === 0 && (
-                    <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 7h-9"/>
-                      <path d="M14 17H5"/>
-                      <circle cx="17" cy="17" r="3"/>
-                      <circle cx="7" cy="7" r="3"/>
-                    </svg>
-                  )}
-                  {index === 1 && (
-                    <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="3"/>
-                      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
-                      <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
-                      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
-                      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
-                    </svg>
-                  )}
-                  {index === 2 && (
-                    <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
-                      <rect x="9" y="9" width="6" height="6"/>
-                      <line x1="9" y1="1" x2="9" y2="4"/>
-                      <line x1="15" y1="1" x2="15" y2="4"/>
-                      <line x1="9" y1="20" x2="9" y2="23"/>
-                      <line x1="15" y1="20" x2="15" y2="23"/>
-                      <line x1="20" y1="9" x2="23" y2="9"/>
-                      <line x1="20" y1="14" x2="23" y2="14"/>
-                      <line x1="1" y1="9" x2="4" y2="9"/>
-                      <line x1="1" y1="14" x2="4" y2="14"/>
-                    </svg>
-                  )}
-                </div>
-                <h3 className="text-subsection text-[#1e3a8a] mb-4">{service.title}</h3>
-                <p className="text-[#374151] leading-relaxed mb-6">{service.description}</p>
-                <Button asChild className="w-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white">
-                  <Link href={service.link}>{service.linkText || service.link_text}</Link>
-                </Button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Testimonials Section */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-section-title font-bold text-[#1e3a8a]">What Clients Say</h2>
-            <p className="text-xl text-[#374151]">
-              Real results from businesses that transformed their marketing approach.
-            </p>
+      {testimonials.length > 0 && (
+        <section className="py-16 px-6 bg-solarized-base02">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-section-title font-bold text-white mb-6">
+                What Our Clients Say
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial: any, index: number) => (
+                <div key={index} className="bg-solarized-base02 p-6 rounded-lg">
+                  <div className="flex items-start space-x-2 mb-4">
+                    <svg className="w-6 h-6 text-white flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                    </svg>
+                  </div>
+                  <blockquote className="text-white/80 mb-6 leading-relaxed">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="border-t border-solarized-base01 pt-4">
+                    <div className="font-semibold text-white">{testimonial.author}</div>
+                    <div className="text-sm text-white/80">{testimonial.role}</div>
+                    <div className="text-sm text-white/80">{testimonial.company}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial: any, index: number) => (
-              <div key={index} className="bg-[#fef7ed] p-6 rounded-lg">
-                <p className="text-[#374151] italic leading-relaxed mb-6">
-                  "{testimonial.quote}"
-                </p>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-[#8fb4ff] rounded-full flex items-center justify-center text-[#1e3a8a] font-bold">
-                    {testimonial.author.split(' ').map((n: string) => n[0]).join('')}
+        </section>
+      )}
+
+      {/* How It Works Section */}
+      {howItWorksSection && (
+        <section className="py-16 px-6 bg-solarized-base02">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-section-title font-bold text-white mb-6">
+                {howItWorksSection.title}
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {howItWorksSection.steps?.map((step: any, index: number) => (
+                <div key={index} className="text-center">
+                  <div className="w-20 h-20 bg-solarized-base02 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      {step.icon === "file-text" && (
+                        <>
+                          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                          <polyline points="14,2 14,8 20,8"/>
+                          <line x1="16" y1="13" x2="8" y2="13"/>
+                          <line x1="16" y1="17" x2="8" y2="17"/>
+                          <polyline points="10,9 9,9 8,9"/>
+                        </>
+                      )}
+                      {step.icon === "settings" && (
+                        <>
+                          <circle cx="12" cy="12" r="3"/>
+                          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </>
+                      )}
+                      {step.icon === "rocket" && (
+                        <>
+                          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                          <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                          <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                          <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                        </>
+                      )}
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-4">Step {step.number}: {step.title}</h3>
+                  <p className="text-white/80 leading-relaxed">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Why Choose Me Section */}
+      {whyChooseSection && (
+        <section className="py-16 px-6 bg-solarized-base03">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-section-title font-bold text-white mb-6">
+                {whyChooseSection.title}
+              </h2>
+            </div>
+
+            <div className="max-w-4xl mx-auto space-y-6">
+              {whyChooseSection.items?.map((item: any, index: number) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-solarized-green rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#1e3a8a]">{testimonial.author}</p>
-                    <p className="text-sm text-[#374151]">{testimonial.role}</p>
-                    <p className="text-sm text-[#374151]">{testimonial.company}</p>
+                    <p className="text-lg text-white/80"><strong>{item.title}</strong> – {item.description}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* My Approach Section */}
-      <section className="py-16 px-6 bg-[#fef7ed]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-section-title font-bold text-[#1e3a8a]">My Approach</h2>
-            <p className="text-xl text-[#374151]">
-              My work is built on three principles that drive real results:
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {approachPrinciples.map((principle, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#f59e0b] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">{principle.number}</span>
+      {/* FAQ Section */}
+      {faqSection && (
+        <section className="py-16 px-6 bg-solarized-base02">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-section-title font-bold text-white mb-6">
+                {faqSection.title}
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {faqSection.items?.map((faq: any, index: number) => (
+                <div key={index} className="bg-solarized-base03 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-white mb-3">
+                    {faq.question}
+                  </h3>
+                  <p className="text-white/80">
+                    {faq.answer}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{principle.title}</h3>
-                <p className="text-[#374151] leading-relaxed">{principle.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-
-      {/* Final CTA */}
-      <section className="py-16 px-6 bg-gradient-to-br from-[#1e3a8a] to-[#1e40af]">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="p-12">
-            <h2 className="text-page-title font-bold text-white mb-6">Ready to simplify your marketing and lead generation?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Let's design a system that works for your business.
+      {/* Final CTA Section */}
+      {ctaSection && (
+        <section className="py-16 px-6 bg-gradient-to-br from-solarized-base03 to-solarized-base02 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-section-title font-bold mb-6">
+              {ctaSection.title}
+            </h2>
+            <p className="text-xl text-white/80 mb-8 leading-relaxed">
+              {ctaSection.subtitle}
             </p>
-            <Button size="lg" asChild className="bg-[#f59e0b] text-white hover:bg-[#d97706] px-8 py-4 rounded-full font-bold text-lg">
-              <Link href="/contact" className="flex items-center">
-                Work With Me
-                <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="m9 18 6-6-6-6"/>
+            <Button size="lg" className="bg-solarized-magenta text-black hover:bg-[#F47B78] font-semibold shadow-lg">
+              <Link href={`/${ctaSection.button?.url || 'contact'}`} className="flex items-center">
+                {ctaSection.button?.text || 'Get Started'}
+                <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="m12 5 7 7-7 7"/>
+                  <path d="M5 12h14"/>
                 </svg>
               </Link>
             </Button>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 }

@@ -34,7 +34,7 @@ export default function AboutPage() {
       heroMedia={heroMedia}
     >
       {/* Story Section */}
-      <section className="py-16 px-6 bg-[#fef7ed]">
+      <section className="py-16 px-6 bg-solarized-base02">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative">
@@ -45,7 +45,7 @@ export default function AboutPage() {
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-[#f59e0b] p-4 rounded-xl">
+              <div className="absolute -bottom-6 -right-6 bg-solarized-magenta p-4 rounded-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white">20+</div>
                   <div className="text-sm text-white">Years Experience</div>
@@ -53,8 +53,8 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">{frontmatter.story?.title}</h2>
-              <div className="text-[#374151] leading-relaxed space-y-6">
+              <h2 className="text-3xl font-bold text-white mb-6">{frontmatter.story?.title}</h2>
+              <div className="text-white/80 leading-relaxed space-y-6">
                 {frontmatter.story?.content.split('\n\n').map((paragraph: string, index: number) => (
                   <p key={index}>{paragraph.trim()}</p>
                 ))}
@@ -65,14 +65,14 @@ export default function AboutPage() {
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
+      <section className="py-16 px-6 bg-solarized-base03">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">{frontmatter.audience?.title}</h2>
-            <p className="text-xl text-[#374151] max-w-4xl mx-auto mb-4">
+            <h2 className="text-3xl font-bold text-white mb-6">{frontmatter.audience?.title}</h2>
+            <p className="text-xl text-white/80 max-w-4xl mx-auto mb-4">
               {frontmatter.audience?.subtitle}
             </p>
-            <p className="text-[#374151] max-w-4xl mx-auto">
+            <p className="text-white/80 max-w-4xl mx-auto">
               {frontmatter.audience?.intro}
             </p>
           </div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
             {audienceItems.map((item: any, index: number) => (
               <div key={index} className="text-center">
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-solarized-magenta rounded-full flex items-center justify-center mx-auto mb-4">
                     {index === 0 && (
                       <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M20 7h-9"/>
@@ -106,11 +106,11 @@ export default function AboutPage() {
                     )}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{item.title}</h3>
-                <p className="text-[#1e40af] font-semibold mb-4">{item.subheading}</p>
-                <p className="text-[#374151] mb-6 leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-solarized-cyan font-semibold mb-4">{item.subheading}</p>
+                <p className="text-white/80 mb-6 leading-relaxed">{item.description}</p>
                 <div className="bg-[#8fb4ff]/10 p-4 rounded-lg">
-                  <p className="text-sm font-semibold text-[#1e3a8a]">{item.results}</p>
+                  <p className="text-sm font-semibold text-white">{item.results}</p>
                 </div>
               </div>
             ))}
@@ -119,11 +119,11 @@ export default function AboutPage() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-16 px-6 bg-[#fef7ed]">
+      <section className="py-16 px-6 bg-solarized-base02">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">Proven Results Across Industries</h2>
-            <p className="text-xl text-[#374151]">
+            <h2 className="text-3xl font-bold text-white mb-4">Proven Results Across Industries</h2>
+            <p className="text-xl text-white/80">
               Real numbers and real feedback from businesses that transformed their marketing approach.
             </p>
           </div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
           {/* Stats */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {stats.map((stat: any, index: number) => (
-              <div key={index} className="p-6 bg-[#1e3a8a] rounded-lg text-white text-center">
+              <div key={index} className="p-6 bg-solarized-base02 rounded-lg text-white text-center">
                 <div className="text-3xl font-bold mb-2">{stat.number}</div>
                 <div className="text-lg font-semibold text-blue-100 mb-2">{stat.label}</div>
                 <div className="text-sm text-blue-200">{stat.description}</div>
@@ -142,13 +142,13 @@ export default function AboutPage() {
           {/* Testimonials */}
           <div className="grid lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial: any, index: number) => (
-              <div key={index} className="p-6 bg-white rounded-lg">
-                <blockquote className="text-[#374151] mb-6 leading-relaxed">
+              <div key={index} className="p-6 bg-solarized-base03 rounded-lg">
+                <blockquote className="text-white/80 mb-6 leading-relaxed">
                   "{testimonial.quote}"
                 </blockquote>
                 <div>
-                  <p className="font-semibold text-[#1e3a8a]">{testimonial.author}</p>
-                  <p className="text-sm text-[#1e40af]">{testimonial.role}</p>
+                  <p className="font-semibold text-white">{testimonial.author}</p>
+                  <p className="text-sm text-solarized-cyan">{testimonial.role}</p>
                 </div>
               </div>
             ))}
@@ -157,20 +157,20 @@ export default function AboutPage() {
       </section>
 
       {/* Core Principles Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
+      <section className="py-16 px-6 bg-solarized-base03">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">{frontmatter.principles?.title}</h2>
-            <p className="text-xl text-[#374151]">
+            <h2 className="text-3xl font-bold text-white mb-4">{frontmatter.principles?.title}</h2>
+            <p className="text-xl text-white/80">
               {frontmatter.principles?.subtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {principles.map((principle: any, index: number) => (
-              <div key={index} className="p-8 bg-white rounded-lg">
-                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{principle.title}</h3>
-                <p className="text-[#374151] leading-relaxed">{principle.description}</p>
+              <div key={index} className="p-8 bg-solarized-base03 rounded-lg">
+                <h3 className="text-xl font-bold text-white mb-4">{principle.title}</h3>
+                <p className="text-white/80 leading-relaxed">{principle.description}</p>
               </div>
             ))}
           </div>
@@ -178,27 +178,27 @@ export default function AboutPage() {
       </section>
 
       {/* Work Process Section */}
-      <section className="py-16 px-6 bg-[#fef7ed]">
+      <section className="py-16 px-6 bg-solarized-base02">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">{frontmatter.work_process?.title}</h2>
-            <p className="text-xl text-[#374151]">
+            <h2 className="text-3xl font-bold text-white mb-4">{frontmatter.work_process?.title}</h2>
+            <p className="text-xl text-white/80">
               {frontmatter.work_process?.subtitle}
             </p>
           </div>
 
           <div className="space-y-12">
             {workProcess.map((step: any, index: number) => (
-              <div key={index} className="p-8 bg-white rounded-lg">
+              <div key={index} className="p-8 bg-solarized-base03 rounded-lg">
                 <div className="grid md:grid-cols-12 gap-6 items-center">
                   <div className="md:col-span-2 text-center md:text-left">
-                    <div className="w-16 h-16 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto md:mx-0 mb-4 md:mb-0">
+                    <div className="w-16 h-16 bg-solarized-base02 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto md:mx-0 mb-4 md:mb-0">
                       {step.number}
                     </div>
                   </div>
                   <div className="md:col-span-10">
-                    <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{step.title}</h3>
-                    <p className="text-[#374151] leading-relaxed">{step.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
+                    <p className="text-white/80 leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               </div>
@@ -208,10 +208,10 @@ export default function AboutPage() {
       </section>
 
       {/* Working Together Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
+      <section className="py-16 px-6 bg-solarized-base03">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#1e3a8a] mb-6">{frontmatter.closing?.title}</h2>
-          <div className="text-lg text-[#374151] leading-relaxed space-y-6">
+          <h2 className="text-3xl font-bold text-white mb-6">{frontmatter.closing?.title}</h2>
+          <div className="text-lg text-white/80 leading-relaxed space-y-6">
             {frontmatter.closing?.content.split('\n\n').map((paragraph: string, index: number) => (
               <p key={index}>{paragraph.trim()}</p>
             ))}
@@ -226,7 +226,7 @@ export default function AboutPage() {
           <p className="text-xl text-blue-100 mb-8">
             {frontmatter.cta?.subtitle}
           </p>
-          <Button asChild size="lg" className="bg-[#f59e0b] text-white hover:bg-[#d97706] px-8 py-4 rounded-lg font-bold text-lg">
+          <Button asChild size="lg" className="bg-solarized-magenta text-black hover:bg-[#F47B78] px-8 py-4 rounded-lg font-bold text-lg">
             <Link href={frontmatter.cta?.button?.url || "/contact"} className="flex items-center">
               {frontmatter.cta?.button?.text || "Schedule a Strategy Call"}
               <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

@@ -88,46 +88,71 @@ const config: Config = {
   				'400': '#fbbf24',
   				'500': '#f59e0b'
   			},
-  			// Legacy colors updated for Navy theme
-  			'oxford-blue': '#1e3a8a',
-  			azure: '#8fb4ff',
-  			gamboge: '#e6a817',
-  			'antiflash-white': '#fef7ed',
-  			charcoal: '#374151',
-  			white: '#ffffff',
-  			'light-gray': '#fef7ed',
-  			'border-gray': '#c3d5ff',
+  			// Solarized Dark color palette
+  			solarized: {
+  				// Dark theme base colors
+  				'base03': '#002b36', // Background
+  				'base02': '#073642', // Background highlights
+  				'base01': '#586e75', // Optional content / Comments
+  				'base00': '#657b83', // Body text
+  				'base0': '#839496',  // Primary content
+  				'base1': '#93a1a1',  // Optional emphasized content
+  				'base2': '#eee8d5',  // Background highlights (light)
+  				'base3': '#fdf6e3',  // Background (light)
+  				// Accent colors
+  				'red': '#dc322f',
+  				'green': '#859900',
+  				'yellow': '#b58900',
+  				'blue': '#268bd2',
+  				'magenta': '#d33682',
+  				'cyan': '#2aa198',
+  				'orange': '#cb4b16',
+  				'violet': '#6c71c4'
+  			},
+  			// Custom colors for enhanced readability
+  			'text-primary': '#f7f7f7', // high contrast text
+  			'text-heading': '#f7f7f7', // heading text
+  			'text-body': '#f7f7f7', // body text
+  			// Legacy colors updated for new color scheme
+  			'oxford-blue': '#f7f7f7', // headings - high contrast
+  			azure: '#268bd2', // solarized blue
+  			gamboge: '#b58900', // solarized yellow
+  			'antiflash-white': '#073642', // base02 for lighter backgrounds
+  			charcoal: '#f7f7f7', // body text - high contrast
+  			white: '#f7f7f7', // text
+  			'light-gray': '#073642', // base02
+  			'border-gray': '#586e75', // base01
   			brand: {
-  				'50': '#f0f9ff',
-  				'100': '#dbeafe',
-  				'200': '#bfdbfe',
-  				'300': '#93c5fd',
-  				'400': '#60a5fa',
-  				'500': '#3b82f6',
-  				'600': '#2563eb',
-  				'700': '#1d4ed8',
-  				'800': '#1e40af',
-  				'900': '#1e3a8a',
-  				'950': '#0a2540'
+  				'50': '#839496',
+  				'100': '#657b83',
+  				'200': '#586e75',
+  				'300': '#268bd2',
+  				'400': '#2aa198',
+  				'500': '#268bd2',
+  				'600': '#073642',
+  				'700': '#002b36',
+  				'800': '#002b36',
+  				'900': '#002b36',
+  				'950': '#002b36'
   			},
   			neutral: {
-  				'50': '#f9fafb',
-  				'100': '#f4f4f5',
-  				'200': '#e5e7eb',
-  				'300': '#d1d5db',
-  				'400': '#9ca3af',
-  				'500': '#6b7280',
-  				'600': '#4b5563',
-  				'700': '#374151',
-  				'800': '#1f2937',
-  				'900': '#111827',
-  				'950': '#0a2540'
+  				'50': '#93a1a1',
+  				'100': '#839496',
+  				'200': '#657b83',
+  				'300': '#586e75',
+  				'400': '#586e75',
+  				'500': '#657b83',
+  				'600': '#073642',
+  				'700': '#002b36',
+  				'800': '#002b36',
+  				'900': '#002b36',
+  				'950': '#002b36'
   			},
   			semantic: {
-  				success: '#10b981',
-  				warning: '#f59e0b',
-  				error: '#ef4444',
-  				info: '#3b82f6'
+  				success: '#859900',
+  				warning: '#b58900',
+  				error: '#dc322f',
+  				info: '#268bd2'
   			}
   		},
   		fontFamily: {

@@ -171,27 +171,27 @@ export default function ConsultingPage() {
       heroMedia={heroMedia}
     >
       {/* The 6 Most Common Marketing Problems */}
-      <section className="py-16 px-6 bg-navy-50">
+      <section className="py-16 px-6 bg-solarized-base02">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-navy-800 mb-4">Why Most Marketing Doesn't Work</h2>
-            <p className="text-xl text-neutral-700 mb-6 font-medium">It's not about effort. It's about structure.</p>
-            <p className="text-lg text-neutral-700 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Why Most Marketing Doesn't Work</h2>
+            <p className="text-xl text-white/80 mb-6 font-medium">It's not about effort. It's about structure.</p>
+            <p className="text-lg text-white/80 max-w-4xl mx-auto">
               Most businesses don't fail at marketing because they lack effort. They fail because of these systematic issues:
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {marketingProblems.map((problem, index) => (
-              <div key={index} className="p-6 bg-[#f9fafb] rounded-lg">
-                <h3 className="text-lg font-bold text-[#1e3a8a] mb-3">{problem.title}</h3>
-                <p className="text-[#374151] text-sm leading-relaxed">{problem.description}</p>
+              <div key={index} className="p-6 bg-solarized-base03 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-3">{problem.title}</h3>
+                <p className="text-white/80 text-sm leading-relaxed">{problem.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-[#f9fafb] p-8 rounded-lg text-center">
-            <p className="text-lg text-[#374151]">
+          <div className="bg-solarized-base03 p-8 rounded-lg text-center">
+            <p className="text-lg text-white/80">
               <strong>The outcome?</strong> Campaigns that fizzle out, growth that feels random, and leaders stuck in the weeds. Marketing feels like chaos. Teams work harder but see diminishing returns.
             </p>
           </div>
@@ -199,20 +199,20 @@ export default function ConsultingPage() {
       </section>
 
       {/* Core Principles */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-solarized-base03">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-navy-800 mb-4">The Lead Machine Method™: Core Principles</h2>
-            <p className="text-xl text-neutral-700">
+            <h2 className="text-3xl font-bold text-white mb-4">The Lead Machine Method™: Core Principles</h2>
+            <p className="text-xl text-white/80">
               My approach is built on three foundational principles that transform scattered marketing into systematic growth.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {corePrinciples.map((principle, index) => (
-              <div key={index} className="p-8 bg-white rounded-lg text-center">
+              <div key={index} className="p-8 bg-solarized-base03 rounded-lg text-center">
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 bg-solarized-magenta rounded-full flex items-center justify-center mx-auto">
                     {principle.iconType === 'target' && (
                       <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10"/>
@@ -245,8 +245,8 @@ export default function ConsultingPage() {
                     )}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{principle.title}</h3>
-                <p className="text-[#374151] leading-relaxed">{principle.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4">{principle.title}</h3>
+                <p className="text-white/80 leading-relaxed">{principle.description}</p>
               </div>
             ))}
           </div>
@@ -254,23 +254,23 @@ export default function ConsultingPage() {
       </section>
 
       {/* The Method Timeline */}
-      <section className="py-16 px-6 bg-navy-50">
+      <section className="py-16 px-6 bg-solarized-base02">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-navy-800 mb-4">How The Lead Machine Method™ Works</h2>
-            <p className="text-xl text-neutral-700">
+            <h2 className="text-3xl font-bold text-white mb-4">How The Lead Machine Method™ Works</h2>
+            <p className="text-xl text-white/80">
               A systematic 5-step process that takes you from scattered tactics to predictable growth.
             </p>
           </div>
 
           <div className="grid md:grid-cols-5 gap-8">
             {methodSteps.map((step, index) => (
-              <div key={index} className="p-6 bg-[#f9fafb] rounded-lg text-center">
-                <div className="w-12 h-12 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div key={index} className="p-6 bg-solarized-base03 rounded-lg text-center">
+                <div className="w-12 h-12 bg-solarized-base02 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {step.number}
                 </div>
-                <h3 className="font-bold text-[#1e3a8a] mb-3">{step.title}</h3>
-                <p className="text-[#374151] text-sm leading-relaxed">{step.description}</p>
+                <h3 className="font-bold text-white mb-3">{step.title}</h3>
+                <p className="text-white/80 text-sm leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -278,19 +278,19 @@ export default function ConsultingPage() {
       </section>
 
       {/* What Makes This Different */}
-      <section className="py-16 px-6 bg-navy-50">
+      <section className="py-16 px-6 bg-solarized-base02">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy-800 mb-6">What Makes This Different</h2>
-            <p className="text-xl text-neutral-700 mb-8">
+            <h2 className="text-3xl font-bold text-white mb-6">What Makes This Different</h2>
+            <p className="text-xl text-white/80 mb-8">
               Most marketing approaches focus on tactics or tools. The Lead Machine Method™ starts with strategy and builds systems that last.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <div className="p-8 bg-white rounded-lg">
-              <h3 className="text-xl font-bold text-[#1e3a8a] mb-6">Traditional Marketing Approach:</h3>
-              <ul className="space-y-3 text-[#374151]">
+            <div className="p-8 bg-solarized-base03 rounded-lg">
+              <h3 className="text-xl font-bold text-white mb-6">Traditional Marketing Approach:</h3>
+              <ul className="space-y-3 text-white/80">
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
                   Campaign-focused
@@ -310,23 +310,23 @@ export default function ConsultingPage() {
               </ul>
             </div>
 
-            <div className="p-8 bg-[#1e3a8a] rounded-lg text-white">
+            <div className="p-8 bg-solarized-base02 rounded-lg text-white">
               <h3 className="text-xl font-bold text-white mb-6">The Lead Machine Method™:</h3>
               <ul className="space-y-3 text-blue-100">
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-[#f59e0b] rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-solarized-magenta rounded-full mr-3"></div>
                   System-focused
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-[#f59e0b] rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-solarized-magenta rounded-full mr-3"></div>
                   Strategy-driven
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-[#f59e0b] rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-solarized-magenta rounded-full mr-3"></div>
                   Scales with minimal oversight
                 </li>
                 <li className="flex items-center">
-                  <div className="w-2 h-2 bg-[#f59e0b] rounded-full mr-3"></div>
+                  <div className="w-2 h-2 bg-solarized-magenta rounded-full mr-3"></div>
                   Delivers predictable results
                 </li>
               </ul>
@@ -335,15 +335,15 @@ export default function ConsultingPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {differences.map((diff, index) => (
-              <div key={index} className="p-8 bg-white rounded-lg">
-                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{diff.title}</h3>
-                <p className="text-[#374151] leading-relaxed">{diff.description}</p>
+              <div key={index} className="p-8 bg-solarized-base03 rounded-lg">
+                <h3 className="text-xl font-bold text-white mb-4">{diff.title}</h3>
+                <p className="text-white/80 leading-relaxed">{diff.description}</p>
               </div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg text-[#374151]">
+            <p className="text-lg text-white/80">
               <strong>The difference is structure.</strong> When marketing operates as a system rather than a collection of campaigns, it becomes an asset that compounds over time.
             </p>
           </div>
@@ -351,20 +351,20 @@ export default function ConsultingPage() {
       </section>
 
       {/* Fix Your Marketing with a System */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-solarized-base03">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-navy-800 mb-4">How I'll Fix Your Marketing</h2>
-            <p className="text-xl text-neutral-700 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">How I'll Fix Your Marketing</h2>
+            <p className="text-xl text-white/80 max-w-4xl mx-auto">
               Instead of more tactics, you need strategic clarity and systematic execution. When we work together, we'll build a clear, structured marketing engine that transforms scattered efforts into predictable growth.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
-              <div key={index} className="p-8 bg-[#fef7ed] rounded-lg">
+              <div key={index} className="p-8 bg-solarized-base02 rounded-lg">
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 bg-solarized-magenta rounded-full flex items-center justify-center mx-auto">
                     {solution.iconType === 'target' && (
                       <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10"/>
@@ -394,8 +394,8 @@ export default function ConsultingPage() {
                     )}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{solution.title}</h3>
-                <p className="text-[#374151] leading-relaxed">{solution.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>
+                <p className="text-white/80 leading-relaxed">{solution.description}</p>
               </div>
             ))}
           </div>
@@ -403,23 +403,23 @@ export default function ConsultingPage() {
       </section>
 
       {/* I Work Best With */}
-      <section className="py-16 px-6 bg-slate-50">
+      <section className="py-16 px-6 bg-solarized-base02">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-6">I Work Best With:</h2>
-            <p className="text-xl text-charcoal max-w-4xl mx-auto mb-4">
+            <h2 className="text-3xl font-bold text-white mb-6">I Work Best With:</h2>
+            <p className="text-xl text-white/80 max-w-4xl mx-auto mb-4">
               Over 200+ engagements, I've discovered which types of businesses get the most transformative results from systematic marketing approaches.
             </p>
-            <p className="text-charcoal max-w-4xl mx-auto">
+            <p className="text-white/80 max-w-4xl mx-auto">
               Not every business is ready for what I do. The companies that see dramatic improvements share three characteristics: they value expertise over price, they're willing to invest in systems that compound over time, and they understand that sustainable growth comes from consistent execution, not silver bullets.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {audienceItems.map((item, index) => (
-              <div key={index} className="p-8 bg-white rounded-lg">
+              <div key={index} className="p-8 bg-solarized-base03 rounded-lg">
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-[#FFBF00] rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 bg-solarized-magenta rounded-full flex items-center justify-center mx-auto">
                     {item.iconType === 'handshake' && (
                       <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
@@ -445,11 +445,11 @@ export default function ConsultingPage() {
                     )}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{item.title}</h3>
-                <p className="text-[#1e40af] font-semibold mb-4">{item.subheading}</p>
-                <p className="text-[#374151] mb-6 leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-solarized-cyan font-semibold mb-4">{item.subheading}</p>
+                <p className="text-white/80 mb-6 leading-relaxed">{item.description}</p>
                 <div className="bg-[#8fb4ff]/10 p-4 rounded-lg">
-                  <p className="text-sm font-semibold text-[#1e3a8a]">{item.results}</p>
+                  <p className="text-sm font-semibold text-white">{item.results}</p>
                 </div>
               </div>
             ))}
@@ -458,20 +458,20 @@ export default function ConsultingPage() {
       </section>
 
       {/* What You'll Walk Away With */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-solarized-base03">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-oxford-blue mb-4">What You'll Walk Away With</h2>
-            <p className="text-xl text-charcoal">
+            <h2 className="text-3xl font-bold text-white mb-4">What You'll Walk Away With</h2>
+            <p className="text-xl text-white/80">
               Concrete deliverables designed to transform your marketing from scattered tactics into a systematic growth engine.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {deliverables.map((deliverable, index) => (
-              <div key={index} className="p-8 bg-[#f9fafb] rounded-lg">
+              <div key={index} className="p-8 bg-solarized-base03 rounded-lg">
                 <div className="mb-6">
-                  <div className="w-14 h-14 bg-[#FFBF00] rounded-full flex items-center justify-center">
+                  <div className="w-14 h-14 bg-solarized-magenta rounded-full flex items-center justify-center">
                     {deliverable.iconType === 'target' && (
                       <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10"/>
@@ -503,8 +503,8 @@ export default function ConsultingPage() {
                     )}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#1e3a8a] mb-4">{deliverable.title}</h3>
-                <p className="text-[#374151] leading-relaxed">{deliverable.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4">{deliverable.title}</h3>
+                <p className="text-white/80 leading-relaxed">{deliverable.description}</p>
               </div>
             ))}
           </div>
@@ -512,13 +512,13 @@ export default function ConsultingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-navy-600 to-navy-800">
+      <section className="py-16 px-6 bg-gradient-to-br from-solarized-base03 to-solarized-base02">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl font-bold mb-6">Ready to Build Your Lead Machine?</h2>
           <p className="text-xl text-navy-100 mb-8">
             You don't need more tactics. You need a system. Let's transform your scattered marketing into predictable growth.
           </p>
-          <Button asChild size="lg" className="bg-[#f59e0b] text-white hover:bg-[#d97706] px-8 py-4 rounded-lg font-bold text-lg">
+          <Button asChild size="lg" className="bg-solarized-magenta text-black hover:bg-[#F47B78] px-8 py-4 rounded-lg font-bold text-lg">
             <Link href="/contact" className="flex items-center">
               Work With Me
               <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

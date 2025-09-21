@@ -76,7 +76,7 @@ export default function HeroMedia({ media, className = "", priority = false }: H
               className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-colors group"
               aria-label="Play video"
             >
-              <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white transition-colors">
+              <div className="w-16 h-16 bg-solarized-base03/90 rounded-full flex items-center justify-center group-hover:bg-solarized-base03 transition-colors">
                 <Play className="text-slate-700 ml-1" size={24} fill="currentColor" />
               </div>
             </button>

@@ -11,14 +11,14 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
   if (!show) return null;
 
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-blue-50 to-blue-100">
+    <section className="py-16 px-6 bg-gradient-to-b from-solarized-base02 to-solarized-base03">
       <div className="max-w-4xl mx-auto">
-        <div className="p-12 bg-white">
+        <div className="p-12 bg-solarized-base03">
           <div className="text-center">
-            <h2 id="newsletter-title" className="text-section-title font-bold text-[#1e3a8a] mb-6">
+            <h2 id="newsletter-title" className="text-section-title font-bold text-white mb-6">
               Grow your service business
             </h2>
-            <p className="text-xl text-[#374151] mb-8">
+            <p className="text-xl text-white/80 mb-8">
               Join 2,500+ service business owners who get practical, actionable insights every Tuesday.
             </p>
             
@@ -97,7 +97,7 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
                           className="formkit-submit formkit-submit"
                           type="submit"
                           aria-describedby="form-description"
-                          style={{color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(245, 158, 11)', borderRadius: '24px', fontWeight: 700}}
+                          style={{color: 'rgb(0, 0, 0)', backgroundColor: 'rgb(242, 95, 92)', borderRadius: '24px', fontWeight: 700}}
                         >
                           <div className="formkit-spinner">
                             <div></div>
@@ -134,7 +134,7 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
             </div>
             {showWorkButtons && (
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-[#f59e0b] text-white hover:bg-[#d97706] px-8 py-3 rounded-full font-bold">
+                <Button asChild size="lg" className="bg-solarized-magenta text-black hover:bg-solarized-cyan px-8 py-3 rounded-full font-bold">
                   <Link href="/consulting" className="flex items-center">
                     Work With Me
                     <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -142,7 +142,7 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
                     </svg>
                   </Link>
                 </Button>
-                <Button asChild size="lg" className="bg-[#1e3a8a] text-white hover:bg-[#1e40af] px-8 py-3 rounded-full font-bold">
+                <Button asChild size="lg" className="bg-solarized-base02 text-white hover:bg-solarized-base01 px-8 py-3 rounded-full font-bold">
                   <Link href="/workshops" className="flex items-center">
                     Join a Workshop
                     <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

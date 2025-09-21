@@ -4,7 +4,7 @@ import LineIcon from '@/components/LineIcon';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-6">
+    <div className="min-h-screen bg-solarized-base03 flex items-center justify-center px-6">
       <div className="max-w-2xl mx-auto text-center">
         <div className="mb-8">
           <LineIcon type="chart" className="text-azure mx-auto" size={96} />
