@@ -84,28 +84,15 @@ export default function Home() {
               </div>
 
               {/* Social Proof */}
-              <div className="mt-8 flex items-center space-x-4">
-                <div className="flex -space-x-2">
-                  <Avatar className="border-2 border-solarized-base0">
-                    <AvatarFallback className="bg-solarized-magenta text-white3">NP</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="border-2 border-solarized-base0">
-                    <AvatarFallback className="bg-solarized-magenta text-white3">AM</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="border-2 border-solarized-base0">
-                    <AvatarFallback className="bg-solarized-magenta text-white3">GK</AvatarFallback>
-                  </Avatar>
+              <div className="mt-8">
+                <div className="flex text-solarized-yellow mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  ))}
                 </div>
-                <div>
-                  <div className="flex text-solarized-yellow">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-white/80 text-sm">Trusted by 500+ business owners</p>
-                </div>
+                <p className="text-white/80 text-sm">Trusted by 200+ business owners</p>
               </div>
             </div>
           </div>

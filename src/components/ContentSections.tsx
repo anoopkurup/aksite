@@ -273,7 +273,7 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
               )}
               {item.description && (
                 <div
-                  className="text-white/80 mb-6 leading-relaxed prose prose-sm max-w-none prose-p:mb-2 prose-ul:mb-2 prose-li:mb-1 prose-strong:text-white prose-em:text-white/80 prose-em:italic text-left"
+                  className="text-white/80 mb-6 leading-relaxed prose prose-sm max-w-none prose-p:mb-2 prose-ul:mb-2 prose-li:mb-1 prose-strong:text-white prose-em:text-white/80 prose-em:italic text-center"
                   dangerouslySetInnerHTML={{
                     __html: processInlineMarkdown(item.description)
                       .replace(/✓/g, '<span class="text-solarized-blue font-semibold">✓</span>')
@@ -281,9 +281,9 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
                 />
               )}
               {item.features && (
-                <ul className="space-y-2 mb-6 text-left">
+                <ul className="space-y-2 mb-6 text-center">
                   {item.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-white/80">
+                    <li key={idx} className="flex items-center justify-center text-white/80">
                       <div className="w-2 h-2 bg-solarized-magenta rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       {feature}
                     </li>
@@ -337,22 +337,22 @@ function FeaturesSection({ section, bgClass }: { section: ContentSection; bgClas
 
         <div className={`grid ${gridCols} gap-8`}>
           {section.items.map((item, index) => (
-            <div key={index} className={`p-8 text-center ${item.highlight ? 'bg-solarized-base02 text-white rounded-lg' : 'bg-solarized-base03'}`}>
-              <h3 className={`text-xl font-bold mb-4 ${item.highlight ? 'text-white' : 'text-white'}`}>
+            <div key={index} className={`p-8 text-center bg-solarized-base03 rounded-lg`}>
+              <h3 className="text-xl font-bold mb-4 text-white">
                 {item.title}
               </h3>
               {item.description && (
                 <div
-                  className={`leading-relaxed prose prose-sm max-w-none prose-em:italic text-left ${item.highlight ? 'text-blue-100 prose-strong:text-white prose-em:text-blue-200' : 'text-white/80 prose-strong:text-white prose-em:text-white/80'}`}
+                  className="leading-relaxed prose prose-sm max-w-none prose-em:italic text-center text-white/80 prose-strong:text-white prose-em:text-white/80"
                   dangerouslySetInnerHTML={{
                     __html: processInlineMarkdown(item.description)
                   }}
                 />
               )}
               {item.features && (
-                <ul className="space-y-3 mt-4 text-left">
+                <ul className="space-y-3 mt-4 text-center">
                   {item.features.map((feature, idx) => (
-                    <li key={idx} className={`flex items-start ${item.highlight ? 'text-blue-100' : 'text-white/80'}`}>
+                    <li key={idx} className="flex items-center justify-center text-white/80">
                       <div className={`w-2 h-2 bg-solarized-magenta rounded-full mt-2 mr-3 flex-shrink-0`}></div>
                       {feature}
                     </li>
@@ -407,9 +407,7 @@ function HighlightSection({ section, bgClass }: { section: ContentSection; bgCla
                 className={`px-8 py-3 rounded-full font-semibold transition-all ${
                   index === 0
                     ? 'bg-solarized-magenta text-black hover:bg-solarized-cyan'
-                    : isNavyBackground
-                    ? 'bg-gradient-to-br from-solarized-blue to-solarized-cyan text-white hover:from-solarized-cyan hover:to-solarized-blue border-2 border-blue-300'
-                    : 'bg-gradient-to-br from-solarized-base03 to-solarized-base02 text-white hover:from-solarized-base02 hover:to-solarized-base01'
+                    : 'bg-solarized-base02 text-white hover:bg-solarized-cyan'
                 }`}
               >
                 <Link href={button.url || '#'} className="flex items-center">
@@ -430,6 +428,12 @@ function HighlightSection({ section, bgClass }: { section: ContentSection; bgCla
 function StatsSection({ section, bgClass }: { section: ContentSection; bgClass: string }) {
   if (!section.items) return null;
 
+  // Determine grid layout based on number of items
+  const gridCols = section.items.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' :
+                   section.items.length === 3 ? 'md:grid-cols-3' :
+                   section.items.length === 2 ? 'md:grid-cols-2' :
+                   'md:grid-cols-3';
+
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
       <div className="max-w-6xl mx-auto">
@@ -444,7 +448,7 @@ function StatsSection({ section, bgClass }: { section: ContentSection; bgClass: 
           </div>
         )}
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className={`grid ${gridCols} gap-8`}>
           {section.items.map((item, index) => (
             <div key={index} className="p-6 bg-solarized-base02 text-white text-center rounded-lg">
               <div className="text-3xl font-bold mb-2">{item.number}</div>
@@ -510,18 +514,21 @@ function TestimonialsSection({ section, bgClass }: { section: ContentSection; bg
           </div>
         )}
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {section.items.map((item, index) => (
             <div key={index} className="p-6 bg-solarized-base02 rounded-lg">
-              <blockquote
-                className="text-white/80 mb-6 leading-relaxed prose prose-sm max-w-none prose-strong:text-white prose-em:text-white/80 prose-em:italic"
-                dangerouslySetInnerHTML={{
-                  __html: `"${processInlineMarkdown(item.quote || '')}"`
-                }}
-              />
-              <div>
-                <p className="font-semibold text-white">{item.author}</p>
-                {item.role && <p className="text-sm text-solarized-blue">{item.role}</p>}
+              <div className="flex items-start space-x-2 mb-4">
+                <svg className="w-6 h-6 text-white flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+              </div>
+              <blockquote className="text-white/80 mb-6 leading-relaxed">
+                "{item.quote}"
+              </blockquote>
+              <div className="border-t border-solarized-base01 pt-4">
+                <div className="font-semibold text-white">{item.author}</div>
+                <div className="text-sm text-white/80">{item.role}</div>
+                {item.company && <div className="text-sm text-white/80">{item.company}</div>}
               </div>
             </div>
           ))}

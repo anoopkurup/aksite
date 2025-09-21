@@ -90,17 +90,17 @@ export default function ConsultingPage() {
     {
       iconType: "target",
       title: "Clarifies Your Positioning & Messaging",
-      description: "We'll define exactly what makes you different from competitors and craft messaging that resonates with your ideal clients. You'll have clear value propositions, compelling case studies, and conversation frameworks that make prospects say 'this is exactly what we need' instead of shopping around on price."
+      description: "I'll define exactly what makes you different from competitors and craft messaging that resonates with your ideal clients. You'll have clear value propositions, compelling case studies, and conversation frameworks that make prospects say 'this is exactly what we need' instead of shopping around on price."
     },
     {
       iconType: "chart",
       title: "Maps Your Complete Customer Journey",
-      description: "We'll design every touchpoint from first contact to closed deal, ensuring no prospects fall through the cracks. You'll have systematic follow-up sequences, nurturing campaigns, and conversion pathways that guide leads forward automatically, even when your team is focused on delivery."
+      description: "I'll design every touchpoint from first contact to closed deal, ensuring no prospects fall through the cracks. You'll have systematic follow-up sequences, nurturing campaigns, and conversion pathways that guide leads forward automatically, even when your team is focused on delivery."
     },
     {
       iconType: "cpu",
       title: "Builds Repeatable Lead Generation Systems",
-      description: "We'll identify the most effective channels for your business and create sustainable workflows that generate qualified leads consistently. This includes content strategies, AI-powered automation, referral systems, and partnership development—all working together to reduce your dependence on any single source."
+      description: "I'll identify the most effective channels for your business and create sustainable workflows that generate qualified leads consistently. This includes content strategies, AI-powered automation, referral systems, and partnership development—all working together to reduce your dependence on any single source."
     }
   ];
 
@@ -310,7 +310,7 @@ export default function ConsultingPage() {
               </ul>
             </div>
 
-            <div className="p-8 bg-solarized-base02 rounded-lg text-white">
+            <div className="p-8 bg-solarized-base03 rounded-lg text-white">
               <h3 className="text-xl font-bold text-white mb-6">The Lead Machine Method™:</h3>
               <ul className="space-y-3 text-blue-100">
                 <li className="flex items-center">
@@ -356,7 +356,7 @@ export default function ConsultingPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">How I'll Fix Your Marketing</h2>
             <p className="text-xl text-white/80 max-w-4xl mx-auto">
-              Instead of more tactics, you need strategic clarity and systematic execution. When we work together, we'll build a clear, structured marketing engine that transforms scattered efforts into predictable growth.
+              Instead of more tactics, you need strategic clarity and systematic execution. When we work together, I'll build a clear, structured marketing engine that transforms scattered efforts into predictable growth.
             </p>
           </div>
 

@@ -24,7 +24,6 @@ sections:
     header:
       title: "AI Solutions"
       subtitle: "Choose the tools that fit your marketing needs"
-    grid_class: "grid-2"
     items:
       - title: "LinkedIn Post Creator"
         description: |
