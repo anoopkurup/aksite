@@ -32,6 +32,7 @@ export interface ContentSection {
     quote?: string;
     author?: string;
     role?: string;
+    company?: string;
     results?: string;
     question?: string;
     answer?: string;

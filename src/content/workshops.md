@@ -1,217 +1,134 @@
 ---
-title: "100-Day Lead Generation Sprint"
-description: "Build a predictable lead generation system that delivers 10+ qualified leads per month through systematic daily execution and weekly optimization."
+title: "Marketing Workshops"
+description: "Intensive training programs designed to build systematic marketing and lead generation capabilities for professional service businesses."
 
 sections:
   - type: "content"
     class: "about"
     content: |
-      ## Are You Tired of Unpredictable Lead Flow?
-      
-      If you're a business owner or consultant, you already know the struggle:
-      
-      - Feast or famine cycles that keep you stressed about next month's pipeline
-      - Spending hours on marketing activities that don't produce consistent results
-      - Knowing what to do but struggling with consistent execution and optimization
-      
-      You're not alone. Most professional service businesses have the knowledge but lack the systematic approach to turn that knowledge into predictable results.
-      **That changes in the next 100 days.**
+      ## Transform Your Marketing from Random to Systematic
 
-  - type: "highlight"
-    class: "about alt-bg"
-    title: "What is the 100-Day Lead Generation Sprint?"
-    description: "An intensive 100-day program where we'll build and optimize your complete lead generation system through daily execution, weekly strategy sessions, and systematic improvements. The goal: 10+ qualified leads every month."
-    buttons:
-      - text: "Pay Once - ₹39,600 (Save ₹5,400)"
-        url: "https://rzp.io/rzp/e2dPamL"
-      - text: "3 Installments - ₹15,000 each"
-        url: "https://rzp.io/rzp/GVmbLGJS"
+      Stop relying on referrals and word-of-mouth. Build predictable marketing systems that generate consistent leads and clients for your professional service business.
 
-  - type: "checklist"
-    class: "about"
-    header:
-      title: "What You'll Build During the 100 Days"
-    items:
-      - "A complete lead generation system tailored to your business and target market"
-      - "Systematic daily execution routines that compound into predictable results"
-      - "Optimized messaging and positioning that resonates with your ideal clients"
-      - "Automated follow-up sequences that nurture prospects into qualified leads"
-      - "Performance tracking and optimization processes for continuous improvement"
+      Our workshops combine strategic frameworks with daily execution, giving you both the knowledge and the discipline to achieve lasting results.
 
   - type: "grid"
     class: "services alt-bg"
     header:
-      title: "Why This Works (And Why You'll Love It)"
-      subtitle: "This isn't theory or motivation. It's 100 days of systematic execution with proven frameworks."
-    items:
-      - icon: "icon-target"
-        title: "Daily Focus"
-        description: "Just 30 minutes daily with clear, actionable tasks."
-      - icon: "icon-chart"
-        title: "Weekly Optimization"
-        description: "1-hour strategy sessions to refine and improve performance."
-      - icon: "icon-handshake"
-        title: "Personal Guidance"
-        description: "Direct access to coaching and support throughout the journey."
-      - icon: "icon-robot"
-        title: "Systematic Approach"
-        description: "Proven frameworks that work regardless of your industry."
-
-  - type: "stats"
-    class: "services"
-    header:
-      title: "Program Structure"
-    items:
-      - number: "30min"
-        label: "Daily Commitment"
-        description: "Monday-Friday task sequences"
-      - number: "1hr"
-        label: "Weekly Strategy"
-        description: "Every Saturday planning session"
-      - number: "100"
-        label: "Days to Freedom"
-        description: "System to get 10+ leads/month"
-
-  - type: "checklist"
-    class: "services alt-bg"
-    header:
-      title: "Everything Included (Worth ₹1,25,000+)"
-    items:
-      - "Complete Lead Generation System Setup & Strategy"
-      - "Daily Task Sequences & Execution Framework"
-      - "Weekly 1-on-1 Strategy & Optimization Sessions"
-      - "Custom Messaging & Positioning Development"
-      - "Automated Follow-up Systems & Templates"
-      - "Performance Tracking & Analytics Setup"
-
-  - type: "guarantee"
-    class: "testimonials"
-    title: "100% Results Guarantee"
-    description: "If you follow the daily execution plan for 100 days and don't generate at least 10 qualified leads by day 90, we'll work with you for an additional 60 days at no extra cost until you achieve consistent monthly lead flow. Your success is guaranteed."
-
-  - type: "timeline"
-    class: "approach"
-    header:
-      title: "Your 100-Day Transformation"
-    items:
-      - number: "1"
-        title: "Days 1-30: Foundation & Setup"
-        description: "Build your complete lead generation system from the ground up. Daily tasks focus on system creation, initial outreach, and establishing baseline performance metrics."
-      - number: "2"
-        title: "Days 31-60: Optimization & Refinement"
-        description: "Test and optimize every element of your system. Daily activities include A/B testing messages, refining targeting, and scaling successful approaches."
-      - number: "3"
-        title: "Days 61-100: Predictable Results"
-        description: "Achieve consistent lead flow and prepare for long-term success. Focus on automation, advanced strategies, and building sustainable growth systems."
-
-  - type: "grid"
-    class: "services alt-bg"
-    header:
-      title: "Investment Options"
-      subtitle: "Choose the payment plan that works best for you"
+      title: "Choose Your Workshop"
+      subtitle: "Two intensive programs designed for different aspects of your marketing system"
     grid_class: "grid-2"
     items:
-      - title: "One-Time Payment"
+      - title: "100-Day Lead Generation Sprint"
         description: |
-          **₹39,600 (Save ₹5,400)**
-          - 12% discount on full program price
-          - Complete access to all 100 days
-          - All bonuses and support included
-          - Best value option
-      - title: "3-Payment Plan"
-        description: |
-          **₹15,000 × 3 payments**
-          - Total: ₹45,000
-          - Payment 1: At enrollment
-          - Payment 2: Day 30
-          - Payment 3: Day 60
+          **Build Your Complete Lead Generation System**
 
-  - type: "stats"
-    class: "services"
-    header:
-      title: "Program Details"
-    items:
-      - number: "30min"
-        label: "Daily Commitment"
-        description: "Monday-Friday execution tasks"
-      - number: "1hr"
-        label: "Weekly Strategy"
-        description: "Personal coaching sessions"
-      - number: "10"
-        label: "Spots Available"
-        description: "Limited enrollment per cohort"
+          An intensive 100-day program where we'll build and optimize your complete lead generation system through daily execution and weekly strategy sessions.
 
-  - type: "content"
-    class: "about"
-    content: |
-      ## Transform Your Business with Systematic Lead Generation
-      
-      This intensive program is designed for professional service businesses, consultants, and agencies who are ready to build a predictable lead generation system through consistent daily execution and strategic optimization.
+          ✓ 30 minutes daily commitment
+          ✓ Weekly 1-on-1 strategy sessions
+          ✓ Complete system implementation
+          ✓ 100% results guarantee
 
-  - type: "grid"
-    class: "services alt-bg"
-    header:
-      title: "What's Included in the Sprint"
-    grid_class: "grid-2"
-    items:
-      - title: "Daily Execution Framework"
+          **Starting at ₹39,600**
+        button:
+          text: "Learn More"
+          url: "/workshops/100-day-lead-generation-sprint/"
+          class: "btn-primary"
+      - title: "LinkedIn Sales Activation"
         description: |
-          **30 minutes/day, Monday-Friday**
-          - Step-by-step daily tasks customized to your business
-          - Progressive system building that creates momentum
-          - Direct WhatsApp support and guidance
-          - Clear accountability and progress tracking
-      - title: "Weekly Strategy Sessions"
-        description: |
-          **1 hour every week**
-          - Personal 1-on-1 strategy and optimization calls
-          - Performance analysis and data-driven adjustments
-          - Problem-solving and advanced tactics
-          - Weekly planning and goal setting
+          **Turn LinkedIn into Your Sales Machine**
+
+          30-day email course delivered daily to your inbox with videos, templates, and actionable tasks to build your LinkedIn lead generation system.
+
+          ✓ 15-20 minutes daily commitment
+          ✓ Daily emails with training content
+          ✓ Complete template & tool library
+          ✓ Self-paced learning format
+
+          **Starting at ₹8,850 (GST Included)**
+        button:
+          text: "Learn More"
+          url: "/workshops/linkedin-sales-activation/"
+          class: "btn-primary"
 
   - type: "features"
     class: "audience"
     header:
-      title: "Perfect for These Businesses"
-      subtitle: "This intensive program is designed specifically for professional service providers who are ready for systematic growth."
+      title: "Perfect for Professional Service Businesses"
+      subtitle: "Our workshops are specifically designed for service-based businesses looking to scale beyond referrals."
     items:
-      - title: "Professional Services"
-        description: "Consultants, agencies, law firms, accounting practices—businesses that sell expertise and need consistent client flow."
+      - title: "Consultants & Agencies"
+        description: "Marketing agencies, business consultants, and professional service providers who need consistent new client flow."
+      - title: "Professional Practices"
+        description: "Law firms, accounting practices, and other professional services looking to build systematic marketing capabilities."
       - title: "Tech-Enabled Services"
-        description: "SaaS companies, IT service providers, digital agencies—businesses ready to scale their lead generation systematically."
-      - title: "Growing Teams"
-        description: "Companies with established services but inconsistent lead flow—ready to build predictable growth systems."
+        description: "SaaS companies, IT service providers, and digital service businesses ready to scale their lead generation."
         highlight: true
 
-  - type: "grid"
-    class: "audience alt-bg"
+  - type: "stats"
+    class: "services alt-bg"
     header:
-      title: "Who This Is (and Isn't) For"
+      title: "Workshop Comparison"
+    items:
+      - number: "100 Days"
+        label: "Lead Generation Sprint"
+        description: "Complete lead generation system"
+      - number: "30 Days"
+        label: "LinkedIn Sales Activation"
+        description: "Daily email course for LinkedIn system"
+      - number: "Both"
+        label: "Include"
+        description: "Daily systematic execution approach"
+
+  - type: "grid"
+    class: "approach"
+    header:
+      title: "Why Our Workshop Approach Works"
     grid_class: "grid-2"
     items:
-      - title: "✅ Perfect if you:"
-        description: |
-          - Have established services but inconsistent lead flow
-          - Can commit 30 minutes daily for systematic execution
-          - Want predictable monthly lead generation
-          - Prefer proven systems over random marketing tactics
-          - Are willing to follow a structured process
-      - title: "❌ Skip this if you:"
-        description: |
-          - Want someone else to do all the work for you
-          - Can't commit to daily consistent action for 100 days
-          - Are looking for overnight magic solutions
-          - Don't have established services to promote
-          - Expect results without systematic effort
+      - title: "Daily Execution Focus"
+        description: "Knowledge without execution is useless. Our workshops combine learning with systematic daily action that builds momentum and creates lasting habits."
+      - title: "Personal Coaching Support"
+        description: "Weekly strategy sessions and ongoing support ensure you implement correctly and optimize based on your specific business and market dynamics."
+
+  - type: "checklist"
+    class: "services"
+    header:
+      title: "What's Included in Every Workshop"
+    items:
+      - "Systematic daily execution framework tailored to your business"
+      - "Weekly coaching sessions for strategy and optimization"
+      - "Templates, scripts, and proven frameworks"
+      - "Performance tracking and analytics setup"
+      - "Direct access to support throughout the program"
+      - "Results guarantee with additional support if needed"
+
+  - type: "content"
+    class: "about alt-bg"
+    content: |
+      ## Not Sure Which Workshop is Right for You?
+
+      **Choose the 100-Day Lead Generation Sprint if:**
+      - You need a complete lead generation system from scratch
+      - You want to build multiple marketing channels
+      - You can commit to 30 minutes daily for systematic execution
+      - You prefer a comprehensive, longer-term approach
+
+      **Choose LinkedIn Sales Activation if:**
+      - You want to focus specifically on LinkedIn as your primary channel
+      - You prefer self-paced learning without live sessions or calls
+      - You can dedicate 15-20 minutes daily for systematic execution
+      - You want a cost-effective solution with lifetime access to materials
 
   - type: "highlight"
     class: "testimonials"
-    title: "Ready to Start Your 100-Day Sprint?"
-    description: "Join the next cohort and build your predictable lead generation system. Limited spots available - secure your place today and transform your marketing from chaos to consistent results."
+    title: "Ready to Build Your Marketing System?"
+    description: "Choose the workshop that best fits your business needs and goals. Both programs include results guarantees and ongoing support to ensure your success."
     buttons:
-      - text: "Pay Once - ₹39,600 (Save ₹5,400)"
-        url: "https://rzp.io/rzp/e2dPamL"
-      - text: "3 Installments - ₹15,000 each"
-        url: "https://rzp.io/rzp/GVmbLGJS"
+      - text: "100-Day Lead Generation Sprint"
+        url: "/workshops/100-day-lead-generation-sprint/"
+      - text: "LinkedIn Sales Activation"
+        url: "/workshops/linkedin-sales-activation/"
 
 ---

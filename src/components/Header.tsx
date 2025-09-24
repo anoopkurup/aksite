@@ -5,11 +5,20 @@ import { useState } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [workshopDropdownOpen, setWorkshopDropdownOpen] = useState(false);
 
   const navigation = [
     { name: "About", href: "/about" },
     { name: "Consulting", href: "/consulting" },
-    { name: "Workshops", href: "/workshops" },
+    {
+      name: "Workshops",
+      href: "/workshops",
+      dropdown: [
+        { name: "All Workshops", href: "/workshops" },
+        { name: "100-Day Lead Generation Sprint", href: "/workshops/100-day-lead-generation-sprint" },
+        { name: "LinkedIn Sales Activation", href: "/workshops/linkedin-sales-activation" },
+      ]
+    },
     { name: "AI Solutions", href: "/ai-solutions" },
     { name: "Blog", href: "/blog" },
     { name: "Case Studies", href: "/case-studies" },
@@ -29,13 +38,45 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium focus-enhanced"
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div
+                    className="relative"
+                    onMouseEnter={() => setWorkshopDropdownOpen(true)}
+                    onMouseLeave={() => setWorkshopDropdownOpen(false)}
+                  >
+                    <Link
+                      href={item.href}
+                      className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium focus-enhanced flex items-center"
+                    >
+                      {item.name}
+                      <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </Link>
+                    {workshopDropdownOpen && (
+                      <div className="absolute top-full left-0 mt-1 w-64 bg-solarized-base02 border border-solarized-base01 rounded-lg shadow-lg z-50">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="block px-4 py-3 text-white hover:text-solarized-blue hover:bg-solarized-base01 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium focus-enhanced"
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -73,14 +114,29 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-solarized-base01">
             <div className="flex flex-col space-y-3">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium px-2 py-2 focus-enhanced"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium px-2 py-2 focus-enhanced block"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.dropdown && (
+                    <div className="ml-4 mt-2 space-y-2">
+                      {item.dropdown.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.name}
+                          href={dropdownItem.href}
+                          className="text-solarized-base1 hover:text-solarized-blue transition-colors duration-200 text-sm px-2 py-1 focus-enhanced block"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <Link
                 href="/contact"
