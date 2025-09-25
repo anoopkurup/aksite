@@ -11,19 +11,19 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
   if (!show) return null;
 
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-solarized-base02 to-solarized-base03">
-      <div className="max-w-4xl mx-auto">
-        <div className="p-12 bg-solarized-base03">
+    <section className="py-16 px-6 bg-gray-50">
+      <div className="max-w-2xl mx-auto">
+        <div className="py-8 px-6">
           <div className="text-center">
-            <h2 id="newsletter-title" className="text-section-title font-bold text-white mb-6">
+            <h2 id="newsletter-title" className="text-section-title font-bold text-navy-900 mb-6">
               Grow your service business
             </h2>
-            <p className="text-xl text-white/80 mb-8">
+            <p className="text-xl text-gray-700 mb-8">
               Join 2,500+ service business owners who get practical, actionable insights every Tuesday.
             </p>
             
             {/* ConvertKit Newsletter Form */}
-            <div className="max-w-4xl mx-auto mb-8">
+            <div className="max-w-2xl mx-auto mb-8">
               {/* ConvertKit Script */}
               <Script 
                 src="https://f.convertkit.com/ckjs/ck.5.js" 
@@ -43,7 +43,7 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
                 data-version="5" 
                 data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" 
                 data-min-width="400 500 600 700 800" 
-                style={{backgroundColor: 'rgb(255, 255, 255)', borderRadius: '6px'}}
+                style={{backgroundColor: 'transparent', borderRadius: '0'}}
               >
                 <div data-style="full">
                   <div data-element="column" className="formkit-column" style={{backgroundColor: 'rgb(249, 250, 251)', display: 'none'}}>
@@ -97,7 +97,7 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
                           className="formkit-submit formkit-submit"
                           type="submit"
                           aria-describedby="form-description"
-                          style={{color: 'rgb(0, 0, 0)', backgroundColor: 'rgb(242, 95, 92)', borderRadius: '24px', fontWeight: 700}}
+                          style={{color: 'rgb(255, 255, 255)', backgroundColor: '#f97316', borderRadius: '24px', fontWeight: 700}}
                         >
                           <div className="formkit-spinner">
                             <div></div>
@@ -134,7 +134,7 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
             </div>
             {showWorkButtons && (
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-solarized-magenta text-black hover:bg-solarized-cyan px-8 py-3 rounded-full font-bold">
+                <Button asChild size="lg" className="bg-cta-500 text-white hover:bg-cta-600 px-8 py-3 rounded-full font-bold">
                   <Link href="/consulting" className="flex items-center">
                     Work With Me
                     <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -142,7 +142,7 @@ export default function Newsletter({ showWorkButtons = true, show = true }: News
                     </svg>
                   </Link>
                 </Button>
-                <Button asChild size="lg" className="bg-solarized-base02 text-white hover:bg-solarized-base01 px-8 py-3 rounded-full font-bold">
+                <Button asChild size="lg" className="bg-navy-700 text-white hover:bg-navy-800 px-8 py-3 rounded-full font-bold">
                   <Link href="/workshops" className="flex items-center">
                     Join a Workshop
                     <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

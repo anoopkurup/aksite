@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [workshopDropdownOpen, setWorkshopDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const navigation = [
     { name: "About", href: "/about" },
@@ -26,11 +27,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-solarized-base02/95 backdrop-blur-sm border-b border-solarized-base01 sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-white focus-enhanced">
+            <Link href="/" className="text-2xl font-bold text-navy-900 focus-enhanced">
               Anoop Kurup
             </Link>
           </div>
@@ -42,12 +43,21 @@ export default function Header() {
                 {item.dropdown ? (
                   <div
                     className="relative"
-                    onMouseEnter={() => setWorkshopDropdownOpen(true)}
-                    onMouseLeave={() => setWorkshopDropdownOpen(false)}
+                    onMouseEnter={() => {
+                      if (dropdownTimeoutRef.current) {
+                        clearTimeout(dropdownTimeoutRef.current);
+                      }
+                      setWorkshopDropdownOpen(true);
+                    }}
+                    onMouseLeave={() => {
+                      dropdownTimeoutRef.current = setTimeout(() => {
+                        setWorkshopDropdownOpen(false);
+                      }, 200);
+                    }}
                   >
                     <Link
                       href={item.href}
-                      className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium focus-enhanced flex items-center"
+                      className="text-navy-900 hover:text-navy-700 transition-colors duration-200 font-medium focus-enhanced flex items-center"
                     >
                       {item.name}
                       <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,12 +65,24 @@ export default function Header() {
                       </svg>
                     </Link>
                     {workshopDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-1 w-64 bg-solarized-base02 border border-solarized-base01 rounded-lg shadow-lg z-50">
+                      <div
+                        className="absolute top-full left-0 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                        onMouseEnter={() => {
+                          if (dropdownTimeoutRef.current) {
+                            clearTimeout(dropdownTimeoutRef.current);
+                          }
+                        }}
+                        onMouseLeave={() => {
+                          dropdownTimeoutRef.current = setTimeout(() => {
+                            setWorkshopDropdownOpen(false);
+                          }, 200);
+                        }}
+                      >
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-4 py-3 text-white hover:text-solarized-blue hover:bg-solarized-base01 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
+                            className="block px-4 py-3 text-navy-900 hover:text-navy-700 hover:bg-gray-50 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
                           >
                             {dropdownItem.name}
                           </Link>
@@ -71,7 +93,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium focus-enhanced"
+                    className="text-navy-900 hover:text-navy-700 transition-colors duration-200 font-medium focus-enhanced"
                   >
                     {item.name}
                   </Link>
@@ -84,7 +106,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="bg-solarized-magenta text-black px-6 py-2.5 rounded-lg hover:bg-solarized-cyan transition-all duration-200 font-medium focus-enhanced"
+              className="bg-cta-500 text-white px-6 py-2.5 rounded-lg hover:bg-cta-600 transition-all duration-200 font-medium focus-enhanced"
             >
               Work With Me
             </Link>
@@ -94,7 +116,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-white hover:text-solarized-blue focus-enhanced"
+              className="text-navy-900 hover:text-navy-700 focus-enhanced"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -111,13 +133,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-solarized-base01">
+          <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-3">
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-white hover:text-solarized-blue transition-colors duration-200 font-medium px-2 py-2 focus-enhanced block"
+                    className="text-navy-900 hover:text-navy-700 transition-colors duration-200 font-medium px-2 py-2 focus-enhanced block"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -128,7 +150,7 @@ export default function Header() {
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
-                          className="text-solarized-base1 hover:text-solarized-blue transition-colors duration-200 text-sm px-2 py-1 focus-enhanced block"
+                          className="text-gray-600 hover:text-navy-700 transition-colors duration-200 text-sm px-2 py-1 focus-enhanced block"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {dropdownItem.name}
@@ -140,7 +162,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="bg-solarized-magenta text-black px-6 py-2.5 rounded-lg hover:bg-solarized-cyan transition-all duration-200 font-medium text-center mt-4 focus-enhanced"
+                className="bg-cta-500 text-white px-6 py-2.5 rounded-lg hover:bg-cta-600 transition-all duration-200 font-medium text-center mt-4 focus-enhanced"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Work With Me

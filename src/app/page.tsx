@@ -28,13 +28,13 @@ export default function Home() {
   return (
     <div className="bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-solarized-base03 to-solarized-base02 text-white py-24 px-6 min-h-[700px] flex items-center">
+      <section className="bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#1e3a8a] text-white py-24 px-6 min-h-[700px] flex items-center relative">
         <div className="max-w-7xl mx-auto w-full">
           <div className="flex flex-col md:grid md:grid-cols-2 gap-16 items-center">
             {/* Hero Image/Illustration Area - Shows first on mobile */}
             <div className="relative order-first md:order-2">
               <div className="text-center space-y-6">
-                <div className="w-full aspect-video md:aspect-video bg-gradient-to-br from-solarized-blue/30 to-solarized-base02/30 rounded-lg flex items-center justify-center relative overflow-hidden min-h-[280px] md:min-h-[240px]">
+                <div className="w-full aspect-video md:aspect-video bg-gradient-to-br from-navy-100/50 to-gray-100/50 rounded-lg flex items-center justify-center relative overflow-hidden min-h-[280px] md:min-h-[240px]">
                   {heroMedia ? (
                     <HeroMedia
                       media={heroMedia}
@@ -44,17 +44,17 @@ export default function Home() {
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center space-y-3">
-                        <div className="w-20 h-20 md:w-16 md:h-16 bg-solarized-base0/20 rounded-full flex items-center justify-center mx-auto">
-                          <svg className="w-10 h-10 md:w-8 md:h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <div className="w-20 h-20 md:w-16 md:h-16 bg-navy-100/40 rounded-full flex items-center justify-center mx-auto">
+                          <svg className="w-10 h-10 md:w-8 md:h-8 text-navy-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                           </svg>
                         </div>
-                        <div className="text-white/80 text-base md:text-sm font-medium">Video / Image Placeholder</div>
+                        <div className="text-white/70 text-base md:text-sm font-medium">Video / Image Placeholder</div>
                       </div>
                     </div>
                   )}
                 </div>
-                <p className="text-white/80 text-sm italic">(Replace with your hero video or illustration)</p>
+                <p className="text-white/60 text-sm italic">(Replace with your hero video or illustration)</p>
               </div>
             </div>
 
@@ -68,11 +68,11 @@ export default function Home() {
               <h1 className="text-hero font-bold leading-tight mb-6 text-white">
                 {heroTitle}
               </h1>
-              <p className="text-lg text-white mb-8 leading-relaxed max-w-2xl">
+              <p className="text-lg text-white/90 mb-8 leading-relaxed max-w-2xl">
                 {heroDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-solarized-magenta text-white3 hover:bg-solarized-cyan font-semibold shadow-lg">
+                <Button size="lg" className="bg-cta-500 text-white hover:bg-cta-600 font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
                   <Link href="/contact" className="flex items-center">
                     Build Your Lead Generation Plan
                     <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -85,7 +85,7 @@ export default function Home() {
 
               {/* Social Proof */}
               <div className="mt-8">
-                <div className="flex text-solarized-yellow mb-2">
+                <div className="flex text-cta-500 mb-2">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
 
           {/* Dream Outcomes */}
-          <div className="mt-16 bg-solarized-base03/60 rounded-lg p-6">
+          <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-white/20">
             <div className="grid md:grid-cols-3 gap-4 text-center">
               <div className="flex items-center justify-center space-x-2">
                 <svg className="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -126,38 +126,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
       {/* Problem Section */}
       {problemSection && (
-        <section className="py-16 px-6 bg-solarized-base03">
+        <section className="py-20 px-6 bg-gray-50 relative">
+          {/* Subtle background pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0 bg-gradient-to-br from-navy-50 to-transparent"></div>
+          </div>
+          <div className="relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-section-title font-bold text-white mb-8">
+            <h2 className="text-section-title font-bold text-navy-900 mb-8">
               {problemSection.title}
             </h2>
-            <p className="text-xl text-white/80 mb-12">
+            <p className="text-xl text-gray-700 mb-12">
               {problemSection.subtitle}
             </p>
 
             <div className="space-y-6 text-left max-w-3xl mx-auto">
               {problemSection.items?.map((item: any, index: number) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-6 h-6 bg-solarized-green rounded-full flex items-center justify-center mt-1">
+                  <div className="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   </div>
                   <div>
-                    <p className="text-white/80"><strong>{item.title}</strong> — {item.description}</p>
+                    <p className="text-navy-900/80"><strong>{item.title}</strong> — {item.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+          </div>
         </section>
       )}
 
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
       {/* Solution Section */}
       {solutionSection && (
-        <section className="py-16 px-6 bg-solarized-base02">
+        <section className="py-20 px-6 bg-white relative">
+          {/* Subtle background accent */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-cta-500/20 via-cta-500 to-cta-500/20 rounded-full"></div>
+          <div className="relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
               <div className="relative order-first md:order-2">
@@ -170,15 +185,15 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <p className="text-white/80 text-sm text-center mt-4 italic">Anoop Kurup</p>
+                  <p className="text-navy-900/80 text-sm text-center mt-4 italic">Anoop Kurup</p>
                 </div>
               </div>
 
               <div className="order-last md:order-1">
-                <h2 className="text-section-title font-bold text-white mb-6">
+                <h2 className="text-section-title font-bold text-navy-900 mb-6">
                   {solutionSection.title}
                 </h2>
-                <div className="text-lg text-white/80 leading-relaxed space-y-4">
+                <div className="text-lg text-navy-900/80 leading-relaxed space-y-4">
                   {solutionSection.content.split('\n\n').map((paragraph: string, index: number) => (
                     <p key={index} dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
                   ))}
@@ -186,23 +201,32 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </div>
         </section>
       )}
 
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
       {/* Benefits Section */}
       {benefitsSection && (
-        <section className="py-16 px-6 bg-solarized-base03">
+        <section className="py-20 px-6 bg-gray-50 relative">
+          {/* Subtle background pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0 bg-gradient-to-tr from-navy-100 to-transparent"></div>
+          </div>
+          <div className="relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-section-title font-bold text-white mb-6">
+              <h2 className="text-section-title font-bold text-navy-900 mb-6">
                 {benefitsSection.title}
               </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {benefitsSection.items?.map((benefit: any, index: number) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-solarized-magenta rounded-full flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="text-center group">
+                  <div className="w-16 h-16 bg-cta-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md group-hover:shadow-lg transition-shadow duration-300">
                     <svg className="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       {benefit.icon === "package" && (
                         <>
@@ -223,54 +247,69 @@ export default function Home() {
                       )}
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                  <p className="text-white/80 leading-relaxed">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold text-navy-900 mb-4">{benefit.title}</h3>
+                  <p className="text-navy-900/80 leading-relaxed">{benefit.description}</p>
                 </div>
               ))}
             </div>
           </div>
+          </div>
         </section>
       )}
 
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
       {/* Testimonials Section */}
       {testimonials.length > 0 && (
-        <section className="py-16 px-6 bg-solarized-base02">
+        <section className="py-20 px-6 bg-white relative">
+          {/* Decorative background */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-cta-100/30 to-transparent rounded-full transform translate-x-32 -translate-y-32"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-navy-100/30 to-transparent rounded-full transform -translate-x-24 translate-y-24"></div>
+          <div className="relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-section-title font-bold text-white mb-6">
+              <h2 className="text-section-title font-bold text-navy-900 mb-6">
                 What Our Clients Say
               </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial: any, index: number) => (
-                <div key={index} className="bg-solarized-base02 p-6 rounded-lg">
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
                   <div className="flex items-start space-x-2 mb-4">
-                    <svg className="w-6 h-6 text-white flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <svg className="w-6 h-6 text-navy-900 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                     </svg>
                   </div>
-                  <blockquote className="text-white/80 mb-6 leading-relaxed">
+                  <blockquote className="text-navy-900/80 mb-6 leading-relaxed">
                     "{testimonial.quote}"
                   </blockquote>
-                  <div className="border-t border-solarized-base01 pt-4">
-                    <div className="font-semibold text-white">{testimonial.author}</div>
-                    <div className="text-sm text-white/80">{testimonial.role}</div>
-                    <div className="text-sm text-white/80">{testimonial.company}</div>
+                  <div className="border-t border-gray-300 pt-4">
+                    <div className="font-semibold text-navy-900">{testimonial.author}</div>
+                    <div className="text-sm text-navy-900/80">{testimonial.role}</div>
+                    <div className="text-sm text-navy-900/80">{testimonial.company}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+          </div>
         </section>
       )}
 
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
       {/* How It Works Section */}
       {howItWorksSection && (
-        <section className="py-16 px-6 bg-solarized-base02">
+        <section className="py-20 px-6 bg-gray-50 relative">
+          {/* Subtle accent line */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-navy-400 via-navy-500 to-navy-400 rounded-full"></div>
+          <div className="relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-section-title font-bold text-white mb-6">
+              <h2 className="text-section-title font-bold text-navy-900 mb-6">
                 {howItWorksSection.title}
               </h2>
             </div>
@@ -278,7 +317,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               {howItWorksSection.steps?.map((step: any, index: number) => (
                 <div key={index} className="text-center">
-                  <div className="w-20 h-20 bg-solarized-base02 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 bg-cta-500 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-md">
                     <svg className="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       {step.icon === "file-text" && (
                         <>
@@ -305,21 +344,28 @@ export default function Home() {
                       )}
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-4">Step {step.number}: {step.title}</h3>
-                  <p className="text-white/80 leading-relaxed">{step.description}</p>
+                  <h3 className="text-lg font-semibold text-navy-900 mb-4">Step {step.number}: {step.title}</h3>
+                  <p className="text-navy-900/80 leading-relaxed">{step.description}</p>
                 </div>
               ))}
             </div>
           </div>
+          </div>
         </section>
       )}
 
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
       {/* Why Choose Me Section */}
       {whyChooseSection && (
-        <section className="py-16 px-6 bg-solarized-base03">
+        <section className="py-20 px-6 bg-white relative">
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-navy-100/20 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
+          <div className="relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-section-title font-bold text-white mb-6">
+              <h2 className="text-section-title font-bold text-navy-900 mb-6">
                 {whyChooseSection.title}
               </h2>
             </div>
@@ -327,38 +373,39 @@ export default function Home() {
             <div className="max-w-4xl mx-auto space-y-6">
               {whyChooseSection.items?.map((item: any, index: number) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-solarized-green rounded-full flex items-center justify-center mt-1">
+                  <div className="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mt-1">
                     <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   </div>
                   <div>
-                    <p className="text-lg text-white/80"><strong>{item.title}</strong> – {item.description}</p>
+                    <p className="text-lg text-navy-900/80"><strong>{item.title}</strong> – {item.description}</p>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </section>
       )}
 
       {/* FAQ Section */}
       {faqSection && (
-        <section className="py-16 px-6 bg-solarized-base02">
+        <section className="py-16 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-section-title font-bold text-white mb-6">
+              <h2 className="text-section-title font-bold text-navy-900 mb-6">
                 {faqSection.title}
               </h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {faqSection.items?.map((faq: any, index: number) => (
-                <div key={index} className="bg-solarized-base03 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-white mb-3">
+                <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-navy-900 mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-white/80">
+                  <p className="text-navy-900/80">
                     {faq.answer}
                   </p>
                 </div>
@@ -370,15 +417,15 @@ export default function Home() {
 
       {/* Final CTA Section */}
       {ctaSection && (
-        <section className="py-16 px-6 bg-gradient-to-br from-solarized-base03 to-solarized-base02 text-white">
+        <section className="py-16 px-6 bg-gradient-to-br from-navy-800 to-navy-700 text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-section-title font-bold mb-6">
               {ctaSection.title}
             </h2>
-            <p className="text-xl text-white/80 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
               {ctaSection.subtitle}
             </p>
-            <Button size="lg" className="bg-solarized-magenta text-black hover:bg-[#F47B78] font-semibold shadow-lg">
+            <Button size="lg" className="bg-cta-500 text-white hover:bg-cta-600 font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
               <Link href={`/${ctaSection.button?.url || 'contact'}`} className="flex items-center">
                 {ctaSection.button?.text || 'Get Started'}
                 <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

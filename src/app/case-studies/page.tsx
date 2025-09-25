@@ -24,11 +24,11 @@ export default function CaseStudiesPage() {
       heroMedia={heroMedia}
     >
       {/* Introduction Section */}
-      <section className="py-16 px-6 bg-solarized-base03">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">{frontmatter.intro?.title}</h2>
-            <div className="text-xl text-white/80 max-w-4xl mx-auto leading-relaxed space-y-4">
+            <h2 className="text-3xl font-bold text-navy-900 mb-6">{frontmatter.intro?.title}</h2>
+            <div className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed space-y-4">
               {frontmatter.intro?.content.split('\n\n').map((paragraph: string, index: number) => (
                 <p key={index}>{paragraph.trim()}</p>
               ))}
@@ -38,21 +38,21 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-6 bg-solarized-base02">
+      <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">{frontmatter.stats?.title}</h2>
-            <p className="text-xl text-white/80">
+            <h2 className="text-3xl font-bold text-navy-900 mb-4">{frontmatter.stats?.title}</h2>
+            <p className="text-xl text-gray-700">
               {frontmatter.stats?.subtitle}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {frontmatter.stats?.items?.map((stat: any, index: number) => (
-              <div key={index} className="p-6 bg-solarized-base02 rounded-lg text-white text-center">
-                <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold text-blue-100 mb-2">{stat.label}</div>
-                <div className="text-sm text-blue-200">{stat.description}</div>
+              <div key={index} className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm text-center">
+                <div className="text-3xl font-bold text-navy-900 mb-2">{stat.number}</div>
+                <div className="text-lg font-semibold text-cta-600 mb-2">{stat.label}</div>
+                <div className="text-sm text-gray-600">{stat.description}</div>
               </div>
             ))}
           </div>
@@ -60,46 +60,46 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-16 px-6 bg-solarized-base03">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">{frontmatter.case_studies?.title}</h2>
-            <p className="text-xl text-white/80">
+            <h2 className="text-3xl font-bold text-navy-900 mb-6">{frontmatter.case_studies?.title}</h2>
+            <p className="text-xl text-gray-700">
               {frontmatter.case_studies?.subtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study: any) => (
-              <div key={study.id} className="p-6 bg-solarized-base03 rounded-lg">
+              <div key={study.id} className="p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-solarized-magenta rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-cta-500 rounded-full flex items-center justify-center">
                       <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M3 3v18h18"/>
                         <path d="m19 9-5 5-4-4-3 3"/>
                       </svg>
                     </div>
-                    <div className="bg-solarized-cyan/10 text-solarized-cyan px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="bg-cta-600/10 text-cta-600 px-3 py-1 rounded-full text-sm font-medium">
                       {study.category}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{study.title}</h3>
-                  <p className="text-white/80 mb-6 leading-relaxed">{study.description}</p>
+                  <h3 className="text-xl font-bold text-navy-900 mb-3">{study.title}</h3>
+                  <p className="text-gray-700 mb-6 leading-relaxed">{study.description}</p>
                 </div>
 
-                <div className="bg-solarized-base02 p-4 rounded-lg mb-6">
-                  <blockquote className="text-sm text-white/80 mb-3 italic">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 mb-6">
+                  <blockquote className="text-sm text-gray-700 mb-3 italic">
                     "{study.testimonial}"
                   </blockquote>
-                  <div className="text-xs text-white font-semibold">
+                  <div className="text-xs text-navy-900 font-semibold">
                     — {study.author}, {study.role}
                   </div>
                 </div>
 
-                <div className="bg-solarized-magenta/10 p-3 rounded-lg">
-                  <div className="text-sm font-semibold text-white">Key Result:</div>
-                  <div className="text-sm text-white/80">{study.results}</div>
+                <div className="bg-navy-50 p-3 rounded-lg border border-navy-100">
+                  <div className="text-sm font-semibold text-navy-900">Key Result:</div>
+                  <div className="text-sm text-navy-800">{study.results}</div>
                 </div>
               </div>
             ))}
@@ -108,20 +108,20 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* What Makes Results Possible */}
-      <section className="py-16 px-6 bg-solarized-base02">
+      <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">{frontmatter.approach?.title}</h2>
-            <p className="text-xl text-white/80 max-w-4xl mx-auto mb-8">
+            <h2 className="text-3xl font-bold text-navy-900 mb-6">{frontmatter.approach?.title}</h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto mb-8">
               {frontmatter.approach?.subtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {frontmatter.approach?.items?.map((item: any, index: number) => (
-              <div key={index} className="p-8 bg-solarized-base03 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
-                <p className="text-white/80 leading-relaxed">
+              <div key={index} className="p-8 bg-white rounded-lg border border-gray-200 shadow-sm">
+                <h3 className="text-xl font-bold text-navy-900 mb-4">{item.title}</h3>
+                <p className="text-gray-700 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -131,13 +131,13 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-solarized-base03 to-solarized-base02">
+      <section className="py-16 px-6 bg-gradient-to-br from-navy-800 to-navy-700">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl font-bold mb-6">{frontmatter.cta?.title}</h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-white/90 mb-8">
             {frontmatter.cta?.subtitle}
           </p>
-          <Button asChild size="lg" className="bg-solarized-magenta text-black hover:bg-[#F47B78] px-8 py-4 rounded-lg font-bold text-lg">
+          <Button asChild size="lg" className="bg-cta-500 text-white hover:bg-cta-600 px-8 py-4 rounded-lg font-bold text-lg">
             <Link href={frontmatter.cta?.button?.url || "/contact"} className="flex items-center">
               {frontmatter.cta?.button?.text || "Schedule a Strategy Call"}
               <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

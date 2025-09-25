@@ -21,16 +21,16 @@ export default function BlogPage() {
       heroBackground="gradient"
       heroIcon="monitor"
     >
-      <section className="py-16 px-6 bg-solarized-base02">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             {categories.map((category, index) => (
               <button
                 key={index}
-                className={`px-6 py-2 rounded-lg font-medium ${
+                className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 ${
                   index === 0
-                    ? 'bg-solarized-base02 text-white'
-                    : 'bg-solarized-base03 text-white/80 hover:bg-solarized-base02 hover:text-white'
+                    ? 'bg-cta-500 text-navy-900 shadow-md'
+                    : 'bg-gray-100 text-navy-700 hover:bg-navy-100 hover:text-navy-900 border border-gray-200'
                 }`}
               >
                 {category}
@@ -40,7 +40,7 @@ export default function BlogPage() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <Link key={index} href={`/blog/${post.slug}`} className="bg-solarized-base03 rounded-lg overflow-hidden hover:bg-solarized-base02 transition-colors cursor-pointer block">
+              <Link key={index} href={`/blog/${post.slug}`} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-navy-200 transition-all duration-200 cursor-pointer block">
                 <div className="w-full h-48 bg-gradient-to-br from-[#8fb4ff]/20 to-[#F25F5C]/20 overflow-hidden">
                   {(post.frontmatter.hero_image || post.frontmatter.featured_image) ? (
                     <img
@@ -50,7 +50,7 @@ export default function BlogPage() {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <div className="w-16 h-16 bg-solarized-magenta rounded-full flex items-center justify-center">
+                      <div className="w-16 h-16 bg-navy-600 rounded-full flex items-center justify-center">
                         <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M3 3v18h18"/>
                           <path d="m19 9-5 5-4-4-3 3"/>
@@ -62,25 +62,25 @@ export default function BlogPage() {
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3">
                     {post.frontmatter.category && (
-                      <span className="text-xs font-semibold text-solarized-cyan bg-solarized-cyan/10 px-3 py-1 rounded-full">
+                      <span className="text-xs font-semibold text-cta-600 bg-navy-100 px-3 py-1 rounded-full">
                         {post.frontmatter.category}
                       </span>
                     )}
-                    <span className="text-xs text-white/80">
+                    <span className="text-xs text-navy-900/80">
                       {post.frontmatter.read_time || post.frontmatter.readTime || estimateReadingTime(post.content)}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+                  <h3 className="text-lg font-bold text-navy-900 mb-2 leading-snug">
                     {post.frontmatter.title}
                   </h3>
-                  <p className="text-white/80 text-sm mb-4 leading-relaxed">
+                  <p className="text-navy-900/80 text-sm mb-4 leading-relaxed">
                     {post.frontmatter.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-white/80">
+                    <span className="text-xs text-navy-900/80">
                       {formatDate(post.frontmatter.date)}
                     </span>
-                    <span className="text-solarized-cyan font-semibold text-sm">
+                    <span className="text-cta-600 font-semibold text-sm">
                       Read More →
                     </span>
                   </div>

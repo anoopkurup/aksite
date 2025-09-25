@@ -149,12 +149,12 @@ interface ContentSectionRendererProps {
 
 function ContentSectionRenderer({ section }: ContentSectionRendererProps) {
   const bgClass = section.class?.includes('alt-bg') || section.class?.includes('services')
-    ? 'bg-solarized-base02'
+    ? 'bg-gray-50'
     : section.class?.includes('audience') || section.class?.includes('approach')
-    ? 'bg-solarized-base02'
+    ? 'bg-white'
     : section.class?.includes('testimonials')
-    ? 'bg-solarized-base02'
-    : 'bg-solarized-base03';
+    ? 'bg-gray-50'
+    : 'bg-white';
 
   switch (section.type) {
     case 'content':
@@ -200,23 +200,23 @@ function ContentBlock({ section, bgClass }: { section: ContentSection; bgClass: 
               .map(paragraph => {
                 paragraph = paragraph.trim();
                 if (paragraph.startsWith('## ')) {
-                  return `<h2 class="text-4xl font-bold text-white mb-8 text-center">${paragraph.replace('## ', '')}</h2>`;
+                  return `<h2 class="text-4xl font-bold text-navy-900 mb-8 text-center">${paragraph.replace('## ', '')}</h2>`;
                 } else if (paragraph.startsWith('### ')) {
-                  return `<h3 class="text-2xl font-bold text-white mb-4">${paragraph.replace('### ', '')}</h3>`;
+                  return `<h3 class="text-2xl font-bold text-navy-900 mb-4">${paragraph.replace('### ', '')}</h3>`;
                 } else if (paragraph.includes('- ')) {
                   const listItems = paragraph.split('\n')
                     .filter(line => line.trim().startsWith('- '))
                     .map(line => {
                       const text = line.trim().replace('- ', '');
                       const processedText = processInlineMarkdown(text);
-                      return `<li class="flex items-start mb-2 text-white/80 leading-relaxed"><div class="w-2 h-2 bg-solarized-magenta rounded-full mt-2 mr-3 flex-shrink-0"></div><span>${processedText}</span></li>`;
+                      return `<li class="flex items-start mb-2 text-gray-700 leading-relaxed"><div class="w-2 h-2 bg-cta-500 rounded-full mt-2 mr-3 flex-shrink-0"></div><span>${processedText}</span></li>`;
                     })
                     .join('');
                   return `<ul class="mb-4">${listItems}</ul>`;
                 } else if (paragraph.trim()) {
                   // Process inline markdown (bold, italic, links)
                   const processedText = processInlineMarkdown(paragraph);
-                  return `<p class="text-white/80 leading-relaxed mb-4">${processedText}</p>`;
+                  return `<p class="text-gray-700 leading-relaxed mb-4">${processedText}</p>`;
                 }
                 return '';
               })
@@ -247,10 +247,10 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
         {section.header && (
           <div className="text-center mb-16">
             {section.header.title && (
-              <h2 className="text-3xl font-bold text-white mb-4">{section.header.title}</h2>
+              <h2 className="text-3xl font-bold text-navy-900 mb-4">{section.header.title}</h2>
             )}
             {section.header.subtitle && (
-              <p className="text-xl text-white/80 max-w-4xl mx-auto">{section.header.subtitle}</p>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto">{section.header.subtitle}</p>
             )}
           </div>
         )}
@@ -260,43 +260,43 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
             <div key={index} className={`text-center ${shouldCenter ? 'w-full max-w-sm' : ''}`}>
               {(item.icon || item.iconType) && (
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-solarized-magenta rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-cta-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     {renderIconSVG(convertIconName(item.icon || item.iconType))}
                   </div>
                 </div>
               )}
               {item.title && (
-                <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+                <h3 className="text-xl font-bold text-navy-900 mb-4">{item.title}</h3>
               )}
               {item.subheading && (
-                <p className="text-solarized-blue font-semibold mb-4">{item.subheading}</p>
+                <p className="text-navy-600 font-semibold mb-4">{item.subheading}</p>
               )}
               {item.description && (
                 <div
-                  className="text-white/80 mb-6 leading-relaxed prose prose-sm max-w-none prose-p:mb-2 prose-ul:mb-2 prose-li:mb-1 prose-strong:text-white prose-em:text-white/80 prose-em:italic text-center"
+                  className="text-gray-700 mb-6 leading-relaxed prose prose-sm max-w-none prose-p:mb-2 prose-ul:mb-2 prose-li:mb-1 prose-strong:text-navy-900 prose-em:text-gray-600 prose-em:italic text-center"
                   dangerouslySetInnerHTML={{
                     __html: processInlineMarkdown(item.description)
-                      .replace(/✓/g, '<span class="text-solarized-blue font-semibold">✓</span>')
+                      .replace(/✓/g, '<span class="text-navy-600 font-semibold">✓</span>')
                   }}
                 />
               )}
               {item.features && (
                 <ul className="space-y-2 mb-6 text-center">
                   {item.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center justify-center text-white/80">
-                      <div className="w-2 h-2 bg-solarized-magenta rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <li key={idx} className="flex items-center justify-center text-gray-700">
+                      <div className="w-2 h-2 bg-cta-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
               )}
               {item.results && (
-                <div className="bg-solarized-magenta/10 p-4 rounded-lg mb-4">
-                  <p className="text-sm font-semibold text-white">{item.results}</p>
+                <div className="bg-cta-500/10 p-4 rounded-lg mb-4">
+                  <p className="text-sm font-semibold text-navy-800">{item.results}</p>
                 </div>
               )}
               {item.link && (
-                <Button asChild className="bg-solarized-base02 hover:bg-[#1e40af] text-white">
+                <Button asChild className="bg-cta-500 hover:bg-cta-600 text-white">
                   <Link href={item.link.url || '#'} className="flex items-center">
                     {item.link.text || 'Learn More'}
                     <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -327,23 +327,23 @@ function FeaturesSection({ section, bgClass }: { section: ContentSection; bgClas
         {section.header && (
           <div className="text-center mb-16">
             {section.header.title && (
-              <h2 className="text-3xl font-bold text-white mb-4">{section.header.title}</h2>
+              <h2 className="text-3xl font-bold text-navy-900 mb-4">{section.header.title}</h2>
             )}
             {section.header.subtitle && (
-              <p className="text-xl text-white/80 max-w-4xl mx-auto">{section.header.subtitle}</p>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto">{section.header.subtitle}</p>
             )}
           </div>
         )}
 
         <div className={`grid ${gridCols} gap-8`}>
           {section.items.map((item, index) => (
-            <div key={index} className={`p-8 text-center bg-solarized-base03 rounded-lg`}>
-              <h3 className="text-xl font-bold mb-4 text-white">
+            <div key={index} className={`p-8 text-center bg-white rounded-lg border border-gray-200 shadow-sm`}>
+              <h3 className="text-xl font-bold mb-4 text-navy-900">
                 {item.title}
               </h3>
               {item.description && (
                 <div
-                  className="leading-relaxed prose prose-sm max-w-none prose-em:italic text-center text-white/80 prose-strong:text-white prose-em:text-white/80"
+                  className="leading-relaxed prose prose-sm max-w-none prose-em:italic text-center text-gray-700 prose-strong:text-navy-900 prose-em:text-gray-600"
                   dangerouslySetInnerHTML={{
                     __html: processInlineMarkdown(item.description)
                   }}
@@ -352,8 +352,8 @@ function FeaturesSection({ section, bgClass }: { section: ContentSection; bgClas
               {item.features && (
                 <ul className="space-y-3 mt-4 text-center">
                   {item.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center justify-center text-white/80">
-                      <div className={`w-2 h-2 bg-solarized-magenta rounded-full mt-2 mr-3 flex-shrink-0`}></div>
+                    <li key={idx} className="flex items-center justify-center text-gray-700">
+                      <div className={`w-2 h-2 bg-cta-500 rounded-full mt-2 mr-3 flex-shrink-0`}></div>
                       {feature}
                     </li>
                   ))}
@@ -374,14 +374,14 @@ function HighlightSection({ section, bgClass }: { section: ContentSection; bgCla
     <section className={`py-16 px-6 ${bgClass}`}>
       <div className="max-w-6xl mx-auto text-center">
         {section.title && (
-          <h2 className={`text-3xl font-bold mb-6 ${isNavyBackground ? 'text-white' : 'text-white'}`}>{section.title}</h2>
+          <h2 className={`text-3xl font-bold mb-6 ${isNavyBackground ? 'text-navy-900' : 'text-navy-900'}`}>{section.title}</h2>
         )}
         {section.description && (
           <div 
             className={`text-xl mb-8 max-w-4xl mx-auto leading-relaxed prose prose-xl max-w-none prose-em:italic ${
               isNavyBackground 
-                ? 'text-blue-100 prose-strong:text-white prose-em:text-blue-200' 
-                : 'text-white/80 prose-strong:text-white prose-em:text-white/80'
+                ? 'text-gray-700 prose-strong:text-navy-900 prose-em:text-gray-600'
+                : 'text-gray-700 prose-strong:text-navy-900 prose-em:text-gray-600'
             }`}
             dangerouslySetInnerHTML={{ 
               __html: processInlineMarkdown(section.description)
@@ -389,7 +389,7 @@ function HighlightSection({ section, bgClass }: { section: ContentSection; bgCla
           />
         )}
         {section.button && (
-          <Button asChild className="bg-solarized-magenta text-black hover:bg-solarized-cyan px-8 py-3 rounded-full font-semibold">
+          <Button asChild className="bg-cta-500 text-black hover:bg-cta-600 px-8 py-3 rounded-full font-semibold">
             <Link href={section.button.url || '#'} className="flex items-center">
               {section.button.text || 'Learn More'}
               <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -406,8 +406,8 @@ function HighlightSection({ section, bgClass }: { section: ContentSection; bgCla
                 asChild
                 className={`px-8 py-3 rounded-full font-semibold transition-all ${
                   index === 0
-                    ? 'bg-solarized-magenta text-black hover:bg-solarized-cyan'
-                    : 'bg-solarized-base02 text-white hover:bg-solarized-cyan'
+                    ? 'bg-cta-500 text-black hover:bg-cta-600'
+                    : 'bg-navy-600 text-white hover:bg-cta-600'
                 }`}
               >
                 <Link href={button.url || '#'} className="flex items-center">
@@ -440,20 +440,20 @@ function StatsSection({ section, bgClass }: { section: ContentSection; bgClass: 
         {section.header && (
           <div className="text-center mb-16">
             {section.header.title && (
-              <h2 className="text-3xl font-bold text-white mb-4">{section.header.title}</h2>
+              <h2 className="text-3xl font-bold text-navy-900 mb-4">{section.header.title}</h2>
             )}
             {section.header.subtitle && (
-              <p className="text-xl text-white/80">{section.header.subtitle}</p>
+              <p className="text-xl text-gray-700">{section.header.subtitle}</p>
             )}
           </div>
         )}
 
         <div className={`grid ${gridCols} gap-8`}>
           {section.items.map((item, index) => (
-            <div key={index} className="p-6 bg-solarized-base02 text-white text-center rounded-lg">
+            <div key={index} className="p-6 bg-white text-center rounded-lg border border-gray-200 shadow-sm">
               <div className="text-3xl font-bold mb-2">{item.number}</div>
-              <div className="text-lg font-semibold text-blue-100 mb-2">{item.label}</div>
-              <div className="text-sm text-blue-200">{item.description}</div>
+              <div className="text-lg font-semibold text-cta-600 mb-2">{item.label}</div>
+              <div className="text-sm text-gray-600">{item.description}</div>
             </div>
           ))}
         </div>
@@ -474,20 +474,20 @@ function TimelineSection({ section, bgClass }: { section: ContentSection; bgClas
         {section.header && (
           <div className="text-center mb-16">
             {section.header.title && (
-              <h2 className="text-3xl font-bold text-white mb-4">{section.header.title}</h2>
+              <h2 className="text-3xl font-bold text-navy-900 mb-4">{section.header.title}</h2>
             )}
           </div>
         )}
 
         <div className={`grid ${gridCols} gap-8 justify-center`}>
           {section.items.map((item, index) => (
-            <div key={index} className="p-6 bg-solarized-base03 text-center max-w-sm mx-auto">
-              <div className="w-12 h-12 bg-solarized-base02 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+            <div key={index} className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm text-center max-w-sm mx-auto">
+              <div className="w-12 h-12 bg-cta-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 {item.number}
               </div>
-              <h3 className="font-bold text-white mb-3">{item.title}</h3>
+              <h3 className="font-bold text-navy-900 mb-3">{item.title}</h3>
               <div
-                className="text-white/80 text-sm leading-relaxed prose prose-sm max-w-none prose-strong:text-white prose-em:text-white/80 prose-em:italic"
+                className="text-gray-700 text-sm leading-relaxed prose prose-sm max-w-none prose-strong:text-navy-900 prose-em:text-gray-600 prose-em:italic"
                 dangerouslySetInnerHTML={{
                   __html: processInlineMarkdown(item.description || '')
                 }}
@@ -509,26 +509,26 @@ function TestimonialsSection({ section, bgClass }: { section: ContentSection; bg
         {section.header && (
           <div className="text-center mb-16">
             {section.header.title && (
-              <h2 className="text-3xl font-bold text-white mb-4">{section.header.title}</h2>
+              <h2 className="text-3xl font-bold text-navy-900 mb-4">{section.header.title}</h2>
             )}
           </div>
         )}
 
         <div className="grid md:grid-cols-3 gap-8">
           {section.items.map((item, index) => (
-            <div key={index} className="p-6 bg-solarized-base02 rounded-lg">
+            <div key={index} className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm">
               <div className="flex items-start space-x-2 mb-4">
                 <svg className="w-6 h-6 text-white flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                 </svg>
               </div>
-              <blockquote className="text-white/80 mb-6 leading-relaxed">
+              <blockquote className="text-gray-700 mb-6 leading-relaxed">
                 "{item.quote}"
               </blockquote>
-              <div className="border-t border-solarized-base01 pt-4">
-                <div className="font-semibold text-white">{item.author}</div>
-                <div className="text-sm text-white/80">{item.role}</div>
-                {item.company && <div className="text-sm text-white/80">{item.company}</div>}
+              <div className="border-t border-gray-300 pt-4">
+                <div className="font-semibold text-navy-900">{item.author}</div>
+                <div className="text-sm text-gray-700">{item.role}</div>
+                {item.company && <div className="text-sm text-gray-700">{item.company}</div>}
               </div>
             </div>
           ))}
@@ -547,18 +547,18 @@ function FAQSection({ section, bgClass }: { section: ContentSection; bgClass: st
         {section.header && (
           <div className="text-center mb-16">
             {section.header.title && (
-              <h2 className="text-3xl font-bold text-white mb-4">{section.header.title}</h2>
+              <h2 className="text-3xl font-bold text-navy-900 mb-4">{section.header.title}</h2>
             )}
           </div>
         )}
 
         <div className="space-y-6">
           {section.items.map((item, index) => (
-            <Card key={index} className="p-6 bg-solarized-base03 shadow-soft">
+            <Card key={index} className="p-6 bg-white shadow-sm border border-gray-200">
               <CardContent className="p-0">
-                <h3 className="text-lg font-bold text-white mb-3">{(item as any).question}</h3>
+                <h3 className="text-lg font-bold text-navy-900 mb-3">{(item as any).question}</h3>
                 <div 
-                  className="text-white/80 leading-relaxed prose prose-sm max-w-none prose-strong:text-white prose-em:text-white/80 prose-em:italic"
+                  className="text-gray-700 leading-relaxed prose prose-sm max-w-none prose-strong:text-navy-900 prose-em:text-gray-600 prose-em:italic"
                   dangerouslySetInnerHTML={{ 
                     __html: processInlineMarkdown((item as any).answer || '')
                   }}
@@ -581,10 +581,10 @@ function PricingSection({ section, bgClass }: { section: ContentSection; bgClass
         {section.header && (
           <div className="text-center mb-16">
             {section.header.title && (
-              <h2 className="text-3xl font-bold text-white mb-4">{section.header.title}</h2>
+              <h2 className="text-3xl font-bold text-navy-900 mb-4">{section.header.title}</h2>
             )}
             {section.header.subtitle && (
-              <p className="text-xl text-white/80">{section.header.subtitle}</p>
+              <p className="text-xl text-gray-700">{section.header.subtitle}</p>
             )}
           </div>
         )}
@@ -596,12 +596,12 @@ function PricingSection({ section, bgClass }: { section: ContentSection; bgClass
               <Card 
                 key={index} 
                 className={`p-8 shadow-soft text-center relative ${
-                  pricingItem.featured ? 'border-2 border-solarized-blue bg-solarized-base02 text-white' : 'bg-solarized-base03'
+                  pricingItem.featured ? 'border-2 border-navy-600 bg-navy-700 text-white' : 'bg-navy-800'
                 }`}
               >
                 {pricingItem.featured && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-solarized-magenta text-black px-4 py-2 rounded-full text-sm font-bold">
+                    <span className="bg-cta-500 text-black px-4 py-2 rounded-full text-sm font-bold">
                       Most Popular
                     </span>
                   </div>
@@ -616,13 +616,13 @@ function PricingSection({ section, bgClass }: { section: ContentSection; bgClass
                   <ul className="space-y-3 mb-8">
                     {pricingItem.features?.map((feature: string, idx: number) => (
                       <li key={idx} className={`flex items-center justify-center ${pricingItem.featured ? 'text-blue-100' : 'text-white/80'}`}>
-                        <div className="w-2 h-2 bg-solarized-magenta rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-cta-500 rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                   {pricingItem.button && (
-                    <Button asChild className={`w-full ${pricingItem.featured ? 'bg-solarized-magenta text-black hover:bg-solarized-cyan' : 'bg-solarized-base02 text-white hover:bg-[#1e40af]'}`}>
+                    <Button asChild className={`w-full ${pricingItem.featured ? 'bg-cta-500 text-black hover:bg-cta-600' : 'bg-navy-700 text-white hover:bg-[#1e40af]'}`}>
                       <Link href={pricingItem.button.url || '#'}>{pricingItem.button.text || 'Get Started'}</Link>
                     </Button>
                   )}
@@ -645,24 +645,24 @@ function ChecklistSection({ section, bgClass }: { section: ContentSection; bgCla
         {section.header && (
           <div className="text-center mb-16">
             {section.header.title && (
-              <h2 className="text-3xl font-bold text-white mb-4">{section.header.title}</h2>
+              <h2 className="text-3xl font-bold text-navy-900 mb-4">{section.header.title}</h2>
             )}
             {section.header.subtitle && (
-              <p className="text-xl text-white/80">{section.header.subtitle}</p>
+              <p className="text-xl text-gray-700">{section.header.subtitle}</p>
             )}
           </div>
         )}
 
-        <Card className="p-8 bg-solarized-base03 shadow-soft">
+        <Card className="p-8 bg-white shadow-sm border border-gray-200">
           <CardContent className="p-0">
             <ul className="space-y-4">
               {section.items.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-solarized-magenta rounded-full flex items-center justify-center mr-4 mt-1">
+                  <div className="flex-shrink-0 w-6 h-6 bg-cta-500 rounded-full flex items-center justify-center mr-4 mt-1">
                     <CustomIcon type="check" className="text-white" size={16} />
                   </div>
                   <div 
-                    className="text-white/80 leading-relaxed prose prose-sm max-w-none prose-strong:text-white prose-em:text-white/80 prose-em:italic"
+                    className="text-gray-700 leading-relaxed prose prose-sm max-w-none prose-strong:text-navy-900 prose-em:text-gray-600 prose-em:italic"
                     dangerouslySetInnerHTML={{ 
                       __html: processInlineMarkdown(typeof item === 'string' ? item : (item as any).description || '')
                     }}
@@ -684,22 +684,22 @@ function ValueStackSection({ section, bgClass }: { section: ContentSection; bgCl
     <section className={`py-16 px-6 ${bgClass}`}>
       <div className="max-w-4xl mx-auto text-center">
         {section.title && (
-          <h2 className="text-3xl font-bold text-white mb-12">{section.title}</h2>
+          <h2 className="text-3xl font-bold text-navy-900 mb-12">{section.title}</h2>
         )}
 
-        <Card className="p-8 bg-solarized-base03 shadow-soft border-2 border-solarized-blue/30">
+        <Card className="p-8 bg-white shadow-sm border-2 border-gray-200">
           <CardContent className="p-0">
             <ul className="space-y-4">
               {section.items.map((item, index) => (
-                <li key={index} className="flex items-center justify-between py-3 border-b border-solarized-base01 last:border-b-0">
+                <li key={index} className="flex items-center justify-between py-3 border-b border-gray-300 last:border-b-0">
                   <div 
-                    className="text-white/80 leading-relaxed prose prose-sm max-w-none prose-strong:text-white prose-em:text-white/80 prose-em:italic flex-1 text-left"
+                    className="text-gray-700 leading-relaxed prose prose-sm max-w-none prose-strong:text-navy-900 prose-em:text-gray-600 prose-em:italic flex-1 text-left"
                     dangerouslySetInnerHTML={{ 
                       __html: processInlineMarkdown(typeof item === 'string' ? item : (item as any).description || '')
                     }}
                   />
                   <div className="flex-shrink-0 ml-4">
-                    <CustomIcon type="check" className="text-solarized-blue" size={20} />
+                    <CustomIcon type="check" className="text-navy-600" size={20} />
                   </div>
                 </li>
               ))}
@@ -715,7 +715,7 @@ function GuaranteeSection({ section, bgClass }: { section: ContentSection; bgCla
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
       <div className="max-w-4xl mx-auto">
-        <Card className="p-8 bg-gradient-to-br from-solarized-base03 to-solarized-base02 text-white shadow-soft border-2 border-solarized-blue/30">
+        <Card className="p-8 bg-gradient-to-br from-navy-800 to-navy-700 text-white shadow-soft border-2 border-navy-600/30">
           <CardContent className="p-0 text-center">
             <div className="mb-6">
               <CustomIcon type="shield" className="text-[#F25F5C] mx-auto" size={64} />
@@ -725,7 +725,7 @@ function GuaranteeSection({ section, bgClass }: { section: ContentSection; bgCla
             )}
             {section.description && (
               <div 
-                className="text-xl text-blue-100 leading-relaxed prose prose-xl max-w-none prose-strong:text-white prose-em:text-blue-200 prose-em:italic"
+                className="text-xl text-white leading-relaxed prose prose-xl max-w-none prose-strong:text-white prose-em:text-white/90 prose-em:italic"
                 dangerouslySetInnerHTML={{ 
                   __html: processInlineMarkdown(section.description)
                 }}

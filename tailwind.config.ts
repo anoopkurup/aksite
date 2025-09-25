@@ -54,19 +54,19 @@ const config: Config = {
   				DEFAULT: "hsl(var(--card))",
   				foreground: "hsl(var(--card-foreground))"
   			},
-  			// Navy Theme Core Colors
+  			// Professional Navy - Secondary Color (30%)
   			navy: {
-  				'50': '#f0f4ff',
-  				'100': '#e0eaff',
-  				'200': '#c3d5ff',
-  				'300': '#8fb4ff',
-  				'400': '#5d8aff',
-  				'500': '#3d6fff',
+  				'50': '#eff6ff',
+  				'100': '#dbeafe',
+  				'200': '#bfdbfe',
+  				'300': '#93c5fd',
+  				'400': '#60a5fa',
+  				'500': '#3b82f6',
   				'600': '#2563eb',
-  				'700': '#1e40af',
-  				'800': '#1e3a8a',
-  				'900': '#1a237e',
-  				'950': '#0f172a'
+  				'700': '#1d4ed8',
+  				'800': '#1e40af',
+  				'900': '#1e3a8a',
+  				'950': '#172554'
   			},
   			periwinkle: {
   				'50': '#f0f4ff',
@@ -153,6 +153,37 @@ const config: Config = {
   				warning: '#b58900',
   				error: '#dc322f',
   				info: '#268bd2'
+  			},
+  			// Primary Colors - White/Off-White (60%)
+  			'primary-white': {
+  				'white': '#FFFFFF',
+  				'off-white': '#FAFAFA',
+  				'light-gray': '#F5F5F5',
+  				'50': '#FAFAFA',
+  				'100': '#F5F5F5',
+  				'200': '#E5E5E5',
+  				'300': '#D4D4D4',
+  				'400': '#A3A3A3',
+  				'500': '#737373',
+  				'600': '#525252',
+  				'700': '#404040',
+  				'800': '#262626',
+  				'900': '#171717',
+  				'950': '#0A0A0A'
+  			},
+  			// CTA Colors - Orange (10%)
+  			cta: {
+  				'50': '#fff7ed',
+  				'100': '#ffedd5',
+  				'200': '#fed7aa',
+  				'300': '#fdba74',
+  				'400': '#fb923c',
+  				'500': '#f97316',
+  				'600': '#ea580c',
+  				'700': '#c2410c',
+  				'800': '#9a3412',
+  				'900': '#7c2d12',
+  				'950': '#431407'
   			}
   		},
   		fontFamily: {

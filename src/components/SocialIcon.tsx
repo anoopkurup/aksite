@@ -60,7 +60,7 @@ export default function SocialIcon({ platform, href, size = 40, className = "" }
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center rounded-xl bg-solarized-base02 text-white hover:bg-solarized-magenta transition-all duration-200 hover:scale-105 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none ${className}`}
+      className={`inline-flex items-center justify-center rounded-xl bg-navy-700 text-white hover:bg-cta-500 transition-all duration-200 hover:scale-105 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none ${className}`}
       style={{ width: size, height: size }}
       aria-label={`Visit ${platformLabels[platform]} profile`}
     >

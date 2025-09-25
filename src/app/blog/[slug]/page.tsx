@@ -27,7 +27,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const readingTime = estimateReadingTime(post.content);
 
   return (
-    <article className="min-h-screen bg-solarized-base03">
+    <article className="min-h-screen bg-white">
       {/* Hero Section with Image Overlay */}
       <section className="relative min-h-[60vh] flex items-end">
         {/* Background Image with Gradient Overlay */}
@@ -59,13 +59,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             
             <div className="flex items-center gap-4 mb-6">
               {post.frontmatter.category && (
-                <span className="text-sm font-semibold text-black bg-solarized-magenta px-3 py-1 rounded-full">
+                <span className="text-sm font-semibold text-white bg-cta-500 px-3 py-1 rounded-full">
                   {post.frontmatter.category}
                 </span>
               )}
               <span className="text-sm text-white/80">
                 By{" "}
-                <Link href="/about" className="text-white hover:text-[#F25F5C] transition-colors font-medium">
+                <Link href="/about" className="text-white hover:text-cta-500 transition-colors font-medium">
                   {post.frontmatter.author || "Anoop Kurup"}
                 </Link>
               </span>
