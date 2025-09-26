@@ -37,7 +37,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
@@ -103,7 +103,7 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
               className="bg-cta-500 text-white px-6 py-2.5 rounded-lg hover:bg-cta-600 transition-all duration-200 font-medium focus-enhanced"
@@ -113,7 +113,7 @@ export default function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               type="button"
               className="text-navy-900 hover:text-navy-700 focus-enhanced"
@@ -133,7 +133,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-3">
               {navigation.map((item) => (
                 <div key={item.name}>

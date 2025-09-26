@@ -41,6 +41,53 @@ function CustomIcon({ type, className, size = 24 }: { type: string; className?: 
   }
 }
 
+// Timeline Step Icon renderer with white line SVGs
+function renderTimelineIcon(number: string) {
+  const iconProps = {
+    className: "w-6 h-6 text-white",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const
+  };
+
+  // Map timeline steps to appropriate icons
+  switch (number) {
+    case '📚':
+      // Book/Document icon for "Access Your Daily Module"
+      return (
+        <svg {...iconProps}>
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+      );
+    case '📹':
+      // Play icon for "Watch Short Video"
+      return (
+        <svg {...iconProps}>
+          <polygon points="5,3 19,12 5,21"/>
+        </svg>
+      );
+    case '✅':
+      // Checkmark icon for "Complete Actions"
+      return (
+        <svg {...iconProps}>
+          <polyline points="20,6 9,17 4,12"/>
+        </svg>
+      );
+    default:
+      // Default circle icon
+      return (
+        <svg {...iconProps}>
+          <circle cx="12" cy="12" r="10"/>
+        </svg>
+      );
+  }
+}
+
 // SVG Icon renderer for flat design
 function renderIconSVG(iconType: string) {
   const iconProps = {
@@ -238,14 +285,16 @@ function ContentBlock({ section, bgClass }: { section: ContentSection; bgClass: 
 function GridSection({ section, bgClass }: { section: ContentSection; bgClass: string }) {
   if (!section.items) return null;
 
-  const gridCols = section.grid_class?.includes('grid-2') ? 'md:grid-cols-2' :
+  const isGrid1 = section.grid_class?.includes('grid-1');
+  const gridCols = isGrid1 ? 'grid-cols-1' :
+                  section.grid_class?.includes('grid-2') ? 'md:grid-cols-2' :
                   section.items.length === 3 ? 'md:grid-cols-3' :
                   section.items.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' :
                   section.items.length >= 5 ? 'md:grid-cols-2 lg:grid-cols-3' :
                   'md:grid-cols-2';
 
-  // Determine if we should center items for 3-column layout
-  const shouldCenter = section.items.length === 3;
+  // Determine if we should center items for 3-column layout or single-item grid
+  const shouldCenter = section.items.length === 3 || isGrid1;
 
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
@@ -263,7 +312,7 @@ function GridSection({ section, bgClass }: { section: ContentSection; bgClass: s
 
         <div className={`grid ${gridCols} gap-8 ${shouldCenter ? 'justify-items-center' : ''}`}>
           {section.items.map((item, index) => (
-            <div key={index} className={`text-center ${shouldCenter ? 'w-full max-w-sm' : ''}`}>
+            <div key={index} className={`text-center ${shouldCenter ? 'w-full max-w-sm' : ''} ${isGrid1 ? 'max-w-2xl mx-auto' : ''}`}>
               {(item.icon || item.iconType) && (
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-cta-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -488,8 +537,8 @@ function TimelineSection({ section, bgClass }: { section: ContentSection; bgClas
         <div className={`grid ${gridCols} gap-8 justify-center`}>
           {section.items.map((item, index) => (
             <div key={index} className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm text-center max-w-sm mx-auto">
-              <div className="w-12 h-12 bg-cta-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                {item.number}
+              <div className="w-12 h-12 bg-cta-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                {renderTimelineIcon(item.number || '')}
               </div>
               <h3 className="font-bold text-navy-900 mb-3">{item.title}</h3>
               <div
