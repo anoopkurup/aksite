@@ -192,36 +192,42 @@ function ContentBlock({ section, bgClass }: { section: ContentSection; bgClass: 
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
       <div className="max-w-4xl mx-auto">
-        <div 
+        <div
           className="max-w-none"
-          dangerouslySetInnerHTML={{ 
-            __html: section.content
-              .split('\n\n')
-              .map(paragraph => {
-                paragraph = paragraph.trim();
-                if (paragraph.startsWith('## ')) {
-                  return `<h2 class="text-4xl font-bold text-navy-900 mb-8 text-center">${paragraph.replace('## ', '')}</h2>`;
-                } else if (paragraph.startsWith('### ')) {
-                  return `<h3 class="text-2xl font-bold text-navy-900 mb-4">${paragraph.replace('### ', '')}</h3>`;
-                } else if (paragraph.includes('- ')) {
-                  const listItems = paragraph.split('\n')
-                    .filter(line => line.trim().startsWith('- '))
-                    .map(line => {
-                      const text = line.trim().replace('- ', '');
-                      const processedText = processInlineMarkdown(text);
-                      return `<li class="flex items-start mb-2 text-gray-700 leading-relaxed"><div class="w-2 h-2 bg-cta-500 rounded-full mt-2 mr-3 flex-shrink-0"></div><span>${processedText}</span></li>`;
-                    })
-                    .join('');
-                  return `<ul class="mb-4">${listItems}</ul>`;
-                } else if (paragraph.trim()) {
+          dangerouslySetInnerHTML={{
+            __html: (() => {
+              // First, split by lines and process each line individually
+              const lines = section.content.split('\n').map(line => line.trim()).filter(line => line);
+              const processedElements: string[] = [];
+
+              for (let i = 0; i < lines.length; i++) {
+                const line = lines[i];
+
+                if (line.startsWith('## ')) {
+                  processedElements.push(`<h2 class="text-4xl font-bold text-navy-900 mb-8 text-center">${line.replace('## ', '')}</h2>`);
+                } else if (line.startsWith('### ')) {
+                  processedElements.push(`<h3 class="text-xl font-semibold text-navy-900 mb-4">${line.replace('### ', '')}</h3>`);
+                } else if (line.startsWith('- ')) {
+                  // Handle list items - collect consecutive list items
+                  const listItems: string[] = [];
+                  let j = i;
+                  while (j < lines.length && lines[j].startsWith('- ')) {
+                    const text = lines[j].replace('- ', '');
+                    const processedText = processInlineMarkdown(text);
+                    listItems.push(`<li class="flex items-start mb-2 text-gray-700 leading-relaxed"><div class="w-2 h-2 bg-cta-500 rounded-full mt-2 mr-3 flex-shrink-0"></div><span>${processedText}</span></li>`);
+                    j++;
+                  }
+                  processedElements.push(`<ul class="mb-4">${listItems.join('')}</ul>`);
+                  i = j - 1; // Skip the processed list items
+                } else if (line.trim()) {
                   // Process inline markdown (bold, italic, links)
-                  const processedText = processInlineMarkdown(paragraph);
-                  return `<p class="text-gray-700 leading-relaxed mb-4">${processedText}</p>`;
+                  const processedText = processInlineMarkdown(line);
+                  processedElements.push(`<p class="text-gray-700 leading-relaxed mb-4">${processedText}</p>`);
                 }
-                return '';
-              })
-              .filter(html => html)
-              .join('')
+              }
+
+              return processedElements.join('');
+            })()
           }}
         />
       </div>
@@ -389,7 +395,7 @@ function HighlightSection({ section, bgClass }: { section: ContentSection; bgCla
           />
         )}
         {section.button && (
-          <Button asChild className="bg-cta-500 text-black hover:bg-cta-600 px-8 py-3 rounded-full font-semibold">
+          <Button asChild className="bg-cta-500 text-white hover:bg-cta-600 px-8 py-3 rounded-full font-semibold">
             <Link href={section.button.url || '#'} className="flex items-center">
               {section.button.text || 'Learn More'}
               <svg className="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
