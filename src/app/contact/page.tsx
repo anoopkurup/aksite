@@ -83,15 +83,12 @@ export default function ContactPage() {
                 <div className="flex justify-center space-x-6">
                   {socialLinks.map((link) => (
                     <div key={link.platform} className="flex flex-col items-center">
-                      <div className="bg-gray-100 p-6 rounded-lg mb-3">
-                        <SocialIcon
-                          platform={link.platform}
-                          href={link.href}
-                          size={56}
-                          className="bg-transparent hover:bg-transparent"
-                        />
-                      </div>
-                      <span className="text-sm font-medium text-gray-600 capitalize">
+                      <SocialIcon
+                        platform={link.platform}
+                        href={link.href}
+                        size={56}
+                      />
+                      <span className="text-sm font-medium text-gray-600 capitalize mt-2">
                         {link.platform}
                       </span>
                     </div>
