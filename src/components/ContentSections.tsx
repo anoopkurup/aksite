@@ -41,6 +41,42 @@ function CustomIcon({ type, className, size = 24 }: { type: string; className?: 
   }
 }
 
+// Decorative Line Divider Component - elegant gradient dividers with fade effect
+function DecorativeDivider({ color = 'orange' }: { color?: 'orange' | 'blue' }) {
+  const colorHex = color === 'orange' ? '#f97316' : '#2563eb'; // cta-500 and navy-600
+  const gradientId = `${color}Gradient`;
+
+  return (
+    <div className="flex justify-center my-8">
+      <svg
+        width="80"
+        height="5"
+        viewBox="0 0 80 5"
+        xmlns="http://www.w3.org/2000/svg"
+        role="presentation"
+        aria-hidden="true"
+      >
+        <defs>
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor={colorHex} stopOpacity="0" />
+            <stop offset="50%" stopColor={colorHex} stopOpacity="1" />
+            <stop offset="100%" stopColor={colorHex} stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        <rect
+          x="0"
+          y="0"
+          width="80"
+          height="5"
+          rx="2.5"
+          ry="2.5"
+          fill={`url(#${gradientId})`}
+        />
+      </svg>
+    </div>
+  );
+}
+
 // Timeline Step Icon renderer with white line SVGs
 function renderTimelineIcon(number: string) {
   const iconProps = {
@@ -184,7 +220,12 @@ export default function ContentSections({ sections }: ContentSectionsProps) {
   return (
     <>
       {sections.map((section, index) => (
-        <ContentSectionRenderer key={index} section={section} />
+        <ContentSectionRenderer
+          key={index}
+          section={section}
+          index={index}
+          isLast={index === sections.length - 1}
+        />
       ))}
     </>
   );
@@ -192,42 +233,51 @@ export default function ContentSections({ sections }: ContentSectionsProps) {
 
 interface ContentSectionRendererProps {
   section: ContentSection;
+  index: number;
+  isLast?: boolean;
 }
 
-function ContentSectionRenderer({ section }: ContentSectionRendererProps) {
-  const bgClass = section.class?.includes('alt-bg') || section.class?.includes('services')
-    ? 'bg-gray-50'
-    : section.class?.includes('audience') || section.class?.includes('approach')
-    ? 'bg-white'
-    : section.class?.includes('testimonials')
-    ? 'bg-gray-50'
-    : 'bg-white';
+function ContentSectionRenderer({ section, index, isLast }: ContentSectionRendererProps) {
+  // All sections use white background for clean, consistent appearance
+  const bgClass = 'bg-white';
+
+  // Determine divider color for sections (skip only first section)
+  // Even sections: orange divider, Odd sections: blue divider
+  const shouldShowDivider = index > 0;
+  const dividerColor = index % 2 === 0 ? 'orange' : 'blue';
+
+  const renderSectionWithDivider = (SectionComponent: React.ReactElement) => (
+    <>
+      {SectionComponent}
+      {shouldShowDivider && <DecorativeDivider color={dividerColor} />}
+    </>
+  );
 
   switch (section.type) {
     case 'content':
-      return <ContentBlock section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<ContentBlock section={section} bgClass={bgClass} />);
     case 'grid':
-      return <GridSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<GridSection section={section} bgClass={bgClass} />);
     case 'features':
-      return <FeaturesSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<FeaturesSection section={section} bgClass={bgClass} />);
     case 'highlight':
-      return <HighlightSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<HighlightSection section={section} bgClass={bgClass} />);
     case 'stats':
-      return <StatsSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<StatsSection section={section} bgClass={bgClass} />);
     case 'timeline':
-      return <TimelineSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<TimelineSection section={section} bgClass={bgClass} />);
     case 'testimonials':
-      return <TestimonialsSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<TestimonialsSection section={section} bgClass={bgClass} />);
     case 'faq':
-      return <FAQSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<FAQSection section={section} bgClass={bgClass} />);
     case 'pricing':
-      return <PricingSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<PricingSection section={section} bgClass={bgClass} />);
     case 'checklist':
-      return <ChecklistSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<ChecklistSection section={section} bgClass={bgClass} />);
     case 'value-stack':
-      return <ValueStackSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<ValueStackSection section={section} bgClass={bgClass} />);
     case 'guarantee':
-      return <GuaranteeSection section={section} bgClass={bgClass} />;
+      return renderSectionWithDivider(<GuaranteeSection section={section} bgClass={bgClass} />);
     default:
       return null;
   }

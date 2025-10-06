@@ -119,7 +119,7 @@ const config: Config = {
   			gamboge: '#b58900', // solarized yellow
   			'antiflash-white': '#073642', // base02 for lighter backgrounds
   			charcoal: '#f7f7f7', // body text - high contrast
-  			white: '#f7f7f7', // text
+  			white: '#FFFFFF', // pure white for backgrounds
   			'light-gray': '#073642', // base02
   			'border-gray': '#586e75', // base01
   			brand: {
