@@ -5,12 +5,21 @@ import { useState, useRef } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [workshopDropdownOpen, setWorkshopDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const navigation = [
     { name: "About", href: "/about" },
-    { name: "Consulting", href: "/consulting" },
+    {
+      name: "Services",
+      href: "/services",
+      dropdown: [
+        { name: "All Services", href: "/services" },
+        { name: "Content Growth System", href: "/services/content-growth" },
+        { name: "Lead Generation System", href: "/services/lead-generation" },
+        { name: "Marketing Operations Partner", href: "/services/marketing-operations" },
+      ]
+    },
     {
       name: "Workshops",
       href: "/workshops",
@@ -20,9 +29,7 @@ export default function Header() {
         { name: "LinkedIn Sales Activation", href: "/workshops/linkedin-sales-activation" },
       ]
     },
-    { name: "AI Solutions", href: "/ai-solutions" },
     { name: "Blog", href: "/blog" },
-    { name: "Case Studies", href: "/case-studies" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -47,11 +54,11 @@ export default function Header() {
                       if (dropdownTimeoutRef.current) {
                         clearTimeout(dropdownTimeoutRef.current);
                       }
-                      setWorkshopDropdownOpen(true);
+                      setOpenDropdown(item.name);
                     }}
                     onMouseLeave={() => {
                       dropdownTimeoutRef.current = setTimeout(() => {
-                        setWorkshopDropdownOpen(false);
+                        setOpenDropdown(null);
                       }, 200);
                     }}
                   >
@@ -64,7 +71,7 @@ export default function Header() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </Link>
-                    {workshopDropdownOpen && (
+                    {openDropdown === item.name && (
                       <div
                         className="absolute top-full left-0 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
                         onMouseEnter={() => {
@@ -74,7 +81,7 @@ export default function Header() {
                         }}
                         onMouseLeave={() => {
                           dropdownTimeoutRef.current = setTimeout(() => {
-                            setWorkshopDropdownOpen(false);
+                            setOpenDropdown(null);
                           }, 200);
                         }}
                       >

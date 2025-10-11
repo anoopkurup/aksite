@@ -17,25 +17,26 @@ export default function Footer() {
     {
       title: "Services",
       links: [
-        { name: "Consulting", href: "/consulting" },
-        { name: "Workshops", href: "/workshops" },
-        { name: "AI Solutions", href: "/ai-solutions" },
+        { name: "All Services", href: "/services" },
+        { name: "Content Growth System", href: "/services/content-growth" },
+        { name: "Lead Generation System", href: "/services/lead-generation" },
+        { name: "Marketing Operations Partner", href: "/services/marketing-operations" },
       ],
     },
     {
-      title: "Resources",
+      title: "Workshops",
       links: [
-        { name: "Blog", href: "/blog" },
-        { name: "Case Studies", href: "/case-studies" },
-        { name: "Free Resources", href: "/resources" },
+        { name: "All Workshops", href: "/workshops" },
+        { name: "100-Day Lead Generation Sprint", href: "/workshops/100-day-lead-generation-sprint" },
+        { name: "LinkedIn Sales Activation", href: "/workshops/linkedin-sales-activation" },
       ],
     },
     {
       title: "Company",
       links: [
         { name: "About", href: "/about" },
+        { name: "Blog", href: "/blog" },
         { name: "Contact", href: "/contact" },
-        { name: "Privacy Policy", href: "/privacy-policy" },
       ],
     },
   ];
