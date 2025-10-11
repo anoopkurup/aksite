@@ -1,132 +1,132 @@
 ---
-title: "Still Struggling with Feast or Famine Lead Flow?"
-description: "Transform your professional service business with the proven 100-Day Lead Generation Sprint that delivers 10+ qualified leads every month."
+title: "Tired of Waiting for Referrals?"
+description: "Stop depending on referrals. Build your own way to get 10+ customers every month with the 100-Day Sprint."
 
 sections:
   - type: "content"
     class: "about"
     content: |
-      ## Still Struggling with Feast or Famine Lead Flow?
+      ## Tired of Waiting for Referrals?
 
-      **You know the pain. You've lived it. Month after month.**
+      **You're stuck. You can only grow when someone remembers to send you business.**
 
-      If you're a professional service business owner, this probably sounds familiar:
+      If you're a service provider, this might sound like you:
 
-      - **3 AM Stress**: Lying awake wondering where next month's clients will come from
-      - **Marketing Roulette**: Trying different tactics but never building anything that sticks
-      - **Time Drain**: Spending 10+ hours a week on marketing with little to show for it
-      - **Revenue Rollercoaster**: Great months followed by panic-inducing dry spells
+      - **Waiting for the Phone to Ring**: You hope someone will refer you, but you can't control when
+      - **Referrals Dried Up**: They used to come regularly, now nothing, and you don't know what to do
+      - **Can't Grow Faster**: Your business only grows as fast as people remember you
+      - **Not in Control**: Other people decide if your business grows or not
 
-      You have the expertise. Your clients get amazing results. You charge premium rates.
+      You're great at what you do. Your clients love your work.
 
-      **But your lead generation feels like throwing darts blindfolded in a hurricane.**
+      **But you're tired of depending on others to grow your business.**
 
   - type: "content"
     class: "about alt-bg"
     content: |
-      ## How Much Longer Can You Afford This?
+      ## What Is Referral Dependency Costing You?
 
-      **Let's be brutally honest about what this is really costing you:**
+      **Let's be honest about what depending on referrals costs:**
 
-      **Lost Revenue:** How many high-value clients have you missed because they couldn't find you? Conservative estimate: ₹2-5 lakhs per month in lost opportunities.
+      **Can't Grow Fast:** You can only grow as fast as your referral network. That could be ₹2-5 lakhs in lost money every month because you can't control who sends you business.
 
-      **Wasted Time:** Those 10+ hours per week on random marketing tactics? That's 520+ hours per year. At your hourly rate, that's another ₹5-10 lakhs of billable time gone.
+      **No Control:** You can't decide when your business grows. Other people control that. You just have to wait and hope.
 
-      **Stress & Burnout:** The constant worry about where your next client will come from. The sleepless nights. The pressure on your family. How much is peace of mind worth?
+      **Panic When Referrals Stop:** When referrals slow down (and they always do), you panic. You don't know how to find customers on your own.
 
-      **Competitive Disadvantage:** While you're struggling with lead generation, your competitors with systematic approaches are capturing the clients that should be yours.
+      **Leaving Money on the Table:** While you wait for referrals, other businesses who know how to find their own customers are taking the business that should be yours.
 
-      **Here's the hard truth:** If you don't solve this systematically, you'll be having this exact same conversation with yourself 6 months from now. Except you'll be another ₹10-20 lakhs poorer and even more frustrated.
+      **Here's the truth:** If you don't learn to find customers on your own, you'll be stuck depending on referrals forever. That's another ₹10-20 lakhs lost and more years of not being in control.
 
-      **The question isn't whether you need a systematic lead generation solution. The question is: how much longer can you afford NOT to have one?**
+      **The big question is: How much longer will you let others control your business growth?**
 
   - type: "highlight"
     class: "about"
-    title: "Introducing the 100-Day Lead Generation Sprint"
-    description: "The proven system that transforms professional service firms from feast-or-famine to predictable 10+ qualified leads every month. In just 100 days, you'll build a systematic lead generation machine that works whether you're busy serving clients or not."
+    title: "The 100-Day Sprint: Stop Waiting for Referrals"
+    description: "Take control of your business. Build your own way to get 10+ customers every month. In just 100 days, you'll have a simple plan that finds customers for you - without depending on referrals."
     buttons:
-      - text: "Enroll Now - ₹39,600"
+      - text: "Join Now - ₹39,600"
         url: "https://rzp.io/rzp/e2dPamL"
-      - text: "See How the System Works"
+      - text: "See How It Works"
         url: "#how-it-works"
 
   - type: "grid"
     class: "services alt-bg"
     header:
-      title: "Why This System Succeeds Where Others Fail"
-      subtitle: "Unlike generic marketing courses or one-size-fits-all solutions, this system is built specifically for professional service firms."
+      title: "Why This Plan Works for Service Providers"
+      subtitle: "Built for people like you who are tired of depending on referrals."
     items:
       - icon: "icon-target"
-        title: "Battle-Tested System"
-        description: "Proven with 50+ professional service firms. Not theory - real results from real businesses."
+        title: "Helped 50+ Service Providers"
+        description: "It's worked for 50+ businesses just like yours who were stuck waiting for referrals. Real results from real people."
       - icon: "icon-chart"
-        title: "Predictable Results"
-        description: "Transform from feast-or-famine to consistent 10+ qualified leads monthly within 100 days."
+        title: "Take Control of Your Growth"
+        description: "Stop depending on referrals. Get 10+ customers every month on your own in 100 days."
       - icon: "icon-handshake"
-        title: "Personal Implementation"
-        description: "Work directly with Anoop. Weekly 1-on-1 sessions to ensure your success."
+        title: "Work With Anoop Each Week"
+        description: "You work directly with Anoop. Meet every week to build your own customer-finding plan."
       - icon: "icon-robot"
-        title: "Custom For Your Business"
-        description: "Tailored to your specific industry, target market, and business model."
+        title: "Made Just For Your Service"
+        description: "Built to fit what you do, who you serve, and how you work."
 
   - type: "stats"
     class: "services"
     header:
-      title: "The Results Speak for Themselves"
+      title: "Look at the Results"
     items:
       - number: "50+"
-        label: "Businesses Transformed"
-        description: "Professional service firms helped"
+        label: "Service Providers Helped"
+        description: "Who stopped waiting for referrals"
       - number: "10+"
-        label: "Qualified Leads"
-        description: "Average monthly lead increase"
+        label: "Customers Every Month"
+        description: "Without depending on referrals"
       - number: "100"
-        label: "Days to Transformation"
-        description: "From chaos to predictable growth"
+        label: "Days to Freedom"
+        description: "From depending on others to in control"
 
   - type: "content"
     class: "services alt-bg"
     id: "how-it-works"
     content: |
-      ## How the 100-Day Lead Generation Sprint Works
+      ## How the 100-Day Sprint Works
 
-      **This isn't another marketing course. It's a complete system implementation designed specifically for professional service firms.**
+      **This is not just learning. You're building your own way to find customers - no more waiting for referrals.**
 
-      Here's exactly what happens over the next 100 days:
+      Here's what happens in the next 100 days:
 
-      ### Days 1-30: Foundation & Setup
-      **Build your lead generation machine from the ground up**
-      - Complete target market analysis and ideal client profiling
-      - Develop messaging that resonates with your specific audience
-      - Set up your lead capture and nurturing systems
-      - Create your content strategy and initial outreach sequences
-      - **Daily tasks:** 30 minutes of systematic execution
-      - **Weekly calls:** 1 hour strategy and optimization sessions
+      ### Days 1-30: Build Your Own Customer-Finding Plan
+      **Stop depending on others**
+      - Figure out who your best customers are (not who refers you)
+      - Write messages that make them want to work with you directly
+      - Set up your own ways to reach and catch new customers
+      - Make a plan that YOU control, not your referral network
+      - **Every day:** Spend 30 minutes doing the work
+      - **Every week:** Meet with Anoop for 1 hour to build your plan
 
-      ### Days 31-60: Testing & Optimization
-      **Refine everything until it works perfectly**
-      - A/B test messaging, offers, and outreach approaches
-      - Optimize conversion rates at every stage of your funnel
-      - Scale successful campaigns and eliminate what doesn't work
-      - Build momentum with consistent lead flow
-      - **Weekly optimization:** Data-driven improvements based on results
+      ### Days 31-60: Test and Improve
+      **Make your plan work better**
+      - Try different messages and see what brings customers to you
+      - Make more people say yes when you reach out
+      - Do more of what works and stop what doesn't
+      - Start getting customers without waiting for referrals
+      - **Every week:** Look at what's working and make it better
 
-      ### Days 61-100: Predictable Results
-      **Achieve systematic 10+ leads monthly**
-      - Fine-tune your automated systems for maximum efficiency
-      - Implement advanced strategies for premium positioning
-      - Build sustainable processes that work without constant attention
-      - Prepare for long-term growth and scaling
-      - **Result:** A predictable lead generation system that delivers consistently
+      ### Days 61-100: Never Depend on Referrals Again
+      **Take full control of your growth**
+      - Make everything work on its own so you don't have to do as much
+      - Use better ways to show you're the best choice
+      - Build something that brings customers even when you're busy
+      - Get ready to grow faster than your referral network ever let you
+      - **The end result:** Your own simple plan that brings 10+ customers every month
 
-      **What makes this different:** You're not just learning theory. You're building a real system for your real business with real results.
+      **What makes this different:** You're not just learning ideas. You're building your own customer-finding system so you never have to wait for referrals again.
 
   - type: "highlight"
     class: "testimonials"
-    title: "Ready to Transform Your Lead Generation?"
-    description: "Join the 100-Day Lead Generation Sprint and build a systematic approach that delivers 10+ qualified leads every month. Choose your payment option below."
+    title: "Ready to Stop Depending on Referrals?"
+    description: "Join the 100-Day Sprint and build your own way to get 10+ customers every month. Take control of your business growth. Pick how you want to pay below."
     buttons:
-      - text: "Enroll Now - ₹39,600 (Save ₹5,400)"
+      - text: "Join Now - ₹39,600 (Save ₹5,400)"
         url: "https://rzp.io/rzp/e2dPamL"
       - text: "3 Payments of ₹15,000"
         url: "https://rzp.io/rzp/GVmbLGJS"
@@ -136,134 +136,137 @@ sections:
     content: |
       ## About Anoop Kurup
 
-      **Why should you trust me with your lead generation transformation?**
+      **Why should you trust me to help you stop depending on referrals?**
 
-      Over the past 8 years, I've helped 50+ professional service firms solve the exact problem you're facing right now. From solo consultants to 50-person agencies, I've seen what works (and what doesn't) when it comes to building predictable lead generation systems.
+      For the past 8 years, I've helped 50+ service providers solve the exact problem you have right now - being stuck depending on referrals. I've helped people working alone and big teams of 50 people. I know what works when you want to take control of your own growth.
 
-      **My Background:**
-      - **8+ years** specializing in professional services marketing
-      - **50+ businesses** transformed from feast-or-famine to predictable growth
-      - **Clarity. Strategy. Systems.** - My proven methodology for sustainable growth
-      - **Industry agnostic** - Works for consultants, agencies, law firms, and any expertise-based business
+      **What I've Done:**
+      - **8+ years** helping service providers break free from referral dependency
+      - **50+ businesses** helped go from waiting for referrals to finding their own customers
+      - **Clarity. Strategy. Systems.** - My way of helping you grow without depending on others
+      - **Works for all service providers** - Consultants, agencies, law firms, and any business that sells what they know
 
-      **What makes my approach different:**
-      I don't believe in generic marketing tactics or one-size-fits-all solutions. Every business is unique, which is why we start with a custom strategy session to understand your specific challenges, goals, and market dynamics.
+      **What makes what I do different:**
+      I don't use the same plan for everyone. Every service is different. That's why we start by learning about what you do, who you want as customers, and how to reach them directly.
 
-      **The bottom line:** I've spent years perfecting a systematic approach that consistently delivers 10+ qualified leads per month for professional service firms. Now I want to share that system with you.
+      **The main thing:** I've spent years making a plan that brings 10+ customers every month without depending on referrals. Now I want to teach you this plan so you can take control of your business.
 
   - type: "grid"
     class: "services alt-bg"
     header:
-      title: "Client Success Stories"
-      subtitle: "See how other professional service firms transformed their lead generation"
+      title: "What Other Service Providers Say"
+      subtitle: "See how they stopped depending on referrals"
     grid_class: "grid-2"
     items:
       - title: "Marketing Agency"
         description: |
-          **"From 2-3 leads per month to 15+ qualified prospects"**
-          "Before working with Anoop, we were constantly stressed about where our next client would come from. The systematic approach he taught us completely changed our business. We now have predictable lead flow and can focus on serving our clients instead of chasing prospects."
+          **"From waiting for referrals to 15+ customers on my own"**
+          "Before working with Anoop, I was stuck waiting for referrals. Some months were great, some were terrible. The simple plan he taught us changed everything. Now I find my own customers and don't have to wait for others to send me business."
           *- Sarah Chen, Digital Marketing Agency*
-      - title: "Management Consultant"
+      - title: "Business Consultant"
         description: |
-          **"Doubled our revenue in 6 months"**
-          "I was spending 15+ hours a week on marketing with inconsistent results. Anoop's system gave me back my time while generating more qualified leads than I've ever had. The best part? It's completely systematic - no more guessing what to do next."
+          **"Stopped depending on referrals and made twice as much money"**
+          "I was stuck. I could only grow when someone referred me. Anoop's plan taught me how to find customers on my own. Now I control my business growth. The best part? It's a simple plan that works even when referrals slow down."
           *- Michael Rodriguez, Strategy Consultant*
 
   - type: "checklist"
     class: "services"
     header:
-      title: "Everything Included in Your 100-Day Sprint"
+      title: "What You Get in Your 100-Day Sprint"
     items:
-      - "Complete lead generation system setup and strategy"
-      - "Daily 30-minute execution tasks (Monday-Friday)"
-      - "Weekly 1-on-1 strategy and optimization sessions"
-      - "Custom messaging and positioning development"
-      - "Automated follow-up systems and templates"
-      - "Performance tracking and analytics setup"
-      - "Direct WhatsApp support throughout the program"
-      - "100% money-back guarantee if you don't get results"
+      - "A complete plan built just for your business"
+      - "Daily 30-minute tasks (Monday to Friday)"
+      - "Weekly 1-hour meetings with Anoop"
+      - "Messages that make people want to work with you"
+      - "Ways to follow up that work on their own"
+      - "Tools to see what's working"
+      - "WhatsApp help anytime during the program"
+      - "100% money-back promise if it doesn't work"
 
   - type: "grid"
     class: "about"
     header:
-      title: "Investment Options"
-      subtitle: "Choose the payment plan that works best for your business"
+      title: "How to Pay"
+      subtitle: "Pick the payment way that works best for you"
     grid_class: "grid-2"
     items:
-      - title: "One-Time Payment (Best Value)"
+      - title: "Pay All at Once (Best Deal)"
         description: |
           **₹39,600 (Save ₹5,400)**
-          - 12% discount on full program price
-          - Complete access to all 100 days
-          - All bonuses and support included
-          - Best value option
-      - title: "3-Payment Plan"
+          - You save 12% when you pay all at once
+          - Get everything for all 100 days
+          - All help and extras included
+          - Best deal
+      - title: "Pay 3 Times"
         description: |
-          **₹15,000 × 3 payments**
+          **₹15,000 × 3 times**
           - Total: ₹45,000
-          - Payment 1: At enrollment
-          - Payment 2: Day 30
-          - Payment 3: Day 60
+          - First payment: When you join
+          - Second payment: Day 30
+          - Third payment: Day 60
 
   - type: "content"
     class: "services alt-bg"
     content: |
-      ## 100% Results Guarantee
+      ## 100% Money-Back Promise
 
-      **I'm so confident this system will work for you that I'm offering a complete money-back guarantee.**
+      **I believe this will work for you. That's why I promise you can get your money back.**
 
-      If you follow the daily execution plan for 100 days and don't generate at least 10 qualified leads by day 90, I'll refund every penny you paid.
+      If you do the work every day for 100 days and don't get at least 10 good customers by day 90, I'll give you all your money back.
 
-      **No questions asked. No fine print. No hassles.**
+      **No questions asked. No tricks. Easy.**
 
-      That's how confident I am that this systematic approach will transform your lead generation from unpredictable to consistent.
+      I'm sure this plan will help you go from not knowing where customers come from to knowing you'll get them every month.
 
-      **You have nothing to lose and predictable lead flow to gain.**
+      **You can't lose. You can only get more customers.**
 
   - type: "content"
     class: "audience"
     content: |
-      ## Perfect for These Professional Service Businesses
+      ## Who This Is For
 
-      **This intensive program is designed specifically for established professional service providers who are ready for systematic growth:**
+      **This program is for service providers who are tired of depending on referrals:**
 
       ✅ **Consultants & Agencies** - Marketing, strategy, digital, creative agencies
-      ✅ **Professional Services** - Law firms, accounting practices, business consultants
-      ✅ **Tech-Enabled Services** - SaaS companies, IT service providers, software consultants
-      ✅ **Expertise-Based Businesses** - Any business that sells knowledge, skills, or specialized services
+      ✅ **Professional Services** - Law firms, accounting, business consultants
+      ✅ **Tech Services** - Software companies, IT help, tech consultants
+      ✅ **Expertise Businesses** - Any business that sells what they know or can do
 
-      **Requirements:**
-      - Established business with proven services (not just starting out)
-      - Currently experiencing inconsistent lead flow
-      - Can commit 30 minutes daily for systematic execution
-      - Ready to invest in systematic growth (not looking for quick fixes)
+      **What You Need:**
+      - Already have a business with happy clients
+      - Tired of waiting for referrals to grow
+      - Can spend 30 minutes every day doing the work
+      - Want to control your own growth (not depend on others)
 
   - type: "content"
     class: "audience alt-bg"
     content: |
-      ## Frequently Asked Questions
+      ## Questions You Might Have
 
-      **Q: How is this different from other marketing programs?**
-      A: Most marketing programs teach generic tactics. This is a complete system implementation with personal guidance, weekly optimization calls, and guaranteed results.
+      **Q: Will I still get referrals?**
+      A: Yes! This doesn't stop referrals. It adds to them. Now you'll have referrals PLUS your own way to find customers. You're not replacing referrals - you're just not depending on them anymore.
 
-      **Q: What if this doesn't work for my industry?**
-      A: I've helped 50+ businesses across dozens of industries. The systematic approach works because it's based on fundamental business principles, not industry-specific tactics. Plus, you have a 100% money-back guarantee.
+      **Q: How is this different from other programs?**
+      A: Most programs just teach ideas. This builds a real plan for YOUR business with help from Anoop every week. You get your money back if it doesn't work.
 
-      **Q: How much time does this require?**
-      A: Just 30 minutes daily (Monday-Friday) plus 1 hour weekly strategy calls. Most clients find this saves time compared to their current random marketing efforts.
+      **Q: What if this doesn't work for my kind of service?**
+      A: I've helped 50+ service providers in many different fields stop depending on referrals. This plan works because it's based on what makes all businesses work. Plus, you get your money back if it doesn't work.
 
-      **Q: When can I expect to see results?**
-      A: Most clients start seeing improved lead quality within 2-3 weeks. Consistent 10+ leads per month typically happens by day 60-90, depending on your starting point.
+      **Q: How much time do I need?**
+      A: Just 30 minutes every day (Monday to Friday) plus 1 hour every week to meet with Anoop. Most people find this takes less time than waiting and worrying about referrals.
 
-      **Q: What if I need to cancel or can't complete the program?**
-      A: You're protected by our 100% money-back guarantee. If you don't get results by day 90, you get a full refund.
+      **Q: When will I see it working?**
+      A: Most people start getting customers on their own within 2-3 weeks. Getting 10+ customers every month without depending on referrals usually happens by day 60-90.
+
+      **Q: What if I need to stop or can't finish?**
+      A: You're safe with our 100% money-back promise. If you don't get results by day 90, you get all your money back.
 
   - type: "highlight"
     class: "testimonials"
-    title: "Don't Let Another Month Pass with Unpredictable Lead Flow"
-    description: "Enroll in the 100-Day Lead Generation Sprint today and transform your business from feast-or-famine to predictable growth. Limited spots available - secure your place now."
+    title: "Stop Waiting for Referrals Today"
+    description: "Join the 100-Day Sprint now. Take control of your business. Build your own way to get 10+ customers every month. Only a few spots left - join now."
     buttons:
-      - text: "Enroll Now - ₹39,600 (Save ₹5,400)"
+      - text: "Join Now - ₹39,600 (Save ₹5,400)"
         url: "https://rzp.io/rzp/e2dPamL"
       - text: "3 Payments of ₹15,000"
         url: "https://rzp.io/rzp/GVmbLGJS"

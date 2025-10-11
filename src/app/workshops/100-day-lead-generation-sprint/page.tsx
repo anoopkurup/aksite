@@ -4,8 +4,8 @@ import { getContentPage, processHeroMedia } from "@/lib/content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "100-Day Lead Generation Sprint - Marketing Workshop",
-  description: "Build a predictable lead generation system that delivers 10+ qualified leads per month through systematic daily execution and weekly optimization.",
+  title: "Stop Waiting for Referrals - 100-Day Sprint for Service Providers",
+  description: "Tired of depending on referrals? Build your own way to get 10+ customers every month. Take control of your business growth in 100 days.",
 };
 
 export default function LeadGenerationSprintPage() {
