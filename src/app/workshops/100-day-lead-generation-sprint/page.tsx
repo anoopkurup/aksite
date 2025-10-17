@@ -4,8 +4,8 @@ import { getContentPage, processHeroMedia } from "@/lib/content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Stop Waiting for Referrals - 100-Day Sprint for Service Providers",
-  description: "Tired of depending on referrals? Build your own way to get 10+ customers every month. Take control of your business growth in 100 days.",
+  title: "100-Day Lead Generation Sprint — When Referrals Stop, Your System Starts",
+  description: "Many service businesses in India rely on referrals. But referrals alone are fragile. This sprint helps you build a reliable pipeline that works even when referrals dry up.",
 };
 
 export default function LeadGenerationSprintPage() {

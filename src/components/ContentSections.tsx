@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Link from "next/link";
 import { ContentSection, convertIconName } from "@/lib/content";
 import { processInlineMarkdown } from "@/lib/markdown";
@@ -301,9 +302,25 @@ function ContentBlock({ section, bgClass }: { section: ContentSection; bgClass: 
                 const line = lines[i];
 
                 if (line.startsWith('## ')) {
-                  processedElements.push(`<h2 class="text-4xl font-bold text-navy-900 mb-8 text-center">${line.replace('## ', '')}</h2>`);
+                  processedElements.push(`<h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 mt-12 first:mt-0 text-center">${line.replace('## ', '')}</h2>`);
                 } else if (line.startsWith('### ')) {
-                  processedElements.push(`<h3 class="text-xl font-semibold text-navy-900 mb-4">${line.replace('### ', '')}</h3>`);
+                  processedElements.push(`<h3 class="text-2xl font-bold text-navy-900 mb-6 mt-10">${line.replace('### ', '')}</h3>`);
+                } else if (line.startsWith('> ')) {
+                  // Handle blockquotes - collect consecutive blockquote lines
+                  const quoteLines: string[] = [];
+                  let j = i;
+                  while (j < lines.length && lines[j].startsWith('> ')) {
+                    const text = lines[j].replace('> ', '');
+                    if (text) {
+                      const processedText = processInlineMarkdown(text);
+                      quoteLines.push(processedText);
+                    }
+                    j++;
+                  }
+                  if (quoteLines.length > 0) {
+                    processedElements.push(`<blockquote class="border-l-4 border-cta-500 bg-gray-50 pl-6 pr-6 py-4 my-6 italic text-gray-700 text-lg leading-relaxed">${quoteLines.join('<br/><br/>')}</blockquote>`);
+                  }
+                  i = j - 1; // Skip the processed blockquote lines
                 } else if (line.startsWith('- ')) {
                   // Handle list items - collect consecutive list items
                   const listItems: string[] = [];
@@ -311,15 +328,15 @@ function ContentBlock({ section, bgClass }: { section: ContentSection; bgClass: 
                   while (j < lines.length && lines[j].startsWith('- ')) {
                     const text = lines[j].replace('- ', '');
                     const processedText = processInlineMarkdown(text);
-                    listItems.push(`<li class="flex items-start mb-2 text-gray-700 leading-relaxed"><div class="w-2 h-2 bg-cta-500 rounded-full mt-2 mr-3 flex-shrink-0"></div><span>${processedText}</span></li>`);
+                    listItems.push(`<li class="flex items-start mb-3 text-gray-700 leading-relaxed text-lg"><div class="w-2 h-2 bg-cta-500 rounded-full mt-2.5 mr-3 flex-shrink-0"></div><span>${processedText}</span></li>`);
                     j++;
                   }
-                  processedElements.push(`<ul class="mb-4">${listItems.join('')}</ul>`);
+                  processedElements.push(`<ul class="mb-8">${listItems.join('')}</ul>`);
                   i = j - 1; // Skip the processed list items
                 } else if (line.trim()) {
                   // Process inline markdown (bold, italic, links)
                   const processedText = processInlineMarkdown(line);
-                  processedElements.push(`<p class="text-gray-700 leading-relaxed mb-4">${processedText}</p>`);
+                  processedElements.push(`<p class="text-gray-700 leading-relaxed mb-6 text-lg">${processedText}</p>`);
                 }
               }
 
@@ -623,17 +640,17 @@ function TestimonialsSection({ section, bgClass }: { section: ContentSection; bg
           {section.items.map((item, index) => (
             <div key={index} className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm">
               <div className="flex items-start space-x-2 mb-4">
-                <svg className="w-6 h-6 text-white flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-8 h-8 text-cta-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                 </svg>
               </div>
-              <blockquote className="text-gray-700 mb-6 leading-relaxed">
+              <blockquote className="text-gray-700 mb-6 leading-relaxed text-base">
                 "{item.quote}"
               </blockquote>
               <div className="border-t border-gray-300 pt-4">
                 <div className="font-semibold text-navy-900">{item.author}</div>
-                <div className="text-sm text-gray-700">{item.role}</div>
-                {item.company && <div className="text-sm text-gray-700">{item.company}</div>}
+                <div className="text-sm text-gray-600">{item.role}</div>
+                {item.company && <div className="text-sm text-gray-600">{item.company}</div>}
               </div>
             </div>
           ))}
@@ -657,21 +674,27 @@ function FAQSection({ section, bgClass }: { section: ContentSection; bgClass: st
           </div>
         )}
 
-        <div className="space-y-6">
+        <Accordion type="single" collapsible className="space-y-4">
           {section.items.map((item, index) => (
-            <Card key={index} className="p-6 bg-white shadow-sm border border-gray-200">
-              <CardContent className="p-0">
-                <h3 className="text-lg font-bold text-navy-900 mb-3">{(item as any).question}</h3>
-                <div 
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="bg-white border border-gray-200 rounded-lg px-6 shadow-sm"
+            >
+              <AccordionTrigger className="text-lg font-bold text-navy-900 hover:text-navy-700 py-6">
+                {(item as any).question}
+              </AccordionTrigger>
+              <AccordionContent className="pb-6">
+                <div
                   className="text-gray-700 leading-relaxed prose prose-sm max-w-none prose-strong:text-navy-900 prose-em:text-gray-600 prose-em:italic"
-                  dangerouslySetInnerHTML={{ 
+                  dangerouslySetInnerHTML={{
                     __html: processInlineMarkdown((item as any).answer || '')
                   }}
                 />
-              </CardContent>
-            </Card>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
       </div>
     </section>
   );

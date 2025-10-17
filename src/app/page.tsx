@@ -260,7 +260,7 @@ export default function Home() {
       {/* Section Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
 
-      {/* Services Section */}
+      {/* Solutions Section */}
       <section className="py-20 px-6 bg-white relative">
         {/* Decorative background */}
         <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-cta-100/20 to-transparent rounded-full transform -translate-x-24 -translate-y-24"></div>
@@ -268,15 +268,15 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-section-title font-bold text-navy-900 mb-6">
-                Marketing That's Predictable, Professional, and Affordable.
+                Three Ways Your Marketing System Can Work
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Choose the system that fits your stage of growth — from consistent content to complete marketing operations.
+                Choose the outcome that matches your biggest marketing challenge right now.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {/* Content Growth System */}
+              {/* Build Visibility */}
               <div className="bg-white rounded-lg border border-gray-200 hover:border-navy-400 transition-all duration-300 p-8 flex flex-col h-full">
                 <div className="w-14 h-14 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -287,13 +287,16 @@ export default function Home() {
                     <polyline points="10,9 9,9 8,9"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-navy-900 mb-3">Content Growth System</h3>
+                <h3 className="text-2xl font-bold text-navy-900 mb-3">Build Visibility & Authority</h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  <strong>The Problem:</strong> You're doing great work, but nobody knows about it.
+                </p>
                 <p className="text-gray-700 mb-6 leading-relaxed flex-grow">
-                  Consistent visibility. Credible presence. Effortless execution. Get your content handled — from blogs and LinkedIn posts to newsletters — all planned, written, and published on schedule. Stay top-of-mind with your audience while focusing on your business.
+                  <strong>The Solution:</strong> Consistent content across LinkedIn, blogs, and email. Choose DIY LinkedIn activation or Done-For-You content system.
                 </p>
                 <Button asChild className="w-full bg-navy-900 hover:bg-navy-800 text-white">
-                  <Link href="/services/content-growth" className="flex items-center justify-center">
-                    Learn More
+                  <Link href="/solutions/visibility" className="flex items-center justify-center">
+                    Explore Options
                     <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="m12 5 7 7-7 7"/>
                       <path d="M5 12h14"/>
@@ -302,7 +305,7 @@ export default function Home() {
                 </Button>
               </div>
 
-              {/* Lead Generation System */}
+              {/* Generate Leads */}
               <div className="bg-white rounded-lg border border-gray-200 hover:border-navy-400 transition-all duration-300 p-8 flex flex-col h-full">
                 <div className="w-14 h-14 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -312,13 +315,16 @@ export default function Home() {
                     <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-navy-900 mb-3">Lead Generation System</h3>
+                <h3 className="text-2xl font-bold text-navy-900 mb-3">Generate Consistent Leads</h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  <strong>The Problem:</strong> Referrals are unpredictable. You need a steady pipeline.
+                </p>
                 <p className="text-gray-700 mb-6 leading-relaxed flex-grow">
-                  Turn outreach into a predictable lead engine. Reach 100+ ideal prospects every month through structured research, personalized outreach, and monthly optimization. You'll have a steady flow of relevant conversations — without hiring a sales team.
+                  <strong>The Solution:</strong> Systematic outreach creating 10+ qualified conversations monthly. Choose Done-With-You sprint or Done-For-You system.
                 </p>
                 <Button asChild className="w-full bg-navy-900 hover:bg-navy-800 text-white">
-                  <Link href="/services/lead-generation" className="flex items-center justify-center">
-                    Learn More
+                  <Link href="/solutions/leads" className="flex items-center justify-center">
+                    Explore Options
                     <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="m12 5 7 7-7 7"/>
                       <path d="M5 12h14"/>
@@ -327,7 +333,7 @@ export default function Home() {
                 </Button>
               </div>
 
-              {/* Marketing Operations Partner */}
+              {/* Complete Marketing System */}
               <div className="bg-white rounded-lg border border-gray-200 hover:border-navy-400 transition-all duration-300 p-8 flex flex-col h-full">
                 <div className="w-14 h-14 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -335,12 +341,15 @@ export default function Home() {
                     <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-navy-900 mb-3">Marketing Operations Partner</h3>
+                <h3 className="text-2xl font-bold text-navy-900 mb-3">Complete Marketing System</h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  <strong>The Problem:</strong> Marketing feels overwhelming. You want it handled completely.
+                </p>
                 <p className="text-gray-700 mb-6 leading-relaxed flex-grow">
-                  Your complete marketing system — managed and measured. Combine content, lead generation, and workflow automation under one structured program. Get a marketing function that's consistent, trackable, and aligned with your growth goals.
+                  <strong>The Solution:</strong> Full-service marketing operations combining content, leads, automation, and strategy. Done-For-You, end-to-end.
                 </p>
                 <Button asChild className="w-full bg-navy-900 hover:bg-navy-800 text-white">
-                  <Link href="/services/marketing-operations" className="flex items-center justify-center">
+                  <Link href="/solutions/complete-system" className="flex items-center justify-center">
                     Learn More
                     <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="m12 5 7 7-7 7"/>
@@ -354,7 +363,7 @@ export default function Home() {
             {/* CTA Below Cards */}
             <div className="text-center p-8 bg-navy-50 rounded-lg border border-navy-100">
               <p className="text-lg text-navy-900 mb-6">
-                <strong>Not sure which fits your business best?</strong> Let's talk.
+                <strong>Not sure which outcome fits your business best?</strong> Let's talk.
               </p>
               <Button asChild size="lg" className="bg-cta-500 hover:bg-cta-600 text-white font-semibold">
                 <Link href="/contact" className="flex items-center">

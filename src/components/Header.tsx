@@ -11,22 +11,13 @@ export default function Header() {
   const navigation = [
     { name: "About", href: "/about" },
     {
-      name: "Services",
-      href: "/services",
+      name: "Solutions",
+      href: "/solutions",
       dropdown: [
-        { name: "All Services", href: "/services" },
-        { name: "Content Growth System", href: "/services/content-growth" },
-        { name: "Lead Generation System", href: "/services/lead-generation" },
-        { name: "Marketing Operations Partner", href: "/services/marketing-operations" },
-      ]
-    },
-    {
-      name: "Workshops",
-      href: "/workshops",
-      dropdown: [
-        { name: "All Workshops", href: "/workshops" },
-        { name: "100-Day Lead Generation Sprint", href: "/workshops/100-day-lead-generation-sprint" },
-        { name: "LinkedIn Sales Activation", href: "/workshops/linkedin-sales-activation" },
+        { name: "All Solutions", href: "/solutions" },
+        { name: "Build Visibility", href: "/solutions/visibility" },
+        { name: "Generate Leads", href: "/solutions/leads" },
+        { name: "Complete Marketing System", href: "/solutions/complete-system" },
       ]
     },
     { name: "Blog", href: "/blog" },

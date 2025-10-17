@@ -26,30 +26,96 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Workshop and service redirects
+      // Workshop and service redirects (old URLs)
       {
         source: '/lead-generation-strategy-workshop',
-        destination: '/workshops',
+        destination: '/solutions/leads',
         permanent: true,
       },
       {
         source: '/linkedin-marketing',
-        destination: '/workshops',
+        destination: '/solutions/visibility',
         permanent: true,
       },
       {
         source: '/linkedin-thoughtleadership',
-        destination: '/workshops',
+        destination: '/solutions/visibility',
         permanent: true,
       },
       {
         source: '/content-factory-creators-membership',
-        destination: '/workshops',
+        destination: '/solutions/visibility',
         permanent: true,
       },
       {
         source: '/find-your-tg',
-        destination: '/workshops',
+        destination: '/solutions',
+        permanent: true,
+      },
+
+      // New redirects from old structure to outcome-based structure
+      // Only redirect overview pages, keep detail pages accessible
+      {
+        source: '/services',
+        destination: '/solutions',
+        permanent: true,
+      },
+      {
+        source: '/workshops',
+        destination: '/solutions',
+        permanent: true,
+      },
+
+      // Archived workshops redirects
+      {
+        source: '/workshops/ai-lead-machine',
+        destination: '/solutions',
+        permanent: true,
+      },
+      {
+        source: '/workshops/100-days-sprint',
+        destination: '/solutions/leads',
+        permanent: true,
+      },
+
+      // Archived workflows redirects
+      {
+        source: '/workflows',
+        destination: '/solutions',
+        permanent: true,
+      },
+      {
+        source: '/workflows/ai-lead-machine',
+        destination: '/solutions',
+        permanent: true,
+      },
+      {
+        source: '/workflows/linkedin-post-creator',
+        destination: '/solutions/visibility',
+        permanent: true,
+      },
+      {
+        source: '/workflows/blog-article-writer',
+        destination: '/solutions/visibility',
+        permanent: true,
+      },
+      {
+        source: '/ai-workflows',
+        destination: '/solutions',
+        permanent: true,
+      },
+
+      // Archived ebooks redirect
+      {
+        source: '/ebooks',
+        destination: '/blog',
+        permanent: true,
+      },
+
+      // Consulting page redirect
+      {
+        source: '/consulting',
+        destination: '/solutions',
         permanent: true,
       },
 
