@@ -11,7 +11,7 @@ story:
   image: "/images/about/anoop-bw.webp"
   title: "My Story and Approach"
   content: |
-    I started my career in research engineering at a technology startup, where I quickly learned that great products don't sell themselves. I moved into intellectual property analysis, helping companies understand competitive landscapes and protect their innovations. Then I made the leap into building businesses of my own—and that's when I truly understood the marketing challenge firsthand.
+    I started my career in research engineering at GE, where I quickly learned that great products requires a lot of effort to bring to market. I moved into intellectual property analysis, helping companies understand competitive landscapes and protect their innovations. Then I made the leap into building businesses of my own, and that's when I truly understood the marketing challenge firsthand.
     
     This journey taught me that marketing success isn't about following the latest trends or using the fanciest tools. It's about building systems that work consistently, regardless of market conditions or team changes.
     
