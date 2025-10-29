@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+        port: '',
+        pathname: '/vi/**',
+      },
+    ],
+  },
   async redirects() {
     return [
       // Blog redirects
@@ -105,10 +115,10 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Archived ebooks redirect
+      // Archived ebooks redirect to new resources section
       {
         source: '/ebooks',
-        destination: '/blog',
+        destination: '/resources/ebooks',
         permanent: true,
       },
 

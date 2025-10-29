@@ -20,6 +20,15 @@ export default function Header() {
         { name: "Complete Marketing System", href: "/solutions/complete-system" },
       ]
     },
+    {
+      name: "Resources",
+      href: "/resources/webinars",
+      dropdown: [
+        { name: "Webinars", href: "/resources/webinars" },
+        // { name: "Case Studies", href: "/case-studies" },
+        // { name: "E-books", href: "/resources/ebooks" },
+      ]
+    },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
