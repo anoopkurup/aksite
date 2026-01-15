@@ -142,7 +142,32 @@ solution:
 
     With 15+ years of experience across strategy, systems thinking, and AI, I've helped consultants, SaaS firms, agencies, and professional service companies double their inbound leads, shorten sales cycles, and attract better clients.
 
-    **And I can do the same for you — starting with clarity, then building strategy, and finally installing the systems to keep your pipeline full.**
+solutions:
+  title: "Three Ways Your Marketing System Can Work"
+  subtitle: "Choose the outcome that matches your biggest marketing challenge right now."
+  items:
+    - icon: "icon-content"
+      title: "Build Visibility & Authority"
+      problem: "You're doing great work, but nobody knows about it."
+      solution: "Consistent content across LinkedIn, blogs, and email. Choose DIY LinkedIn activation or Done-For-You content system."
+      link: "/solutions/visibility"
+      link_text: "Explore Options"
+    - icon: "icon-leads"
+      title: "Generate Consistent Leads"
+      problem: "Referrals are unpredictable. You need a steady pipeline."
+      solution: "Systematic outreach creating 10+ qualified conversations monthly. Choose Done-With-You sprint or Done-For-You system."
+      link: "/solutions/leads"
+      link_text: "Explore Options"
+    - icon: "icon-system"
+      title: "Complete Marketing System"
+      problem: "Marketing feels overwhelming. You want it handled completely."
+      solution: "Full-service marketing operations combining content, leads, automation, and strategy. Done-For-You, end-to-end."
+      link: "/solutions/complete-system"
+      link_text: "Learn More"
+  cta:
+    text: "Not sure which outcome fits your business best? Let's talk."
+    button_text: "Schedule Free Strategy Call"
+    button_link: "/contact"
 
 benefits:
   title: "Here's what happens when your marketing works like a system:"

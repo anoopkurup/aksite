@@ -66,11 +66,6 @@ const nextConfig = {
       // New redirects from old structure to outcome-based structure
       // Only redirect overview pages, keep detail pages accessible
       {
-        source: '/services',
-        destination: '/solutions',
-        permanent: true,
-      },
-      {
         source: '/workshops',
         destination: '/solutions',
         permanent: true,

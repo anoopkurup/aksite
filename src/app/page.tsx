@@ -16,6 +16,7 @@ export default function Home() {
   // Get all content sections from MDX
   const problemSection = homepageContent?.frontmatter?.problem;
   const solutionSection = homepageContent?.frontmatter?.solution;
+  const solutionsSection = homepageContent?.frontmatter?.solutions;
   const benefitsSection = homepageContent?.frontmatter?.benefits;
   const testimonials = homepageContent?.frontmatter?.testimonials?.items || [];
   const howItWorksSection = homepageContent?.frontmatter?.how_it_works;
@@ -260,124 +261,88 @@ export default function Home() {
       {/* Section Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
 
-      {/* Solutions Section */}
-      <section className="py-20 px-6 bg-white relative">
-        {/* Decorative background */}
-        <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-cta-100/20 to-transparent rounded-full transform -translate-x-24 -translate-y-24"></div>
-        <div className="relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-section-title font-bold text-navy-900 mb-6">
-                Three Ways Your Marketing System Can Work
-              </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Choose the outcome that matches your biggest marketing challenge right now.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {/* Build Visibility */}
-              <div className="bg-white rounded-lg border border-gray-200 hover:border-navy-400 transition-all duration-300 p-8 flex flex-col h-full">
-                <div className="w-14 h-14 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                    <polyline points="14,2 14,8 20,8"/>
-                    <line x1="16" y1="13" x2="8" y2="13"/>
-                    <line x1="16" y1="17" x2="8" y2="17"/>
-                    <polyline points="10,9 9,9 8,9"/>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-navy-900 mb-3">Build Visibility & Authority</h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  <strong>The Problem:</strong> You're doing great work, but nobody knows about it.
+      {/* Solutions Section - From MDX */}
+      {solutionsSection && (
+        <section className="py-20 px-6 bg-white relative">
+          {/* Decorative background */}
+          <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-cta-100/20 to-transparent rounded-full transform -translate-x-24 -translate-y-24"></div>
+          <div className="relative z-10">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-section-title font-bold text-navy-900 mb-6">
+                  {solutionsSection.title}
+                </h2>
+                <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                  {solutionsSection.subtitle}
                 </p>
-                <p className="text-gray-700 mb-6 leading-relaxed flex-grow">
-                  <strong>The Solution:</strong> Consistent content across LinkedIn, blogs, and email. Choose DIY LinkedIn activation or Done-For-You content system.
-                </p>
-                <Button asChild className="w-full bg-navy-900 hover:bg-navy-800 text-white">
-                  <Link href="/solutions/visibility" className="flex items-center justify-center">
-                    Explore Options
-                    <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="m12 5 7 7-7 7"/>
-                      <path d="M5 12h14"/>
-                    </svg>
-                  </Link>
-                </Button>
               </div>
 
-              {/* Generate Leads */}
-              <div className="bg-white rounded-lg border border-gray-200 hover:border-navy-400 transition-all duration-300 p-8 flex flex-col h-full">
-                <div className="w-14 h-14 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
-                    <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
-                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
-                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-navy-900 mb-3">Generate Consistent Leads</h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  <strong>The Problem:</strong> Referrals are unpredictable. You need a steady pipeline.
-                </p>
-                <p className="text-gray-700 mb-6 leading-relaxed flex-grow">
-                  <strong>The Solution:</strong> Systematic outreach creating 10+ qualified conversations monthly. Choose Done-With-You sprint or Done-For-You system.
-                </p>
-                <Button asChild className="w-full bg-navy-900 hover:bg-navy-800 text-white">
-                  <Link href="/solutions/leads" className="flex items-center justify-center">
-                    Explore Options
-                    <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="m12 5 7 7-7 7"/>
-                      <path d="M5 12h14"/>
-                    </svg>
-                  </Link>
-                </Button>
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
+                {solutionsSection.items?.map((item: any, index: number) => (
+                  <div key={index} className="bg-white rounded-lg border border-gray-200 hover:border-navy-400 transition-all duration-300 p-8 flex flex-col h-full">
+                    <div className="w-14 h-14 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+                      {item.icon === 'icon-content' && (
+                        <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                          <polyline points="14,2 14,8 20,8"/>
+                          <line x1="16" y1="13" x2="8" y2="13"/>
+                          <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                      )}
+                      {item.icon === 'icon-leads' && (
+                        <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                          <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                        </svg>
+                      )}
+                      {item.icon === 'icon-system' && (
+                        <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="3"/>
+                          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                      )}
+                    </div>
+                    <h3 className="text-2xl font-bold text-navy-900 mb-3">{item.title}</h3>
+                    <p className="text-gray-700 mb-4 leading-relaxed">
+                      <strong>The Problem:</strong> {item.problem}
+                    </p>
+                    <p className="text-gray-700 mb-6 leading-relaxed flex-grow">
+                      <strong>The Solution:</strong> {item.solution}
+                    </p>
+                    <Button asChild className="w-full bg-navy-900 hover:bg-navy-800 text-white">
+                      <Link href={item.link} className="flex items-center justify-center">
+                        {item.link_text}
+                        <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="m12 5 7 7-7 7"/>
+                          <path d="M5 12h14"/>
+                        </svg>
+                      </Link>
+                    </Button>
+                  </div>
+                ))}
               </div>
 
-              {/* Complete Marketing System */}
-              <div className="bg-white rounded-lg border border-gray-200 hover:border-navy-400 transition-all duration-300 p-8 flex flex-col h-full">
-                <div className="w-14 h-14 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="3"/>
-                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                  </svg>
+              {/* CTA Below Cards */}
+              {solutionsSection.cta && (
+                <div className="text-center p-8 bg-navy-50 rounded-lg border border-navy-100">
+                  <p className="text-lg text-navy-900 mb-6">
+                    <strong>{solutionsSection.cta.text}</strong>
+                  </p>
+                  <Button asChild size="lg" className="bg-cta-500 hover:bg-cta-600 text-white font-semibold">
+                    <Link href={solutionsSection.cta.button_link} className="flex items-center">
+                      {solutionsSection.cta.button_text}
+                      <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m12 5 7 7-7 7"/>
+                        <path d="M5 12h14"/>
+                      </svg>
+                    </Link>
+                  </Button>
                 </div>
-                <h3 className="text-2xl font-bold text-navy-900 mb-3">Complete Marketing System</h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  <strong>The Problem:</strong> Marketing feels overwhelming. You want it handled completely.
-                </p>
-                <p className="text-gray-700 mb-6 leading-relaxed flex-grow">
-                  <strong>The Solution:</strong> Full-service marketing operations combining content, leads, automation, and strategy. Done-For-You, end-to-end.
-                </p>
-                <Button asChild className="w-full bg-navy-900 hover:bg-navy-800 text-white">
-                  <Link href="/solutions/complete-system" className="flex items-center justify-center">
-                    Learn More
-                    <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="m12 5 7 7-7 7"/>
-                      <path d="M5 12h14"/>
-                    </svg>
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* CTA Below Cards */}
-            <div className="text-center p-8 bg-navy-50 rounded-lg border border-navy-100">
-              <p className="text-lg text-navy-900 mb-6">
-                <strong>Not sure which outcome fits your business best?</strong> Let's talk.
-              </p>
-              <Button asChild size="lg" className="bg-cta-500 hover:bg-cta-600 text-white font-semibold">
-                <Link href="/contact" className="flex items-center">
-                  Book a Discovery Call
-                  <svg className="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="m12 5 7 7-7 7"/>
-                    <path d="M5 12h14"/>
-                  </svg>
-                </Link>
-              </Button>
+              )}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Section Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
