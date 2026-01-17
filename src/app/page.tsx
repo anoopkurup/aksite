@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Anoop Kurup - Business Clarity Architect",
-  description: "I help services businesses diagnose what's actually broken — and build the foundation for growth that doesn't depend on luck.",
+  description: "I help services businesses diagnose what's actually broken, and build the foundation for growth that doesn't depend on luck.",
 };
 
 export default function HomePage() {
@@ -120,7 +120,7 @@ export default function HomePage() {
 
           {/* Main headline */}
           <h1 className="font-serif text-hero-mobile md:text-hero text-navy-900 mb-6 leading-tight">
-            Referrals work. Nothing else does.
+            Dependent on Referrals? How will you grow?
           </h1>
           <p className="font-serif text-display text-slate-400 mb-10">
             Let's fix that.
@@ -129,13 +129,13 @@ export default function HomePage() {
           {/* Subhead */}
           <div className="font-sans text-body-lg text-slate-500 max-w-2xl mx-auto mb-8 leading-relaxed space-y-4">
             <p>
-              You've built expertise over 10+ years. Clients love your work. But growth feels stuck — dependent on who happens to refer you this month.
+              You've built expertise over 10+ years. Clients love your work. But growth feels stuck, dependent on who happens to refer you this month.
             </p>
             <p className="text-navy-800 font-medium">
               The problem isn't your marketing. It's your clarity.
             </p>
             <p>
-              I help services businesses diagnose what's actually broken — and build the foundation for growth that doesn't depend on luck.
+              I help services businesses diagnose what's actually broken, and build the foundation for growth that doesn't depend on luck.
             </p>
           </div>
 
