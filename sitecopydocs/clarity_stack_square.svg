@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="500" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <text x="250" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a1a1a" text-anchor="middle">THE CLARITY STACK</text>
+  <text x="250" y="60" font-family="Arial, sans-serif" font-size="10" fill="#888888" text-anchor="middle">The Business Clarity Architecture™</text>
+  
+  <!-- Layer 3: CONVERSION -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="85" width="400" height="100" rx="6" fill="#FCE4D6" stroke="#C4704F" stroke-width="2"/>
+  </g>
+  <text x="70" y="115" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#C4704F">LAYER 3</text>
+  <text x="70" y="140" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">CONVERSION</text>
+  <text x="70" y="162" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#666666">How do they become clients?</text>
+  <text x="300" y="125" font-family="Arial, sans-serif" font-size="10" fill="#555555">• Lead Generation</text>
+  <text x="300" y="142" font-family="Arial, sans-serif" font-size="10" fill="#555555">• Offers &amp; Pricing</text>
+  <text x="300" y="159" font-family="Arial, sans-serif" font-size="10" fill="#555555">• Sales Process</text>
+  
+  <!-- Layer 2: POSITIONING -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="200" width="400" height="100" rx="6" fill="#FFF2CC" stroke="#D4A84B" stroke-width="2"/>
+  </g>
+  <text x="70" y="230" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#B8860B">LAYER 2</text>
+  <text x="70" y="255" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">POSITIONING</text>
+  <text x="70" y="277" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#666666">Why should they choose you?</text>
+  <text x="300" y="240" font-family="Arial, sans-serif" font-size="10" fill="#555555">• Differentiation</text>
+  <text x="300" y="257" font-family="Arial, sans-serif" font-size="10" fill="#555555">• Messaging</text>
+  <text x="300" y="274" font-family="Arial, sans-serif" font-size="10" fill="#555555">• Category Ownership</text>
+  
+  <!-- Layer 1: STRATEGY -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="315" width="400" height="100" rx="6" fill="#E2EFDA" stroke="#4A7C59" stroke-width="2"/>
+  </g>
+  <text x="70" y="345" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A7C59">LAYER 1</text>
+  <text x="70" y="370" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">STRATEGY</text>
+  <text x="70" y="392" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#666666">Where do you play?</text>
+  <text x="300" y="355" font-family="Arial, sans-serif" font-size="10" fill="#555555">• Target Market</text>
+  <text x="300" y="372" font-family="Arial, sans-serif" font-size="10" fill="#555555">• Problem Focus</text>
+  <text x="300" y="389" font-family="Arial, sans-serif" font-size="10" fill="#555555">• Service Scope</text>
+  
+  <!-- Connection lines -->
+  <line x1="250" y1="185" x2="250" y2="200" stroke="#CCCCCC" stroke-width="2" stroke-dasharray="3,2"/>
+  <line x1="250" y1="300" x2="250" y2="315" stroke="#CCCCCC" stroke-width="2" stroke-dasharray="3,2"/>
+  
+  <!-- Footer insight -->
+  <rect x="50" y="435" width="400" height="40" rx="4" fill="#F5F5F5"/>
+  <text x="250" y="460" font-family="Arial, sans-serif" font-size="11" fill="#666666" text-anchor="middle" font-style="italic">Fix from the bottom up. The sequence matters.</text>
+  
+  <!-- Watermark -->
+  <text x="490" y="492" font-family="Arial, sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">anoopkurup.com</text>
+</svg>

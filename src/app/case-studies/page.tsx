@@ -1,7 +1,6 @@
 import PageTemplate from "@/components/PageTemplate";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Newsletter from "@/components/Newsletter";
 import { getContentPage, processHeroMedia } from "@/lib/content";
 
 export default function CaseStudiesPage() {

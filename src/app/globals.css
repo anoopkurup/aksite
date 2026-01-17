@@ -4,32 +4,46 @@
 
 @layer base {
   :root {
-    /* New Light Theme - Professional & Clean */
-    --background: 0 0% 100%; /* #FFFFFF white background (60%) */
-    --foreground: 222 84% 13%; /* #1E3A8A navy text (30%) */
-    --card: 0 0% 98%; /* #FAFAFA off-white cards (60%) */
-    --card-foreground: 222 84% 13%; /* #1E3A8A navy text (30%) */
-    --popover: 0 0% 100%; /* #FFFFFF white popover (60%) */
-    --popover-foreground: 222 84% 13%; /* #1E3A8A navy text (30%) */
-    --primary: 222 84% 13%; /* #1E3A8A navy primary (30%) */
-    --primary-foreground: 0 0% 100%; /* #FFFFFF white text on primary */
-    --secondary: 0 0% 96%; /* #F5F5F5 light gray secondary (60%) */
-    --secondary-foreground: 222 84% 13%; /* #1E3A8A navy text (30%) */
-    --muted: 0 0% 96%; /* #F5F5F5 light gray muted (60%) */
-    --muted-foreground: 215 20% 45%; /* #6B7280 gray text */
-    --accent: 24 95% 53%; /* #F97316 orange accent/CTA (10%) */
-    --accent-foreground: 0 0% 100%; /* #FFFFFF white text on accent */
-    --destructive: 0 84% 60%; /* #EF4444 red destructive */
-    --destructive-foreground: 0 0% 100%; /* #FFFFFF white text on destructive */
-    --border: 214 32% 91%; /* #E5E7EB light gray border */
-    --input: 0 0% 100%; /* #FFFFFF white input background */
-    --ring: 24 95% 53%; /* #F97316 orange focus ring (CTA color) */
-    --chart-1: 222 84% 13%; /* #1E3A8A navy */
-    --chart-2: 217 91% 60%; /* #3B82F6 blue */
-    --chart-3: 24 95% 53%; /* #F97316 orange */
-    --chart-4: 142 76% 36%; /* #10B981 green */
-    --chart-5: 262 83% 58%; /* #8B5CF6 purple */
-    --radius: 0.5rem;
+    /* Minimalist Theme - Ultra Clean */
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 222 47% 11%; /* Slate-900 #0F172A */
+    --card: 210 40% 98%; /* Slate-50 #F8FAFC */
+    --card-foreground: 222 47% 11%; /* Slate-900 */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 222 47% 11%; /* Slate-900 */
+    --primary: 215 25% 27%; /* Slate-800 #1E293B */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 210 40% 96%; /* Slate-100 #F1F5F9 */
+    --secondary-foreground: 215 25% 27%; /* Slate-800 */
+    --muted: 210 40% 96%; /* Slate-100 */
+    --muted-foreground: 215 16% 47%; /* Slate-500 #64748B */
+    --accent: 30 6% 63%; /* Stone-400 - subtle warm */
+    --accent-foreground: 222 47% 11%; /* Slate-900 */
+    --destructive: 0 84% 60%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 214 32% 91%; /* Very subtle border */
+    --input: 0 0% 100%; /* White */
+    --ring: 222 47% 11%; /* Slate-900 for focus */
+    --chart-1: 215 25% 27%;
+    --chart-2: 215 16% 47%;
+    --chart-3: 30 6% 63%;
+    --chart-4: 142 76% 36%;
+    --chart-5: 262 83% 58%;
+    --radius: 0.25rem;
+
+    /* Minimalist specific colors */
+    --slate-50: 210 40% 98%;
+    --slate-100: 210 40% 96%;
+    --slate-200: 214 32% 91%;
+    --slate-300: 213 27% 84%;
+    --slate-400: 215 20% 65%;
+    --slate-500: 215 16% 47%;
+    --slate-600: 215 19% 35%;
+    --slate-800: 215 25% 27%;
+    --slate-900: 222 47% 11%;
+    --stone-300: 24 6% 83%;
+    --stone-400: 24 6% 63%;
+    --stone-500: 25 5% 45%;
   }
 
   .dark {

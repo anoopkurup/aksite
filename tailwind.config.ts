@@ -187,27 +187,76 @@ const config: Config = {
   			}
   		},
   		fontFamily: {
-  			display: [
+  			sans: [
+  				'var(--font-sans)',
   				'Inter',
   				'system-ui',
   				'sans-serif'
   			],
+  			serif: [
+  				'var(--font-serif)',
+  				'Cormorant Garamond',
+  				'Georgia',
+  				'serif'
+  			],
+  			display: [
+  				'var(--font-serif)',
+  				'Cormorant Garamond',
+  				'Georgia',
+  				'serif'
+  			],
   			body: [
+  				'var(--font-sans)',
   				'Inter',
   				'system-ui',
   				'sans-serif'
   			]
   		},
   		fontSize: {
-  			// Hero title - 48px (matches style guide)
+  			// New minimalist typography scale
   			'hero': [
-  				'3rem',
+  				'4.5rem',
   				{
-  					lineHeight: '1.08',
+  					lineHeight: '1.05',
+  					letterSpacing: '-0.03em'
+  				}
+  			],
+  			'hero-mobile': [
+  				'2.5rem',
+  				{
+  					lineHeight: '1.1',
   					letterSpacing: '-0.02em'
   				}
   			],
-  			// Page title - 36px (matches style guide)  
+  			'display': [
+  				'3rem',
+  				{
+  					lineHeight: '1.1',
+  					letterSpacing: '-0.02em'
+  				}
+  			],
+  			'title': [
+  				'1.875rem',
+  				{
+  					lineHeight: '1.2',
+  					letterSpacing: '-0.01em'
+  				}
+  			],
+  			'body-lg': [
+  				'1.25rem',
+  				{
+  					lineHeight: '1.7',
+  					letterSpacing: '0em'
+  				}
+  			],
+  			'body': [
+  				'1.125rem',
+  				{
+  					lineHeight: '1.7',
+  					letterSpacing: '0em'
+  				}
+  			],
+  			// Legacy sizes for compatibility
   			'page-title': [
   				'2.25rem',
   				{
@@ -215,7 +264,6 @@ const config: Config = {
   					letterSpacing: '-0.01em'
   				}
   			],
-  			// Section title - 30px (matches style guide)
   			'section-title': [
   				'1.875rem',
   				{
@@ -223,7 +271,6 @@ const config: Config = {
   					letterSpacing: '-0.01em'
   				}
   			],
-  			// Subsection - 24px (matches style guide)
   			'subsection': [
   				'1.5rem',
   				{
@@ -265,7 +312,13 @@ const config: Config = {
   			'18': '4.5rem',
   			'88': '22rem',
   			'112': '28rem',
-  			'128': '32rem'
+  			'128': '32rem',
+  			// Minimalist generous spacing
+  			'section': '8rem',
+  			'section-md': '6rem',
+  			'section-sm': '4rem',
+  			'content': '4rem',
+  			'element': '2rem'
   		},
   		maxWidth: {
   			'8xl': '88rem',
@@ -278,6 +331,10 @@ const config: Config = {
   			'gradient-subtle': 'linear-gradient(135deg, #f9fafb 0%, #f4f4f5 100%)'
   		},
   		boxShadow: {
+  			// Minimalist shadows
+  			'subtle': '0 1px 2px 0 rgb(0 0 0 / 0.03)',
+  			'none': 'none',
+  			// Legacy shadows for compatibility
   			soft: '0 2px 15px -3px rgba(30, 58, 138, 0.08), 0 10px 20px -2px rgba(30, 58, 138, 0.05)',
   			medium: '0 4px 25px -5px rgba(30, 58, 138, 0.12), 0 10px 10px -5px rgba(30, 58, 138, 0.06)',
   			strong: '0 10px 40px -10px rgba(30, 58, 138, 0.15), 0 2px 6px 0px rgba(30, 58, 138, 0.08)',

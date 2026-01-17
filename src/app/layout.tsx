@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
-import ClientLayout from "@/components/ClientLayout";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-serif',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "Anoop Kurup - Marketing Systems for Professional Services",
@@ -20,12 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased`}>
         <Header />
         <main className="min-h-screen">
           {children}
         </main>
-        <ClientLayout />
         <Footer />
       </body>
     </html>

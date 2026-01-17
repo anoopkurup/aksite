@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Subtle shadow for depth -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- Gradient for arrow -->
+    <linearGradient id="arrowGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A7C59"/>
+      <stop offset="50%" style="stop-color:#D4A84B"/>
+      <stop offset="100%" style="stop-color:#C4704F"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1a1a1a" text-anchor="middle">THE CLARITY STACK</text>
+  <text x="400" y="72" font-family="Arial, sans-serif" font-size="13" fill="#666666" text-anchor="middle">The Business Clarity Architecture™</text>
+  
+  <!-- Layer 3: CONVERSION (Top) -->
+  <g filter="url(#shadow)">
+    <rect x="120" y="100" width="560" height="120" rx="8" fill="#FCE4D6" stroke="#C4704F" stroke-width="2"/>
+  </g>
+  <text x="150" y="135" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C4704F">LAYER 3</text>
+  <text x="150" y="165" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a1a1a">CONVERSION</text>
+  <text x="150" y="190" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#555555">How do they become clients?</text>
+  <text x="430" y="145" font-family="Arial, sans-serif" font-size="12" fill="#444444">Lead Generation</text>
+  <text x="430" y="167" font-family="Arial, sans-serif" font-size="12" fill="#444444">Offers &amp; Packaging</text>
+  <text x="430" y="189" font-family="Arial, sans-serif" font-size="12" fill="#444444">Pricing &amp; Sales Process</text>
+  <circle cx="415" cy="141" r="3" fill="#C4704F"/>
+  <circle cx="415" cy="163" r="3" fill="#C4704F"/>
+  <circle cx="415" cy="185" r="3" fill="#C4704F"/>
+  
+  <!-- Layer 2: POSITIONING (Middle) -->
+  <g filter="url(#shadow)">
+    <rect x="120" y="240" width="560" height="120" rx="8" fill="#FFF2CC" stroke="#D4A84B" stroke-width="2"/>
+  </g>
+  <text x="150" y="275" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#B8860B">LAYER 2</text>
+  <text x="150" y="305" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a1a1a">POSITIONING</text>
+  <text x="150" y="330" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#555555">Why should they choose you?</text>
+  <text x="430" y="285" font-family="Arial, sans-serif" font-size="12" fill="#444444">Differentiation</text>
+  <text x="430" y="307" font-family="Arial, sans-serif" font-size="12" fill="#444444">Messaging &amp; Story</text>
+  <text x="430" y="329" font-family="Arial, sans-serif" font-size="12" fill="#444444">Category Ownership</text>
+  <circle cx="415" cy="281" r="3" fill="#D4A84B"/>
+  <circle cx="415" cy="303" r="3" fill="#D4A84B"/>
+  <circle cx="415" cy="325" r="3" fill="#D4A84B"/>
+  
+  <!-- Layer 1: STRATEGY (Bottom/Foundation) -->
+  <g filter="url(#shadow)">
+    <rect x="120" y="380" width="560" height="120" rx="8" fill="#E2EFDA" stroke="#4A7C59" stroke-width="2"/>
+  </g>
+  <text x="150" y="415" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#4A7C59">LAYER 1</text>
+  <text x="150" y="445" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a1a1a">STRATEGY</text>
+  <text x="150" y="470" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#555555">Where do you play?</text>
+  <text x="430" y="425" font-family="Arial, sans-serif" font-size="12" fill="#444444">Target Market</text>
+  <text x="430" y="447" font-family="Arial, sans-serif" font-size="12" fill="#444444">Problem Focus</text>
+  <text x="430" y="469" font-family="Arial, sans-serif" font-size="12" fill="#444444">Service Scope</text>
+  <circle cx="415" cy="421" r="3" fill="#4A7C59"/>
+  <circle cx="415" cy="443" r="3" fill="#4A7C59"/>
+  <circle cx="415" cy="465" r="3" fill="#4A7C59"/>
+  
+  <!-- Upward Arrow on the right -->
+  <path d="M720 470 L720 140 L735 160 M720 140 L705 160" stroke="url(#arrowGradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="720" y="495" font-family="Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">Build</text>
+  <text x="720" y="507" font-family="Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">from here</text>
+  
+  <!-- Connection indicators between layers -->
+  <line x1="400" y1="220" x2="400" y2="240" stroke="#CCCCCC" stroke-width="2" stroke-dasharray="4,3"/>
+  <line x1="400" y1="360" x2="400" y2="380" stroke="#CCCCCC" stroke-width="2" stroke-dasharray="4,3"/>
+  
+  <!-- Footer insight -->
+  <rect x="120" y="530" width="560" height="50" rx="6" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="400" y="552" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle" font-style="italic">You can't fix Conversion if Positioning is broken.</text>
+  <text x="400" y="570" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle" font-style="italic">You can't fix Positioning if Strategy is unclear.</text>
+  
+  <!-- Watermark -->
+  <text x="790" y="592" font-family="Arial, sans-serif" font-size="9" fill="#AAAAAA" text-anchor="end">anoopkurup.com</text>
+</svg>

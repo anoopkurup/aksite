@@ -6,7 +6,7 @@ export const metadata = {
   description: "I help services businesses diagnose what's actually broken — and build the foundation for growth that doesn't depend on luck.",
 };
 
-export default function HomePage() {
+export default function SampleHomepage() {
   const symptoms = [
     {
       title: "Price Comparison",
@@ -41,7 +41,6 @@ export default function HomePage() {
       bestFor: "You're not sure what's actually broken",
       description: "A focused session to audit your Clarity Stack and identify where the real problem lies. You'll leave knowing exactly which layer needs work — and what to do about it.",
       outcome: "Clear diagnosis + action plan",
-      href: "/diagnose",
     },
     {
       tier: "Build",
@@ -49,7 +48,6 @@ export default function HomePage() {
       bestFor: "You know what's broken and want to fix it fast",
       description: "An intensive engagement to rebuild one or more layers of your Clarity Stack. We work together to define your strategy, sharpen your positioning, or fix your conversion system.",
       outcome: "Rebuilt foundation ready for growth",
-      href: "/build",
     },
     {
       tier: "Partner",
@@ -57,7 +55,6 @@ export default function HomePage() {
       bestFor: "You want a thinking partner as you grow",
       description: "A retainer relationship for founders who want ongoing clarity as their business evolves. Strategy sessions, positioning reviews, and a sounding board for decisions that matter.",
       outcome: "Sustained clarity as you scale",
-      href: "/partner",
     },
   ];
 
@@ -267,15 +264,11 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Link
-                key={index}
-                href={service.href}
-                className="bg-white p-8 border border-slate-100 hover:border-navy-200 transition-colors duration-300 group"
-              >
+              <div key={index} className="bg-white p-8 border border-slate-100 hover:border-navy-200 transition-colors duration-300">
                 <p className="font-sans text-sm text-cta-600 uppercase tracking-widest mb-2 font-medium">
                   {service.tier}
                 </p>
-                <h3 className="font-serif text-title text-navy-900 mb-4 group-hover:text-navy-700 transition-colors">
+                <h3 className="font-serif text-title text-navy-900 mb-4">
                   {service.title}
                 </h3>
                 <p className="font-sans text-sm text-slate-600 mb-4">
@@ -290,7 +283,7 @@ export default function HomePage() {
                     {service.outcome}
                   </p>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
 

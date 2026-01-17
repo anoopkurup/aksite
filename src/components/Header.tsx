@@ -1,180 +1,248 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { usePathname } from "next/navigation";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const pathname = usePathname();
 
-  const navigation = [
-    { name: "About", href: "/about" },
-    {
-      name: "Solutions",
-      href: "/solutions",
-      dropdown: [
-        { name: "All Solutions", href: "/solutions" },
-        { name: "Build Visibility", href: "/solutions/visibility" },
-        { name: "Generate Leads", href: "/solutions/leads" },
-        { name: "Complete Marketing System", href: "/solutions/complete-system" },
-      ]
-    },
-    {
-      name: "Resources",
-      href: "/resources/webinars",
-      dropdown: [
-        { name: "Webinars", href: "/resources/webinars" },
-        // { name: "Case Studies", href: "/case-studies" },
-        // { name: "E-books", href: "/resources/ebooks" },
-      ]
-    },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+  const services = [
+    { name: "Diagnose", href: "/diagnose", description: "Clarity Diagnosis Session" },
+    { name: "Build", href: "/build", description: "Clarity Sprint" },
+    { name: "Partner", href: "/partner", description: "Ongoing Advisory" },
   ];
 
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
+  const isServicesActive = services.some(service => pathname.startsWith(service.href));
+
   return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-navy-900 focus-enhanced">
-              Anoop Kurup
-            </Link>
-          </div>
+    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-slate-100">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="font-serif text-xl text-navy-900 tracking-tight hover:text-slate-600 transition-colors"
+          >
+            Anoop Kurup
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    className="relative"
-                    onMouseEnter={() => {
-                      if (dropdownTimeoutRef.current) {
-                        clearTimeout(dropdownTimeoutRef.current);
-                      }
-                      setOpenDropdown(item.name);
-                    }}
-                    onMouseLeave={() => {
-                      dropdownTimeoutRef.current = setTimeout(() => {
-                        setOpenDropdown(null);
-                      }, 200);
-                    }}
-                  >
-                    <Link
-                      href={item.href}
-                      className="text-navy-900 hover:text-navy-700 transition-colors duration-200 font-medium focus-enhanced flex items-center"
-                    >
-                      {item.name}
-                      <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </Link>
-                    {openDropdown === item.name && (
-                      <div
-                        className="absolute top-full left-0 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
-                        onMouseEnter={() => {
-                          if (dropdownTimeoutRef.current) {
-                            clearTimeout(dropdownTimeoutRef.current);
-                          }
-                        }}
-                        onMouseLeave={() => {
-                          dropdownTimeoutRef.current = setTimeout(() => {
-                            setOpenDropdown(null);
-                          }, 200);
-                        }}
-                      >
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
-                            className="block px-4 py-3 text-navy-900 hover:text-navy-700 hover:bg-gray-50 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="text-navy-900 hover:text-navy-700 transition-colors duration-200 font-medium focus-enhanced"
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </nav>
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link
+              href="/about"
+              className={`font-sans text-sm transition-colors ${
+                isActive("/about")
+                  ? "text-navy-900"
+                  : "text-slate-600 hover:text-navy-900"
+              }`}
+            >
+              About
+            </Link>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+            {/* Services Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <button
+                className={`font-sans text-sm transition-colors flex items-center gap-1 ${
+                  isServicesActive
+                    ? "text-navy-900"
+                    : "text-slate-600 hover:text-navy-900"
+                }`}
+              >
+                Services
+                <ChevronDown className="w-3 h-3" />
+              </button>
+
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 pt-2">
+                  <div className="w-72 bg-white border border-slate-100 shadow-lg">
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="block px-6 py-4 border-b border-slate-50 last:border-b-0 hover:bg-slate-50 transition-colors"
+                      >
+                        <p className="font-sans text-sm font-medium text-navy-900 mb-1">
+                          {service.name}
+                        </p>
+                        <p className="font-sans text-xs text-slate-500">
+                          {service.description}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/framework"
+              className={`font-sans text-sm transition-colors ${
+                isActive("/framework")
+                  ? "text-navy-900"
+                  : "text-slate-600 hover:text-navy-900"
+              }`}
+            >
+              Framework
+            </Link>
+
+            <Link
+              href="/videos"
+              className={`font-sans text-sm transition-colors ${
+                isActive("/videos")
+                  ? "text-navy-900"
+                  : "text-slate-600 hover:text-navy-900"
+              }`}
+            >
+              Videos
+            </Link>
+
+            <Link
+              href="/blog"
+              className={`font-sans text-sm transition-colors ${
+                isActive("/blog")
+                  ? "text-navy-900"
+                  : "text-slate-600 hover:text-navy-900"
+              }`}
+            >
+              Blog
+            </Link>
+
             <Link
               href="/contact"
-              className="bg-cta-500 text-white px-6 py-2.5 rounded-lg hover:bg-cta-600 transition-all duration-200 font-medium focus-enhanced"
+              className={`font-sans text-sm transition-colors ${
+                isActive("/contact")
+                  ? "text-navy-900"
+                  : "text-slate-600 hover:text-navy-900"
+              }`}
             >
-              Work With Me
+              Contact
             </Link>
-          </div>
+
+            {/* Book Diagnosis CTA */}
+            <Link
+              href="/diagnose"
+              className="font-sans text-sm bg-cta-500 text-white px-4 py-2 rounded hover:bg-cta-600 transition-colors"
+            >
+              Book Diagnosis
+            </Link>
+          </nav>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              type="button"
-              className="text-navy-900 hover:text-navy-700 focus-enhanced"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle mobile menu"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
+          <button
+            className="md:hidden p-2 text-navy-900 hover:text-slate-600"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-3">
-              {navigation.map((item) => (
-                <div key={item.name}>
+        {isMobileMenuOpen && (
+          <div className="md:hidden py-4 border-t border-slate-100">
+            <nav className="flex flex-col space-y-4">
+              <Link
+                href="/about"
+                className={`font-sans text-sm transition-colors ${
+                  isActive("/about")
+                    ? "text-navy-900"
+                    : "text-slate-600 hover:text-navy-900"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+
+              {/* Mobile Services */}
+              <div className="space-y-2">
+                <p className="font-sans text-xs text-slate-400 uppercase tracking-wide">Services</p>
+                {services.map((service) => (
                   <Link
-                    href={item.href}
-                    className="text-navy-900 hover:text-navy-700 transition-colors duration-200 font-medium px-2 py-2 focus-enhanced block"
-                    onClick={() => setIsMenuOpen(false)}
+                    key={service.href}
+                    href={service.href}
+                    className="block pl-4 py-2 border-l-2 border-slate-200"
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item.name}
+                    <p className="font-sans text-sm font-medium text-navy-900">{service.name}</p>
+                    <p className="font-sans text-xs text-slate-500">{service.description}</p>
                   </Link>
-                  {item.dropdown && (
-                    <div className="ml-4 mt-2 space-y-2">
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.name}
-                          href={dropdownItem.href}
-                          className="text-gray-600 hover:text-navy-700 transition-colors duration-200 text-sm px-2 py-1 focus-enhanced block"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+                ))}
+              </div>
+
+              <Link
+                href="/framework"
+                className={`font-sans text-sm transition-colors ${
+                  isActive("/framework")
+                    ? "text-navy-900"
+                    : "text-slate-600 hover:text-navy-900"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Framework
+              </Link>
+
+              <Link
+                href="/videos"
+                className={`font-sans text-sm transition-colors ${
+                  isActive("/videos")
+                    ? "text-navy-900"
+                    : "text-slate-600 hover:text-navy-900"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Videos
+              </Link>
+
+              <Link
+                href="/blog"
+                className={`font-sans text-sm transition-colors ${
+                  isActive("/blog")
+                    ? "text-navy-900"
+                    : "text-slate-600 hover:text-navy-900"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Blog
+              </Link>
+
               <Link
                 href="/contact"
-                className="bg-cta-500 text-white px-6 py-2.5 rounded-lg hover:bg-cta-600 transition-all duration-200 font-medium text-center mt-4 focus-enhanced"
-                onClick={() => setIsMenuOpen(false)}
+                className={`font-sans text-sm transition-colors ${
+                  isActive("/contact")
+                    ? "text-navy-900"
+                    : "text-slate-600 hover:text-navy-900"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                Work With Me
+                Contact
               </Link>
-            </div>
+
+              {/* Mobile CTA */}
+              <Link
+                href="/diagnose"
+                className="font-sans text-sm bg-cta-500 text-white px-4 py-2 rounded text-center hover:bg-cta-600 transition-colors mt-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Book Diagnosis
+              </Link>
+            </nav>
           </div>
         )}
       </div>

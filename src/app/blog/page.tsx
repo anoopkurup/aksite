@@ -1,12 +1,12 @@
-import PageTemplate from "@/components/PageTemplate";
 import Link from "next/link";
 import { getAllBlogPosts, getBlogCategories } from "@/lib/blog";
 import { formatDate, estimateReadingTime } from "@/lib/markdown";
 import type { Metadata } from "next";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Marketing Strategy Blog - Professional Services Lead Generation",
-  description: "Practical strategies and frameworks to scale your service business. Real insights from 200+ client engagements on systematic marketing and lead generation.",
+  title: "Blog | Anoop Kurup",
+  description: "Practical insights on building clarity in your business. Thoughts on strategy, positioning, and growth for expert-founders.",
 };
 
 export default function BlogPage() {
@@ -15,73 +15,99 @@ export default function BlogPage() {
   const categories = ["All", ...blogCategories];
 
   return (
-    <PageTemplate 
-      title="Blog"
-      subtitle="Practical strategies and frameworks to scale your service business. Real insights from 200+ client engagements."
-      heroBackground="gradient"
-      heroIcon="monitor"
-    >
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
+    <>
+      {/* Hero Section */}
+      <section className="min-h-[50vh] flex items-center bg-white">
+        <div className="max-w-4xl mx-auto px-8 py-24">
+          <p className="font-sans text-sm text-cta-600 tracking-widest uppercase mb-8 font-medium">
+            Blog
+          </p>
+          <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
+            Clarity, strategy, and growth.
+          </h1>
+          <p className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed">
+            Practical insights on building clarity in your business. Thoughts on strategy, positioning, and growth for expert-founders.
+          </p>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-8 bg-slate-50 border-b border-slate-100">
+        <div className="max-w-6xl mx-auto px-8">
+          <div className="flex flex-wrap gap-3">
             {categories.map((category, index) => (
               <button
                 key={index}
-                className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 ${
+                className={`font-sans text-sm px-4 py-2 transition-colors ${
                   index === 0
-                    ? 'bg-cta-500 text-navy-900 shadow-md'
-                    : 'bg-gray-100 text-navy-700 hover:bg-navy-100 hover:text-navy-900 border border-gray-200'
+                    ? 'bg-navy-900 text-white'
+                    : 'bg-white text-slate-600 hover:text-navy-900 border border-slate-200'
                 }`}
               >
                 {category}
               </button>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+      {/* Blog Posts Grid */}
+      <section className="py-section bg-slate-50">
+        <div className="max-w-6xl mx-auto px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <Link key={index} href={`/blog/${post.slug}`} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-navy-200 transition-all duration-200 cursor-pointer block">
-                <div className="w-full h-48 bg-gradient-to-br from-[#8fb4ff]/20 to-[#F25F5C]/20 overflow-hidden">
+              <Link
+                key={index}
+                href={`/blog/${post.slug}`}
+                className="group bg-white border border-slate-100 overflow-hidden hover:border-cta-500 transition-all"
+              >
+                {/* Image */}
+                <div className="w-full aspect-video bg-slate-100 overflow-hidden">
                   {(post.frontmatter.hero_image || post.frontmatter.featured_image) ? (
                     <img
                       src={post.frontmatter.hero_image || post.frontmatter.featured_image}
                       alt={post.frontmatter.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="w-16 h-16 bg-navy-600 rounded-full flex items-center justify-center">
-                        <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M3 3v18h18"/>
-                          <path d="m19 9-5 5-4-4-3 3"/>
-                        </svg>
-                      </div>
+                    <div className="w-full h-full flex items-center justify-center bg-slate-100">
+                      <div className="w-12 h-12 border-2 border-slate-300 rounded-full"></div>
                     </div>
                   )}
                 </div>
+
+                {/* Content */}
                 <div className="p-6">
-                  <div className="flex items-center gap-4 mb-3">
+                  {/* Meta */}
+                  <div className="flex items-center gap-3 mb-4">
                     {post.frontmatter.category && (
-                      <span className="text-xs font-semibold text-cta-600 bg-navy-100 px-3 py-1 rounded-full">
+                      <span className="font-sans text-xs text-cta-600 uppercase tracking-wide font-medium">
                         {post.frontmatter.category}
                       </span>
                     )}
-                    <span className="text-xs text-navy-900/80">
+                    <span className="font-sans text-xs text-slate-400">
                       {post.frontmatter.read_time || post.frontmatter.readTime || estimateReadingTime(post.content)}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-navy-900 mb-2 leading-snug">
+
+                  {/* Title */}
+                  <h3 className="font-serif text-title text-navy-900 mb-3 leading-tight group-hover:text-cta-600 transition-colors">
                     {post.frontmatter.title}
                   </h3>
-                  <p className="text-navy-900/80 text-sm mb-4 leading-relaxed">
+
+                  {/* Description */}
+                  <p className="font-sans text-body text-slate-600 leading-relaxed mb-4 line-clamp-3">
                     {post.frontmatter.description}
                   </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-navy-900/80">
+
+                  {/* Footer */}
+                  <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                    <span className="font-sans text-xs text-slate-500">
                       {formatDate(post.frontmatter.date)}
                     </span>
-                    <span className="text-cta-600 font-semibold text-sm">
-                      Read More →
+                    <span className="font-sans text-sm text-cta-600 flex items-center gap-1">
+                      Read
+                      <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>
                 </div>
@@ -90,6 +116,25 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </PageTemplate>
+
+      {/* CTA Section */}
+      <section className="py-section bg-white">
+        <div className="max-w-3xl mx-auto px-8 text-center">
+          <h2 className="font-serif text-display text-navy-900 mb-6">
+            Want help applying these ideas?
+          </h2>
+          <p className="font-sans text-body-lg text-slate-500 mb-8">
+            If you're stuck and want clarity on what's actually holding you back, let's talk.
+          </p>
+          <Link
+            href="/diagnose"
+            className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors duration-300"
+          >
+            Book a Clarity Diagnosis Session
+            <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

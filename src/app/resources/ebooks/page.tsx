@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Newsletter from "@/components/Newsletter";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -301,9 +300,6 @@ export default function EbooksPage() {
 
       {/* Section Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-
-      {/* Newsletter Section */}
-      <Newsletter showWorkButtons={false} />
     </div>
   );
 }
