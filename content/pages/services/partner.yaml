@@ -1,0 +1,121 @@
+# Partner Service Page - Ongoing Advisory
+# Last updated: 2026-01-22
+
+meta:
+  title: "Ongoing Advisory | Anoop Kurup"
+  description: "A thinking partner as you grow. A retainer relationship for founders who want sustained clarity, not one-time fixes."
+
+hero:
+  tier_label: "Ongoing Advisory"
+  title: "A thinking partner as you grow."
+  body:
+    - "Your Clarity Stack is solid. Now you need someone to help you maintain it — and adapt it as your business evolves."
+    - "The Ongoing Advisory is a retainer relationship for founders who want sustained clarity, not one-time fixes."
+  cta_text: "Inquire About Advisory"
+  cta_link: "/contact"
+
+qualification:
+  section_title: "This is for you if…"
+  for_you_if:
+    - "You've done the foundational work and want to keep it sharp"
+    - "You make strategic decisions regularly and want a sounding board"
+    - "You're growing and need to evolve your positioning as you scale"
+    - "You value having someone who knows your business deeply"
+    - "You've worked with me before and want continued access"
+
+  not_for_you_title: "This is not for you if…"
+  not_for_you_if:
+    - "You haven't done the foundational work yet (start with Build)"
+    - "You need intensive, project-based help (that's a Sprint)"
+    - "You're looking for someone to execute marketing for you"
+
+whats_included:
+  section_title: "What's included"
+  section_subtitle: "Ongoing access, not occasional check-ins."
+  items:
+    - icon: "calendar"
+      title: "Monthly strategy sessions"
+      description: "Scheduled calls to review progress, discuss challenges, and plan ahead. These aren't status updates — they're working sessions where we think through decisions together."
+
+    - icon: "message-circle"
+      title: "Async access between sessions"
+      description: "Questions come up between calls. You'll have a direct line to me for quick consultations, feedback on messaging, or gut-checks on decisions."
+
+    - icon: "compass"
+      title: "Positioning reviews"
+      description: "As your business evolves, your positioning might need to evolve too. Regular reviews ensure your Clarity Stack stays current."
+
+    - icon: "refresh-cw"
+      title: "Decision support"
+      description: "New service offering? Potential partnership? Pricing change? Market shift? Having someone who knows your business and your strategy makes these decisions clearer."
+
+how_it_works:
+  section_title: "How it works"
+
+  commitment:
+    label: "Commitment"
+    title: "Minimum 3-month engagement"
+    subtitle: "Then month-to-month"
+
+  availability:
+    label: "Availability"
+    title: "Limited spots"
+    subtitle: "I work with a small number of advisory clients at any time"
+
+  format_label: "Format"
+  format_includes:
+    - "2 scheduled sessions per month (60–90 minutes each)"
+    - "Async access via email or messaging"
+    - "Quarterly Clarity Stack review"
+
+what_changes:
+  section_title: "What changes"
+  items:
+    - title: "Faster decisions"
+      description: "When you have someone who knows your strategy, decisions get easier. You're not starting from scratch every time you face a choice."
+
+    - title: "Maintained clarity"
+      description: "Clarity erodes. Markets shift. Competitors move. New opportunities distract. Regular attention keeps your foundation solid."
+
+    - title: "Confident growth"
+      description: "Scaling without clarity creates chaos. Scaling with a thinking partner means you can grow without losing what makes you different."
+
+investment:
+  section_title: "Investment"
+  title: "Ongoing Advisory"
+  subtitle: "Monthly retainer"
+  includes:
+    - "2 strategy sessions per month"
+    - "Async access between sessions"
+    - "Quarterly Clarity Stack review"
+    - "Priority access for urgent decisions"
+  commitment_note: "Minimum commitment: 3 months"
+  cta_text: "Inquire About Advisory"
+  cta_link: "/contact"
+
+faqs:
+  title: "Questions"
+  items:
+    - question: "Do I need to have done a Sprint first?"
+      answer: "Not necessarily, but your Clarity Stack should be reasonably solid. Advisory is about maintaining and evolving clarity, not building it from scratch. If your foundations need work, start with a Sprint."
+
+    - question: "How is this different from business coaching?"
+      answer: "I'm not a coach. I don't work on mindset, accountability, or personal development. This is strategic advisory focused specifically on clarity — positioning, strategy, and how you show up in your market."
+
+    - question: "What if I have a big project mid-engagement?"
+      answer: "Advisory retainers are for ongoing support, not intensive projects. If something big comes up — a major repositioning, a new market entry — we might add a Sprint on top. We'll discuss what makes sense."
+
+    - question: "How quickly can I start?"
+      answer: "Availability is limited. If there's space, we can typically start within 2–4 weeks. If not, I'll add you to the waitlist and let you know when a spot opens."
+
+final_cta:
+  title: "Want sustained clarity as you grow?"
+  body: "If you're past the foundation-building stage and want a thinking partner for the road ahead, let's talk."
+  cta_text: "Inquire About Advisory"
+  cta_link: "/contact"
+  secondary_text: "Not there yet?"
+  secondary_options:
+    - text: "Start with a Diagnosis"
+      link: "/diagnose"
+    - text: "Build your foundation first"
+      link: "/build"

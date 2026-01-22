@@ -353,3 +353,528 @@ export function getYouTubeThumbnail(video_url?: string): string | null {
   // Return high-quality thumbnail URL
   return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 }
+
+// ============================================================================
+// YAML Content System
+// ============================================================================
+
+import yaml from 'js-yaml';
+import type { IconName } from './icons';
+
+/**
+ * Base content response type
+ */
+export interface PageContent<T> {
+  data: T;
+  error?: string;
+}
+
+// ============================================================================
+// TypeScript Interfaces for YAML Content Structure
+// ============================================================================
+
+// Homepage Content
+export interface HomePageContent {
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    eyebrow: string;
+    headline: string;
+    subheadline: string;
+    body: string[];
+    cta_text: string;
+    cta_link: string;
+  };
+  symptoms: {
+    section_title: string;
+    items: Array<{
+      title: string;
+      quote: string;
+      explanation: string;
+      diagnosis: string;
+    }>;
+  };
+  services: {
+    section_title: string;
+    section_subtitle: string;
+    items: Array<{
+      tier_label: string;
+      title: string;
+      best_for: string;
+      description: string;
+      outcome: string;
+      cta_link: string;
+    }>;
+  };
+  case_studies: {
+    section_title: string;
+    items: Array<{
+      title: string;
+      type: string;
+      problem: string;
+      root_cause: string;
+      fix: string;
+    }>;
+  };
+  faqs: {
+    title: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
+  about: {
+    section_title: string;
+    paragraphs: string[];
+    location: string;
+  };
+  final_cta: {
+    title: string;
+    body: string;
+    body_secondary: string;
+    cta_text: string;
+    cta_link: string;
+    disclaimer: string;
+  };
+}
+
+// Clarity Stack Content
+export interface ClarityStackContent {
+  title: string;
+  subtitle: string;
+  framework_label: string;
+  layers: Array<{
+    name: string;
+    layer_number: string;
+    question: string;
+    description: string;
+    bg_color: string;
+    border_color: string;
+    is_foundation?: boolean;
+  }>;
+  explanation: {
+    title: string;
+    paragraphs: Array<{
+      text: string;
+      emphasize: string[];
+    }>;
+    conclusion: string;
+  };
+}
+
+// Case Studies Content (for reusable case studies)
+export interface CaseStudiesContent {
+  section_title: string;
+  items: Array<{
+    title: string;
+    type: string;
+    problem: string;
+    root_cause: string;
+    fix: string;
+  }>;
+}
+
+// Build Service Page Content
+export interface BuildPageContent {
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    tier_label: string;
+    title: string;
+    body: string[];
+    cta_text: string;
+    cta_link: string;
+  };
+  qualification: {
+    section_title: string;
+    for_you_if: string[];
+    not_for_you_title: string;
+    not_for_you_if: string[];
+  };
+  sprints: {
+    section_title: string;
+    section_subtitle: string;
+    items: Array<{
+      name: string;
+      icon: IconName;
+      question: string;
+      description: string;
+      outcomes: string[];
+    }>;
+    note?: string;
+  };
+  how_it_works: {
+    section_title: string;
+    section_subtitle: string;
+    duration: string;
+    steps: Array<{
+      step_number: string;
+      week_label: string;
+      title: string;
+      description: string;
+    }>;
+    format_label: string;
+    format_description: string;
+  };
+  deliverables: {
+    section_title: string;
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  investment: {
+    section_title: string;
+    title: string;
+    description: string;
+    sprint_types: Array<{
+      name: string;
+      duration: string;
+    }>;
+    cta_text: string;
+    cta_link: string;
+  };
+  faqs: {
+    title: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
+  final_cta: {
+    title: string;
+    body: string;
+    cta_text: string;
+    cta_link: string;
+    secondary_text: string;
+    secondary_link_text: string;
+    secondary_link: string;
+  };
+}
+
+// Diagnose Service Page Content
+export interface DiagnosePageContent {
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    tier_label: string;
+    title: string;
+    body: string[];
+    cta_text: string;
+    cta_link: string;
+  };
+  qualification: {
+    section_title: string;
+    for_you_if: string[];
+    not_for_you_title: string;
+    not_for_you_if: string[];
+  };
+  session_process: {
+    section_title: string;
+    section_subtitle: string;
+    stages: Array<{
+      phase: string;
+      border_color: string;
+      description: string;
+      layers?: Array<{
+        name: string;
+        question: string;
+      }>;
+      conclusion?: string;
+      deliverables?: string[];
+    }>;
+  };
+  what_you_get: {
+    section_title: string;
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  investment: {
+    section_title: string;
+    title: string;
+    includes: string[];
+    cta_text: string;
+    cta_link: string;
+  };
+  faqs: {
+    title: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
+  final_cta: {
+    title: string;
+    body: string;
+    cta_text: string;
+    cta_link: string;
+  };
+}
+
+// Partner Service Page Content
+export interface PartnerPageContent {
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    tier_label: string;
+    title: string;
+    body: string[];
+    cta_text: string;
+    cta_link: string;
+  };
+  qualification: {
+    section_title: string;
+    for_you_if: string[];
+    not_for_you_title: string;
+    not_for_you_if: string[];
+  };
+  whats_included: {
+    section_title: string;
+    section_subtitle: string;
+    items: Array<{
+      icon: IconName;
+      title: string;
+      description: string;
+    }>;
+  };
+  how_it_works: {
+    section_title: string;
+    commitment: {
+      label: string;
+      title: string;
+      subtitle: string;
+    };
+    availability: {
+      label: string;
+      title: string;
+      subtitle: string;
+    };
+    format_label: string;
+    format_includes: string[];
+  };
+  what_changes: {
+    section_title: string;
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  investment: {
+    section_title: string;
+    title: string;
+    subtitle: string;
+    includes: string[];
+    commitment_note: string;
+    cta_text: string;
+    cta_link: string;
+  };
+  faqs: {
+    title: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
+  final_cta: {
+    title: string;
+    body: string;
+    cta_text: string;
+    cta_link: string;
+    secondary_text: string;
+    secondary_options: Array<{
+      text: string;
+      link: string;
+    }>;
+  };
+}
+
+// About Page Content
+export interface AboutPageContent {
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    eyebrow: string;
+    headline: string;
+    body: string[];
+  };
+  backstory: {
+    section_title: string;
+    image: {
+      src: string;
+      alt: string;
+    };
+    intro: string;
+    timeline: Array<{
+      title: string;
+      description: string | string[];
+    }>;
+    insight: string;
+  };
+  work: {
+    section_title: string;
+    section_subtitle: string;
+    body: string[];
+    pattern_box: {
+      label: string;
+      paragraphs: string[];
+    };
+    approach: {
+      title: string;
+      paragraphs: string[];
+    };
+  };
+  beliefs: {
+    section_title: string;
+    section_subtitle: string;
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  who_i_work_with: {
+    section_title: string;
+    section_subtitle: string;
+    for_you: Array<{
+      title: string;
+      description: string;
+    }>;
+    not_for_you: {
+      title: string;
+      description: string;
+    };
+  };
+  who_im_not_for: {
+    section_title: string;
+    section_subtitle: string;
+    items: Array<{
+      heading: string;
+      text: string;
+    }>;
+  };
+  framework: {
+    section_title: string;
+    section_subtitle: string;
+    layers: Array<{
+      layer_number: string;
+      name: string;
+      question: string;
+      description: string;
+      style: string;
+    }>;
+    insight: {
+      label: string;
+      paragraphs: string[];
+    };
+  };
+  services: {
+    section_title: string;
+    section_subtitle: string;
+    items: Array<{
+      name: string;
+      title: string;
+      description: string;
+      href: string;
+    }>;
+  };
+  personal: {
+    section_title: string;
+    section_subtitle: string;
+    paragraphs: string[];
+  };
+  final_cta: {
+    title: string;
+    body: string;
+    cta_text: string;
+    cta_link: string;
+    secondary_text: string;
+  };
+}
+
+// ============================================================================
+// Core YAML Loading Function
+// ============================================================================
+
+/**
+ * Load and parse YAML content file
+ * @param relativePath - Path relative to /content directory
+ * @returns Parsed content data
+ */
+function loadYamlContent<T>(relativePath: string): PageContent<T> {
+  try {
+    const contentDir = path.join(process.cwd(), 'content');
+    const filePath = path.join(contentDir, relativePath);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const data = yaml.load(fileContents) as T;
+
+    return { data };
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error(`Error loading YAML content from ${relativePath}:`, errorMessage);
+    throw new Error(`Failed to load content: ${relativePath}`);
+  }
+}
+
+// ============================================================================
+// Type-Safe Content Loaders
+// ============================================================================
+
+/**
+ * Get homepage content
+ */
+export function getHomePageContent(): PageContent<HomePageContent> {
+  return loadYamlContent<HomePageContent>('pages/home.yaml');
+}
+
+/**
+ * Get Clarity Stack framework content
+ */
+export function getClarityStack(): PageContent<ClarityStackContent> {
+  return loadYamlContent<ClarityStackContent>('data/clarity-stack.yaml');
+}
+
+/**
+ * Get case studies content
+ */
+export function getCaseStudies(): PageContent<CaseStudiesContent> {
+  return loadYamlContent<CaseStudiesContent>('data/case-studies.yaml');
+}
+
+/**
+ * Get Build service page content
+ */
+export function getBuildPageContent(): PageContent<BuildPageContent> {
+  return loadYamlContent<BuildPageContent>('pages/services/build.yaml');
+}
+
+/**
+ * Get Diagnose service page content
+ */
+export function getDiagnosePageContent(): PageContent<DiagnosePageContent> {
+  return loadYamlContent<DiagnosePageContent>('pages/services/diagnose.yaml');
+}
+
+/**
+ * Get Partner service page content
+ */
+export function getPartnerPageContent(): PageContent<PartnerPageContent> {
+  return loadYamlContent<PartnerPageContent>('pages/services/partner.yaml');
+}
+
+/**
+ * Get About page content
+ */
+export function getAboutPageContent(): PageContent<AboutPageContent> {
+  return loadYamlContent<AboutPageContent>('pages/about.yaml');
+}

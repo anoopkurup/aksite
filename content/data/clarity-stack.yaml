@@ -1,0 +1,45 @@
+# The Clarity Stack™ Framework
+# Last updated: 2026-01-22
+
+title: "The Business Clarity Architecture™"
+subtitle: "Most services businesses try to fix growth by adding more tactics — more content, more ads, more outreach. But tactics fail when the foundation is unclear."
+
+framework_label: "The Clarity Stack™"
+
+layers:
+  - name: "Conversion"
+    layer_number: "Layer 3"
+    question: "How do they become clients?"
+    description: "Lead generation • Offers • Pricing • Sales process"
+    bg_color: "navy-50"
+    border_color: "cta-400"
+
+  - name: "Positioning"
+    layer_number: "Layer 2"
+    question: "Why should they choose you?"
+    description: "Differentiation • Messaging • Category ownership"
+    bg_color: "navy-100"
+    border_color: "cta-500"
+
+  - name: "Strategy"
+    layer_number: "Layer 1"
+    question: "Where do you play?"
+    description: "Target market • Problem focus • Service scope"
+    bg_color: "navy-900"
+    border_color: "cta-500"
+    is_foundation: true
+
+explanation:
+  title: "The sequence matters."
+  paragraphs:
+    - text: "You can't fix **Conversion** if your **Positioning** is broken. Clients won't buy if they can't see why you're different."
+      emphasize:
+        - "Conversion"
+        - "Positioning"
+
+    - text: "You can't fix **Positioning** if your **Strategy** is unclear. You can't differentiate if you haven't decided who you're for and what problem you solve."
+      emphasize:
+        - "Positioning"
+        - "Strategy"
+
+  conclusion: "Most founders try to fix Layer 3 when the problem is in Layer 1 or 2. That's why marketing \"doesn't work.\""

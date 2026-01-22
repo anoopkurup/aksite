@@ -1,0 +1,120 @@
+# Homepage Content
+# Last updated: 2026-01-22
+
+meta:
+  title: "Anoop Kurup - Business Clarity Architect"
+  description: "I help services businesses diagnose what's actually broken, and build the foundation for growth that doesn't depend on luck."
+
+hero:
+  eyebrow: "For expert-founders of services businesses"
+  headline: "Dependent on Referrals? How will you grow?"
+  subheadline: "Let's fix that."
+  body:
+    - "You've built expertise over 10+ years. Clients love your work. But growth feels stuck, dependent on who happens to refer you this month."
+    - "**The problem isn't your marketing. It's your clarity.**"
+    - "I help services businesses diagnose what's actually broken, and build the foundation for growth that doesn't depend on luck."
+  cta_text: "Book a Clarity Diagnosis Call"
+  cta_link: "/contact"
+
+symptoms:
+  section_title: "Which of these sounds familiar?"
+  items:
+    - title: "Price Comparison"
+      quote: "Clients compare me to cheaper competitors."
+      explanation: "You're not losing on price. You're losing on clarity. When clients can't see the difference, price becomes the only way to compare."
+      diagnosis: "This is usually a Positioning problem."
+
+    - title: "Referral Dependence"
+      quote: "Referrals convert. Everything else fails."
+      explanation: "Referrals come pre-sold on you. Cold audiences don't. The difference isn't the channel — it's whether your positioning creates trust before the first conversation."
+      diagnosis: "This is usually a Positioning + Conversion problem."
+
+    - title: "Marketing Not Working"
+      quote: "We've tried marketing. It doesn't work for us."
+      explanation: "Marketing doesn't fail. Unclear positioning does. Ads, content, webinars — they all amplify whatever's already there. If there's no clarity, there's nothing to amplify."
+      diagnosis: "This needs diagnosis. The root cause could be Strategy, Positioning, or Conversion."
+
+    - title: "Difficulty Explaining"
+      quote: "I struggle to explain what I do."
+      explanation: "If you can't explain it simply, you haven't narrowed it down enough. You're trying to describe all your expertise instead of the one problem you solve better than anyone."
+      diagnosis: "This is usually a Strategy + Positioning problem."
+
+services:
+  section_title: "Three ways to work together"
+  section_subtitle: "Choose based on where you are and what you need."
+  items:
+    - tier_label: "Diagnose"
+      title: "Clarity Diagnosis Session"
+      best_for: "You're not sure what's actually broken"
+      description: "A focused session to audit your Clarity Stack and identify where the real problem lies. You'll leave knowing exactly which layer needs work — and what to do about it."
+      outcome: "Clear diagnosis + action plan"
+      cta_link: "/diagnose"
+
+    - tier_label: "Build"
+      title: "Clarity Sprint"
+      best_for: "You know what's broken and want to fix it fast"
+      description: "An intensive engagement to rebuild one or more layers of your Clarity Stack. We work together to define your strategy, sharpen your positioning, or fix your conversion system."
+      outcome: "Rebuilt foundation ready for growth"
+      cta_link: "/build"
+
+    - tier_label: "Partner"
+      title: "Ongoing Advisory"
+      best_for: "You want a thinking partner as you grow"
+      description: "A retainer relationship for founders who want ongoing clarity as their business evolves. Strategy sessions, positioning reviews, and a sounding board for decisions that matter."
+      outcome: "Sustained clarity as you scale"
+      cta_link: "/partner"
+
+case_studies:
+  section_title: "What changes when clarity is in place"
+  items:
+    - title: "From \"performance marketers\" to growth partners"
+      type: "Marketing Agency"
+      problem: "Competing on price with dozens of similar agencies. Clients saw them as interchangeable."
+      root_cause: "Positioning. They were describing what they did, not the outcome they delivered."
+      fix: "Repositioned as \"growth partners for offline apparel brands going online.\" Moved from project fees to revenue-share deals with larger clients."
+
+    - title: "From generic webinars to corporate training contracts"
+      type: "Public Speaking Trainer"
+      problem: "Running free webinars to an audience that never converted. Expertise wasn't translating to clients."
+      root_cause: "Strategy. Targeting \"anyone who wants to speak better\" instead of a specific audience with urgent need."
+      fix: "Narrowed to corporate communication for mid-level managers. Created a focused offer. Now commands premium pricing."
+
+    - title: "From scattered marketing to location-centric campaigns"
+      type: "School Group (3 schools)"
+      problem: "Nursery admissions stuck at 70% despite active marketing. Same approach wasn't working across locations."
+      root_cause: "Strategy. Three schools, three different parent demographics. One-size-fits-all marketing was missing all of them."
+      fix: "Created location-centric positioning and targeted campaigns for each school based on catchment area demographics."
+
+faqs:
+  title: "Questions founders ask"
+  items:
+    - question: "How is this different from hiring a marketing consultant?"
+      answer: "Most marketing consultants start with tactics — content plans, ad campaigns, lead magnets. I start with diagnosis. If your Clarity Stack is broken, better tactics won't help. We fix the foundation first."
+
+    - question: "I already get referrals. Do I really need this?"
+      answer: "Referrals are wonderful — but unpredictable. If your growth depends on who happens to mention you this month, you don't have a growth system. You have a network. Networks plateau. Clarity compounds."
+
+    - question: "What kinds of businesses do you work with?"
+      answer: "Services businesses where the founder has deep expertise — consultants, agencies, trainers, professional services. Typically 10+ years of experience, 5+ years in business, solo or small team. Based in India, usually Bangalore."
+
+    - question: "How quickly will I see results?"
+      answer: "Clarity can happen in a single session. Implementing what you learn takes longer. Most clients see meaningful shifts in positioning and lead quality within 60–90 days of doing the work."
+
+    - question: "What if I just need advice, not a full engagement?"
+      answer: "Start with a Clarity Diagnosis session. It's designed to give you a clear picture of what's broken and what to do about it — whether you work with me further or not."
+
+about:
+  section_title: "Why I do this work"
+  paragraphs:
+    - "I've spent 15+ years watching smart founders struggle with growth — not because they lack expertise, but because they're trying to sell everything they know instead of solving one clear problem."
+    - "My background spans business research, intellectual property, and marketing strategy. What ties it together: **I help people see what's actually going on beneath the surface.**"
+    - "I work directly with founders — typically solo or with small teams — who've built real expertise but haven't found a way to grow beyond their network. The work is strategic, not tactical. We fix foundations, not funnels."
+  location: "Based in Bangalore. Working with clients across India."
+
+final_cta:
+  title: "Ready to find out what's actually broken?"
+  body: "If referrals are your only reliable source of clients, something in your Clarity Stack needs work."
+  body_secondary: "Book a Clarity Diagnosis Call. In 30 minutes, we'll identify which layer is broken and what to do about it."
+  cta_text: "Book Your Clarity Diagnosis Call"
+  cta_link: "/contact"
+  disclaimer: "No pitch. No pressure. Just clarity."
