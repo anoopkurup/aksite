@@ -113,6 +113,20 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Proof Stats Bar */}
+      <section className="bg-navy-900 py-12">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-0 md:divide-x md:divide-navy-700">
+            {content.proof_stats.items.map((item, index) => (
+              <div key={index} className="text-center md:px-8">
+                <p className="font-serif text-3xl md:text-4xl text-white mb-2">{item.stat}</p>
+                <p className="font-sans text-sm text-navy-300 leading-snug">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Symptom Entry Points */}
       <section className="py-section bg-slate-50">
         <div className="max-w-5xl mx-auto px-8">
@@ -318,7 +332,7 @@ export default function HomePage() {
                 <h3 className="font-serif text-title text-navy-900 mb-6">
                   {study.title}
                 </h3>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
                   <div>
                     <p className="font-sans text-sm text-navy-600 uppercase tracking-wide mb-2">The problem</p>
                     <p className="font-sans text-body text-slate-600">{study.problem}</p>
@@ -332,6 +346,11 @@ export default function HomePage() {
                     <p className="font-sans text-body text-slate-600">{study.fix}</p>
                   </div>
                 </div>
+                {study.result && (
+                  <div className="border-t border-slate-100 pt-4">
+                    <p className="font-sans text-sm text-cta-600 font-medium">→ {study.result}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -356,6 +375,39 @@ export default function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Qualification Section */}
+      <section className="py-section bg-slate-50">
+        <div className="max-w-4xl mx-auto px-8">
+          <h2 className="font-serif text-display text-navy-900 mb-16 text-center">
+            {content.qualification.section_title}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 border-l-4 border-cta-500">
+              <h3 className="font-serif text-title text-navy-900 mb-6">{content.qualification.for_you.heading}</h3>
+              <ul className="space-y-3">
+                {content.qualification.for_you.items.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="text-cta-500 mt-1 flex-shrink-0">✓</span>
+                    <p className="font-sans text-body text-slate-600">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white p-8 border-l-4 border-slate-200">
+              <h3 className="font-serif text-title text-slate-600 mb-6">{content.qualification.not_for_you.heading}</h3>
+              <ul className="space-y-3">
+                {content.qualification.not_for_you.items.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="text-slate-400 mt-1 flex-shrink-0">—</span>
+                    <p className="font-sans text-body text-slate-500">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

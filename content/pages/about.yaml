@@ -149,18 +149,18 @@ services:
   section_subtitle: "Three ways to engage"
   items:
     - name: "Diagnose"
-      title: "Clarity Diagnosis Session"
-      description: "For founders who aren't sure what's actually broken. A 60-minute session to audit your Clarity Stack and identify the real problem."
+      title: "AI Readiness Audit"
+      description: "For founders who aren't sure where their Revenue System is broken. A 90-minute session to audit your readiness across Calibration, Automation, and Acceleration — and map what to fix first."
       href: "/diagnose"
 
     - name: "Build"
-      title: "Clarity Sprint"
-      description: "For founders who know what's broken and want to fix it. A 4–8 week intensive to rebuild Strategy, Positioning, or Conversion."
+      title: "Implementation Pilot"
+      description: "For founders who know what's missing and want it built. A 6-week done-for-you engagement to install your Revenue System — Calibration, Automation, or both."
       href: "/build"
 
     - name: "Partner"
       title: "Ongoing Advisory"
-      description: "For founders who want a thinking partner as they grow. Monthly retainer with regular sessions and async access."
+      description: "For founders who want a thinking partner as they scale. Monthly retainer with regular strategy sessions and async access to keep your Revenue System calibrated."
       href: "/partner"
 
 personal:

@@ -408,6 +408,12 @@ export interface HomePageContent {
       cta_link: string;
     }>;
   };
+  proof_stats: {
+    items: Array<{
+      stat: string;
+      label: string;
+    }>;
+  };
   case_studies: {
     section_title: string;
     items: Array<{
@@ -416,7 +422,19 @@ export interface HomePageContent {
       problem: string;
       root_cause: string;
       fix: string;
+      result: string;
     }>;
+  };
+  qualification: {
+    section_title: string;
+    for_you: {
+      heading: string;
+      items: string[];
+    };
+    not_for_you: {
+      heading: string;
+      items: string[];
+    };
   };
   faqs: {
     title: string;

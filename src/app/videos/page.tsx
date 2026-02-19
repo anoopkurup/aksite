@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Videos | Anoop Kurup",
-  description: "Recorded sessions on building clarity, positioning, and conversion systems for professional service firms. Watch anytime.",
+  description: "Recorded sessions on installing Revenue Systems for expert-founders — Calibration, Automation, and building pipelines that scale without you. Watch anytime.",
 };
 
 export default function VideosPage() {
@@ -24,8 +24,7 @@ export default function VideosPage() {
             Video Library
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-2xl mb-8 leading-relaxed">
-            Recorded sessions and workshops on business clarity, positioning, and building
-            conversion systems. Watch anytime.
+            Recorded sessions and workshops on Revenue System Architecture — Calibration, Automation, and building pipelines that run without you. Watch anytime.
           </p>
         </div>
       </section>
@@ -185,13 +184,13 @@ export default function VideosPage() {
             Want to go deeper?
           </h2>
           <p className="font-sans text-body text-navy-300 mb-10">
-            Book a Clarity Diagnosis session to identify what's really holding your marketing back.
+            Book an AI Readiness Audit to map where your Revenue System is leaking and what to automate first.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center font-sans text-body text-white border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors duration-300"
           >
-            Book a Diagnosis Session
+            Book an AI Readiness Audit
             <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
           </Link>
         </div>

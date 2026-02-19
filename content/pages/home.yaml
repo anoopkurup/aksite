@@ -31,6 +31,15 @@ bridge:
     - step: "Accelerate"
       description: "The system builds momentum — a predictable pipeline, founder freedom, and revenue that scales without you."
 
+proof_stats:
+  items:
+    - stat: "4.5 hrs → 12 min"
+      label: "Proposal writing time"
+    - stat: "15% → 35%"
+      label: "Proposal win rate"
+    - stat: "60%"
+      label: "of B2B deals close after the 5th follow-up — most founders stop at one"
+
 symptoms:
   section_title: "Which of these sounds familiar?"
   items:
@@ -61,14 +70,14 @@ services:
     - tier_label: "Diagnose"
       title: "AI Readiness Audit"
       best_for: "You're not sure where your Revenue System is broken"
-      description: "A focused 60-minute session to audit your Revenue System readiness and identify what's missing. You'll leave knowing exactly which phase to tackle first — and what to do about it."
+      description: "A focused 90-minute session to audit your Revenue System readiness and identify what's missing. You'll leave knowing exactly which phase to tackle first — and what to do about it."
       outcome: "Clear audit + action plan"
       cta_link: "/diagnose"
 
     - tier_label: "Build"
-      title: "Revenue System Sprint"
-      best_for: "You know what's missing and want to build it fast"
-      description: "An intensive engagement to build out your Revenue System — Calibration, Automation, or both. We work together to sharpen your offer, install AI workflows, or fix what's blocking Acceleration."
+      title: "Implementation Pilot"
+      best_for: "You know what's missing and want it built for you"
+      description: "A 6-week done-for-you engagement to install your Revenue System. We sharpen your offer, build the AI workflows, and hand you a pipeline that runs without you."
       outcome: "Working revenue system installed"
       cta_link: "/build"
 
@@ -80,43 +89,49 @@ services:
       cta_link: "/partner"
 
 case_studies:
-  section_title: "What changes when clarity is in place"
+  section_title: "What changes when the system is in place"
   items:
     - title: "From \"performance marketers\" to growth partners"
       type: "Marketing Agency"
       problem: "Competing on price with dozens of similar agencies. Clients saw them as interchangeable."
-      root_cause: "Positioning. They were describing what they did, not the outcome they delivered."
+      root_cause: "Calibration. They were describing what they did, not the outcome they delivered."
       fix: "Repositioned as \"growth partners for offline apparel brands going online.\" Moved from project fees to revenue-share deals with larger clients."
+      result: "First revenue-share deal closed within 45 days of repositioning."
 
     - title: "From generic webinars to corporate training contracts"
       type: "Public Speaking Trainer"
-      problem: "Running free webinars to an audience that never converted. Expertise wasn't translating to clients."
-      root_cause: "Strategy. Targeting \"anyone who wants to speak better\" instead of a specific audience with urgent need."
-      fix: "Narrowed to corporate communication for mid-level managers. Created a focused offer. Now commands premium pricing."
+      problem: "Running free webinars to an audience that never converted. Expertise wasn't translating to paying clients."
+      root_cause: "Calibration. Targeting \"anyone who wants to speak better\" instead of a specific audience with urgent need."
+      fix: "Narrowed to corporate communication for mid-level managers. Built a focused offer for L&D teams."
+      result: "Moved from free webinars to paid corporate contracts at 3x the per-engagement rate."
 
     - title: "From scattered marketing to location-centric campaigns"
       type: "School Group (3 schools)"
       problem: "Nursery admissions stuck at 70% despite active marketing. Same approach wasn't working across locations."
-      root_cause: "Strategy. Three schools, three different parent demographics. One-size-fits-all marketing was missing all of them."
+      root_cause: "Calibration. Three schools, three different parent demographics. One-size-fits-all messaging was missing all of them."
       fix: "Created location-centric positioning and targeted campaigns for each school based on catchment area demographics."
+      result: "Nursery admission rate: 70% → 94% in the next intake cycle."
 
 faqs:
   title: "Questions founders ask"
   items:
     - question: "How is this different from hiring a marketing consultant?"
-      answer: "Most marketing consultants start with tactics — content plans, ad campaigns, lead magnets. I start with diagnosis. If your Clarity Stack is broken, better tactics won't help. We fix the foundation first."
+      answer: "Most marketing consultants start with tactics — content plans, ad campaigns, lead magnets. I start with Calibration. If your niche, offer, and message aren't sharp, better tactics won't help. Automating the wrong message gets you more noise, not more clients."
+
+    - question: "How is the Implementation Pilot different from hiring an agency?"
+      answer: "An agency runs your marketing. The Pilot installs the system underneath it. When it's done, you own the workflows, the sequences, and the logic — not a monthly retainer dependency. You walk away with infrastructure, not a service contract."
 
     - question: "I already get referrals. Do I really need this?"
-      answer: "Referrals are wonderful — but unpredictable. If your growth depends on who happens to mention you this month, you don't have a growth system. You have a network. Networks plateau. Clarity compounds."
+      answer: "Referrals are wonderful — but unpredictable. If your growth depends on who happens to mention you this month, you don't have a Revenue System. You have a network. Networks plateau. Systems scale."
 
     - question: "What kinds of businesses do you work with?"
-      answer: "Services businesses where the founder has deep expertise — consultants, agencies, trainers, professional services. Typically 10+ years of experience, 5+ years in business, solo or small team. Based in India, usually Bangalore."
+      answer: "Founder-led B2B service firms doing ₹2Cr–₹15Cr — consultants, agencies, trainers, professional services. Typically 10–50 people where the founder is still the only one closing deals. India-based, though the work happens remotely."
 
     - question: "How quickly will I see results?"
-      answer: "Clarity can happen in a single session. Implementing what you learn takes longer. Most clients see meaningful shifts in positioning and lead quality within 60–90 days of doing the work."
+      answer: "Calibration can happen in the first week. AI workflows go live in weeks two through four. Most clients see meaningful changes in pipeline quality within 60–90 days of the system being installed."
 
     - question: "What if I just need advice, not a full engagement?"
-      answer: "Start with a Clarity Diagnosis session. It's designed to give you a clear picture of what's broken and what to do about it — whether you work with me further or not."
+      answer: "Start with an AI Readiness Audit. 90 minutes to map where your Revenue System is leaking and what to automate first. You'll leave with a written roadmap — whether you work with me further or not."
 
 about:
   section_title: "Why I do this work"
@@ -126,10 +141,28 @@ about:
     - "I work directly with founders — typically solo or with small teams — who've built real expertise but haven't found a way to grow beyond their network. The work is strategic, not tactical. We fix foundations, not funnels."
   location: "Based in Bangalore. Working with clients across India."
 
+qualification:
+  section_title: "Is this for you?"
+  for_you:
+    heading: "This is for you if..."
+    items:
+      - "You run a founder-led B2B service firm (consulting, agency, training, professional services)"
+      - "Your business does ₹2Cr–₹15Cr and growth depends on your personal network"
+      - "You have 10–50 people but you're still the only one closing deals"
+      - "You're tired of being the Chief Everything Officer"
+      - "You want a system that generates clients — not another marketing experiment"
+  not_for_you:
+    heading: "This is not for you if..."
+    items:
+      - "You want someone to run your marketing (hire an agency)"
+      - "You're looking for quick hacks or silver bullets"
+      - "You're building software products (I focus on services businesses)"
+      - "You're not willing to question your current assumptions"
+
 final_cta:
   title: "Ready to install your Revenue System?"
   body: "If referrals are your only reliable source of clients, you don't have a growth system. You have a network."
-  body_secondary: "Book an AI Readiness Audit. In 60 minutes, we'll diagnose your current state and map exactly what it would take to install a system that scales."
+  body_secondary: "Book an AI Readiness Audit. In 90 minutes, we'll diagnose your current state and map exactly what it would take to install a system that scales."
   cta_text: "Book an AI Readiness Audit"
   cta_link: "/contact"
   disclaimer: "No pitch. No pressure. Just a clear plan."

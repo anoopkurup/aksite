@@ -1,37 +1,38 @@
-# Anoop Kurup Website - Ultra-Minimalist Business Clarity Architect
+# Anoop Kurup Website - Revenue Systems Architect
 
 ## Project Overview
-Professional website for Anoop Kurup, Business Clarity Architect, helping expert-founders build systematic growth beyond referrals. Built with Next.js and featuring an ultra-minimalist design aesthetic inspired by Apple and Swiss design principles.
+Professional website for Anoop Kurup, Revenue Systems Architect, helping founder-led B2B service firms (₹2Cr–₹15Cr) install AI-Enabled Revenue Systems that generate clients without depending on the founder. Built with Next.js and featuring an ultra-minimalist design aesthetic inspired by Apple and Swiss design principles.
 
-**Positioning**: Business Clarity Architect
-**Tagline**: "Your growth isn't broken. Your clarity is."
-**Framework**: The Clarity Stack™ (Strategy → Positioning → Conversion)
+**Positioning**: Revenue Systems Architect
+**Tagline**: "Revenue Systems Architect for Expert Founders. Beyond referral dependence."
+**Framework**: The Revenue System Architecture™ (Calibration → Automation → Acceleration)
 
 ## Current Status
-✅ **Ultra-minimalist redesign complete** (January 2025)
-- Homepage with symptom-based entry points and Clarity Stack visualization
-- Three service pages: Diagnose, Build, Partner
-- Redesigned About, Blog, and Contact pages
-- Simplified header/footer with minimal aesthetic
-- Design system updated to ultra-minimalist principles
+✅ **Revenue System Architecture repositioning complete** (February 2026)
+- Homepage with symptom-based entry points, proof stats bar, Revenue System visualization, qualification section
+- Three service pages: Diagnose (AI Readiness Audit), Build (Implementation Pilot), Partner (Ongoing Advisory)
+- About, Blog, Videos, and Contact pages updated to new positioning
+- YAML-driven content system for all major pages
+- Ultra-minimalist design system unchanged
 
 ## Tech Stack
 - **Framework**: Next.js 14 with App Router
 - **Styling**: Tailwind CSS (custom ultra-minimalist design tokens)
-- **Content**: MDX for blog posts
+- **Content**: YAML files for page content; MDX for blog posts
 - **Typography**: Cormorant Garamond (serif) + Inter (sans-serif)
 - **Icons**: Lucide React
 - **Deployment**: Vercel
 - **Version Control**: Git/GitHub
 
 ## Target Audience
-**Primary**: Expert-founders of services businesses
-- 10+ years of experience, 5+ years in business
+**Primary**: Founder-led B2B service firms
+- ₹2Cr–₹15Cr revenue, 10–50 employees
+- Founder is still the only one closing deals
 - Stuck in referral dependence
 - Marketing hasn't worked consistently
-- Based in India (though work is location-independent)
+- Based in India (work is remote)
 
-**Services**: Consultants, agencies, trainers, professional services firms
+**Types**: Consultants, agencies, trainers, professional services firms (NOT software/IT product companies)
 
 ## Project Structure
 ```
@@ -40,30 +41,39 @@ aksite-nextjs/
 │   ├── app/
 │   │   ├── globals.css
 │   │   ├── layout.tsx
-│   │   ├── page.tsx              # Homepage with Clarity Stack
-│   │   ├── about/                # Personal story + professional background
-│   │   ├── diagnose/             # Clarity Diagnosis Session
-│   │   ├── build/                # Clarity Sprint (Strategy/Positioning/Conversion)
-│   │   ├── partner/              # Ongoing Advisory
-│   │   ├── framework/            # Clarity Stack framework page
-│   │   ├── videos/               # Video content
+│   │   ├── page.tsx              # Homepage (YAML-driven)
+│   │   ├── about/                # Personal story + professional background (YAML-driven)
+│   │   ├── diagnose/             # AI Readiness Audit (YAML-driven)
+│   │   ├── build/                # Implementation Pilot (YAML-driven)
+│   │   ├── partner/              # Ongoing Advisory (YAML-driven)
+│   │   ├── framework/            # Revenue System Architecture page (hardcoded TSX)
+│   │   ├── videos/               # Video content (hardcoded TSX)
 │   │   ├── blog/                 # MDX blog system
 │   │   │   ├── page.tsx
 │   │   │   └── [slug]/page.tsx
-│   │   ├── contact/              # Contact with qualification criteria
+│   │   ├── contact/              # Contact with qualification criteria (hardcoded TSX)
 │   │   └── (sample)/sample/      # Original sample homepage preserved
 │   ├── components/
 │   │   ├── ui/                   # shadcn components (if needed)
 │   │   ├── Header.tsx            # Minimal nav with Services dropdown
 │   │   └── Footer.tsx            # Clean 2-column footer
 │   └── lib/
+│       ├── content.ts            # YAML loaders + TypeScript interfaces
 │       ├── blog.ts               # Blog utilities
 │       └── markdown.ts           # MDX processing
 ├── content/
-│   └── blog/                     # MDX blog posts
+│   ├── data/
+│   │   └── clarity-stack.yaml   # Revenue System Architecture phases data
+│   ├── pages/
+│   │   ├── home.yaml            # Homepage content
+│   │   ├── about.yaml           # About page content
+│   │   └── services/
+│   │       ├── diagnose.yaml    # AI Readiness Audit
+│   │       ├── build.yaml       # Implementation Pilot
+│   │       └── partner.yaml     # Ongoing Advisory
+│   └── blog/                    # MDX blog posts
 ├── public/
 │   └── images/
-├── sitecopydocs/                 # Copy and planning documents
 └── tailwind.config.ts            # Ultra-minimalist design tokens
 ```
 
@@ -81,10 +91,12 @@ aksite-nextjs/
 ```typescript
 colors: {
   navy: {
-    900: '#0F172A',  // Headlines, primary text
+    50:  '#EFF6FF',  // Light phase backgrounds
+    500: '#3B82F6',  // Medium phase backgrounds
+    900: '#1E3A8A',  // Dark phase backgrounds, headlines
   },
   slate: {
-    50: '#F8FAFC',   // Subtle backgrounds
+    50:  '#F8FAFC',  // Subtle section backgrounds
     100: '#F1F5F9',  // Section dividers
     500: '#64748B',  // Meta text
     600: '#475569',  // Body text
@@ -108,7 +120,7 @@ colors: {
 - Small: 0.875rem (14px)
 
 ### Spacing
-- **Section spacing**: 8rem (128px) between sections
+- **Section spacing**: 8rem (128px) between sections (`py-section`)
 - **Content spacing**: 4rem (64px) within sections
 - 8px grid system for consistent alignment
 
@@ -122,57 +134,62 @@ colors: {
 ## Service Structure
 
 ### 1. Diagnose (Entry Point)
-**Clarity Diagnosis Session** - 60-minute diagnostic
-- Pre-session intake
-- Video call Clarity Stack audit
-- Written diagnosis + recommendations
-- 7 days follow-up access
-- Booking: TidyCal integration
+**AI Readiness Audit** — 90-minute diagnostic — ₹25,000
+- Pre-session intake and revenue flow mapping
+- 90-minute video call audit across all three phases
+- Written Roadmap: 3 Immediate Automations + Tool Stack + ROI Model
+- 100% credited back if moving to Implementation Pilot
+- Booking: TidyCal (https://tidycal.com/anoopmkurup/consulting-marketing-leadgen)
 
 ### 2. Build
-**Clarity Sprint** - 4-8 week intensive work
-Three sprint types:
-- **Strategy Sprint**: Where to play, ICP definition
-- **Positioning Sprint**: Narrative, messaging, POV
-- **Conversion Sprint**: Offer architecture, lead magnets
+**Implementation Pilot** — 6-week done-for-you — ₹1.5 Lakhs (₹25K audit credited back)
+Three components:
+- **Calibration (Week 1)**: Niche, offer sharpening, message design
+- **The Hunter (Weeks 2–3)**: AI lead generation workflows, outreach sequences
+- **The Architect (Weeks 4–6)**: Proposal automation, content systems, admin workflows
+
+Key stats: Proposals 4.5 hours → 12 minutes | Win rate 15% → 35%
 
 ### 3. Partner
-**Ongoing Advisory** - Monthly retainer
-- Monthly strategy sessions
-- Async support between calls
-- Quarterly planning reviews
-- 3-month minimum commitment
+**Ongoing Advisory** — Monthly retainer — 3-month minimum
+- 2 strategy sessions per month
+- Async access between sessions
+- Quarterly Revenue System review
+- For founders who have done the foundational work and want sustained calibration
 
-## The Clarity Stack™ Framework
+## The Revenue System Architecture™ Framework
 
-Three-layer diagnostic and implementation framework:
+Three-phase horizontal framework (Calibration → Automation → Acceleration):
 
 ```
-┌─────────────────────────────┐
-│   CONVERSION LAYER          │  ← Lead magnets, offer architecture
-├─────────────────────────────┤
-│   POSITIONING LAYER         │  ← Narrative, messaging, POV
-├─────────────────────────────┤
-│   STRATEGY LAYER            │  ← ICP, problem focus, where to play
-└─────────────────────────────┘
+┌─────────────────┐  →  ┌─────────────────┐  →  ┌─────────────────┐
+│  CALIBRATION    │      │   AUTOMATION    │      │  ACCELERATION   │
+│  "The Fuel"     │      │  "The Engine"   │      │  "The Freedom"  │
+│  Phase 1/Week 1 │      │  Phase 2/Wk 2-4│      │  Phase 3/Wk 5+  │
+│                 │      │                 │      │                 │
+│ • Niche         │      │ • AI Lead Gen   │      │ • Predictable   │
+│ • Offer         │      │ • Proposals     │      │   Pipeline      │
+│ • Message       │      │ • Content       │      │ • Zero-Touch    │
+└─────────────────┘      └─────────────────┘      └─────────────────┘
 ```
 
-**Core Belief**: "Your problem isn't tactics. It's clarity. Most marketing fails because the foundation is broken."
+**Core Belief**: "Strategy without Systems is hallucination. Systems without Strategy is spam. We build both."
+**Key Principle**: Calibration first. Automation second. Acceleration follows.
 
 ## Homepage Structure
 
-### Current Design (Symptom-Based Entry)
-1. **Hero**: "Your growth isn't broken. Your clarity is."
-2. **Symptom Cards** (4): Entry points for common problems
-   - "Clients compare me to cheaper competitors" → Positioning
-   - "I get leads but they don't convert" → Conversion
-   - "Marketing feels random and inconsistent" → Strategy
-   - "I'm invisible in my market" → Positioning + Conversion
-3. **Clarity Stack**: Visual framework explanation
-4. **Three Service Tiers**: Diagnose → Build → Partner
-5. **Case Studies**: Results-focused proof
-6. **FAQ**: "Foundations, not funnels" messaging
-7. **Final CTA**: Book Clarity Diagnosis Session
+### Current Sections (in order)
+1. **Hero**: "Revenue Systems Architect for Expert Founders. Beyond referral dependence."
+2. **Bridge**: "Why Clarity is No Longer Enough" — Calibrate/Automate/Accelerate steps
+3. **Proof Stats Bar**: 4.5hrs→12min proposals | 15%→35% win rate | 60% deals after 5th follow-up
+4. **Symptoms** (4 cards): Entry points mapped to Calibration/Automation phases
+5. **Revenue System Architecture**: Horizontal 3-column visual
+6. **Services** (3 cards): Diagnose, Build, Partner
+7. **About**: Brief bio section
+8. **Case Studies**: 3 anonymised cases with specific outcome metrics
+9. **FAQ**: 6 questions including "How is Pilot different from hiring an agency?"
+10. **Qualification**: "This is for you if..." / "This is not for you if..."
+11. **Final CTA**: Book an AI Readiness Audit (navy-900 background)
 
 ## Blog System
 
@@ -195,40 +212,34 @@ hero_image: "/images/blog/post-image.webp"
 
 ### Categories
 - Strategy
-- Positioning
-- Lead Generation
+- Calibration
+- Automation
+- Revenue Systems
 - Business Development
-- Thought Leadership
-
-### Design
-- Minimalist listing with grayscale image cards
-- Category filter (navy-900 active, white inactive)
-- Clean individual post pages with comprehensive prose styling
-- Author bio + CTA at bottom
 
 ## Contact Page
 
 ### Structure
-1. **Hero**: "Let's talk about what's actually broken"
-2. **Primary CTA**: Book Diagnosis Session (with TidyCal link)
+1. **Hero**: "Let's talk about what's actually broken" — targets ₹2Cr–₹15Cr founders
+2. **Primary CTA**: Book AI Readiness Audit (TidyCal link) — ₹25,000, 100% credit guarantee
 3. **Alternative Contact**: Email + LinkedIn
 4. **Qualification Section**: "This is for you if..." / "This is not for you if..."
 5. **Location**: Bangalore, IST timezone note
-6. **Final CTA**: Emphasis on "No pitch. No pressure. Just clarity."
+6. **Final CTA**: "No pitch. No pressure. Just a clear plan."
 
 ## Navigation
 
 ### Header (Desktop)
-About | Services ▼ | Framework | Videos | Blog | Contact | [Book Diagnosis]
+About | Services ▼ | Framework | Videos | Blog | Contact | [Book an Audit]
 
 **Services Dropdown**:
-- Diagnose (Clarity Diagnosis Session)
-- Build (Clarity Sprint)
+- Diagnose (AI Readiness Audit)
+- Build (Implementation Pilot)
 - Partner (Ongoing Advisory)
 
 ### Footer
 Simple 2-column:
-- Left: Name + "Business Clarity Architect"
+- Left: Name + "Revenue Systems Architect"
 - Right: Contact | LinkedIn
 
 ## Key Design Principles
@@ -257,14 +268,19 @@ Simple 2-column:
 - Stacked layouts on mobile
 
 ## SEO & Performance
-- Meta tags with Business Clarity Architect positioning
+- Meta tags with Revenue Systems Architect positioning
 - Open Graph tags
 - Image optimization (WebP)
 - Core Web Vitals optimization
 - Reading time estimation
-- Sitemap generation
 
 ## Development Guidelines
+
+### Content Architecture
+- **Most page content lives in YAML files** under `/content/pages/` and `/content/data/`
+- **TypeScript interfaces** for all YAML structures are in `src/lib/content.ts`
+- **Hardcoded TSX pages**: `framework/page.tsx`, `contact/page.tsx`, `blog/page.tsx`, `videos/page.tsx`
+- When updating copy, edit the YAML file first; only edit TSX for hardcoded pages
 
 ### Making Changes
 1. **Read first**: Always read files before editing
@@ -274,6 +290,7 @@ Simple 2-column:
 5. **Spacing**: Use py-section (8rem), py-content (4rem)
 6. **CTAs**: Underline-style with border-bottom
 7. **Images**: Implement grayscale class
+8. **New YAML fields**: Always add corresponding TypeScript interface in `content.ts`
 
 ### Testing
 - Run `npm run dev` to test locally
@@ -283,45 +300,31 @@ Simple 2-column:
 
 ### Git Workflow
 ```bash
-git add -A
+git add [specific files]
 git commit -m "Description
 
-Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
 git push origin master
 ```
-
-## Content Copy Documents
-
-Located in `/sitecopydocs/`:
-- `homepage_copy.docx` - Homepage content
-- `service_pages_copy.docx` - Service page copy
-- `about_page_copy.md` - About page content
-- `website-page-mapping.md` - Site structure and redirects
-- Clarity Stack SVG diagrams
 
 ## Deployment
 
 ### Vercel Setup
 - Auto-deploy from GitHub (master branch)
 - Custom domain: anoopkurup.com
-- Environment variables as needed
-
-### Redirects
-See `/sitecopydocs/website-page-mapping.md` for 301 redirects from old URLs
 
 ## Success Metrics
-- Page load speed (Core Web Vitals)
-- Mobile performance score
-- Diagnosis session bookings
+- AI Readiness Audit bookings (primary)
 - Email contact conversions
 - Blog engagement (reading time, return visits)
+- Page load speed (Core Web Vitals)
 
 ## Brand Voice
 
 ### Tone
 - Direct, honest, no-nonsense
-- "Foundations, not funnels"
-- "Clarity before tactics"
+- "Calibration before Automation"
+- "Systems, not tactics"
 - "This is for you if..." clear qualification
 
 ### Copy Patterns
@@ -332,15 +335,18 @@ See `/sitecopydocs/website-page-mapping.md` for 301 redirects from old URLs
 - Honest disqualification
 
 ### Examples
-- ✅ "Your growth isn't broken. Your clarity is."
-- ✅ "60 minutes to understand what's broken."
-- ✅ "No pitch. No pressure. Just clarity."
+- ✅ "Revenue Systems Architect for Expert Founders."
+- ✅ "90 minutes to map where your pipeline is leaking."
+- ✅ "No pitch. No pressure. Just a clear plan."
+- ✅ "Calibration first. Automation second. Acceleration follows."
 - ❌ "Leverage our proven methodology"
 - ❌ "Unlock exponential growth"
+- ❌ "Your clarity is broken" (old positioning — do not use)
+- ❌ "Clarity Stack", "Clarity Sprint", "Clarity Diagnosis Session" (old service names — do not use)
 
 ---
 
-**Project Status**: Ultra-minimalist redesign complete (January 2025). Site ready for content updates and ongoing optimization.
+**Project Status**: Revenue System Architecture repositioning complete (February 2026).
 
 **Live Site**: https://anoopkurup.com
 **Dev Server**: `npm run dev` → http://localhost:3000
