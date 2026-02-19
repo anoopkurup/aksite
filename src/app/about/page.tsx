@@ -223,46 +223,42 @@ export default function AboutPage() {
             {content.framework.section_subtitle}
           </p>
 
-          {/* The Clarity Stack */}
-          <div className="space-y-4 mb-12">
-            {content.framework.layers.map((layer, index) => {
-              const bgClass = layer.style === 'primary'
-                ? 'bg-navy-900 text-white'
-                : layer.style === 'secondary'
-                ? 'bg-slate-100'
-                : 'bg-slate-50';
-              const borderClass = layer.style === 'primary'
-                ? 'border-cta-500'
-                : layer.style === 'secondary'
-                ? 'border-slate-300'
-                : 'border-slate-200';
-              const labelClass = layer.style === 'primary'
-                ? 'text-navy-300'
-                : 'text-slate-500';
-              const questionClass = layer.style === 'primary'
-                ? 'text-navy-300'
-                : 'text-slate-500';
-              const descClass = layer.style === 'primary'
-                ? 'text-navy-200'
-                : 'text-slate-600';
-              const titleClass = layer.style === 'primary'
-                ? 'text-white'
-                : 'text-navy-900';
+          {/* Revenue System Architecture — Horizontal 3-Column */}
+          <div className="grid md:grid-cols-3 rounded-2xl overflow-hidden shadow-md mb-12">
+            {content.framework.phases.map((phase, index) => {
+              const isLast = index === content.framework.phases.length - 1;
+              const phaseStyles = [
+                { bg: 'bg-navy-900', heading: 'text-white', meta: 'text-navy-300', list: 'text-navy-200' },
+                { bg: 'bg-navy-500', heading: 'text-white', meta: 'text-navy-200', list: 'text-navy-100' },
+                { bg: 'bg-navy-50',  heading: 'text-navy-900', meta: 'text-navy-500', list: 'text-navy-600' },
+              ][index];
 
               return (
-                <div key={index} className={`${bgClass} p-6 border-l-4 ${borderClass}`}>
-                  <p className={`font-sans text-sm ${labelClass} uppercase tracking-wide mb-1`}>
-                    {layer.layer_number}
+                <div key={index} className={`${phaseStyles.bg} p-8 relative`}>
+                  <p className={`font-sans text-xs uppercase tracking-widest mb-3 ${phaseStyles.meta}`}>
+                    {phase.phase_label}
                   </p>
-                  <p className={`font-serif text-title ${titleClass} mb-2`}>
-                    {layer.name}
+                  <h3 className={`font-sans text-2xl font-bold mb-1 ${phaseStyles.heading}`}>
+                    {phase.name}
+                  </h3>
+                  <p className={`font-serif italic mb-4 ${phaseStyles.meta}`}>
+                    "{phase.metaphor}"
                   </p>
-                  <p className={`font-sans text-sm ${questionClass} italic mb-2`}>
-                    "{layer.question}"
+                  <p className={`font-sans text-sm font-medium mb-3 ${phaseStyles.meta}`}>
+                    {phase.question}
                   </p>
-                  <p className={`font-sans text-sm ${descClass}`}>
-                    {layer.description}
-                  </p>
+                  <ul className="space-y-1.5">
+                    {phase.items.map((item, i) => (
+                      <li key={i} className={`font-sans text-sm ${phaseStyles.list}`}>
+                        • {item}
+                      </li>
+                    ))}
+                  </ul>
+                  {!isLast && (
+                    <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 bg-white rounded-full items-center justify-center shadow-md">
+                      <span className="text-navy-900 text-xs font-bold leading-none">→</span>
+                    </div>
+                  )}
                 </div>
               );
             })}

@@ -9,25 +9,25 @@ hero:
   tier_label: "Ongoing Advisory"
   title: "A thinking partner as you grow."
   body:
-    - "Your Clarity Stack is solid. Now you need someone to help you maintain it — and adapt it as your business evolves."
-    - "The Ongoing Advisory is a retainer relationship for founders who want sustained clarity, not one-time fixes."
+    - "Your Revenue System is installed. Now you need someone to help you maintain it, evolve it, and keep it calibrated as your business changes."
+    - "The Ongoing Advisory is a retainer relationship for founders who want sustained strategic clarity — not one-time fixes that fade in 90 days."
   cta_text: "Inquire About Advisory"
   cta_link: "/contact"
 
 qualification:
   section_title: "This is for you if…"
   for_you_if:
-    - "You've done the foundational work and want to keep it sharp"
-    - "You make strategic decisions regularly and want a sounding board"
-    - "You're growing and need to evolve your positioning as you scale"
-    - "You value having someone who knows your business deeply"
-    - "You've worked with me before and want continued access"
+    - "You've installed your Revenue System and want to keep it calibrated"
+    - "You make strategic decisions regularly and want a thinking partner"
+    - "You're scaling and need to evolve your positioning, offer, or automation as you grow"
+    - "You value having someone who knows your business and Revenue System deeply"
+    - "You've worked with me before (Audit or Pilot) and want continued access"
 
   not_for_you_title: "This is not for you if…"
   not_for_you_if:
-    - "You haven't done the foundational work yet (start with Build)"
-    - "You need intensive, project-based help (that's a Sprint)"
-    - "You're looking for someone to execute marketing for you"
+    - "You haven't done the foundational work yet — start with the AI Readiness Audit"
+    - "You need intensive, done-for-you implementation (that's the Implementation Pilot)"
+    - "You're looking for someone to run your marketing or execute campaigns for you"
 
 whats_included:
   section_title: "What's included"
@@ -43,7 +43,7 @@ whats_included:
 
     - icon: "compass"
       title: "Positioning reviews"
-      description: "As your business evolves, your positioning might need to evolve too. Regular reviews ensure your Clarity Stack stays current."
+      description: "As your business evolves, your positioning might need to evolve too. Regular reviews ensure your Revenue System stays current."
 
     - icon: "refresh-cw"
       title: "Decision support"
@@ -66,19 +66,19 @@ how_it_works:
   format_includes:
     - "2 scheduled sessions per month (60–90 minutes each)"
     - "Async access via email or messaging"
-    - "Quarterly Clarity Stack review"
+    - "Quarterly Revenue System review"
 
 what_changes:
   section_title: "What changes"
   items:
     - title: "Faster decisions"
-      description: "When you have someone who knows your strategy, decisions get easier. You're not starting from scratch every time you face a choice."
+      description: "When you have someone who knows your Revenue System deeply, decisions get easier. You're not starting from scratch every time you face a strategic choice."
 
-    - title: "Maintained clarity"
-      description: "Clarity erodes. Markets shift. Competitors move. New opportunities distract. Regular attention keeps your foundation solid."
+    - title: "Calibration stays sharp"
+      description: "Markets shift. Competitors move. New opportunities distract. Without regular attention, your niche, offer, and message drift. Advisory keeps your Calibration current."
 
-    - title: "Confident growth"
-      description: "Scaling without clarity creates chaos. Scaling with a thinking partner means you can grow without losing what makes you different."
+    - title: "Confident scaling"
+      description: "Scaling without a calibrated Revenue System creates chaos. Advisory means you can grow — add team, enter new markets, raise prices — without losing what makes you different."
 
 investment:
   section_title: "Investment"
@@ -87,7 +87,7 @@ investment:
   includes:
     - "2 strategy sessions per month"
     - "Async access between sessions"
-    - "Quarterly Clarity Stack review"
+    - "Quarterly Revenue System review"
     - "Priority access for urgent decisions"
   commitment_note: "Minimum commitment: 3 months"
   cta_text: "Inquire About Advisory"
@@ -96,26 +96,26 @@ investment:
 faqs:
   title: "Questions"
   items:
-    - question: "Do I need to have done a Sprint first?"
-      answer: "Not necessarily, but your Clarity Stack should be reasonably solid. Advisory is about maintaining and evolving clarity, not building it from scratch. If your foundations need work, start with a Sprint."
+    - question: "Do I need to have done the Audit or Pilot first?"
+      answer: "Not always, but your Revenue System should be reasonably solid. Advisory is about maintaining and evolving a working system, not building one from scratch. If your Calibration hasn't been done yet, start with the AI Readiness Audit."
 
     - question: "How is this different from business coaching?"
-      answer: "I'm not a coach. I don't work on mindset, accountability, or personal development. This is strategic advisory focused specifically on clarity — positioning, strategy, and how you show up in your market."
+      answer: "I'm not a coach. I don't work on mindset, accountability, or personal development. This is strategic advisory focused specifically on your Revenue System — Calibration, Automation, Velocity — and how you evolve it as your business scales."
 
-    - question: "What if I have a big project mid-engagement?"
-      answer: "Advisory retainers are for ongoing support, not intensive projects. If something big comes up — a major repositioning, a new market entry — we might add a Sprint on top. We'll discuss what makes sense."
+    - question: "What if I need intensive work mid-engagement?"
+      answer: "Advisory retainers are for ongoing strategic support, not intensive implementation. If something major comes up — a full repositioning, a new market entry, building out new automation — we might scope an Implementation Pilot on top. We'll work out what makes sense."
 
     - question: "How quickly can I start?"
-      answer: "Availability is limited. If there's space, we can typically start within 2–4 weeks. If not, I'll add you to the waitlist and let you know when a spot opens."
+      answer: "Availability is limited. I work with a small number of advisory clients at any time. If there's space, we can typically start within 2–4 weeks. If not, I'll add you to the waitlist."
 
 final_cta:
-  title: "Want sustained clarity as you grow?"
-  body: "If you're past the foundation-building stage and want a thinking partner for the road ahead, let's talk."
+  title: "Want your Revenue System to keep improving as you grow?"
+  body: "If you're past the foundation-building stage and want a thinking partner to keep your system calibrated and scaling, let's talk."
   cta_text: "Inquire About Advisory"
   cta_link: "/contact"
   secondary_text: "Not there yet?"
   secondary_options:
-    - text: "Start with a Diagnosis"
+    - text: "Start with an AI Readiness Audit"
       link: "/diagnose"
-    - text: "Build your foundation first"
+    - text: "Install your system first"
       link: "/build"

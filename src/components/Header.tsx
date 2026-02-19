@@ -11,8 +11,8 @@ export default function Header() {
   const pathname = usePathname();
 
   const services = [
-    { name: "Diagnose", href: "/diagnose", description: "Clarity Diagnosis Session" },
-    { name: "Build", href: "/build", description: "Clarity Sprint" },
+    { name: "Diagnose", href: "/diagnose", description: "AI Readiness Audit" },
+    { name: "Build", href: "/build", description: "Implementation Pilot" },
     { name: "Partner", href: "/partner", description: "Ongoing Advisory" },
   ];
 
@@ -136,7 +136,7 @@ export default function Header() {
               href="/diagnose"
               className="font-sans text-sm bg-cta-500 text-white px-4 py-2 rounded hover:bg-cta-600 transition-colors"
             >
-              Book Diagnosis
+              Book an Audit
             </Link>
           </nav>
 
@@ -240,7 +240,7 @@ export default function Header() {
                 className="font-sans text-sm bg-cta-500 text-white px-4 py-2 rounded text-center hover:bg-cta-600 transition-colors mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Book Diagnosis
+                Book an Audit
               </Link>
             </nav>
           </div>

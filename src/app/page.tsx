@@ -70,6 +70,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* The Bridge Section */}
+      <section className="py-section bg-white border-t border-slate-100">
+        <div className="max-w-3xl mx-auto px-8">
+          <h2 className="font-serif text-display text-navy-900 mb-8">
+            {content.bridge.headline}
+          </h2>
+          <div className="font-sans text-body-lg text-slate-500 leading-relaxed space-y-4 mb-12">
+            {content.bridge.paragraphs.map((paragraph, index) => {
+              if (paragraph.includes('**')) {
+                const parts = paragraph.split('**');
+                return (
+                  <p key={index}>
+                    {parts.map((part, i) =>
+                      i % 2 === 1 ? (
+                        <span key={i} className="text-navy-800 font-medium">{part}</span>
+                      ) : (
+                        part
+                      )
+                    )}
+                  </p>
+                );
+              }
+              return <p key={index}>{paragraph}</p>;
+            })}
+          </div>
+          <div>
+            <p className="font-sans text-sm text-navy-600 uppercase tracking-widest mb-6">
+              {content.bridge.process_label}
+            </p>
+            <div className="space-y-4">
+              {content.bridge.steps.map((item, index) => (
+                <div key={index} className="flex items-start gap-6 border-l-4 border-cta-500 pl-6 py-2">
+                  <div>
+                    <p className="font-serif text-title text-navy-900 mb-1">{index + 1}. {item.step}</p>
+                    <p className="font-sans text-body text-slate-500">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Symptom Entry Points */}
       <section className="py-section bg-slate-50">
         <div className="max-w-5xl mx-auto px-8">
@@ -113,7 +156,7 @@ export default function HomePage() {
 
       {/* The Framework */}
       <section className="py-section bg-white">
-        <div className="max-w-4xl mx-auto px-8">
+        <div className="max-w-5xl mx-auto px-8">
           <h2 className="font-serif text-display text-navy-900 text-center mb-8">
             {clarityStack.title}
           </h2>
@@ -122,86 +165,52 @@ export default function HomePage() {
             {clarityStack.subtitle}
           </p>
 
-          {/* The Clarity Stack Visual */}
-          <div className="max-w-2xl mx-auto mb-16">
-            <p className="font-sans text-sm text-navy-600 uppercase tracking-widest text-center mb-8">
-              {clarityStack.framework_label}
-            </p>
+          {/* Revenue System Architecture — Horizontal 3-Column */}
+          <div className="grid md:grid-cols-3 rounded-2xl overflow-hidden shadow-md mb-6">
+            {clarityStack.phases.map((phase, index) => {
+              const isLast = index === clarityStack.phases.length - 1;
+              const phaseStyles = [
+                { bg: 'bg-navy-900', heading: 'text-white', meta: 'text-navy-300', list: 'text-navy-200' },
+                { bg: 'bg-navy-500', heading: 'text-white', meta: 'text-navy-200', list: 'text-navy-100' },
+                { bg: 'bg-navy-50',  heading: 'text-navy-900', meta: 'text-navy-500', list: 'text-navy-600' },
+              ][index];
 
-            <div className="space-y-4">
-              {clarityStack.layers.map((layer, index) => (
-                <div
-                  key={index}
-                  className={`p-6 border-l-4 ${
-                    layer.is_foundation
-                      ? `bg-${layer.bg_color} border-${layer.border_color} text-white`
-                      : `bg-${layer.bg_color} border-${layer.border_color}`
-                  }`}
-                >
-                  <p className={`font-sans text-sm uppercase tracking-wide mb-1 ${
-                    layer.is_foundation ? 'text-navy-300' : 'text-navy-500'
-                  }`}>
-                    {layer.layer_number}
-                  </p>
-                  <p className={`font-serif text-title mb-2 ${
-                    layer.is_foundation ? 'text-white' : 'text-navy-900'
-                  }`}>
-                    {layer.name}
-                  </p>
-                  <p className={`font-sans text-sm italic mb-2 ${
-                    layer.is_foundation ? 'text-navy-300' : 'text-navy-500'
-                  }`}>
-                    {layer.question}
-                  </p>
-                  <p className={`font-sans text-body ${
-                    layer.is_foundation ? 'text-navy-100' : 'text-navy-700'
-                  }`}>
-                    {layer.description}
-                  </p>
+              return (
+                <div key={index} className={`${phaseStyles.bg} p-10 relative flex flex-col justify-between min-h-[280px]`}>
+                  <div>
+                    <p className={`font-sans text-xs uppercase tracking-widest mb-3 ${phaseStyles.meta}`}>
+                      {phase.phase_label}
+                    </p>
+                    <h3 className={`font-sans text-3xl font-bold mb-1 ${phaseStyles.heading}`}>
+                      {phase.name}
+                    </h3>
+                    <p className={`font-serif italic text-lg mb-5 ${phaseStyles.meta}`}>
+                      "{phase.metaphor}"
+                    </p>
+                    <p className={`font-sans text-sm font-medium mb-4 ${phaseStyles.meta}`}>
+                      {phase.question}
+                    </p>
+                    <ul className="space-y-1.5">
+                      {phase.items.map((item, i) => (
+                        <li key={i} className={`font-sans text-sm ${phaseStyles.list}`}>
+                          • {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  {!isLast && (
+                    <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 bg-white rounded-full items-center justify-center shadow-md">
+                      <span className="text-navy-900 text-xs font-bold leading-none">→</span>
+                    </div>
+                  )}
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
 
-          {/* Framework explanation */}
-          <div className="max-w-2xl mx-auto space-y-6">
-            <p className="font-serif text-title text-navy-900 text-center">
-              {clarityStack.explanation.title}
-            </p>
-            <div className="font-sans text-body text-slate-500 leading-relaxed space-y-4">
-              {clarityStack.explanation.paragraphs.map((para, index) => {
-                // Parse the paragraph and apply emphasis
-                let parts = [para.text];
-                para.emphasize.forEach((term) => {
-                  parts = parts.flatMap((part) =>
-                    typeof part === 'string' ? part.split(`**${term}**`) : part
-                  );
-                });
-
-                return (
-                  <p key={index}>
-                    {parts.map((part, i) => {
-                      // Check if this part should be emphasized
-                      const isEmphasized = para.emphasize.some((term) =>
-                        para.text.includes(`**${term}**`) &&
-                        i % 2 === 1
-                      );
-                      return isEmphasized ? (
-                        <span key={i} className="text-navy-700 font-medium">
-                          {part}
-                        </span>
-                      ) : (
-                        part
-                      );
-                    })}
-                  </p>
-                );
-              })}
-              <p className="text-cta-600 font-medium">
-                {clarityStack.explanation.conclusion}
-              </p>
-            </div>
-          </div>
+          <p className="font-sans text-sm text-slate-500 text-center italic">
+            {clarityStack.caption}
+          </p>
         </div>
       </section>
 

@@ -430,6 +430,15 @@ export interface HomePageContent {
     paragraphs: string[];
     location: string;
   };
+  bridge: {
+    headline: string;
+    paragraphs: string[];
+    process_label: string;
+    steps: Array<{
+      step: string;
+      description: string;
+    }>;
+  };
   final_cta: {
     title: string;
     body: string;
@@ -440,28 +449,19 @@ export interface HomePageContent {
   };
 }
 
-// Clarity Stack Content
+// Revenue System Architecture Content
 export interface ClarityStackContent {
   title: string;
   subtitle: string;
   framework_label: string;
-  layers: Array<{
+  phases: Array<{
     name: string;
-    layer_number: string;
+    phase_label: string;
+    metaphor: string;
     question: string;
-    description: string;
-    bg_color: string;
-    border_color: string;
-    is_foundation?: boolean;
+    items: string[];
   }>;
-  explanation: {
-    title: string;
-    paragraphs: Array<{
-      text: string;
-      emphasize: string[];
-    }>;
-    conclusion: string;
-  };
+  caption: string;
 }
 
 // Case Studies Content (for reusable case studies)
@@ -766,12 +766,12 @@ export interface AboutPageContent {
   framework: {
     section_title: string;
     section_subtitle: string;
-    layers: Array<{
-      layer_number: string;
+    phases: Array<{
       name: string;
+      phase_label: string;
+      metaphor: string;
       question: string;
-      description: string;
-      style: string;
+      items: string[];
     }>;
     insight: {
       label: string;

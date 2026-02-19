@@ -2,19 +2,32 @@
 # Last updated: 2026-01-22
 
 meta:
-  title: "Anoop Kurup - Business Clarity Architect"
-  description: "I help services businesses diagnose what's actually broken, and build the foundation for growth that doesn't depend on luck."
+  title: "Anoop Kurup - Revenue Systems Architect"
+  description: "I help service businesses move beyond referral dependence by installing AI-Enabled Revenue Systems that generate clients without depending on you."
 
 hero:
   eyebrow: "For expert-founders of services businesses"
-  headline: "Dependent on Referrals? How will you grow?"
-  subheadline: "Let's fix that."
+  headline: "Revenue Systems Architect for Expert Founders."
+  subheadline: "Beyond referral dependence."
   body:
-    - "You've built expertise over 10+ years. Clients love your work. But growth feels stuck, dependent on who happens to refer you this month."
-    - "**The problem isn't your marketing. It's your clarity.**"
-    - "I help services businesses diagnose what's actually broken, and build the foundation for growth that doesn't depend on luck."
-  cta_text: "Book a Clarity Diagnosis Call"
+    - "You've built expertise over 10+ years. Clients love your work. But growth depends on referrals you can't predict or scale."
+    - "**Strategy alone isn't enough. You need systems.**"
+    - "I install AI-Enabled Revenue Systems — built on clear strategy — that generate clients without depending on you."
+  cta_text: "Book an AI Readiness Audit"
   cta_link: "/contact"
+
+bridge:
+  headline: "Why Clarity is No Longer Enough"
+  paragraphs:
+    - "For 10 years, I helped founders find **Business Clarity** — Strategy, Positioning, and why their marketing wasn't working."
+    - "But I kept seeing the same pattern: even founders with perfect clarity couldn't execute. They were too busy running the business to build the systems."
+    - "That is why I have evolved. Today, I don't just give you the roadmap. I install the engine."
+  process_label: "My Process"
+  steps:
+    - step: "Calibrate"
+      description: "We fix your Positioning — the fuel that makes every system work."
+    - step: "Automate"
+      description: "We build the AI Revenue Workflow — so your pipeline runs without you."
 
 symptoms:
   section_title: "Which of these sounds familiar?"
@@ -22,39 +35,39 @@ symptoms:
     - title: "Price Comparison"
       quote: "Clients compare me to cheaper competitors."
       explanation: "You're not losing on price. You're losing on clarity. When clients can't see the difference, price becomes the only way to compare."
-      diagnosis: "This is usually a Positioning problem."
+      diagnosis: "This is a Calibration problem — your niche and offer need sharpening."
 
     - title: "Referral Dependence"
       quote: "Referrals convert. Everything else fails."
-      explanation: "Referrals come pre-sold on you. Cold audiences don't. The difference isn't the channel — it's whether your positioning creates trust before the first conversation."
-      diagnosis: "This is usually a Positioning + Conversion problem."
+      explanation: "Referrals come pre-sold on you. Cold audiences don't. The difference isn't the channel — it's whether your message creates trust before the first conversation."
+      diagnosis: "This is a Calibration + Automation problem — the message and the pipeline both need work."
 
     - title: "Marketing Not Working"
       quote: "We've tried marketing. It doesn't work for us."
-      explanation: "Marketing doesn't fail. Unclear positioning does. Ads, content, webinars — they all amplify whatever's already there. If there's no clarity, there's nothing to amplify."
-      diagnosis: "This needs diagnosis. The root cause could be Strategy, Positioning, or Conversion."
+      explanation: "Marketing doesn't fail. Unclear positioning does. Ads, content, outreach — they all amplify whatever's already there. If the message isn't calibrated, no automation will fix it."
+      diagnosis: "Start with an AI Readiness Audit. The root cause could be Calibration, Automation, or both."
 
     - title: "Difficulty Explaining"
       quote: "I struggle to explain what I do."
       explanation: "If you can't explain it simply, you haven't narrowed it down enough. You're trying to describe all your expertise instead of the one problem you solve better than anyone."
-      diagnosis: "This is usually a Strategy + Positioning problem."
+      diagnosis: "This is a Calibration problem — niche, offer, and message all need work."
 
 services:
   section_title: "Three ways to work together"
   section_subtitle: "Choose based on where you are and what you need."
   items:
     - tier_label: "Diagnose"
-      title: "Clarity Diagnosis Session"
-      best_for: "You're not sure what's actually broken"
-      description: "A focused session to audit your Clarity Stack and identify where the real problem lies. You'll leave knowing exactly which layer needs work — and what to do about it."
-      outcome: "Clear diagnosis + action plan"
+      title: "AI Readiness Audit"
+      best_for: "You're not sure where your Revenue System is broken"
+      description: "A focused 60-minute session to audit your Revenue System readiness and identify what's missing. You'll leave knowing exactly which phase to tackle first — and what to do about it."
+      outcome: "Clear audit + action plan"
       cta_link: "/diagnose"
 
     - tier_label: "Build"
-      title: "Clarity Sprint"
-      best_for: "You know what's broken and want to fix it fast"
-      description: "An intensive engagement to rebuild one or more layers of your Clarity Stack. We work together to define your strategy, sharpen your positioning, or fix your conversion system."
-      outcome: "Rebuilt foundation ready for growth"
+      title: "Revenue System Sprint"
+      best_for: "You know what's missing and want to build it fast"
+      description: "An intensive engagement to build out your Revenue System — Calibration, Automation, or both. We work together to sharpen your offer, install AI workflows, or fix what's blocking Velocity."
+      outcome: "Working revenue system installed"
       cta_link: "/build"
 
     - tier_label: "Partner"
@@ -112,9 +125,9 @@ about:
   location: "Based in Bangalore. Working with clients across India."
 
 final_cta:
-  title: "Ready to find out what's actually broken?"
-  body: "If referrals are your only reliable source of clients, something in your Clarity Stack needs work."
-  body_secondary: "Book a Clarity Diagnosis Call. In 30 minutes, we'll identify which layer is broken and what to do about it."
-  cta_text: "Book Your Clarity Diagnosis Call"
+  title: "Ready to install your Revenue System?"
+  body: "If referrals are your only reliable source of clients, you don't have a growth system. You have a network."
+  body_secondary: "Book an AI Readiness Audit. In 60 minutes, we'll diagnose your current state and map exactly what it would take to install a system that scales."
+  cta_text: "Book an AI Readiness Audit"
   cta_link: "/contact"
-  disclaimer: "No pitch. No pressure. Just clarity."
+  disclaimer: "No pitch. No pressure. Just a clear plan."

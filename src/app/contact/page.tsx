@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact | Anoop Kurup",
-  description: "Book a Clarity Diagnosis Session or get in touch to discuss working together. Based in Bangalore, working with expert-founders across India.",
+  description: "Book an AI Readiness Audit or get in touch. A 90-minute diagnostic to find exactly where your pipeline is leaking — and map what to automate first.",
 };
 
 export default function ContactPage() {
@@ -21,10 +21,10 @@ export default function ContactPage() {
           </h1>
           <div className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed space-y-4">
             <p>
-              If you're an expert-founder stuck in referral dependence, wondering why marketing isn't working, the best place to start is a Clarity Diagnosis Session.
+              If you're a founder-led service firm doing ₹2Cr–₹15Cr and growth depends entirely on your network, the best place to start is an AI Readiness Audit.
             </p>
             <p>
-              60 minutes to understand what's broken. A written diagnosis. A clear next step.
+              90 minutes to map where your pipeline is leaking. A specific written roadmap. A clear next step.
             </p>
           </div>
         </div>
@@ -42,27 +42,27 @@ export default function ContactPage() {
               </div>
               <div className="flex-1">
                 <h2 className="font-serif text-title text-navy-900 mb-3">
-                  Start with a Clarity Diagnosis Session
+                  Start with an AI Readiness Audit
                 </h2>
                 <p className="font-sans text-body text-slate-600 leading-relaxed mb-6">
-                  A 60-minute diagnostic session to identify where your growth is stuck. You'll get a written diagnosis, specific recommendations, and a clear next step — whether we work together or not.
+                  A 90-minute diagnostic to map your revenue flow — where leads are dropping off, where proposals are stalling, where the pipeline depends entirely on you. You'll leave with a specific written roadmap and a 100% credit guarantee.
                 </p>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-start gap-3">
                     <span className="text-cta-500 mt-1">✓</span>
-                    <p className="font-sans text-body text-slate-600">Pre-session intake to understand your business</p>
+                    <p className="font-sans text-body text-slate-600">Pre-session intake and revenue flow mapping</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-cta-500 mt-1">✓</span>
-                    <p className="font-sans text-body text-slate-600">60-minute Clarity Stack audit (video call)</p>
+                    <p className="font-sans text-body text-slate-600">90-minute AI readiness diagnostic (video call)</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-cta-500 mt-1">✓</span>
-                    <p className="font-sans text-body text-slate-600">Written diagnosis with recommendations</p>
+                    <p className="font-sans text-body text-slate-600">Written Roadmap: 3 Immediate Automations + Tool Stack + ROI Model</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-cta-500 mt-1">✓</span>
-                    <p className="font-sans text-body text-slate-600">7 days of follow-up access for questions</p>
+                    <p className="font-sans text-body text-slate-600">₹25,000 — 100% credited back if you move to the Implementation Pilot</p>
                   </div>
                 </div>
                 <a
@@ -71,7 +71,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors duration-300"
                 >
-                  Book Your Diagnosis Session
+                  Book Your AI Readiness Audit
                   <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
                 </a>
               </div>
@@ -157,23 +157,23 @@ export default function ContactPage() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <span className="text-cta-500 mt-1">✓</span>
-                  <p className="font-sans text-body text-slate-600">You're an expert-founder of a services business (consultant, agency, trainer, professional services)</p>
+                  <p className="font-sans text-body text-slate-600">You run a founder-led B2B service firm (consulting, agency, design, legal, HR, tech services)</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-cta-500 mt-1">✓</span>
-                  <p className="font-sans text-body text-slate-600">You have 10+ years of experience and have been in business for 5+ years</p>
+                  <p className="font-sans text-body text-slate-600">Your business does ₹2Cr–₹15Cr and growth depends on your personal network</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-cta-500 mt-1">✓</span>
-                  <p className="font-sans text-body text-slate-600">You're stuck in referral dependence and growth has stalled</p>
+                  <p className="font-sans text-body text-slate-600">You have 10–50 people but you're still the only one closing deals</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-cta-500 mt-1">✓</span>
-                  <p className="font-sans text-body text-slate-600">You've tried marketing tactics and they didn't work consistently</p>
+                  <p className="font-sans text-body text-slate-600">You're tired of being the Chief Everything Officer</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-cta-500 mt-1">✓</span>
-                  <p className="font-sans text-body text-slate-600">You're based in India (though I work remotely)</p>
+                  <p className="font-sans text-body text-slate-600">You're India-based (though I work remotely)</p>
                 </li>
               </ul>
             </div>
@@ -222,10 +222,10 @@ export default function ContactPage() {
       <section className="py-section bg-navy-900">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-serif text-display text-white mb-6">
-            Ready to find out what's broken?
+            Ready to find out where your pipeline is leaking?
           </h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">
-            Book a Clarity Diagnosis Session. 60 minutes to understand the real problem. No pitch. No pressure. Just clarity.
+            Book an AI Readiness Audit. 90 minutes to map the leaks, identify the automations, and calculate the revenue impact. No pitch. No pressure. Just a clear plan.
           </p>
           <a
             href="https://tidycal.com/anoopmkurup/consulting-marketing-leadgen"
@@ -233,7 +233,7 @@ export default function ContactPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center font-sans text-body text-white border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors duration-300"
           >
-            Book Your Session
+            Book Your AI Readiness Audit
             <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
           </a>
           <p className="font-sans text-sm text-navy-400 mt-8">

@@ -1,142 +1,145 @@
-# Build Service Page - Clarity Sprint
-# Last updated: 2026-01-22
+# Build Service Page - Implementation Pilot
+# Last updated: 2026-02-19
 
 meta:
-  title: "Clarity Sprint | Anoop Kurup"
-  description: "Rebuild the foundation. Then grow. An intensive engagement to rebuild one or more layers of your Clarity Stack."
+  title: "Implementation Pilot | Anoop Kurup"
+  description: "The done-for-you Revenue System. A 6-week engagement to install AI-powered lead gen, automated proposals, and content systems in your business."
 
 hero:
-  tier_label: "Clarity Sprint"
-  title: "Rebuild the foundation. Then grow."
+  tier_label: "Implementation Pilot"
+  title: "The done-for-you Revenue System."
   body:
-    - "You know something's broken. Maybe you've done a diagnosis. Now you need to fix it — properly, not with patches."
-    - "The Clarity Sprint is an intensive engagement to rebuild one or more layers of your Clarity Stack — so your business has a solid foundation for growth."
-  cta_text: "Apply for a Clarity Sprint"
+    - "You don't need more strategy. You need someone to build the system — and install it."
+    - "The Implementation Pilot is a 6-week done-for-you engagement. I build your AI Revenue System: lead generation, automated proposals, and content — calibrated to your specific niche and offer."
+  cta_text: "Apply for the Implementation Pilot"
   cta_link: "/contact"
 
 qualification:
   section_title: "This is for you if…"
   for_you_if:
-    - "You've identified the problem (through diagnosis or experience) and want to fix it"
-    - "You need to clarify your strategy — who you serve, what problem you solve"
-    - "You need to sharpen your positioning — why clients should choose you"
-    - "You need to fix your conversion system — how prospects become clients"
-    - "You want to do this intensively, not drag it out over months"
+    - "Your business does ₹2Cr–₹15Cr and you're the only person closing deals"
+    - "You have budget but no time — you want the result, not the homework"
+    - "You're ready to stop being the chief everything officer"
+    - "You've done an AI Readiness Audit (or already know what needs fixing)"
+    - "You want a system that runs, not a document that sits"
 
   not_for_you_title: "This is not for you if…"
   not_for_you_if:
-    - "You're not sure what's broken (start with Diagnose)"
-    - "You want someone to implement tactics for you (I work on foundations, not funnels)"
-    - "You're not available to do intensive work over 4–8 weeks"
+    - "You're not sure what's broken (start with the AI Readiness Audit)"
+    - "You want someone to run your marketing forever (I install the system, then hand it to you)"
+    - "You have fewer than 10 people or are pre-revenue"
 
 sprints:
   section_title: "What we build"
-  section_subtitle: "Choose the layer that needs work."
+  section_subtitle: "Three components installed in six weeks."
   items:
-    - name: "Strategy Sprint"
+    - name: "Calibration"
       icon: "target"
-      question: "Where do I play?"
-      description: "For founders who are trying to serve everyone and getting nowhere. We define your target market, narrow your problem focus, and scope your services — so you know exactly who you're for and who you're not."
+      question: "Week 1: Get the strategy right before we automate anything."
+      description: "We pick one specific niche, sharpen your offer, and design the message that attracts your best clients. This is non-negotiable — automating a bad message just means spamming more people faster. Strategy first. Always."
       outcomes:
-        - "Clear target audience definition"
-        - "Focused problem statement"
-        - "Service scope decisions"
-        - "\"Who we don't serve\" boundary"
+        - "One specific niche or vertical locked in"
+        - "Offer repositioned to eliminate price comparison"
+        - "Message designed for the right audience"
+        - "The brief we use to build everything else"
 
-    - name: "Positioning Sprint"
+    - name: "The Hunter"
       icon: "message-square"
-      question: "Why should they choose me?"
-      description: "For founders who are being compared on price because clients can't see the difference. We craft your differentiation, sharpen your messaging, and define the category you want to own."
+      question: "Weeks 2–3: AI that finds your ideal clients and starts conversations."
+      description: "We build an AI-powered lead generation and outreach system targeting your specific niche. List building, connection sequences, and follow-ups — calibrated to start conversations, not blast inboxes. Designed for the relationship-driven Indian B2B market."
       outcomes:
-        - "Clear positioning statement"
-        - "Differentiation framework"
-        - "Messaging guide"
-        - "Compelling answer to \"why you?\""
+        - "AI list-building targeting your ideal client profile"
+        - "Outreach sequences that start conversations (not spam)"
+        - "Automated follow-up that runs past the 5th touchpoint"
+        - "20+ qualified prospects identified per week"
 
-    - name: "Conversion Sprint"
+    - name: "The Architect"
       icon: "trending-up"
-      question: "How do they become clients?"
-      description: "For founders whose marketing generates interest but not clients. We fix your lead generation approach, create a compelling offer, structure your pricing, and design a sales process that converts."
+      question: "Weeks 4–6: Proposals in 12 minutes. Follow-ups on autopilot."
+      description: "We automate the proposal and follow-up workflow. Client call recorded → AI extracts pain points and budget → AI matches with your service catalog → AI drafts full proposal → you review and send. What used to take 4.5 hours now takes 12 minutes."
       outcomes:
-        - "Lead generation strategy"
-        - "Structured offer"
-        - "Pricing framework"
-        - "Clear path from first contact to signed client"
+        - "Proposal workflow: 4.5 hours → 12 minutes"
+        - "AI follow-up sequences that never let leads go cold"
+        - "Content repurposing: one client call → 5 LinkedIn posts + newsletter + case study"
+        - "Win rate improvement: 15% → 35% (speed builds trust)"
 
-  note: "**Note:** If your Clarity Stack is broken at multiple layers, we work from the bottom up. Strategy before Positioning. Positioning before Conversion. We may combine sprints into a longer engagement."
+  note: "**The sequence is non-negotiable.** Calibration before The Hunter. The Hunter before The Architect. We build in order. This is why it works."
 
 how_it_works:
   section_title: "How it works"
-  section_subtitle: "Intensive, focused, done."
-  duration: "4–8 weeks depending on scope"
+  section_subtitle: "Done-for-you. Handed to you. Running without you."
+  duration: "6 weeks"
   steps:
     - step_number: "1"
       week_label: "Week 1"
-      title: "Deep dive"
-      description: "We audit your current state — your market, your messaging, your offers, your results. I review everything and identify the gaps."
+      title: "Calibration"
+      description: "We audit your positioning, define your niche, and sharpen the offer. This brief drives everything else we build. No shortcuts here."
 
     - step_number: "2"
       week_label: "Weeks 2–3"
-      title: "Build sessions"
-      description: "Working sessions where we construct the new layer together. This isn't me handing you a document — we think through decisions together so you understand the logic and can defend your choices."
+      title: "The Hunter"
+      description: "I build the AI lead generation and outreach system targeting your specific niche. You review the sequences. We go live."
 
     - step_number: "3"
-      week_label: "Week 4"
-      title: "Refinement and handoff"
-      description: "We test the new foundation, refine the language, and document everything so you can implement with confidence."
+      week_label: "Weeks 4–6"
+      title: "The Architect"
+      description: "Proposal automation, follow-up workflows, and content repurposing systems — all installed, tested, and handed over with documented SOPs."
 
   format_label: "Format"
-  format_description: "Video calls + async work. Typically 2–3 sessions per week during the sprint."
+  format_description: "Done-for-you. I build it. You review key decisions. I hand it over with SOPs so your team can run it."
 
 deliverables:
   section_title: "What you get"
   items:
-    - title: "A rebuilt foundation"
-      description: "Not a band-aid. Not a tweak. A properly rebuilt layer of your Clarity Stack that will hold up as you grow."
+    - title: "The Hunter — AI Lead Generation"
+      description: "A running system that finds your ideal clients, sends connection requests, and follows up automatically. Targeting your specific niche. Calibrated for Indian B2B relationship norms."
 
-    - title: "Documentation you can use"
-      description: "Strategy briefs, positioning statements, messaging guides, offer frameworks — whatever we build, you'll have it documented and ready to implement."
+    - title: "The Architect — Automated Proposals"
+      description: "A workflow that takes a client call recording and produces a full proposal draft in 12 minutes. AI-extracted pain points matched to your service catalog. You review. You send."
 
-    - title: "Understanding, not just deliverables"
-      description: "Because we build together, you'll understand why each decision was made. This means you can adapt as your business evolves, not come back to me every time something changes."
+    - title: "The Voice — Content Repurposing"
+      description: "One client call becomes five LinkedIn posts, a newsletter, and a case study. Automatically. Your pipeline visibility stays consistent without you writing anything."
 
 investment:
   section_title: "Investment"
-  title: "Clarity Sprint"
-  description: "Investment varies based on which layers we're rebuilding and the complexity of your business. After an initial conversation, I'll provide a specific proposal."
+  title: "Implementation Pilot — ₹1.5 Lakhs"
+  description: "One-time fee. Limited availability — I run a small number of pilots at a time. If you've done the AI Readiness Audit, your ₹25,000 is fully credited back against this fee."
   sprint_types:
-    - name: "Single layer sprint"
-      duration: "4 weeks"
+    - name: "AI Readiness Audit credit"
+      duration: "₹25,000 credited back"
 
-    - name: "Two-layer sprint"
-      duration: "6–8 weeks"
+    - name: "Implementation Pilot"
+      duration: "6 weeks done-for-you"
 
-    - name: "Full stack rebuild"
-      duration: "8–12 weeks"
+    - name: "Standard rate (vs. pilot)"
+      duration: "₹2.5L standard → ₹1.5L pilot"
 
-  cta_text: "Apply for a Clarity Sprint"
+  cta_text: "Apply for the Implementation Pilot"
   cta_link: "/contact"
 
 faqs:
   title: "Questions"
   items:
-    - question: "Do I need to do a Diagnosis first?"
-      answer: "Not necessarily. If you're clear on what's broken, we can start with a Build conversation. But if there's any ambiguity, the Diagnosis ensures we're fixing the right thing."
+    - question: "Do I need to do the AI Readiness Audit first?"
+      answer: "Not required, but recommended. The Audit gives us a specific roadmap before we start building. If you're already clear on your niche and what needs automating, we can move directly to the Pilot. The ₹25,000 Audit fee is credited back either way."
 
     - question: "How much of my time does this require?"
-      answer: "Expect 3–5 hours per week during the sprint — a mix of sessions with me and work on your own. This is intensive by design. Spreading it out loses momentum."
+      answer: "Much less than you'd expect. I build it; you review key decisions. Expect 3–5 hours per week across the 6 weeks — mostly reviewing outputs and approving sequences. The rest is done for you."
 
-    - question: "What if I need all three layers fixed?"
-      answer: "We do them in sequence: Strategy first, then Positioning, then Conversion. This might become a longer engagement or we might break it into phases. We'll design the right approach after our initial conversation."
+    - question: "Is this just a workshop where I do all the work?"
+      answer: "No. This is done-for-you. I build the systems. You approve them. I hand them over with SOPs so your team can run them. You are not the builder here — you are the client."
 
-    - question: "Will you implement the marketing afterwards?"
-      answer: "I focus on foundations, not execution. Once your Clarity Stack is solid, you can implement yourself, hire a team, or work with an agency. The foundation will make their work far more effective."
+    - question: "What happens after the 6 weeks?"
+      answer: "You own the systems. I hand over complete documentation so your team can operate everything. If you want continued support as the business evolves, we can discuss ongoing advisory."
+
+    - question: "Why not just hire a lead generation agency?"
+      answer: "Agencies assume your strategy is already right and run with it. If it fails, they blame the market. I fix the strategy first (Calibration), then build the system. That's why the system converts — the message is right before we amplify it."
 
 final_cta:
-  title: "Ready to rebuild?"
-  body: "If you know what's broken and want to fix it properly, let's talk about a Clarity Sprint."
-  cta_text: "Apply for a Clarity Sprint"
+  title: "Ready to install your Revenue System?"
+  body: "If you're a founder-led service firm doing ₹2Cr–₹15Cr and you're ready to stop being the only one closing deals, let's talk."
+  cta_text: "Apply for the Implementation Pilot"
   cta_link: "/contact"
   secondary_text: "Not sure if you're ready?"
-  secondary_link_text: "Start with a Diagnosis"
+  secondary_link_text: "Start with an AI Readiness Audit"
   secondary_link: "/diagnose"

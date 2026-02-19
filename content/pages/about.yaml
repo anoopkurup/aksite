@@ -34,7 +34,7 @@ backstory:
   insight: "That's when I realised: marketing problems are rarely marketing problems. They're clarity problems dressed up in marketing clothes."
 
 work:
-  section_title: "Business Clarity Architect"
+  section_title: "Revenue Systems Architect"
   section_subtitle: "The work I do now"
   body:
     - "I work with expert-founders of services businesses — consultants, agencies, trainers, professional services firms. People who've built real expertise over 10+ years but find themselves stuck. Dependent on referrals. Unable to grow beyond their network."
@@ -43,13 +43,13 @@ work:
     label: "The Pattern"
     paragraphs:
       - "They've tried marketing. It didn't work. So they assume they're bad at marketing, or their industry is different, or they just need to find the right tactic."
-      - "But the problem isn't tactics. It's that they're trying to fix Layer 3 when Layer 1 or 2 is broken."
+      - "But the problem isn't tactics. It's that they're trying to automate before they've calibrated — running AI workflows on a message that doesn't convert."
 
   approach:
     title: "That's where I come in."
     paragraphs:
-      - "I use the Business Clarity Architecture™ — a diagnostic framework that identifies where growth is actually stuck. Is it Strategy? Positioning? Conversion? The answer determines what to fix — and in what order."
-      - "I don't run your marketing. I don't build your funnels. I help you see what's actually broken, then help you rebuild the foundation so that whatever marketing you do actually works."
+      - "I use the Revenue System Architecture™ — a three-phase framework that installs a revenue engine for your business. First we Calibrate (fix your niche, offer, and message). Then we Automate (build AI-powered workflows). Then comes Velocity — a predictable pipeline that runs without you."
+      - "I don't run your marketing. I build the system underneath it. The result: clients that come to you because the system works, not because you happened to get a referral this month."
 
 beliefs:
   section_title: "What I believe"
@@ -59,7 +59,7 @@ beliefs:
       description: "Too many businesses jump straight to execution — content plans, ad campaigns, lead magnets — without understanding who they serve, what makes them different, or why anyone should care. Tactics amplify whatever's already there. If there's no clarity, there's nothing to amplify."
 
     - title: "Sequence matters."
-      description: "You can't fix Conversion if Positioning is broken. You can't fix Positioning if Strategy is unclear. Most founders try to solve problems at the wrong layer. That's why \"marketing doesn't work.\""
+      description: "You can't Automate if you haven't Calibrated. Automating the wrong message at scale doesn't get you more clients — it gets you more noise. Most founders skip Calibration and wonder why their AI tools don't work."
 
     - title: "Foundations compound. Tactics don't."
       description: "A quick hack might get you a short-term bump. A solid foundation keeps working as you grow. I'm not interested in growth hacks. I'm interested in clarity that compounds."
@@ -107,33 +107,42 @@ who_im_not_for:
       text: "I'll tell you what I see, not what you want to hear. Kind, but honest."
 
 framework:
-  section_title: "The Business Clarity Architecture™"
-  section_subtitle: "The diagnostic system I use to identify where growth is stuck"
+  section_title: "The Revenue System Architecture™"
+  section_subtitle: "The three-phase system I install for expert-founders"
 
-  layers:
-    - layer_number: "Layer 3"
-      name: "Conversion"
-      question: "How do they become clients?"
-      description: "Lead generation · Offers · Pricing · Sales process"
-      style: "primary"  # navy-900 background
+  phases:
+    - name: "Calibration"
+      phase_label: "Phase 1 (Week 1)"
+      metaphor: "The Fuel"
+      question: "What are we selling?"
+      items:
+        - "Niche Selection"
+        - "Offer Sharpening"
+        - "Message Design"
 
-    - layer_number: "Layer 2"
-      name: "Positioning"
-      question: "Why should they choose you?"
-      description: "Differentiation · Messaging · Category ownership"
-      style: "secondary"  # slate-100 background
+    - name: "Automation"
+      phase_label: "Phase 2 (Weeks 2–4)"
+      metaphor: "The Engine"
+      question: "How does it run?"
+      items:
+        - "AI Lead Generation"
+        - "Proposal Workflows"
+        - "Content Systems"
 
-    - layer_number: "Layer 1"
-      name: "Strategy"
-      question: "Where do you play?"
-      description: "Target market · Problem focus · Service scope"
-      style: "tertiary"  # slate-50 background
+    - name: "Velocity"
+      phase_label: "Phase 3 (Weeks 5+)"
+      metaphor: "The Freedom"
+      question: "What do you get?"
+      items:
+        - "Predictable Pipeline"
+        - "Zero-Touch Admin"
+        - "Founder Freedom"
 
   insight:
-    label: "The Insight"
+    label: "The Sequence Matters"
     paragraphs:
-      - "Most founders try to fix Conversion when the problem is in Strategy or Positioning. Better tactics won't help if the foundation is cracked."
-      - "The sequence matters. We diagnose first. Then fix in order."
+      - "Most founders try to automate before they've calibrated. They build AI workflows around an unclear offer, and wonder why it generates noise instead of clients."
+      - "Calibration first. Automation second. Velocity follows."
 
 services:
   section_title: "How I work"
@@ -166,6 +175,6 @@ personal:
 final_cta:
   title: "Let's find out what's actually broken"
   body: "If you're an expert-founder stuck in referral dependence, wondering why marketing isn't working, let's have a conversation."
-  cta_text: "Book a Clarity Diagnosis Call"
-  cta_link: "/diagnose"
-  secondary_text: "No pitch. No pressure. Just clarity."
+  cta_text: "Book an AI Readiness Audit"
+  cta_link: "/contact"
+  secondary_text: "No pitch. No pressure. Just a clear plan."
