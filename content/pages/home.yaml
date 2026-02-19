@@ -28,6 +28,8 @@ bridge:
       description: "We fix your Positioning — the fuel that makes every system work."
     - step: "Automate"
       description: "We build the AI Revenue Workflow — so your pipeline runs without you."
+    - step: "Accelerate"
+      description: "The system builds momentum — a predictable pipeline, founder freedom, and revenue that scales without you."
 
 symptoms:
   section_title: "Which of these sounds familiar?"
