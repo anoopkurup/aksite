@@ -48,7 +48,7 @@ work:
   approach:
     title: "That's where I come in."
     paragraphs:
-      - "I use the Revenue System Architecture™ — a three-phase framework that installs a revenue engine for your business. First we Calibrate (fix your niche, offer, and message). Then we Automate (build AI-powered workflows). Then comes Velocity — a predictable pipeline that runs without you."
+      - "I use the Revenue System Architecture™ — a three-phase framework that installs a revenue engine for your business. First we Calibrate (fix your niche, offer, and message). Then we Automate (build AI-powered workflows). Then comes Acceleration — a predictable pipeline that runs without you."
       - "I don't run your marketing. I build the system underneath it. The result: clients that come to you because the system works, not because you happened to get a referral this month."
 
 beliefs:
@@ -129,7 +129,7 @@ framework:
         - "Proposal Workflows"
         - "Content Systems"
 
-    - name: "Velocity"
+    - name: "Acceleration"
       phase_label: "Phase 3 (Weeks 5+)"
       metaphor: "The Freedom"
       question: "What do you get?"
@@ -142,7 +142,7 @@ framework:
     label: "The Sequence Matters"
     paragraphs:
       - "Most founders try to automate before they've calibrated. They build AI workflows around an unclear offer, and wonder why it generates noise instead of clients."
-      - "Calibration first. Automation second. Velocity follows."
+      - "Calibration first. Automation second. Acceleration follows."
 
 services:
   section_title: "How I work"

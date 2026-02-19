@@ -3,7 +3,7 @@ import { ArrowRight, Zap, Bot, TrendingUp } from "lucide-react";
 
 export const metadata = {
   title: "The Revenue System Architecture™ | Anoop Kurup",
-  description: "A three-phase framework for installing a revenue system that generates clients without depending on you. Calibration → Automation → Velocity.",
+  description: "A three-phase framework for installing a revenue system that generates clients without depending on you. Calibration → Automation → Acceleration.",
 };
 
 export default function FrameworkPage() {
@@ -53,7 +53,7 @@ export default function FrameworkPage() {
     {
       number: "03",
       icon: TrendingUp,
-      name: "Velocity",
+      name: "Acceleration",
       phase_label: "Phase 3 — Weeks 5+",
       metaphor: "The Freedom",
       question: "What does a predictable pipeline feel like?",
@@ -260,9 +260,9 @@ export default function FrameworkPage() {
                 3
               </div>
               <div>
-                <h3 className="font-sans text-body font-medium text-navy-900 mb-2">Build the engine, then reach Velocity</h3>
+                <h3 className="font-sans text-body font-medium text-navy-900 mb-2">Build the engine, then reach Acceleration</h3>
                 <p className="font-sans text-body text-slate-500">
-                  Once Calibration is solid, we install the AI Revenue Workflows. Velocity — the predictable pipeline, the founder freedom — follows naturally when the first two phases are in place.
+                  Once Calibration is solid, we install the AI Revenue Workflows. Acceleration — the predictable pipeline, the founder freedom — follows naturally when the first two phases are in place.
                 </p>
               </div>
             </div>

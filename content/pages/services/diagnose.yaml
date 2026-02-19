@@ -46,7 +46,7 @@ session_process:
           question: "Is your niche specific enough? Is your offer sharp or are you selling everything to everyone?"
         - name: "Automation"
           question: "Where does your pipeline depend on you manually? What happens when you're busy with delivery?"
-        - name: "Velocity"
+        - name: "Acceleration"
           question: "How predictable is your pipeline right now? What would it take to make it run without you?"
       conclusion: "I'll map the full client journey from lead to close. By the end, we'll know exactly where the leaks are."
 

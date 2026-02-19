@@ -25,7 +25,7 @@ phases:
       - "Proposal Workflows"
       - "Content Systems"
 
-  - name: "Velocity"
+  - name: "Acceleration"
     phase_label: "Phase 3 (Weeks 5+)"
     metaphor: "The Freedom"
     question: "What do you get?"

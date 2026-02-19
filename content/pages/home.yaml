@@ -66,7 +66,7 @@ services:
     - tier_label: "Build"
       title: "Revenue System Sprint"
       best_for: "You know what's missing and want to build it fast"
-      description: "An intensive engagement to build out your Revenue System — Calibration, Automation, or both. We work together to sharpen your offer, install AI workflows, or fix what's blocking Velocity."
+      description: "An intensive engagement to build out your Revenue System — Calibration, Automation, or both. We work together to sharpen your offer, install AI workflows, or fix what's blocking Acceleration."
       outcome: "Working revenue system installed"
       cta_link: "/build"
 
