@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div>
             <p className="font-serif text-lg text-navy-900 mb-2">Anoop Kurup</p>
-            <p className="font-sans text-sm text-cta-600">Revenue Systems Architect</p>
+            <p className="font-sans text-sm text-slate-500">Sales Systems for Services Businesses · Based in Bangalore</p>
           </div>
 
           {/* Links Column */}

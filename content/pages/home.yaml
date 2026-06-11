@@ -1,168 +1,78 @@
-# Homepage Content
-# Last updated: 2026-01-22
+# Homepage Content — "I fix sales for founder-led services businesses"
+# Last updated: 2026-06-11
 
 meta:
-  title: "Anoop Kurup - Revenue Systems Architect"
-  description: "I help service businesses move beyond referral dependence by installing AI-Enabled Revenue Systems that generate clients without depending on you."
+  title: "Anoop Kurup — I Fix Sales for Services Businesses"
+  description: "Sales systems for founder-led services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Start with the free Sales Scorecard."
 
 hero:
-  eyebrow: "For expert-founders of services businesses"
-  headline: "Revenue Systems Architect for Expert Founders."
-  subheadline: "Beyond referral dependence."
+  headline: "I fix sales for founder-led services businesses."
   body:
-    - "You've built expertise over 10+ years. Clients love your work. But growth depends on referrals you can't predict or scale."
-    - "**Strategy alone isn't enough. You need systems.**"
-    - "I install AI-Enabled Revenue Systems — built on clear strategy — that generate clients without depending on you."
-  cta_text: "Book an AI Readiness Audit"
-  cta_link: "/contact"
+    - "You've built real expertise. Clients love the work. But new business still depends on referrals you can't predict — and on you personally selling every deal."
+    - "I package what you're best at into one offer the market actually responds to, and build the weekly sales motion that keeps producing conversations."
+  cta_text: "Take the Sales Scorecard"
+  cta_link: "/scorecard"
+  cta_note: "Free · 3 minutes · instant verdict on how predictable your pipeline really is"
 
-bridge:
-  headline: "Why Clarity is No Longer Enough"
-  paragraphs:
-    - "For 10 years, I helped founders find **Business Clarity** — Strategy, Positioning, and why their marketing wasn't working."
-    - "But I kept seeing the same pattern: even founders with perfect clarity couldn't execute. They were too busy running the business to build the systems."
-    - "That is why I have evolved. Today, I don't just give you the roadmap. I install the engine."
-  process_label: "My Process"
-  steps:
-    - step: "Calibrate"
-      description: "We fix your Positioning — the fuel that makes every system work."
-    - step: "Automate"
-      description: "We build the AI Revenue Workflow — so your pipeline runs without you."
-    - step: "Accelerate"
-      description: "The system builds momentum — a predictable pipeline, founder freedom, and revenue that scales without you."
-
-proof_stats:
+sound_familiar:
+  section_title: "Sound familiar?"
   items:
-    - stat: "4.5 hrs → 12 min"
-      label: "Proposal writing time"
-    - stat: "15% → 35%"
-      label: "Proposal win rate"
-    - stat: "60%"
-      label: "of B2B deals close after the 5th follow-up — most founders stop at one"
+    - symptom: "Referrals convert. Everything else fails."
+      reframe: "Referrals arrive pre-sold. The fix isn't more marketing — it's an offer strangers can say yes to."
+    - symptom: "Every deal is a custom negotiation."
+      reframe: "When nothing is packaged, every sale starts from zero: custom scope, custom price, custom doubt."
+    - symptom: "I'm the only one who can sell what we do."
+      reframe: "If the pitch only works in your mouth, you don't have a sales problem — you have a packaging problem."
+    - symptom: "Prospects nod, then go quiet."
+      reframe: "Nodding is not buying. Deals without a felt trigger and a clear next step dissolve into “let's keep in touch.”"
 
-symptoms:
-  section_title: "Which of these sounds familiar?"
+how_i_fix_it:
+  section_title: "How I fix it"
+  stages:
+    - number: "1"
+      name: "Package"
+      description: "We extract the skill your best clients actually paid for and shape it into one offer with a clear outcome and price. Not a rebrand — a sellable unit."
+    - number: "2"
+      name: "Prove"
+      description: "We put that offer in front of real prospects — ten live conversations, with me in the room for the first ones. The market tells us the version it wants."
+    - number: "3"
+      name: "Systemise"
+      description: "What survived becomes your sales system: the words, the assets, the weekly motion. Written down. Repeatable. Yours."
+
+proof:
+  section_title: "From past consulting engagements"
   items:
-    - title: "Price Comparison"
-      quote: "Clients compare me to cheaper competitors."
-      explanation: "You're not losing on price. You're losing on clarity. When clients can't see the difference, price becomes the only way to compare."
-      diagnosis: "This is a Calibration problem — your niche and offer need sharpening."
-
-    - title: "Referral Dependence"
-      quote: "Referrals convert. Everything else fails."
-      explanation: "Referrals come pre-sold on you. Cold audiences don't. The difference isn't the channel — it's whether your message creates trust before the first conversation."
-      diagnosis: "This is a Calibration + Automation problem — the message and the pipeline both need work."
-
-    - title: "Marketing Not Working"
-      quote: "We've tried marketing. It doesn't work for us."
-      explanation: "Marketing doesn't fail. Unclear positioning does. Ads, content, outreach — they all amplify whatever's already there. If the message isn't calibrated, no automation will fix it."
-      diagnosis: "Start with an AI Readiness Audit. The root cause could be Calibration, Automation, or both."
-
-    - title: "Difficulty Explaining"
-      quote: "I struggle to explain what I do."
-      explanation: "If you can't explain it simply, you haven't narrowed it down enough. You're trying to describe all your expertise instead of the one problem you solve better than anyone."
-      diagnosis: "This is a Calibration problem — niche, offer, and message all need work."
-
-services:
-  section_title: "Three ways to work together"
-  section_subtitle: "Choose based on where you are and what you need."
-  items:
-    - tier_label: "Diagnose"
-      title: "AI Readiness Audit"
-      best_for: "You're not sure where your Revenue System is broken"
-      description: "A focused 90-minute session to audit your Revenue System readiness and identify what's missing. You'll leave knowing exactly which phase to tackle first — and what to do about it."
-      outcome: "Clear audit + action plan"
-      cta_link: "/diagnose"
-
-    - tier_label: "Build"
-      title: "Implementation Pilot"
-      best_for: "You know what's missing and want it built for you"
-      description: "A 6-week done-for-you engagement to install your Revenue System. We sharpen your offer, build the AI workflows, and hand you a pipeline that runs without you."
-      outcome: "Working revenue system installed"
-      cta_link: "/build"
-
-    - tier_label: "Partner"
-      title: "Ongoing Advisory"
-      best_for: "You want a thinking partner as you grow"
-      description: "A retainer relationship for founders who want ongoing clarity as their business evolves. Strategy sessions, positioning reviews, and a sounding board for decisions that matter."
-      outcome: "Sustained clarity as you scale"
-      cta_link: "/partner"
-
-case_studies:
-  section_title: "What changes when the system is in place"
-  items:
-    - title: "From \"performance marketers\" to growth partners"
-      type: "Marketing Agency"
-      problem: "Competing on price with dozens of similar agencies. Clients saw them as interchangeable."
-      root_cause: "Calibration. They were describing what they did, not the outcome they delivered."
-      fix: "Repositioned as \"growth partners for offline apparel brands going online.\" Moved from project fees to revenue-share deals with larger clients."
-      result: "First revenue-share deal closed within 45 days of repositioning."
-
-    - title: "From generic webinars to corporate training contracts"
-      type: "Public Speaking Trainer"
-      problem: "Running free webinars to an audience that never converted. Expertise wasn't translating to paying clients."
-      root_cause: "Calibration. Targeting \"anyone who wants to speak better\" instead of a specific audience with urgent need."
-      fix: "Narrowed to corporate communication for mid-level managers. Built a focused offer for L&D teams."
-      result: "Moved from free webinars to paid corporate contracts at 3x the per-engagement rate."
-
-    - title: "From scattered marketing to location-centric campaigns"
-      type: "School Group (3 schools)"
-      problem: "Nursery admissions stuck at 70% despite active marketing. Same approach wasn't working across locations."
-      root_cause: "Calibration. Three schools, three different parent demographics. One-size-fits-all messaging was missing all of them."
-      fix: "Created location-centric positioning and targeted campaigns for each school based on catchment area demographics."
-      result: "Nursery admission rate: 70% → 94% in the next intake cycle."
-
-faqs:
-  title: "Questions founders ask"
-  items:
-    - question: "How is this different from hiring a marketing consultant?"
-      answer: "Most marketing consultants start with tactics — content plans, ad campaigns, lead magnets. I start with Calibration. If your niche, offer, and message aren't sharp, better tactics won't help. Automating the wrong message gets you more noise, not more clients."
-
-    - question: "How is the Implementation Pilot different from hiring an agency?"
-      answer: "An agency runs your marketing. The Pilot installs the system underneath it. When it's done, you own the workflows, the sequences, and the logic — not a monthly retainer dependency. You walk away with infrastructure, not a service contract."
-
-    - question: "I already get referrals. Do I really need this?"
-      answer: "Referrals are wonderful — but unpredictable. If your growth depends on who happens to mention you this month, you don't have a Revenue System. You have a network. Networks plateau. Systems scale."
-
-    - question: "What kinds of businesses do you work with?"
-      answer: "Founder-led B2B service firms doing ₹2Cr–₹15Cr — consultants, agencies, trainers, professional services. Typically 10–50 people where the founder is still the only one closing deals. India-based, though the work happens remotely."
-
-    - question: "How quickly will I see results?"
-      answer: "Calibration can happen in the first week. AI workflows go live in weeks two through four. Most clients see meaningful changes in pipeline quality within 60–90 days of the system being installed."
-
-    - question: "What if I just need advice, not a full engagement?"
-      answer: "Start with an AI Readiness Audit. 90 minutes to map where your Revenue System is leaking and what to automate first. You'll leave with a written roadmap — whether you work with me further or not."
-
-about:
-  section_title: "Why I do this work"
-  paragraphs:
-    - "I've spent 15+ years watching smart founders struggle with growth — not because they lack expertise, but because they're trying to sell everything they know instead of solving one clear problem."
-    - "My background spans business research, intellectual property, and marketing strategy. What ties it together: **I help people see what's actually going on beneath the surface.**"
-    - "I work directly with founders — typically solo or with small teams — who've built real expertise but haven't found a way to grow beyond their network. The work is strategic, not tactical. We fix foundations, not funnels."
-  location: "Based in Bangalore. Working with clients across India."
+    - type: "Marketing Agency"
+      before: "Competing on price against dozens of interchangeable agencies."
+      what_we_did: "Narrowed to one vertical, repositioned the offer around outcomes, built an outbound motion."
+      result: "Closed its first revenue-share deal in 45 days."
+    - type: "Public-Speaking Trainer"
+      before: "Running free webinars to an audience that never converted."
+      what_we_did: "Dropped the broad audience and targeted corporate L&D teams with urgent needs."
+      result: "Won paid corporate work at 3× the old per-engagement rate."
+    - type: "School Group"
+      before: "Strong reputation, but admissions stalling against newer competitors."
+      what_we_did: "Repositioned the offer to parents and ran targeted admissions campaigns."
+      result: "Lifted the admission rate from 70% to 94%."
 
 qualification:
-  section_title: "Is this for you?"
+  section_title: "Who this is for"
   for_you:
-    heading: "This is for you if..."
+    heading: "For you if…"
     items:
-      - "You run a founder-led B2B service firm (consulting, agency, training, professional services)"
-      - "Your business does ₹2Cr–₹15Cr and growth depends on your personal network"
-      - "You have 10–50 people but you're still the only one closing deals"
-      - "You're tired of being the Chief Everything Officer"
-      - "You want a system that generates clients — not another marketing experiment"
+      - "You run a founder-led B2B services firm — consulting, agency, training, professional services"
+      - "You're mostly out of day-to-day delivery — your team or systems handle the work"
+      - "Growth still depends on your network and your personal selling"
+      - "You want a working pipeline, not another marketing experiment"
   not_for_you:
-    heading: "This is not for you if..."
+    heading: "Not for you if…"
     items:
-      - "You want someone to run your marketing (hire an agency)"
-      - "You're looking for quick hacks or silver bullets"
-      - "You're building software products (I focus on services businesses)"
-      - "You're not willing to question your current assumptions"
+      - "You're still hands-on in most client delivery — fix capacity first (the Scorecard will tell you)"
+      - "You want someone to run your ads — hire an agency"
+      - "You're looking for hacks"
 
 final_cta:
-  title: "Ready to install your Revenue System?"
-  body: "If referrals are your only reliable source of clients, you don't have a growth system. You have a network."
-  body_secondary: "Book an AI Readiness Audit. In 90 minutes, we'll diagnose your current state and map exactly what it would take to install a system that scales."
-  cta_text: "Book an AI Readiness Audit"
-  cta_link: "/contact"
-  disclaimer: "No pitch. No pressure. Just a clear plan."
+  title: "Find out how predictable your pipeline really is."
+  body: "Ten questions. Three minutes. An honest score and the one thing to fix first."
+  cta_text: "Take the Sales Scorecard"
+  cta_link: "/scorecard"

@@ -1,0 +1,61 @@
+# CLEAR Engagement Page
+# Last updated: 2026-06-11
+
+meta:
+  title: "CLEAR — The Sales System, Installed | Anoop Kurup"
+  description: "One packaged offer your market has already responded to. A working outreach motion you've already run. Written down, repeatable, yours. The CLEAR engagement."
+
+hero:
+  tier_label: "The Engagement"
+  title: "CLEAR: the sales system, installed."
+  body:
+    - "One packaged offer your market has already responded to. A working outreach motion you've already run. Written down, repeatable, yours."
+
+stages:
+  section_title: "How it works"
+  items:
+    - number: "1"
+      name: "Package"
+      description: "We extract the skill your best clients actually paid for and shape it into one offer with a clear outcome and a clear price. Not a rebrand — a sellable unit a stranger can understand and say yes to. This comes first, because everything downstream is built on what we package here."
+
+    - number: "2"
+      name: "Prove"
+      description: "We put that offer in front of real prospects — ten live conversations, with me in the room for the first ones. I'm in the room for your first prospect conversations — we sell it together until it works in your mouth. The market tells us the version it wants, and we keep what survives contact with real buyers."
+
+    - number: "3"
+      name: "Systemise"
+      description: "What survived becomes your sales system: the words that got replies, the assets, the weekly motion. Written down. Repeatable. Yours — not a dependency on me or anyone else. You leave running the motion, not holding a slide deck."
+
+leave_with:
+  section_title: "What you leave with"
+  items:
+    - "A validated offer — pitched live to roughly ten real prospects"
+    - "The market evidence file: what they responded to, what they didn't"
+    - "Message templates that actually got replies"
+    - "A weekly cadence you've already run for weeks, not a plan you're told to start"
+    - "A written case study I author from the work"
+
+dont_promise:
+  section_title: "What I don't promise"
+  body:
+    - "I won't promise you a signed client by a date. I can't — that's not honest, and the calendar isn't mine to control."
+    - "I promise the motion and the evidence. Most deals close in the weeks after, on the system you now own and keep running."
+
+pace:
+  section_title: "Pace"
+  body: "Three stages, typically 6–10 weeks — gated by your actions, not the calendar. We move when the work is ready, not when a timetable says so."
+
+investment:
+  section_title: "Investment"
+  title: "₹75,000 – ₹1,75,000"
+  description: "Depending on firm size and scope, quoted after the Pipeline Reality Check. Paid in advance; your kickoff date is locked at payment."
+  credit_note: "The Pipeline Reality Check fee counts toward your CLEAR engagement."
+
+final_cta:
+  title: "Find out how predictable your pipeline really is."
+  body: "Start with the free Sales Scorecard. Ten questions, three minutes, an honest score and the one thing to fix first."
+  cta_text: "Take the Sales Scorecard"
+  cta_link: "/scorecard"
+  secondary_text: "Already taken it?"
+  secondary_link_text: "Book the Pipeline Reality Check"
+  secondary_link: "/pipeline-reality-check"

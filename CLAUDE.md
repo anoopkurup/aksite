@@ -1,353 +1,158 @@
-# Anoop Kurup Website - Revenue Systems Architect
+# Anoop Kurup Website
 
 ## Project Overview
-Professional website for Anoop Kurup, Revenue Systems Architect, helping founder-led B2B service firms (₹2Cr–₹15Cr) install AI-Enabled Revenue Systems that generate clients without depending on the founder. Built with Next.js and featuring an ultra-minimalist design aesthetic inspired by Apple and Swiss design principles.
+Professional website for Anoop Kurup. Built with Next.js 14, Tailwind CSS, YAML-driven content.
 
-**Positioning**: Revenue Systems Architect
-**Tagline**: "Revenue Systems Architect for Expert Founders. Beyond referral dependence."
-**Framework**: The Revenue System Architecture™ (Calibration → Automation → Acceleration)
+**Core message**: "I fix sales for founder-led services businesses."
+**Audience**: Founder-led B2B service firms (consulting, agency, training, professional services).
 
-## Current Status
-✅ **Revenue System Architecture repositioning complete** (February 2026)
-- Homepage with symptom-based entry points, proof stats bar, Revenue System visualization, qualification section
-- Three service pages: Diagnose (AI Readiness Audit), Build (Implementation Pilot), Partner (Ongoing Advisory)
-- About, Blog, Videos, and Contact pages updated to new positioning
-- YAML-driven content system for all major pages
-- Ultra-minimalist design system unchanged
+**The one funnel** — every page drives to the Sales Scorecard:
+```
+Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
+  → Pipeline Reality Check (₹25K, 1 week, done-for-you diagnosis)
+  → CLEAR engagement (₹75K–₹1.75L, quoted after diagnosis)
+```
+
+## Current Site Structure (Repositioned June 2026)
+
+### Pages
+| Route | Purpose | Content source |
+|-------|---------|---------------|
+| `/` | Homepage — hero, "Sound familiar?", Package/Prove/Systemise, proof, Scorecard CTA | `content/pages/home.yaml` |
+| `/scorecard` | **Sales Scorecard** — interactive 10-question self-assessment (the centrepiece) | `src/app/scorecard/ScorecardTool.tsx` |
+| `/pipeline-reality-check` | ₹25,000 done-for-you diagnosis offer page | `content/pages/pipeline-reality-check.yaml` |
+| `/clear` | The CLEAR engagement (₹75K–₹1.75L) | `content/pages/clear.yaml` |
+| `/about` | Bio + funnel + podcast | `content/pages/about.yaml` |
+| `/blog` | MDX blog system | `src/content/blog/posts/*.md` |
+| `/contact` | Contact page with qualification | Hardcoded TSX |
+| `/podcast` | Podcast page | `src/content/podcast.md` |
+| `/thank-you` | Thank you page | `src/content/thank-you.md` |
+| `/legal/*` | Privacy policy, terms | `src/content/legal/*.md` |
+
+### Navigation
+**Desktop**: Anoop Kurup | How I Fix Sales (`/clear`) | Pipeline Reality Check | Blog | About | **[Take the Sales Scorecard]**
+
+(No Services dropdown. Contact lives in the footer, not the top nav.)
+
+### Removed Pages (June 2026 repositioning)
+- `/diagnose` — replaced by the free Scorecard (301 → `/scorecard`)
+- `/build` — replaced by `/clear` (301 → `/clear`)
+- `/postie` — Postie retired (301 → `/scorecard`)
+- `/framework`, `/partner` — 301 → `/clear`, `/contact`
+- `/videos` never existed — old `/resources/*` redirects now point to `/blog`
+- Earlier legacy removals: `/consulting`, `/ai-solutions/*`, `/case-studies/*`, `/resources/*`, `/design-system`, `/_archived/*`, `/(sample)/*`
 
 ## Tech Stack
 - **Framework**: Next.js 14 with App Router
-- **Styling**: Tailwind CSS (custom ultra-minimalist design tokens)
+- **Styling**: Tailwind CSS (custom design tokens)
 - **Content**: YAML files for page content; MDX for blog posts
 - **Typography**: Cormorant Garamond (serif) + Inter (sans-serif)
 - **Icons**: Lucide React
-- **Deployment**: Vercel
-- **Version Control**: Git/GitHub
-
-## Target Audience
-**Primary**: Founder-led B2B service firms
-- ₹2Cr–₹15Cr revenue, 10–50 employees
-- Founder is still the only one closing deals
-- Stuck in referral dependence
-- Marketing hasn't worked consistently
-- Based in India (work is remote)
-
-**Types**: Consultants, agencies, trainers, professional services firms (NOT software/IT product companies)
+- **Deployment**: Vercel (auto-deploy from GitHub master)
 
 ## Project Structure
 ```
 aksite-nextjs/
 ├── src/
 │   ├── app/
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   ├── page.tsx              # Homepage (YAML-driven)
-│   │   ├── about/                # Personal story + professional background (YAML-driven)
-│   │   ├── diagnose/             # AI Readiness Audit (YAML-driven)
-│   │   ├── build/                # Implementation Pilot (YAML-driven)
-│   │   ├── partner/              # Ongoing Advisory (YAML-driven)
-│   │   ├── framework/            # Revenue System Architecture page (hardcoded TSX)
-│   │   ├── videos/               # Video content (hardcoded TSX)
+│   │   ├── page.tsx              # Homepage
+│   │   ├── about/page.tsx        # About
+│   │   ├── scorecard/            # Sales Scorecard (page.tsx + ScorecardTool.tsx)
+│   │   ├── pipeline-reality-check/page.tsx  # ₹25K diagnosis offer
+│   │   ├── clear/page.tsx        # CLEAR engagement
 │   │   ├── blog/                 # MDX blog system
-│   │   │   ├── page.tsx
-│   │   │   └── [slug]/page.tsx
-│   │   ├── contact/              # Contact with qualification criteria (hardcoded TSX)
-│   │   └── (sample)/sample/      # Original sample homepage preserved
+│   │   ├── contact/page.tsx      # Contact
+│   │   ├── podcast/page.tsx      # Podcast
+│   │   ├── thank-you/page.tsx    # Thank you
+│   │   └── legal/                # Privacy, terms
 │   ├── components/
-│   │   ├── ui/                   # shadcn components (if needed)
-│   │   ├── Header.tsx            # Minimal nav with Services dropdown
-│   │   └── Footer.tsx            # Clean 2-column footer
+│   │   ├── Header.tsx            # Simplified nav
+│   │   ├── Footer.tsx            # Clean footer
+│   │   ├── ContentPage.tsx       # MD-driven page wrapper
+│   │   ├── PageTemplate.tsx      # Hero + layout template
+│   │   ├── ContentSections.tsx   # Dynamic content renderer
+│   │   ├── HeroMedia.tsx         # Image/video hero media
+│   │   ├── LineIcon.tsx          # Custom line icons
+│   │   ├── SocialIcon.tsx        # Social media icons
+│   │   ├── Newsletter.tsx        # Newsletter component
+│   │   ├── ClientLayout.tsx      # Client layout wrapper
+│   │   └── ui/                   # shadcn/ui components
+│   ├── content/
+│   │   ├── blog/posts/*.md       # Blog posts (8 posts)
+│   │   ├── contact.md            # Contact page content
+│   │   ├── thank-you.md          # Thank you page
+│   │   ├── podcast.md            # Podcast page
+│   │   ├── about.md              # About markdown
+│   │   └── legal/                # Privacy, terms markdown
 │   └── lib/
 │       ├── content.ts            # YAML loaders + TypeScript interfaces
+│       ├── analytics.ts          # trackEvent() — dataLayer/gtag-safe events
 │       ├── blog.ts               # Blog utilities
-│       └── markdown.ts           # MDX processing
+│       ├── markdown.ts           # MDX processing
+│       ├── icons.ts              # Icon registry
+│       └── utils.ts              # Utility functions
 ├── content/
-│   ├── data/
-│   │   └── clarity-stack.yaml   # Revenue System Architecture phases data
-│   ├── pages/
-│   │   ├── home.yaml            # Homepage content
-│   │   ├── about.yaml           # About page content
-│   │   └── services/
-│   │       ├── diagnose.yaml    # AI Readiness Audit
-│   │       ├── build.yaml       # Implementation Pilot
-│   │       └── partner.yaml     # Ongoing Advisory
-│   └── blog/                    # MDX blog posts
-├── public/
-│   └── images/
-└── tailwind.config.ts            # Ultra-minimalist design tokens
+│   └── pages/
+│       ├── home.yaml
+│       ├── about.yaml
+│       ├── clear.yaml
+│       └── pipeline-reality-check.yaml
+├── public/images/
+└── tailwind.config.ts
 ```
 
-## Design System - Ultra-Minimalist Aesthetic
+## Design System
 
-### Philosophy
-"More Apple than agency, more architect than marketer"
-- Pure white backgrounds (no gradients)
-- Generous negative space
-- Dual typography for authority + clarity
-- Subtle accents, no visual clutter
-- Swiss tool aesthetic for business thinking
-
-### Color Palette
-```typescript
-colors: {
-  navy: {
-    50:  '#EFF6FF',  // Light phase backgrounds
-    500: '#3B82F6',  // Medium phase backgrounds
-    900: '#1E3A8A',  // Dark phase backgrounds, headlines
-  },
-  slate: {
-    50:  '#F8FAFC',  // Subtle section backgrounds
-    100: '#F1F5F9',  // Section dividers
-    500: '#64748B',  // Meta text
-    600: '#475569',  // Body text
-  },
-  cta: {
-    500: '#F97316',  // Orange accent (minimal use)
-    600: '#EA580C',  // Hover states
-  },
-}
-```
+### Colors
+- `navy-900`: Headlines, dark backgrounds
+- `slate-500/600`: Body text
+- `cta-500` (orange): Accent, CTAs
+- Pure white backgrounds, no gradients
 
 ### Typography
-**Serif Headlines**: Cormorant Garamond
-- Hero: 4.5rem (72px)
-- Display: 3rem (48px)
-- Title: 1.875rem (30px)
+- **Serif** (Cormorant Garamond): Headlines
+- **Sans** (Inter): Body text
+- Hero: 4.5rem, Display: 3rem, Title: 1.875rem, Body: 1.125rem
 
-**Sans-Serif Body**: Inter
-- Body-lg: 1.25rem (20px)
-- Body: 1.125rem (18px)
-- Small: 0.875rem (14px)
+### Patterns
+- CTAs: Underline-style (border-bottom), not filled buttons
+- Emphasis: Border-left accents (4px orange)
+- Section spacing: 8rem between sections
+- Minimal shadows, generous whitespace
 
-### Spacing
-- **Section spacing**: 8rem (128px) between sections (`py-section`)
-- **Content spacing**: 4rem (64px) within sections
-- 8px grid system for consistent alignment
+## Content Architecture
+- Page content lives in YAML files under `/content/pages/` (home, about, clear, pipeline-reality-check)
+- TypeScript interfaces for all YAML structures in `src/lib/content.ts`, each with a typed loader
+- Each YAML page has a bespoke `page.tsx` renderer (not a generic section renderer)
+- Contact is hardcoded TSX; the Scorecard is a client component (`ScorecardTool.tsx`)
+- When updating copy, edit the YAML file; only edit TSX for hardcoded pages
 
-### Component Patterns
-- **CTAs**: Underline-style (border-bottom) instead of filled buttons
-- **Emphasis**: Border-left accents (4px)
-- **Images**: Grayscale with color on hover
-- **Shadows**: Minimal to none
-- **Icons**: Simple, line-based (Lucide React)
-
-## Service Structure
-
-### 1. Diagnose (Entry Point)
-**AI Readiness Audit** — 90-minute diagnostic — ₹25,000
-- Pre-session intake and revenue flow mapping
-- 90-minute video call audit across all three phases
-- Written Roadmap: 3 Immediate Automations + Tool Stack + ROI Model
-- 100% credited back if moving to Implementation Pilot
-- Booking: TidyCal (https://tidycal.com/anoopmkurup/consulting-marketing-leadgen)
-
-### 2. Build
-**Implementation Pilot** — 6-week done-for-you — ₹1.5 Lakhs (₹25K audit credited back)
-Three components:
-- **Calibration (Week 1)**: Niche, offer sharpening, message design
-- **The Hunter (Weeks 2–3)**: AI lead generation workflows, outreach sequences
-- **The Architect (Weeks 4–6)**: Proposal automation, content systems, admin workflows
-
-Key stats: Proposals 4.5 hours → 12 minutes | Win rate 15% → 35%
-
-### 3. Partner
-**Ongoing Advisory** — Monthly retainer — 3-month minimum
-- 2 strategy sessions per month
-- Async access between sessions
-- Quarterly Revenue System review
-- For founders who have done the foundational work and want sustained calibration
-
-## The Revenue System Architecture™ Framework
-
-Three-phase horizontal framework (Calibration → Automation → Acceleration):
-
-```
-┌─────────────────┐  →  ┌─────────────────┐  →  ┌─────────────────┐
-│  CALIBRATION    │      │   AUTOMATION    │      │  ACCELERATION   │
-│  "The Fuel"     │      │  "The Engine"   │      │  "The Freedom"  │
-│  Phase 1/Week 1 │      │  Phase 2/Wk 2-4│      │  Phase 3/Wk 5+  │
-│                 │      │                 │      │                 │
-│ • Niche         │      │ • AI Lead Gen   │      │ • Predictable   │
-│ • Offer         │      │ • Proposals     │      │   Pipeline      │
-│ • Message       │      │ • Content       │      │ • Zero-Touch    │
-└─────────────────┘      └─────────────────┘      └─────────────────┘
-```
-
-**Core Belief**: "Strategy without Systems is hallucination. Systems without Strategy is spam. We build both."
-**Key Principle**: Calibration first. Automation second. Acceleration follows.
-
-## Homepage Structure
-
-### Current Sections (in order)
-1. **Hero**: "Revenue Systems Architect for Expert Founders. Beyond referral dependence."
-2. **Bridge**: "Why Clarity is No Longer Enough" — Calibrate/Automate/Accelerate steps
-3. **Proof Stats Bar**: 4.5hrs→12min proposals | 15%→35% win rate | 60% deals after 5th follow-up
-4. **Symptoms** (4 cards): Entry points mapped to Calibration/Automation phases
-5. **Revenue System Architecture**: Horizontal 3-column visual
-6. **Services** (3 cards): Diagnose, Build, Partner
-7. **About**: Brief bio section
-8. **Case Studies**: 3 anonymised cases with specific outcome metrics
-9. **FAQ**: 6 questions including "How is Pilot different from hiring an agency?"
-10. **Qualification**: "This is for you if..." / "This is not for you if..."
-11. **Final CTA**: Book an AI Readiness Audit (navy-900 background)
-
-## Blog System
-
-### MDX Configuration
-Location: `/content/blog/*.md`
-
-### Frontmatter
-```yaml
----
-title: "Post Title"
-description: "SEO description"
-date: "2025-01-15"
-category: "Strategy"
-tags: ["positioning", "lead-generation"]
-author: "Anoop Kurup"
-read_time: "5 min read"
-hero_image: "/images/blog/post-image.webp"
----
-```
-
-### Categories
-- Strategy
-- Calibration
-- Automation
-- Revenue Systems
-- Business Development
-
-## Contact Page
-
-### Structure
-1. **Hero**: "Let's talk about what's actually broken" — targets ₹2Cr–₹15Cr founders
-2. **Primary CTA**: Book AI Readiness Audit (TidyCal link) — ₹25,000, 100% credit guarantee
-3. **Alternative Contact**: Email + LinkedIn
-4. **Qualification Section**: "This is for you if..." / "This is not for you if..."
-5. **Location**: Bangalore, IST timezone note
-6. **Final CTA**: "No pitch. No pressure. Just a clear plan."
-
-## Navigation
-
-### Header (Desktop)
-About | Services ▼ | Framework | Videos | Blog | Contact | [Book an Audit]
-
-**Services Dropdown**:
-- Diagnose (AI Readiness Audit)
-- Build (Implementation Pilot)
-- Partner (Ongoing Advisory)
-
-### Footer
-Simple 2-column:
-- Left: Name + "Revenue Systems Architect"
-- Right: Contact | LinkedIn
-
-## Key Design Principles
-
-### 1. Ultra-Minimal
-- No gradients, minimal shadows
-- Pure white backgrounds
-- Generous whitespace (py-section: 8rem)
-- Simple grid layouts
-
-### 2. Quiet Authority
-- Serif headlines for gravitas
-- Sans-serif body for clarity
-- Underline CTAs (not filled buttons)
-- Calm, precise tone
-
-### 3. Professional Sophistication
-- Grayscale images
-- Border-left accents for emphasis
-- Subtle hover states
-- Clean typography hierarchy
-
-### 4. Mobile-First Responsive
-- Test at 375px (mobile), 768px (tablet), 1440px (desktop)
-- Simplified mobile menu
-- Stacked layouts on mobile
-
-## SEO & Performance
-- Meta tags with Revenue Systems Architect positioning
-- Open Graph tags
-- Image optimization (WebP)
-- Core Web Vitals optimization
-- Reading time estimation
-
-## Development Guidelines
-
-### Content Architecture
-- **Most page content lives in YAML files** under `/content/pages/` and `/content/data/`
-- **TypeScript interfaces** for all YAML structures are in `src/lib/content.ts`
-- **Hardcoded TSX pages**: `framework/page.tsx`, `contact/page.tsx`, `blog/page.tsx`, `videos/page.tsx`
-- When updating copy, edit the YAML file first; only edit TSX for hardcoded pages
-
-### Making Changes
-1. **Read first**: Always read files before editing
-2. **Design consistency**: Follow ultra-minimalist patterns
-3. **Typography**: Serif for headlines, sans for body
-4. **Colors**: navy-900, slate-500/600, cta-500 only
-5. **Spacing**: Use py-section (8rem), py-content (4rem)
-6. **CTAs**: Underline-style with border-bottom
-7. **Images**: Implement grayscale class
-8. **New YAML fields**: Always add corresponding TypeScript interface in `content.ts`
-
-### Testing
-- Run `npm run dev` to test locally
-- Check responsive design at all breakpoints
-- Verify Services dropdown hover behavior
-- Test all CTAs and links
-
-### Git Workflow
-```bash
-git add [specific files]
-git commit -m "Description
-
-Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
-git push origin master
-```
-
-## Deployment
-
-### Vercel Setup
-- Auto-deploy from GitHub (master branch)
-- Custom domain: anoopkurup.com
-
-## Success Metrics
-- AI Readiness Audit bookings (primary)
-- Email contact conversions
-- Blog engagement (reading time, return visits)
-- Page load speed (Core Web Vitals)
+## Key Principles
+- Exactly ONE primary CTA type sitewide: the Sales Scorecard. Every page ends with it. No competing CTAs (no newsletter pop-ups, no "book a call" as primary).
+- The Scorecard score is shown immediately, un-gated; email is asked only after the score, for the written breakdown.
+- Cases are labelled "From past consulting engagements" — original numbers only, never attributed to CLEAR.
+- Funnel: Scorecard (free) → Pipeline Reality Check (₹25K, fee credited to CLEAR) → CLEAR (₹75K–₹1.75L).
 
 ## Brand Voice
+- First person singular: "I fix," "I build," "I'm in the room." Never "we" (solo practice).
+- No "help/guide/coach/empower" in headlines. No "cutting-edge/bespoke/holistic".
+- Direct, honest, problem-first. Short declarative sentences. Prices in ₹, stated plainly.
+- Colours: navy / grey / orange / white only. Orange reserved for CTAs and accents.
 
-### Tone
-- Direct, honest, no-nonsense
-- "Calibration before Automation"
-- "Systems, not tactics"
-- "This is for you if..." clear qualification
+## Scorecard lead capture & analytics
+- Email capture posts to Formspree (`FORMSPREE_ENDPOINT` in `ScorecardTool.tsx`, form id `xdavwodo`).
+- GA4 (`G-0X2P577TSX`) is loaded via `next/script` in `src/app/layout.tsx`.
+- `trackEvent()` (`src/lib/analytics.ts`) fires `scorecard_started`, `scorecard_completed`, `scorecard_email`, `prc_cta_click` to `dataLayer`/`gtag`.
 
-### Copy Patterns
-- Short, declarative sentences
-- Problem-first framing
-- No marketing jargon
-- Clear next steps
-- Honest disqualification
+## TODO
+- [ ] Set up SEO meta tags with target keywords on each page
 
-### Examples
-- ✅ "Revenue Systems Architect for Expert Founders."
-- ✅ "90 minutes to map where your pipeline is leaking."
-- ✅ "No pitch. No pressure. Just a clear plan."
-- ✅ "Calibration first. Automation second. Acceleration follows."
-- ❌ "Leverage our proven methodology"
-- ❌ "Unlock exponential growth"
-- ❌ "Your clarity is broken" (old positioning — do not use)
-- ❌ "Clarity Stack", "Clarity Sprint", "Clarity Diagnosis Session" (old service names — do not use)
+## Development
+```bash
+npm run dev          # → http://localhost:3000
+npm run build        # Production build
+```
 
----
-
-**Project Status**: Revenue System Architecture repositioning complete (February 2026).
-
-**Live Site**: https://anoopkurup.com
-**Dev Server**: `npm run dev` → http://localhost:3000
+**Live**: https://anoopkurup.com
 **GitHub**: https://github.com/anoopkurup/aksite.git
+**Deploy**: Auto-deploy from master via Vercel

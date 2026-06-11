@@ -359,7 +359,6 @@ export function getYouTubeThumbnail(video_url?: string): string | null {
 // ============================================================================
 
 import yaml from 'js-yaml';
-import type { IconName } from './icons';
 
 /**
  * Base content response type
@@ -373,55 +372,40 @@ export interface PageContent<T> {
 // TypeScript Interfaces for YAML Content Structure
 // ============================================================================
 
-// Homepage Content
+// Homepage Content — "I fix sales for founder-led services businesses"
 export interface HomePageContent {
   meta: {
     title: string;
     description: string;
   };
   hero: {
-    eyebrow: string;
     headline: string;
-    subheadline: string;
     body: string[];
     cta_text: string;
     cta_link: string;
+    cta_note?: string;
   };
-  symptoms: {
+  sound_familiar: {
     section_title: string;
     items: Array<{
-      title: string;
-      quote: string;
-      explanation: string;
-      diagnosis: string;
+      symptom: string;
+      reframe: string;
     }>;
   };
-  services: {
+  how_i_fix_it: {
     section_title: string;
-    section_subtitle: string;
-    items: Array<{
-      tier_label: string;
-      title: string;
-      best_for: string;
+    stages: Array<{
+      number: string;
+      name: string;
       description: string;
-      outcome: string;
-      cta_link: string;
     }>;
   };
-  proof_stats: {
-    items: Array<{
-      stat: string;
-      label: string;
-    }>;
-  };
-  case_studies: {
+  proof: {
     section_title: string;
     items: Array<{
-      title: string;
       type: string;
-      problem: string;
-      root_cause: string;
-      fix: string;
+      before: string;
+      what_we_did: string;
       result: string;
     }>;
   };
@@ -436,66 +420,16 @@ export interface HomePageContent {
       items: string[];
     };
   };
-  faqs: {
-    title: string;
-    items: Array<{
-      question: string;
-      answer: string;
-    }>;
-  };
-  about: {
-    section_title: string;
-    paragraphs: string[];
-    location: string;
-  };
-  bridge: {
-    headline: string;
-    paragraphs: string[];
-    process_label: string;
-    steps: Array<{
-      step: string;
-      description: string;
-    }>;
-  };
   final_cta: {
     title: string;
     body: string;
-    body_secondary: string;
     cta_text: string;
     cta_link: string;
-    disclaimer: string;
   };
 }
 
-// Revenue System Architecture Content
-export interface ClarityStackContent {
-  title: string;
-  subtitle: string;
-  framework_label: string;
-  phases: Array<{
-    name: string;
-    phase_label: string;
-    metaphor: string;
-    question: string;
-    items: string[];
-  }>;
-  caption: string;
-}
-
-// Case Studies Content (for reusable case studies)
-export interface CaseStudiesContent {
-  section_title: string;
-  items: Array<{
-    title: string;
-    type: string;
-    problem: string;
-    root_cause: string;
-    fix: string;
-  }>;
-}
-
-// Build Service Page Content
-export interface BuildPageContent {
+// CLEAR Engagement Page Content
+export interface ClearPageContent {
   meta: {
     title: string;
     description: string;
@@ -504,64 +438,32 @@ export interface BuildPageContent {
     tier_label: string;
     title: string;
     body: string[];
-    cta_text: string;
-    cta_link: string;
   };
-  qualification: {
+  stages: {
     section_title: string;
-    for_you_if: string[];
-    not_for_you_title: string;
-    not_for_you_if: string[];
-  };
-  sprints: {
-    section_title: string;
-    section_subtitle: string;
     items: Array<{
+      number: string;
       name: string;
-      icon: IconName;
-      question: string;
       description: string;
-      outcomes: string[];
     }>;
-    note?: string;
   };
-  how_it_works: {
+  leave_with: {
     section_title: string;
-    section_subtitle: string;
-    duration: string;
-    steps: Array<{
-      step_number: string;
-      week_label: string;
-      title: string;
-      description: string;
-    }>;
-    format_label: string;
-    format_description: string;
+    items: string[];
   };
-  deliverables: {
+  dont_promise: {
     section_title: string;
-    items: Array<{
-      title: string;
-      description: string;
-    }>;
+    body: string[];
+  };
+  pace: {
+    section_title: string;
+    body: string;
   };
   investment: {
     section_title: string;
     title: string;
     description: string;
-    sprint_types: Array<{
-      name: string;
-      duration: string;
-    }>;
-    cta_text: string;
-    cta_link: string;
-  };
-  faqs: {
-    title: string;
-    items: Array<{
-      question: string;
-      answer: string;
-    }>;
+    credit_note: string;
   };
   final_cta: {
     title: string;
@@ -574,8 +476,8 @@ export interface BuildPageContent {
   };
 }
 
-// Diagnose Service Page Content
-export interface DiagnosePageContent {
+// Pipeline Reality Check Page Content
+export interface PipelineRealityCheckContent {
   meta: {
     title: string;
     description: string;
@@ -583,44 +485,17 @@ export interface DiagnosePageContent {
   hero: {
     tier_label: string;
     title: string;
+    subtitle: string;
     body: string[];
-    cta_text: string;
-    cta_link: string;
-  };
-  qualification: {
-    section_title: string;
-    for_you_if: string[];
-    not_for_you_title: string;
-    not_for_you_if: string[];
-  };
-  session_process: {
-    section_title: string;
-    section_subtitle: string;
-    stages: Array<{
-      phase: string;
-      border_color: string;
-      description: string;
-      layers?: Array<{
-        name: string;
-        question: string;
-      }>;
-      conclusion?: string;
-      deliverables?: string[];
-    }>;
   };
   what_you_get: {
     section_title: string;
-    items: Array<{
-      title: string;
-      description: string;
-    }>;
+    items: string[];
   };
-  investment: {
-    section_title: string;
-    title: string;
-    includes: string[];
-    cta_text: string;
-    cta_link: string;
+  terms: {
+    headline: string;
+    body: string;
+    credit_note: string;
   };
   faqs: {
     title: string;
@@ -637,186 +512,36 @@ export interface DiagnosePageContent {
   };
 }
 
-// Partner Service Page Content
-export interface PartnerPageContent {
-  meta: {
-    title: string;
-    description: string;
-  };
-  hero: {
-    tier_label: string;
-    title: string;
-    body: string[];
-    cta_text: string;
-    cta_link: string;
-  };
-  qualification: {
-    section_title: string;
-    for_you_if: string[];
-    not_for_you_title: string;
-    not_for_you_if: string[];
-  };
-  whats_included: {
-    section_title: string;
-    section_subtitle: string;
-    items: Array<{
-      icon: IconName;
-      title: string;
-      description: string;
-    }>;
-  };
-  how_it_works: {
-    section_title: string;
-    commitment: {
-      label: string;
-      title: string;
-      subtitle: string;
-    };
-    availability: {
-      label: string;
-      title: string;
-      subtitle: string;
-    };
-    format_label: string;
-    format_includes: string[];
-  };
-  what_changes: {
-    section_title: string;
-    items: Array<{
-      title: string;
-      description: string;
-    }>;
-  };
-  investment: {
-    section_title: string;
-    title: string;
-    subtitle: string;
-    includes: string[];
-    commitment_note: string;
-    cta_text: string;
-    cta_link: string;
-  };
-  faqs: {
-    title: string;
-    items: Array<{
-      question: string;
-      answer: string;
-    }>;
-  };
-  final_cta: {
-    title: string;
-    body: string;
-    cta_text: string;
-    cta_link: string;
-    secondary_text: string;
-    secondary_options: Array<{
-      text: string;
-      link: string;
-    }>;
-  };
-}
-
-// About Page Content
+// About Page Content — Simplified
 export interface AboutPageContent {
   meta: {
     title: string;
     description: string;
   };
   hero: {
-    eyebrow: string;
     headline: string;
     body: string[];
   };
-  backstory: {
+  pattern: {
     section_title: string;
-    image: {
-      src: string;
-      alt: string;
-    };
-    intro: string;
-    timeline: Array<{
-      title: string;
-      description: string | string[];
-    }>;
-    insight: string;
-  };
-  work: {
-    section_title: string;
-    section_subtitle: string;
-    body: string[];
-    pattern_box: {
-      label: string;
-      paragraphs: string[];
-    };
-    approach: {
-      title: string;
-      paragraphs: string[];
-    };
-  };
-  beliefs: {
-    section_title: string;
-    section_subtitle: string;
-    items: Array<{
-      title: string;
-      description: string;
-    }>;
-  };
-  who_i_work_with: {
-    section_title: string;
-    section_subtitle: string;
-    for_you: Array<{
-      title: string;
-      description: string;
-    }>;
-    not_for_you: {
-      title: string;
-      description: string;
-    };
-  };
-  who_im_not_for: {
-    section_title: string;
-    section_subtitle: string;
-    items: Array<{
-      heading: string;
-      text: string;
-    }>;
-  };
-  framework: {
-    section_title: string;
-    section_subtitle: string;
-    phases: Array<{
-      name: string;
-      phase_label: string;
-      metaphor: string;
-      question: string;
-      items: string[];
-    }>;
-    insight: {
-      label: string;
-      paragraphs: string[];
-    };
-  };
-  services: {
-    section_title: string;
-    section_subtitle: string;
-    items: Array<{
-      name: string;
-      title: string;
-      description: string;
-      href: string;
-    }>;
-  };
-  personal: {
-    section_title: string;
-    section_subtitle: string;
     paragraphs: string[];
+  };
+  what_i_do: {
+    section_title: string;
+    items: Array<{
+      label: string;
+      description: string;
+      link: string;
+    }>;
+  };
+  podcast: {
+    text: string;
   };
   final_cta: {
     title: string;
     body: string;
     cta_text: string;
     cta_link: string;
-    secondary_text: string;
   };
 }
 
@@ -856,38 +581,17 @@ export function getHomePageContent(): PageContent<HomePageContent> {
 }
 
 /**
- * Get Clarity Stack framework content
+ * Get CLEAR engagement page content
  */
-export function getClarityStack(): PageContent<ClarityStackContent> {
-  return loadYamlContent<ClarityStackContent>('data/clarity-stack.yaml');
+export function getClearPageContent(): PageContent<ClearPageContent> {
+  return loadYamlContent<ClearPageContent>('pages/clear.yaml');
 }
 
 /**
- * Get case studies content
+ * Get Pipeline Reality Check page content
  */
-export function getCaseStudies(): PageContent<CaseStudiesContent> {
-  return loadYamlContent<CaseStudiesContent>('data/case-studies.yaml');
-}
-
-/**
- * Get Build service page content
- */
-export function getBuildPageContent(): PageContent<BuildPageContent> {
-  return loadYamlContent<BuildPageContent>('pages/services/build.yaml');
-}
-
-/**
- * Get Diagnose service page content
- */
-export function getDiagnosePageContent(): PageContent<DiagnosePageContent> {
-  return loadYamlContent<DiagnosePageContent>('pages/services/diagnose.yaml');
-}
-
-/**
- * Get Partner service page content
- */
-export function getPartnerPageContent(): PageContent<PartnerPageContent> {
-  return loadYamlContent<PartnerPageContent>('pages/services/partner.yaml');
+export function getPipelineRealityCheckContent(): PageContent<PipelineRealityCheckContent> {
+  return loadYamlContent<PipelineRealityCheckContent>('pages/pipeline-reality-check.yaml');
 }
 
 /**

@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog | Anoop Kurup",
-  description: "Practical insights on installing Revenue Systems for expert-founders. Thoughts on Calibration, Automation, and building pipelines that scale without you.",
+  description: "Practical writing on sales for founder-led services businesses: packaging an offer, proving it against real prospects, and building a weekly motion that produces conversations.",
 };
 
 export default function BlogPage() {
@@ -23,10 +23,10 @@ export default function BlogPage() {
             Blog
           </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
-            Strategy, systems, and growth.
+            Sales, offers, and pipeline.
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed">
-            Practical insights on building Revenue Systems for expert-founders. Thoughts on Calibration, Automation, and building pipelines that scale without you.
+            Practical writing for founder-led services businesses: packaging an offer the market responds to, proving it against real prospects, and building a weekly motion that keeps producing conversations.
           </p>
         </div>
       </section>
@@ -124,13 +124,13 @@ export default function BlogPage() {
             Want help applying these ideas?
           </h2>
           <p className="font-sans text-body-lg text-slate-500 mb-8">
-            If you want to know where your Revenue System is leaking and what to fix first, let's talk.
+            Find out how predictable your pipeline really is. Ten questions, three minutes, an honest score and the one thing to fix first.
           </p>
           <Link
-            href="/diagnose"
+            href="/scorecard"
             className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors duration-300"
           >
-            Book an AI Readiness Audit
+            Take the Sales Scorecard
             <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
           </Link>
         </div>

@@ -1,180 +1,42 @@
 # About Page Content
-# Last updated: 2026-01-22
+# Last updated: 2026-06-11
 
 meta:
   title: "About | Anoop Kurup"
-  description: "I fix foundations, not funnels. Most marketing consultants start with tactics. I start with a question: Why isn't what you're doing working?"
+  description: "I'm a sales-systems consultant for founder-led services businesses. After a decade helping founders get strategic clarity, I now build the selling system and stay until it runs."
 
 hero:
-  eyebrow: "About Anoop Kurup"
-  headline: "I fix foundations, not funnels."
+  headline: "I build the selling system and stay until it runs."
   body:
-    - "Most marketing consultants start with tactics. I start with a question: Why isn't what you're doing working?"
-    - "Usually, the answer has nothing to do with marketing."
+    - "My name is Anoop Kurup. I'm a sales-systems consultant, based in Bangalore, and I work with founders directly."
+    - "After a decade helping founders get strategic clarity, I saw the same ending too often: perfect clarity, no pipeline. So now I don't stop at the roadmap — I build the selling system and stay until it runs."
 
-backstory:
-  section_title: "How I got here"
-  image:
-    src: "/images/about/anoop-bw.webp"
-    alt: "Anoop Kurup"
-  intro: "I didn't start in marketing. I started in research."
-
-  timeline:
-    - title: "Five years at GE Global Research"
-      description: "Working on water purification and clean energy technologies. My job was to understand problems deeply before proposing solutions. To separate symptoms from root causes. To see what others were missing."
-
-    - title: "Five years running an IPR firm"
-      description: "Helping companies understand competitive landscapes, protect innovations, and make strategic decisions about where to invest. We built something valuable enough that it got acquired."
-
-    - title: "Then I moved into marketing"
-      description:
-        - "Not because I loved campaigns or content — but because I kept seeing the same pattern: smart founders with real expertise, struggling to grow. Not because they lacked skills. Because they lacked clarity."
-        - "They were trying to market everything they knew, instead of solving one clear problem for one clear audience."
-
-  insight: "That's when I realised: marketing problems are rarely marketing problems. They're clarity problems dressed up in marketing clothes."
-
-work:
-  section_title: "Revenue Systems Architect"
-  section_subtitle: "The work I do now"
-  body:
-    - "I work with expert-founders of services businesses — consultants, agencies, trainers, professional services firms. People who've built real expertise over 10+ years but find themselves stuck. Dependent on referrals. Unable to grow beyond their network."
-
-  pattern_box:
-    label: "The Pattern"
-    paragraphs:
-      - "They've tried marketing. It didn't work. So they assume they're bad at marketing, or their industry is different, or they just need to find the right tactic."
-      - "But the problem isn't tactics. It's that they're trying to automate before they've calibrated — running AI workflows on a message that doesn't convert."
-
-  approach:
-    title: "That's where I come in."
-    paragraphs:
-      - "I use the Revenue System Architecture™ — a three-phase framework that installs a revenue engine for your business. First we Calibrate (fix your niche, offer, and message). Then we Automate (build AI-powered workflows). Then comes Acceleration — a predictable pipeline that runs without you."
-      - "I don't run your marketing. I build the system underneath it. The result: clients that come to you because the system works, not because you happened to get a referral this month."
-
-beliefs:
-  section_title: "What I believe"
-  section_subtitle: "The principles behind the work"
-  items:
-    - title: "Clarity before tactics."
-      description: "Too many businesses jump straight to execution — content plans, ad campaigns, lead magnets — without understanding who they serve, what makes them different, or why anyone should care. Tactics amplify whatever's already there. If there's no clarity, there's nothing to amplify."
-
-    - title: "Sequence matters."
-      description: "You can't Automate if you haven't Calibrated. Automating the wrong message at scale doesn't get you more clients — it gets you more noise. Most founders skip Calibration and wonder why their AI tools don't work."
-
-    - title: "Foundations compound. Tactics don't."
-      description: "A quick hack might get you a short-term bump. A solid foundation keeps working as you grow. I'm not interested in growth hacks. I'm interested in clarity that compounds."
-
-    - title: "Expertise isn't enough."
-      description: "Being great at what you do doesn't mean clients will find you. Expertise needs clarity to become visible. Otherwise, you're the best-kept secret in your industry."
-
-    - title: "Referrals are wonderful — but not a strategy."
-      description: "If your growth depends on who happens to mention you this month, you don't have a growth system. You have a network. Networks plateau. Clarity compounds."
-
-who_i_work_with:
-  section_title: "Who I work with"
-  section_subtitle: "The founders I'm built to help"
-  for_you:
-    - title: "Expert-founders of services businesses."
-      description: "Consultants, agencies, trainers, professional services firms. People who sell expertise, not products. Businesses built on knowledge and relationships."
-
-    - title: "10+ years of experience, 5+ years in business."
-      description: "You're not new to this. You've built something real. But growth has stalled, and you're not sure why."
-
-    - title: "Solo or small teams."
-      description: "Typically working alone or with 2–3 people. No large corporate structure. Decisions happen fast when clarity exists."
-
-    - title: "Based in India, usually Bangalore."
-      description: "Though the work happens remotely. What matters is the fit, not the location."
-
-  not_for_you:
-    title: "NOT in IT/Software."
-    description: "I work with knowledge services and professional services. If you're building software products, I'm probably not the right fit."
-
-who_im_not_for:
-  section_title: "Who I'm not for"
-  section_subtitle: "Honesty saves everyone time"
-  items:
-    - heading: "If you want someone to run your marketing"
-      text: "hire an agency. I fix foundations, not funnels."
-
-    - heading: "If you're looking for quick hacks"
-      text: "we won't be a good fit. I build things that last."
-
-    - heading: "If you're not willing to question assumptions"
-      text: "the diagnosis process requires honesty about what's not working. If you've already decided you know the answer, you don't need me."
-
-    - heading: "If you want a cheerleader"
-      text: "I'll tell you what I see, not what you want to hear. Kind, but honest."
-
-framework:
-  section_title: "The Revenue System Architecture™"
-  section_subtitle: "The three-phase system I install for expert-founders"
-
-  phases:
-    - name: "Calibration"
-      phase_label: "Phase 1 (Week 1)"
-      metaphor: "The Fuel"
-      question: "What are we selling?"
-      items:
-        - "Niche Selection"
-        - "Offer Sharpening"
-        - "Message Design"
-
-    - name: "Automation"
-      phase_label: "Phase 2 (Weeks 2–4)"
-      metaphor: "The Engine"
-      question: "How does it run?"
-      items:
-        - "AI Lead Generation"
-        - "Proposal Workflows"
-        - "Content Systems"
-
-    - name: "Acceleration"
-      phase_label: "Phase 3 (Weeks 5+)"
-      metaphor: "The Freedom"
-      question: "What do you get?"
-      items:
-        - "Predictable Pipeline"
-        - "Zero-Touch Admin"
-        - "Founder Freedom"
-
-  insight:
-    label: "The Sequence Matters"
-    paragraphs:
-      - "Most founders try to automate before they've calibrated. They build AI workflows around an unclear offer, and wonder why it generates noise instead of clients."
-      - "Calibration first. Automation second. Acceleration follows."
-
-services:
-  section_title: "How I work"
-  section_subtitle: "Three ways to engage"
-  items:
-    - name: "Diagnose"
-      title: "AI Readiness Audit"
-      description: "For founders who aren't sure where their Revenue System is broken. A 90-minute session to audit your readiness across Calibration, Automation, and Acceleration — and map what to fix first."
-      href: "/diagnose"
-
-    - name: "Build"
-      title: "Implementation Pilot"
-      description: "For founders who know what's missing and want it built. A 6-week done-for-you engagement to install your Revenue System — Calibration, Automation, or both."
-      href: "/build"
-
-    - name: "Partner"
-      title: "Ongoing Advisory"
-      description: "For founders who want a thinking partner as they scale. Monthly retainer with regular strategy sessions and async access to keep your Revenue System calibrated."
-      href: "/partner"
-
-personal:
-  section_title: "A few things about me"
-  section_subtitle: "Beyond the work"
+pattern:
+  section_title: "The pattern I kept seeing."
   paragraphs:
-    - "I'm based in Bangalore. I've been here long enough to understand how business actually works in India — relationship-driven, value-conscious, reputation-sensitive."
-    - "I co-host a podcast called \"Click, Brand, and Beyond\" with Nisha Prakash. We talk about digital marketing, business building, and life from the perspective of small business owners. India-centric viewpoints, practical conversations."
-    - "I read more than I should. I think in systems. I believe most problems have already been solved somewhere — you just need to find the right analogy."
-    - "I'm not on social media constantly. I don't post for the sake of posting. When I write, it's because I have something to say."
+    - "For more than fifteen years I've worked at the intersection of strategy, positioning, and how businesses actually win clients — business research at GE, building and exiting an intellectual property firm, and over a decade advising founders on why they weren't growing."
+    - "Most service-business founders are brilliant at what they do. Their clients love them. They get referrals. But new business still depends on who happens to mention them — and on the founder personally selling every deal."
+    - "I spent years helping founders get clarity — sharpen positioning, define the niche, fix the message. And it worked. But clarity without a selling system just means you understand the problem better while the pipeline stays the same."
+    - "So I stopped at the roadmap less and less. Now I package the offer, prove it against real prospects, and install the weekly motion — then stay until it runs."
+
+what_i_do:
+  section_title: "How it works."
+  items:
+    - label: "Start with the Sales Scorecard."
+      description: "A free, three-minute self-assessment that tells you how predictable your pipeline really is — and the one thing to fix first."
+      link: "/scorecard"
+    - label: "Then the Pipeline Reality Check."
+      description: "A ₹25,000 done-for-you diagnosis of your last 12 months of deals: where your next clients will come from, and where they won't. One week, a written verdict."
+      link: "/pipeline-reality-check"
+    - label: "Then CLEAR."
+      description: "The engagement where I install the sales system — one packaged offer the market has responded to, a motion you've already run, written down and yours."
+      link: "/clear"
+
+podcast:
+  text: "I co-host the **Click, Brand & Beyond** podcast with Nisha Prakash — conversations about marketing, positioning, and building businesses that don't depend on the founder for everything."
 
 final_cta:
-  title: "Let's find out what's actually broken"
-  body: "If you're an expert-founder stuck in referral dependence, wondering why marketing isn't working, let's have a conversation."
-  cta_text: "Book an AI Readiness Audit"
-  cta_link: "/contact"
-  secondary_text: "No pitch. No pressure. Just a clear plan."
+  title: "Find out how predictable your pipeline really is."
+  body: "Ten questions. Three minutes. An honest score and the one thing to fix first."
+  cta_text: "Take the Sales Scorecard"
+  cta_link: "/scorecard"

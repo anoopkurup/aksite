@@ -127,7 +127,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.frontmatter.author || "Anoop Kurup"}
               </h3>
               <p className="font-sans text-body text-slate-600 leading-relaxed mb-4">
-                Business Clarity Architect helping expert-founders build systematic growth beyond referrals. Based in Bangalore.
+                Sales-systems consultant for founder-led services businesses. Based in Bangalore.
               </p>
               <Link
                 href="/about"
@@ -145,16 +145,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="py-section bg-navy-900">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-serif text-display text-white mb-6">
-            Ready to build clarity?
+            Still depending on referrals?
           </h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">
-            If you're stuck in referral dependence and ready for systematic growth, let's talk.
+            Find out how predictable your pipeline really is. Ten questions, three minutes, an honest score and the one thing to fix first.
           </p>
           <Link
-            href="/diagnose"
+            href="/scorecard"
             className="inline-flex items-center font-sans text-body text-white border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors duration-300"
           >
-            Book a Clarity Diagnosis Session
+            Take the Sales Scorecard
             <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
           </Link>
         </div>

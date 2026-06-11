@@ -1,0 +1,46 @@
+# Pipeline Reality Check Page
+# Last updated: 2026-06-11
+
+meta:
+  title: "Pipeline Reality Check | Anoop Kurup"
+  description: "Send me your last 12 months of deals. One week later you get a written verdict on where your next clients will come from — and where they won't. ₹25,000, done-for-you."
+
+hero:
+  tier_label: "₹25,000 · One Week · Done-for-You"
+  title: "Pipeline Reality Check"
+  subtitle: "Where your next clients are coming from — and where they're not."
+  body:
+    - "Send me your last 12 months of deals — source, size, time-to-close, who sold it. One week later you get a written verdict: how dependent you are on referrals, where your revenue is concentrated and exposed, what your current motion will produce over the next 6 months if nothing changes, and the three moves that change it."
+    - "You send data. You receive a verdict. No call that evaporates."
+
+what_you_get:
+  section_title: "What you get"
+  items:
+    - "A written report — not a call that evaporates"
+    - "Your referral-dependence and concentration numbers, in black and white"
+    - "A 6-month pipeline projection if nothing changes"
+    - "Three prioritised moves that change the trajectory"
+    - "A straight answer on whether CLEAR is your next step — including “it isn't yet,” if that's the truth"
+
+terms:
+  headline: "₹25,000 · one week · fully done-for-you."
+  body: "You send data; you receive a verdict."
+  credit_note: "The full fee counts toward a CLEAR engagement if you go ahead."
+
+faqs:
+  title: "Questions"
+  items:
+    - question: "What data do you need from me?"
+      answer: "Your last 12 months of deals: source, size, time-to-close, and who sold each one. A spreadsheet is plenty. If it lives in a CRM, an export works. I'll send a simple template so you're not guessing what to pull."
+
+    - question: "What if my data is messy?"
+      answer: "Then that's finding number one. Messy or missing data is itself a signal about how visible your pipeline really is. I work with what you have and tell you what the gaps mean — I don't send it back for cleanup."
+
+    - question: "What happens after?"
+      answer: "If CLEAR fits, that's the recommendation — and your ₹25,000 is credited toward it. If it doesn't fit yet, I'll say so plainly and tell you what to do first. An honest “not yet” is a valid outcome."
+
+final_cta:
+  title: "Not sure where you stand yet?"
+  body: "Start with the free Sales Scorecard. Ten questions, three minutes, an honest score and the one thing to fix first."
+  cta_text: "Take the Sales Scorecard"
+  cta_link: "/scorecard"

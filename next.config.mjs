@@ -13,9 +13,37 @@ const nextConfig = {
   async redirects() {
     return [
       // ===========================================
-      // NEW SITE STRUCTURE REDIRECTS (Jan 2026)
-      // Business Clarity Architect positioning
+      // REPOSITIONING REDIRECTS (Jun 2026)
+      // "I fix sales for services businesses"
+      // Funnel: Scorecard → Pipeline Reality Check → CLEAR
       // ===========================================
+
+      // Retired offer pages → new funnel (point to FINAL destinations, no chains)
+      {
+        source: '/diagnose',
+        destination: '/scorecard',
+        permanent: true,
+      },
+      {
+        source: '/build',
+        destination: '/clear',
+        permanent: true,
+      },
+      {
+        source: '/partner',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/framework',
+        destination: '/clear',
+        permanent: true,
+      },
+      {
+        source: '/postie',
+        destination: '/scorecard',
+        permanent: true,
+      },
 
       // Services section redirects
       {
@@ -25,17 +53,17 @@ const nextConfig = {
       },
       {
         source: '/services/content-growth',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/services/lead-generation',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/services/marketing-operations',
-        destination: '/partner',
+        destination: '/contact',
         permanent: true,
       },
 
@@ -47,51 +75,51 @@ const nextConfig = {
       },
       {
         source: '/solutions/visibility',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/solutions/leads',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/solutions/complete-system',
-        destination: '/partner',
+        destination: '/contact',
         permanent: true,
       },
 
       // Workshops section redirects
       {
         source: '/workshops',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/workshops/100-day-lead-generation-sprint',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/workshops/linkedin-sales-activation',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
 
-      // Resources section redirects
+      // Resources section redirects (no /videos page — send to /blog)
       {
         source: '/resources/webinars',
-        destination: '/videos',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/resources/webinars/:slug',
-        destination: '/videos',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/resources',
-        destination: '/videos',
+        destination: '/blog',
         permanent: true,
       },
 
@@ -126,85 +154,85 @@ const nextConfig = {
       // Workshop and service redirects (old URLs) - now point to new structure
       {
         source: '/lead-generation-strategy-workshop',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/linkedin-marketing',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/linkedin-thoughtleadership',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/content-factory-creators-membership',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/find-your-tg',
-        destination: '/diagnose',
+        destination: '/scorecard',
         permanent: true,
       },
 
       // Archived workshops redirects
       {
         source: '/workshops/ai-lead-machine',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/workshops/100-days-sprint',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
 
       // Archived workflows redirects
       {
         source: '/workflows',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/workflows/ai-lead-machine',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/workflows/linkedin-post-creator',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/workflows/blog-article-writer',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
       {
         source: '/ai-workflows',
-        destination: '/build',
+        destination: '/clear',
         permanent: true,
       },
 
-      // Archived ebooks redirect to videos (resources)
+      // Archived ebooks redirect to blog
       {
         source: '/ebooks',
-        destination: '/videos',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/resources/ebooks',
-        destination: '/videos',
+        destination: '/blog',
         permanent: true,
       },
 
       // Consulting page redirect
       {
         source: '/consulting',
-        destination: '/diagnose',
+        destination: '/scorecard',
         permanent: true,
       },
 
