@@ -1,0 +1,11 @@
+<svg viewBox="12 32 280 56" width="280" height="56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anoop Kurup">
+  <!-- Mark: stacked system lines converging toward a single accent node -->
+  <g>
+    <rect x="20" y="40" width="44" height="6" rx="3" fill="#000080"/>
+    <rect x="20" y="57" width="58" height="6" rx="3" fill="#475569"/>
+    <rect x="20" y="74" width="32" height="6" rx="3" fill="#475569"/>
+    <circle cx="92" cy="60" r="9" fill="#F97316"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="124" y="69" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#000080">Anoop Kurup</text>
+</svg>
