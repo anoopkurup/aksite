@@ -21,7 +21,7 @@ src/                        # Code — components, layouts, loaders (rarely need
 public/images/              # Images (blog images land in public/images/blog/<slug>/)
 ```
 
-Two pages are code, not content: the Scorecard (`src/app/scorecard/ScorecardTool.tsx`) and Contact (`src/app/contact/page.tsx`).
+One page is code, not content: the Scorecard (`src/app/scorecard/ScorecardTool.tsx`).
 
 ## Publishing a blog post from Obsidian
 

@@ -24,7 +24,7 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 | `/clear` | The CLEAR engagement (₹75K–₹1.75L) | `content/pages/clear.yaml` |
 | `/about` | Bio + funnel + podcast | `content/pages/about.yaml` |
 | `/blog` | Markdown blog system | `content/blog/posts/*.md` |
-| `/contact` | Contact page with qualification | Hardcoded TSX |
+| `/contact` | Contact page with qualification | `content/pages/contact.yaml` |
 | `/podcast` | Podcast page | `content/podcast.md` |
 | `/thank-you` | Thank you page | `content/thank-you.md` |
 | `/legal/*` | Privacy policy, terms | `content/legal/*.md` |
@@ -61,6 +61,7 @@ aksite-nextjs/
 │   │   ├── home.yaml
 │   │   ├── about.yaml
 │   │   ├── clear.yaml
+│   │   ├── contact.yaml
 │   │   └── pipeline-reality-check.yaml
 │   ├── blog/posts/*.md           # Blog posts (markdown + frontmatter)
 │   ├── podcast.md                # Podcast page
@@ -76,7 +77,7 @@ aksite-nextjs/
 │   │   ├── pipeline-reality-check/page.tsx  # ₹25K diagnosis offer
 │   │   ├── clear/page.tsx        # CLEAR engagement
 │   │   ├── blog/                 # Blog (list + [slug] pages)
-│   │   ├── contact/page.tsx      # Contact (hardcoded TSX)
+│   │   ├── contact/page.tsx      # Contact
 │   │   ├── podcast/page.tsx      # Podcast
 │   │   ├── thank-you/page.tsx    # Thank you
 │   │   └── legal/                # Privacy, terms
@@ -133,12 +134,12 @@ npm run publish -- "/path/to/note.md" --push      # also git commit + push (auto
 
 ## Content Architecture
 - **All content lives under top-level `content/`** — never inside `src/`
-- Page copy: YAML files in `content/pages/` (home, about, clear, pipeline-reality-check)
+- Page copy: YAML files in `content/pages/` (home, about, clear, pipeline-reality-check, contact)
 - Blog posts: markdown in `content/blog/posts/` (published via `npm run publish`)
 - Simple markdown pages: `content/podcast.md`, `content/thank-you.md`, `content/legal/*.md` (loaded by `getContentPage()`)
 - TypeScript interfaces for all YAML structures in `src/lib/content.ts`, each with a typed loader
 - Each YAML page has a bespoke `page.tsx` renderer (not a generic section renderer)
-- Contact is hardcoded TSX; the Scorecard is a client component (`ScorecardTool.tsx`)
+- The Scorecard is the one code-driven page (client component `ScorecardTool.tsx`)
 - When updating copy, edit the YAML/markdown file; only edit TSX for hardcoded pages
 
 ## Key Principles
