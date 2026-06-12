@@ -23,11 +23,11 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 | `/pipeline-reality-check` | ₹25,000 done-for-you diagnosis offer page | `content/pages/pipeline-reality-check.yaml` |
 | `/clear` | The CLEAR engagement (₹75K–₹1.75L) | `content/pages/clear.yaml` |
 | `/about` | Bio + funnel + podcast | `content/pages/about.yaml` |
-| `/blog` | MDX blog system | `src/content/blog/posts/*.md` |
+| `/blog` | Markdown blog system | `content/blog/posts/*.md` |
 | `/contact` | Contact page with qualification | Hardcoded TSX |
-| `/podcast` | Podcast page | `src/content/podcast.md` |
-| `/thank-you` | Thank you page | `src/content/thank-you.md` |
-| `/legal/*` | Privacy policy, terms | `src/content/legal/*.md` |
+| `/podcast` | Podcast page | `content/podcast.md` |
+| `/thank-you` | Thank you page | `content/thank-you.md` |
+| `/legal/*` | Privacy policy, terms | `content/legal/*.md` |
 
 ### Navigation
 **Desktop**: Anoop Kurup | How I Fix Sales (`/clear`) | Pipeline Reality Check | Blog | About | **[Take the Sales Scorecard]**
@@ -45,14 +45,29 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 ## Tech Stack
 - **Framework**: Next.js 14 with App Router
 - **Styling**: Tailwind CSS (custom design tokens)
-- **Content**: YAML files for page content; MDX for blog posts
+- **Content**: YAML files for page content; markdown (remark/rehype) for blog posts and simple pages
 - **Typography**: Cormorant Garamond (serif) + Inter (sans-serif)
 - **Icons**: Lucide React
 - **Deployment**: Vercel (auto-deploy from GitHub master)
 
 ## Project Structure
+
+**All content lives in top-level `content/`; all code lives in `src/`.**
+
 ```
 aksite-nextjs/
+├── content/                      # ← ALL editable content (no code)
+│   ├── pages/
+│   │   ├── home.yaml
+│   │   ├── about.yaml
+│   │   ├── clear.yaml
+│   │   └── pipeline-reality-check.yaml
+│   ├── blog/posts/*.md           # Blog posts (markdown + frontmatter)
+│   ├── podcast.md                # Podcast page
+│   ├── thank-you.md              # Thank you page
+│   └── legal/                    # Privacy, terms markdown
+├── scripts/
+│   └── publish-post.mjs          # Obsidian → blog post publisher (npm run publish)
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx              # Homepage
@@ -60,8 +75,8 @@ aksite-nextjs/
 │   │   ├── scorecard/            # Sales Scorecard (page.tsx + ScorecardTool.tsx)
 │   │   ├── pipeline-reality-check/page.tsx  # ₹25K diagnosis offer
 │   │   ├── clear/page.tsx        # CLEAR engagement
-│   │   ├── blog/                 # MDX blog system
-│   │   ├── contact/page.tsx      # Contact
+│   │   ├── blog/                 # Blog (list + [slug] pages)
+│   │   ├── contact/page.tsx      # Contact (hardcoded TSX)
 │   │   ├── podcast/page.tsx      # Podcast
 │   │   ├── thank-you/page.tsx    # Thank you
 │   │   └── legal/                # Privacy, terms
@@ -73,33 +88,29 @@ aksite-nextjs/
 │   │   ├── ContentSections.tsx   # Dynamic content renderer
 │   │   ├── HeroMedia.tsx         # Image/video hero media
 │   │   ├── LineIcon.tsx          # Custom line icons
-│   │   ├── SocialIcon.tsx        # Social media icons
-│   │   ├── Newsletter.tsx        # Newsletter component
-│   │   ├── ClientLayout.tsx      # Client layout wrapper
-│   │   └── ui/                   # shadcn/ui components
-│   ├── content/
-│   │   ├── blog/posts/*.md       # Blog posts (8 posts)
-│   │   ├── contact.md            # Contact page content
-│   │   ├── thank-you.md          # Thank you page
-│   │   ├── podcast.md            # Podcast page
-│   │   ├── about.md              # About markdown
-│   │   └── legal/                # Privacy, terms markdown
+│   │   └── ui/                   # shadcn/ui components (accordion, button, card)
 │   └── lib/
-│       ├── content.ts            # YAML loaders + TypeScript interfaces
+│       ├── content.ts            # YAML + markdown content loaders, TS interfaces
 │       ├── analytics.ts          # trackEvent() — dataLayer/gtag-safe events
-│       ├── blog.ts               # Blog utilities
-│       ├── markdown.ts           # MDX processing
+│       ├── blog.ts               # Blog post loaders (content/blog/posts)
+│       ├── markdown.ts           # remark/rehype markdown → HTML
 │       ├── icons.ts              # Icon registry
 │       └── utils.ts              # Utility functions
-├── content/
-│   └── pages/
-│       ├── home.yaml
-│       ├── about.yaml
-│       ├── clear.yaml
-│       └── pipeline-reality-check.yaml
-├── public/images/
+├── public/images/                # Static images (blog images: public/images/blog/<slug>/)
 └── tailwind.config.ts
 ```
+
+## Publishing Blog Posts from Obsidian
+
+```bash
+npm run publish -- "/path/to/Obsidian note.md"   # convert a specific note
+npm run publish                                   # pick from OBSIDIAN_DIR drafts (newest first)
+npm run publish -- "/path/to/note.md" --push      # also git commit + push (auto-deploys)
+```
+
+- Configure the drafts folder via `OBSIDIAN_DIR=...` in `.env.local`.
+- The script (`scripts/publish-post.mjs`) normalises frontmatter (title, date, description, tags, category, read_time, author), strips the duplicate H1, removes `%%comments%%`, converts callouts to blockquotes, flattens `[[wikilinks]]`, and copies `![[image]]` embeds from the vault into `public/images/blog/<slug>/` with rewritten links.
+- Output goes to `content/blog/posts/<slug>.md`; it refuses to overwrite an existing post unless `--force` is passed.
 
 ## Design System
 
@@ -121,11 +132,14 @@ aksite-nextjs/
 - Minimal shadows, generous whitespace
 
 ## Content Architecture
-- Page content lives in YAML files under `/content/pages/` (home, about, clear, pipeline-reality-check)
+- **All content lives under top-level `content/`** — never inside `src/`
+- Page copy: YAML files in `content/pages/` (home, about, clear, pipeline-reality-check)
+- Blog posts: markdown in `content/blog/posts/` (published via `npm run publish`)
+- Simple markdown pages: `content/podcast.md`, `content/thank-you.md`, `content/legal/*.md` (loaded by `getContentPage()`)
 - TypeScript interfaces for all YAML structures in `src/lib/content.ts`, each with a typed loader
 - Each YAML page has a bespoke `page.tsx` renderer (not a generic section renderer)
 - Contact is hardcoded TSX; the Scorecard is a client component (`ScorecardTool.tsx`)
-- When updating copy, edit the YAML file; only edit TSX for hardcoded pages
+- When updating copy, edit the YAML/markdown file; only edit TSX for hardcoded pages
 
 ## Key Principles
 - Exactly ONE primary CTA type sitewide: the Sales Scorecard. Every page ends with it. No competing CTAs (no newsletter pop-ups, no "book a call" as primary).
