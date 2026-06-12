@@ -21,9 +21,27 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Anoop Kurup — I Fix Sales for Services Businesses",
+  metadataBase: new URL("https://anoopkurup.com"),
+  title: {
+    default: "Anoop Kurup — I Fix Sales for Services Businesses",
+    template: "%s | Anoop Kurup",
+  },
   description:
     "Sales systems for founder-led services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Start with the free Sales Scorecard.",
+  openGraph: {
+    type: "website",
+    siteName: "Anoop Kurup",
+    locale: "en_IN",
+    url: "https://anoopkurup.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  alternates: {
+    types: {
+      "application/rss+xml": [{ url: "/feed.xml", title: "Anoop Kurup — Blog" }],
+    },
+  },
 };
 
 export default function RootLayout({

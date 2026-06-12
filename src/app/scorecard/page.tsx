@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ScorecardTool from "./ScorecardTool";
 
 export const metadata: Metadata = {
-  title: "The Sales Scorecard | Anoop Kurup",
+  title: "The Sales Scorecard",
   description:
     "How predictable is your pipeline? Ten questions, three minutes, no email required to see your score. A free self-assessment for founder-led services businesses.",
 };

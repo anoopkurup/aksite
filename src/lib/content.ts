@@ -281,6 +281,50 @@ export interface HomePageContent {
   };
 }
 
+// Contact Page Content
+export interface ContactPageContent {
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    tier_label: string;
+    title: string;
+    body: string[];
+  };
+  methods: {
+    section_title: string;
+    section_subtitle: string;
+    items: Array<{
+      icon: 'mail' | 'linkedin';
+      title: string;
+      description: string;
+      link_text: string;
+      link_url: string;
+    }>;
+  };
+  fit: {
+    section_title: string;
+    for_title: string;
+    for_items: string[];
+    not_for_title: string;
+    not_for_items: string[];
+  };
+  location: {
+    title: string;
+    body: string[];
+  };
+  cta: {
+    title: string;
+    subtitle: string;
+    button_text: string;
+    button_url: string;
+    secondary_text: string;
+    secondary_link_text: string;
+    secondary_link_url: string;
+  };
+}
+
 // CLEAR Engagement Page Content
 export interface ClearPageContent {
   meta: {
@@ -452,4 +496,11 @@ export function getPipelineRealityCheckContent(): PageContent<PipelineRealityChe
  */
 export function getAboutPageContent(): PageContent<AboutPageContent> {
   return loadYamlContent<AboutPageContent>('pages/about.yaml');
+}
+
+/**
+ * Get Contact page content
+ */
+export function getContactPageContent(): PageContent<ContactPageContent> {
+  return loadYamlContent<ContactPageContent>('pages/contact.yaml');
 }
