@@ -1,5 +1,11 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Pin the workspace root: a stray lockfile elsewhere on the machine must not
+  // change what Next traces into the build output
+  outputFileTracingRoot: path.dirname(fileURLToPath(import.meta.url)),
   images: {
     remotePatterns: [
       {
@@ -310,8 +316,10 @@ const nextConfig = {
       },
 
       // WordPress-specific redirects to home
+      // (regex params instead of `wp-:path*` — Next 15 forbids repeating
+      // params with an inline prefix/suffix)
       {
-        source: '/wp-sitemap:path*.xml',
+        source: '/:path(wp-sitemap.*\\.xml)',
         destination: '/sitemap.xml',
         permanent: true,
       },
@@ -326,7 +334,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/wp-:path*',
+        source: '/:path(wp-.*)',
         destination: '/',
         permanent: true,
       },

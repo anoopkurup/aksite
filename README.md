@@ -1,7 +1,7 @@
 # anoopkurup.com
 
 Personal/business website for Anoop Kurup — "I fix sales for founder-led services businesses."
-Built with Next.js 14 (App Router) + Tailwind CSS, deployed on Vercel (auto-deploy from `master`).
+Built with Next.js 15 (App Router) + Tailwind CSS, deployed on Vercel (auto-deploy from `master`).
 
 **Live**: https://anoopkurup.com
 

@@ -13,8 +13,9 @@ export function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }));
 }
 
-export default function BlogOpenGraphImage({ params }: { params: { slug: string } }) {
-  const post = getBlogPostBySlug(params.slug);
+export default async function BlogOpenGraphImage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
   const title = post?.frontmatter.title ?? 'Blog';
   // Long titles need a smaller size to fit the canvas
   const fontSize = title.length > 70 ? 52 : title.length > 45 ? 60 : 70;

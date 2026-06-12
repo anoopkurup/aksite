@@ -1,7 +1,7 @@
 # Anoop Kurup Website
 
 ## Project Overview
-Professional website for Anoop Kurup. Built with Next.js 14, Tailwind CSS, YAML-driven content.
+Professional website for Anoop Kurup. Built with Next.js 15, Tailwind CSS, YAML-driven content.
 
 **Core message**: "I fix sales for founder-led services businesses."
 **Audience**: Founder-led B2B service firms (consulting, agency, training, professional services).
@@ -43,7 +43,7 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 - Earlier legacy removals: `/consulting`, `/ai-solutions/*`, `/case-studies/*`, `/resources/*`, `/design-system`, `/_archived/*`, `/(sample)/*`
 
 ## Tech Stack
-- **Framework**: Next.js 14 with App Router
+- **Framework**: Next.js 15 with App Router
 - **Styling**: Tailwind CSS (custom design tokens)
 - **Content**: YAML files for page content; markdown (remark/rehype) for blog posts and simple pages
 - **Typography**: Cormorant Garamond (serif) + Inter (sans-serif)
