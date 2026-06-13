@@ -3,7 +3,7 @@ import { markdownToHtml } from '@/lib/markdown';
 
 export const dynamic = 'force-static';
 
-const BASE_URL = 'https://anoopkurup.com';
+const BASE_URL = 'https://www.anoopkurup.com';
 
 function escapeXml(text: string): string {
   return text

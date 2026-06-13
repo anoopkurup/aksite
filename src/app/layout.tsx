@@ -21,7 +21,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anoopkurup.com"),
+  metadataBase: new URL("https://www.anoopkurup.com"),
   title: {
     default: "Anoop Kurup — I Fix Sales for Services Businesses",
     template: "%s | Anoop Kurup",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Anoop Kurup",
     locale: "en_IN",
-    url: "https://anoopkurup.com",
+    url: "https://www.anoopkurup.com",
   },
   twitter: {
     card: "summary_large_image",
