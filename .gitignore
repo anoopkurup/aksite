@@ -54,3 +54,7 @@ ds-bundle/
 .design-sync/node_modules
 design-system/node_modules
 design-system/dist
+
+# Local working folders (not for publish)
+/Case Studies/
+/SEO/
