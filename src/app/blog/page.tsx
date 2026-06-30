@@ -6,8 +6,9 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog — Sales for Founder-Led Services Firms",
   description: "Practical writing on sales for founder-led services businesses: packaging an offer, proving it against real prospects, and building a weekly motion that produces conversations.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {

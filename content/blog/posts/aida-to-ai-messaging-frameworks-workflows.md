@@ -306,4 +306,4 @@ The businesses that systematically transform their marketing knowledge into AI w
 
 Your frameworks are too valuable to remain as theoretical knowledge. Turn them into systematic workflows that generate consistent results every time.
 
-Ready to transform your marketing frameworks into AI-powered systems? [Explore our AI-powered marketing solutions](/ai-solutions/) to see how systematic workflows can accelerate your content creation while maintaining strategic quality.
+Want to know where your messaging is leaking? [Take the free Sales Scorecard](/scorecard) — ten questions, three minutes, an honest score and the one thing to fix first.

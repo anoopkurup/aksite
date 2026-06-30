@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "The Sales Scorecard",
   description:
     "How predictable is your pipeline? Ten questions, three minutes, no email required to see your score. A free self-assessment for founder-led services businesses.",
+  alternates: { canonical: "/scorecard" },
 };
 
 export default function ScorecardPage() {

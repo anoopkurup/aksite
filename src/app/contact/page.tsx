@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   const { data: content } = getContactPageContent();
-  return { title: content.meta.title, description: content.meta.description };
+  return { title: content.meta.title, description: content.meta.description, alternates: { canonical: "/contact" } };
 }
 
 const METHOD_ICONS = {

@@ -9,6 +9,7 @@ export function generateMetadata(): Metadata {
     // Absolute: the homepage title is the full brand line; skip the "%s | Anoop Kurup" template
     title: { absolute: content.meta.title },
     description: content.meta.description,
+    alternates: { canonical: "/" },
   };
 }
 

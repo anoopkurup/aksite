@@ -232,4 +232,4 @@ The professionals who build consistent LinkedIn presence without burnout treat c
 
 Your expertise and client interactions already contain more valuable content than you could post in a year. The opportunity lies in creating systems that capture, develop, and multiply that value systematically.
 
-Ready to build systematic LinkedIn content that scales without burning out? [Explore our AI-powered marketing solutions](/ai-solutions/) to see how intelligent workflows can automate the systematic approach while maintaining your unique voice and expertise.
+Ready to turn that content into a pipeline? [Take the free Sales Scorecard](/scorecard) — ten questions, three minutes, an honest score and the one thing to fix first.

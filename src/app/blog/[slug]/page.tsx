@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { getBlogPostBySlug, getAllBlogSlugs } from '@/lib/blog';
 import { markdownToHtml, formatDate, estimateReadingTime } from '@/lib/markdown';
 import CTAButton from '@/components/CTAButton';
+import JsonLd from '@/components/JsonLd';
+import { blogPostingSchema, breadcrumbSchema } from '@/lib/seo';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export async function generateStaticParams() {
@@ -29,8 +31,26 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const htmlContent = await markdownToHtml(post.content);
   const readingTime = estimateReadingTime(post.content);
 
+  const postUrl = `/blog/${slug}`;
+
   return (
     <article className="min-h-screen bg-white">
+      <JsonLd
+        schema={[
+          blogPostingSchema({
+            title: post.frontmatter.title,
+            description: post.frontmatter.description,
+            url: postUrl,
+            datePublished: post.frontmatter.date,
+            image: post.frontmatter.hero_image || post.frontmatter.featured_image,
+          }),
+          breadcrumbSchema([
+            { name: 'Home', url: '/' },
+            { name: 'Blog', url: '/blog' },
+            { name: post.frontmatter.title, url: postUrl },
+          ]),
+        ]}
+      />
       {/* Hero Section */}
       <section className="py-24 bg-slate-50 border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-8">
@@ -172,6 +192,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.description,
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title: post.frontmatter.title,
       description: post.frontmatter.description,

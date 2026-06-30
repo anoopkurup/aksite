@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   const { data: content } = getAboutPageContent();
-  return { title: content.meta.title, description: content.meta.description };
+  return { title: content.meta.title, description: content.meta.description, alternates: { canonical: "/about" } };
 }
 
 export default function AboutPage() {
