@@ -25,7 +25,7 @@ This creates an unsustainable cycle:
 - Inconsistent posting when inspiration doesn't cooperate
 - Gradual decrease in posting frequency as the novelty wears off
 
-I've seen marketing agency founders who generated $500K in revenue from LinkedIn connections abandon their content efforts because the daily demands became unmanageable. The very success of their content created pressure that made the system unsustainable.
+I've seen marketing agency founders who generated ₹4 crore in revenue from LinkedIn connections abandon their content efforts because the daily demands became unmanageable. The very success of their content created pressure that made the system unsustainable.
 
 The alternative isn't posting less frequently or hiring expensive content teams. It's designing systematic approaches that generate more content with less daily effort by focusing on three core components: idea pipeline, batching cadence, and repurposing rhythm.
 
@@ -41,7 +41,7 @@ I teach clients to end each client interaction by asking: "What's the one insigh
 
 Document the answer immediately. Not the client-specific details, but the underlying principle, framework, or approach that applies broadly.
 
-Example: A client conversation about workflow optimization becomes a LinkedIn post about "The 3-Question Audit That Identifies Your Biggest Process Bottlenecks" without revealing any confidential information.
+Example: A client conversation about workflow optimisation becomes a LinkedIn post about "The 3-Question Audit That Identifies Your Biggest Process Bottlenecks" without revealing any confidential information.
 
 ### The Industry Observation Method  
 
@@ -109,13 +109,13 @@ Avoid creative fatigue by rotating between proven post formats:
 
 **Monday: Industry Insights** (observations about trends affecting your market)
 **Wednesday: Framework Shares** (process or approach explanations)  
-**Friday: Story Posts** (client success stories or personal experiences, anonymized)
+**Friday: Story Posts** (client success stories or personal experiences, anonymised)
 
 This structure eliminates format decisions and ensures content variety without requiring creativity for each post.
 
 ## The Repurposing System That Compounds Reach
 
-The most leverage in LinkedIn content comes from repurposing single insights into multiple formats and contexts.
+The greatest gains in LinkedIn content come from repurposing single insights into multiple formats and contexts.
 
 ### The Content Multiplication Method
 
@@ -124,9 +124,9 @@ Transform each core insight into multiple LinkedIn posts:
 **Original Insight**: A client discovery process that improved project success rates
 
 **Post 1**: Overview post explaining why most discovery processes fail
-**Post 2**: Deep dive into question 1 of your process  
-**Post 3**: Deep dive into question 2 of your process
-**Post 4**: Deep dive into question 3 of your process
+**Post 2**: Detailed look at question 1 of your process  
+**Post 3**: Detailed look at question 2 of your process
+**Post 4**: Detailed look at question 3 of your process
 **Post 5**: Common implementation mistakes and how to avoid them
 **Post 6**: Success story showing the process in action
 
@@ -141,7 +141,7 @@ Repurpose successful LinkedIn posts into other content formats:
 - Case studies for sales conversations
 - Social media posts for other platforms
 
-This approach maximizes the value extraction from each insight while reducing the total content creation burden.
+This approach maximises the value extraction from each insight while reducing the total content creation burden.
 
 ### The Engagement Amplification Strategy
 
@@ -151,7 +151,7 @@ Turn high-performing posts into content series:
 - Develop follow-up posts that address questions from comments
 - Build themed weeks around successful topics
 
-This leverages proven audience interest rather than guessing at new content directions.
+This uses proven audience interest rather than guessing at new content directions.
 
 ## Implementation: A Real System in Action
 
@@ -217,7 +217,7 @@ Begin multiplying content value:
 
 Goal: Increase reach and engagement while reducing net content creation effort.
 
-The key is implementing phases sequentially rather than attempting everything simultaneously. Each phase builds the foundation needed for the next level of systematization.
+The key is implementing phases sequentially rather than attempting everything simultaneously. Each phase builds the foundation needed for the next level of systematisation.
 
 ## Takeaway
 

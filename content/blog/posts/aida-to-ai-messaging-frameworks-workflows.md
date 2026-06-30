@@ -14,6 +14,7 @@ Yet when it comes time to write that sales email, create social media content, o
 
 The problem isn't that these frameworks don't work—they absolutely do. The problem is treating them as one-time learning instead of operational systems that can generate consistent, on-brand content at scale.
 
+
 ## The Framework Application Gap
 
 I see this pattern constantly in my consulting work. A marketing agency founder can explain the psychology behind AIDA during a strategy session, then spend two hours crafting a single email sequence because they're manually trying to apply the framework to their specific situation.
@@ -30,9 +31,9 @@ This creates three critical problems:
 
 The solution isn't better frameworks—it's turning existing frameworks into systematic AI workflows that maintain quality while dramatically reducing time and complexity.
 
-## Why Classic Frameworks Still Work (But Need AI Operationalization)
+## Why Classic Frameworks Still Work (But Need AI Operationalisation)
 
-Before diving into the AI transformation process, let's acknowledge why frameworks like AIDA have survived decades of marketing evolution:
+Before getting into the AI transformation process, let's acknowledge why frameworks like AIDA have survived decades of marketing evolution:
 
 **They're based on fundamental psychology.** AIDA works because it mirrors how people actually make decisions: something catches their attention, they develop interest in learning more, they desire the outcome, and they take action when presented with clear next steps.
 
@@ -42,7 +43,7 @@ Before diving into the AI transformation process, let's acknowledge why framewor
 
 The limitation isn't the frameworks themselves—it's the manual, one-off application that makes them impractical for consistent use at scale.
 
-This is where AI workflows transform everything. Instead of memorizing frameworks and manually applying them each time, you create prompt sequences that systematically generate framework-based content with your specific brand voice, audience understanding, and strategic positioning built in.
+This is where AI workflows transform everything. Instead of memorising frameworks and manually applying them each time, you create prompt sequences that systematically generate framework-based content with your specific brand voice, audience understanding, and strategic positioning built in.
 
 ## The Framework-to-Workflow Transformation Process
 
@@ -56,7 +57,7 @@ For AIDA, this means creating separate prompts for:
 - **Attention**: Hook generation based on audience pain points and pattern interrupts
 - **Interest**: Problem identification and amplification specific to your target market
 - **Desire**: Benefit articulation that connects features to emotional and practical outcomes
-- **Action**: CTA optimization that removes friction and creates urgency
+- **Action**: CTA optimisation that removes friction and creates urgency
 
 Each prompt should be specific enough that it consistently generates usable output rather than generic suggestions.
 
@@ -66,10 +67,10 @@ Link individual prompts into sequences that build logically and maintain consist
 
 This involves:
 - **Context preservation**: Each prompt in the chain references previous outputs to maintain coherence
-- **Quality gates**: Built-in optimization prompts that refine output before moving to the next stage
+- **Quality gates**: Built-in optimisation prompts that refine output before moving to the next stage
 - **Brand voice integration**: Consistent tone and style instructions that apply across all prompts
 
-### Step 3: Add Customization Layers
+### Step 3: Add Customisation Layers
 
 Build in variables that adapt the workflow to different:
 - **Audience segments** (different pain points, sophistication levels, buying contexts)
@@ -147,7 +148,7 @@ Create desire by presenting [YOUR SOLUTION/OFFER] with:
 Maintain focus on their outcomes, not your process.
 ```
 
-### Action Stage: CTA Optimization
+### Action Stage: CTA Optimisation
 
 **Main Prompt:**
 ```
@@ -259,7 +260,7 @@ We implemented the AIDA workflow system across their email marketing:
 - 5.1% click-through rate (+65% improvement)
 - Team autonomy with founder spot-checking rather than rewriting
 
-The key insight: they weren't replacing human creativity—they were systematizing the strategic thinking that had been trapped in the founder's head, making it accessible and repeatable for the entire team.
+The key insight: they weren't replacing human creativity—they were systematising the strategic thinking that had been trapped in the founder's head, making it accessible and repeatable for the entire team.
 
 The workflows ensured every email followed proven psychological principles while adapting to specific campaigns, audiences, and offers.
 
@@ -275,20 +276,20 @@ Map out the four stages and identify the specific thinking process you go throug
 
 ### Step 2: Build and Test Your First Workflow
 
-Create prompts for each stage using the examples above as templates. Customize them for:
+Create prompts for each stage using the examples above as templates. Customise them for:
 - Your specific industry and audience
 - Your brand voice and positioning
 - Your most common content formats
 
 Test the workflow with 5-10 pieces of content, refining prompts based on output quality and consistency.
 
-### Step 3: Scale and Systematize
+### Step 3: Scale and Systematise
 
 Once your primary workflow produces consistent results:
 - Train team members to use the system
 - Create variations for different content types and audiences
 - Build a library of refined prompts and workflows
-- Document optimization insights for continuous improvement
+- Document optimisation insights for continuous improvement
 
 The goal is creating systems that generate framework-based content faster and more consistently than manual application.
 

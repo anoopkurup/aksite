@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { personSchema, organizationSchema, websiteSchema } from "@/lib/seo";
 
 const GA_MEASUREMENT_ID = "G-0X2P577TSX";
 
@@ -52,6 +56,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased`}>
+        {/* Site-wide structured data: who Anoop is, the practice, the site. */}
+        <JsonLd schema={[personSchema(), organizationSchema(), websiteSchema()]} />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -69,6 +75,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

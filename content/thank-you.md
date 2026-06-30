@@ -21,7 +21,7 @@ sections:
     grid_class: "grid-3"
     items:
       - title: "Email Inquiries"
-        description: "I typically respond within **24-48 hours** during business days with personalized insights for your situation."
+        description: "I typically respond within **24-48 hours** during business days with personalised insights for your situation."
       - title: "Workshop Applications"
         description: "You'll receive confirmation and detailed next steps within **2 business days** of your application."
       - title: "Newsletter Subscriptions"

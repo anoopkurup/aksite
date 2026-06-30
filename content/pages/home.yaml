@@ -1,5 +1,5 @@
 # Homepage Content — "I fix sales for founder-led services businesses"
-# Last updated: 2026-06-11
+# Last updated: 2026-06-30 (CLEAR v5 copy)
 
 meta:
   title: "Anoop Kurup — I Fix Sales for Services Businesses"
@@ -8,71 +8,71 @@ meta:
 hero:
   headline: "I fix sales for founder-led services businesses."
   body:
-    - "You've built real expertise. Clients love the work. But new business still depends on referrals you can't predict — and on you personally selling every deal."
-    - "I package what you're best at into one offer the market actually responds to, and build the weekly sales motion that keeps producing conversations."
+    - "You've built real expertise, and your clients love the work. But new business still arrives the way it always has — through referrals you can't predict, and through you personally selling every deal. When the referrals are flowing, you're busy. When they aren't, the pipeline goes quiet, and there's no second engine to fall back on."
+    - "I package what you're best at into one offer the market actually responds to, then build the weekly sales motion that keeps producing conversations — so your pipeline stops depending on luck and starts depending on a system."
   cta_text: "Take the Sales Scorecard"
   cta_link: "/scorecard"
-  cta_note: "Free · 3 minutes · instant verdict on how predictable your pipeline really is"
+  cta_note: "Free · 3 minutes · an honest read on how predictable your pipeline really is"
 
 sound_familiar:
   section_title: "Sound familiar?"
   items:
-    - symptom: "Referrals convert. Everything else fails."
-      reframe: "Referrals arrive pre-sold. The fix isn't more marketing — it's an offer strangers can say yes to."
-    - symptom: "Every deal is a custom negotiation."
-      reframe: "When nothing is packaged, every sale starts from zero: custom scope, custom price, custom doubt."
+    - symptom: "Referrals convert. Everything else falls flat."
+      reframe: "Referrals arrive pre-sold — someone your prospect trusts has already vouched for you, so the sale is half-done before you speak. Every other channel feels like pushing a boulder uphill. The fix isn't more marketing spend. It's an offer a stranger can say yes to without a referral doing the convincing for you."
+    - symptom: "Every deal is a fresh negotiation."
+      reframe: "When nothing is packaged, every sale starts from zero — custom scope, custom price, custom doubt. You re-explain your value each time, quote from instinct, and absorb a long back-and-forth before anyone commits. That's not a pricing problem; it's the absence of a fixed, repeatable unit to sell."
     - symptom: "I'm the only one who can sell what we do."
-      reframe: "If the pitch only works in your mouth, you don't have a sales problem — you have a packaging problem."
+      reframe: "If the pitch only works in your mouth, you don't have a sales problem — you have a packaging problem. The offer is still trapped inside your head as judgement and experience, never written down as something another person, or another version of you on a busy week, could carry into a conversation."
     - symptom: "Prospects nod, then go quiet."
-      reframe: "Nodding is not buying. Deals without a felt trigger and a clear next step dissolve into “let's keep in touch.”"
+      reframe: "Nodding is not buying. A deal with no felt trigger and no clear next step quietly dissolves into “let's stay in touch.” The prospect liked you; nothing made them act. Until there's a reason to move now, interest keeps evaporating between the meeting and the follow-up."
 
 how_i_fix_it:
   section_title: "How I fix it"
   stages:
     - number: "1"
       name: "Package"
-      description: "We extract the skill your best clients actually paid for and shape it into one offer with a clear outcome and price. Not a rebrand — a sellable unit."
+      description: "We extract the skill your best clients actually paid for — not your job title, but the specific thing you did that produced a result — and shape it into one offer with a clear outcome and a clear price. This isn't a rebrand or a new logo. It's turning judgement you carry in your head into a sellable unit a stranger can understand in one sentence."
     - number: "2"
-      name: "Prove"
-      description: "We put that offer in front of real prospects — ten live conversations, with me in the room for the first ones. The market tells us the version it wants."
+      name: "Prove & Sell"
+      description: "We put that offer in front of real prospects and sell it together — I'm on the calls with you, helping handle objections and close, not handing you a script and stepping back. We start with your own contacts, where trust already exists, then move to a cold channel I build so you don't run out of names. The market tells us, in its own words, which version of the offer it actually wants — and you learn to sell it by selling it."
     - number: "3"
       name: "Systemise"
-      description: "What survived becomes your sales system: the words, the assets, the weekly motion. Written down. Repeatable. Yours."
+      description: "What survived the market becomes your sales system: the words that got replies, the assets that did the work, the weekly motion that keeps conversations coming, and the scripts and checklists that make it repeatable. Written down. Run at least once already. Yours to keep — and to hand to a future hire."
 
 proof:
   section_title: "From past consulting engagements"
   items:
-    - type: "Marketing Agency"
-      before: "Competing on price against dozens of interchangeable agencies."
-      what_we_did: "Narrowed to one vertical, repositioned the offer around outcomes, built an outbound motion."
-      result: "Closed its first revenue-share deal in 45 days."
-    - type: "Public-Speaking Trainer"
-      before: "Running free webinars to an audience that never converted."
-      what_we_did: "Dropped the broad audience and targeted corporate L&D teams with urgent needs."
-      result: "Won paid corporate work at 3× the old per-engagement rate."
-    - type: "School Group"
-      before: "Strong reputation, but admissions stalling against newer competitors."
-      what_we_did: "Repositioned the offer to parents and ran targeted admissions campaigns."
-      result: "Lifted the admission rate from 70% to 94%."
+    - type: "Advertising agency"
+      before: "Project-by-project, every fee negotiated from scratch."
+      what_we_did: "Repackaged the work around a single outcome and a fixed commercial structure."
+      result: "A revenue-share deal closed in 45 days."
+    - type: "Public-speaking trainer"
+      before: "Priced per session, competing on day-rate."
+      what_we_did: "Rebuilt the offer around the transformation, not the hours."
+      result: "3× the previous per-engagement rate."
+    - type: "School group"
+      before: "Enquiries arriving but not converting."
+      what_we_did: "Fixed the conversion path from first contact to decision."
+      result: "Admissions conversion lifted from 70% to 94%."
 
 qualification:
-  section_title: "Who this is for"
+  section_title: "Who this is for — and who it isn't"
   for_you:
-    heading: "For you if…"
+    heading: "It's for you if…"
     items:
-      - "You run a founder-led B2B services firm — consulting, agency, training, professional services"
-      - "You're mostly out of day-to-day delivery — your team or systems handle the work"
-      - "Growth still depends on your network and your personal selling"
-      - "You want a working pipeline, not another marketing experiment"
+      - "You run a founder-led B2B services firm — consulting, agency, training, or professional services."
+      - "You're mostly out of day-to-day delivery: your team or your systems handle the work, so your time can go into selling and building."
+      - "Growth still depends on your network and your personal selling, and you can feel that ceiling."
+      - "You want a working pipeline, not another marketing experiment."
   not_for_you:
-    heading: "Not for you if…"
+    heading: "It's not for you if…"
     items:
-      - "You're still hands-on in most client delivery — fix capacity first (the Scorecard will tell you)"
-      - "You want someone to run your ads — hire an agency"
-      - "You're looking for hacks"
+      - "You're still hands-on in most client delivery — fix capacity first; a sales system competes with billable hours you can't spare, and the Scorecard will flag this."
+      - "You want someone to run your ads — hire an agency; that's a different job."
+      - "You're looking for hacks. This is a system, built deliberately, that you have to run."
 
 final_cta:
   title: "Find out how predictable your pipeline really is."
-  body: "Ten questions. Three minutes. An honest score and the one thing to fix first."
+  body: "Ten questions. Three minutes. An honest score, and the one thing to fix first."
   cta_text: "Take the Sales Scorecard"
   cta_link: "/scorecard"

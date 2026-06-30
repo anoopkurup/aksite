@@ -13,7 +13,7 @@ Most professional service businesses approach their offerings like a buffet—th
 
 The result? Confused prospects who can't figure out where to start, lengthy sales cycles where you're explaining your entire service menu, and close rates that depend more on luck than systematic positioning.
 
-I've seen this pattern across hundreds of engagements. Marketing agencies offering everything from "brand strategy" to "social media management." Law firms providing "general counsel services" alongside "specialized IP litigation." Consultants who do "strategic planning" and "tactical implementation" without clear distinctions.
+I've seen this pattern across hundreds of engagements. Marketing agencies offering everything from "brand strategy" to "social media management." Law firms providing "general counsel services" alongside "specialised IP litigation." Consultants who do "strategic planning" and "tactical implementation" without clear distinctions.
 
 The problem isn't that these businesses offer too many services. The problem is that they haven't architected their offers in a way that guides prospects through a logical buying journey.
 
@@ -25,7 +25,7 @@ When prospects can't understand how your services relate to each other, three th
 
 **Sales cycles stretch unnecessarily.** Without a clear starting point, every conversation becomes a full consultation where you're educating prospects about your entire service portfolio. What should be a 2-week decision becomes a 2-month process of explaining how everything fits together.
 
-**You compete on scope instead of value.** When prospects can't differentiate between your $5,000 strategy session and your $50,000 implementation program, they start comparing based on deliverables rather than outcomes. This commoditizes your expertise and puts pressure on pricing.
+**You compete on scope instead of value.** When prospects can't differentiate between your ₹50,000 strategy session and your ₹5,00,000 implementation programme, they start comparing based on deliverables rather than outcomes. This commoditises your expertise and puts pressure on pricing.
 
 The solution isn't to offer fewer services. It's to structure your existing services into what I call an "offer architecture"—a systematic progression that guides prospects from their current state to their desired outcome.
 
@@ -39,7 +39,7 @@ In practice, this typically looks like:
 
 **Foundation level**: Low-risk ways for prospects to experience your expertise (workshops, assessments, focused consultations)
 
-**Implementation level**: Core services that solve specific, immediate problems (strategy development, system setup, process optimization)
+**Implementation level**: Core services that solve specific, immediate problems (strategy development, system setup, process optimisation)
 
 **Transformation level**: Comprehensive programs that create significant business change (ongoing consulting, complete system overhauls, strategic partnerships)
 
@@ -62,12 +62,12 @@ Example: The same agency might offer a "90-Day Marketing Roadmap" that includes 
 ### Level 3: Implementation & Execution
 Core services that execute on the strategy developed in Level 2. These engagements typically run 3-6 months and involve hands-on work to implement systems or processes.
 
-Example: The agency might offer "Marketing System Implementation" that includes campaign setup, content creation, and initial optimization.
+Example: The agency might offer "Marketing System Implementation" that includes campaign setup, content creation, and initial optimisation.
 
-### Level 4: Optimization & Scale
-Advanced services for clients who've seen results from Level 3 work. These focus on scaling what's working and optimizing for better performance.
+### Level 4: Optimisation & Scale
+Advanced services for clients who've seen results from Level 3 work. These focus on scaling what's working and optimising for better performance.
 
-Example: "Performance Marketing Management" might include advanced automation, conversion optimization, and expansion into new channels.
+Example: "Performance Marketing Management" might include advanced automation, conversion optimisation, and expansion into new channels.
 
 ### Level 5: Strategic Partnership
 Ongoing relationships with clients who've experienced success through multiple levels. This might include retainer arrangements, strategic advising, or comprehensive growth partnerships.
@@ -93,15 +93,15 @@ One of my law firm clients came to me with this challenge: they offered "general
 We restructured their offerings into this architecture:
 
 **Level 1: Legal Risk Assessment** (Free 45-minute session)
-Identified potential legal issues and provided a prioritized list of areas needing attention.
+Identified potential legal issues and provided a prioritised list of areas needing attention.
 
-**Level 2: Compliance Audit & Action Plan** ($7,500, 2 weeks)
+**Level 2: Compliance Audit & Action Plan** (₹75,000, 2 weeks)
 Comprehensive review of current legal position with a detailed remediation plan.
 
-**Level 3: Legal Systems Implementation** ($25,000, 3 months)  
+**Level 3: Legal Systems Implementation** (₹2,50,000, 3 months)  
 Hands-on work to implement policies, procedures, and documentation based on the Level 2 plan.
 
-**Level 4: Ongoing Legal Guidance** ($8,500/month retainer)
+**Level 4: Ongoing Legal Guidance** (₹85,000/month retainer)
 Regular strategic counsel and support for companies who'd completed Level 3 work.
 
 **Level 5: Strategic Legal Partnership** (Custom arrangements)
@@ -131,15 +131,15 @@ The goal isn't to force every client through every level. Some will skip levels,
 
 **Making Level 1 too complex.** Your entry-level offer should be simple to understand, low-risk, and focused on a single outcome. If prospects need a 30-minute explanation, it's too complicated.
 
-**Pricing levels too close together.** Each level should represent a meaningful step up in investment and value. If your Level 1 is $5,000 and Level 2 is $7,500, the progression isn't clear enough.
+**Pricing levels too close together.** Each level should represent a meaningful step up in investment and value. If your Level 1 is ₹50,000 and Level 2 is ₹75,000, the progression isn't clear enough.
 
-**Forgetting the strategic element.** Offer architecture isn't just about organizing existing services—it's about designing a client journey that builds toward meaningful transformation.
+**Forgetting the strategic element.** Offer architecture isn't just about organising existing services—it's about designing a client journey that builds toward meaningful transformation.
 
 **Over-engineering the system.** Start simple with 3-4 levels and refine based on how prospects and clients actually move through your services.
 
 ## Takeaway
 
-Scattered services create confused prospects and commoditized positioning. Offer architecture creates clear paths that guide prospects from curiosity to commitment while demonstrating the full value of your expertise.
+Scattered services create confused prospects and commoditised positioning. Offer architecture creates clear paths that guide prospects from curiosity to commitment while demonstrating the full value of your expertise.
 
 The businesses that systematically structure their services see shorter sales cycles, higher close rates, and larger average client values. More importantly, they compete on the strength of their approach rather than the attractiveness of their pricing.
 

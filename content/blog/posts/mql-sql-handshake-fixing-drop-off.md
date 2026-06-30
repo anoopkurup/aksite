@@ -12,7 +12,7 @@ I was reviewing a SaaS company's pipeline data last month when I discovered a sh
 
 Their marketing team was celebrating record MQL numbers while their sales team complained about lead quality. Both sides blamed the other for poor performance, but the real problem was hiding in the handoff process between the two teams.
 
-This isn't unique to that company. I see the same pattern across dozens of B2B organizations: sophisticated lead generation systems that fall apart at the critical moment when marketing passes leads to sales.
+This isn't unique to that company. I see the same pattern across dozens of B2B organisations: sophisticated lead generation systems that fall apart at the critical moment when marketing passes leads to sales.
 
 ## The Black Hole Between Marketing and Sales
 
@@ -24,7 +24,7 @@ Here's what typically happens in the critical hours after a lead qualifies:
 **Hour 4-12:** Lead gets reviewed during next available time block, often without full context
 **Hour 12-24:** Initial outreach attempt occurs, frequently with generic messaging
 **Day 2-5:** Follow-up attempts happen sporadically, competing with other priorities
-**Day 6+:** Lead goes cold and gets deprioritized or abandoned entirely
+**Day 6+:** Lead goes cold and gets deprioritised or abandoned entirely
 
 The problem isn't individual performance—it's systematic process failure. When marketing and sales operate with different definitions, timelines, and handoff procedures, even the highest-quality leads get lost in translation.
 
@@ -32,7 +32,7 @@ The problem isn't individual performance—it's systematic process failure. When
 
 **Unclear SLAs enable delays.** Without specific response time commitments, sales treats MQLs like general prospects rather than time-sensitive opportunities requiring immediate action.
 
-**Poor handoff processes lose context.** Critical information about lead behavior, interests, and timing gets lost when marketing simply pushes a name into the CRM without proper context and next-step guidance.
+**Poor handoff processes lose context.** Critical information about lead behaviour, interests, and timing gets lost when marketing simply pushes a name into the CRM without proper context and next-step guidance.
 
 The solution requires systematic alignment of definitions, service level agreements, and handoff processes that treat the MQL-SQL transition as a critical business process, not an administrative task.
 
@@ -58,13 +58,13 @@ Sales teams evaluate leads based on readiness to engage and likelihood to close:
 - Specific timeline for making purchasing decisions
 - Previous conversations or relationship context
 
-This approach makes sense from a conversion perspective. Sales needs to prioritize efforts on prospects most likely to move quickly through the pipeline.
+This approach makes sense from a conversion perspective. Sales needs to prioritise efforts on prospects most likely to move quickly through the pipeline.
 
 ### The Integration Challenge
 
 The disconnect occurs because marketing's engagement-based qualification doesn't automatically translate to sales' readiness-based qualification. A lead can be highly engaged with content while still being months away from a purchasing decision.
 
-This creates a systematic problem: marketing optimizes for volume of qualified leads while sales optimizes for probability of near-term conversion. Without aligned definitions and processes, both teams pursue conflicting objectives.
+This creates a systematic problem: marketing optimises for volume of qualified leads while sales optimises for probability of near-term conversion. Without aligned definitions and processes, both teams pursue conflicting objectives.
 
 ## Building Aligned Lead Definitions
 
@@ -90,7 +90,7 @@ Create scoring systems that weight both engagement and readiness factors:
 
 **Base engagement score (40% weight):**
 - Content downloads: 10 points for solution-focused content
-- Website behavior: 15 points for pricing/demo page visits
+- Website behaviour: 15 points for pricing/demo page visits
 - Email engagement: 5 points for consistent opens and clicks
 
 **Readiness multipliers (60% weight):**
@@ -98,7 +98,7 @@ Create scoring systems that weight both engagement and readiness factors:
 - Decision-maker role: 1.5x multiplier
 - Direct inquiry or demo request: 3x multiplier
 
-This approach ensures marketing generates leads showing both interest and readiness rather than optimizing for engagement alone.
+This approach ensures marketing generates leads showing both interest and readiness rather than optimising for engagement alone.
 
 ### Contextual Qualification Categories
 
@@ -107,7 +107,7 @@ Develop lead categories that provide sales with actionable context:
 **Category A: Ready to Engage**
 - High engagement + high readiness indicators
 - Immediate follow-up required within 1 hour
-- Direct phone outreach with personalized messaging
+- Direct phone outreach with personalised messaging
 
 **Category B: Interested but Early**
 - High engagement + medium readiness indicators
@@ -119,7 +119,7 @@ Develop lead categories that provide sales with actionable context:
 - Follow-up within 24 hours with nurturing sequence
 - Content-focused approach building toward readiness
 
-This categorization helps sales prioritize efforts and approach leads appropriately rather than treating all MQLs identically.
+This categorisation helps sales prioritise efforts and approach leads appropriately rather than treating all MQLs identically.
 
 ## Designing Effective SLA Systems
 
@@ -146,7 +146,7 @@ Marketing must provide sales with actionable context for each lead:
 
 **Suggested approach:**
 - Recommended initial conversation topics based on engagement history
-- Potential objections or concerns indicated by behavior patterns
+- Potential objections or concerns indicated by behaviour patterns
 - Next-step recommendations aligned with lead category
 
 ### Quality Feedback Loops
@@ -160,10 +160,10 @@ Sales must provide marketing with qualification outcome data:
 
 **Disqualification reasoning:**
 - Specific factors leading to disqualification decisions
-- Categorization of disqualification types for optimization
+- Categorisation of disqualification types for optimisation
 - Feedback on lead scoring accuracy and context quality
 
-This feedback enables continuous optimization of qualification criteria and handoff processes.
+This feedback enables continuous optimisation of qualification criteria and handoff processes.
 
 ## Systematic Handoff Process Design
 
@@ -221,7 +221,7 @@ One of my clients, a marketing technology company, was struggling with exactly t
 
 **New qualification system:**
 - Hybrid scoring combining engagement (40%) and readiness (60%) factors
-- Three-tier categorization system with specific SLA requirements
+- Three-tier categorisation system with specific SLA requirements
 - Contextual handoff packages with recommended approach strategies
 
 **Improved SLA framework:**
@@ -241,10 +241,10 @@ The key insight: systematic alignment created compound improvements across the e
 
 **The system in practice:**
 - **Marketing**: Qualified leads using hybrid criteria and provided detailed context packages
-- **Sales**: Responded within defined SLAs using provided context for personalized outreach
-- **Management**: Monitored performance and optimized processes based on feedback loops
+- **Sales**: Responded within defined SLAs using provided context for personalised outreach
+- **Management**: Monitored performance and optimised processes based on feedback loops
 
-Total additional revenue generated in year one: $2.3M from improved lead conversion without any increase in marketing spend.
+Total additional revenue generated in year one: ₹19 crore from improved lead conversion without any increase in marketing spend.
 
 ## Your Implementation Roadmap
 
@@ -252,7 +252,7 @@ Ready to fix your MQL-SQL handoff and stop losing leads in the transition? Follo
 
 ### Phase 1: Audit Current Performance (Week 1-2)
 
-Analyze your existing handoff process:
+Analyse your existing handoff process:
 - Track lead response times by source and category
 - Measure conversion rates from MQL to opportunity by time interval
 - Survey both marketing and sales teams on current process satisfaction
@@ -264,7 +264,7 @@ Establish baseline metrics for improvement measurement.
 
 Collaborate between marketing and sales to develop:
 - Hybrid qualification criteria incorporating both engagement and readiness
-- Lead categorization system with specific handoff requirements
+- Lead categorisation system with specific handoff requirements
 - Scoring models that predict both interest and near-term conversion potential
 - Agreed-upon definitions for each qualification stage
 
@@ -275,7 +275,7 @@ Test new criteria on recent lead samples to validate effectiveness.
 Establish systematic service level agreements:
 - Response time commitments based on lead category
 - Context transfer requirements from marketing to sales
-- Feedback loop processes for continuous optimization
+- Feedback loop processes for continuous optimisation
 - Performance monitoring and exception reporting systems
 
 Begin with pilot program on subset of leads before full rollout.
@@ -286,7 +286,7 @@ Integrate systems to support new processes:
 - CRM automation for context transfer and task creation
 - Communication tools for real-time handoff notifications
 - Performance dashboards for monitoring SLA compliance
-- Feedback collection systems for process optimization
+- Feedback collection systems for process optimisation
 
 The key is implementing phases sequentially with feedback loops between each stage rather than attempting complete transformation simultaneously.
 
@@ -294,7 +294,7 @@ The key is implementing phases sequentially with feedback loops between each sta
 
 The MQL-SQL handoff represents the critical moment when marketing investment either converts to sales opportunity or disappears into process failure. Systematic alignment of definitions, SLAs, and handoff processes transforms this vulnerable transition point into a competitive advantage.
 
-Organizations that treat lead handoffs as strategic business processes rather than administrative tasks see dramatically higher conversion rates, improved team alignment, and better return on marketing investment.
+Organisations that treat lead handoffs as strategic business processes rather than administrative tasks see dramatically higher conversion rates, improved team alignment, and better return on marketing investment.
 
 Your marketing efforts are too valuable to lose in the gap between teams. Design systematic handoff processes that preserve context, maintain momentum, and convert marketing investment into sales opportunities.
 

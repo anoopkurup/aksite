@@ -1,23 +1,20 @@
 # About Page Content
-# Last updated: 2026-06-11
+# Last updated: 2026-06-30 (CLEAR v5 copy)
 
 meta:
   title: "About"
   description: "I'm a sales-systems consultant for founder-led services businesses. After a decade helping founders get strategic clarity, I now build the selling system and stay until it runs."
 
 hero:
-  headline: "I build the selling system and stay until it runs."
+  headline: "I'm a sales-systems consultant."
   body:
-    - "My name is Anoop Kurup. I'm a sales-systems consultant, based in Bangalore, and I work with founders directly."
-    - "After a decade helping founders get strategic clarity, I saw the same ending too often: perfect clarity, no pipeline. So now I don't stop at the roadmap — I build the selling system and stay until it runs."
+    - "After a decade helping founders get strategic clarity, I kept seeing the same ending: perfect clarity, and still no pipeline. The strategy was right, the positioning was sharp — and nothing was selling, because a roadmap doesn't make calls or close deals. So I stopped stopping at the roadmap. Now I build the selling system itself, and I stay until it runs."
+    - "My background is in business research, intellectual property, and marketing strategy — fifteen-plus years of it — which is where I learned to find the pattern inside a business that the founder is too close to see. I work with founders directly, one engagement at a time, from Bangalore. I don't run a team you'll never meet or hand you to an account manager: when you work with me, you work with me — including on your sales calls."
 
 pattern:
-  section_title: "The pattern I kept seeing."
+  section_title: "What I care about."
   paragraphs:
-    - "For more than fifteen years I've worked at the intersection of strategy, positioning, and how businesses actually win clients — business research at GE, building and exiting an intellectual property firm, and over a decade advising founders on why they weren't growing."
-    - "Most service-business founders are brilliant at what they do. Their clients love them. They get referrals. But new business still depends on who happens to mention them — and on the founder personally selling every deal."
-    - "I spent years helping founders get clarity — sharpen positioning, define the niche, fix the message. And it worked. But clarity without a selling system just means you understand the problem better while the pipeline stays the same."
-    - "So I stopped at the roadmap less and less. Now I package the offer, prove it against real prospects, and install the weekly motion — then stay until it runs."
+    - "Most founder-led services firms are far better at the work than they are at selling it, and that gap is fixable with a system rather than more hustle. Building that system, and being in the room while it starts to work, is the job."
 
 what_i_do:
   section_title: "How it works."
@@ -29,7 +26,7 @@ what_i_do:
       description: "A ₹25,000 done-for-you diagnosis of your last 12 months of deals: where your next clients will come from, and where they won't. One week, a written verdict."
       link: "/pipeline-reality-check"
     - label: "Then CLEAR."
-      description: "The engagement where I install the sales system — one packaged offer the market has responded to, a motion you've already run, written down and yours."
+      description: "The engagement where I install the sales system — one packaged offer the market has responded to, a motion you've already run with me on the calls beside you, written down and yours."
       link: "/clear"
 
 podcast:

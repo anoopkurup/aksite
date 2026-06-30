@@ -10,7 +10,7 @@ Professional website for Anoop Kurup. Built with Next.js 15, Tailwind CSS, YAML-
 ```
 Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
   → Pipeline Reality Check (₹25K, 1 week, done-for-you diagnosis)
-  → CLEAR engagement (₹75K–₹1.75L, quoted after diagnosis)
+  → CLEAR engagement (₹2.5L over 3 months: ₹50K + ₹1L×2; ₹75K Lite tier; quoted after diagnosis)
 ```
 
 ## Current Site Structure (Repositioned June 2026)
@@ -21,7 +21,7 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 | `/` | Homepage — hero, "Sound familiar?", Package/Prove/Systemise, proof, Scorecard CTA | `content/pages/home.yaml` |
 | `/scorecard` | **Sales Scorecard** — interactive 10-question self-assessment (the centrepiece) | `src/app/scorecard/ScorecardTool.tsx` |
 | `/pipeline-reality-check` | ₹25,000 done-for-you diagnosis offer page | `content/pages/pipeline-reality-check.yaml` |
-| `/clear` | The CLEAR engagement (₹75K–₹1.75L) | `content/pages/clear.yaml` |
+| `/clear` | The CLEAR engagement (₹2.5L; ₹75K Lite) | `content/pages/clear.yaml` |
 | `/about` | Bio + funnel + podcast | `content/pages/about.yaml` |
 | `/blog` | Markdown blog system | `content/blog/posts/*.md` |
 | `/contact` | Contact page with qualification | `content/pages/contact.yaml` |
@@ -146,7 +146,7 @@ npm run publish -- "/path/to/note.md" --push      # also git commit + push (auto
 - Exactly ONE primary CTA type sitewide: the Sales Scorecard. Every page ends with it. No competing CTAs (no newsletter pop-ups, no "book a call" as primary).
 - The Scorecard score is shown immediately, un-gated; email is asked only after the score, for the written breakdown.
 - Cases are labelled "From past consulting engagements" — original numbers only, never attributed to CLEAR.
-- Funnel: Scorecard (free) → Pipeline Reality Check (₹25K, fee credited to CLEAR) → CLEAR (₹75K–₹1.75L).
+- Funnel: Scorecard (free) → Pipeline Reality Check (₹25K, fee credited to CLEAR) → CLEAR (₹2.5L over 3 months, month-to-month; ₹75K Lite tier).
 
 ## Brand Voice
 - First person singular: "I fix," "I build," "I'm in the room." Never "we" (solo practice).

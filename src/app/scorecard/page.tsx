@@ -19,8 +19,9 @@ export default function ScorecardPage() {
             The Sales Scorecard
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-            How predictable is your pipeline? Ten questions, three minutes, no email required to see
-            your score.
+            How predictable is your pipeline, really? Most founders sense the answer but have never
+            measured it. Ten questions, three minutes, no email required to see your score — you'll
+            get an honest number and a plain read on what's holding your pipeline back.
           </p>
         </div>
       </section>

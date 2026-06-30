@@ -18,6 +18,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // RSS: the feed lives at /feed.xml; /rss.xml is the conventional alias.
+      {
+        source: '/rss.xml',
+        destination: '/feed.xml',
+        permanent: true,
+      },
+
       // ===========================================
       // REPOSITIONING REDIRECTS (Jun 2026)
       // "I fix sales for services businesses"
