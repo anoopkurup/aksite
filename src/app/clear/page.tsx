@@ -39,7 +39,7 @@ export default function ClearPage() {
           </h2>
           <div className="space-y-12">
             {content.stages.items.map((stage, i) => (
-              <div key={i} className="border-l-4 border-cta-500 pl-8">
+              <div key={i} className="border-l-4 border-navy-900 pl-8">
                 <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-2">
                   {stage.number} · {stage.name}
                 </p>

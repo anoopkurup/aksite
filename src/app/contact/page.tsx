@@ -88,7 +88,7 @@ export default function ContactPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 border-l-4 border-cta-500">
+            <div className="bg-white p-8 border-l-4 border-navy-900">
               <h3 className="font-serif text-title text-navy-900 mb-4">{content.fit.for_title}</h3>
               <ul className="space-y-3">
                 {content.fit.for_items.map((item, i) => (

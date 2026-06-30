@@ -52,7 +52,7 @@ export default function AboutPage() {
           <h2 className="font-serif text-display text-navy-900 mb-12">{content.what_i_do.section_title}</h2>
           <div className="space-y-8">
             {content.what_i_do.items.map((item, i) => (
-              <div key={i} className="border-l-4 border-cta-500 pl-6">
+              <div key={i} className="border-l-4 border-navy-900 pl-6">
                 <p className="font-serif text-title text-navy-900 mb-2">{item.label}</p>
                 <p className="font-sans text-body text-slate-500 leading-relaxed mb-2">{item.description}</p>
                 <Link href={item.link} className="inline-flex items-center font-sans text-sm text-cta-600 hover:text-cta-700">

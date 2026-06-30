@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllBlogPosts } from '@/lib/blog';
+import { getAllCaseStudySlugs } from '@/lib/caseStudies';
 import { getLivePages, getPageBySlug } from '@/lib/contentMap';
 
 const BASE_URL = 'https://www.anoopkurup.com';
@@ -11,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: '/pipeline-reality-check', priority: 0.9 },
     { route: '/clear', priority: 0.9 },
     { route: '/about', priority: 0.7 },
+    { route: '/case-studies', priority: 0.7 },
     { route: '/blog', priority: 0.7 },
     { route: '/contact', priority: 0.5 },
     { route: '/podcast', priority: 0.5 },
@@ -42,5 +44,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }));
 
-  return [...staticPages, ...seoPages, ...blogPosts];
+  const caseStudies: MetadataRoute.Sitemap = getAllCaseStudySlugs().map((slug) => ({
+    url: `${BASE_URL}/case-studies/${slug}`,
+    changeFrequency: 'yearly' as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...seoPages, ...blogPosts, ...caseStudies];
 }

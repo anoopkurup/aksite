@@ -61,7 +61,7 @@ export default function BlogPage() {
               <Link
                 key={index}
                 href={`/blog/${post.slug}`}
-                className="group bg-white border border-slate-100 overflow-hidden hover:border-cta-500 transition-all"
+                className="group bg-white border border-slate-100 overflow-hidden hover:border-navy-300 transition-all"
               >
                 {/* Image */}
                 <div className="w-full aspect-video bg-slate-100 overflow-hidden">

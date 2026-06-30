@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, IBM_Plex_Mono } from "next/font/google";
+import { Inter, Newsreader, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -17,8 +17,8 @@ const inter = Inter({
   display: 'swap',
 });
 
-// Display: Fraunces — confident-editorial serif (optical sizing), replaces Cormorant's couture feel
-const fraunces = Fraunces({
+// Display: Newsreader — clean editorial serif with conventional letterforms (no Fraunces flare)
+const newsreader = Newsreader({
   subsets: ["latin"],
   weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
@@ -65,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${fraunces.variable} ${plexMono.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${newsreader.variable} ${plexMono.variable} font-sans antialiased`}>
         {/* Site-wide structured data: who Anoop is, the practice, the site. */}
         <JsonLd schema={[personSchema(), organizationSchema(), websiteSchema()]} />
         <Script

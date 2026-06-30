@@ -43,19 +43,19 @@ const config: Config = {
   				DEFAULT: "hsl(var(--card))",
   				foreground: "hsl(var(--card-foreground))"
   			},
-  			// Ink-navy ramp — authoritative, near-black. (Was an electric #000080 blue.)
+  			// True-navy ramp — clearly blue, authoritative without going near-black.
   			navy: {
-  			'50': '#f5f7fa',
-  			'100': '#e6ebf1',
-  			'200': '#c5cfdd',
-  			'300': '#9caac0',
-  			'400': '#6d7f9b',
-  			'500': '#4b5d79',
-  			'600': '#354863',
-  			'700': '#243450',
-  			'800': '#16233b',
-  			'900': '#0e1a2b',
-  			'950': '#070f1b'
+  			'50': '#eff3fb',
+  			'100': '#dae4f4',
+  			'200': '#c0cfe6',
+  			'300': '#93abce',
+  			'400': '#5f7ba0',
+  			'500': '#3e5e8c',
+  			'600': '#324c77',
+  			'700': '#2a4a7e',
+  			'800': '#22406f',
+  			'900': '#1f3d73',
+  			'950': '#152a50'
   			},
   			white: '#FFFFFF', // pure white for backgrounds
 
@@ -83,13 +83,13 @@ const config: Config = {
   			],
   			serif: [
   				'var(--font-serif)',
-  				'Cormorant Garamond',
+  				'Newsreader',
   				'Georgia',
   				'serif'
   			],
   			display: [
   				'var(--font-serif)',
-  				'Cormorant Garamond',
+  				'Newsreader',
   				'Georgia',
   				'serif'
   			],

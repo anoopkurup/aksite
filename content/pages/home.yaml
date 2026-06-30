@@ -50,10 +50,6 @@ proof:
       before: "Priced per session, competing on day-rate."
       what_we_did: "Rebuilt the offer around the transformation, not the hours."
       result: "3× the previous per-engagement rate."
-    - type: "School group"
-      before: "Enquiries arriving but not converting."
-      what_we_did: "Fixed the conversion path from first contact to decision."
-      result: "Admissions conversion lifted from 70% to 94%."
 
 qualification:
   section_title: "Who this is for — and who it isn't"

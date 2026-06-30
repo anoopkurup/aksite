@@ -24,15 +24,16 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 | `/clear` | The CLEAR engagement (₹2.5L; ₹75K Lite) | `content/pages/clear.yaml` |
 | `/about` | Bio + funnel + podcast | `content/pages/about.yaml` |
 | `/blog` | Markdown blog system | `content/blog/posts/*.md` |
+| `/case-studies` | Case study index + detail pages | `content/case-studies/*.md` |
 | `/contact` | Contact page with qualification | `content/pages/contact.yaml` |
 | `/podcast` | Podcast page | `content/podcast.md` |
 | `/thank-you` | Thank you page | `content/thank-you.md` |
 | `/legal/*` | Privacy policy, terms | `content/legal/*.md` |
 
 ### Navigation
-**Desktop**: Anoop Kurup | How I Fix Sales (`/clear`) | Pipeline Reality Check | Blog | About | **[Take the Sales Scorecard]**
+**Desktop**: Anoop Kurup | How I Fix Sales (`/clear`) | Pipeline Reality Check | Case Studies | Blog | About | **[Take the Sales Scorecard]**
 
-(No Services dropdown. Contact lives in the footer, not the top nav.)
+(No Services dropdown. Contact lives in the footer, not the top nav. Case Studies is in the top nav and the footer, and is linked from the homepage proof section.)
 
 ### Removed Pages (June 2026 repositioning)
 - `/diagnose` — replaced by the free Scorecard (301 → `/scorecard`)
@@ -40,13 +41,13 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 - `/postie` — Postie retired (301 → `/scorecard`)
 - `/framework`, `/partner` — 301 → `/clear`, `/contact`
 - `/videos` never existed — old `/resources/*` redirects now point to `/blog`
-- Earlier legacy removals: `/consulting`, `/ai-solutions/*`, `/case-studies/*`, `/resources/*`, `/design-system`, `/_archived/*`, `/(sample)/*`
+- Earlier legacy removals: `/consulting`, `/ai-solutions/*`, `/resources/*`, `/design-system`, `/_archived/*`, `/(sample)/*` (note: `/case-studies` was relaunched July 2026 — see Pages table)
 
 ## Tech Stack
 - **Framework**: Next.js 15 with App Router
 - **Styling**: Tailwind CSS (custom design tokens)
 - **Content**: YAML files for page content; markdown (remark/rehype) for blog posts and simple pages
-- **Typography**: Cormorant Garamond (serif) + Inter (sans-serif)
+- **Typography**: Newsreader (serif headings) + Inter (sans body) + IBM Plex Mono (data/labels)
 - **Icons**: Lucide React
 - **Deployment**: Vercel (auto-deploy from GitHub master)
 
@@ -129,7 +130,7 @@ npm run images -- --selftest    # test the count + wiring logic, no API calls
 ```
 
 - Requires `OPENAI_API_KEY=sk-...` in `.env.local`.
-- **Prompts live in `scripts/image-manifest.mjs`** — author them there. `BRAND_PREAMBLE` locks the style once (pure-white bg, ink-navy `#0E1A2B` / grey `#475569` line-art, one orange `#F97316` accent, flat 2D Swiss/Apple minimalism); each job only describes its subject. Two arrays: `pages` (explicit diagrams) and `posts` (per-post `hero` + ordered `inlines`).
+- **Prompts live in `scripts/image-manifest.mjs`** — author them there. `BRAND_PREAMBLE` locks the style once (pure-white bg, navy `#1F3D73` / grey `#475569` line-art, one orange `#F97316` accent, flat 2D Swiss/Apple minimalism); each job only describes its subject. Two arrays: `pages` (explicit diagrams) and `posts` (per-post `hero` + ordered `inlines`).
 - **Image count per blog post scales with word count** (`imageCountForWords` in `scripts/generate-images.mjs`): <800w → 1 (hero only), 800–1299 → 2, 1300–1899 → 3, 1900–2599 → 4, ≥2600 → 5. The generator uses the hero + the first N inline prompts the count calls for, so author inline prompts in priority order.
 - **Wiring is automatic and idempotent**: hero → `hero_image` frontmatter; inline images → `inline-1.webp`, `inline-2.webp`, … saved to `public/images/blog/<slug>/` and inserted spread across the post's H2 sections. Page diagrams go to `public/images/pages/<id>.webp` and are referenced directly in each page's `.tsx`.
 - Re-running is safe — it skips images that already exist and never double-inserts markdown. Add a new post (or new prompts) then just `npm run images` to fill the gaps.
@@ -140,13 +141,13 @@ npm run images -- --selftest    # test the count + wiring logic, no API calls
 The site reads like a diagnostic instrument: honest, measured, mechanical. The product IS a reading (Scorecard → diagnosis → fix), so data is set in mono like a gauge readout, and a recurring meter is the signature. Four colours only: navy / grey / orange / white.
 
 ### Colors
-- `navy-900` = `#0E1A2B` — ink-navy. Headlines and dark sections. (This is the authoritative near-black; the whole `navy` ramp in `tailwind.config.ts` is ink-toned. Do **not** revert it to the old electric `#000080` blue.)
+- `navy-900` = `#1F3D73` — true navy. Headlines and dark sections. (Clearly blue and authoritative, not near-black. The whole `navy` ramp in `tailwind.config.ts` is tuned to this hue. Do **not** revert it to the old electric `#000080`, nor to the near-black `#0E1A2B` ink it briefly was.)
 - `slate-500/600`: Body text
 - `cta-500` (`#F97316`) / `cta-600` (`#EA580C`): the "Signal" orange — the gauge needle. Reserved for the one CTA + the meter fill + accents only.
 - Pure white backgrounds, no gradients
 
 ### Typography — three roles
-- **Display** (`font-serif` → **Fraunces**, variable, optical sizing): headlines. Confident-editorial, not couture. (Replaced Cormorant Garamond — don't reintroduce it.)
+- **Display** (`font-serif` → **Newsreader**): headlines. Clean editorial serif with conventional letterforms. (Replaced Fraunces, whose flared `F` read as a quirk; and Cormorant Garamond before it — don't reintroduce either.)
 - **Body** (`font-sans` → Inter): paragraphs.
 - **Data/utility** (`font-mono` → **IBM Plex Mono**): every number, price, score, section eyebrow, meter label, and metadata. This is the instrument-readout tell — when in doubt, data and labels go mono.
 - Scale: Hero 4.5rem, Display 3rem, Title 1.875rem, Body 1.125rem.
@@ -167,6 +168,7 @@ A mono label + value + segmented meter (orange fill = the needle). Used for the 
 - **All content lives under top-level `content/`** — never inside `src/`
 - Page copy: YAML files in `content/pages/` (home, about, clear, pipeline-reality-check, contact)
 - Blog posts: markdown in `content/blog/posts/` (published via `npm run publish`)
+- Case studies: markdown in `content/case-studies/*.md` (loaded by `src/lib/caseStudies.ts`, which lifts the H1/H3/disclaimer out of the body); index at `/case-studies`, detail at `/case-studies/[slug]`. Source drafts live in the git-ignored `Case Studies/` folder.
 - Simple markdown pages: `content/podcast.md`, `content/thank-you.md`, `content/legal/*.md` (loaded by `getContentPage()`)
 - TypeScript interfaces for all YAML structures in `src/lib/content.ts`, each with a typed loader
 - Each YAML page has a bespoke `page.tsx` renderer (not a generic section renderer)

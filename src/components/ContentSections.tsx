@@ -318,7 +318,7 @@ function ContentBlock({ section, bgClass }: { section: ContentSection; bgClass: 
                     j++;
                   }
                   if (quoteLines.length > 0) {
-                    processedElements.push(`<blockquote class="border-l-4 border-cta-500 bg-gray-50 pl-6 pr-6 py-4 my-6 italic text-gray-700 text-lg leading-relaxed">${quoteLines.join('<br/><br/>')}</blockquote>`);
+                    processedElements.push(`<blockquote class="border-l-4 border-navy-900 bg-gray-50 pl-6 pr-6 py-4 my-6 italic text-gray-700 text-lg leading-relaxed">${quoteLines.join('<br/><br/>')}</blockquote>`);
                   }
                   i = j - 1; // Skip the processed blockquote lines
                 } else if (line.startsWith('- ')) {

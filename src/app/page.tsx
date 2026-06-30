@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { getHomePageContent } from "@/lib/content";
 import Reading from "@/components/Reading";
 import CTAButton from "@/components/CTAButton";
@@ -59,7 +61,7 @@ export default function HomePage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {content.sound_familiar.items.map((item, index) => (
-              <div key={index} className="bg-white p-8 border-l-4 border-cta-500">
+              <div key={index} className="bg-white p-8 border-l-4 border-navy-900">
                 <h3 className="font-serif text-title text-navy-900 mb-3">“{item.symptom}”</h3>
                 <p className="font-sans text-body text-slate-500 leading-relaxed">{item.reframe}</p>
               </div>
@@ -76,7 +78,7 @@ export default function HomePage() {
           </h2>
           <div className="space-y-8">
             {content.how_i_fix_it.stages.map((stage, index) => (
-              <div key={index} className="border-l-4 border-cta-500 pl-6 py-2">
+              <div key={index} className="border-l-4 border-navy-900 pl-6 py-2">
                 <p className="font-serif text-title text-navy-900 mb-2">
                   {stage.number} · {stage.name}
                 </p>
@@ -100,34 +102,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Proof */}
+      {/* Proof — each case as a reading: the result leads */}
       <section className="py-section bg-slate-50">
-        <div className="max-w-5xl mx-auto px-8">
+        <div className="max-w-4xl mx-auto px-8">
           <h2 className="font-serif text-display text-navy-900 text-center mb-16">
             {content.proof.section_title}
           </h2>
-          <div className="space-y-12">
+          <div className="grid md:grid-cols-2 gap-px bg-slate-200 border border-slate-200">
             {content.proof.items.map((item, index) => (
-              <div key={index} className="bg-white p-8 md:p-12 border border-slate-100">
-                <p className="font-mono text-xs text-cta-600 uppercase tracking-[0.18em] mb-6">
+              <div key={index} className="bg-white p-8 md:p-10 flex flex-col">
+                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.16em] mb-6">
                   {item.type}
                 </p>
-                <div className="grid md:grid-cols-3 gap-6">
+                <p className="font-mono text-title text-cta-600 leading-snug mb-6">
+                  {item.result}
+                </p>
+                <div className="mt-auto space-y-3 pt-6 border-t border-slate-100">
                   <div>
-                    <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-2">Before</p>
-                    <p className="font-sans text-body text-slate-600">{item.before}</p>
+                    <span className="font-mono text-[0.65rem] text-slate-400 uppercase tracking-[0.16em]">Before</span>
+                    <p className="font-sans text-sm text-slate-600 leading-relaxed">{item.before}</p>
                   </div>
                   <div>
-                    <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-2">What I did</p>
-                    <p className="font-sans text-body text-slate-600">{item.what_we_did}</p>
-                  </div>
-                  <div>
-                    <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-2">Result</p>
-                    <p className="font-mono text-body text-cta-600">{item.result}</p>
+                    <span className="font-mono text-[0.65rem] text-slate-400 uppercase tracking-[0.16em]">What I did</span>
+                    <p className="font-sans text-sm text-slate-600 leading-relaxed">{item.what_we_did}</p>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors"
+            >
+              See all case studies
+              <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
+            </Link>
           </div>
         </div>
       </section>
@@ -139,7 +149,7 @@ export default function HomePage() {
             {content.qualification.section_title}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 border-l-4 border-cta-500">
+            <div className="bg-white p-8 border-l-4 border-navy-900">
               <h3 className="font-serif text-title text-navy-900 mb-6">
                 {content.qualification.for_you.heading}
               </h3>

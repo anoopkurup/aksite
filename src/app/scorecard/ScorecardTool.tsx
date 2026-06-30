@@ -297,7 +297,7 @@ export default function ScorecardTool() {
         </div>
 
         {/* Verdict */}
-        <div className="border-l-4 border-cta-500 pl-6">
+        <div className="border-l-4 border-navy-900 pl-6">
           <h2 className="font-serif text-title text-navy-900 mb-4">{band.name}</h2>
           <p className="font-sans text-body text-slate-500 leading-relaxed">{band.verdict}</p>
         </div>

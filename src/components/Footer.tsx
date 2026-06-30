@@ -16,6 +16,12 @@ export default function Footer() {
           {/* Links Column */}
           <div className="flex items-center gap-8">
             <Link
+              href="/case-studies"
+              className="font-sans text-sm text-slate-600 hover:text-navy-900 transition-colors"
+            >
+              Case Studies
+            </Link>
+            <Link
               href="/contact"
               className="font-sans text-sm text-slate-600 hover:text-navy-900 transition-colors"
             >

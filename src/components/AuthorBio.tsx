@@ -13,7 +13,7 @@ export default function AuthorBio({ note }: AuthorBioProps) {
   return (
     <section className="py-12 bg-white">
       <div className="max-w-3xl mx-auto px-8">
-        <div className="flex items-start gap-6 p-8 bg-slate-50 border-l-4 border-cta-500">
+        <div className="flex items-start gap-6 p-8 bg-slate-50 border-l-4 border-navy-900">
           <div className="flex-1">
             <p className="font-sans text-sm text-slate-500 uppercase tracking-wide mb-2">
               About the Author
