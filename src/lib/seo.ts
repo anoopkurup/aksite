@@ -131,13 +131,10 @@ export function blogPostingSchema(input: BlogPostingInput): Json {
     ...(input.datePublished ? { datePublished: input.datePublished } : {}),
     dateModified: input.dateModified || input.datePublished,
     author: { '@type': 'Person', name: SITE.author, url: SITE.baseUrl },
-    // Organization publisher with a logo — what Google's Article rich results expect.
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.baseUrl,
-      logo: { '@type': 'ImageObject', url: absoluteUrl('/images/logo.svg') },
-    },
+    // Solo practice in Anoop's own name: he is both author and publisher. Valid
+    // per schema.org; Google dropped the Organization+logo requirement for Article.
+    // The site's brand entity lives in the sitewide ProfessionalService (layout.tsx).
+    publisher: { '@type': 'Person', name: SITE.author, url: SITE.baseUrl },
   };
 }
 
