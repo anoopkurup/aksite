@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { getHomePageContent } from "@/lib/content";
+import Reading from "@/components/Reading";
+import CTAButton from "@/components/CTAButton";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
@@ -9,6 +9,7 @@ export function generateMetadata(): Metadata {
     // Absolute: the homepage title is the full brand line; skip the "%s | Anoop Kurup" template
     title: { absolute: content.meta.title },
     description: content.meta.description,
+    alternates: { canonical: "/" },
   };
 }
 
@@ -17,27 +18,36 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero */}
+      {/* Hero — left-set readout: the gauge IS the thesis */}
       <section className="min-h-[85vh] flex items-center bg-white">
-        <div className="max-w-4xl mx-auto px-8 py-24 text-center">
+        <div className="max-w-3xl mx-auto px-8 py-24 w-full">
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-cta-600 mb-6">
+            Sales system · Diagnostic
+          </p>
           <h1 className="font-serif text-hero-mobile md:text-hero text-navy-900 mb-8 leading-tight">
             {content.hero.headline}
           </h1>
-          <div className="font-sans text-body-lg text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed space-y-4">
+          <div className="font-sans text-body-lg text-slate-500 max-w-2xl mb-10 leading-relaxed space-y-4">
             {content.hero.body.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-          <Link
-            href={content.hero.cta_link}
-            className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors duration-300"
-          >
-            {content.hero.cta_text}
-            <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
-          </Link>
-          {content.hero.cta_note && (
-            <p className="font-sans text-sm text-slate-400 mt-4">{content.hero.cta_note}</p>
-          )}
+          <div className="flex flex-wrap items-center gap-4">
+            <CTAButton href={content.hero.cta_link}>{content.hero.cta_text}</CTAButton>
+            {content.hero.cta_note && (
+              <p className="font-mono text-sm text-slate-400">{content.hero.cta_note}</p>
+            )}
+          </div>
+
+          {/* The Reading, live in the hero */}
+          <div className="mt-16 pt-10 border-t border-slate-100 max-w-md">
+            <Reading
+              label="Sales health"
+              value="most founders: 4/10"
+              fill={0.4}
+              note="Take the 3-minute Scorecard to see your own number."
+            />
+          </div>
         </div>
       </section>
 
@@ -79,6 +89,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Funnel diagram */}
+      <section className="pb-section bg-white">
+        <div className="max-w-3xl mx-auto px-8">
+          <img
+            src="/images/pages/home-funnel.webp"
+            alt="The funnel: free Sales Scorecard to Pipeline Reality Check to the CLEAR engagement"
+            className="w-full h-auto"
+          />
+        </div>
+      </section>
+
       {/* Proof */}
       <section className="py-section bg-slate-50">
         <div className="max-w-5xl mx-auto px-8">
@@ -88,21 +109,21 @@ export default function HomePage() {
           <div className="space-y-12">
             {content.proof.items.map((item, index) => (
               <div key={index} className="bg-white p-8 md:p-12 border border-slate-100">
-                <p className="font-sans text-sm text-cta-600 uppercase tracking-wide mb-6 font-medium">
+                <p className="font-mono text-xs text-cta-600 uppercase tracking-[0.18em] mb-6">
                   {item.type}
                 </p>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div>
-                    <p className="font-sans text-sm text-navy-600 uppercase tracking-wide mb-2">Before</p>
+                    <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-2">Before</p>
                     <p className="font-sans text-body text-slate-600">{item.before}</p>
                   </div>
                   <div>
-                    <p className="font-sans text-sm text-navy-600 uppercase tracking-wide mb-2">What we did</p>
+                    <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-2">What I did</p>
                     <p className="font-sans text-body text-slate-600">{item.what_we_did}</p>
                   </div>
                   <div>
-                    <p className="font-sans text-sm text-navy-600 uppercase tracking-wide mb-2">Result</p>
-                    <p className="font-sans text-sm text-cta-600 font-medium">{item.result}</p>
+                    <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-2">Result</p>
+                    <p className="font-mono text-body text-cta-600">{item.result}</p>
                   </div>
                 </div>
               </div>
@@ -153,13 +174,7 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-serif text-display text-white mb-6">{content.final_cta.title}</h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">{content.final_cta.body}</p>
-          <Link
-            href={content.final_cta.cta_link}
-            className="inline-flex items-center font-sans text-body text-white border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors duration-300"
-          >
-            {content.final_cta.cta_text}
-            <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
-          </Link>
+          <CTAButton href={content.final_cta.cta_link}>{content.final_cta.cta_text}</CTAButton>
         </div>
       </section>
     </>

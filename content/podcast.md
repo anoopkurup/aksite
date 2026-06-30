@@ -65,7 +65,7 @@ episodes:
     listen_url: "#"
   
   - number: "003"
-    title: "Brand Proof: Testimonials that Move the Needle"
+    title: "Brand Proof: Testimonials that Win Work"
     description: "Not all testimonials are equal—what to collect, how to structure, and where to place them."
     date: "2025-06-05"
     duration: "24 min"
@@ -76,7 +76,7 @@ episodes:
   
   - number: "002"
     title: "AI for Lead Research: Speed + Signal"
-    description: "Use AI to find, prioritize, and personalize—with a research workflow you can run daily."
+    description: "Use AI to find, prioritise, and personalise—with a research workflow you can run daily."
     date: "2025-05-26"
     duration: "22 min"
     tags: ["ai", "operations"]

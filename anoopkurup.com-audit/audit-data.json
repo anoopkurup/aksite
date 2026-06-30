@@ -1,0 +1,119 @@
+{
+  "summary": {
+    "health_score": 68,
+    "business_type": "Solo B2B service consultant (sales-systems advisory); content/marketing site with blog funnel",
+    "top_findings": [
+      "Zero JSON-LD structured data on the live site (code exists on an undeployed branch)",
+      "No rel=canonical tags on any live page",
+      "Two published blog posts link to /ai-solutions/ which returns a hard 404",
+      "Legal pages ship empty <title> and meta description",
+      "Blog is disconnected from the funnel: 0 of 8 posts link to Scorecard/PRC/CLEAR"
+    ],
+    "quick_wins": [
+      "Fix the /ai-solutions/ 404 CTAs in 2 posts -> point to /scorecard",
+      "Add title/description frontmatter to content/legal/*.md",
+      "Deploy the design-system-sync branch (ships schema + canonicals)",
+      "Add /llms.txt",
+      "Add a Scorecard CTA to every blog post close"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 82,
+      "what_works": ["HTTPS + HSTS", "apex->www canonicalization", "clean robots.txt + sitemap", "real 404s", "static edge prerender, ~100ms TTFB", "noindex drip gate on drafts"],
+      "findings": [
+        {"title": "No rel=canonical on any live page", "severity": "High", "description": "grep canonical = 0 on /, /clear, blog posts.", "recommendation": "Set alternates.canonical in every route; the local branch already does this via buildPageMetadata() but it is undeployed."},
+        {"title": "Thin security-header set", "severity": "Medium", "description": "Only HSTS present; missing X-Content-Type-Options, Referrer-Policy, frame-ancestors/CSP, Permissions-Policy.", "recommendation": "Add via next.config headers() or vercel.json."},
+        {"title": "Sitemap missing lastmod", "severity": "Low", "description": "Only changefreq/priority set.", "recommendation": "Emit lastmod from post date/dateModified."}
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 55,
+      "what_works": ["Strong first-person E-E-A-T on key pages", "honest price/caveat trust signals", "no truly thin posts (971-2998 words)", "named ownable frameworks"],
+      "findings": [
+        {"title": "Broken CTA: 2 posts link to /ai-solutions/ (404)", "severity": "Critical", "description": "aida-to-ai-messaging and linkedin-content posts; /ai-solutions returns 404 live.", "recommendation": "Replace with /scorecard."},
+        {"title": "Blog disconnected from funnel", "severity": "High", "description": "0 of 8 published posts link to Scorecard/PRC/CLEAR; 4 link only to /contact.", "recommendation": "Add a Scorecard CTA to every post close."},
+        {"title": "Persona / stat mismatch weakens E-E-A-T", "severity": "Medium", "description": "Posts cite 20+ years/200+ implementations and SaaS/cybersecurity examples vs the solo, 15+ year, B2B-services About page; key stats unsourced.", "recommendation": "Align case studies to the real client base or add per-post author box; source or replace stats."},
+        {"title": "One thin post with no CTA", "severity": "Low", "description": "social-media-followers-to-clients ~971 words, no internal links.", "recommendation": "Expand with follow-on data; add Scorecard CTA."}
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 78,
+      "what_works": ["one H1 per page", "unique branded titles <=49 chars", "compelling meta descriptions", "full OG/Twitter set", "Scorecard linked x3 from homepage", "clean keyword-bearing slugs"],
+      "findings": [
+        {"title": "Legal pages ship empty <title> and meta description", "severity": "High", "description": "Live <title> length = 0 on /legal/privacy-policy and /legal/terms-conditions; source .md files lack frontmatter.", "recommendation": "Add title/description frontmatter to content/legal/*.md or a route-level fallback."},
+        {"title": "Generic short titles on /about and /blog", "severity": "Low", "description": "'About | Anoop Kurup' (19 chars) leaves SERP real estate unused.", "recommendation": "Add keyword modifiers."}
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 25,
+      "what_works": ["Complete schema layer written in src/lib/seo.ts (Person, ProfessionalService, WebSite, BlogPosting, Breadcrumb, FAQ, Service) with a correct server-rendered JsonLd component"],
+      "findings": [
+        {"title": "Zero structured data on production", "severity": "Critical", "description": "grep ld+json = 0 on homepage and blog posts; the schema code lives only on the undeployed design-system-sync branch.", "recommendation": "Deploy the branch."},
+        {"title": "BlogPosting publisher is a Person", "severity": "Medium", "description": "Google prefers an Organization publisher with a logo for Article rich results.", "recommendation": "Use organizationSchema as publisher and add a logo ImageObject."},
+        {"title": "No BreadcrumbList / FAQPage wired", "severity": "Medium", "description": "Builders exist but are not emitted on blog posts / offer pages.", "recommendation": "Wire breadcrumbSchema on blog [slug]; faqPageSchema on /clear and /pipeline-reality-check."}
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "score": 92,
+      "what_works": ["static edge prerender (x-vercel-cache HIT)", "~100ms TTFB", "35-52KB HTML", "self-hosted woff2 with display:swap", "WebP blog heroes", "deferred analytics"],
+      "findings": [
+        {"title": "No CrUX field confirmation", "severity": "Low", "description": "Lab-only signals; traffic may be below CrUX threshold.", "recommendation": "Confirm field LCP/INP/CLS via GSC/CrUX when available."},
+        {"title": "Verify LCP image priority", "severity": "Low", "description": "Ensure hero uses next/image priority for preload.", "recommendation": "Audit hero image components."}
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 60,
+      "what_works": ["robots.txt open to all AI crawlers", "long-form first-person expertise", "named frameworks ideal for citation"],
+      "findings": [
+        {"title": "Missing llms.txt", "severity": "Medium", "description": "/llms.txt returns 404.", "recommendation": "Add a static llms.txt listing funnel pages + top posts."},
+        {"title": "No entity grounding (schema undeployed)", "severity": "Medium", "description": "Without Person/Org JSON-LD, AI engines can't resolve the author entity.", "recommendation": "Deploy schema."},
+        {"title": "Few self-contained answer passages in posts", "severity": "Low", "description": "Add TL;DR/definition blocks near the top of pillar posts.", "recommendation": "Insert quotable 2-3 sentence summaries."}
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 85,
+      "what_works": ["alt text present (0 missing)", "WebP blog heroes", "dynamic 1200x630 OG images per route", "light image weight"],
+      "findings": [
+        {"title": "Verify next/image priority + dimensions", "severity": "Low", "description": "Confirm responsive srcset and explicit sizing to prevent CLS.", "recommendation": "Audit blog body images."}
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {"name": "Phase 1: Critical Fixes", "timeframe": "Week 1", "items": [
+        "Deploy the design-system-sync branch -> ships JSON-LD schema + rel=canonical sitewide",
+        "Fix /ai-solutions/ 404 CTAs in 2 posts (point to /scorecard)",
+        "Add title/description frontmatter to content/legal/*.md"
+      ]},
+      {"name": "Phase 2: High-Impact Improvements", "timeframe": "Weeks 2-3", "items": [
+        "Add a Scorecard CTA to every blog post close; remove the /workshops/ 308 hop",
+        "Wire BreadcrumbList on blog [slug] and FAQPage on /clear + /pipeline-reality-check",
+        "Switch BlogPosting publisher to Organization with a logo",
+        "Add /llms.txt"
+      ]},
+      {"name": "Phase 3: Content & Authority", "timeframe": "Month 2", "items": [
+        "Reconcile blog persona/case studies with the real client base; add per-post author box",
+        "Source or replace unsourced statistics",
+        "Expand social-media-followers-to-clients; add TL;DR blocks to pillar posts",
+        "Add security headers (X-Content-Type-Options, Referrer-Policy, Permissions-Policy, frame-ancestors)"
+      ]},
+      {"name": "Phase 4: Monitoring & Iteration", "timeframe": "Ongoing", "items": [
+        "Verify schema in Rich Results Test post-deploy",
+        "Confirm CWV field data in GSC/CrUX",
+        "Add lastmod to sitemap; keep the noindex drip gate in sync as drafts go live"
+      ]}
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

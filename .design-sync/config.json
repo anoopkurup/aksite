@@ -1,0 +1,9 @@
+{
+  "pkg": "@anoopkurup/design-system",
+  "globalName": "AKDesignSystem",
+  "projectId": "651c2951-6292-4d4d-8dde-af4cd82d1297",
+  "shape": "package",
+  "buildCmd": "cd design-system && npm run build",
+  "cssEntry": "dist/styles.css",
+  "readmeHeader": ".design-sync/conventions.md"
+}

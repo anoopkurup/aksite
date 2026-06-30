@@ -5,26 +5,27 @@ description: "Is the follower count on social media just a vanity metric or do t
 tags: ["Linkedin", "Lead Generation"]
 read_time: "5 min read"
 author: "Anoop Kurup"
-hero_image: "/images/blog/social-media-future-clients.webp"
+hero_image: "/images/blog/social-media-followers-to-clients/hero.webp"
 category: "Lead Generation"
 ---
 
-We follow people on social media who entertain, educate, inspire, or inform. We follow brands we like, purchase from regular, or aspire to buy products from at some point in the future. 
+We follow people on social media who entertain, educate, inspire, or inform. We follow brands we like, purchase from regularly, or aspire to buy products from at some point in the future. 
 
 Rarely do we follow someone in the services industry, or agencies with the intent of becoming their clients. “I want to buy services from this person, let me follow their social media accounts”, said no one, ever.
 
-In my experience a vast majority of followers, specially in the services industry, are there to learn from you. They are probably a level below your level of knowledge and understanding. They follow you to get more insights and lessons. Learning from your experience and expertise. As professionals, there are few opportunities to learn new things, and upgrade your knowledge. Following an experienced person in the industry gives them the necessary insights in bite size chunks on various platforms. At least that is the hypothesis.
+In my experience a vast majority of followers, specially in the services industry, are there to learn from you. They are probably a level below your level of knowledge and understanding. They follow you to get more insights and lessons, learning from your experience and expertise. As professionals, there are few opportunities to learn new things and upgrade your knowledge. Following an experienced person in the industry gives them the necessary insights in bite size chunks on various platforms. At least that is the hypothesis.
 
 This hypothesis gets validated quickly in industries like Corporate Law, IPR, Finance etc,. Followers on social media are younger than the person who they are following, from the same field, and may even be part of the same peer group.
 
 Observations are fine. Can we prove it?
 
-Yes. Given below are two ways i found to measure if followers can become clients in the future.
+Yes. Given below are two ways I found to measure if followers can become clients in the future.
 
 ## The live event experiment
 
 I ran a Linkedin event for a corporate law firm owner. The event topic was relevant to mid sized companies in India. And we even advertised the event to get more mid-size company owners to participate. 
 After the event, I analysed the data.
+
 
 **Industry**: 70% were from law firms, 25% were from legal services industry, and 5% were from other industries.
 
@@ -40,6 +41,8 @@ There was very little chance that the attendees would become clients, since majo
 To validate these results, my team ran a series of Linkedin Live events. And we saw similar results over and over.
 
 ## Analysing engagement data
+
+![From followers to engagement to clients](/images/blog/social-media-followers-to-clients/inline-1.webp)
 
 We analysed Linkedin posts for a client from the wealth management industry, for a period of 12 months. The client is a prominent voice in the industry and is regularly featured in leading financial publications. 
 

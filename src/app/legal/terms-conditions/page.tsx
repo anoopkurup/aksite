@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export function generateMetadata(): Metadata {
   const contentData = getContentPage('legal/terms-conditions');
   return contentData
-    ? { title: contentData.frontmatter.title, description: contentData.frontmatter.description }
+    ? { title: contentData.frontmatter.title, description: contentData.frontmatter.description, alternates: { canonical: "/legal/terms-conditions" } }
     : {};
 }
 

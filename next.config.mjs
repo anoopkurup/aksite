@@ -16,8 +16,28 @@ const nextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
+    ]
+  },
   async redirects() {
     return [
+      // RSS: the feed lives at /feed.xml; /rss.xml is the conventional alias.
+      {
+        source: '/rss.xml',
+        destination: '/feed.xml',
+        permanent: true,
+      },
+
       // ===========================================
       // REPOSITIONING REDIRECTS (Jun 2026)
       // "I fix sales for services businesses"

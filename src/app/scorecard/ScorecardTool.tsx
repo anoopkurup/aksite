@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, CheckCircle } from "lucide-react";
+import Reading from "@/components/Reading";
 import { trackEvent } from "@/lib/analytics";
 
 // ============================================================================
@@ -41,7 +42,7 @@ const questions: Question[] = [
   {
     id: 2,
     dimension: "Revenue concentration",
-    text: "What share of revenue comes from your single largest client?",
+    text: "What share of your revenue comes from your single largest client?",
     observation:
       "Too much of your revenue rides on one client. If they leave or shrink, the hole is hard to fill fast.",
     options: [
@@ -54,13 +55,13 @@ const questions: Question[] = [
   {
     id: 3,
     dimension: "Offer clarity",
-    text: "Can a stranger understand what you sell, for whom, at what price, from one page?",
+    text: "Can a stranger understand what you sell, for whom, and at what price, from a single page?",
     observation:
       "There's no single offer a stranger can grasp and buy. Every deal starts from a blank page, which slows everything down.",
     options: [
-      { label: "Yes — that page exists", score: 10 },
-      { label: "I could write it, but it's not down anywhere", score: 5 },
-      { label: "No — every deal is custom", score: 0 },
+      { label: "Yes — it exists", score: 10 },
+      { label: "I could write it", score: 5 },
+      { label: "Every deal is custom", score: 0 },
     ],
   },
   {
@@ -70,15 +71,15 @@ const questions: Question[] = [
     observation:
       "You're still closing the deals that matter. The pitch lives in your head, not in a system anyone else can run.",
     options: [
-      { label: "My team closes most deals", score: 10 },
-      { label: "The founder closes the big deals only", score: 6 },
+      { label: "The team closes most deals", score: 10 },
+      { label: "The founder closes the big ones only", score: 6 },
       { label: "The founder closes everything", score: 0 },
     ],
   },
   {
     id: 5,
     dimension: "Founder capacity",
-    text: "How many hours did YOU spend inside client delivery last week?",
+    text: "How many hours did you personally spend inside client delivery last week?",
     observation:
       "You're deep in delivery, which leaves little room to sell. Growth competes with the work that's already booked.",
     options: [
@@ -91,7 +92,7 @@ const questions: Question[] = [
   {
     id: 6,
     dimension: "Reach beyond network",
-    text: "When did you last get a client from someone who'd never heard of you before that month?",
+    text: "When did you last win a client who'd never heard of you before that month?",
     observation:
       "New clients who didn't already know you are rare. Your reach stops where your network ends.",
     options: [
@@ -116,7 +117,7 @@ const questions: Question[] = [
   {
     id: 8,
     dimension: "Pipeline visibility",
-    text: "Do you know, today, where your next 3 clients are most likely to come from?",
+    text: "Do you know, today, where your next three clients are most likely to come from?",
     observation:
       "You can't name where your next clients will come from. That's the difference between a pipeline and a hope.",
     options: [
@@ -128,7 +129,7 @@ const questions: Question[] = [
   {
     id: 9,
     dimension: "System independence",
-    text: "What happens to your pipeline if you take 4 weeks off?",
+    text: "What happens to your pipeline if you take four weeks off?",
     observation:
       "The pipeline depends on you being present. Step away and it stalls — that's a person, not a system.",
     options: [
@@ -140,13 +141,13 @@ const questions: Question[] = [
   {
     id: 10,
     dimension: "Urgency & trigger",
-    text: "When a prospect asks “why now?”, is there a consequence to waiting?",
+    text: "When a prospect asks “why now?”, is there a real consequence to waiting?",
     observation:
       "Your offer has no built-in reason to act now. Without a cost to waiting, deals drift into “let's keep in touch.”",
     options: [
-      { label: "Yes — there's a clear cost to waiting", score: 10 },
+      { label: "Yes — a clear cost to waiting", score: 10 },
       { label: "Sometimes", score: 5 },
-      { label: "No — whenever they're ready", score: 0 },
+      { label: "Not really — whenever they're ready", score: 0 },
     ],
   },
 ];
@@ -169,7 +170,7 @@ function getBand(total: number): Band {
       name: "Referral-Dependent",
       range: "0–35",
       verdict:
-        "Your pipeline is your network, and networks plateau. The good news: the fix starts with packaging, not more outreach.",
+        "Your pipeline is your network — and networks plateau. Right now, growth depends on who happens to think of you, which means it depends on luck dressed up as relationships. The good news: the fix starts with packaging, not more outreach. Get the offer right and the channels open up.",
     };
   }
   if (total <= 65) {
@@ -177,14 +178,14 @@ function getBand(total: number): Band {
       name: "One Engine Short",
       range: "36–65",
       verdict:
-        "Parts of a system exist, but one factor — offer, trigger, channel, or proof — is at zero. Until it isn't, the pipeline stays unpredictable.",
+        "Parts of a system are already in place — but one factor is sitting at zero. It might be the offer, the buying trigger, the channel, or your proof. A pipeline is a product of all four; when any one of them is missing, the whole thing stays unpredictable no matter how hard the others work. Find the zero, fix the zero.",
     };
   }
   return {
     name: "System-Ready",
     range: "66–100",
     verdict:
-      "Your foundation is solid. The question is scale and consistency — you may need sharpening, not rebuilding.",
+      "Your foundation is solid. Your question isn't whether selling works — it's scale and consistency. You may need sharpening rather than rebuilding: tightening the offer, widening a channel, or making the motion run without you. The leverage here is real and close.",
   };
 }
 
@@ -281,17 +282,17 @@ export default function ScorecardTool() {
   if (showResults) {
     return (
       <div className="space-y-12">
-        {/* Score display */}
-        <div className="text-center">
-          <p className="font-sans text-sm text-slate-500 uppercase tracking-wide mb-4">
+        {/* Score display — the climactic Reading */}
+        <div>
+          <p className="font-mono text-xs text-slate-500 uppercase tracking-[0.18em] mb-4 text-center">
             Your Sales Scorecard result
           </p>
-          <div className="inline-flex items-baseline justify-center w-36 h-36 rounded-full border-4 border-navy-900 mb-6">
-            <span className="font-serif text-5xl text-navy-900">{totalScore}</span>
-            <span className="font-sans text-sm text-slate-400 ml-1">/{MAX_SCORE}</span>
+          <div className="flex items-baseline justify-center mb-8">
+            <span className="font-mono text-7xl font-medium text-navy-900 leading-none">{totalScore}</span>
+            <span className="font-mono text-xl text-slate-400 ml-2">/{MAX_SCORE}</span>
           </div>
-          <div className="inline-block px-4 py-1 rounded-full text-sm font-medium text-cta-600 bg-cta-50 border border-cta-200">
-            {band.range} · {band.name}
+          <div className="max-w-sm mx-auto">
+            <Reading label={band.name} value={band.range} fill={totalScore / MAX_SCORE} />
           </div>
         </div>
 
@@ -304,7 +305,7 @@ export default function ScorecardTool() {
         {/* Two lowest dimensions */}
         {lowest.length > 0 ? (
           <div>
-            <h3 className="font-sans text-sm text-navy-600 uppercase tracking-wide mb-6 font-medium">
+            <h3 className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-6">
               Where to look first
             </h3>
             <div className="space-y-6">
@@ -328,10 +329,11 @@ export default function ScorecardTool() {
         {!emailSubmitted ? (
           <form onSubmit={handleEmailSubmit} className="bg-slate-50 p-8 border border-slate-100">
             <h3 className="font-serif text-title text-navy-900 mb-3">
-              Get the full written breakdown of your ten answers
+              Get the full written breakdown
             </h3>
             <p className="font-sans text-body text-slate-500 mb-6">
-              A plain-English read on each answer and the one thing to fix first. No sequences.
+              The detailed read on all ten of your answers — what each score means and the order to
+              fix them in. Enter your email and I'll send it over.
             </p>
             <label htmlFor="scorecard-email" className="sr-only">
               Email address
@@ -403,10 +405,10 @@ export default function ScorecardTool() {
       {/* Progress bar */}
       <div className="mb-8">
         <div className="flex justify-between mb-2">
-          <span className="font-sans text-sm text-slate-500">
-            Question {currentQuestion + 1} of {totalQuestions}
+          <span className="font-mono text-xs uppercase tracking-[0.12em] text-slate-500">
+            {String(currentQuestion + 1).padStart(2, "0")} / {String(totalQuestions).padStart(2, "0")}
           </span>
-          <span className="font-sans text-sm text-slate-400">{question.dimension}</span>
+          <span className="font-mono text-xs uppercase tracking-[0.12em] text-slate-400">{question.dimension}</span>
         </div>
         <div className="w-full bg-slate-100 rounded-full h-1.5" role="progressbar" aria-valuenow={currentQuestion + 1} aria-valuemin={1} aria-valuemax={totalQuestions}>
           <div

@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getBlogPostBySlug, getAllBlogSlugs } from '@/lib/blog';
 import { markdownToHtml, formatDate, estimateReadingTime } from '@/lib/markdown';
+import CTAButton from '@/components/CTAButton';
+import JsonLd from '@/components/JsonLd';
+import { blogPostingSchema, breadcrumbSchema } from '@/lib/seo';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export async function generateStaticParams() {
@@ -28,8 +31,26 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const htmlContent = await markdownToHtml(post.content);
   const readingTime = estimateReadingTime(post.content);
 
+  const postUrl = `/blog/${slug}`;
+
   return (
     <article className="min-h-screen bg-white">
+      <JsonLd
+        schema={[
+          blogPostingSchema({
+            title: post.frontmatter.title,
+            description: post.frontmatter.description,
+            url: postUrl,
+            datePublished: post.frontmatter.date,
+            image: post.frontmatter.hero_image || post.frontmatter.featured_image,
+          }),
+          breadcrumbSchema([
+            { name: 'Home', url: '/' },
+            { name: 'Blog', url: '/blog' },
+            { name: post.frontmatter.title, url: postUrl },
+          ]),
+        ]}
+      />
       {/* Hero Section */}
       <section className="py-24 bg-slate-50 border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-8">
@@ -45,17 +66,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
             {post.frontmatter.category && (
-              <span className="font-sans text-xs text-cta-600 uppercase tracking-wide font-medium">
+              <span className="font-mono text-xs text-cta-600 uppercase tracking-[0.14em]">
                 {post.frontmatter.category}
               </span>
             )}
-            <span className="font-sans text-xs text-slate-500">
+            <span className="font-mono text-xs text-slate-500">
               {formatDate(post.frontmatter.date)}
             </span>
-            <span className="font-sans text-xs text-slate-500">
+            <span className="font-mono text-xs text-slate-500">
               {post.frontmatter.read_time || post.frontmatter.readTime || readingTime}
             </span>
-            <span className="font-sans text-xs text-slate-500">
+            <span className="font-mono text-xs text-slate-500">
               By{" "}
               <Link href="/about" className="text-navy-900 hover:text-cta-600 transition-colors">
                 {post.frontmatter.author || "Anoop Kurup"}
@@ -84,7 +105,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <img
               src={post.frontmatter.hero_image || post.frontmatter.featured_image}
               alt={post.frontmatter.title}
-              className="w-full h-auto grayscale"
+              className="w-full h-auto"
             />
           </div>
         </section>
@@ -123,7 +144,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="max-w-3xl mx-auto px-8">
           <div className="flex items-start gap-6 p-8 bg-slate-50 border-l-4 border-cta-500">
             <div className="flex-1">
-              <p className="font-sans text-sm text-slate-500 uppercase tracking-wide mb-2">About the Author</p>
+              <p className="font-mono text-xs text-slate-500 uppercase tracking-[0.18em] mb-2">About the Author</p>
               <h3 className="font-serif text-title text-navy-900 mb-3">
                 {post.frontmatter.author || "Anoop Kurup"}
               </h3>
@@ -151,13 +172,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <p className="font-sans text-body-lg text-navy-200 mb-12">
             Find out how predictable your pipeline really is. Ten questions, three minutes, an honest score and the one thing to fix first.
           </p>
-          <Link
-            href="/scorecard"
-            className="inline-flex items-center font-sans text-body text-white border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors duration-300"
-          >
-            Take the Sales Scorecard
-            <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
-          </Link>
+          <CTAButton href="/scorecard">Take the Sales Scorecard</CTAButton>
         </div>
       </section>
     </article>
@@ -177,6 +192,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.description,
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title: post.frontmatter.title,
       description: post.frontmatter.description,

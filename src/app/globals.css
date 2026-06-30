@@ -45,34 +45,6 @@
     --stone-400: 24 6% 63%;
     --stone-500: 25 5% 45%;
   }
-
-  .dark {
-    /* Maintain Light Theme for Consistency - No Dark Mode */
-    --background: 0 0% 100%; /* #FFFFFF white background (60%) */
-    --foreground: 222 84% 13%; /* #1E3A8A navy text (30%) */
-    --card: 0 0% 98%; /* #FAFAFA off-white cards (60%) */
-    --card-foreground: 222 84% 13%; /* #1E3A8A navy text (30%) */
-    --popover: 0 0% 100%; /* #FFFFFF white popover (60%) */
-    --popover-foreground: 222 84% 13%; /* #1E3A8A navy text (30%) */
-    --primary: 222 84% 13%; /* #1E3A8A navy primary (30%) */
-    --primary-foreground: 0 0% 100%; /* #FFFFFF white text on primary */
-    --secondary: 0 0% 96%; /* #F5F5F5 light gray secondary (60%) */
-    --secondary-foreground: 222 84% 13%; /* #1E3A8A navy text (30%) */
-    --muted: 0 0% 96%; /* #F5F5F5 light gray muted (60%) */
-    --muted-foreground: 215 20% 45%; /* #6B7280 gray text */
-    --accent: 24 95% 53%; /* #F97316 orange accent/CTA (10%) */
-    --accent-foreground: 0 0% 100%; /* #FFFFFF white text on accent */
-    --destructive: 0 84% 60%; /* #EF4444 red destructive */
-    --destructive-foreground: 0 0% 100%; /* #FFFFFF white text on destructive */
-    --border: 214 32% 91%; /* #E5E7EB light gray border */
-    --input: 0 0% 100%; /* #FFFFFF white input background */
-    --ring: 24 95% 53%; /* #F97316 orange focus ring (CTA color) */
-    --chart-1: 222 84% 13%; /* #1E3A8A navy */
-    --chart-2: 217 91% 60%; /* #3B82F6 blue */
-    --chart-3: 24 95% 53%; /* #F97316 orange */
-    --chart-4: 142 76% 36%; /* #10B981 green */
-    --chart-5: 262 83% 58%; /* #8B5CF6 purple */
-  }
 }
 
 @layer base {

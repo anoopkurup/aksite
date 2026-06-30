@@ -1,5 +1,5 @@
 # Pipeline Reality Check Page
-# Last updated: 2026-06-11
+# Last updated: 2026-06-30 (CLEAR v5 copy)
 
 meta:
   title: "Pipeline Reality Check"
@@ -10,34 +10,34 @@ hero:
   title: "Pipeline Reality Check"
   subtitle: "Where your next clients are coming from — and where they're not."
   body:
-    - "Send me your last 12 months of deals — source, size, time-to-close, who sold it. One week later you get a written verdict: how dependent you are on referrals, where your revenue is concentrated and exposed, what your current motion will produce over the next 6 months if nothing changes, and the three moves that change it."
-    - "You send data. You receive a verdict. No call that evaporates."
+    - "The Scorecard gives you a read in three minutes. This gives you the truth from your own numbers. Send me your last 12 months of deals — source, size, time-to-close, and who sold each one. One week later, you get a written verdict on the state of your pipeline and the three moves that change it."
+    - "No call that evaporates. No generic advice. A document built entirely from your actual data, that you can read, keep, and act on."
 
 what_you_get:
   section_title: "What you get"
   items:
-    - "A written report — not a call that evaporates"
-    - "Your referral-dependence and concentration numbers, in black and white"
-    - "A 6-month pipeline projection if nothing changes"
-    - "Three prioritised moves that change the trajectory"
-    - "A straight answer on whether CLEAR is your next step — including “it isn't yet,” if that's the truth"
+    - "How dependent you are on referrals — the exact share of revenue that arrives pre-sold, and what that leaves exposed."
+    - "Where your revenue is concentrated — client-concentration risk, named and quantified, including the accounts whose departure would hurt."
+    - "What your current motion will produce — a straight six-month pipeline projection at the rate you're selling today: here's what's coming, and what isn't."
+    - "The three moves that change it — prioritised, specific to your situation, in the order I'd make them."
+    - "A straight answer on what's next — whether CLEAR is your logical next step, including an honest “not yet” if that's the truth."
 
 terms:
-  headline: "₹25,000 · one week · fully done-for-you."
-  body: "You send data; you receive a verdict."
-  credit_note: "The full fee counts toward a CLEAR engagement if you go ahead."
+  headline: "₹25,000 · one week · fully done for you."
+  body: "You send the data; you receive the verdict. No homework, and no long engagement to commit to — a single, contained piece of work that makes the abstract concrete."
+  credit_note: "The full ₹25,000 counts toward a CLEAR engagement if you go ahead — so if CLEAR is your next step, the diagnostic effectively cost you nothing."
 
 faqs:
-  title: "Questions"
+  title: "Questions people ask"
   items:
     - question: "What data do you need from me?"
-      answer: "Your last 12 months of deals: source, size, time-to-close, and who sold each one. A spreadsheet is plenty. If it lives in a CRM, an export works. I'll send a simple template so you're not guessing what to pull."
+      answer: "A simple list of your deals from the last 12 months: where each one came from, roughly how big it was, how long it took to close, and who did the selling. A spreadsheet is perfect. If it lives in your head or your inbox, I'll send you a one-page template to pull it together."
 
-    - question: "What if my data is messy?"
-      answer: "Then that's finding number one. Messy or missing data is itself a signal about how visible your pipeline really is. I work with what you have and tell you what the gaps mean — I don't send it back for cleanup."
+    - question: "What if my data is messy or incomplete?"
+      answer: "Then that's finding number one. How well a firm can see its own pipeline is itself a diagnosis — and a common one. I'll work with what you have and tell you plainly what the gaps mean."
 
     - question: "What happens after?"
-      answer: "If CLEAR fits, that's the recommendation — and your ₹25,000 is credited toward it. If it doesn't fit yet, I'll say so plainly and tell you what to do first. An honest “not yet” is a valid outcome."
+      answer: "One of three things: CLEAR is the fit and we talk about it, with your ₹25,000 credited to the kickoff; something smaller is the right next move and I'll point you to it; or it's genuinely “not yet,” and I'll tell you what would need to change. No pressure, no default upsell."
 
 final_cta:
   title: "Not sure where you stand yet?"
