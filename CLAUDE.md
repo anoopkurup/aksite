@@ -129,30 +129,39 @@ npm run images -- --selftest    # test the count + wiring logic, no API calls
 ```
 
 - Requires `OPENAI_API_KEY=sk-...` in `.env.local`.
-- **Prompts live in `scripts/image-manifest.mjs`** — author them there. `BRAND_PREAMBLE` locks the style once (pure-white bg, navy `#000080` / grey `#475569` line-art, one orange `#F97316` accent, flat 2D Swiss/Apple minimalism); each job only describes its subject. Two arrays: `pages` (explicit diagrams) and `posts` (per-post `hero` + ordered `inlines`).
+- **Prompts live in `scripts/image-manifest.mjs`** — author them there. `BRAND_PREAMBLE` locks the style once (pure-white bg, ink-navy `#0E1A2B` / grey `#475569` line-art, one orange `#F97316` accent, flat 2D Swiss/Apple minimalism); each job only describes its subject. Two arrays: `pages` (explicit diagrams) and `posts` (per-post `hero` + ordered `inlines`).
 - **Image count per blog post scales with word count** (`imageCountForWords` in `scripts/generate-images.mjs`): <800w → 1 (hero only), 800–1299 → 2, 1300–1899 → 3, 1900–2599 → 4, ≥2600 → 5. The generator uses the hero + the first N inline prompts the count calls for, so author inline prompts in priority order.
 - **Wiring is automatic and idempotent**: hero → `hero_image` frontmatter; inline images → `inline-1.webp`, `inline-2.webp`, … saved to `public/images/blog/<slug>/` and inserted spread across the post's H2 sections. Page diagrams go to `public/images/pages/<id>.webp` and are referenced directly in each page's `.tsx`.
 - Re-running is safe — it skips images that already exist and never double-inserts markdown. Add a new post (or new prompts) then just `npm run images` to fill the gaps.
 - **QA loop**: after generating, open the `.webp` files (or `npm run dev`) to check brand fidelity; tweak the prompt in the manifest and re-run with `--only <slug> --force` for any that drift.
 
-## Design System
+## Design System — "Instrument panel"
+
+The site reads like a diagnostic instrument: honest, measured, mechanical. The product IS a reading (Scorecard → diagnosis → fix), so data is set in mono like a gauge readout, and a recurring meter is the signature. Four colours only: navy / grey / orange / white.
 
 ### Colors
-- `navy-900`: Headlines, dark backgrounds
+- `navy-900` = `#0E1A2B` — ink-navy. Headlines and dark sections. (This is the authoritative near-black; the whole `navy` ramp in `tailwind.config.ts` is ink-toned. Do **not** revert it to the old electric `#000080` blue.)
 - `slate-500/600`: Body text
-- `cta-500` (orange): Accent, CTAs
+- `cta-500` (`#F97316`) / `cta-600` (`#EA580C`): the "Signal" orange — the gauge needle. Reserved for the one CTA + the meter fill + accents only.
 - Pure white backgrounds, no gradients
 
-### Typography
-- **Serif** (Cormorant Garamond): Headlines
-- **Sans** (Inter): Body text
-- Hero: 4.5rem, Display: 3rem, Title: 1.875rem, Body: 1.125rem
+### Typography — three roles
+- **Display** (`font-serif` → **Fraunces**, variable, optical sizing): headlines. Confident-editorial, not couture. (Replaced Cormorant Garamond — don't reintroduce it.)
+- **Body** (`font-sans` → Inter): paragraphs.
+- **Data/utility** (`font-mono` → **IBM Plex Mono**): every number, price, score, section eyebrow, meter label, and metadata. This is the instrument-readout tell — when in doubt, data and labels go mono.
+- Scale: Hero 4.5rem, Display 3rem, Title 1.875rem, Body 1.125rem.
+
+### The signature — "the Reading" (`src/components/Reading.tsx`)
+A mono label + value + segmented meter (orange fill = the needle). Used for the Scorecard result (the climax), the homepage hero teaser, and anywhere an honest measurement fits. Don't scatter meters where the data isn't a clean reading — prose results stay mono text, not meters.
+
+### CTA rule (one action sitewide)
+- **Filled-orange button = Take the Sales Scorecard, always.** Use `src/components/CTAButton.tsx` (`<CTAButton href={...}>`). It appears in the header, page heroes, and every page-end. Reads on white and on `navy-900`.
+- **Every other link = orange underline** (`border-b-2 border-cta-500`): PRC links, "Learn more", contact methods, inline links. Never give a non-Scorecard link the filled treatment.
 
 ### Patterns
-- CTAs: Underline-style (border-bottom), not filled buttons
-- Emphasis: Border-left accents (4px orange)
-- Section spacing: 8rem between sections
-- Minimal shadows, generous whitespace
+- Section eyebrows: `font-mono text-xs uppercase tracking-[0.18em]` (cta-600 on light, navy-600 for sub-labels).
+- Emphasis: Border-left accents (4px orange).
+- Section spacing: 8rem between sections. Minimal shadows, generous whitespace.
 
 ## Content Architecture
 - **All content lives under top-level `content/`** — never inside `src/`

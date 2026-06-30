@@ -17,7 +17,7 @@ export const BRAND_PREAMBLE = [
   'Minimalist vector illustration in a premium Swiss-design / Apple-product-page style.',
   'Background is pure flat white #FFFFFF, edge to edge and seamless — absolutely no cream, beige, grey or off-white tint, no paper texture, no border, no vignette. Absolutely no gradients, no drop shadows, no photographic elements, no 3D, no skeuomorphism.',
   'Clean flat 2D geometry: thin precise lines, simple shapes, generous negative space, everything aligned to a tidy grid.',
-  'Strict limited palette only: deep navy (#000080) for primary shapes and headings, medium slate grey (#475569) for secondary elements and labels, and a single warm orange (#F97316) used sparingly for exactly one point of emphasis.',
+  'Strict limited palette only: deep ink-navy (#0E1A2B) for primary shapes and headings, medium slate grey (#475569) for secondary elements and labels, and a single warm orange (#F97316) used sparingly for exactly one point of emphasis.',
   'Restrained, high-end, calm — like a diagram in a premium financial or legal services report.',
   'If any text labels appear, keep them very short and use a clean simple sans-serif. Do not fill the canvas; let it breathe.',
 ].join(' ');
