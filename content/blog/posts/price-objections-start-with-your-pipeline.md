@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/price-objections-start-with-your-pipeline/hero.webp"
 title: 'How to Handle Price Objections as a Consultant: It Starts With Your Pipeline'
 date: '2026-03-19'
 description: >-
@@ -38,6 +39,8 @@ When you're running one or two active proposals at any given time, that conversa
 In a proposal walkthrough this week — six-month program, senior decision-maker — the price question arrived within thirty seconds of pricing going on screen. I've been in that position before, in an earlier stage of my practice, when a thin pipeline made that question very hard to answer honestly. This time it wasn't. Not because I've become a sharper negotiator. Because I had other conversations already active.
 
 ## The Discount That Closes the Deal Often Costs More Than You Think
+
+![Three structural models instead of a discount](/images/blog/price-objections-start-with-your-pipeline/inline-1.webp)
 
 When you reduce your price to close a deal, you do two things simultaneously: you close this deal, and you set a precedent for everything that follows.
 

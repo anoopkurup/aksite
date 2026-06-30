@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/video-studio-out-of-the-editing-rate-trap/hero.webp"
 title: Out of the Editing-Rate Trap
 date: '2026-06-26'
 description: >-
@@ -29,6 +30,8 @@ The founder's relationships hid the problem for years, because trust closed thos
 Because the vague customer was the root cause, that is where the work began. The studio narrowed to founder-led B2B firms that needed to win trust at scale — companies whose buyers research them quietly before a high-value purchase. With the customer sharpened, the promise could change too. Instead of "you get a video", the studio started selling something closer to the buyer's real concern: your best sales conversations happen before you are even in the room, because your story is already doing the convincing. That single reframe lifted the firm off the editing bench and set it down next to the buyer's revenue problem, which is a very different place to be priced from.
 
 ## Selling a set with a purpose, not videos by the unit
+
+![Becoming a category, not a commodity](/images/blog/video-studio-out-of-the-editing-rate-trap/inline-1.webp)
 
 Rather than quote for videos one at a time, the studio packaged a Trust-Building Film Set — a defined suite built to a documented purpose: a founder story, two customer-proof films, and a short explainer, with revision limits and usage rights spelled out plainly. The language moved with the structure, from "we make videos" to "we build the films that close your buyers before the sales call."
 

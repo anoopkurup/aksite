@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/positioning-matrix-b2b-services/hero.webp"
 title: "The Positioning Matrix: Strategic Framework for B2B Services"
 date: 2025-08-26
 description: "Map your services against pain, urgency, and value to find a defendable, premium position in your market."
@@ -18,6 +19,9 @@ Most service businesses position themselves around what they do ("we provide IT 
 I've developed a framework called the Positioning Matrix that maps your services against three critical dimensions: pain intensity, urgency, and delivered value. When you find the intersection of high pain, high urgency, and high value, you've discovered your premium positioning opportunity.
 
 ## Why Demographics-Based Positioning Fails
+
+![A 2x2 positioning matrix highlighting the defendable, premium quadrant](/images/blog/positioning-matrix-b2b-services/inline-1.webp)
+
 
 Before diving into the matrix, let's examine why most positioning approaches trap service providers in commodity competition:
 
@@ -119,6 +123,8 @@ Once you've identified your premium positioning opportunities, transform how you
 **Stop competing on scope**. When you position around urgent, high-value problems, prospects focus on results rather than deliverables.
 
 ## Implementation Strategy
+
+![The three positioning dimensions: pain, urgency, value](/images/blog/positioning-matrix-b2b-services/inline-2.webp)
 
 **Audit your current positioning** using the matrix. Be honest about where your services actually score—most will be in the middle range.
 

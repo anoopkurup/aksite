@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/pitch-networking-events-lead-with-problem/hero.webp"
 title: >-
   How Experts Should Pitch at Networking Events: Lead With the Problem, Not the
   Service
@@ -32,6 +33,8 @@ This hesitation is one of the main reasons experts stay generic. They keep their
 The fix is not to broaden your pitch. It is to change what you lead with.
 
 ## Why Most Networking Defaults Fail
+
+![Leading with the niche versus leading with the problem](/images/blog/pitch-networking-events-lead-with-problem/inline-1.webp)
 
 Watch how experts behave at networking events and you will see roughly three patterns repeated. None of them produce real connections, and they all fail for the same reason.
 
@@ -68,6 +71,8 @@ And here is what makes this work specifically for the expert who initiated the t
 That is a much easier thing to recall later. And a much easier thing to refer.
 
 ## How This Looks Across Professions
+
+![A problem-first pitch structure](/images/blog/pitch-networking-events-lead-with-problem/inline-2.webp)
 
 This shift works the same way for any kind of expert. The pattern is consistent.
 

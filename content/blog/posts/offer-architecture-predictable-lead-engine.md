@@ -5,7 +5,7 @@ description: "Turn scattered services into a laddered offer suite that shortens 
 tags: ["Strategy", "Offers", "Lead Generation"]
 read_time: "8 min read"
 author: "Anoop Kurup"
-hero_image: "/images/blog/offer-architecture.webp"
+hero_image: "/images/blog/offer-architecture-predictable-lead-engine/hero.webp"
 category: "Strategy"
 ---
 
@@ -18,6 +18,9 @@ I've seen this pattern across hundreds of engagements. Marketing agencies offeri
 The problem isn't that these businesses offer too many services. The problem is that they haven't architected their offers in a way that guides prospects through a logical buying journey.
 
 ## The Scattered Services Problem
+
+![Offer architecture as a three-layer stack building to predictable leads](/images/blog/offer-architecture-predictable-lead-engine/inline-1.webp)
+
 
 When prospects can't understand how your services relate to each other, three things happen:
 
@@ -87,6 +90,8 @@ When prospects encounter your offer architecture instead of a service menu, seve
 **You compete on expertise, not price.** When prospects understand exactly what problem each service solves and how it fits into their bigger picture, they're comparing your solution to their problem—not your price to a competitor's price.
 
 ## Implementation Example: Law Firm Transformation
+
+![A five-level offer ladder](/images/blog/offer-architecture-predictable-lead-engine/inline-2.webp)
 
 One of my law firm clients came to me with this challenge: they offered "general counsel services," "contract review," "compliance consulting," "litigation support," and "strategic planning." Prospects were confused about which service to start with, and the firm was competing primarily on hourly rates.
 

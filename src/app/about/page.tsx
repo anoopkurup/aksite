@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { getAboutPageContent } from "@/lib/content";
+import CTAButton from "@/components/CTAButton";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
@@ -63,6 +64,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Pathway diagram */}
+      <section className="pb-section bg-white">
+        <div className="max-w-3xl mx-auto px-8">
+          <img
+            src="/images/pages/about-pathway.webp"
+            alt="From strategy to a working pipeline"
+            className="w-full h-auto"
+          />
+        </div>
+      </section>
+
       {/* Podcast */}
       <section className="py-section-md bg-slate-50">
         <div className="max-w-3xl mx-auto px-8">
@@ -79,9 +91,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-serif text-display text-white mb-6">{content.final_cta.title}</h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">{content.final_cta.body}</p>
-          <Link href={content.final_cta.cta_link} className="inline-flex items-center font-sans text-body text-white border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors duration-300">
-            {content.final_cta.cta_text}<ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
-          </Link>
+          <CTAButton href={content.final_cta.cta_link}>{content.final_cta.cta_text}</CTAButton>
         </div>
       </section>
     </>

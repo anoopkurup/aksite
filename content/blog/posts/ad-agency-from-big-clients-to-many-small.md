@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/ad-agency-from-big-clients-to-many-small/hero.webp"
 title: From a Few Big Clients to Many Small Ones
 date: '2026-06-26'
 description: >-
@@ -31,6 +32,8 @@ The obvious answer was to win many small and mid-sized businesses, so that no si
 The agency was not built for that. Its internal processes had been shaped around fulfilling clean briefs from clients who knew what they wanted—faced with a small business that needed to be guided through every step—and who had limited money to spend and little patience for a long, expensive process—those same processes generated friction rather than results. The agency was being asked to manage an end-to-end advertising and lead-generation engine, something it had never had to do, for clients whose budgets left no room for inefficiency. The mismatch was not a marketing problem or a sales problem. It was an operating model problem.
 
 ## Becoming the firm that owns the result, not the brief
+
+![Owning the result instead of delivering the brief](/images/blog/ad-agency-from-big-clients-to-many-small/inline-1.webp)
 
 The repositioning started by accepting what an SME actually wants, and building the agency around it. The promise had to move from "we produce your ad creatives" to "we bring you customers" — from delivering outputs to owning an outcome. That is a far harder thing to sell and to deliver. Still, it is also the only version of the agency that an SME has any reason to pay for, and, not coincidentally, the version that is almost impossible to replace. Once you own a client's entire path from idea to lead, you are no longer a swappable studio; you are the engine their growth runs on.
 

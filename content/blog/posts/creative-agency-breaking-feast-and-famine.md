@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/creative-agency-breaking-feast-and-famine/hero.webp"
 title: Breaking the Feast-and-Famine Cycle
 date: '2026-06-26'
 description: >-
@@ -30,6 +31,8 @@ There was a third, quieter cost. The agency had no entry point smaller than a fu
 The work started by settling who the agency was for: growing founder-led firms whose brand had fallen behind their ambition. That gave the firm a buying trigger it could recognise — a funding round, a move into a new market, a leadership change — any moment that suddenly made the old brand feel like an embarrassment. The promise shifted from "we'll redesign your brand" to "your brand finally matches where the business is going", tied to a specific moment rather than a vague sense that things could look better.
 
 ## Making the offer repeatable, and the delivery delegable
+
+![Anchoring to a moment the buyer can feel](/images/blog/creative-agency-breaking-feast-and-famine/inline-1.webp)
 
 The bespoke-every-time model was replaced with a productised Brand Clarity Sprint — a fixed scope, a fixed fee, and a named set of deliverables: positioning, an identity system, a messaging guide, with clear boundaries. The detail that mattered most was structural: the deliverables were defined so that the *team*, not only the founder, could run most of the work. That freed the founder to do the one thing only he could do, which was sell.
 

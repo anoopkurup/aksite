@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/linkedin-content-system-scales-without-burnout/hero.webp"
 title: "A LinkedIn Content System That Scales Without Burnout"
 date: 2025-08-26
 description: "Design an idea pipeline, batching cadence, and repurposing rhythm that compounds reach while reducing daily effort."
@@ -30,6 +31,8 @@ I've seen marketing agency founders who generated ₹4 crore in revenue from Lin
 The alternative isn't posting less frequently or hiring expensive content teams. It's designing systematic approaches that generate more content with less daily effort by focusing on three core components: idea pipeline, batching cadence, and repurposing rhythm.
 
 ## Building Your Idea Pipeline
+
+![The content pipeline: capture, batch, schedule](/images/blog/linkedin-content-system-scales-without-burnout/inline-1.webp)
 
 The most successful LinkedIn creators I work with never sit down to create content without ideas already queued. They've built systematic approaches to capture and develop ideas before they need them.
 
@@ -154,6 +157,8 @@ Turn high-performing posts into content series:
 This uses proven audience interest rather than guessing at new content directions.
 
 ## Implementation: A Real System in Action
+
+![Repurposing one pillar into many formats](/images/blog/linkedin-content-system-scales-without-burnout/inline-2.webp)
 
 One of my consulting clients, a strategy consultant serving mid-market companies, implemented this complete system with measurable results.
 

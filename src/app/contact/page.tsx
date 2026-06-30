@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Mail, Linkedin } from "lucide-react";
 import { getContactPageContent } from "@/lib/content";
+import CTAButton from "@/components/CTAButton";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
@@ -21,7 +22,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-sans text-sm text-cta-600 tracking-widest uppercase mb-8 font-medium">
+          <p className="font-mono text-xs text-cta-600 tracking-[0.18em] uppercase mb-8">
             {content.hero.tier_label}
           </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
@@ -137,13 +138,7 @@ export default function ContactPage() {
           <p className="font-sans text-body-lg text-navy-200 mb-12">
             {content.cta.subtitle}
           </p>
-          <Link
-            href={content.cta.button_url}
-            className="inline-flex items-center font-sans text-body text-white border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors duration-300"
-          >
-            {content.cta.button_text}
-            <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
-          </Link>
+          <CTAButton href={content.cta.button_url}>{content.cta.button_text}</CTAButton>
           <p className="font-sans text-sm text-navy-400 mt-8">
             {content.cta.secondary_text}{" "}
             <Link href={content.cta.secondary_link_url} className="text-navy-300 underline hover:text-white">

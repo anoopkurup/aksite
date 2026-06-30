@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/mql-sql-handshake-fixing-drop-off/hero.webp"
 title: "The MQL-SQL Handshake: Fix Lead Drop-Off Between Teams"
 date: 2025-08-26
 description: "Align definitions, SLAs, and handovers so leads aren't lost between marketing and sales."
@@ -37,6 +38,8 @@ The problem isn't individual performance—it's systematic process failure. When
 The solution requires systematic alignment of definitions, service level agreements, and handoff processes that treat the MQL-SQL transition as a critical business process, not an administrative task.
 
 ## Understanding the Qualification Disconnect
+
+![The black hole between marketing and sales](/images/blog/mql-sql-handshake-fixing-drop-off/inline-1.webp)
 
 Before fixing the handoff, you need to understand why marketing and sales typically have different qualification standards and how this creates downstream problems.
 
@@ -123,6 +126,8 @@ This categorisation helps sales prioritise efforts and approach leads appropriat
 
 ## Designing Effective SLA Systems
 
+![Aligned lead definitions: MQL versus SQL](/images/blog/mql-sql-handshake-fixing-drop-off/inline-2.webp)
+
 Service Level Agreements between marketing and sales must go beyond response timeframes to include quality, context, and outcome commitments.
 
 ### Response Time Commitments
@@ -207,6 +212,8 @@ Handoff processes require technological support to scale effectively:
 - Conversion rate tracking from MQL through closed opportunities
 
 ## Implementation: A Real System Transformation
+
+![A service-level handoff process](/images/blog/mql-sql-handshake-fixing-drop-off/inline-3.webp)
 
 One of my clients, a marketing technology company, was struggling with exactly this challenge. Despite generating 400+ MQLs monthly, their sales team was only converting 12% to opportunities.
 

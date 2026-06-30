@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, CheckCircle } from "lucide-react";
+import Reading from "@/components/Reading";
 import { trackEvent } from "@/lib/analytics";
 
 // ============================================================================
@@ -281,14 +282,17 @@ export default function ScorecardTool() {
   if (showResults) {
     return (
       <div className="space-y-12">
-        {/* Score display */}
-        <div className="text-center">
-          <p className="font-sans text-sm text-slate-500 uppercase tracking-wide mb-4">
+        {/* Score display — the climactic Reading */}
+        <div>
+          <p className="font-mono text-xs text-slate-500 uppercase tracking-[0.18em] mb-4 text-center">
             Your Sales Scorecard result
           </p>
-          <div className="flex items-baseline justify-center">
-            <span className="font-serif text-8xl text-navy-900 leading-none">{totalScore}</span>
-            <span className="font-sans text-xl text-slate-400 ml-2">/{MAX_SCORE}</span>
+          <div className="flex items-baseline justify-center mb-8">
+            <span className="font-mono text-7xl font-medium text-navy-900 leading-none">{totalScore}</span>
+            <span className="font-mono text-xl text-slate-400 ml-2">/{MAX_SCORE}</span>
+          </div>
+          <div className="max-w-sm mx-auto">
+            <Reading label={band.name} value={band.range} fill={totalScore / MAX_SCORE} />
           </div>
         </div>
 
@@ -301,7 +305,7 @@ export default function ScorecardTool() {
         {/* Two lowest dimensions */}
         {lowest.length > 0 ? (
           <div>
-            <h3 className="font-sans text-sm text-navy-600 uppercase tracking-wide mb-6 font-medium">
+            <h3 className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-6">
               Where to look first
             </h3>
             <div className="space-y-6">
@@ -401,10 +405,10 @@ export default function ScorecardTool() {
       {/* Progress bar */}
       <div className="mb-8">
         <div className="flex justify-between mb-2">
-          <span className="font-sans text-sm text-slate-500">
-            Question {currentQuestion + 1} of {totalQuestions}
+          <span className="font-mono text-xs uppercase tracking-[0.12em] text-slate-500">
+            {String(currentQuestion + 1).padStart(2, "0")} / {String(totalQuestions).padStart(2, "0")}
           </span>
-          <span className="font-sans text-sm text-slate-400">{question.dimension}</span>
+          <span className="font-mono text-xs uppercase tracking-[0.12em] text-slate-400">{question.dimension}</span>
         </div>
         <div className="w-full bg-slate-100 rounded-full h-1.5" role="progressbar" aria-valuenow={currentQuestion + 1} aria-valuemin={1} aria-valuemax={totalQuestions}>
           <div

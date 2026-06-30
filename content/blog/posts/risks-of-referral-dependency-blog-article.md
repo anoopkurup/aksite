@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/risks-of-referral-dependency-blog-article/hero.webp"
 title: risks-of-referral-dependency-blog-article
 date: '2026-06-25'
 description: >-
@@ -30,6 +31,8 @@ That is the trap in a single sentence: a problem you cannot feel is a problem yo
 
 ## You Never Learn Why People Actually Buy
 
+![A single point of failure: one referral source](/images/blog/risks-of-referral-dependency-blog-article/inline-1.webp)
+
 Referral clients arrive pre-sold. That sounds like a gift, and in the moment, it is. The hidden price is that you never see how the sale was made. You don't learn what caught their attention, what built their trust, or what finally convinced them to act.
 
 Without that knowledge, you are working blind. You can't sharpen your positioning, tighten your messaging, or improve your marketing, because you genuinely don't know what is driving demand. Every firm that wins clients in the open market has a feedback loop — they can see what works and do more of it. The referral-dependent firm has no such loop. It is improving nothing, because it can see nothing.
@@ -43,6 +46,8 @@ When referrals do the winning for you, that muscle wastes. The conversations tha
 There is a related cost to focus. Referrals send a wide variety of projects your way, so it is easy to keep saying yes to them all. Your services broaden, your specialism blurs, and you end up known for nothing in particular. Rather than putting a clear offer into the market and proving its value, you spend your days meeting whatever needs happen to walk through the door.
 
 ## The Business Becomes Fragile
+
+![What to build instead: diversified channels](/images/blog/risks-of-referral-dependency-blog-article/inline-2.webp)
 
 The structural risks are where referral dependence does its real damage.
 

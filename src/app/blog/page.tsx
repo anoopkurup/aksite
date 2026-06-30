@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllBlogPosts, getBlogCategories } from "@/lib/blog";
 import { formatDate, estimateReadingTime } from "@/lib/markdown";
+import CTAButton from "@/components/CTAButton";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
@@ -19,7 +20,7 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="min-h-[50vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-sans text-sm text-cta-600 tracking-widest uppercase mb-8 font-medium">
+          <p className="font-mono text-xs text-cta-600 tracking-[0.18em] uppercase mb-8">
             Blog
           </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
@@ -81,11 +82,11 @@ export default function BlogPage() {
                   {/* Meta */}
                   <div className="flex items-center gap-3 mb-4">
                     {post.frontmatter.category && (
-                      <span className="font-sans text-xs text-cta-600 uppercase tracking-wide font-medium">
+                      <span className="font-mono text-xs text-cta-600 uppercase tracking-[0.14em]">
                         {post.frontmatter.category}
                       </span>
                     )}
-                    <span className="font-sans text-xs text-slate-400">
+                    <span className="font-mono text-xs text-slate-400">
                       {post.frontmatter.read_time || post.frontmatter.readTime || estimateReadingTime(post.content)}
                     </span>
                   </div>
@@ -102,7 +103,7 @@ export default function BlogPage() {
 
                   {/* Footer */}
                   <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-                    <span className="font-sans text-xs text-slate-500">
+                    <span className="font-mono text-xs text-slate-500">
                       {formatDate(post.frontmatter.date)}
                     </span>
                     <span className="font-sans text-sm text-cta-600 flex items-center gap-1">
@@ -126,13 +127,7 @@ export default function BlogPage() {
           <p className="font-sans text-body-lg text-slate-500 mb-8">
             Find out how predictable your pipeline really is. Ten questions, three minutes, an honest score and the one thing to fix first.
           </p>
-          <Link
-            href="/scorecard"
-            className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors duration-300"
-          >
-            Take the Sales Scorecard
-            <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
-          </Link>
+          <CTAButton href="/scorecard">Take the Sales Scorecard</CTAButton>
         </div>
       </section>
     </>

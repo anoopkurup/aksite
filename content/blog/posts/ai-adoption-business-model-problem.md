@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/ai-adoption-business-model-problem/hero.webp"
 title: >-
   Why B2B Service Businesses Struggle With AI Adoption: It's a Business Model
   Problem
@@ -41,6 +42,8 @@ Most B2B service founders are doing the first. The second is what actually chang
 The gap between them isn't knowledge or willingness. It's that the second requires something the first doesn't: stepping back from day-to-day delivery long enough to redesign the model. For founders who are the bottleneck in their own business — which is most of them — that time never arrives.
 
 ## The Business Model Shift AI Actually Requires
+
+![Effort-driven work versus leverage](/images/blog/ai-adoption-business-model-problem/inline-1.webp)
 
 Here's the reframe worth sitting with: AI adoption for service businesses is not primarily a tool problem. It's a business model problem.
 

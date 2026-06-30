@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/pricing-signals-what-your-rates-tell-prospects/hero.webp"
 title: "Pricing Signals: What Your Rates Really Tell Prospects"
 date: 2025-08-26
 description: "Use pricing to reinforce your positioning, not sabotage it—without competing on discounts."
@@ -31,6 +32,8 @@ The fundamental issue is viewing price as purely transactional rather than commu
 The solution isn't simply raising rates. It's aligning your pricing strategy with your positioning strategy to create coherent market signals that reinforce rather than undermine your expertise.
 
 ## Understanding Pricing Psychology in B2B Services
+
+![The mixed message: premium positioning, budget price](/images/blog/pricing-signals-what-your-rates-tell-prospects/inline-1.webp)
 
 Before working through pricing alignment strategies, it's crucial to understand how prospects actually interpret pricing signals in professional service purchases.
 
@@ -165,6 +168,8 @@ Price like the strategic partner you claim to be, not like a vendor competing fo
 **What this signals:** "I'm not just a service provider—I'm a strategic asset worth ongoing investment."
 
 ## Real-World Pricing Transformation
+
+![Pricing signals from budget to premium](/images/blog/pricing-signals-what-your-rates-tell-prospects/inline-2.webp)
 
 One of my clients, a digital marketing consultant, came to me struggling with a positioning-pricing disconnect that was costing him premium opportunities.
 

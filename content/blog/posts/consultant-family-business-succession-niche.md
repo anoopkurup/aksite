@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/consultant-family-business-succession-niche/hero.webp"
 title: From Generic Growth Consultant to Family-Business Succession Specialist
 date: '2026-06-26'
 description: >-

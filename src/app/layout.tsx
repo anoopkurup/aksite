@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Inter, Fraunces, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -17,10 +17,20 @@ const inter = Inter({
   display: 'swap',
 });
 
-const cormorant = Cormorant_Garamond({
+// Display: Fraunces — confident-editorial serif (optical sizing), replaces Cormorant's couture feel
+const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   variable: '--font-serif',
+  display: 'swap',
+});
+
+// Data/utility: IBM Plex Mono — every number, price, score, eyebrow and meter label (the instrument readout)
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ['400', '500', '600'],
+  variable: '--font-mono',
   display: 'swap',
 });
 
@@ -55,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${fraunces.variable} ${plexMono.variable} font-sans antialiased`}>
         {/* Site-wide structured data: who Anoop is, the practice, the site. */}
         <JsonLd schema={[personSchema(), organizationSchema(), websiteSchema()]} />
         <Script

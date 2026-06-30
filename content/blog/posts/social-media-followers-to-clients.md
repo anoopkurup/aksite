@@ -5,7 +5,7 @@ description: "Is the follower count on social media just a vanity metric or do t
 tags: ["Linkedin", "Lead Generation"]
 read_time: "5 min read"
 author: "Anoop Kurup"
-hero_image: "/images/blog/social-media-future-clients.webp"
+hero_image: "/images/blog/social-media-followers-to-clients/hero.webp"
 category: "Lead Generation"
 ---
 
@@ -41,6 +41,8 @@ There was very little chance that the attendees would become clients, since majo
 To validate these results, my team ran a series of Linkedin Live events. And we saw similar results over and over.
 
 ## Analysing engagement data
+
+![From followers to engagement to clients](/images/blog/social-media-followers-to-clients/inline-1.webp)
 
 We analysed Linkedin posts for a client from the wealth management industry, for a period of 12 months. The client is a prominent voice in the industry and is regularly featured in leading financial publications. 
 

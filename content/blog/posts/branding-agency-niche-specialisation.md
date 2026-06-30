@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/branding-agency-niche-specialisation/hero.webp"
 title: The Branding Agency With No Brand of Its Own
 date: '2026-06-26'
 description: >-
@@ -25,6 +26,8 @@ The agency's pitch was, in essence, "we make brands look great" — and so was e
 This was the deeper trap. A branding agency that cannot brand itself is quietly telling the market it doesn't believe its own discipline works. The firm sold the very thing it had failed to do for itself, and prospects felt that gap even when they couldn't name it.
 
 ## Choosing to be known for something
+
+![Selling the outcome, not the deliverables](/images/blog/branding-agency-niche-specialisation/inline-1.webp)
 
 The fix was the medicine the agency prescribed to its own clients every day, finally taken itself: stop being for everyone, and plant a flag in a specific patch of ground. Rather than "branding for any business that wants to look good", the agency narrowed to a particular kind of client whose world it understood deeply — a defined sector where the founder had real affinity and a portfolio that already leaned that way. It chose to become *the* branding agency for that niche, not a generalist who would happily take anything.
 

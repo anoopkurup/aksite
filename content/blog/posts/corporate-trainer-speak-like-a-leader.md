@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/corporate-trainer-speak-like-a-leader/hero.webp"
 title: From "Communication Skills" to "Speak Like a Leader"
 date: '2026-06-26'
 description: >-

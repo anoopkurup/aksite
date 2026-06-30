@@ -43,18 +43,19 @@ const config: Config = {
   				DEFAULT: "hsl(var(--card))",
   				foreground: "hsl(var(--card-foreground))"
   			},
+  			// Ink-navy ramp — authoritative, near-black. (Was an electric #000080 blue.)
   			navy: {
-  			'50': '#f3f3f9',
-  			'100': '#e0e0ef',
-  			'200': '#cccce6',
-  			'300': '#aeaed9',
-  			'400': '#7b7bbd',
-  			'500': '#5959ae',
-  			'600': '#38389c',
-  			'700': '#1f1f8f',
-  			'800': '#101086',
-  			'900': '#000080',
-  			'950': '#000060'
+  			'50': '#f5f7fa',
+  			'100': '#e6ebf1',
+  			'200': '#c5cfdd',
+  			'300': '#9caac0',
+  			'400': '#6d7f9b',
+  			'500': '#4b5d79',
+  			'600': '#354863',
+  			'700': '#243450',
+  			'800': '#16233b',
+  			'900': '#0e1a2b',
+  			'950': '#070f1b'
   			},
   			white: '#FFFFFF', // pure white for backgrounds
 
@@ -97,6 +98,13 @@ const config: Config = {
   				'Inter',
   				'system-ui',
   				'sans-serif'
+  			],
+  			mono: [
+  				'var(--font-mono)',
+  				'IBM Plex Mono',
+  				'ui-monospace',
+  				'SFMono-Regular',
+  				'monospace'
   			]
   		},
   		fontSize: {

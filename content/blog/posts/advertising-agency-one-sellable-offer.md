@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/advertising-agency-one-sellable-offer/hero.webp"
 title: From "We Do Everything" to One Campaign a Stranger Could Buy
 date: '2026-06-26'
 description: >-
@@ -29,6 +30,8 @@ The instinct in that situation is usually to sell harder or market more. But you
 The first move was to stop being for everyone. Instead of "any business that needs advertising", the agency narrowed to a single, sharp customer: regional consumer brands launching or relaunching a product in one or two cities. That choice did a lot of quiet work. It gave the firm a buying trigger it could actually see coming — a launch date sitting on someone's calendar — and it let the founder talk about a specific outcome instead of a menu. The story shifted from "we run your advertising" to "your launch lands with a coordinated campaign across the channels that matter, run by one team." A date the buyer could feel, not a list of things the agency was capable of doing.
 
 ## Packaging the chaos into one thing with a name and a price
+
+![Packaging chaos into one thing with a name and a price](/images/blog/advertising-agency-one-sellable-offer/inline-1.webp)
 
 With the customer settled, the scattered capability list became a single, named product: a Single-Campaign Sprint. One launch, one fixed scope, one fixed fee, with a defined set of outputs — a creative concept, a channel plan, three placements, and launch-week management — and clear boundaries on revisions and support. The wording mattered as much as the structure. "We can help with your advertising" became "we build and run your launch campaign." For the first time the founder could describe the offer to a stranger in two sentences, the very thing he had quietly failed to do for a decade.
 

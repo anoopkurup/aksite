@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/cog-vs-brand-purchase-blog-article/hero.webp"
 title: cog-vs-brand-purchase-blog-article
 date: '2026-06-19'
 description: >-
@@ -34,6 +35,8 @@ The difference matters because each type of purchase demands a completely differ
 
 ## Large clients hire you as a cog — and that hides the problem for years
 
+![The cog purchase: one component in the client machine](/images/blog/cog-vs-brand-purchase-blog-article/inline-1.webp)
+
 Most service firms cut their teeth on large clients, because large clients are where the early skill-based work tends to be. And a large organisation, almost by definition, hires you as a cog. It has departments, managers, and processes. There is a marketing manager, a project lead, or a department head who scopes the work, hands you a brief, sets the standard, and absorbs the result internally.
 
 This arrangement is comfortable, and it quietly does an enormous amount of work on your behalf. You don't have to define the problem — someone already has. You don't have to own the strategy — that sits with the client. You don't have to decide what "finished" means — the brief tells you. You execute your part well, deliver it, and move on to the next brief.
@@ -51,6 +54,8 @@ Here is the part that quietly drains the business: nobody pays you more for taki
 That is why the smaller accounts feel like they lose money. They are not just smaller versions of your large clients. They are a different job — one your firm was never structured or priced to do.
 
 ## Why "just charge more" doesn't fix it
+
+![The brand purchase: chosen by name](/images/blog/cog-vs-brand-purchase-blog-article/inline-2.webp)
 
 The instinct, once the pain shows up, is to treat it as a pricing problem. Raise the rate, hold firmer in negotiation, walk away from the cheapest clients. None of this addresses the actual issue, because the problem isn't the number on the invoice. It's the shape of the work behind it.
 

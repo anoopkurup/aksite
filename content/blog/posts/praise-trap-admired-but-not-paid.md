@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/praise-trap-admired-but-not-paid/hero.webp"
 title: 'The Praise Trap: Why Expert-Founders Get Admired But Not Paid'
 date: '2026-03-27'
 description: >-
@@ -37,6 +38,8 @@ He had built an audience. He had not built a clientele. And the positive reinfor
 
 ## The Free Advice Trap — A Second Version of the Same Problem
 
+![Where the line sits between free value and paid work](/images/blog/praise-trap-admired-but-not-paid/inline-1.webp)
+
 There is a second way this pattern manifests, and it shows up in founders who don't yet have a public platform. They don't have a podcast or a speaking schedule; they're trying to establish credibility within their own professional network.
 
 These founders tend to overcompensate. They share frameworks quickly. They walk through their approach to demonstrate expertise. "Let me just show you how I'd handle this." Initially, this works. It builds credibility.
@@ -69,6 +72,8 @@ Three psychological factors typically operate below conscious awareness.
 None of this is irrational. But the cumulative effect is expensive. The prospect is being trained to receive value without paying. Once that pattern is established, it does not reverse. The person who got free advice in month one does not suddenly pay in month seven — they have already internalised the implicit deal.
 
 ## The Three-Metric Diagnostic
+
+![A three-metric diagnostic](/images/blog/praise-trap-admired-but-not-paid/inline-2.webp)
 
 If you want to know whether you are currently in the praise trap, three numbers tell you most of what you need to know. Ask yourself about the last 30 days:
 

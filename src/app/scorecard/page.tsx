@@ -12,7 +12,7 @@ export default function ScorecardPage() {
     <>
       <section className="min-h-[40vh] flex items-center bg-white">
         <div className="max-w-3xl mx-auto px-8 pt-24 pb-8 text-center">
-          <p className="font-sans text-sm text-cta-600 tracking-widest uppercase mb-8 font-medium">
+          <p className="font-mono text-xs text-cta-600 tracking-[0.18em] uppercase mb-8">
             Free Assessment
           </p>
           <h1 className="font-serif text-hero-mobile md:text-display text-navy-900 mb-6 leading-tight">
@@ -23,6 +23,17 @@ export default function ScorecardPage() {
             measured it. Ten questions, three minutes, no email required to see your score — you'll
             get an honest number and a plain read on what's holding your pipeline back.
           </p>
+        </div>
+      </section>
+
+      {/* Score bands diagram */}
+      <section className="pb-12 bg-white">
+        <div className="max-w-3xl mx-auto px-8">
+          <img
+            src="/images/pages/scorecard-bands.webp"
+            alt="Three scorecard bands: Referral-Dependent, One Engine Short, System-Ready"
+            className="w-full h-auto"
+          />
         </div>
       </section>
 

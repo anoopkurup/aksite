@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/boutique-law-firm-productised-advisory/hero.webp"
 title: 'A Law Firm That Could Finally Be Bought, Not Just Referred'
 date: '2026-06-26'
 description: >-
@@ -29,6 +30,8 @@ When the firm tried to grow beyond its existing circle, there was simply nothing
 The work began by narrowing who the firm was for: growing founder-led companies at the stage where legal exposure was mounting faster than their in-house ability to manage it. The buying trigger was reframed from reactive to proactive — instead of waiting for something to break, the firm anchored to a growth event that predictably *creates* legal risk: a fundraise, a wave of new contracts, a scaling team. The promise moved with it, from "we'll defend you when something breaks" to "your legal exposure is handled before it becomes a problem." That single shift moved the firm from emergency room to standing protection.
 
 ## Giving the firm something a stranger could actually say yes to
+
+![An offer a stranger can say yes to](/images/blog/boutique-law-firm-productised-advisory/inline-1.webp)
 
 The open-ended hourly model was packaged into a productised advisory offer — a defined, fixed-fee engagement with named deliverables: a risk review, a documented protection plan, and a set scope of ongoing counsel, with clear boundaries. For the first time the firm had something a buyer could see, price, and agree to *before* a crisis rather than during one. The language followed, from "we provide legal services" to "we keep your business legally protected as it grows."
 

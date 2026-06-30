@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/aida-to-ai-messaging-frameworks-workflows/hero.webp"
 title: "From AIDA to AI: Turn Frameworks into Marketing Workflows"
 date: 2025-08-26
 description: "Transform classic messaging frameworks like AIDA into AI workflows that create consistent, on-brand content at scale."
@@ -46,6 +47,8 @@ The limitation isn't the frameworks themselves—it's the manual, one-off applic
 This is where AI workflows transform everything. Instead of memorising frameworks and manually applying them each time, you create prompt sequences that systematically generate framework-based content with your specific brand voice, audience understanding, and strategic positioning built in.
 
 ## The Framework-to-Workflow Transformation Process
+
+![The AIDA funnel: Attention, Interest, Desire, Action](/images/blog/aida-to-ai-messaging-frameworks-workflows/inline-1.webp)
 
 Turning any messaging framework into an operational AI workflow involves three systematic steps:
 
@@ -183,6 +186,8 @@ Provide the final optimized version.
 ```
 
 ## Advanced Framework Workflows
+
+![From framework to operational workflow](/images/blog/aida-to-ai-messaging-frameworks-workflows/inline-2.webp)
 
 Once you've mastered AIDA workflows, you can apply the same transformation process to other proven frameworks:
 

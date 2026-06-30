@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/blog/founder-led-agencies-stop-scaling/hero.webp"
 title: 'Why Founder-Led Agencies Stop Scaling: A Structural Problem, Not a Market One'
 date: '2026-04-23'
 description: >-
@@ -39,6 +40,8 @@ These are not isolated quirks of how the firm operates. They are signals of a si
 
 ## What This Pattern Actually Costs
 
+![When the founder closes everything](/images/blog/founder-led-agencies-stop-scaling/inline-1.webp)
+
 Selling like a boutique isn't free. It has specific, measurable costs — most of which the founder absorbs personally, which is exactly why they go unnoticed.
 
 ### 1. Senior Time Burned on Spec Work
@@ -68,6 +71,8 @@ When what gets sold is a transformation, delivery is open-ended. The team delive
 The cumulative effect is exact: a 20-year-old agency ends up with the revenue ceiling of a 5-year-old one. Not because the work isn't good — the work is usually excellent — but because the commercial architecture around the work never evolved past the early-stage version.
 
 ## Why This Doesn't Get Fixed
+
+![From a service into a packaged offer](/images/blog/founder-led-agencies-stop-scaling/inline-2.webp)
 
 Here's the uncomfortable part: the reason this doesn't get fixed is that the founder is good at what they do.
 
