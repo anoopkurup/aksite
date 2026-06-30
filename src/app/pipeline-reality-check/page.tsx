@@ -1,6 +1,8 @@
 import { CheckCircle } from "lucide-react";
 import { getPipelineRealityCheckContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
+import JsonLd from "@/components/JsonLd";
+import { faqPageSchema } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
@@ -13,6 +15,9 @@ export default function PipelineRealityCheckPage() {
 
   return (
     <>
+      {content.faqs?.items?.length ? (
+        <JsonLd schema={faqPageSchema(content.faqs.items)} />
+      ) : null}
       {/* Hero */}
       <section className="min-h-[60vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
