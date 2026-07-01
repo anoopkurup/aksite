@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     template: "%s | Anoop Kurup",
   },
   description:
-    "Sales systems for founder-led services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Start with the free Sales Scorecard.",
+    "Sales systems for B2B services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Start with the free Sales Scorecard.",
   openGraph: {
     type: "website",
     siteName: "Anoop Kurup",

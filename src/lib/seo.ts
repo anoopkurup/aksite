@@ -16,7 +16,7 @@ export const SITE = {
   name: 'Anoop Kurup',
   baseUrl: 'https://www.anoopkurup.com',
   author: 'Anoop Kurup',
-  authorRole: 'Sales-systems consultant for founder-led services businesses',
+  authorRole: 'Sales-systems consultant for B2B services businesses',
   locale: 'en_IN',
   twitterCard: 'summary_large_image' as const,
   linkedin: 'https://www.linkedin.com/in/anoopkurup',
@@ -93,7 +93,7 @@ export function organizationSchema(): Json {
     founder: { '@type': 'Person', name: SITE.author },
     areaServed: 'Worldwide',
     description:
-      'Sales systems for founder-led services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations.',
+      'Sales systems for B2B services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations.',
     sameAs: [SITE.linkedin],
   };
 }

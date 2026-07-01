@@ -13,7 +13,7 @@ export default function AuthorBio({ note }: AuthorBioProps) {
   return (
     <section className="py-12 bg-white">
       <div className="max-w-3xl mx-auto px-8">
-        <div className="flex items-start gap-6 p-8 bg-slate-50 border-l-4 border-navy-900">
+        <div className="flex items-start gap-6 p-8 bg-slate-50 border border-slate-200">
           <div className="flex-1">
             <p className="font-sans text-sm text-slate-500 uppercase tracking-wide mb-2">
               About the Author
@@ -23,7 +23,7 @@ export default function AuthorBio({ note }: AuthorBioProps) {
             </h3>
             <p className="font-sans text-body text-slate-600 leading-relaxed mb-4">
               {note ||
-                'Sales-systems consultant for founder-led services businesses. I fix sales: one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Based in Bangalore.'}
+                'Sales-systems consultant for B2B services businesses. I fix sales: one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Based in Bangalore.'}
             </p>
             <Link
               href="/about"

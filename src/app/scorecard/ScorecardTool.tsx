@@ -297,7 +297,7 @@ export default function ScorecardTool() {
         </div>
 
         {/* Verdict */}
-        <div className="border-l-4 border-navy-900 pl-6">
+        <div className="border border-slate-200 p-6">
           <h2 className="font-serif text-title text-navy-900 mb-4">{band.name}</h2>
           <p className="font-sans text-body text-slate-500 leading-relaxed">{band.verdict}</p>
         </div>
@@ -310,7 +310,7 @@ export default function ScorecardTool() {
             </h3>
             <div className="space-y-6">
               {lowest.map((q) => (
-                <div key={q.id} className="border-l-4 border-slate-200 pl-6">
+                <div key={q.id} className="border border-slate-200 p-6">
                   <p className="font-serif text-lg text-navy-900 mb-1">{q.dimension}</p>
                   <p className="font-sans text-body text-slate-500 leading-relaxed">{q.observation}</p>
                 </div>
@@ -318,7 +318,7 @@ export default function ScorecardTool() {
             </div>
           </div>
         ) : (
-          <div className="border-l-4 border-slate-200 pl-6">
+          <div className="border border-slate-200 p-6">
             <p className="font-sans text-body text-slate-500 leading-relaxed">
               No single factor is dragging you down — the work now is sharpening and consistency, not rebuilding.
             </p>
@@ -359,9 +359,9 @@ export default function ScorecardTool() {
             </div>
           </form>
         ) : (
-          <div className="bg-green-50 p-8 border border-green-200 text-center">
-            <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-3" />
-            <p className="font-sans text-body text-green-800">
+          <div className="bg-navy-50 p-8 border border-navy-100 text-center">
+            <CheckCircle className="w-8 h-8 text-cta-600 mx-auto mb-3" />
+            <p className="font-sans text-body text-navy-900">
               Done. Your written breakdown is on its way to your inbox.
             </p>
           </div>

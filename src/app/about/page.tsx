@@ -46,32 +46,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* What I Do */}
+      {/* What I Do — service list + pathway diagram, side by side */}
       <section className="py-section bg-white">
-        <div className="max-w-3xl mx-auto px-8">
+        <div className="max-w-6xl mx-auto px-8">
           <h2 className="font-serif text-display text-navy-900 mb-12">{content.what_i_do.section_title}</h2>
-          <div className="space-y-8">
-            {content.what_i_do.items.map((item, i) => (
-              <div key={i} className="border-l-4 border-navy-900 pl-6">
-                <p className="font-serif text-title text-navy-900 mb-2">{item.label}</p>
-                <p className="font-sans text-body text-slate-500 leading-relaxed mb-2">{item.description}</p>
-                <Link href={item.link} className="inline-flex items-center font-sans text-sm text-cta-600 hover:text-cta-700">
-                  Learn more <ArrowRight className="w-3 h-3 ml-1" />
-                </Link>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="space-y-8">
+              {content.what_i_do.items.map((item, i) => (
+                <div key={i} className="border border-slate-200 p-8">
+                  <p className="font-serif text-title text-navy-900 mb-2">{item.label}</p>
+                  <p className="font-sans text-body text-slate-500 leading-relaxed mb-2">{item.description}</p>
+                  <Link href={item.link} className="inline-flex items-center font-sans text-sm text-cta-600 hover:text-cta-700">
+                    Learn more <ArrowRight className="w-3 h-3 ml-1" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <div className="md:sticky md:top-24 border border-slate-200 bg-white p-4">
+              <img
+                src="/images/pages/about-pathway.webp"
+                alt="From strategy to a working pipeline"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Pathway diagram */}
-      <section className="pb-section bg-white">
-        <div className="max-w-3xl mx-auto px-8">
-          <img
-            src="/images/pages/about-pathway.webp"
-            alt="From strategy to a working pipeline"
-            className="w-full h-auto"
-          />
         </div>
       </section>
 

@@ -66,7 +66,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
             {post.frontmatter.category && (
-              <span className="font-mono text-xs text-cta-600 uppercase tracking-[0.14em]">
+              <span className="font-mono text-xs text-navy-600 uppercase tracking-[0.14em]">
                 {post.frontmatter.category}
               </span>
             )}
@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
               prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
               prose-li:font-sans prose-li:text-body prose-li:text-slate-600 prose-li:mb-2
-              prose-blockquote:border-l-4 prose-blockquote:border-cta-500 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-slate-600
+              prose-blockquote:border-l-4 prose-blockquote:border-navy-900 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-slate-600
               prose-code:text-sm prose-code:bg-slate-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-navy-900
               prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:p-6 prose-pre:rounded
               prose-img:rounded prose-img:my-8"
@@ -142,14 +142,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Author Bio */}
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-8">
-          <div className="flex items-start gap-6 p-8 bg-slate-50 border-l-4 border-navy-900">
+          <div className="flex items-start gap-6 p-8 bg-slate-50 border border-slate-200">
             <div className="flex-1">
               <p className="font-mono text-xs text-slate-500 uppercase tracking-[0.18em] mb-2">About the Author</p>
               <h3 className="font-serif text-title text-navy-900 mb-3">
                 {post.frontmatter.author || "Anoop Kurup"}
               </h3>
               <p className="font-sans text-body text-slate-600 leading-relaxed mb-4">
-                Sales-systems consultant for founder-led services businesses. Based in Bangalore.
+                Sales-systems consultant for B2B services businesses. Based in Bangalore.
               </p>
               <Link
                 href="/about"

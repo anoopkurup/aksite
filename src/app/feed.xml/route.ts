@@ -37,7 +37,7 @@ export async function GET() {
     <title>Anoop Kurup — Blog</title>
     <link>${BASE_URL}/blog</link>
     <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Sales systems for founder-led services businesses: positioning, offers, outreach, and pipelines that don't depend on referrals.</description>
+    <description>Sales systems for B2B services businesses: positioning, offers, outreach, and pipelines that don't depend on referrals.</description>
     <language>en</language>
     <lastBuildDate>${new Date(posts[0]?.frontmatter.date ?? Date.now()).toUTCString()}</lastBuildDate>
 ${items.join('\n')}

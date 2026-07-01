@@ -20,7 +20,7 @@ export function GET() {
 
   const body = `# ${SITE.name}
 
-> ${SITE.authorRole}. Core message: "I fix sales for founder-led services businesses."
+> ${SITE.authorRole}. Core message: "I fix sales for B2B services businesses."
 
 Funnel: Sales Scorecard (free) → Pipeline Reality Check (₹25K) → CLEAR (₹75K–₹1.75L).
 

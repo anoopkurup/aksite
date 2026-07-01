@@ -55,7 +55,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             All case studies
           </Link>
 
-          <p className="font-mono text-xs text-cta-600 uppercase tracking-[0.16em] mb-6">
+          <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.16em] mb-6">
             {cs.industry}
           </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-5 leading-tight">

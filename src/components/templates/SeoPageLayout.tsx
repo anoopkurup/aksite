@@ -52,7 +52,7 @@ const PROSE_CLASSES = `prose prose-lg prose-slate max-w-none
   prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
   prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
   prose-li:font-sans prose-li:text-body prose-li:text-slate-600 prose-li:mb-2
-  prose-blockquote:border-l-4 prose-blockquote:border-cta-500 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-slate-600
+  prose-blockquote:border-l-4 prose-blockquote:border-navy-900 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-slate-600
   prose-img:rounded prose-img:my-8`;
 
 export default function SeoPageLayout({

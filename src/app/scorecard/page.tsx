@@ -4,7 +4,7 @@ import ScorecardTool from "./ScorecardTool";
 export const metadata: Metadata = {
   title: "The Sales Scorecard",
   description:
-    "How predictable is your pipeline? Ten questions, three minutes, no email required to see your score. A free self-assessment for founder-led services businesses.",
+    "How predictable is your pipeline? Ten questions, three minutes, no email required to see your score. A free self-assessment for B2B services businesses.",
   alternates: { canonical: "/scorecard" },
 };
 
@@ -13,7 +13,7 @@ export default function ScorecardPage() {
     <>
       <section className="min-h-[40vh] flex items-center bg-white">
         <div className="max-w-3xl mx-auto px-8 pt-24 pb-8 text-center">
-          <p className="font-mono text-xs text-cta-600 tracking-[0.18em] uppercase mb-8">
+          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
             Free Assessment
           </p>
           <h1 className="font-serif text-hero-mobile md:text-display text-navy-900 mb-6 leading-tight">

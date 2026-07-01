@@ -111,7 +111,7 @@
   }
 
   .blog-content blockquote {
-    @apply border-l-4 border-l-cta-500 pl-6 italic text-gray-600 my-8;
+    @apply border-l-4 border-l-navy-900 pl-6 italic text-gray-600 my-8;
   }
 
   .blog-content a {

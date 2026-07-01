@@ -3,8 +3,8 @@
 ## Project Overview
 Professional website for Anoop Kurup. Built with Next.js 15, Tailwind CSS, YAML-driven content.
 
-**Core message**: "I fix sales for founder-led services businesses."
-**Audience**: Founder-led B2B service firms (consulting, agency, training, professional services).
+**Core message**: "I fix sales for B2B services businesses."
+**Audience**: B2B service firms (consulting, agency, training, professional services). (Avoid the term "founder-led" as an audience descriptor in page copy — it read as confusing; say "B2B". The *concept* "founder-led sales" — the founder being the only salesperson — is a distinct term and stays where it names that problem, e.g. the `founder-led-sales-trap` post. Never state client revenue/earnings figures — it's a social taboo in India.)
 
 **The one funnel** — every page drives to the Sales Scorecard:
 ```
@@ -143,7 +143,7 @@ The site reads like a diagnostic instrument: honest, measured, mechanical. The p
 ### Colors
 - `navy-900` = `#1F3D73` — true navy. Headlines and dark sections. (Clearly blue and authoritative, not near-black. The whole `navy` ramp in `tailwind.config.ts` is tuned to this hue. Do **not** revert it to the old electric `#000080`, nor to the near-black `#0E1A2B` ink it briefly was.)
 - `slate-500/600`: Body text
-- `cta-500` (`#F97316`) / `cta-600` (`#EA580C`): the "Signal" orange — the gauge needle. Reserved for the one CTA + the meter fill + accents only.
+- `cta-500` (`#F97316`) / `cta-600` (`#EA580C`): the "Signal" orange — the gauge needle. **Reserved strictly for: the one filled CTA, orange-underline links (`border-b-2 border-cta-500`), the meter fill, key figures (a headline metric or price), and ✓ checkmarks. NOT eyebrows, NOT decorative card borders, NOT section labels** — scattering orange on decoration pulls the eye off the CTA. When in doubt, the element is navy, not orange.
 - Pure white backgrounds, no gradients
 
 ### Typography — three roles
@@ -153,15 +153,16 @@ The site reads like a diagnostic instrument: honest, measured, mechanical. The p
 - Scale: Hero 4.5rem, Display 3rem, Title 1.875rem, Body 1.125rem.
 
 ### The signature — "the Reading" (`src/components/Reading.tsx`)
-A mono label + value + segmented meter (orange fill = the needle). Used for the Scorecard result (the climax), the homepage hero teaser, and anywhere an honest measurement fits. Don't scatter meters where the data isn't a clean reading — prose results stay mono text, not meters.
+A mono label + value + segmented meter (orange fill = the needle). Used for the Scorecard result (the climax) and anywhere an honest measurement fits. Don't scatter meters where the data isn't a clean reading — prose results stay mono text, not meters. (It was removed from the homepage hero so orange there belongs to the CTA alone; the meter's home is the Scorecard.)
 
 ### CTA rule (one action sitewide)
 - **Filled-orange button = Take the Sales Scorecard, always.** Use `src/components/CTAButton.tsx` (`<CTAButton href={...}>`). It appears in the header, page heroes, and every page-end. Reads on white and on `navy-900`.
 - **Every other link = orange underline** (`border-b-2 border-cta-500`): PRC links, "Learn more", contact methods, inline links. Never give a non-Scorecard link the filled treatment.
 
 ### Patterns
-- Section eyebrows: `font-mono text-xs uppercase tracking-[0.18em]` (cta-600 on light, navy-600 for sub-labels).
-- Emphasis: Border-left accents (4px orange).
+- Section eyebrows: `font-mono text-xs uppercase tracking-[0.18em] text-navy-600` — **always navy, never orange** (they're labels, not CTAs).
+- Cards: neutral full border `border border-slate-200`, spaced apart (`gap-8`, never touching). **Don't** repeat the 4px orange/navy left-bar on every card — that sameness makes sections blend.
+- **Section distinction:** consecutive sections must not look alike. Give each its own device (icon cards / numbered circles / a vertical stepper / spaced cards) and alternate the background `white → slate-50 → white → … → navy-900` (dark closer). No two neighbours share the same background + device.
 - Section spacing: 8rem between sections. Minimal shadows, generous whitespace.
 
 ## Content Architecture

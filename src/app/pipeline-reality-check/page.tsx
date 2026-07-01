@@ -21,7 +21,7 @@ export default function PipelineRealityCheckPage() {
       {/* Hero */}
       <section className="min-h-[60vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-cta-600 tracking-[0.18em] uppercase mb-8">
+          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
             {content.hero.tier_label}
           </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-4">
@@ -38,38 +38,36 @@ export default function PipelineRealityCheckPage() {
         </div>
       </section>
 
-      {/* What you get */}
+      {/* What you get — checklist + process diagram, side by side */}
       <section className="py-section bg-slate-50">
-        <div className="max-w-4xl mx-auto px-8">
+        <div className="max-w-6xl mx-auto px-8">
           <h2 className="font-serif text-display text-navy-900 mb-12">
             {content.what_you_get.section_title}
           </h2>
-          <div className="space-y-4">
-            {content.what_you_get.items.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 bg-white p-5 border border-slate-100">
-                <CheckCircle className="w-5 h-5 text-cta-500 mt-0.5 flex-shrink-0" />
-                <p className="font-sans text-body text-slate-600">{item}</p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="space-y-4">
+              {content.what_you_get.items.map((item, i) => (
+                <div key={i} className="flex items-start gap-3 bg-white p-5 border border-slate-100">
+                  <CheckCircle className="w-5 h-5 text-cta-500 mt-0.5 flex-shrink-0" />
+                  <p className="font-sans text-body text-slate-600">{item}</p>
+                </div>
+              ))}
+            </div>
+            <div className="md:sticky md:top-24 border border-slate-200 bg-white p-4">
+              <img
+                src="/images/pages/prc-flow.webp"
+                alt="Pipeline Reality Check: your data in, one week, a written verdict out"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Process diagram */}
-      <section className="pb-section bg-slate-50">
-        <div className="max-w-3xl mx-auto px-8">
-          <img
-            src="/images/pages/prc-flow.webp"
-            alt="Pipeline Reality Check: your data in, one week, a written verdict out"
-            className="w-full h-auto"
-          />
         </div>
       </section>
 
       {/* Terms */}
       <section className="py-section bg-white">
         <div className="max-w-4xl mx-auto px-8">
-          <div className="bg-navy-50 border-l-4 border-navy-900 p-8 md:p-12">
+          <div className="bg-navy-50 border border-slate-200 p-8 md:p-12">
             <p className="font-mono text-title text-navy-900 mb-3">{content.terms.headline}</p>
             <p className="font-sans text-body text-slate-600 mb-4">{content.terms.body}</p>
             <p className="font-sans text-body text-cta-600 font-medium">{content.terms.credit_note}</p>

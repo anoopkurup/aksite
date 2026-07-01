@@ -7,9 +7,9 @@ import { breadcrumbSchema } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Founder-Led Services Firms",
+  title: "Case Studies — B2B Services Firms",
   description:
-    "How founder-led services firms replaced referral dependence with one sellable offer. Illustrative cases drawn from real consulting engagements, anonymised.",
+    "How B2B services firms replaced referral dependence with one sellable offer. Illustrative cases drawn from real consulting engagements, anonymised.",
   alternates: { canonical: "/case-studies" },
 };
 
@@ -28,14 +28,14 @@ export default function CaseStudiesPage() {
       {/* Hero */}
       <section className="min-h-[50vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-cta-600 tracking-[0.18em] uppercase mb-8">
+          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
             Case Studies
           </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
             When the offer was the problem.
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed">
-            Eight founder-led services firms, each stuck selling capability instead of an outcome.
+            Eight B2B services firms, each stuck selling capability instead of an outcome.
             Here is what changed when the offer became something a stranger could understand and buy.
           </p>
           <p className="font-mono text-xs text-slate-400 mt-6">
@@ -47,12 +47,12 @@ export default function CaseStudiesPage() {
       {/* Grid */}
       <section className="py-section bg-slate-50">
         <div className="max-w-5xl mx-auto px-8">
-          <div className="grid md:grid-cols-2 gap-px bg-slate-200 border border-slate-200">
+          <div className="grid md:grid-cols-2 gap-8">
             {studies.map((cs) => (
               <Link
                 key={cs.slug}
                 href={`/case-studies/${cs.slug}`}
-                className="group bg-white p-8 md:p-10 flex flex-col hover:bg-navy-50 transition-colors"
+                className="group border border-slate-200 bg-white p-8 md:p-10 flex flex-col hover:bg-navy-50 transition-colors"
               >
                 <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.16em] mb-5">
                   {cs.industry}

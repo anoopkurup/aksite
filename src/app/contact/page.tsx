@@ -22,7 +22,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-cta-600 tracking-[0.18em] uppercase mb-8">
+          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
             {content.hero.tier_label}
           </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
@@ -88,7 +88,7 @@ export default function ContactPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 border-l-4 border-navy-900">
+            <div className="bg-white p-8 border border-slate-200">
               <h3 className="font-serif text-title text-navy-900 mb-4">{content.fit.for_title}</h3>
               <ul className="space-y-3">
                 {content.fit.for_items.map((item, i) => (
@@ -100,7 +100,7 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 border-l-4 border-slate-200">
+            <div className="bg-white p-8 border border-slate-200">
               <h3 className="font-serif text-title text-slate-600 mb-4">{content.fit.not_for_title}</h3>
               <ul className="space-y-3">
                 {content.fit.not_for_items.map((item, i) => (

@@ -225,7 +225,7 @@ export interface PageContent<T> {
 // TypeScript Interfaces for YAML Content Structure
 // ============================================================================
 
-// Homepage Content — "I fix sales for founder-led services businesses"
+// Homepage Content — "I fix sales for B2B services businesses"
 export interface HomePageContent {
   meta: {
     title: string;

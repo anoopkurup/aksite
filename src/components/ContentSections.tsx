@@ -44,7 +44,7 @@ function CustomIcon({ type, className, size = 24 }: { type: string; className?: 
 
 // Decorative Line Divider Component - elegant gradient dividers with fade effect
 function DecorativeDivider({ color = 'orange' }: { color?: 'orange' | 'blue' }) {
-  const colorHex = color === 'orange' ? '#f97316' : '#2563eb'; // cta-500 and navy-600
+  const colorHex = color === 'orange' ? '#f97316' : '#324c77'; // cta-500 and navy-600
   const gradientId = `${color}Gradient`;
 
   return (
@@ -743,14 +743,14 @@ function PricingSection({ section, bgClass }: { section: ContentSection; bgClass
                   </div>
                   <ul className="space-y-3 mb-8">
                     {pricingItem.features?.map((feature: string, idx: number) => (
-                      <li key={idx} className={`flex items-center justify-center ${pricingItem.featured ? 'text-blue-100' : 'text-white/80'}`}>
+                      <li key={idx} className={`flex items-center justify-center ${pricingItem.featured ? 'text-white' : 'text-white/80'}`}>
                         <div className="w-2 h-2 bg-cta-500 rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                   {pricingItem.button && (
-                    <Button asChild className={`w-full ${pricingItem.featured ? 'bg-cta-500 text-black hover:bg-cta-600' : 'bg-navy-700 text-white hover:bg-[#1e40af]'}`}>
+                    <Button asChild className={`w-full ${pricingItem.featured ? 'bg-cta-500 text-black hover:bg-cta-600' : 'bg-navy-700 text-white hover:bg-navy-800'}`}>
                       <Link href={pricingItem.button.url || '#'}>{pricingItem.button.text || 'Get Started'}</Link>
                     </Button>
                   )}
@@ -843,10 +843,10 @@ function GuaranteeSection({ section, bgClass }: { section: ContentSection; bgCla
   return (
     <section className={`py-16 px-6 ${bgClass}`}>
       <div className="max-w-4xl mx-auto">
-        <Card className="p-8 bg-gradient-to-br from-navy-800 to-navy-700 text-white shadow-soft border-2 border-navy-600/30">
+        <Card className="p-8 bg-navy-900 text-white shadow-soft border-2 border-navy-600/30">
           <CardContent className="p-0 text-center">
             <div className="mb-6">
-              <CustomIcon type="shield" className="text-[#F25F5C] mx-auto" size={64} />
+              <CustomIcon type="shield" className="text-cta-500 mx-auto" size={64} />
             </div>
             {section.title && (
               <h2 className="text-3xl font-bold mb-6">{section.title}</h2>

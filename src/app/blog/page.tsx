@@ -6,8 +6,8 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog — Sales for Founder-Led Services Firms",
-  description: "Practical writing on sales for founder-led services businesses: packaging an offer, proving it against real prospects, and building a weekly motion that produces conversations.",
+  title: "Blog — Sales for B2B Services Firms",
+  description: "Practical writing on sales for B2B services businesses: packaging an offer, proving it against real prospects, and building a weekly motion that produces conversations.",
   alternates: { canonical: "/blog" },
 };
 
@@ -21,14 +21,14 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="min-h-[50vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-cta-600 tracking-[0.18em] uppercase mb-8">
+          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
             Blog
           </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
             Sales, offers, and pipeline.
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed">
-            Practical writing for founder-led services businesses: packaging an offer the market responds to, proving it against real prospects, and building a weekly motion that keeps producing conversations.
+            Practical writing for B2B services businesses: packaging an offer the market responds to, proving it against real prospects, and building a weekly motion that keeps producing conversations.
           </p>
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function BlogPage() {
                   {/* Meta */}
                   <div className="flex items-center gap-3 mb-4">
                     {post.frontmatter.category && (
-                      <span className="font-mono text-xs text-cta-600 uppercase tracking-[0.14em]">
+                      <span className="font-mono text-xs text-navy-600 uppercase tracking-[0.14em]">
                         {post.frontmatter.category}
                       </span>
                     )}
