@@ -15,7 +15,7 @@ tags: [clear, case-study]
 
 ---
 
-A founder-led boutique commercial law firm — a small partner group, deep expertise in a defined area of business law, and an excellent reputation among the clients it already had. Every new matter arrived by referral or repeat instruction. The firm had never needed to market itself, and didn't know where it would even begin.
+A B2B boutique commercial law firm — a small partner group, deep expertise in a defined area of business law, and an excellent reputation among the clients it already had. Every new matter arrived by referral or repeat instruction. The firm had never needed to market itself, and didn't know where it would even begin.
 
 ## Referral-bound, and built on the oldest model in the profession
 
@@ -25,7 +25,7 @@ When the firm tried to grow beyond its existing circle, there was simply nothing
 
 ## Turning a reactive practice into a proactive one
 
-The work began by narrowing who the firm was for: growing founder-led companies at the stage where legal exposure was mounting faster than their in-house ability to manage it. The buying trigger was reframed from reactive to proactive — instead of waiting for something to break, the firm anchored to a growth event that predictably *creates* legal risk: a fundraise, a wave of new contracts, a scaling team. The promise moved with it, from "we'll defend you when something breaks" to "your legal exposure is handled before it becomes a problem." That single shift moved the firm from emergency room to standing protection.
+The work began by narrowing who the firm was for: growing B2B companies at the stage where legal exposure was mounting faster than their in-house ability to manage it. The buying trigger was reframed from reactive to proactive — instead of waiting for something to break, the firm anchored to a growth event that predictably *creates* legal risk: a fundraise, a wave of new contracts, a scaling team. The promise moved with it, from "we'll defend you when something breaks" to "your legal exposure is handled before it becomes a problem." That single shift moved the firm from emergency room to standing protection.
 
 ## Giving the firm something a stranger could actually say yes to
 

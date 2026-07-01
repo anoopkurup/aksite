@@ -17,7 +17,7 @@ author: Anoop Kurup
 
 > *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
 
-A founder-led advertising-creative agency producing video shoots and graphics — polished ad films, campaign visuals, social creative. The work was good, the team capable, and the revenue came from a small handful of large clients. That last fact was both the agency's comfort and its quiet danger. A few big accounts paid the bills, which felt like stability, but it meant that losing even one of them would tear a hole in the business overnight. The founder knew he needed to spread the risk across many smaller clients. What he hadn't yet seen was how completely that shift would change the kind of agency he had to become.
+A B2B advertising-creative agency producing video shoots and graphics — polished ad films, campaign visuals, social creative. The work was good, the team capable, and the revenue came from a small handful of large clients. That last fact was both the agency's comfort and its quiet danger. A few big accounts paid the bills, which felt like stability, but it meant that losing even one of them would tear a hole in the business overnight. The founder knew he needed to spread the risk across many smaller clients. What he hadn't yet seen was how completely that shift would change the kind of agency he had to become.
 
 ## The comfortable trap of serving only big clients
 

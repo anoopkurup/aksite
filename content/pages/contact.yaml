@@ -3,13 +3,13 @@
 
 meta:
   title: "Contact"
-  description: "Get in touch. If you run a founder-led service business and you're ready to stop depending on referrals, I'd like to hear about it."
+  description: "Get in touch. If you run a B2B service business and you're ready to stop depending on referrals, I'd like to hear about it."
 
 hero:
   tier_label: "Get in Touch"
   title: "Let's talk about what's not working."
   body:
-    - "If you run a founder-led service business doing ₹2Cr–₹15Cr and growth depends entirely on your network, you're in the right place."
+    - "If you run an established B2B service business and growth still depends entirely on your network, you're in the right place."
     - "Tell me what's going on. I'll tell you if I can help."
 
 methods:
@@ -31,8 +31,8 @@ fit:
   section_title: "Before you reach out"
   for_title: "This is for you if..."
   for_items:
-    - "You run a founder-led B2B service firm — consulting, agency, training, professional services"
-    - "Your business does ₹2Cr–₹15Cr and growth depends on your personal network"
+    - "You run a B2B service firm — consulting, agency, training, professional services"
+    - "Your business is established, and growth still depends on your personal network"
     - "You're the one closing every deal and you're exhausted by it"
     - "You've tried marketing tactics that didn't stick"
     - "You want a system, not another experiment"

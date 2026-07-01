@@ -15,7 +15,7 @@ tags: [clear, case-study]
 
 ---
 
-A founder-led branding and design agency with a portfolio most firms would envy — sharp identities, thoughtful packaging, work that genuinely stood out on a shelf or a screen. And yet the agency lived with a quiet irony it had never quite named: a firm that sold *positioning* and *distinctiveness* for a living had none of its own. It was, to the market, simply another good design shop among many.
+A B2B branding and design agency with a portfolio most firms would envy — sharp identities, thoughtful packaging, work that genuinely stood out on a shelf or a screen. And yet the agency lived with a quiet irony it had never quite named: a firm that sold *positioning* and *distinctiveness* for a living had none of its own. It was, to the market, simply another good design shop among many.
 
 ## The cobbler's children
 

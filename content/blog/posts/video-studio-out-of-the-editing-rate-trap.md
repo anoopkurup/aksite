@@ -17,7 +17,7 @@ author: Anoop Kurup
 
 > *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
 
-A founder-led corporate-video and brand-film studio, doing genuinely good work — brand films, founder stories, product explainers — led by a founder with a decade-deep network. The studio closed business reliably whenever an old relationship came calling. With anyone new, though, the conversation always slid to the same place: *what's your per-video rate?*
+A B2B corporate-video and brand-film studio, doing genuinely good work — brand films, founder stories, product explainers — led by a founder with a decade-deep network. The studio closed business reliably whenever an old relationship came calling. With anyone new, though, the conversation always slid to the same place: *what's your per-video rate?*
 
 ## Being good was not the problem; being a category was
 
@@ -27,7 +27,7 @@ The founder's relationships hid the problem for years, because trust closed thos
 
 ## Fixing the fog before anything else
 
-Because the vague customer was the root cause, that is where the work began. The studio narrowed to founder-led B2B firms that needed to win trust at scale — companies whose buyers research them quietly before a high-value purchase. With the customer sharpened, the promise could change too. Instead of "you get a video", the studio started selling something closer to the buyer's real concern: your best sales conversations happen before you are even in the room, because your story is already doing the convincing. That single reframe lifted the firm off the editing bench and set it down next to the buyer's revenue problem, which is a very different place to be priced from.
+Because the vague customer was the root cause, that is where the work began. The studio narrowed to B2B firms that needed to win trust at scale — companies whose buyers research them quietly before a high-value purchase. With the customer sharpened, the promise could change too. Instead of "you get a video", the studio started selling something closer to the buyer's real concern: your best sales conversations happen before you are even in the room, because your story is already doing the convincing. That single reframe lifted the firm off the editing bench and set it down next to the buyer's revenue problem, which is a very different place to be priced from.
 
 ## Selling a set with a purpose, not videos by the unit
 

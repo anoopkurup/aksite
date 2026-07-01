@@ -15,7 +15,7 @@ tags: [clear, case-study]
 
 ---
 
-A founder-led branding and creative agency, eight people, a strong portfolio, and a founder well-networked through a local business community. The work was excellent. The trouble was that revenue swung violently — a good quarter on the back of one big rebrand, then a dry stretch while the founder, buried in delivery, did no selling at all.
+A B2B branding and creative agency, eight people, a strong portfolio, and a founder well-networked through a local business community. The work was excellent. The trouble was that revenue swung violently — a good quarter on the back of one big rebrand, then a dry stretch while the founder, buried in delivery, did no selling at all.
 
 ## Two problems that fed each other
 
@@ -25,7 +25,7 @@ There was a third, quieter cost. The agency had no entry point smaller than a fu
 
 ## Anchoring the firm to a moment the buyer could feel
 
-The work started by settling who the agency was for: growing founder-led firms whose brand had fallen behind their ambition. That gave the firm a buying trigger it could recognise — a funding round, a move into a new market, a leadership change — any moment that suddenly made the old brand feel like an embarrassment. The promise shifted from "we'll redesign your brand" to "your brand finally matches where the business is going", tied to a specific moment rather than a vague sense that things could look better.
+The work started by settling who the agency was for: growing B2B firms whose brand had fallen behind their ambition. That gave the firm a buying trigger it could recognise — a funding round, a move into a new market, a leadership change — any moment that suddenly made the old brand feel like an embarrassment. The promise shifted from "we'll redesign your brand" to "your brand finally matches where the business is going", tied to a specific moment rather than a vague sense that things could look better.
 
 ## Making the offer repeatable, and the delivery delegable
 

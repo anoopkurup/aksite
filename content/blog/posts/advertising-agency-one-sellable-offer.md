@@ -13,11 +13,11 @@ category: Case Studies
 read_time: 5 min read
 author: Anoop Kurup
 ---
-*How a founder-led advertising agency replaced referral dependence with a single, sellable offer*
+*How a B2B advertising agency replaced referral dependence with a single, sellable offer*
 
 > *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
 
-A founder-led advertising and outdoor-media agency, roughly ₹4 crore in revenue, eight people on the team. The craft was strong and the client list, built over twelve years, was respectable. But almost every new client arrived the same way — through a personal referral or a repeat buyer who already trusted the founder. He was the agency's only real salesperson, and his pitch changed with every conversation, because the firm "did everything": hoardings, campaign creative, digital, activations, the lot.
+A B2B advertising and outdoor-media agency, an eight-person team. The craft was strong and the client list, built over twelve years, was respectable. But almost every new client arrived the same way — through a personal referral or a repeat buyer who already trusted the founder. He was the agency's only real salesperson, and his pitch changed with every conversation, because the firm "did everything": hoardings, campaign creative, digital, activations, the lot.
 
 ## The problem wasn't the work — it was that nobody could buy it
 
@@ -47,4 +47,4 @@ The Sprint also became a front door rather than the whole house. Brands whose la
 
 The agency went to market with one thing it could name, price, and explain, and a clear answer to who it was for. The founder stopped improvising. Referrals finally had something concrete to refer *to*, and the firm had, for the first time, an offer that a prospect from outside the founder's network could understand and buy. And because every Sprint delivered produced a documented case, the proof base that had been keeping the offer in warm-only territory grew with each engagement instead of staying stuck.
 
-A founder-led firm that does everything is, in practice, unsellable to anyone outside the founder's network. One customer, one named deliverable, one price, one outcome — that discipline is what turns a capability list into something a stranger can buy.
+A B2B firm that does everything is, in practice, unsellable to anyone outside the founder's network. One customer, one named deliverable, one price, one outcome — that discipline is what turns a capability list into something a stranger can buy.

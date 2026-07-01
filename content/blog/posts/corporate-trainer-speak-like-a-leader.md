@@ -18,7 +18,7 @@ author: Anoop Kurup
 
 > *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
 
-A founder-led corporate training practice, built around a genuinely gifted communication-skills trainer. The work was good and the feedback from participants was warm. Yet winning corporate engagements was a grind — long conversations with HR that drifted, budgets that never quite materialised, and when a programme did close, a day-rate that felt far below what the trainer was worth.
+A B2B corporate training practice, built around a genuinely gifted communication-skills trainer. The work was good and the feedback from participants was warm. Yet winning corporate engagements was a grind — long conversations with HR that drifted, budgets that never quite materialised, and when a programme did close, a day-rate that felt far below what the trainer was worth.
 
 ## Good training, sold into the wrong slot
 

@@ -1,12 +1,12 @@
-# Homepage Content — "I fix sales for founder-led services businesses"
+# Homepage Content — "I fix sales for B2B services businesses"
 # Last updated: 2026-06-30 (CLEAR v5 copy)
 
 meta:
   title: "Anoop Kurup — I Fix Sales for Services Businesses"
-  description: "Sales systems for founder-led services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Start with the free Sales Scorecard."
+  description: "Sales systems for B2B services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Start with the free Sales Scorecard."
 
 hero:
-  headline: "I fix sales for founder-led services businesses."
+  headline: "I fix sales for B2B services businesses."
   body:
     - "You've built real expertise, and your clients love the work. But new business still arrives the way it always has — through referrals you can't predict, and through you personally selling every deal. When the referrals are flowing, you're busy. When they aren't, the pipeline goes quiet, and there's no second engine to fall back on."
     - "I package what you're best at into one offer the market actually responds to, then build the weekly sales motion that keeps producing conversations — so your pipeline stops depending on luck and starts depending on a system."
@@ -56,7 +56,7 @@ qualification:
   for_you:
     heading: "It's for you if…"
     items:
-      - "You run a founder-led B2B services firm — consulting, agency, training, or professional services."
+      - "You run a B2B services firm — consulting, agency, training, or professional services."
       - "You're mostly out of day-to-day delivery: your team or your systems handle the work, so your time can go into selling and building."
       - "Growth still depends on your network and your personal selling, and you can feel that ceiling."
       - "You want a working pipeline, not another marketing experiment."

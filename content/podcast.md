@@ -126,13 +126,13 @@ newsletter:
 
 ## About the Podcast
 
-Click, Brand & Beyond is where strategy meets execution. In each episode, I dive into the real challenges of building marketing systems that work—covering everything from positioning and messaging to AI workflows and lead generation.
+Strategy meets execution. Each episode, I take one real problem in building marketing that works — positioning, messaging, AI workflows, lead gen.
 
-No theory. No fluff. Just practical insights you can apply immediately to grow your business.
+No theory. No fluff. Just what you can use today.
 
 ### What You'll Learn:
-- Strategic positioning that differentiates your business
+- Positioning that sets you apart
 - Marketing systems that scale without burnout
-- AI workflows that enhance (not replace) human creativity
-- Lead generation tactics that actually work for service businesses
-- Behind-the-scenes looks at successful marketing transformations
+- AI workflows that boost your work, not replace it
+- Lead gen that works for service firms
+- Real marketing turnarounds, behind the scenes

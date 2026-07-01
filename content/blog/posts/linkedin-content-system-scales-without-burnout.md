@@ -26,7 +26,7 @@ This creates an unsustainable cycle:
 - Inconsistent posting when inspiration doesn't cooperate
 - Gradual decrease in posting frequency as the novelty wears off
 
-I've seen marketing agency founders who generated ₹4 crore in revenue from LinkedIn connections abandon their content efforts because the daily demands became unmanageable. The very success of their content created pressure that made the system unsustainable.
+I've seen marketing agency founders who won serious revenue from LinkedIn connections abandon their content efforts because the daily demands became unmanageable. The very success of their content created pressure that made the system unsustainable.
 
 The alternative isn't posting less frequently or hiring expensive content teams. It's designing systematic approaches that generate more content with less daily effort by focusing on three core components: idea pipeline, batching cadence, and repurposing rhythm.
 

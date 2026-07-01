@@ -25,7 +25,7 @@ This article is an attempt to get there.
 
 For most expert-founders, the business was built on a specific model: effort-driven delivery. The founder — or their team — is the primary input. Revenue is tied to time, responsiveness, and personal expertise. Clients pay for access to the founder's knowledge and judgment, and for the confidence that comes with having the go-to person on their side.
 
-This model is remarkably effective. It generates referrals, builds reputation, and produces real revenue without requiring a marketing machine or a structured sales process. Many B2B service businesses reach ₹2Cr–₹10Cr on this model alone.
+This model is remarkably effective. It generates referrals, builds reputation, and produces real revenue without requiring a marketing machine or a structured sales process. Many B2B service businesses reach real scale on this model alone.
 
 But it creates a specific kind of constraint when AI enters the picture. If work becomes faster and more systemised, the relationship between time and value breaks down. A deliverable that used to take 8 hours now takes 90 minutes. Does that mean the price drops? Does it mean the founder can serve more clients? Does it change what the client is actually paying for?
 

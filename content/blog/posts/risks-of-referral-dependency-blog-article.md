@@ -19,7 +19,7 @@ ESTIMATED READ TIME: 8 min
 
 ---
 
-Most founder-led service businesses run on referrals, and most of them are quietly proud of it. Twelve years in, the clients still arrive through introductions, the work is steady, and the founder takes it as proof that the model works. It does work — which is exactly what makes the risks of referral dependence so hard to see.
+Most B2B service businesses run on referrals, and most of them are quietly proud of it. Twelve years in, the clients still arrive through introductions, the work is steady, and the founder takes it as proof that the model works. It does work — which is exactly what makes the risks of referral dependence so hard to see.
 
 Referral dependence is the condition in which the vast majority of your clients come through introductions, and you have no reliable way to win work without them. The danger is not that referrals are bad. They are often your best clients. The danger is that depending on them carries a long-term cost that stays invisible while the work is flowing, and only becomes obvious when it slows down, by which point it is expensive and slow to fix. This article walks through what that cost actually is, and what to build instead.
 
