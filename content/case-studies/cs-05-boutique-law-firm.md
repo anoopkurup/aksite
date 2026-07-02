@@ -31,7 +31,7 @@ The work began by narrowing who the firm was for: growing B2B companies at the s
 
 The open-ended hourly model was packaged into a productised advisory offer — a defined, fixed-fee engagement with named deliverables: a risk review, a documented protection plan, and a set scope of ongoing counsel, with clear boundaries. For the first time the firm had something a buyer could see, price, and agree to *before* a crisis rather than during one. The language followed, from "we provide legal services" to "we keep your business legally protected as it grows."
 
-Legal work is a high-trust, warm purchase, and the firm's credibility lived in its reputation rather than in documented outcomes — so the approach strengthened what it genuinely had, a trusted name and a de-risked fixed-fee way in, rather than chasing a cold motion the market would never accept.
+Legal work is a high-trust, warm purchase, and the firm's credibility lived in its reputation rather than in documented outcomes — so the approach strengthened what it genuinely had, a trusted name and a de-risked fixed-fee way in, rather than chasing cold outreach the market would never accept.
 
 There was a human obstacle to handle as well. The partners were superb advisors but uneasy sellers; they associated selling with something slightly beneath the profession. The productised offer quietly solved this, because it turned the conversation from *selling* into simply *describing a defined service* — something the partners could do comfortably and without embarrassment. A little work on articulation got the lead partner to a clean, two-sentence description of the offer, which removed the discomfort that had kept the firm passive for years.
 

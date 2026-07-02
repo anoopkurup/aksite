@@ -90,7 +90,7 @@ Here's how I've transformed AIDA into a complete AI workflow that generates cons
 
 **Main Prompt:**
 ```
-You are a copywriter specializing in [YOUR INDUSTRY] for [TARGET AUDIENCE].
+You are a copywriter specialising in [YOUR INDUSTRY] for [TARGET AUDIENCE].
 
 Generate 10 attention-grabbing hooks for [CONTENT TYPE] about [TOPIC/OFFER].
 
@@ -124,7 +124,7 @@ Using this selected hook: [CHOSEN HOOK]
 
 Write 2-3 paragraphs that build interest by:
 - Expanding on the problem mentioned in the hook
-- Including specific examples or scenarios the audience recognizes
+- Including specific examples or scenarios the audience recognises
 - Highlighting consequences of not addressing this issue
 - Maintaining [BRAND VOICE] throughout
 
@@ -175,14 +175,14 @@ Generate 3 CTA variations:
 ```
 Review this complete [CONTENT TYPE]: [FULL CONTENT]
 
-Optimize for:
+Optimise for:
 1. Flow between AIDA stages (smooth transitions)
 2. Consistent brand voice throughout
 3. Appropriate length for [PLATFORM/FORMAT]
 4. Clarity and readability
 5. Compelling value proposition
 
-Provide the final optimized version.
+Provide the final optimised version.
 ```
 
 ## Advanced Framework Workflows
@@ -199,7 +199,7 @@ Identify the core problem [TARGET AUDIENCE] faces with [TOPIC/AREA].
 
 Make it specific and relatable:
 - Use their language/terminology
-- Reference situations they recognize immediately
+- Reference situations they recognise immediately
 - Avoid industry jargon
 - Connect to bigger impact on their business/life
 

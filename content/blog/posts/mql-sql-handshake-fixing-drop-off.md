@@ -47,7 +47,7 @@ Before fixing the handoff, you need to understand why marketing and sales typica
 
 Marketing teams typically qualify leads based on engagement signals and demographic fit:
 - Content consumption patterns that indicate interest
-- Behavioral triggers showing buying-related research
+- Behavioural triggers showing buying-related research
 - Company size, industry, and role matching ideal customer profiles
 - Form submissions and direct engagement with marketing materials
 
@@ -79,7 +79,7 @@ Instead of purely engagement-based or purely readiness-based qualification, deve
 
 **Engagement indicators:**
 - Specific content consumption patterns showing solution research
-- Behavioral sequences indicating problem recognition
+- Behavioural sequences indicating problem recognition
 - Direct responses to targeted campaigns or offers
 
 **Readiness indicators:**
@@ -147,7 +147,7 @@ Marketing must provide sales with actionable context for each lead:
 **Background information:**
 - Specific content consumed and engagement timeline
 - Campaign source and messaging that generated the lead
-- Behavioral indicators showing problem urgency or timing
+- Behavioural indicators showing problem urgency or timing
 
 **Suggested approach:**
 - Recommended initial conversation topics based on engagement history
@@ -178,7 +178,7 @@ Effective handoffs require more than CRM notifications—they need structured pr
 
 **Step 1: Automated Context Package (Immediate)**
 - CRM record creation with complete engagement history
-- Behavioral timeline showing progression to qualification
+- Behavioural timeline showing progression to qualification
 - Recommended approach and conversation starters
 - Priority level and expected response timeline
 
@@ -285,7 +285,7 @@ Establish systematic service level agreements:
 - Feedback loop processes for continuous optimisation
 - Performance monitoring and exception reporting systems
 
-Begin with pilot program on subset of leads before full rollout.
+Begin with pilot programme on subset of leads before full rollout.
 
 ### Phase 4: Deploy Technology and Process Integration (Week 7-8)
 

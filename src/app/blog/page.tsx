@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog — Sales for B2B Services Firms",
-  description: "Practical writing on sales for B2B services businesses: packaging an offer, proving it against real prospects, and building a weekly motion that produces conversations.",
+  description: "Practical writing on sales for B2B services businesses: packaging an offer, proving it against real prospects, and building a weekly rhythm that produces conversations.",
   alternates: { canonical: "/blog" },
 };
 
@@ -28,7 +28,7 @@ export default function BlogPage() {
             Sales, offers, and pipeline.
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed">
-            Practical writing for B2B services businesses: packaging an offer the market responds to, proving it against real prospects, and building a weekly motion that keeps producing conversations.
+            Practical writing for B2B services businesses: packaging an offer the market responds to, proving it against real prospects, and building a weekly rhythm that keeps producing conversations.
           </p>
         </div>
       </section>

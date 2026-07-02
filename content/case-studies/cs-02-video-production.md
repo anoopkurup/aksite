@@ -31,7 +31,7 @@ Because the vague customer was the root cause, that is where the work began. The
 
 Rather than quote for videos one at a time, the studio packaged a Trust-Building Film Set — a defined suite built to a documented purpose: a founder story, two customer-proof films, and a short explainer, with revision limits and usage rights spelled out plainly. The language moved with the structure, from "we make videos" to "we build the films that close your buyers before the sales call."
 
-Honesty about the market mattered here, and the studio didn't pretend otherwise. This was a warm offer by nature — it only worked once a buyer already believed that film would shift their numbers, which most cold buyers did not. So instead of forcing a cold-outreach motion the market would reject, the studio strengthened what it could: it documented the before-and-after on its own funnel, and de-risked the first engagement so trying the studio felt safe. Proof was the binding constraint, so the engagement was designed to manufacture documented cases rather than just produce more showreel.
+Honesty about the market mattered here, and the studio didn't pretend otherwise. This was a warm offer by nature — it only worked once a buyer already believed that film would shift their numbers, which most cold buyers did not. So instead of forcing cold outreach the market would reject, the studio strengthened what it could: it documented the before-and-after on its own funnel, and de-risked the first engagement so trying the studio felt safe. Proof was the binding constraint, so the engagement was designed to manufacture documented cases rather than just produce more showreel.
 
 ## Letting the work warm the market
 

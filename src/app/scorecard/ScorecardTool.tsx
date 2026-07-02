@@ -103,7 +103,7 @@ const questions: Question[] = [
   },
   {
     id: 7,
-    dimension: "Sales motion",
+    dimension: "Sales rhythm",
     text: "How many sales conversations did you have in the last 30 days?",
     observation:
       "Too few real sales conversations are happening. Pipeline is an output of conversations — and the input is thin.",
@@ -185,7 +185,7 @@ function getBand(total: number): Band {
     name: "System-Ready",
     range: "66–100",
     verdict:
-      "Your foundation is solid. Your question isn't whether selling works — it's scale and consistency. You may need sharpening rather than rebuilding: tightening the offer, widening a channel, or making the motion run without you. The leverage here is real and close.",
+      "Your foundation is solid. Your question isn't whether selling works — it's scale and consistency. You may need sharpening rather than rebuilding: tightening the offer, widening a channel, or making the weekly routine run without you. The fixes are small and the returns are real.",
   };
 }
 

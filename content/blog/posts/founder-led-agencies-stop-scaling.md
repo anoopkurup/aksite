@@ -20,13 +20,13 @@ The usual diagnoses — tougher market, younger competition, price pressure — 
 
 This article walks through what that structural problem looks like in practice, what it costs the business each year, and the specific shift that needs to happen for a mature founder-led agency to break through its ceiling.
 
-## The Sales Motion That Never Got Replaced
+## The Sales Routine That Never Got Replaced
 
 When an agency is new, every pitch is custom. Every deck is built from scratch. Every scope is negotiated from zero. The founder is the salesperson, the strategist, and the reassurance all at once. That mode of selling works — it's how the first hundred clients get closed.
 
 The problem is that it never gets replaced.
 
-Twenty years later, the agency has grown a team, added service lines, sometimes spun up sister brands, picked up international clients. But the sales motion looks identical to year one. Custom deck. Custom scope. Custom price. Every single time.
+Twenty years later, the agency has grown a team, added service lines, sometimes spun up sister brands, picked up international clients. But the sales routine looks identical to year one. Custom deck. Custom scope. Custom price. Every single time.
 
 If you run a mature agency, the symptoms are recognisable:
 
@@ -76,7 +76,7 @@ The cumulative effect is exact: a 20-year-old agency ends up with the revenue ce
 
 Here's the uncomfortable part: the reason this doesn't get fixed is that the founder is good at what they do.
 
-When the current sales motion is customising every pitch, and the founder happens to be a world-class strategist, the pitches convert. Not at the rate they should — but well enough that the pain never becomes acute enough to force change.
+When the current sales routine is customising every pitch, and the founder happens to be a world-class strategist, the pitches convert. Not at the rate they should — but well enough that the pain never becomes acute enough to force change.
 
 Every year the firm closes enough deals, through custom-built decks and founder-led sales, to keep the doors open and the team paid. The shortfall against what the firm could be is invisible, because there's no counterfactual. You don't see the deals that never closed because the sales cycle was too long. You don't see the fees you should have commanded because the pricing was negotiated. You just see the deals that came through.
 
@@ -84,7 +84,7 @@ This is why most founder-led agencies will spend the next decade in exactly the 
 
 ## The CLEAR Framework: From Service to Offer
 
-The shift is not about commoditising the work. The work stays as sophisticated, strategic, and bespoke in delivery as it always was. What changes is the commercial architecture around the work — the offer, the pricing, the sales motion, the ladder of engagements that sit alongside the flagship.
+The shift is not about commoditising the work. The work stays as sophisticated, strategic, and bespoke in delivery as it always was. What changes is the commercial architecture around the work — the offer, the pricing, the sales routine, the ladder of engagements that sit alongside the flagship.
 
 Five things need to be resolved, in a specific order:
 
@@ -98,7 +98,7 @@ Five things need to be resolved, in a specific order:
 
 **R — Ready Extensions.** What sits before, alongside, and after the flagship offer. Smaller entry offers that lower the barrier. Larger extension offers that grow the relationship. Together with the flagship, this becomes a ladder.
 
-The output is not a brochure or a menu. It is a specific, named flagship offer — with a price, a defined scope, and a sales motion that doesn't depend on the founder building a custom deck each time. Around that flagship sit smaller entry offers and larger extension offers that form a ladder, so a prospect can enter the relationship at any point and move up naturally.
+The output is not a brochure or a menu. It is a specific, named flagship offer — with a price, a defined scope, and a sales routine that doesn't depend on the founder building a custom deck each time. Around that flagship sit smaller entry offers and larger extension offers that form a ladder, so a prospect can enter the relationship at any point and move up naturally.
 
 When this is done well, three things shift at once. The sales cycle compresses, because the offer is already defined and only the fit needs to be assessed. The partner's time stops being spent on spec work, because the pitch is built once and reused. And the pricing ceiling rises, because the buyer sees a defined product rather than a negotiable service.
 

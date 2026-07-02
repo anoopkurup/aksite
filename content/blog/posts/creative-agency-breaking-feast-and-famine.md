@@ -38,7 +38,7 @@ The bespoke-every-time model was replaced with a productised Brand Clarity Sprin
 
 And selling was where the productised offer earned its keep. Because the founder had always been the bottleneck, his ability to sell was treated as the centre of the problem, not an afterthought. A repeatable offer made his pitch repeatable for the first time — the same offer, the same words, every conversation — so selling no longer required him to think it all through from scratch each time. That, in turn, meant he could sell in the gaps between delivery instead of only after a project had ended and the pipeline had already gone cold.
 
-## Keeping the firm alive while the new motion took hold
+## Keeping the firm alive while the new system took hold
 
 A defined four-stage process let the team carry delivery while the founder stayed in the market. Cash flow was checked openly, because it mattered: the agency could not survive a twelve-week warming sequence with no revenue coming in. So the offer was structured for a fast first close — a small, quick entry engagement that produced revenue inside the founder's runway, rather than a long nurture that would have starved the firm before it ever paid off.
 

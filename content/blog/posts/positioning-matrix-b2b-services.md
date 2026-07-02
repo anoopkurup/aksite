@@ -61,7 +61,7 @@ Value measures the total business impact of solving the problem—not just immed
 
 **Low-value solutions** create incremental improvements or cost savings in non-critical areas. These might include minor process optimisations or efficiency gains that are nice to have but don't fundamentally change business outcomes.
 
-**High-value solutions** create competitive advantages, unlock revenue opportunities, or mitigate existential business risks. These solutions don't just solve immediate problems—they transform how the business operates or competes.
+**High-value solutions** create a competitive advantage, open new revenue, or remove an existential risk. They change how the business operates or competes, well beyond the immediate problem.
 
 For example, a marketing automation setup might save 10 hours per week (low value), while a complete lead generation system overhaul might double qualified prospects and reduce customer acquisition costs by 40% (high value).
 

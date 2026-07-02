@@ -36,7 +36,7 @@ The reason most expert-founders discount under price pressure has nothing to do 
 
 When you're running one or two active proposals at any given time, that conversation feels existential. This is the deal. If this doesn't close, next month becomes uncertain. That pressure doesn't stay hidden. It shows up in how quickly the discount appears. Experienced decision-makers — senior partners, founders who run their own businesses — can sense it. When they do, they push harder.
 
-In a proposal walkthrough this week — six-month program, senior decision-maker — the price question arrived within thirty seconds of pricing going on screen. I've been in that position before, in an earlier stage of my practice, when a thin pipeline made that question very hard to answer honestly. This time it wasn't. Not because I've become a sharper negotiator. Because I had other conversations already active.
+In a proposal walkthrough this week — six-month programme, senior decision-maker — the price question arrived within thirty seconds of pricing going on screen. I've been in that position before, in an earlier stage of my practice, when a thin pipeline made that question very hard to answer honestly. This time it wasn't. Not because I've become a sharper negotiator. Because I had other conversations already active.
 
 ## The Discount That Closes the Deal Often Costs More Than You Think
 
@@ -56,11 +56,11 @@ The alternative to discounting is structural flexibility — adjusting what the 
 
 In that proposal walkthrough, my response to the price question was immediate. I said: we don't discount the system. But we can adjust the scope or the risk. Three models.
 
-Standard Retainer — the full six-month program, fixed monthly fee, complete scope of work.
+Standard Retainer — the full six-month programmeme, fixed monthly fee, complete scope of work.
 
 Shared-Risk — lower upfront investment, with a percentage tied to the revenue outcomes we deliver together.
 
-Modular Sprint — a focused ninety-day engagement on one specific problem first, before committing to the full program.
+Modular Sprint — a focused ninety-day engagement on one specific problem first, before committing to the full programme.
 
 Three structurally different options, each designed for a different appetite — for investment, for timeline, for risk.
 

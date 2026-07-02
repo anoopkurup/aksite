@@ -261,4 +261,4 @@ Most importantly, commit to the systematic approach. Marketing systems work thro
 
 Your expertise deserves better than hoping the next referral comes in time to make payroll. It deserves systematic marketing that creates predictable growth while referrals provide bonus opportunities.
 
-Ready to build your marketing system? [CLEAR](/clear) is how I install one with you — one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Start with the free [Sales Scorecard](/scorecard) to see what to fix first.
+Ready to build your marketing system? [CLEAR](/clear) is how I install one with you — one packaged offer, proven against real prospects, with a weekly rhythm that produces conversations. Start with the free [Sales Scorecard](/scorecard) to see what to fix first.

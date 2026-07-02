@@ -9,7 +9,8 @@ hero:
   headline: "I'm a sales-systems consultant."
   body:
     - "After a decade helping founders get strategic clarity, I kept seeing the same ending: perfect clarity, and still no pipeline. The strategy was right, the positioning was sharp — and nothing was selling, because a roadmap doesn't make calls or close deals. So I stopped stopping at the roadmap. Now I build the selling system itself, and I stay until it runs."
-    - "My background is in business research, intellectual property, and marketing strategy — fifteen-plus years of it — which is where I learned to find the pattern inside a business that the founder is too close to see. I work with founders directly, one engagement at a time, from Bangalore. I don't run a team you'll never meet or hand you to an account manager: when you work with me, you work with me — including on your sales calls."
+    - "My route here wasn't a straight line. I started in a research lab at GE, testing whether a new plastic could survive commercial production — the machines did the work, and I learned what a real system looks like. Then patents and competitive strategy. Then an intellectual-property firm I built and exited, and marketing brands after that. The common thread was always the same: finding the pattern inside a business that its founder is too close to see."
+    - "I've also sold my own work all along — so I know the founder-selling trap from the inside. I work with founders directly, one engagement at a time, from Bangalore. I don't run a team you'll never meet or hand you to an account manager: when you work with me, you work with me — including on your sales calls."
 
 pattern:
   section_title: "What I care about."
@@ -26,7 +27,7 @@ what_i_do:
       description: "A ₹25,000 done-for-you diagnosis of your last 12 months of deals: where your next clients will come from, and where they won't. One week, a written verdict."
       link: "/pipeline-reality-check"
     - label: "Then CLEAR."
-      description: "The engagement where I install the sales system — one packaged offer the market has responded to, a motion you've already run with me on the calls beside you, written down and yours."
+      description: "The engagement where I install the sales system — one packaged offer the market has responded to, a routine you've already run with me on the calls beside you, written down and yours."
       link: "/clear"
 
 podcast:

@@ -180,6 +180,11 @@ A mono label + value + segmented meter (orange fill = the needle). Used for the 
 - Funnel: Scorecard (free) → Pipeline Reality Check (₹25K, fee credited to CLEAR) → CLEAR (₹2.5L over 3 months, month-to-month; ₹75K Lite tier).
 
 ## Brand Voice
+- **The voice authority is Anoop's Tone of Voice Guide**: `/Users/anoopkurup/Documents/CMWebsite/PRD/Tone of Voice Guide.md` (writing samples in `voice-samples/` beside it). Read it before writing or editing any site copy. The non-negotiables:
+  - **Never the word "motion"** for a repeatable sales/pipeline activity — Anoop dislikes it. Say rhythm, routine, the thing you do weekly, or a repeatable activity. (Sitewide signature line uses "weekly rhythm".)
+  - **Indian English**: -ise not -ize, colour/behaviour/centre, "programme" (except software), ₹ and lakh/crore. No American idioms (home run, ballpark, touch base…) or corporate jargon (leverage-as-filler, move the needle, low-hanging fruit, bandwidth…).
+  - **No AI tells**: "in today's fast-paced world", "it's important to note", "let's dive in", "robust", and empty symmetry like "it's not just X, it's Y".
+  - Plain over clever, concrete over abstract, calm authority — state things, don't sell them. Open with a hook, teach through analogy, first-person experience as proof.
 - First person singular: "I fix," "I build," "I'm in the room." Never "we" (solo practice).
 - No "help/guide/coach/empower" in headlines. No "cutting-edge/bespoke/holistic".
 - Direct, honest, problem-first. Short declarative sentences. Prices in ₹, stated plainly.

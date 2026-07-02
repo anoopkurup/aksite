@@ -93,7 +93,7 @@ export function organizationSchema(): Json {
     founder: { '@type': 'Person', name: SITE.author },
     areaServed: 'Worldwide',
     description:
-      'Sales systems for B2B services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations.',
+      'Sales systems for B2B services firms: one packaged offer, proven against real prospects, with a weekly rhythm that produces conversations.',
     sameAs: [SITE.linkedin],
   };
 }
