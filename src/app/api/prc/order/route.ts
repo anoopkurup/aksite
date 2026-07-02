@@ -8,7 +8,10 @@ export async function POST() {
   const keyId = process.env.RAZORPAY_KEY_ID;
   const keySecret = process.env.RAZORPAY_KEY_SECRET;
   if (!keyId || !keySecret) {
-    return NextResponse.json({ error: "Payments not configured" }, { status: 500 });
+    // Names only, never values — helps spot a typo'd/mis-scoped var in Vercel.
+    const missing = [!keyId && "RAZORPAY_KEY_ID", !keySecret && "RAZORPAY_KEY_SECRET"].filter(Boolean);
+    const similar = Object.keys(process.env).filter((k) => /razor/i.test(k));
+    return NextResponse.json({ error: "Payments not configured", missing, similar }, { status: 500 });
   }
 
   const res = await fetch("https://api.razorpay.com/v1/orders", {
