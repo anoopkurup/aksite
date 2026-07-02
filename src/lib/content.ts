@@ -4,75 +4,11 @@ import matter from 'gray-matter';
 
 const CONTENT_PATH = path.join(process.cwd(), 'content');
 
-export interface ContentSection {
-  type: string;
-  class?: string;
-  header?: {
-    title?: string;
-    subtitle?: string;
-  };
-  title?: string;
-  description?: string;
-  content?: string;
-  grid_class?: string;
-  items?: Array<{
-    icon?: string;
-    iconType?: string;
-    title?: string;
-    subheading?: string;
-    description?: string;
-    features?: string[];
-    link?: {
-      url?: string;
-      text?: string;
-    };
-    highlight?: boolean;
-    number?: string;
-    label?: string;
-    quote?: string;
-    author?: string;
-    role?: string;
-    company?: string;
-    results?: string;
-    question?: string;
-    answer?: string;
-    name?: string;
-    price?: string;
-    featured?: boolean;
-    button?: {
-      text?: string;
-      url?: string;
-      class?: string;
-    };
-  }>;
-  button?: {
-    text?: string;
-    url?: string;
-  };
-  buttons?: Array<{
-    text?: string;
-    url?: string;
-  }>;
-}
-
-export interface HeroMedia {
-  type: 'image' | 'video';
-  url: string;
-  thumbnail?: string;
-  alt?: string;
-}
-
 export interface ContentPage {
   slug: string;
   frontmatter: {
     title: string;
     description: string;
-    content_class?: string;
-    hero_image?: string;
-    hero_video_url?: string;
-    hero_video_thumbnail?: string;
-    hero_media_type?: 'image' | 'video';
-    sections?: ContentSection[];
     cta?: {
       title?: string;
       subtitle?: string;
@@ -103,108 +39,6 @@ export function getContentPage(relativePath: string): ContentPage | null {
     console.error(`Error reading content file: ${relativePath}`, error);
     return null;
   }
-}
-
-export function getAllContentFiles(directory: string): string[] {
-  try {
-    const fullPath = path.join(CONTENT_PATH, directory);
-    const files = fs.readdirSync(fullPath);
-    return files
-      .filter((file) => file.endsWith('.md') && !file.startsWith('_'))
-      .map((file) => file.replace('.md', ''));
-  } catch (error) {
-    console.error(`Error reading directory: ${directory}`, error);
-    return [];
-  }
-}
-
-// Helper function to convert icon names from content to LineIcon types
-export function convertIconName(iconName?: string): string {
-  if (!iconName) return 'chart';
-  
-  const iconMap: Record<string, string> = {
-    'icon-chart': 'chart',
-    'icon-computer': 'monitor',
-    'icon-monitor': 'monitor',
-    'icon-target': 'target',
-    'icon-handshake': 'handshake',
-    'icon-graduation': 'graduation',
-    'icon-robot': 'cpu',
-    'icon-funnel': 'funnel',
-    'icon-scale': 'scale',
-    'icon-shield': 'shield',
-  };
-
-  return iconMap[iconName] || iconName.replace('icon-', '') || 'chart';
-}
-
-
-// Helper function to process hero media configuration from frontmatter
-export function processHeroMedia(frontmatter: ContentPage['frontmatter']): HeroMedia | null {
-  // Check for explicit media type first
-  if (frontmatter.hero_media_type === 'video' && frontmatter.hero_video_url) {
-    return {
-      type: 'video',
-      url: frontmatter.hero_video_url,
-      thumbnail: frontmatter.hero_video_thumbnail,
-      alt: `Video: ${frontmatter.title}`
-    };
-  }
-  
-  // Check for video URL (backwards compatibility)
-  if (frontmatter.hero_video_url) {
-    return {
-      type: 'video',
-      url: frontmatter.hero_video_url,
-      thumbnail: frontmatter.hero_video_thumbnail,
-      alt: `Video: ${frontmatter.title}`
-    };
-  }
-  
-  // Check for image (existing behavior)
-  if (frontmatter.hero_image) {
-    return {
-      type: 'image',
-      url: frontmatter.hero_image,
-      alt: frontmatter.title
-    };
-  }
-  
-  return null;
-}
-
-/**
- * Extract YouTube video ID from video URL and return thumbnail URL
- * Supports both embed and watch URLs
- */
-export function getYouTubeThumbnail(video_url?: string): string | null {
-  if (!video_url) return null;
-
-  // Extract video ID from various YouTube URL formats
-  let videoId: string | null = null;
-
-  // Format: https://www.youtube.com/embed/VIDEO_ID
-  const embedMatch = video_url.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/);
-  if (embedMatch) {
-    videoId = embedMatch[1];
-  }
-
-  // Format: https://www.youtube.com/watch?v=VIDEO_ID
-  const watchMatch = video_url.match(/[?&]v=([a-zA-Z0-9_-]+)/);
-  if (watchMatch) {
-    videoId = watchMatch[1];
-  }
-
-  // Format: https://youtu.be/VIDEO_ID
-  const shortMatch = video_url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
-  if (shortMatch) {
-    videoId = shortMatch[1];
-  }
-
-  if (!videoId) return null;
-
-  // Return high-quality thumbnail URL
-  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 }
 
 // ============================================================================

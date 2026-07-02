@@ -1,73 +1,20 @@
 ---
-title: "Thank You!"
-description: "Thank you for your interest. We'll be in touch soon."
-layout: "single"
-
-sections:
-  - type: "content"
-    class: "about"
-    style: "margin-bottom: 4rem;"
-    content: |
-      ## Your Message Has Been Received
-      
-      Your submission has been received successfully. I appreciate you taking the time to reach out, and I'm excited to help you grow your business.
-
-  - type: "grid"
-    class: "services"
-    style: "margin-bottom: 4rem;"
-    header:
-      title: "What Happens Next?"
-      subtitle: "Here's what you can expect from me"
-    grid_class: "grid-3"
-    items:
-      - title: "Email Inquiries"
-        description: "I typically respond within **24-48 hours** during business days with personalised insights for your situation."
-      - title: "Workshop Applications"
-        description: "You'll receive confirmation and detailed next steps within **2 business days** of your application."
-      - title: "Newsletter Subscriptions"
-        description: "Welcome email with valuable resources and actionable insights sent **immediately** to your inbox."
-
-  - type: "content"
-    class: "services"
-    style: "margin-bottom: 4rem;"
-    content: |
-      ## What You'll Receive
-      
-      Depending on what you signed up for, you'll get access to:
-      
-      - **Workshop details and enrollment information** — Complete program breakdowns with clear next steps
-      - **Valuable resources and actionable insights** — Immediately applicable strategies for your business
-      - **Updates on new AI solutions and business strategies** — Stay ahead with the latest marketing innovations
-      - **Exclusive content not available elsewhere** — Insider knowledge reserved for my community
-
-  - type: "grid"
-    class: "services"
-    style: "margin-bottom: 4rem;"
-    header:
-      title: "Explore While You Wait"
-      subtitle: "Get started with these valuable resources"
-    grid_class: "grid-3"
-    items:
-      - title: "AI Solutions"
-        description: "LinkedIn content, Instagram posts, and blog article services that drive results for professional service businesses."
-        link:
-          url: "/ai-solutions/"
-          text: "Explore Solutions"
-      - title: "Workshops"
-        description: "100 Day Lead Generation Sprint program designed to scale your lead generation system and create a process."
-        link:
-          url: "/workshops/"
-          text: "View Workshops"
-      - title: "Blog"
-        description: "Latest insights on marketing, business growth, and AI-powered strategies that actually work."
-        link:
-          url: "/blog/"
-          text: "Read Articles"
-
-  - type: "content"
-    class: "about"
-    content: |
-      ### Need Help?
-      
-      **Questions?** Feel free to send an email to me anytime. I read and respond to every message personally.
+title: "Thank You"
+description: "Your message has been received. I reply personally within 1–2 business days."
+cta:
+  title: "While you wait"
+  subtitle: "The Sales Scorecard takes 3 minutes and shows you exactly where your sales system is leaking. Score shown immediately, no email required."
+  button:
+    text: "Take the Sales Scorecard"
+    url: "/scorecard"
 ---
+
+## Your message has been received
+
+I read every message myself and reply within 1–2 business days.
+
+In the meantime:
+
+- [Take the Sales Scorecard](/scorecard) — 10 questions, 3 minutes, and you'll know where your sales system is leaking.
+- [Read the case studies](/case-studies) — how these problems got fixed in past consulting engagements.
+- [Browse the blog](/blog) — how I think about pipelines, positioning, and founder-led sales.

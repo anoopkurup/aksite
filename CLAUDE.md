@@ -89,17 +89,14 @@ aksite-nextjs/
 │   │   ├── Footer.tsx            # Clean footer
 │   │   ├── ContentPage.tsx       # MD-driven page wrapper
 │   │   ├── PageTemplate.tsx      # Hero + layout template
-│   │   ├── ContentSections.tsx   # Dynamic content renderer
-│   │   ├── HeroMedia.tsx         # Image/video hero media
-│   │   ├── LineIcon.tsx          # Custom line icons
-│   │   └── ui/                   # shadcn/ui components (accordion, button, card)
+│   │   └── templates/            # SEO page templates (SeoPageLayout + pillar/subpillar/spoke/vertical)
 │   └── lib/
 │       ├── content.ts            # YAML + markdown content loaders, TS interfaces
 │       ├── analytics.ts          # trackEvent() — dataLayer/gtag-safe events
 │       ├── blog.ts               # Blog post loaders (content/blog/posts)
 │       ├── markdown.ts           # remark/rehype markdown → HTML
-│       ├── icons.ts              # Icon registry
-│       └── utils.ts              # Utility functions
+│       ├── contentMap.ts         # SEO content map (27-page build; status gates indexability)
+│       └── seo.ts                # Metadata + JSON-LD schema builders
 ├── public/images/                # Static images (blog images: public/images/blog/<slug>/)
 └── tailwind.config.ts
 ```

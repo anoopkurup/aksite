@@ -1,14 +1,12 @@
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
-import rehypeHighlight from 'rehype-highlight';
 import rehypeStringify from 'rehype-stringify';
 
 export async function markdownToHtml(markdown: string): Promise<string> {
   const result = await remark()
     .use(remarkGfm) // GitHub Flavored Markdown
     .use(remarkRehype) // Convert markdown to HTML
-    .use(rehypeHighlight) // Syntax highlighting for code blocks
     .use(rehypeStringify) // Convert to string
     .process(markdown);
   
@@ -29,22 +27,4 @@ export function formatDate(dateString: string): string {
     month: 'long',
     day: 'numeric'
   });
-}
-
-/**
- * Convert basic markdown formatting to HTML for use in components
- * Supports: **bold**, *italic*, and [link](url) text
- */
-export function processInlineMarkdown(text: string): string {
-  if (!text) return '';
-
-  return text
-    // Handle links first to avoid conflicts with other formatting
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-navy-600 hover:text-cta-600 underline font-medium transition-colors">$1</a>')
-    // Handle bold text with proper styling
-    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-navy-900">$1</strong>')
-    // Handle italic text
-    .replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em class="italic">$1</em>')
-    // Convert line breaks
-    .replace(/\n/g, '<br />');
 }

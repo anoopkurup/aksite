@@ -1,5 +1,4 @@
 import PageTemplate from "@/components/PageTemplate";
-import ContentSections from "@/components/ContentSections";
 import Link from "next/link";
 import { ContentPage as ContentPageType } from "@/lib/content";
 import { markdownToHtml } from "@/lib/markdown";
@@ -39,11 +38,6 @@ export default async function ContentPage({ contentData, heroBackground = "white
       heroBackground={heroBackground}
       heroIcon={heroIcon}
     >
-      {/* Structured sections (legacy content model) */}
-      {frontmatter.sections && (
-        <ContentSections sections={frontmatter.sections} />
-      )}
-
       {/* Markdown body (legal, podcast, and other simple pages) */}
       {bodyHtml && (
         <section className="py-section bg-white">
