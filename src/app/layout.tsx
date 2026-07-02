@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import JsonLd from "@/components/JsonLd";
 import { personSchema, organizationSchema, websiteSchema } from "@/lib/seo";
 
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     template: "%s | Anoop Kurup",
   },
   description:
-    "Sales systems for B2B services firms: one packaged offer, proven against real prospects, with a weekly motion that produces conversations. Start with the free Sales Scorecard.",
+    "Sales systems for B2B services firms: one packaged offer, proven against real prospects, with a weekly rhythm that produces conversations. Start with the free Sales Scorecard.",
   openGraph: {
     type: "website",
     siteName: "Anoop Kurup",
@@ -65,7 +66,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${newsreader.variable} ${plexMono.variable} font-sans antialiased`}>
+      {/* pb-12 clears the mobile sticky WhatsApp/Call bar so it never covers the footer. */}
+      <body className={`${inter.variable} ${newsreader.variable} ${plexMono.variable} font-sans antialiased pb-12 md:pb-0`}>
         {/* Site-wide structured data: who Anoop is, the practice, the site. */}
         <JsonLd schema={[personSchema(), organizationSchema(), websiteSchema()]} />
         <Script
@@ -85,6 +87,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <FloatingWhatsApp />
         <Analytics />
         <SpeedInsights />
       </body>

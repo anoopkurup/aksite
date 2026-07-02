@@ -130,7 +130,7 @@ export interface ContactPageContent {
     section_title: string;
     section_subtitle: string;
     items: Array<{
-      icon: 'mail' | 'linkedin';
+      icon: 'mail' | 'linkedin' | 'whatsapp';
       title: string;
       description: string;
       link_text: string;

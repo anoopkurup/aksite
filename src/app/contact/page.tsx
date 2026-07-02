@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Mail, Linkedin } from "lucide-react";
+import { ArrowRight, Mail, Linkedin, MessageCircle } from "lucide-react";
 import { getContactPageContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
 import type { Metadata } from "next";
@@ -12,6 +12,7 @@ export function generateMetadata(): Metadata {
 const METHOD_ICONS = {
   mail: Mail,
   linkedin: Linkedin,
+  whatsapp: MessageCircle,
 } as const;
 
 export default function ContactPage() {

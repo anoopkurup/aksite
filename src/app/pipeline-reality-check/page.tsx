@@ -1,9 +1,15 @@
+import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { getPipelineRealityCheckContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
+import BookPRCButton from "@/components/BookPRCButton";
 import JsonLd from "@/components/JsonLd";
 import { faqPageSchema } from "@/lib/seo";
 import type { Metadata } from "next";
+
+const WHATSAPP_URL =
+  "https://wa.me/919036014008?text=" +
+  encodeURIComponent("Hi Anoop, I have a question about the Pipeline Reality Check.");
 
 export function generateMetadata(): Metadata {
   const { data: content } = getPipelineRealityCheckContent();
@@ -30,11 +36,12 @@ export default function PipelineRealityCheckPage() {
           <p className="font-serif text-xl md:text-2xl text-slate-400 mb-8">
             {content.hero.subtitle}
           </p>
-          <div className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed space-y-4">
+          <div className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed space-y-4 mb-10">
             {content.hero.body.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
+          <BookPRCButton from="prc_hero" />
         </div>
       </section>
 
@@ -70,7 +77,36 @@ export default function PipelineRealityCheckPage() {
           <div className="bg-navy-50 border border-slate-200 p-8 md:p-12">
             <p className="font-mono text-title text-navy-900 mb-3">{content.terms.headline}</p>
             <p className="font-sans text-body text-slate-600 mb-4">{content.terms.body}</p>
-            <p className="font-sans text-body text-cta-600 font-medium">{content.terms.credit_note}</p>
+            <p className="font-sans text-body text-cta-600 font-medium mb-8">{content.terms.credit_note}</p>
+
+            {/* Who you're paying — the face behind the verdict */}
+            <div className="flex items-center gap-4 border-t border-navy-100 pt-8 mb-8">
+              <Image
+                src="/images/about/anoop-bw.webp"
+                alt="Anoop Kurup"
+                width={64}
+                height={64}
+                className="w-16 h-16 object-cover grayscale flex-shrink-0"
+              />
+              <p className="font-sans text-body text-slate-600">
+                You&apos;re dealing with me directly — I read your deals, I write the verdict.
+                No analyst, no account manager.
+              </p>
+            </div>
+
+            <BookPRCButton from="prc_terms" />
+            <p className="font-sans text-body text-slate-600 mt-6">
+              Prefer to talk it through first?{" "}
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-navy-900 border-b-2 border-cta-500 pb-0.5 hover:border-cta-600 transition-colors"
+              >
+                WhatsApp me
+              </a>{" "}
+              — no pitch, a straight answer on whether it&apos;s worth your ₹25,000.
+            </p>
           </div>
         </div>
       </section>

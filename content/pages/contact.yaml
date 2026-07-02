@@ -14,8 +14,13 @@ hero:
 
 methods:
   section_title: "How to reach me"
-  section_subtitle: "Email works best. LinkedIn is fine too."
+  section_subtitle: "WhatsApp is fastest. Email and LinkedIn work too."
   items:
+    - icon: "whatsapp"
+      title: "WhatsApp"
+      description: "Message me directly. Tell me what's going on with your business — I read and reply to these myself, usually the same day."
+      link_text: "+91 90360 14008"
+      link_url: "https://wa.me/919036014008?text=Hi%20Anoop%2C%20I%20run%20a%20B2B%20services%20firm%20and%20want%20to%20talk%20about%20fixing%20our%20sales."
     - icon: "mail"
       title: "Email"
       description: "Send me a note. Tell me what's going on with your business and what you're looking for. I typically respond within 24–48 hours."
