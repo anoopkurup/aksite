@@ -190,6 +190,10 @@ A mono label + value + segmented meter (orange fill = the needle). Used for the 
 - Direct, honest, problem-first. Short declarative sentences. Prices in ₹, stated plainly.
 - Colours: navy / grey / orange / white only. Orange reserved for CTAs and accents.
 
+## Payments & WhatsApp (July 2026)
+- **PRC booking is paid via Razorpay** (live since July 2026): `BookPRCButton.tsx` on the PRC hero + price box → `/api/prc/order` (server-side order, price hardcoded server-side) → Razorpay Checkout → `/api/prc/verify` (HMAC signature check) → inline "Booked" state (no redirect). Env: `RAZORPAY_KEY_ID` + `RAZORPAY_KEY_SECRET` in `.env.local` and Vercel (Production). The button is **navy-filled** — the one deliberate exception to "every non-Scorecard link is an underline"; it must never be orange.
+- **WhatsApp (+91 90360 14008)** is a first-class channel: `FloatingWhatsApp.tsx` (desktop pill after one screen of scroll; mobile sticky WhatsApp+Call bar — body has `pb-12 md:pb-0` to clear it), first method on /contact, and a "prefer to talk first?" underline link in the PRC price box. Events: `whatsapp_click`, `call_click`, `prc_book_click`, `prc_paid`.
+
 ## Scorecard lead capture & analytics
 - Email capture posts to Formspree (`FORMSPREE_ENDPOINT` in `ScorecardTool.tsx`, form id `xdavwodo`).
 - GA4 (`G-0X2P577TSX`) is loaded via `next/script` in `src/app/layout.tsx`.
