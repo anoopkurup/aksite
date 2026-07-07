@@ -1,6 +1,6 @@
-/* Brand fonts — Inter (body) + Cormorant Garamond (headings). Loaded at
-   runtime from Google Fonts; the host app may also serve them via next/font. */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+/* Brand fonts — Inter (body) + Newsreader (headings) + IBM Plex Mono (data/labels).
+   Loaded at runtime from Google Fonts; the host app may also serve them via next/font. */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,5 +8,6 @@
 
 :root {
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
 }

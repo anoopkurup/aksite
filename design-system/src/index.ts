@@ -20,6 +20,9 @@ export {
 export { NavBar } from "./NavBar";
 export type { NavBarProps, NavBarLink } from "./NavBar";
 
+export { Reading } from "./Reading";
+export type { ReadingProps } from "./Reading";
+
 export { ScoreDisplay } from "./ScoreDisplay";
 export type { ScoreDisplayProps } from "./ScoreDisplay";
 

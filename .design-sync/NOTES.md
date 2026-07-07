@@ -32,7 +32,8 @@
   brand vocabulary (type scale, navy/cta/slate utilities). Tailwind purges unused
   classes, so anything named in `conventions.md` but not used by a component must
   stay safelisted or it won't reach the design agent.
-- Fonts (Inter + Cormorant Garamond) load via a Google Fonts `@import` in
+- Fonts (Inter + Newsreader + IBM Plex Mono — the July 2026 brand refresh; do
+  not reintroduce Cormorant or Fraunces) load via a Google Fonts `@import` in
   `styles.css` → validate prints `[FONT_REMOTE]` (informational, fonts load at
   runtime). Not a missing-font failure.
 - Render check needs playwright **1.55.0** (pins chromium build 1187, which is in

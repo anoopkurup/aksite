@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 
 // Brand tokens extracted from the anoopkurup.com site (source of truth).
-// Navy anchored on #000080; orange CTA #F97316; grey via Tailwind default slate.
+// True navy anchored on #1F3D73; orange CTA #F97316; grey via Tailwind default slate.
+// Type roles: Newsreader (serif display), Inter (sans body), IBM Plex Mono (data/labels).
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}", "../.design-sync/previews/**/*.tsx"],
   // Ship the documented brand vocabulary even when no component uses it yet,
@@ -9,23 +10,31 @@ const config: Config = {
   safelist: [
     "font-serif",
     "font-sans",
+    "font-mono",
     "text-hero",
     "text-display",
     "text-title",
     "text-body-lg",
     "text-body",
+    "text-xs",
+    "uppercase",
+    "tracking-[0.18em]",
     "text-navy-900",
+    "text-navy-600",
     "text-slate-600",
     "text-slate-500",
     "text-slate-400",
     "text-white",
+    "text-cta-600",
     "bg-white",
     "bg-slate-50",
+    "bg-navy-50",
+    "bg-navy-100",
     "bg-navy-900",
     "bg-cta-500",
     "bg-cta-600",
-    "border-slate-100",
     "border-slate-200",
+    "border-navy-900",
     "border-cta-500",
     "border-l-4",
     "border-b-2",
@@ -36,17 +45,17 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          "50": "#f3f3f9",
-          "100": "#e0e0ef",
-          "200": "#cccce6",
-          "300": "#aeaed9",
-          "400": "#7b7bbd",
-          "500": "#5959ae",
-          "600": "#38389c",
-          "700": "#1f1f8f",
-          "800": "#101086",
-          "900": "#000080",
-          "950": "#000060",
+          "50": "#eff3fb",
+          "100": "#dae4f4",
+          "200": "#c0cfe6",
+          "300": "#93abce",
+          "400": "#5f7ba0",
+          "500": "#3e5e8c",
+          "600": "#324c77",
+          "700": "#2a4a7e",
+          "800": "#22406f",
+          "900": "#1f3d73",
+          "950": "#152a50",
         },
         cta: {
           "50": "#fff7ed",
@@ -64,7 +73,14 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "Inter", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "Cormorant Garamond", "Georgia", "serif"],
+        serif: ["var(--font-serif)", "Newsreader", "Georgia", "serif"],
+        mono: [
+          "var(--font-mono)",
+          "IBM Plex Mono",
+          "ui-monospace",
+          "SFMono-Regular",
+          "monospace",
+        ],
       },
       fontSize: {
         hero: ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
