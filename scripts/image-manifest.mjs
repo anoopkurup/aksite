@@ -234,6 +234,36 @@ export const posts = [
  ],
  },
  {
+ slug: 'creative-founder-artist-or-business-blog-article',
+ hero: img(
+ 'The creative founder torn between art and business',
+ 'Subject: a flat conceptual banner contrasting two states separated by a thin divider. Left: one expressive, irregular freeform navy brush-stroke shape — unrepeatable art. Right: a tidy grid of identical small solid navy squares — a repeatable business, one square accented in orange. Minimal, lots of white space.'
+ ),
+ inlines: [
+ img(
+ 'The choice: artist or business owner',
+ 'Subject: a minimal diagram of a single thin navy path splitting at a clear fork into two branches. One branch ends in an expressive freeform shape, the other in a simple solid navy gear accented in orange. Flat, spare, white background.'
+ ),
+ ],
+ },
+ {
+ slug: 'disqualify-prospects-generate-revenue-blog-article',
+ hero: img(
+ 'Disqualifying prospects: a filter that protects selling time',
+ 'Subject: a flat conceptual banner. A wide scatter of faint grey dots on the left passes through a bold solid navy filter / gate in the centre; only a few solid navy dots emerge on the right, one lit with a soft orange glow. Minimal, lots of white space.'
+ ),
+ inlines: [
+ img(
+ 'Fixed selling time consumed by the wrong conversations',
+ 'Subject: a minimal diagram of one thin horizontal time-bar, most of it filled with faint grey segments — hours lost to the wrong prospects — with a small remaining solid navy segment accented in orange. Spare, flat, white background.'
+ ),
+ img(
+ 'A three-part disqualification system',
+ 'Subject: a minimal horizontal three-step flow: three small solid navy nodes joined by thin arrows — a simple profile card, a signal / megaphone, a short checklist — the checklist node accented in orange. Clean, evenly aligned, white background.'
+ ),
+ ],
+ },
+ {
  slug: 'founder-led-agencies-stop-scaling',
  hero: img(
  'The founder bottleneck versus a distributed system',

@@ -1,24 +1,17 @@
 ---
 hero_image: "/images/blog/cog-vs-brand-purchase-blog-article/hero.webp"
-title: cog-vs-brand-purchase-blog-article
+title: Why Service Businesses Lose Money on Smaller Clients
 date: '2026-06-19'
 description: >-
-  TITLE: Why Service Businesses Lose Money on Smaller Clients
-
-  META DESCRIPTION: Service firms break when they move from large clients to
-  small ones. The real r...
-tags: []
+  Service firms break when they move from large clients to small ones. The real
+  reason isn't pricing — it's how you're being bought.
+tags:
+  - Pricing
+  - Business Model
 category: Strategy
 read_time: 9 min read
 author: Anoop Kurup
 ---
-TITLE: Why Service Businesses Lose Money on Smaller Clients
-META DESCRIPTION: Service firms break when they move from large clients to small ones. The real reason isn't pricing — it's how you're being bought.
-PRIMARY KEYWORD: service business growth with smaller clients
-ESTIMATED READ TIME: 8 min
-
----
-
 Most service firms grow up serving large clients. They win the work on the strength of their skill, the engagements run smoothly, and the founder assumes that growth simply means doing more of the same for more people. So when the time comes to scale, they take on smaller clients to fill the pipeline — and the business that worked for years quietly starts to break. Margins thin out. The founder's hours climb. The team is busier and the firm earns less per account.
 
 Almost every owner reads this as a sales or pricing problem. They chase more leads, or they nudge prices up and wonder why it doesn't help. But service business growth with smaller clients usually fails for a deeper, structural reason: the firm is now being bought in a completely different way than it was ever built to be sold. This article explains the distinction that causes the break, why it stays hidden for so long, and what to change so smaller clients become profitable instead of exhausting.
