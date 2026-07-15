@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/case-studies/cs-08-ad-creative-agency-sme-shift/hero.webp"
 type: case-study
 status: draft
 version: v1
@@ -11,7 +12,7 @@ tags: [clear, case-study]
 # From a Few Big Clients to Many Small Ones
 ### How an ad-creative agency stopped being a replaceable pair of hands and learned to own the whole outcome
 
-> *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
+> *From a past consulting engagement. The firm is anonymised at the client's request; the situation and the work are as they happened.*
 
 ---
 

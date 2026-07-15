@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { getAllBlogPosts, getBlogCategories } from "@/lib/blog";
 import { formatDate, estimateReadingTime } from "@/lib/markdown";
 import CTAButton from "@/components/CTAButton";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, collectionPageSchema } from "@/lib/seo";
 
 /** "Lead Generation" -> "lead-generation" */
 export function categorySlug(name: string) {
@@ -25,8 +27,35 @@ export default function BlogIndex({ activeCategory }: { activeCategory?: string 
   const posts =
     active === "All" ? allPosts : allPosts.filter((p) => p.frontmatter.category === active);
 
+  const path = active === "All" ? "/blog" : `/blog/category/${categorySlug(active)}`;
+
   return (
     <>
+      <JsonLd
+        schema={[
+          collectionPageSchema({
+            name: active === "All" ? "Blog" : `${active} — Blog`,
+            description:
+              active === "All"
+                ? "Practical writing on sales for B2B services businesses."
+                : `Writing on ${active.toLowerCase()} for B2B services businesses.`,
+            url: path,
+            items: posts.map((p) => ({ title: p.frontmatter.title, url: `/blog/${p.slug}` })),
+          }),
+          breadcrumbSchema(
+            active === "All"
+              ? [
+                  { name: "Home", url: "/" },
+                  { name: "Blog", url: "/blog" },
+                ]
+              : [
+                  { name: "Home", url: "/" },
+                  { name: "Blog", url: "/blog" },
+                  { name: active, url: path },
+                ]
+          ),
+        ]}
+      />
       {/* Hero */}
       <section className="min-h-[50vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">

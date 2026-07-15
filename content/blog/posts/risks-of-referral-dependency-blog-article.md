@@ -1,13 +1,14 @@
 ---
 hero_image: "/images/blog/risks-of-referral-dependency-blog-article/hero.webp"
 title: The Risks of Referral Dependence for Service Businesses
+seo_title: The Risks of Referral Dependence
 date: '2026-06-25'
 description: >-
   Referral dependence feels safe but quietly weakens pricing, positioning and
   growth. Here are the long-term risks — and what to build instead.
 tags:
-  - Lead Generation
-  - Business Model
+- Lead Generation
+- Business Model
 category: Strategy
 read_time: 7 min read
 author: Anoop Kurup

@@ -4,7 +4,8 @@ import { getPipelineRealityCheckContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
 import BookPRCButton from "@/components/BookPRCButton";
 import JsonLd from "@/components/JsonLd";
-import { faqPageSchema } from "@/lib/seo";
+import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/seo";
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 const WHATSAPP_URL =
@@ -13,7 +14,7 @@ const WHATSAPP_URL =
 
 export function generateMetadata(): Metadata {
   const { data: content } = getPipelineRealityCheckContent();
-  return { title: content.meta.title, description: content.meta.description, alternates: { canonical: "/pipeline-reality-check" } };
+  return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/pipeline-reality-check" });
 }
 
 export default function PipelineRealityCheckPage() {
@@ -22,7 +23,22 @@ export default function PipelineRealityCheckPage() {
   return (
     <>
       {content.faqs?.items?.length ? (
-        <JsonLd schema={faqPageSchema(content.faqs.items)} />
+        <JsonLd
+          schema={[
+            faqPageSchema(content.faqs.items),
+            serviceSchema({
+              name: "Pipeline Reality Check",
+              description: content.meta.description,
+              url: "/pipeline-reality-check",
+              serviceType: "Sales pipeline diagnosis",
+              price: 25000, // flat, published, paid up front via Razorpay
+            }),
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Pipeline Reality Check", url: "/pipeline-reality-check" },
+            ]),
+          ]}
+        />
       ) : null}
       {/* Hero */}
       <section className="min-h-[60vh] flex items-center bg-white">

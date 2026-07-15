@@ -2,11 +2,11 @@ import Image from "next/image";
 import { PROSE } from "@/lib/prose";
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getBlogPostBySlug, getAllBlogSlugs } from '@/lib/blog';
+import { getBlogPostBySlug, getAllBlogSlugs, getRelatedBlogPosts } from '@/lib/blog';
 import { markdownToHtml, formatDate, estimateReadingTime } from '@/lib/markdown';
 import CTAButton from '@/components/CTAButton';
 import JsonLd from '@/components/JsonLd';
-import { blogPostingSchema, breadcrumbSchema } from '@/lib/seo';
+import { blogPostingSchema, breadcrumbSchema, pageMetadata } from '@/lib/seo';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export async function generateStaticParams() {
@@ -32,6 +32,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const htmlContent = await markdownToHtml(post.content);
   const readingTime = estimateReadingTime(post.content);
+  const related = getRelatedBlogPosts(slug);
 
   const postUrl = `/blog/${slug}`;
 
@@ -138,13 +139,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-8">
           <div className="flex items-start gap-6 p-8 bg-slate-50 border border-slate-200">
+            {/* The experience is the point: a reader arriving cold from search has no
+                reason to trust the byline, and the specifics (a lab, an exit, being on
+                the calls) are what /about uses to earn it. Keep them here too. */}
+            <Image
+              src="/images/about/anoop-bw.webp"
+              alt="Anoop Kurup"
+              width={96}
+              height={96}
+              sizes="96px"
+              className="w-24 h-24 object-cover flex-shrink-0 hidden sm:block"
+            />
             <div className="flex-1">
               <p className="font-mono text-xs text-slate-500 uppercase tracking-[0.18em] mb-2">About the Author</p>
               <h3 className="font-serif text-title text-navy-900 mb-3">
                 {post.frontmatter.author || "Anoop Kurup"}
               </h3>
               <p className="font-sans text-body text-slate-600 leading-relaxed mb-4">
-                Sales-systems consultant for B2B services businesses. Based in Bangalore.
+                I fix sales for B2B services businesses — one packaged offer, proven against real
+                prospects, with a weekly rhythm that produces conversations. Before this: a research
+                lab at GE, then patents and competitive strategy, then an intellectual-property firm
+                I built and exited. I work with founders one engagement at a time from Bangalore, and
+                I&apos;m in the room on your sales calls.
               </p>
               <Link
                 href="/about"
@@ -157,6 +173,39 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Related — the only sideways links on the site. Without these every post
+          hangs off the index alone and no topic clusters. */}
+      {related.length > 0 && (
+        <section className="py-section bg-slate-50">
+          <div className="max-w-6xl mx-auto px-8">
+            <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-8">
+              Related reading
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {related.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/blog/${r.slug}`}
+                  className="group block bg-white border border-slate-200 p-6 hover:border-navy-300 transition-colors"
+                >
+                  {r.frontmatter.category && (
+                    <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-3">
+                      {r.frontmatter.category}
+                    </p>
+                  )}
+                  <h3 className="font-serif text-title text-navy-900 mb-3 leading-snug">
+                    {r.frontmatter.title}
+                  </h3>
+                  <p className="font-sans text-sm text-slate-600 leading-relaxed line-clamp-3">
+                    {r.frontmatter.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-section bg-navy-900">
@@ -184,16 +233,17 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     };
   }
 
-  return {
-    title: post.frontmatter.title,
+  return pageMetadata({
+    // seo_title (if set) keeps the SERP line under ~60 chars with the template;
+    // og:title below deliberately keeps the full editorial title.
+    title: post.frontmatter.seo_title || post.frontmatter.title,
     description: post.frontmatter.description,
-    alternates: { canonical: `/blog/${slug}` },
+    path: `/blog/${slug}`,
+    type: 'article',
     openGraph: {
       title: post.frontmatter.title,
-      description: post.frontmatter.description,
-      type: 'article',
       publishedTime: post.frontmatter.date,
       authors: ['Anoop Kurup'],
     },
-  };
+  });
 }

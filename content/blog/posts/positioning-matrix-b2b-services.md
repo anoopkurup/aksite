@@ -1,6 +1,7 @@
 ---
 hero_image: "/images/blog/positioning-matrix-b2b-services/hero.webp"
 title: "The Positioning Matrix: Strategic Framework for B2B Services"
+seo_title: A Positioning Matrix for B2B Services
 date: 2025-08-26
 description: "Map your services against pain, urgency, and value to find a defendable, premium position in your market."
 tags: ["Strategy", "Positioning", "B2B Services"]

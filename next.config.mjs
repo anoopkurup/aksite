@@ -25,12 +25,41 @@ const nextConfig = {
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          // CSP. 'unsafe-inline'/'unsafe-eval' on script-src are required by Next's
+          // hydration inline bootstrap and GA4; tightening those needs per-request
+          // nonces, which would force every static page to render dynamically —
+          // not worth trading the CDN for on a brochure site. The value here still
+          // constrains where scripts, frames and connections may come from, which is
+          // what matters with Razorpay checkout in the page.
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.razorpay.com https://*.googletagmanager.com https://*.google-analytics.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: blob: https://img.youtube.com https://*.google-analytics.com https://*.googletagmanager.com",
+              "font-src 'self' data:",
+              "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://api.razorpay.com https://lumberjack.razorpay.com https://formspree.io",
+              "frame-src https://api.razorpay.com https://checkout.razorpay.com https://www.youtube.com https://www.youtube-nocookie.com",
+              "form-action 'self' https://formspree.io",
+              "base-uri 'self'",
+              "object-src 'none'",
+              "frame-ancestors 'self'",
+            ].join('; '),
+          },
         ],
       },
     ]
   },
   async redirects() {
     return [
+      // /index served a byte-identical copy of the homepage on a second URL.
+      {
+        source: '/index',
+        destination: '/',
+        permanent: true,
+      },
+
       // RSS: the feed lives at /feed.xml; /rss.xml is the conventional alias.
       {
         source: '/rss.xml',
@@ -76,6 +105,60 @@ const nextConfig = {
       {
         source: '/podcast',
         destination: '/about',
+        permanent: true,
+      },
+
+      // Case studies were published twice — once under /blog and once under
+      // /case-studies — with identical titles and ~98% identical bodies, so Google
+      // had to pick a winner per pair and equity split across both. /case-studies
+      // is canonical: it's in the nav, and the URL says what the page is.
+      // Deleting the blog copies also drops the "Case Studies" blog category,
+      // which is intended — those stories have a home already.
+      {
+        source: '/blog/advertising-agency-one-sellable-offer',
+        destination: '/case-studies/cs-01-advertising-agency',
+        permanent: true,
+      },
+      {
+        source: '/blog/video-studio-out-of-the-editing-rate-trap',
+        destination: '/case-studies/cs-02-video-production',
+        permanent: true,
+      },
+      {
+        source: '/blog/creative-agency-breaking-feast-and-famine',
+        destination: '/case-studies/cs-03-branding-agency',
+        permanent: true,
+      },
+      {
+        source: '/blog/corporate-trainer-speak-like-a-leader',
+        destination: '/case-studies/cs-04-communications-trainer',
+        permanent: true,
+      },
+      {
+        source: '/blog/boutique-law-firm-productised-advisory',
+        destination: '/case-studies/cs-05-boutique-law-firm',
+        permanent: true,
+      },
+      {
+        source: '/blog/consultant-family-business-succession-niche',
+        destination: '/case-studies/cs-06-family-business-consultant',
+        permanent: true,
+      },
+      {
+        source: '/blog/branding-agency-niche-specialisation',
+        destination: '/case-studies/cs-07-brand-agency-specialisation',
+        permanent: true,
+      },
+      {
+        source: '/blog/ad-agency-from-big-clients-to-many-small',
+        destination: '/case-studies/cs-08-ad-creative-agency-sme-shift',
+        permanent: true,
+      },
+      // The category route was generated from post frontmatter, so it vanished
+      // with the posts above. Anything holding the old URL goes to the real thing.
+      {
+        source: '/blog/category/case-studies',
+        destination: '/case-studies',
         permanent: true,
       },
 
@@ -153,6 +236,13 @@ const nextConfig = {
       },
       {
         source: '/resources',
+        destination: '/blog',
+        permanent: true,
+      },
+      // Catch-all for the rest of the retired /resources tree. Declared after the
+      // explicit paths above so those keep their specific destinations.
+      {
+        source: '/resources/:path*',
         destination: '/blog',
         permanent: true,
       },

@@ -1,5 +1,6 @@
 ---
 title: "Offer Architecture: Build a Predictable Lead Engine"
+seo_title: Offer Architecture for Steady Leads
 date: 2025-08-26
 description: "Turn scattered services into a laddered offer suite that shortens sales cycles and raises close rates for professional service businesses."
 tags: ["Strategy", "Offers", "Lead Generation"]

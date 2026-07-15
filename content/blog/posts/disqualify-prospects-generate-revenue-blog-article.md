@@ -1,13 +1,14 @@
 ---
 hero_image: "/images/blog/disqualify-prospects-generate-revenue-blog-article/hero.webp"
 title: Why Disqualifying Prospects Faster Generates More Revenue
+seo_title: Disqualify Prospects Faster, Earn More
 date: '2026-07-07'
 description: >-
   For B2B service firms, leads are a quality problem, not a volume one. Here's
   why disqualifying prospects faster grows revenue — and the system to do it.
 tags:
-  - Sales Process
-  - Lead Generation
+- Sales Process
+- Lead Generation
 category: Strategy
 read_time: 8 min read
 author: Anoop Kurup

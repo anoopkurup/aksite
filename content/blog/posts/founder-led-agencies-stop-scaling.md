@@ -1,15 +1,16 @@
 ---
 hero_image: "/images/blog/founder-led-agencies-stop-scaling/hero.webp"
 title: 'Why Founder-Led Agencies Stop Scaling: A Structural Problem, Not a Market One'
+seo_title: Why Founder-Led Agencies Stop Scaling
 date: '2026-04-23'
 description: >-
   Founder-led agencies plateau between year 10 and 15 not because of market
   conditions, but because the commercial architecture never grew up. Here's the
   fix.
 tags:
-  - Offer Architecture
-  - Scaling
-  - Sales Process
+- Offer Architecture
+- Scaling
+- Sales Process
 category: Strategy
 read_time: 8 min read
 author: Anoop Kurup

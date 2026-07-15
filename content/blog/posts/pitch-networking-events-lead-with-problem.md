@@ -3,15 +3,14 @@ hero_image: "/images/blog/pitch-networking-events-lead-with-problem/hero.webp"
 title: >-
   How Experts Should Pitch at Networking Events: Lead With the Problem, Not the
   Service
+seo_title: 'Pitching at Events: Lead With the Problem'
 date: '2026-04-02'
 description: >-
-  Most experts default to a title pitch at networking events. Here's why that
-  fails — and what to do instead, with examples for architects, marketers, and
-  consultants.
+  At a networking event, nobody buys a service they've just heard of. Lead with the problem instead — here's what to say when someone asks what you do.
 tags:
-  - Positioning
-  - Networking
-  - Marketing
+- Positioning
+- Networking
+- Marketing
 category: Strategy
 read_time: 7 min read
 author: Anoop Kurup

@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/case-studies/cs-05-boutique-law-firm/hero.webp"
 type: case-study
 status: draft
 version: v2
@@ -11,7 +12,7 @@ tags: [clear, case-study]
 # A Law Firm That Could Finally Be Bought, Not Just Referred
 ### How a boutique commercial practice built a productised advisory offer beyond word-of-mouth
 
-> *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
+> *From a past consulting engagement. The firm is anonymised at the client's request; the situation and the work are as they happened.*
 
 ---
 

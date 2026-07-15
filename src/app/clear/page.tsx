@@ -3,11 +3,14 @@ import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import { getClearPageContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo";
 
 export function generateMetadata(): Metadata {
   const { data: content } = getClearPageContent();
-  return { title: content.meta.title, description: content.meta.description, alternates: { canonical: "/clear" } };
+  return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/clear" });
 }
 
 export default function ClearPage() {
@@ -15,6 +18,24 @@ export default function ClearPage() {
 
   return (
     <>
+      <JsonLd
+        schema={[
+          serviceSchema({
+            name: "CLEAR — the sales system, installed",
+            description: content.meta.description,
+            url: "/clear",
+            serviceType: "Sales systems consulting",
+            // Quoted after a Pipeline Reality Check, so a range, not a price:
+            // 75,000 Lite tier through 2,50,000 for the full three months.
+            minPrice: 75000,
+            maxPrice: 250000,
+          }),
+          breadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "How I Fix Sales", url: "/clear" },
+          ]),
+        ]}
+      />
       {/* Hero */}
       <section className="min-h-[60vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
@@ -161,7 +182,7 @@ export default function ClearPage() {
           <h2 className="font-serif text-display text-white mb-6">{content.final_cta.title}</h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">{content.final_cta.body}</p>
           <CTAButton href={content.final_cta.cta_link}>{content.final_cta.cta_text}</CTAButton>
-          <p className="font-sans text-sm text-navy-400 mt-8">
+          <p className="font-sans text-sm text-navy-200 mt-8">
             {content.final_cta.secondary_text}{" "}
             <Link
               href={content.final_cta.secondary_link}

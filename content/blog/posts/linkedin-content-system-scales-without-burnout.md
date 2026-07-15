@@ -1,6 +1,7 @@
 ---
 hero_image: "/images/blog/linkedin-content-system-scales-without-burnout/hero.webp"
 title: "A LinkedIn Content System That Scales Without Burnout"
+seo_title: A LinkedIn System Without the Burnout
 date: 2025-08-26
 description: "Design an idea pipeline, batching cadence, and repurposing rhythm that compounds reach while reducing daily effort."
 tags: ["LinkedIn", "Content Systems", "Marketing"]

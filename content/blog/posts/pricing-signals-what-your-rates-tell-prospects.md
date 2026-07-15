@@ -1,6 +1,7 @@
 ---
 hero_image: "/images/blog/pricing-signals-what-your-rates-tell-prospects/hero.webp"
 title: "Pricing Signals: What Your Rates Really Tell Prospects"
+seo_title: 'Pricing Signals: What Your Rates Say'
 date: 2025-08-26
 description: "Use pricing to reinforce your positioning, not sabotage it—without competing on discounts."
 tags: ["Strategy", "Pricing", "Positioning"]

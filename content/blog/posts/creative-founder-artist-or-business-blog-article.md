@@ -1,13 +1,14 @@
 ---
 hero_image: "/images/blog/creative-founder-artist-or-business-blog-article/hero.webp"
 title: Why Creative Agency Founders Stay Stuck Between Art and Business
+seo_title: 'Creative Founders: Artist or Business?'
 date: '2026-07-07'
 description: >-
   Many design and UI/UX founders are stuck because they run an art practice and
   a business at once. Here's the conflict, and the choice that lets you scale.
 tags:
-  - Positioning
-  - Business Model
+- Positioning
+- Business Model
 category: Strategy
 read_time: 7 min read
 author: Anoop Kurup

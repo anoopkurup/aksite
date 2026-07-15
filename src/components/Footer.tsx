@@ -38,11 +38,28 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-slate-100">
-          <p className="font-sans text-xs text-slate-500 text-center">
+        {/* Copyright + legal. Privacy and Terms live here rather than in the links
+            row above: they're obligations, not navigation. They must be reachable
+            from every page — the site takes live payments, and buyers look for them
+            in the footer. Leaving them sitemap-only made them unreachable in the UI. */}
+        <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-3">
+          <p className="font-sans text-xs text-slate-500">
             © {currentYear} Anoop Kurup. All rights reserved.
           </p>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/legal/privacy-policy"
+              className="font-sans text-xs text-slate-500 hover:text-navy-900 transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/legal/terms-conditions"
+              className="font-sans text-xs text-slate-500 hover:text-navy-900 transition-colors"
+            >
+              Terms
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

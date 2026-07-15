@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/case-studies/cs-01-advertising-agency/hero.webp"
 type: case-study
 status: draft
 version: v2
@@ -11,7 +12,7 @@ tags: [clear, case-study]
 # From "We Do Everything" to One Campaign a Stranger Could Buy
 ### How a B2B advertising agency replaced referral dependence with a single, sellable offer
 
-> *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
+> *From a past consulting engagement. The firm is anonymised at the client's request; the situation and the work are as they happened.*
 
 ---
 

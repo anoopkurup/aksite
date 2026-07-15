@@ -1,15 +1,14 @@
 ---
 hero_image: "/images/blog/price-objections-start-with-your-pipeline/hero.webp"
 title: 'How to Handle Price Objections as a Consultant: It Starts With Your Pipeline'
+seo_title: Price Objections Start in Your Pipeline
 date: '2026-03-19'
 description: >-
-  Most consultants discount under price pressure because their pipeline is too
-  thin. Here's how to build the posture to hold your rates before the
-  negotiation begins.
+  "You're too expensive" is rarely about price. It's what a thin pipeline sounds like — here's why, and what to fix before you discount.
 tags:
-  - Pricing
-  - Sales Process
-  - Pipeline
+- Pricing
+- Sales Process
+- Pipeline
 category: Strategy
 read_time: 6 min read
 author: Anoop Kurup

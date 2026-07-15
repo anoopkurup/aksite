@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/case-studies/cs-06-family-business-consultant/hero.webp"
 type: case-study
 status: draft
 version: v1
@@ -11,7 +12,7 @@ tags: [clear, case-study]
 # From Generic Growth Consultant to Family-Business Succession Specialist
 ### How a consultant built an unmistakable niche out of his own experience — and a two-year engagement to match
 
-> *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
+> *From a past consulting engagement. The firm is anonymised at the client's request; the situation and the work are as they happened.*
 
 ---
 

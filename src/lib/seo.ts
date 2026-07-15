@@ -20,11 +20,57 @@ export const SITE = {
   locale: 'en_IN',
   twitterCard: 'summary_large_image' as const,
   linkedin: 'https://www.linkedin.com/in/anoopkurup',
+  email: 'mail@anoopkurup.com',
+  telephone: '+91-90360-14008',
 } as const;
 
 export function absoluteUrl(path: string): string {
   if (path.startsWith('http')) return path;
   return `${SITE.baseUrl}${path.startsWith('/') ? '' : '/'}${path}`;
+}
+
+// ---------------------------------------------------------------------------
+// Metadata for hand-written routes
+// ---------------------------------------------------------------------------
+
+/**
+ * Canonical + Open Graph for a hand-written page, both derived from one `path`
+ * so they cannot drift apart.
+ *
+ * Next merges metadata shallowly *per key*, and `openGraph` is one key: a route
+ * that declares `openGraph` replaces the parent's object entirely rather than
+ * merging into it. That cuts both ways, and the site had both bugs at once —
+ * routes with no `openGraph` inherited layout.tsx's hardcoded homepage `url`
+ * (so /clear and every case study announced themselves as the homepage), while
+ * /blog/[slug] declared one and silently dropped siteName and locale. So this
+ * always emits url + siteName + locale + type together; layout.tsx deliberately
+ * no longer sets `url` at all, so there is nothing wrong left to inherit.
+ *
+ * `title`/`description` are intentionally left off `openGraph`: omitting them
+ * lets Next fill og:title from the resolved <title>, which applies the
+ * "%s | Anoop Kurup" template. Setting them here would bypass it.
+ */
+export function pageMetadata(input: {
+  title: string;
+  description: string;
+  /** Route path, e.g. "/clear". Becomes both the canonical and og:url. */
+  path: string;
+  type?: 'website' | 'article';
+  openGraph?: Metadata['openGraph'];
+}): Metadata {
+  const { title, description, path, type = 'website', openGraph } = input;
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type,
+      url: path,
+      siteName: SITE.name,
+      locale: SITE.locale,
+      ...openGraph,
+    },
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -94,6 +140,19 @@ export function organizationSchema(): Json {
     areaServed: 'Worldwide',
     description:
       'Sales systems for B2B services firms: one packaged offer, proven against real prospects, with a weekly rhythm that produces conversations.',
+    logo: absoluteUrl('/images/logo.svg'),
+    image: absoluteUrl('/images/about/anoop-bw.webp'),
+    email: SITE.email,
+    telephone: SITE.telephone,
+    // Bangalore only — there's no street address anywhere on the site and this is
+    // a solo practice run from home, so locality + country is the honest extent of it.
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Bangalore',
+      addressRegion: 'Karnataka',
+      addressCountry: 'IN',
+    },
+    priceRange: '₹₹',
     sameAs: [SITE.linkedin],
   };
 }
@@ -182,14 +241,73 @@ export function serviceSchema(input: {
   name: string;
   description: string;
   url: string;
+  /** A fixed, publicly-quoted price — e.g. the PRC's flat 25000. */
+  price?: number;
+  /**
+   * Use instead of `price` when the fee is quoted after a diagnosis, as CLEAR is.
+   * Publishing a single `price` there would state a number the buyer isn't
+   * actually offered; a min/max is the honest shape.
+   */
+  minPrice?: number;
+  maxPrice?: number;
+  serviceType?: string;
 }): Json {
+  const { name, description, url, price, minPrice, maxPrice, serviceType } = input;
+
+  let offers: Json | undefined;
+  if (price !== undefined) {
+    offers = { '@type': 'Offer', price, priceCurrency: 'INR' };
+  } else if (minPrice !== undefined && maxPrice !== undefined) {
+    offers = {
+      '@type': 'Offer',
+      priceCurrency: 'INR',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'INR',
+        minPrice,
+        maxPrice,
+      },
+    };
+  }
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    name,
+    description,
+    url: absoluteUrl(url),
+    ...(serviceType ? { serviceType } : {}),
+    provider: { '@type': 'Person', name: SITE.author, url: SITE.baseUrl },
+    areaServed: 'Worldwide',
+    ...(offers
+      ? { offers: { ...offers, url: absoluteUrl(url), availability: 'https://schema.org/InStock' } }
+      : {}),
+  };
+}
+
+/** A list page (the blog index, a category) — gives crawlers the set, not just prose. */
+export function collectionPageSchema(input: {
+  name: string;
+  description: string;
+  url: string;
+  items: { title: string; url: string }[];
+}): Json {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
     name: input.name,
     description: input.description,
     url: absoluteUrl(input.url),
-    provider: { '@type': 'Person', name: SITE.author, url: SITE.baseUrl },
-    areaServed: 'Worldwide',
+    isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.baseUrl },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: input.items.length,
+      itemListElement: input.items.map((it, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: it.title,
+        url: absoluteUrl(it.url),
+      })),
+    },
   };
 }

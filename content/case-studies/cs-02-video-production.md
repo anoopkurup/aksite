@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/case-studies/cs-02-video-production/hero.webp"
 type: case-study
 status: draft
 version: v2
@@ -11,7 +12,7 @@ tags: [clear, case-study]
 # Out of the Editing-Rate Trap
 ### How a corporate-video studio stopped being priced as a vendor and started being bought as an outcome
 
-> *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
+> *From a past consulting engagement. The firm is anonymised at the client's request; the situation and the work are as they happened.*
 
 ---
 

@@ -2,11 +2,12 @@ import Link from "next/link";
 import { ArrowRight, Mail, Linkedin, MessageCircle } from "lucide-react";
 import { getContactPageContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   const { data: content } = getContactPageContent();
-  return { title: content.meta.title, description: content.meta.description, alternates: { canonical: "/contact" } };
+  return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/contact" });
 }
 
 const METHOD_ICONS = {
@@ -140,7 +141,7 @@ export default function ContactPage() {
             {content.cta.subtitle}
           </p>
           <CTAButton href={content.cta.button_url}>{content.cta.button_text}</CTAButton>
-          <p className="font-sans text-sm text-navy-400 mt-8">
+          <p className="font-sans text-sm text-navy-200 mt-8">
             {content.cta.secondary_text}{" "}
             <Link href={content.cta.secondary_link_url} className="text-white border-b-2 border-cta-500 pb-0.5 hover:border-cta-400 transition-colors">
               {content.cta.secondary_link_text}

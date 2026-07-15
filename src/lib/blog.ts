@@ -8,6 +8,14 @@ export interface BlogPost {
   slug: string;
   frontmatter: {
     title: string;
+    /**
+     * Optional shorter <title> for search results. The editorial `title` is the
+     * H1 and is often long enough that it plus the " | Anoop Kurup" template
+     * overflows Google's ~60-char display and gets truncated mid-phrase. Keep
+     * this to ~46 chars. og:title still uses the full `title` — social previews
+     * have room, and the full line reads better there.
+     */
+    seo_title?: string;
     description: string;
     date: string;
     category?: string;
@@ -67,6 +75,33 @@ export function getAllBlogSlugs(): string[] {
   return files
     .filter((file) => file.endsWith('.md'))
     .map((file) => file.replace('.md', ''));
+}
+
+/**
+ * Posts related to `slug`, best first. Ranked by shared tags, then by a shared
+ * category, so a post about pricing surfaces the other pricing posts rather than
+ * whatever happens to be newest.
+ *
+ * Every post used to have exactly one inbound link — its index — so nothing
+ * pointed sideways and no topic ever clustered. This is the cheap fix for that.
+ */
+export function getRelatedBlogPosts(slug: string, limit = 3): BlogPost[] {
+  const all = getAllBlogPosts();
+  const post = all.find((p) => p.slug === slug);
+  if (!post) return [];
+
+  const tags = new Set(post.frontmatter.tags ?? []);
+  return all
+    .filter((p) => p.slug !== slug)
+    .map((p) => {
+      const shared = (p.frontmatter.tags ?? []).filter((t) => tags.has(t)).length;
+      const sameCategory = p.frontmatter.category === post.frontmatter.category ? 1 : 0;
+      return { post: p, score: shared * 2 + sameCategory };
+    })
+    .filter((r) => r.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((r) => r.post);
 }
 
 export function getBlogCategories(): string[] {

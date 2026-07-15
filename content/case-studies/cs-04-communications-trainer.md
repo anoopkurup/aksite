@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/case-studies/cs-04-communications-trainer/hero.webp"
 type: case-study
 status: draft
 version: v1
@@ -11,7 +12,7 @@ tags: [clear, case-study]
 # From "Communication Skills" to "Speak Like a Leader"
 ### How a corporate trainer stopped competing on day-rate and started commanding leadership budgets
 
-> *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
+> *From a past consulting engagement. The firm is anonymised at the client's request; the situation and the work are as they happened.*
 
 ---
 

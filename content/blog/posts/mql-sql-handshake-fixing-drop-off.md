@@ -1,6 +1,7 @@
 ---
 hero_image: "/images/blog/mql-sql-handshake-fixing-drop-off/hero.webp"
 title: "The MQL-SQL Handshake: Fix Lead Drop-Off Between Teams"
+seo_title: 'The MQL-SQL Handshake: Fix Drop-Off'
 date: 2025-08-26
 description: "Align definitions, SLAs, and handovers so leads aren't lost between marketing and sales."
 tags: ["Lead Generation", "Sales Process", "Marketing"]

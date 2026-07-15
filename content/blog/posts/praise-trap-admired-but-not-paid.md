@@ -1,13 +1,14 @@
 ---
 hero_image: "/images/blog/praise-trap-admired-but-not-paid/hero.webp"
 title: 'The Praise Trap: Why Expert-Founders Get Admired But Not Paid'
+seo_title: 'The Praise Trap: Admired but Not Paid'
 date: '2026-03-27'
 description: >-
   Many expert-founders have full calendars and empty pipelines. Here's why
   praise doesn't translate to revenue — and how to fix the boundary problem.
 tags:
-  - Sales Process
-  - Positioning
+- Sales Process
+- Positioning
 category: Strategy
 read_time: 8 min read
 author: Anoop Kurup

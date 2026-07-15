@@ -1,6 +1,7 @@
 ---
 hero_image: "/images/blog/aida-to-ai-messaging-frameworks-workflows/hero.webp"
 title: "From AIDA to AI: Turn Frameworks into Marketing Workflows"
+seo_title: 'From AIDA to AI: Messaging Workflows'
 date: 2025-08-26
 description: "Transform classic messaging frameworks like AIDA into AI workflows that create consistent, on-brand content at scale."
 tags: ["AI Workflows", "Marketing", "Automation"]

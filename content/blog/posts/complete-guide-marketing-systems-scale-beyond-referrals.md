@@ -1,8 +1,9 @@
 ---
 hero_image: "/images/blog/complete-guide-marketing-systems-scale-beyond-referrals/hero.webp"
 title: "Complete Guide: Marketing Systems That Scale Beyond Referrals"
+seo_title: Marketing Systems Beyond Referrals
 date: 2025-09-16
-description: "Transform unpredictable referral-dependent growth into systematic lead generation that delivers 40-60% more qualified prospects through proven frameworks and strategic implementation."
+description: "Referrals plateau. Here's how B2B services firms build a marketing system that reaches strangers — offer, channel, proof and a weekly rhythm."
 tags: ["Marketing Systems", "Lead Generation", "Professional Services", "Business Growth"]
 read_time: "12 min read"
 author: "Anoop Kurup"

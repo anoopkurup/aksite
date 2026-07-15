@@ -1,4 +1,5 @@
 ---
+hero_image: "/images/case-studies/cs-07-brand-agency-specialisation/hero.webp"
 type: case-study
 status: draft
 version: v1
@@ -11,7 +12,7 @@ tags: [clear, case-study]
 # The Branding Agency With No Brand of Its Own
 ### How a design firm stopped selling "good-looking work" and started owning a niche it could be known for
 
-> *Illustrative case study. Industry and situation are drawn from a real engagement; the firm name and identifying details are anonymised.*
+> *From a past consulting engagement. The firm is anonymised at the client's request; the situation and the work are as they happened.*
 
 ---
 

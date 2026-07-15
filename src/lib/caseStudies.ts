@@ -6,6 +6,8 @@ const DIR = path.join(process.cwd(), 'content/case-studies');
 
 export interface CaseStudy {
   slug: string;
+  /** Brand hero art. Inherited from the blog copies these stories used to duplicate. */
+  heroImage?: string;
   title: string;        // first H1 in the body
   subtitle: string;     // first H3 in the body
   industry: string;
@@ -35,6 +37,7 @@ function parse(file: string): CaseStudy {
 
   return {
     slug,
+    heroImage: (data.hero_image as string) ?? undefined,
     title,
     subtitle,
     industry: (data.industry as string) ?? '',
@@ -65,4 +68,20 @@ export function getAllCaseStudySlugs(): string[] {
     .readdirSync(DIR)
     .filter((f) => f.endsWith('.md'))
     .map((f) => f.replace(/\.md$/, ''));
+}
+
+/**
+ * The other case studies, for cross-linking. Each detail page otherwise had exactly
+ * one inbound link (its index), so nothing pointed sideways.
+ *
+ * Deliberately not "related by industry": a founder reading the law-firm story is
+ * usually there for the pattern (referral dependence, an unsellable offer), not the
+ * sector. Sequence order gives every study equal exposure, which industry-matching
+ * wouldn't — three of eight are agencies.
+ */
+export function getOtherCaseStudies(slug: string, limit = 3): CaseStudy[] {
+  const all = getAllCaseStudies();
+  const i = all.findIndex((c) => c.slug === slug);
+  if (i === -1) return all.slice(0, limit);
+  return [...all.slice(i + 1), ...all.slice(0, i)].slice(0, limit);
 }

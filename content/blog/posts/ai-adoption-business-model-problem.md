@@ -3,14 +3,15 @@ hero_image: "/images/blog/ai-adoption-business-model-problem/hero.webp"
 title: >-
   Why B2B Service Businesses Struggle With AI Adoption: It's a Business Model
   Problem
+seo_title: AI Adoption Is a Business-Model Problem
 date: '2026-04-01'
 description: >-
   Most B2B service founders aren't resisting AI — they're protecting a system
   that's worked for years. Here's what actually needs to change.
 tags:
-  - AI
-  - Business Model
-  - Strategy
+- AI
+- Business Model
+- Strategy
 category: Strategy
 read_time: 5 min read
 author: Anoop Kurup

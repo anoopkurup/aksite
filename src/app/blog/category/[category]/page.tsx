@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getBlogCategories } from "@/lib/blog";
+import { pageMetadata } from "@/lib/seo";
 import BlogIndex, { categorySlug } from "@/components/BlogIndex";
 
 // Static category routes: keeps /blog and every category on the CDN (a ?category=
@@ -22,11 +23,11 @@ export async function generateMetadata({
   const { category } = await params;
   const name = resolve(category);
   if (!name) return {};
-  return {
+  return pageMetadata({
     title: `${name} — Blog`,
     description: `Writing on ${name.toLowerCase()} for B2B services businesses.`,
-    alternates: { canonical: `/blog/category/${category}` },
-  };
+    path: `/blog/category/${category}`,
+  });
 }
 
 export default async function BlogCategoryPage({

@@ -3,15 +3,15 @@ import Image from "next/image";
 import { ArrowRight, Users, RefreshCw, Lock, MessageSquare } from "lucide-react";
 import { getHomePageContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   const { data: content } = getHomePageContent();
   return {
+    ...pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/" }),
     // Absolute: the homepage title is the full brand line; skip the "%s | Anoop Kurup" template
     title: { absolute: content.meta.title },
-    description: content.meta.description,
-    alternates: { canonical: "/" },
   };
 }
 

@@ -3,15 +3,15 @@ import { ArrowRight } from "lucide-react";
 import { getAllCaseStudies } from "@/lib/caseStudies";
 import CTAButton from "@/components/CTAButton";
 import JsonLd from "@/components/JsonLd";
-import { breadcrumbSchema } from "@/lib/seo";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Case Studies — B2B Services Firms",
   description:
-    "How B2B services firms replaced referral dependence with one sellable offer. Illustrative cases drawn from real consulting engagements, anonymised.",
-  alternates: { canonical: "/case-studies" },
-};
+    "How B2B services firms replaced referral dependence with one sellable offer. From past consulting engagements, anonymised at each client's request.",
+  path: "/case-studies",
+});
 
 export default function CaseStudiesPage() {
   const studies = getAllCaseStudies();
@@ -39,7 +39,7 @@ export default function CaseStudiesPage() {
             Here is what changed when the offer became something a stranger could understand and buy.
           </p>
           <p className="font-mono text-xs text-slate-500 mt-6">
-            Illustrative cases drawn from real engagements; names and identifying details anonymised.
+            From past consulting engagements. Each firm is anonymised at the client&apos;s request.
           </p>
         </div>
       </section>

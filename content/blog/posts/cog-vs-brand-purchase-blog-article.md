@@ -1,13 +1,14 @@
 ---
 hero_image: "/images/blog/cog-vs-brand-purchase-blog-article/hero.webp"
 title: Why Service Businesses Lose Money on Smaller Clients
+seo_title: Why You Lose Money on Smaller Clients
 date: '2026-06-19'
 description: >-
   Service firms break when they move from large clients to small ones. The real
   reason isn't pricing — it's how you're being bought.
 tags:
-  - Pricing
-  - Business Model
+- Pricing
+- Business Model
 category: Strategy
 read_time: 9 min read
 author: Anoop Kurup

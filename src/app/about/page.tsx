@@ -2,11 +2,14 @@ import Image from "next/image";
 import { getAboutPageContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
 import UnderlineLink from "@/components/UnderlineLink";
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/seo";
 
 export function generateMetadata(): Metadata {
   const { data: content } = getAboutPageContent();
-  return { title: content.meta.title, description: content.meta.description, alternates: { canonical: "/about" } };
+  return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/about" });
 }
 
 export default function AboutPage() {
@@ -14,6 +17,12 @@ export default function AboutPage() {
 
   return (
     <>
+      <JsonLd
+        schema={breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "About", url: "/about" },
+        ])}
+      />
       {/* Hero */}
       <section className="min-h-[60vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">

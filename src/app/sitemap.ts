@@ -1,9 +1,25 @@
 import type { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
 import { getAllBlogPosts } from '@/lib/blog';
 import { getAllCaseStudySlugs } from '@/lib/caseStudies';
 import { getLivePages, getPageBySlug } from '@/lib/contentMap';
 
 const BASE_URL = 'https://www.anoopkurup.com';
+
+/**
+ * Last edit time of a content file, for <lastmod>. Uses mtime rather than a
+ * frontmatter date so it reflects actual edits: a post's `date` is its publish
+ * date and never moves, which made every lastmod a lie the moment a post was
+ * revised. Falls back to build time if the file has gone.
+ */
+function fileModified(...segments: string[]): Date {
+  try {
+    return fs.statSync(path.join(process.cwd(), ...segments)).mtime;
+  } catch {
+    return new Date();
+  }
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -19,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: '/legal/terms-conditions', priority: 0.1 },
   ].map(({ route, priority }) => ({
     url: `${BASE_URL}${route}`,
+    lastModified: fileModified('src/app', route || '/', 'page.tsx'),
     changeFrequency: 'monthly' as const,
     priority,
   }));
@@ -38,13 +55,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((post) => !getPageBySlug(post.slug))
     .map((post) => ({
       url: `${BASE_URL}/blog/${post.slug}`,
-      lastModified: new Date(post.frontmatter.date),
+      lastModified: fileModified('content/blog/posts', `${post.slug}.md`),
       changeFrequency: 'yearly' as const,
       priority: 0.6,
     }));
 
   const caseStudies: MetadataRoute.Sitemap = getAllCaseStudySlugs().map((slug) => ({
     url: `${BASE_URL}/case-studies/${slug}`,
+    lastModified: fileModified('content/case-studies', `${slug}.md`),
     changeFrequency: 'yearly' as const,
     priority: 0.6,
   }));
