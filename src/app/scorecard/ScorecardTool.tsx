@@ -284,12 +284,15 @@ export default function ScorecardTool() {
       <div className="space-y-12">
         {/* Score display — the climactic Reading */}
         <div>
+          <p aria-live="polite" className="sr-only">
+            Your Sales Scorecard result: {totalScore} out of {MAX_SCORE}. {band.name}.
+          </p>
           <p className="font-mono text-xs text-slate-500 uppercase tracking-[0.18em] mb-4 text-center">
             Your Sales Scorecard result
           </p>
           <div className="flex items-baseline justify-center mb-8">
             <span className="font-mono text-7xl font-medium text-navy-900 leading-none">{totalScore}</span>
-            <span className="font-mono text-xl text-slate-400 ml-2">/{MAX_SCORE}</span>
+            <span className="font-mono text-xl text-slate-500 ml-2">/{MAX_SCORE}</span>
           </div>
           <div className="max-w-sm mx-auto">
             <Reading label={band.name} value={band.range} fill={totalScore / MAX_SCORE} />
@@ -333,7 +336,7 @@ export default function ScorecardTool() {
             </h3>
             <p className="font-sans text-body text-slate-500 mb-6">
               The detailed read on all ten of your answers — what each score means and the order to
-              fix them in. Enter your email and I'll send it over.
+              fix them in. Enter your email and I&apos;ll send it over.
             </p>
             <label htmlFor="scorecard-email" className="sr-only">
               Email address
@@ -346,13 +349,13 @@ export default function ScorecardTool() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
                 autoComplete="email"
-                className="flex-1 px-4 py-3 border border-slate-200 font-sans text-body text-navy-900 focus:outline-none focus:border-navy-500"
+                className="flex-1 px-4 py-3 border border-slate-200 font-sans text-body text-navy-900 focus:border-navy-500"
                 required
               />
               <button
                 type="submit"
                 disabled={!email.includes("@") || submitting}
-                className="px-6 py-3 bg-cta-500 text-white font-sans text-sm font-medium hover:bg-cta-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-3 bg-cta-500 text-navy-950 font-sans text-sm font-semibold hover:bg-cta-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {submitting ? "Sending…" : "Send my breakdown"}
               </button>
@@ -375,7 +378,7 @@ export default function ScorecardTool() {
           <p className="font-sans text-body text-navy-200 leading-relaxed mb-6 max-w-xl mx-auto">
             The <span className="text-white font-medium">Pipeline Reality Check</span> takes your last
             12 months of actual deals and tells you exactly where your next clients will come from —
-            and where they won't. ₹25,000 · one week · fully done for you.
+            and where they won&apos;t. ₹25,000 · one week · fully done for you.
           </p>
           <Link
             href="/pipeline-reality-check"
@@ -390,7 +393,7 @@ export default function ScorecardTool() {
         <div className="text-center">
           <button
             onClick={restart}
-            className="font-sans text-sm text-slate-400 hover:text-slate-600 transition-colors"
+            className="font-sans text-sm text-slate-500 hover:text-navy-900 transition-colors"
           >
             Retake the scorecard
           </button>
@@ -405,10 +408,10 @@ export default function ScorecardTool() {
       {/* Progress bar */}
       <div className="mb-8">
         <div className="flex justify-between mb-2">
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-slate-500">
+          <span className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500">
             {String(currentQuestion + 1).padStart(2, "0")} / {String(totalQuestions).padStart(2, "0")}
           </span>
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-slate-400">{question.dimension}</span>
+          <span className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500">{question.dimension}</span>
         </div>
         <div className="w-full bg-slate-100 rounded-full h-1.5" role="progressbar" aria-valuenow={currentQuestion + 1} aria-valuemin={1} aria-valuemax={totalQuestions}>
           <div
@@ -418,18 +421,28 @@ export default function ScorecardTool() {
         </div>
       </div>
 
-      {/* Question */}
-      <h2 className="font-serif text-title text-navy-900 mb-8">{question.text}</h2>
+      {/* Question. The heading is the group's accessible name, and the auto-advance
+          is announced below — otherwise the question silently swaps under a screen
+          reader user 300ms after they answer. */}
+      <h2 id="scorecard-question" className="font-serif text-title text-navy-900 mb-8">
+        {question.text}
+      </h2>
 
-      {/* Options */}
-      <div className="space-y-3 mb-8">
+      <p aria-live="polite" className="sr-only">
+        Question {currentQuestion + 1} of {totalQuestions}. {question.dimension}. {question.text}
+      </p>
+
+      {/* Options — a single-choice group, not a row of toggle buttons. */}
+      <div role="radiogroup" aria-labelledby="scorecard-question" className="space-y-3 mb-8">
         {question.options.map((option, index) => {
           const isSelected = answers[question.id] === option.score;
           return (
             <button
               key={index}
+              type="button"
+              role="radio"
+              aria-checked={isSelected}
               onClick={() => selectAnswer(question.id, option.score)}
-              aria-pressed={isSelected}
               className={`w-full text-left p-5 border transition-all duration-200 ${
                 isSelected
                   ? "border-navy-900 bg-navy-50"
@@ -471,7 +484,7 @@ export default function ScorecardTool() {
         {answers[question.id] !== undefined && currentQuestion === totalQuestions - 1 && (
           <button
             onClick={() => setShowResults(true)}
-            className="inline-flex items-center font-sans text-sm text-white bg-cta-500 px-6 py-2 rounded hover:bg-cta-600 transition-colors"
+            className="inline-flex items-center font-sans text-sm font-semibold text-navy-950 bg-cta-500 px-6 py-2 rounded hover:bg-cta-400 transition-colors"
           >
             See my score
             <ArrowRight className="w-4 h-4 ml-1" />

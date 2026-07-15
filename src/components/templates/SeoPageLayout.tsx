@@ -1,3 +1,4 @@
+import Image from "next/image";
 // Shared assembly for every SEO page type. Pillar/SubPillar/Spoke/Vertical
 // templates configure this with the right schema mix; everything else
 // (breadcrumbs, internal links, CLEAR handoff, author bio, JSON-LD) is common.
@@ -5,6 +6,7 @@
 // Body content can be supplied either as rendered HTML (`bodyHtml`, e.g. from
 // the markdown pipeline) or as `children`. Either way it lands inside the prose
 // wrapper used across the blog for visual consistency.
+import { PROSE } from "@/lib/prose";
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InternalLinks from '@/components/InternalLinks';
 import ClearHandoff from '@/components/ClearHandoff';
@@ -42,18 +44,6 @@ export interface SeoPageLayoutProps {
   authorNote?: string;
 }
 
-const PROSE_CLASSES = `prose prose-lg prose-slate max-w-none
-  prose-headings:font-serif prose-headings:text-navy-900 prose-headings:font-normal
-  prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-  prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-  prose-p:font-sans prose-p:text-body prose-p:text-slate-600 prose-p:leading-relaxed prose-p:mb-6
-  prose-a:text-cta-600 prose-a:no-underline prose-a:border-b prose-a:border-cta-500 hover:prose-a:border-cta-600 prose-a:transition-colors
-  prose-strong:text-navy-900 prose-strong:font-semibold
-  prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
-  prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-  prose-li:font-sans prose-li:text-body prose-li:text-slate-600 prose-li:mb-2
-  prose-blockquote:border-l-4 prose-blockquote:border-navy-900 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-slate-600
-  prose-img:rounded prose-img:my-8`;
 
 export default function SeoPageLayout({
   page,
@@ -125,8 +115,14 @@ export default function SeoPageLayout({
       {heroImage && (
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-8">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={heroImage} alt={page.title} className="w-full h-auto grayscale" />
+            <Image
+              src={heroImage}
+              alt=""
+              width={1536}
+              height={1024}
+              sizes="(max-width: 896px) 100vw, 896px"
+              className="w-full h-auto grayscale"
+            />
           </div>
         </section>
       )}
@@ -136,11 +132,11 @@ export default function SeoPageLayout({
         <div className="max-w-3xl mx-auto px-8">
           {bodyHtml ? (
             <div
-              className={PROSE_CLASSES}
+              className={PROSE}
               dangerouslySetInnerHTML={{ __html: bodyHtml }}
             />
           ) : (
-            <div className={PROSE_CLASSES}>{children}</div>
+            <div className={PROSE}>{children}</div>
           )}
 
           <InternalLinks parent={parent} siblings={siblings} />

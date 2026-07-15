@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { CTA_CLASSES } from "@/components/CTAButton";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,6 +23,17 @@ export default function Header() {
     return pathname.startsWith(href);
   };
 
+  // Escape closes the menu — a keyboard user must be able to dismiss it without
+  // tabbing through every link.
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMobileMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [isMobileMenuOpen]);
+
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-slate-100">
       <div className="max-w-6xl mx-auto px-8">
@@ -36,36 +48,44 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-sans text-sm whitespace-nowrap transition-colors ${isActive(link.href) ? "text-navy-900" : "text-slate-600 hover:text-navy-900"}`}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`font-sans text-sm whitespace-nowrap transition-colors ${isActive(link.href) ? "text-navy-900 font-medium border-b-2 border-navy-900" : "text-slate-600 hover:text-navy-900 border-b-2 border-transparent"}`}
               >
                 {link.name}
               </Link>
             ))}
 
-            <Link href="/scorecard" className="font-sans text-sm whitespace-nowrap bg-cta-500 text-white px-4 py-2 rounded hover:bg-cta-600 transition-colors">
+            <Link href="/scorecard" className={`${CTA_CLASSES} text-sm whitespace-nowrap px-4 py-2`}>
               Take the Sales Scorecard
             </Link>
           </nav>
 
-          <button className="lg:hidden p-2 text-navy-900 hover:text-slate-600" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
+          <button
+            className="lg:hidden -mr-2 p-3 text-navy-900 hover:text-slate-600"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+          >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-slate-100">
+          <div id="mobile-menu" className="lg:hidden py-4 border-t border-slate-100">
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-sans text-sm transition-colors ${isActive(link.href) ? "text-navy-900" : "text-slate-600 hover:text-navy-900"}`}
+                  aria-current={isActive(link.href) ? "page" : undefined}
+                  className={`font-sans text-sm py-1 transition-colors ${isActive(link.href) ? "text-navy-900 font-medium" : "text-slate-600 hover:text-navy-900"}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link href="/scorecard" className="font-sans text-sm bg-cta-500 text-white px-4 py-2 rounded text-center hover:bg-cta-600 transition-colors mt-4" onClick={() => setIsMobileMenuOpen(false)}>Take the Sales Scorecard</Link>
+              <Link href="/scorecard" className={`${CTA_CLASSES} text-sm px-4 py-3 mt-4 justify-center`} onClick={() => setIsMobileMenuOpen(false)}>Take the Sales Scorecard</Link>
             </nav>
           </div>
         )}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import { getClearPageContent } from "@/lib/content";
@@ -51,9 +52,12 @@ export default function ClearPage() {
               ))}
             </div>
             <div className="md:sticky md:top-24 border border-slate-200 bg-white p-4">
-              <img
+              <Image
                 src="/images/pages/clear-stages.webp"
                 alt="CLEAR in three stages: Package, Prove and Sell, Systemise"
+                width={1536}
+                height={1024}
+                sizes="(max-width: 768px) 100vw, 640px"
                 className="w-full h-auto"
               />
             </div>
@@ -107,7 +111,7 @@ export default function ClearPage() {
                 </p>
                 <p className="font-mono text-display-sm text-navy-900 mb-4">{content.investment.title}</p>
                 <p className="font-sans text-body text-slate-600 mb-4">{content.investment.description}</p>
-                <p className="font-sans text-body text-cta-600 font-medium">
+                <p className="font-sans text-body text-navy-900 font-medium">
                   {content.investment.credit_note}
                 </p>
               </div>
@@ -125,14 +129,16 @@ export default function ClearPage() {
                       { month: "Month 3", amount: "₹1,00,000" },
                     ].map((m) => (
                       <li key={m.month} className="flex flex-col items-center">
+                        {/* Navy, not orange: a step dot is decoration, and a second
+                            orange focal point competes with the Scorecard button. */}
                         <span
                           className={`w-10 h-10 rounded-full ${
                             m.start
-                              ? "bg-cta-500 shadow-[0_0_0_8px_rgba(249,115,22,0.12)]"
-                              : "bg-navy-900"
+                              ? "bg-navy-900 ring-4 ring-navy-200"
+                              : "bg-navy-300"
                           }`}
                         />
-                        <span className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-navy-600 mt-5">
+                        <span className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-navy-600 mt-5">
                           {m.month}
                         </span>
                         <span className="font-mono text-sm text-navy-900 mt-1">{m.amount}</span>
@@ -140,7 +146,7 @@ export default function ClearPage() {
                     ))}
                   </ol>
                 </div>
-                <p className="font-mono text-[0.7rem] text-slate-400 uppercase tracking-[0.16em] mt-8 text-center">
+                <p className="font-mono text-[0.7rem] text-slate-500 uppercase tracking-[0.18em] mt-8 text-center">
                   Paid month to month, in advance
                 </p>
               </div>
@@ -159,7 +165,7 @@ export default function ClearPage() {
             {content.final_cta.secondary_text}{" "}
             <Link
               href={content.final_cta.secondary_link}
-              className="text-navy-300 underline hover:text-white"
+              className="text-white border-b-2 border-cta-500 pb-0.5 hover:border-cta-400 transition-colors"
             >
               {content.final_cta.secondary_link_text}
             </Link>

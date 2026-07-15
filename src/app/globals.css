@@ -2,48 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* The design system lives in tailwind.config.ts (navy / slate / cta / white).
+   Only the tokens actually consumed below are defined here — the old shadcn
+   scaffold (--popover, --destructive, --chart-1..5, --accent, --secondary, --card)
+   was never referenced by any component.
+
+   The `.blog-content` block that used to live here was dead too: nothing imported
+   it, and every markdown body renders through @tailwindcss/typography (see
+   src/lib/prose.ts). It also contradicted the design system — sans headings, the
+   `gray` ramp instead of `slate`, orange text links, and heavy image shadows. */
+
 @layer base {
   :root {
-    /* Minimalist Theme - Ultra Clean */
     --background: 0 0% 100%; /* Pure white */
-    --foreground: 222 47% 11%; /* Slate-900 #0F172A */
-    --card: 210 40% 98%; /* Slate-50 #F8FAFC */
-    --card-foreground: 222 47% 11%; /* Slate-900 */
-    --popover: 0 0% 100%; /* White */
-    --popover-foreground: 222 47% 11%; /* Slate-900 */
-    --primary: 215 25% 27%; /* Slate-800 #1E293B */
-    --primary-foreground: 0 0% 100%; /* White */
-    --secondary: 210 40% 96%; /* Slate-100 #F1F5F9 */
-    --secondary-foreground: 215 25% 27%; /* Slate-800 */
-    --muted: 210 40% 96%; /* Slate-100 */
-    --muted-foreground: 215 16% 47%; /* Slate-500 #64748B */
-    --accent: 30 6% 63%; /* Stone-400 - subtle warm */
-    --accent-foreground: 222 47% 11%; /* Slate-900 */
-    --destructive: 0 84% 60%; /* Red */
-    --destructive-foreground: 0 0% 100%; /* White */
+    --foreground: 222 47% 11%; /* Slate-900 */
     --border: 214 32% 91%; /* Very subtle border */
-    --input: 0 0% 100%; /* White */
-    --ring: 222 47% 11%; /* Slate-900 for focus */
-    --chart-1: 215 25% 27%;
-    --chart-2: 215 16% 47%;
-    --chart-3: 30 6% 63%;
-    --chart-4: 142 76% 36%;
-    --chart-5: 262 83% 58%;
+    --ring: 218 57% 28%; /* navy-900 — focus ring */
     --radius: 0.25rem;
-
-    /* Minimalist specific colors */
-    --slate-50: 210 40% 98%;
-    --slate-100: 210 40% 96%;
-    --slate-200: 214 32% 91%;
-    --slate-300: 213 27% 84%;
-    --slate-400: 215 20% 65%;
-    --slate-500: 215 16% 47%;
-    --slate-600: 215 19% 35%;
-    --slate-800: 215 25% 27%;
-    --slate-900: 222 47% 11%;
-    --stone-300: 24 6% 83%;
-    --stone-400: 24 6% 63%;
-    --stone-500: 25 5% 45%;
   }
 }
 
@@ -55,86 +30,27 @@
     @apply bg-background text-foreground;
   }
 
-  /* Enhanced focus states for accessibility */
+  /* Keyboard focus — visible on every interactive element, in brand navy. */
   a:focus-visible,
   button:focus-visible,
   input:focus-visible,
   textarea:focus-visible,
-  select:focus-visible {
-    @apply outline-2 outline-offset-2 outline-primary;
-  }
-
-  /* High contrast focus outline for better visibility */
-  .focus-enhanced:focus-visible {
-    @apply ring-2 ring-primary ring-offset-2 ring-offset-background;
-  }
-
-  /* Specific focus styles for navigation links */
-  nav a:focus-visible {
-    @apply ring-2 ring-primary ring-offset-2 ring-offset-background rounded-sm;
-  }
-
-  /* Form input focus enhancement */
-  .formkit-input:focus {
-    @apply ring-2 ring-primary ring-offset-2 ring-offset-background;
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline-2 outline-offset-2;
+    outline-color: hsl(var(--ring));
   }
 }
 
-@layer components {
-  /* Custom prose styles for blog content - New Light Theme */
-  .blog-content p {
-    @apply mb-8 text-lg text-gray-700 leading-relaxed;
-  }
-
-  .blog-content p:first-of-type {
-    @apply text-xl text-navy-900 font-medium mb-12;
-  }
-
-  .blog-content h2 {
-    @apply text-3xl font-bold text-navy-900 mt-16 mb-8;
-  }
-
-  .blog-content h3 {
-    @apply text-2xl font-bold text-navy-900 mt-12 mb-6;
-  }
-
-  .blog-content h4 {
-    @apply text-xl font-bold text-navy-900 mt-8 mb-4;
-  }
-
-  .blog-content ul, .blog-content ol {
-    @apply mb-8 text-lg text-gray-700;
-  }
-
-  .blog-content li {
-    @apply mb-2 text-lg text-gray-700;
-  }
-
-  .blog-content blockquote {
-    @apply border-l-4 border-l-navy-900 pl-6 italic text-gray-600 my-8;
-  }
-
-  .blog-content a {
-    @apply text-cta-600 no-underline font-medium hover:text-cta-700;
-  }
-
-  .blog-content a:hover {
-    @apply text-navy-700;
-  }
-
-  .blog-content strong {
-    @apply text-navy-900 font-semibold;
-  }
-
-  .blog-content code {
-    @apply text-cta-600 bg-gray-100 px-2 py-1 rounded text-base;
-  }
-
-  .blog-content pre {
-    @apply bg-gray-100 text-gray-800 rounded-lg p-6 my-8;
-  }
-
-  .blog-content img {
-    @apply rounded-lg shadow-lg my-12;
+/* The site barely animates, but the WhatsApp reveal and the grayscale portrait
+   transitions should not fire for anyone who has asked them not to. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

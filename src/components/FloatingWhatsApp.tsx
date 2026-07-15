@@ -1,14 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Phone } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Phone } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
 // India-native contact affordances — WhatsApp is the default B2B channel here.
 // Desktop: a WhatsApp pill, bottom-right, revealed after ~1 screen of scroll so
-// it never competes with the hero CTA. Mobile: a sticky WhatsApp + Call bar in
-// the thumb zone. Navy, not WhatsApp green — the label carries the recognition,
-// and filled orange stays reserved for the Scorecard.
+// it never competes with the hero CTA. Mobile: a sticky bar in the thumb zone.
+//
+// The mobile bar LEADS with the Scorecard. On a phone the header CTA is inside
+// the hamburger and the hero CTA is below the fold, so this bar was previously
+// the only visible action on first paint — which made WhatsApp the de-facto
+// primary CTA and contradicted the one-funnel rule. WhatsApp/Call stay, demoted.
 
 const PHONE = "+919036014008";
 const WHATSAPP_URL =
@@ -53,8 +57,18 @@ export default function FloatingWhatsApp() {
         WhatsApp
       </a>
 
-      {/* Mobile — sticky WhatsApp + Call bar in the thumb zone. */}
-      <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-slate-200 md:hidden">
+      {/* Mobile — sticky bar in the thumb zone. Scorecard first and widest: it is
+          the one primary action, and on a phone this is the only place it is
+          visible without scrolling. */}
+      <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-[1.4fr_1fr_0.8fr] border-t border-slate-200 md:hidden">
+        <Link
+          href="/scorecard"
+          onClick={() => trackEvent("scorecard_cta_click", { from: "sticky_mobile" })}
+          className="flex min-h-[3rem] items-center justify-center gap-1.5 bg-cta-500 py-3 font-sans text-sm font-semibold text-navy-950"
+        >
+          Sales Scorecard
+          <ArrowRight className="h-4 w-4" aria-hidden focusable={false} />
+        </Link>
         <a
           href={WHATSAPP_URL}
           target="_blank"
@@ -70,7 +84,7 @@ export default function FloatingWhatsApp() {
           href={`tel:${PHONE}`}
           aria-label={`Call Anoop at ${PHONE}`}
           onClick={() => trackEvent("call_click", { from: "floating_mobile" })}
-          className="flex min-h-[3rem] items-center justify-center gap-2 border-l border-slate-200 bg-white py-3 font-sans text-sm font-medium text-navy-900"
+          className="flex min-h-[3rem] items-center justify-center gap-1.5 border-l border-slate-200 bg-white py-3 font-sans text-sm font-medium text-navy-900"
         >
           <Phone className="h-5 w-5" aria-hidden focusable={false} />
           Call

@@ -91,7 +91,9 @@ export default function BookPRCButton({ from }: { from: string }) {
         {status === "loading" ? "Opening secure checkout…" : "Book the Reality Check — ₹25,000"}
         <ArrowRight className="w-4 h-4 ml-2" />
       </button>
-      <p className="font-mono text-xs text-slate-400 mt-3">
+      {/* slate-600, not slate-500: this sits on the navy-50 terms box, where
+          slate-500 is 4.28:1 — just under AA. */}
+      <p className="font-mono text-xs text-slate-600 mt-3">
         Secure payment via Razorpay · UPI, cards, netbanking · GST invoice issued
       </p>
       {status === "error" && (

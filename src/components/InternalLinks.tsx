@@ -33,7 +33,7 @@ export default function InternalLinks({
           <li>
             <Link
               href={parent.url}
-              className="group inline-flex items-start gap-2 font-sans text-body text-navy-900 hover:text-cta-600 transition-colors"
+              className="group inline-flex items-start gap-2 font-sans text-body text-navy-900 hover:text-navy-700 transition-colors"
             >
               <ArrowUpRight className="w-4 h-4 mt-1 text-cta-500 shrink-0" aria-hidden />
               <span>
@@ -49,7 +49,7 @@ export default function InternalLinks({
           <li key={s.slug}>
             <Link
               href={s.url}
-              className="group inline-flex items-start gap-2 font-sans text-body text-navy-900 hover:text-cta-600 transition-colors"
+              className="group inline-flex items-start gap-2 font-sans text-body text-navy-900 hover:text-navy-700 transition-colors"
             >
               <ArrowUpRight className="w-4 h-4 mt-1 text-cta-500 shrink-0" aria-hidden />
               <span className="border-b border-cta-500/40 group-hover:border-cta-600">

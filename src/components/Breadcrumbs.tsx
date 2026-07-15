@@ -34,7 +34,7 @@ export default function Breadcrumbs({ crumbs }: BreadcrumbsProps) {
                 </Link>
               )}
               {!isLast && (
-                <ChevronRight className="w-3 h-3 text-slate-400" aria-hidden />
+                <ChevronRight className="w-3 h-3 text-slate-500" aria-hidden />
               )}
             </li>
           );

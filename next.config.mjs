@@ -70,6 +70,14 @@ const nextConfig = {
         destination: '/scorecard',
         permanent: true,
       },
+      // Podcast retired July 2026: the page was a stub — 9 episodes and 4 platform
+      // links all pointing at "#", copy selling the retired Lead Machine Method,
+      // and no internal links to it. /about carries the podcast mention.
+      {
+        source: '/podcast',
+        destination: '/about',
+        permanent: true,
+      },
 
       // Services section redirects
       {

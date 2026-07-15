@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: '/case-studies', priority: 0.7 },
     { route: '/blog', priority: 0.7 },
     { route: '/contact', priority: 0.5 },
-    { route: '/podcast', priority: 0.5 },
     { route: '/legal/privacy-policy', priority: 0.1 },
     { route: '/legal/terms-conditions', priority: 0.1 },
   ].map(({ route, priority }) => ({

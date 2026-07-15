@@ -231,3 +231,14 @@ for (const post of posts.filter(matchPost)) {
 }
 
 console.log(`\nDone. ${made} image(s) generated.`);
+
+// gpt-image-1 ignores the hex codes in BRAND_PREAMBLE and returns a near-black
+// navy, so every generated image gets mapped back to #1F3D73 here. Called in-process
+// rather than chained in package.json: `npm run images -- --only foo` appends the
+// flags to the END of the npm script, so a `&&` chain would hand them to the wrong
+// command and silently regenerate everything.
+if (!flags.has('--dry') && !flags.has('--selftest')) {
+  const { rebrandNavy } = await import('./rebrand-navy.mjs');
+  console.log('\nMapping generated art back to brand navy…');
+  await rebrandNavy({ only: onlyTerm });
+}

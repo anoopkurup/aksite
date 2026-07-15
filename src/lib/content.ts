@@ -17,7 +17,9 @@ export interface ContentPage {
         url?: string;
       };
     };
-    [key: string]: any;
+    // Markdown pages carry free-form frontmatter; the typed keys above are the
+    // ones the renderer actually reads.
+    [key: string]: unknown;
   };
   content: string;
 }

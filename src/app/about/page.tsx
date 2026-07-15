@@ -1,8 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { getAboutPageContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
+import UnderlineLink from "@/components/UnderlineLink";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
@@ -18,6 +17,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="min-h-[60vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-navy-600 mb-8">About</p>
           <h1 className="font-serif text-display text-navy-900 mb-8">{content.hero.headline}</h1>
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="w-48 md:w-56 flex-shrink-0">
@@ -56,16 +56,21 @@ export default function AboutPage() {
                 <div key={i} className="border border-slate-200 p-8">
                   <p className="font-serif text-title text-navy-900 mb-2">{item.label}</p>
                   <p className="font-sans text-body text-slate-500 leading-relaxed mb-2">{item.description}</p>
-                  <Link href={item.link} className="inline-flex items-center font-sans text-sm text-cta-600 hover:text-cta-700">
-                    Learn more <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
+                  {/* sr-only suffix: three bare "Learn more" links read identically
+                      in a screen-reader link list (WCAG 2.4.4). */}
+                  <UnderlineLink href={item.link} arrow className="text-sm mt-2">
+                    Learn more<span className="sr-only"> about {item.label}</span>
+                  </UnderlineLink>
                 </div>
               ))}
             </div>
             <div className="md:sticky md:top-24 border border-slate-200 bg-white p-4">
-              <img
+              <Image
                 src="/images/pages/about-pathway.webp"
                 alt="From strategy to a working pipeline"
+                width={1536}
+                height={1024}
+                sizes="(max-width: 768px) 100vw, 640px"
                 className="w-full h-auto"
               />
             </div>

@@ -11,8 +11,11 @@ export const metadata: Metadata = {
 export default function ScorecardPage() {
   return (
     <>
-      <section className="min-h-[40vh] flex items-center bg-white">
-        <div className="max-w-3xl mx-auto px-8 pt-24 pb-8 text-center">
+      {/* No bands diagram here on purpose: a 1.2MB picture of a gauge pushed the
+          first question below the fold, and it reappeared directly above the real
+          Reading meter on the results screen. The tool is the instrument. */}
+      <section className="bg-white">
+        <div className="max-w-3xl mx-auto px-8 pt-28 pb-10 text-center">
           <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
             Free Assessment
           </p>
@@ -21,20 +24,9 @@ export default function ScorecardPage() {
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
             How predictable is your pipeline, really? Most founders sense the answer but have never
-            measured it. Ten questions, three minutes, no email required to see your score — you'll
-            get an honest number and a plain read on what's holding your pipeline back.
+            measured it. Ten questions, three minutes, no email required to see your score — you&apos;ll
+            get an honest number and a plain read on what&apos;s holding your pipeline back.
           </p>
-        </div>
-      </section>
-
-      {/* Score bands diagram */}
-      <section className="pb-12 bg-white">
-        <div className="max-w-3xl mx-auto px-8">
-          <img
-            src="/images/pages/scorecard-bands.webp"
-            alt="Three scorecard bands: Referral-Dependent, One Engine Short, System-Ready"
-            className="w-full h-auto"
-          />
         </div>
       </section>
 

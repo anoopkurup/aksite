@@ -1,3 +1,4 @@
+import { PROSE } from "@/lib/prose";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -55,7 +56,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             All case studies
           </Link>
 
-          <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.16em] mb-6">
+          <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-6">
             {cs.industry}
           </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-5 leading-tight">
@@ -67,7 +68,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             </p>
           )}
           {cs.disclaimer && (
-            <p className="font-mono text-xs text-slate-400 mt-8 max-w-2xl">{cs.disclaimer}</p>
+            <p className="font-mono text-xs text-slate-500 mt-8 max-w-2xl">{cs.disclaimer}</p>
           )}
         </div>
       </section>
@@ -76,18 +77,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-8">
           <div
-            className="prose prose-lg prose-slate max-w-none
-              prose-headings:font-serif prose-headings:text-navy-900 prose-headings:font-normal
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-p:font-sans prose-p:text-body prose-p:text-slate-600 prose-p:leading-relaxed prose-p:mb-6
-              prose-a:text-cta-600 prose-a:no-underline prose-a:border-b prose-a:border-cta-500 hover:prose-a:border-cta-600 prose-a:transition-colors
-              prose-strong:text-navy-900 prose-strong:font-semibold
-              prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
-              prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-              prose-li:font-sans prose-li:text-body prose-li:text-slate-600 prose-li:mb-2
-              prose-blockquote:border-l-4 prose-blockquote:border-navy-900 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-slate-600
-              prose-hr:border-slate-200 prose-hr:my-12"
+            className={PROSE}
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
         </div>

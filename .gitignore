@@ -28,6 +28,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# SEO audit output (generated; regenerate with /claude-seo:seo-audit)
+/anoopkurup.com-audit/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -24,9 +24,9 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 | `/clear` | The CLEAR engagement (₹2.5L; ₹75K Lite) | `content/pages/clear.yaml` |
 | `/about` | Bio + funnel + podcast | `content/pages/about.yaml` |
 | `/blog` | Markdown blog system | `content/blog/posts/*.md` |
+| `/blog/category/[category]` | Filtered index (static, one per category) | `src/components/BlogIndex.tsx` |
 | `/case-studies` | Case study index + detail pages | `content/case-studies/*.md` |
 | `/contact` | Contact page with qualification | `content/pages/contact.yaml` |
-| `/podcast` | Podcast page | `content/podcast.md` |
 | `/thank-you` | Thank you page | `content/thank-you.md` |
 | `/legal/*` | Privacy policy, terms | `content/legal/*.md` |
 
@@ -40,6 +40,7 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 - `/build` — replaced by `/clear` (301 → `/clear`)
 - `/postie` — Postie retired (301 → `/scorecard`)
 - `/framework`, `/partner` — 301 → `/clear`, `/contact`
+- `/podcast` — retired July 2026 (301 → `/about`). It was a stub: 9 episodes and 4 platform links all pointing at `#`, copy selling the retired "Lead Machine Method™", and no internal links to it. `/about` carries the podcast mention. Bring it back only with real episode URLs.
 - `/videos` never existed — old `/resources/*` redirects now point to `/blog`
 - Earlier legacy removals: `/consulting`, `/ai-solutions/*`, `/resources/*`, `/design-system`, `/_archived/*`, `/(sample)/*` (note: `/case-studies` was relaunched July 2026 — see Pages table)
 
@@ -71,7 +72,8 @@ aksite-nextjs/
 ├── scripts/
 │   ├── publish-post.mjs          # Obsidian → blog post publisher (npm run publish)
 │   ├── generate-images.mjs       # OpenAI gpt-image-1 image generator + wiring (npm run images)
-│   └── image-manifest.mjs        # Brand style preamble + per-page/per-post image prompts
+│   ├── image-manifest.mjs        # Brand style preamble + per-page/per-post image prompts
+│   └── rebrand-navy.mjs          # Maps generated art back to navy #1F3D73 (gpt-image-1 ignores hex)
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx              # Homepage
@@ -87,11 +89,15 @@ aksite-nextjs/
 │   ├── components/
 │   │   ├── Header.tsx            # Simplified nav
 │   │   ├── Footer.tsx            # Clean footer
-│   │   ├── ContentPage.tsx       # MD-driven page wrapper
-│   │   ├── PageTemplate.tsx      # Hero + layout template
+│   │   ├── CTAButton.tsx         # THE Scorecard button (navy-950 label on cta-500)
+│   │   ├── UnderlineLink.tsx     # Every non-Scorecard link: navy label + orange underline
+│   │   ├── BlogIndex.tsx         # Shared by /blog and /blog/category/[category]
+│   │   ├── ContentPage.tsx       # MD-driven page wrapper (always ends with the Scorecard)
+│   │   ├── PageTemplate.tsx      # Hero + layout template (no <main> — layout.tsx owns it)
 │   │   └── templates/            # SEO page templates (SeoPageLayout + pillar/subpillar/spoke/vertical)
 │   └── lib/
 │       ├── content.ts            # YAML + markdown content loaders, TS interfaces
+│       ├── prose.ts              # THE prose treatment for every markdown body (was copy-pasted 4x)
 │       ├── analytics.ts          # trackEvent() — dataLayer/gtag-safe events
 │       ├── blog.ts               # Blog post loaders (content/blog/posts)
 │       ├── markdown.ts           # remark/rehype markdown → HTML
@@ -132,6 +138,8 @@ npm run images -- --selftest    # test the count + wiring logic, no API calls
 - **Wiring is automatic and idempotent**: hero → `hero_image` frontmatter; inline images → `inline-1.webp`, `inline-2.webp`, … saved to `public/images/blog/<slug>/` and inserted spread across the post's H2 sections. Page diagrams go to `public/images/pages/<id>.webp` and are referenced directly in each page's `.tsx`.
 - Re-running is safe — it skips images that already exist and never double-inserts markdown. Add a new post (or new prompts) then just `npm run images` to fill the gaps.
 - **QA loop**: after generating, open the `.webp` files (or `npm run dev`) to check brand fidelity; tweak the prompt in the manifest and re-run with `--only <slug> --force` for any that drift.
+- **gpt-image-1 ignores hex codes — `npm run images` auto-corrects the navy.** The manifest asks for `#1F3D73` on every job; the model reliably returns a near-black midnight blue instead (66 of 72 images had drifted to the `#001630`–`#0E2138` range — the exact ink the design system forbids). `scripts/rebrand-navy.mjs` runs automatically at the end of every generate (called in-process, **not** chained with `&&` — `npm run images -- --only foo` appends flags to the end of the npm script, so a chain hands them to the wrong command). It maps the navy back, preserving anti-aliasing and leaving orange/grey/white untouched. Run it alone with `npm run images:rebrand` (`--dry` to report, `--only <name>` to scope). Don't try to fix this with prompt wording; it doesn't take.
+- **rebrand-navy only ever touches `public/images/pages` + `public/images/blog`.** Its method assumes flat vector art over white, so on a **photograph** it reads dark tones as navy and recolours them (it once turned the black laptop keyboard in `hero/homepage-heroimage.webp` blue). Never point it at `hero/` or `about/`.
 
 ## Design System — "Instrument panel"
 
@@ -154,7 +162,14 @@ A mono label + value + segmented meter (orange fill = the needle). Used for the 
 
 ### CTA rule (one action sitewide)
 - **Filled-orange button = Take the Sales Scorecard, always.** Use `src/components/CTAButton.tsx` (`<CTAButton href={...}>`). It appears in the header, page heroes, and every page-end. Reads on white and on `navy-900`.
-- **Every other link = orange underline** (`border-b-2 border-cta-500`): PRC links, "Learn more", contact methods, inline links. Never give a non-Scorecard link the filled treatment.
+- **The label is `navy-950`, never white.** White on `cta-500` is 2.80:1 and fails WCAG AA. Darkening the fill instead (`cta-700` + white) passes on white but drops to 2.06:1 against the `navy-900` closer, where the button disappears. `navy-950` on `cta-500` is 5.07:1 and keeps the signal orange exactly as specified. Hover *lightens* (`cta-400`) because the label is dark.
+- **Every other link = orange underline** (`border-b-2 border-cta-500`) with a **navy label**: use `src/components/UnderlineLink.tsx`. PRC links, "Learn more", contact methods, inline links. Never give a non-Scorecard link the filled treatment, and never use bare orange *text* for a link — the navy label carries contrast, the orange is the underline.
+- **Mobile sticky bar leads with the Scorecard** (`FloatingWhatsApp.tsx`): on a phone the header CTA is inside the hamburger and the hero CTA is below the fold, so this bar is the only Scorecard visible on first paint. WhatsApp/Call sit beside it, secondary.
+
+### Contrast floor (measured, don't regress)
+- `text-slate-400` is a **hairline value, not a text colour** — 2.56:1 on white. Body/meta text is `slate-500` (4.76:1) minimum; on a `navy-50` or `slate-50` panel use `slate-600`.
+- Orange as *text* only passes at `cta-700` (5.18:1) for body sizes. `cta-600` (3.56:1) is fine only for large figures (≥24px) — the proof metrics, not 14px metadata or ✓ glyphs.
+- 11 pages currently measure **zero** text-contrast failures. `scripts/` has no linter for this; re-check in the browser after colour changes.
 
 ### Patterns
 - Section eyebrows: `font-mono text-xs uppercase tracking-[0.18em] text-navy-600` — **always navy, never orange** (they're labels, not CTAs).

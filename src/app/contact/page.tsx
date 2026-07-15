@@ -70,7 +70,7 @@ export default function ContactPage() {
                         className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors"
                       >
                         {method.link_text}
-                        <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
+                        <ArrowRight className="w-4 h-4 ml-2" aria-hidden focusable={false} />
                       </a>
                     </div>
                   </div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
               <ul className="space-y-3">
                 {content.fit.for_items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-cta-500 mt-1 flex-shrink-0">✓</span>
+                    <span className="text-cta-700 mt-1 flex-shrink-0">✓</span>
                     <p className="font-sans text-body text-slate-600">{item}</p>
                   </li>
                 ))}
@@ -106,7 +106,7 @@ export default function ContactPage() {
               <ul className="space-y-3">
                 {content.fit.not_for_items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-slate-400 mt-1 flex-shrink-0">—</span>
+                    <span className="text-slate-500 mt-1 flex-shrink-0">—</span>
                     <p className="font-sans text-body text-slate-500">{item}</p>
                   </li>
                 ))}
@@ -142,7 +142,7 @@ export default function ContactPage() {
           <CTAButton href={content.cta.button_url}>{content.cta.button_text}</CTAButton>
           <p className="font-sans text-sm text-navy-400 mt-8">
             {content.cta.secondary_text}{" "}
-            <Link href={content.cta.secondary_link_url} className="text-navy-300 underline hover:text-white">
+            <Link href={content.cta.secondary_link_url} className="text-white border-b-2 border-cta-500 pb-0.5 hover:border-cta-400 transition-colors">
               {content.cta.secondary_link_text}
             </Link>
           </p>

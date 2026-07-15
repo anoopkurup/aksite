@@ -33,7 +33,7 @@ export default function PipelineRealityCheckPage() {
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-4">
             {content.hero.title}
           </h1>
-          <p className="font-serif text-xl md:text-2xl text-slate-400 mb-8">
+          <p className="font-serif text-xl md:text-2xl text-slate-500 mb-8">
             {content.hero.subtitle}
           </p>
           <div className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed space-y-4 mb-10">
@@ -61,9 +61,12 @@ export default function PipelineRealityCheckPage() {
               ))}
             </div>
             <div className="md:sticky md:top-24 border border-slate-200 bg-white p-4">
-              <img
+              <Image
                 src="/images/pages/prc-flow.webp"
                 alt="Pipeline Reality Check: your data in, one week, a written verdict out"
+                width={1536}
+                height={1024}
+                sizes="(max-width: 768px) 100vw, 640px"
                 className="w-full h-auto"
               />
             </div>
@@ -77,7 +80,7 @@ export default function PipelineRealityCheckPage() {
           <div className="bg-navy-50 border border-slate-200 p-8 md:p-12">
             <p className="font-mono text-title text-navy-900 mb-3">{content.terms.headline}</p>
             <p className="font-sans text-body text-slate-600 mb-4">{content.terms.body}</p>
-            <p className="font-sans text-body text-cta-600 font-medium mb-8">{content.terms.credit_note}</p>
+            <p className="font-sans text-body text-navy-900 font-medium mb-8">{content.terms.credit_note}</p>
 
             {/* Who you're paying — the face behind the verdict */}
             <div className="flex items-center gap-4 border-t border-navy-100 pt-8 mb-8">

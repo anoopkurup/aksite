@@ -38,7 +38,7 @@ export default function CaseStudiesPage() {
             Eight B2B services firms, each stuck selling capability instead of an outcome.
             Here is what changed when the offer became something a stranger could understand and buy.
           </p>
-          <p className="font-mono text-xs text-slate-400 mt-6">
+          <p className="font-mono text-xs text-slate-500 mt-6">
             Illustrative cases drawn from real engagements; names and identifying details anonymised.
           </p>
         </div>
@@ -54,18 +54,18 @@ export default function CaseStudiesPage() {
                 href={`/case-studies/${cs.slug}`}
                 className="group border border-slate-200 bg-white p-8 md:p-10 flex flex-col hover:bg-navy-50 transition-colors"
               >
-                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.16em] mb-5">
+                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-5">
                   {cs.industry}
                 </p>
-                <h2 className="font-serif text-title text-navy-900 mb-3 leading-tight group-hover:text-cta-700 transition-colors">
+                <h2 className="font-serif text-title text-navy-900 mb-3 leading-tight">
                   {cs.title}
                 </h2>
                 <p className="font-sans text-body text-slate-600 leading-relaxed mb-6 flex-1">
                   {cs.salesProblem}
                 </p>
-                <span className="inline-flex items-center font-sans text-sm text-cta-600 group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center self-start font-sans text-sm text-navy-900 border-b-2 border-cta-500 pb-0.5">
                   Read the case
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </Link>
             ))}

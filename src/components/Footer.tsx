@@ -40,7 +40,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-slate-100">
-          <p className="font-sans text-xs text-slate-400 text-center">
+          <p className="font-sans text-xs text-slate-500 text-center">
             © {currentYear} Anoop Kurup. All rights reserved.
           </p>
         </div>

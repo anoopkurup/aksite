@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { PROSE } from "@/lib/prose";
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getBlogPostBySlug, getAllBlogSlugs } from '@/lib/blog';
@@ -66,7 +68,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
             {post.frontmatter.category && (
-              <span className="font-mono text-xs text-navy-600 uppercase tracking-[0.14em]">
+              <span className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em]">
                 {post.frontmatter.category}
               </span>
             )}
@@ -78,7 +80,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </span>
             <span className="font-mono text-xs text-slate-500">
               By{" "}
-              <Link href="/about" className="text-navy-900 hover:text-cta-600 transition-colors">
+              <Link href="/about" className="text-navy-900 hover:text-navy-700 transition-colors">
                 {post.frontmatter.author || "Anoop Kurup"}
               </Link>
             </span>
@@ -102,9 +104,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {(post.frontmatter.hero_image || post.frontmatter.featured_image) && (
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-8">
-            <img
-              src={post.frontmatter.hero_image || post.frontmatter.featured_image}
-              alt={post.frontmatter.title}
+            {/* alt="" — the hero repeats the H1 directly above it, so announcing the
+                title twice is noise. It is decorative in context. */}
+            <Image
+              src={(post.frontmatter.hero_image || post.frontmatter.featured_image) as string}
+              alt=""
+              width={1536}
+              height={1024}
+              sizes="(max-width: 896px) 100vw, 896px"
+              priority
               className="w-full h-auto"
             />
           </div>
@@ -115,20 +123,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-8">
           <div
-            className="prose prose-lg prose-slate max-w-none
-              prose-headings:font-serif prose-headings:text-navy-900 prose-headings:font-normal
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-p:font-sans prose-p:text-body prose-p:text-slate-600 prose-p:leading-relaxed prose-p:mb-6
-              prose-a:text-cta-600 prose-a:no-underline prose-a:border-b prose-a:border-cta-500 hover:prose-a:border-cta-600 prose-a:transition-colors
-              prose-strong:text-navy-900 prose-strong:font-semibold
-              prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
-              prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-              prose-li:font-sans prose-li:text-body prose-li:text-slate-600 prose-li:mb-2
-              prose-blockquote:border-l-4 prose-blockquote:border-navy-900 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-slate-600
-              prose-code:text-sm prose-code:bg-slate-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-navy-900
-              prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:p-6 prose-pre:rounded
-              prose-img:rounded prose-img:my-8"
+            className={PROSE}
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
         </div>
@@ -153,10 +148,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </p>
               <Link
                 href="/about"
-                className="inline-flex items-center font-sans text-sm text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors"
+                className="inline-flex items-center font-sans text-sm text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors"
               >
                 More about me
-                <ArrowRight className="w-3 h-3 ml-2 text-cta-500" />
+                <ArrowRight className="w-3 h-3 ml-2" aria-hidden focusable={false} />
               </Link>
             </div>
           </div>

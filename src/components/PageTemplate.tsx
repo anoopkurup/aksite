@@ -34,7 +34,8 @@ export default function PageTemplate({ title, subtitle, children, eyebrow }: Pag
         </div>
       </section>
 
-      <main>{children}</main>
+      {/* Not <main> — layout.tsx already provides the one main landmark. */}
+      <div>{children}</div>
     </div>
   );
 }

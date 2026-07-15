@@ -55,7 +55,7 @@ export default function Reading({
         </div>
       )}
 
-      {note && <p className="mt-2 text-xs text-slate-400">{note}</p>}
+      {note && <p className="mt-2 text-xs text-slate-500">{note}</p>}
     </div>
   );
 }

@@ -93,26 +93,28 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center gap-4">
                 <CTAButton href={content.hero.cta_link}>{content.hero.cta_text}</CTAButton>
                 {content.hero.cta_note && (
-                  <p className="font-mono text-sm text-slate-400">{content.hero.cta_note}</p>
+                  <p className="font-mono text-sm text-slate-500">{content.hero.cta_note}</p>
                 )}
               </div>
             </div>
 
-            {/* Portrait column — a real face, framed neutrally in brand grayscale */}
-            <div className="order-first md:order-last max-w-[280px] md:max-w-none mx-auto md:mx-0 w-full">
+            {/* Portrait column — a real face, framed neutrally in brand grayscale.
+                Stays AFTER the headline on mobile: the proposition leads, not the photo. */}
+            <div className="max-w-[280px] md:max-w-none mx-auto md:mx-0 w-full">
               <div className="border border-slate-200">
                 <Image
                   src="/images/about/anoop-bw.webp"
                   alt="Anoop Kurup"
                   width={600}
                   height={600}
+                  sizes="(max-width: 768px) 280px, 33vw"
                   priority
                   className="w-full grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <p className="font-mono text-xs uppercase tracking-[0.16em] text-navy-600 mt-4">
+              <p className="font-mono text-xs uppercase tracking-[0.18em] text-navy-600 mt-4">
                 Anoop Kurup
-                <span className="block text-slate-400 normal-case tracking-normal mt-1">
+                <span className="block text-slate-500 normal-case tracking-normal mt-1">
                   In the room on the sales calls with you.
                 </span>
               </p>
@@ -130,7 +132,7 @@ export default function HomePage() {
               <div key={index}>
                 <p className="font-mono text-display text-cta-600 leading-none">{h.metric}</p>
                 <p className="font-sans text-body text-slate-600 mt-3 leading-relaxed">{h.caption}</p>
-                <p className="font-mono text-[0.7rem] text-slate-400 uppercase tracking-[0.16em] mt-5">
+                <p className="font-mono text-[0.7rem] text-slate-500 uppercase tracking-[0.18em] mt-5">
                   {h.source}
                 </p>
               </div>
@@ -188,11 +190,14 @@ export default function HomePage() {
 
           {/* Diagram — the three stages at a glance, framed so it reads as an instrument */}
           <div className="mt-14 bg-white border border-slate-200 p-6 md:p-8">
-            <img
-              src="/images/pages/clear-stages.webp"
-              alt="The three stages: Package, Prove and Sell, Systemise"
-              className="w-full h-auto"
-            />
+            <Image
+                src="/images/pages/clear-stages.webp"
+                alt="The three stages: Package, Prove and Sell, Systemise"
+                width={1536}
+                height={1024}
+                sizes="(max-width: 768px) 100vw, 640px"
+                className="w-full h-auto"
+              />
           </div>
         </div>
       </section>
@@ -228,7 +233,9 @@ export default function HomePage() {
                     {index + 1}
                   </div>
                   <div className="flex-1 pt-1">
-                    <p className="font-mono text-sm text-cta-600 mb-1">{step.price}</p>
+                    {/* cta-700, not cta-600: at 14px this is body-sized text and
+                        cta-600 on white is only 3.56:1. cta-700 is 5.18:1. */}
+                    <p className="font-mono text-sm text-cta-700 mb-1">{step.price}</p>
                     <h3 className="font-serif text-title text-navy-900 mb-2">{step.name}</h3>
                     <p className="font-sans text-body text-slate-500 leading-relaxed mb-5">
                       {step.blurb}
@@ -264,7 +271,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8">
             {content.proof.items.map((item, index) => (
               <div key={index} className="bg-white border border-slate-200 p-8 md:p-10 flex flex-col">
-                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.16em] mb-6">
+                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-6">
                   {item.type}
                 </p>
                 <p className="font-mono text-title text-cta-600 leading-snug mb-6">
@@ -272,11 +279,11 @@ export default function HomePage() {
                 </p>
                 <div className="mt-auto space-y-3 pt-6 border-t border-slate-100">
                   <div>
-                    <span className="font-mono text-[0.65rem] text-slate-400 uppercase tracking-[0.16em]">Before</span>
+                    <span className="font-mono text-[0.65rem] text-slate-500 uppercase tracking-[0.18em]">Before</span>
                     <p className="font-sans text-sm text-slate-600 leading-relaxed">{item.before}</p>
                   </div>
                   <div>
-                    <span className="font-mono text-[0.65rem] text-slate-400 uppercase tracking-[0.16em]">What I did</span>
+                    <span className="font-mono text-[0.65rem] text-slate-500 uppercase tracking-[0.18em]">What I did</span>
                     <p className="font-sans text-sm text-slate-600 leading-relaxed">{item.what_we_did}</p>
                   </div>
                 </div>
@@ -312,7 +319,7 @@ export default function HomePage() {
               <ul className="space-y-3">
                 {content.qualification.for_you.items.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="text-cta-500 mt-1 flex-shrink-0">✓</span>
+                    <span className="text-cta-700 mt-1 flex-shrink-0">✓</span>
                     <p className="font-sans text-body text-slate-600">{item}</p>
                   </li>
                 ))}
@@ -325,7 +332,7 @@ export default function HomePage() {
               <ul className="space-y-3">
                 {content.qualification.not_for_you.items.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="text-slate-400 mt-1 flex-shrink-0">—</span>
+                    <span className="text-slate-500 mt-1 flex-shrink-0">—</span>
                     <p className="font-sans text-body text-slate-500">{item}</p>
                   </li>
                 ))}

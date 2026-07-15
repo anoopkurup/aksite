@@ -9,6 +9,7 @@
     "lint": "next lint",
     "publish": "node scripts/publish-post.mjs",
     "images": "node scripts/generate-images.mjs",
+    "images:rebrand": "node scripts/rebrand-navy.mjs",
     "seo:audit": "node --experimental-strip-types scripts/seo-link-audit.mjs"
   },
   "dependencies": {
