@@ -24,7 +24,7 @@ This article is an attempt to get there.
 
 ## Why Effort-Driven Businesses and AI Don't Naturally Fit
 
-For most expert-founders, the business was built on a specific model: effort-driven delivery. The founder — or their team — is the primary input. Revenue is tied to time, responsiveness, and personal expertise. Clients pay for access to the founder's knowledge and judgment, and for the confidence that comes with having the go-to person on their side.
+For most expert-founders, the business was built on a specific model: effort-driven delivery. The founder — or their team — is the primary input. Revenue is tied to time, responsiveness, and personal expertise. Clients pay for access to the founder's knowledge and judgement, and for the confidence that comes with having the go-to person on their side.
 
 This model is remarkably effective. It generates referrals, builds reputation, and produces real revenue without requiring a marketing machine or a structured sales process. Many B2B service businesses reach real scale on this model alone.
 

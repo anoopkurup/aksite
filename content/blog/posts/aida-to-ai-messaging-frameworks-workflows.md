@@ -1,310 +1,97 @@
 ---
 hero_image: "/images/blog/aida-to-ai-messaging-frameworks-workflows/hero.webp"
-title: "From AIDA to AI: Turn Frameworks into Marketing Workflows"
-seo_title: 'From AIDA to AI: Messaging Workflows'
+title: "From AIDA to AI: Your Old Frameworks Are the Brief"
+seo_title: 'From AIDA to AI: Frameworks as AI Briefs'
 date: 2025-08-26
-description: "Transform classic messaging frameworks like AIDA into AI workflows that create consistent, on-brand content at scale."
+description: "AIDA and PAS aren't dated theory. They're the structure an AI needs to stop producing mush — because a framework is a brief, and a model without a brief writes about nothing."
 tags: ["AI Workflows", "Marketing", "Automation"]
-read_time: "6 min read"
+read_time: "7 min read"
 author: "Anoop Kurup"
 category: "Strategy"
 ---
 
-Every marketing consultant I know can recite AIDA in their sleep: Attention, Interest, Desire, Action. They know PAS (Problem, Agitate, Solution), StoryBrand frameworks, and Before/After/Bridge structures by heart.
+Ask a model to write a sales email for your consulting firm and you will get a sales email. Greeting, three tidy paragraphs, a line about understanding the challenges businesses face, and a close that invites the reader to hop on a quick call. It arrives in four seconds. It is grammatical. It is about nothing.
 
-Yet when it comes time to write that sales email, create social media content, or draft website copy, they still stare at blank pages. They know the frameworks but struggle to apply them consistently across dozens of pieces of content each month.
+The usual conclusion is that AI can't write. That isn't it. The model wrote exactly what it was asked for, which was an email — not an email to a particular person about a particular problem they actually have. It filled the gap you left with the average of everything it has ever read. The average of everything is mush. It was always going to be mush.
 
-The problem isn't that these frameworks don't work—they absolutely do. The problem is treating them as one-time learning instead of operational systems that can generate consistent, on-brand content at scale.
+Which brings me to the strange thing about this moment. The most useful asset most marketers have for working with AI is the one they assumed was obsolete: the old messaging frameworks. AIDA. PAS. Before/After/Bridge. The structures you learned early, used for a while, and quietly filed under "theory I already know". They are not theory. They are briefs. And a brief is the one thing a model cannot generate for itself.
 
+## A very fast writer with no brief
 
-## The Framework Application Gap
+If you have ever briefed a freelancer badly, you already know what a model without a framework produces. You send a one-liner — "we need a page for the new service, make it sound premium" — and a week later something arrives that is competent, plausible, and useless. The writer wasn't bad. You gave them nothing to write about, so they wrote about the category. Every sentence is defensible and no sentence is yours.
 
-I see this pattern constantly in my consulting work. A marketing agency founder can explain the psychology behind AIDA during a strategy session, then spend two hours crafting a single email sequence because they're manually trying to apply the framework to their specific situation.
+An AI is that writer, except it returns the draft in four seconds and never asks a clarifying question. Speed makes the problem worse, not better. A slow freelancer at least gives you a week in which to realise you didn't think it through. The model just hands you the mush and waits, cheerfully, for the next request.
 
-They know they should grab attention with a compelling hook, build interest by highlighting relevant problems, create desire through solution benefits, and end with a clear action step. But translating that knowledge into specific, compelling copy for their unique audience and offer requires starting from scratch each time.
+So the interesting question was never "which tool writes best". It's "what does a writer need from me before they can write anything worth reading". Marketers answered that question decades ago and wrote the answer down. We just filed it in the wrong drawer.
 
-This creates three critical problems:
+## Computers are dumb. Models are polite.
 
-**Inconsistent messaging quality.** When you're manually applying frameworks, your results depend entirely on your creative energy that particular day. Great copy when you're inspired, mediocre copy when you're tired or rushed.
+I have been automating my own work since 2006, mostly out of laziness, which I consider a respectable engineering motivation. My first proper desk job was in a research lab — patents, literature, competitive strategy — and it felt like being chained to a laptop that did nothing by itself. So I repurposed the Caps Lock key, which nobody uses, into a floating search bar that could open files and run scripts. Then Excel macros. Then Python. Then a long tail of adventures I won't inflict on you here.
 
-**Massive time investment.** Framework-based content creation becomes a bottleneck rather than an accelerator. What should speed up your marketing becomes the slowest part of your process.
+Twenty years of that teaches you one thing above all: a computer does precisely what you specify and precisely nothing you left out. That is a feature. When my macro hit a case I hadn't thought about, it stopped and threw an error in my face, and the error told me which part of my thinking was missing. The machine was dumb, and its dumbness was honest.
 
-**Limited scalability.** You can't delegate framework application to team members because it requires the same deep understanding and creative application that took you years to develop.
+Language models broke that arrangement. They don't stop at the gap in your thinking. They fill it — smoothly, in complete sentences, with something that reads like it might be right. A macro fails loudly. A model fails politely. That politeness is the entire problem, because the output looks finished, so you never go back and find the part you didn't think through.
 
-The solution isn't better frameworks—it's turning existing frameworks into systematic AI workflows that maintain quality while dramatically reducing time and complexity.
+Which is why a framework matters more now than it did when we were writing everything by hand. When you write the email yourself, the framework is a memory aid; you carry the context in your head whether or not you name it. When a model writes it, whatever you didn't name doesn't exist. The framework stops being a reminder and becomes the specification.
 
-## Why Classic Frameworks Still Work (But Need AI Operationalisation)
-
-Before getting into the AI transformation process, let's acknowledge why frameworks like AIDA have survived decades of marketing evolution:
-
-**They're based on fundamental psychology.** AIDA works because it mirrors how people actually make decisions: something catches their attention, they develop interest in learning more, they desire the outcome, and they take action when presented with clear next steps.
-
-**They provide structure for complex communication.** Instead of hoping inspiration strikes, frameworks give you a proven sequence that guides prospects from awareness to action.
-
-**They work across channels and formats.** Whether you're writing email sequences, social media posts, sales pages, or video scripts, the same psychological principles apply.
-
-The limitation isn't the frameworks themselves—it's the manual, one-off application that makes them impractical for consistent use at scale.
-
-This is where AI workflows transform everything. Instead of memorising frameworks and manually applying them each time, you create prompt sequences that systematically generate framework-based content with your specific brand voice, audience understanding, and strategic positioning built in.
-
-## The Framework-to-Workflow Transformation Process
+## Why the old frameworks survived
 
 ![The AIDA funnel: Attention, Interest, Desire, Action](/images/blog/aida-to-ai-messaging-frameworks-workflows/inline-1.webp)
 
-Turning any messaging framework into an operational AI workflow involves three systematic steps:
+AIDA is roughly a hundred and twenty years old and it has outlived every channel it was written for. That is not an accident of tradition. It survived because it isn't a template — it's a decision sequence. It says: before anything else happens, you must earn a moment of attention with something true and specific. Then you must name a problem the reader recognises well enough to keep reading. Then you must connect what you sell to the outcome they actually want. Then you must ask, plainly, for one thing.
 
-### Step 1: Deconstruct the Framework into Specific Prompts
+Read that as instructions to a writer and it's obvious what it is. It's a brief. Four slots, in a fixed order, each one demanding a different piece of judgement from you. PAS is a shorter brief with a sharper edge. Before/After/Bridge is the same brief written for people who think in states rather than emotions. StoryBrand is a longer one with more slots. They differ in shape and they agree entirely on the principle: a persuasive message has parts, the parts have an order, and each part answers a question about the reader.
 
-Break each framework component into granular prompts that address the specific thinking required at each stage.
+None of that changed when AI arrived. What changed is who fills in the slots and how fast. The framework used to be the thing you internalised and applied by hand. Now it's the thing you hand over — the structure the model works inside, so that its speed produces something shaped instead of something average.
 
-For AIDA, this means creating separate prompts for:
-- **Attention**: Hook generation based on audience pain points and pattern interrupts
-- **Interest**: Problem identification and amplification specific to your target market
-- **Desire**: Benefit articulation that connects features to emotional and practical outcomes
-- **Action**: CTA optimisation that removes friction and creates urgency
+## The slots are the work
 
-Each prompt should be specific enough that it consistently generates usable output rather than generic suggestions.
+Here is the part that gets skipped. A framework tells you there are four slots. It cannot tell you what goes in them. That is your judgement, and it is the only scarce thing in this entire arrangement.
 
-### Step 2: Create Prompt Chains That Maintain Consistency
+Which is why a prompt full of square brackets is worth almost nothing. Half the "AI prompt libraries" going around are AIDA with `[TARGET AUDIENCE]` and `[PAIN POINT]` left as blanks, as though the blanks were the easy part. The blanks are the whole job. Fill them with something real and the model produces something real. Fill them with "B2B decision makers" and "struggling with growth" and you get mush again, now with a professional structure holding it up.
 
-Link individual prompts into sequences that build logically and maintain consistent tone and messaging throughout the entire piece.
+The difference looks like this:
 
-This involves:
-- **Context preservation**: Each prompt in the chain references previous outputs to maintain coherence
-- **Quality gates**: Built-in optimisation prompts that refine output before moving to the next stage
-- **Brand voice integration**: Consistent tone and style instructions that apply across all prompts
-
-### Step 3: Add Customisation Layers
-
-Build in variables that adapt the workflow to different:
-- **Audience segments** (different pain points, sophistication levels, buying contexts)
-- **Content formats** (emails vs. social posts vs. sales pages require different lengths and styles)
-- **Strategic positioning** (premium vs. value positioning changes language and emphasis)
-
-The goal is creating workflows that feel custom-generated rather than template-based.
-
-## AIDA Workflow: From Theory to Operational System
-
-Here's how I've transformed AIDA into a complete AI workflow that generates consistent, on-brand content:
-
-### Attention Stage: Hook Generation
-
-**Main Prompt:**
 ```
-You are a copywriter specialising in [YOUR INDUSTRY] for [TARGET AUDIENCE].
+Write the opening of a sales email using AIDA.
 
-Generate 10 attention-grabbing hooks for [CONTENT TYPE] about [TOPIC/OFFER].
+Attention: their biggest client just told them procurement is
+  now involved in renewals.
+Interest: last year two accounts went the same way and they
+  only found out at the renewal call itself.
+Desire: a quarterly account review that surfaces the risk in
+  month one, not month eleven.
+Action: reply with a date for a 30-minute review.
 
-Each hook should:
-- Address a specific pain point this audience experiences
-- Create curiosity or pattern interrupt
-- Be authentic to [BRAND VOICE: conversational/authoritative/friendly]
-- Avoid generic language or obvious statements
-
-Audience context: [AUDIENCE DETAILS]
-Current challenge: [SPECIFIC PROBLEM YOU'RE ADDRESSING]
-
-Format as numbered list with brief explanation of psychology behind each hook.
+Reader: MD of a 40-person IT services firm, sells entirely on
+relationships, has never had a formal renewal process.
+Tone: plain, no adjectives, under 150 words.
 ```
 
-**Refinement Prompt:**
-```
-Review these 10 hooks and select the 3 strongest based on:
-1. Specificity (avoids generic language)
-2. Relevance (directly addresses audience pain)
-3. Curiosity (creates compelling reason to continue reading)
+Every line that makes that prompt work is a line I had to know. AIDA supplied the four labels and the order. It could not supply the procurement detail, the two lost accounts, or the fact that this particular MD has never run a renewal process and is slightly embarrassed about it. That came from having sat in the room. The framework organised my knowledge; it did not manufacture it.
 
-For each selected hook, provide a refined version that increases impact.
-```
+Notice also what the model is now free to do: choose the words. That's a real division of labour, and it's the right one. Sentence construction is a task. Knowing what your buyer is quietly worried about is not a task — it's the business.
 
-### Interest Stage: Problem Amplification
-
-**Main Prompt:**
-```
-Using this selected hook: [CHOSEN HOOK]
-
-Write 2-3 paragraphs that build interest by:
-- Expanding on the problem mentioned in the hook
-- Including specific examples or scenarios the audience recognises
-- Highlighting consequences of not addressing this issue
-- Maintaining [BRAND VOICE] throughout
-
-Avoid:
-- Generic business language
-- Obvious statements
-- Hard selling
-
-Focus on problem recognition and amplification.
-```
-
-### Desire Stage: Solution Benefits
-
-**Main Prompt:**
-```
-Based on the problem context established: [PREVIOUS CONTENT]
-
-Create desire by presenting [YOUR SOLUTION/OFFER] with:
-- Clear connection between their problem and your solution
-- Specific benefits (not just features) that address their pain
-- Social proof or credibility indicators relevant to this audience
-- Transformation language that shows before/after scenarios
-
-Maintain focus on their outcomes, not your process.
-```
-
-### Action Stage: CTA Optimisation
-
-**Main Prompt:**
-```
-For this content: [FULL MESSAGE SO FAR]
-
-Create a compelling call-to-action that:
-- Uses action-oriented language specific to [DESIRED ACTION]
-- Removes/addresses potential objections or friction
-- Creates appropriate urgency without false scarcity
-- Feels natural given the content that preceded it
-
-Generate 3 CTA variations:
-1. Direct/straightforward approach
-2. Benefit-focused approach  
-3. Curiosity-driven approach
-```
-
-### Complete Integration Prompt
-
-**Final Polish:**
-```
-Review this complete [CONTENT TYPE]: [FULL CONTENT]
-
-Optimise for:
-1. Flow between AIDA stages (smooth transitions)
-2. Consistent brand voice throughout
-3. Appropriate length for [PLATFORM/FORMAT]
-4. Clarity and readability
-5. Compelling value proposition
-
-Provide the final optimised version.
-```
-
-## Advanced Framework Workflows
+## Where the time actually goes back
 
 ![From framework to operational workflow](/images/blog/aida-to-ai-messaging-frameworks-workflows/inline-2.webp)
 
-Once you've mastered AIDA workflows, you can apply the same transformation process to other proven frameworks:
+Once you see frameworks as briefs, the useful practice follows on its own, and it's smaller than the "AI workflow" industry would like you to believe.
 
-### PAS (Problem/Agitate/Solution) Workflow
+Take the one framework you already reach for by instinct. Write it out once, properly, as a brief — the slots, the order, and the standing context that never changes: who you sell to, how they talk, what you sell, what you refuse to claim, what your writing sounds like when it's yours. That last part matters more than people expect. A model has no house style, so it borrows one, and the one it borrows is LinkedIn's. If you don't tell it what you sound like, you will sound like everyone.
 
-**Problem Identification:**
-```
-Identify the core problem [TARGET AUDIENCE] faces with [TOPIC/AREA].
+Then use it. The per-message work drops to what it always should have been: filling four slots with things you know about one reader. That takes minutes and it is thinking, not typing. Everything downstream — drafting, tightening, three variants of the closing line — is the part you were never precious about anyway.
 
-Make it specific and relatable:
-- Use their language/terminology
-- Reference situations they recognise immediately
-- Avoid industry jargon
-- Connect to bigger impact on their business/life
+Then keep the brief. Not in a chat window that you lose on Tuesday — in a file, where you can improve it. This is the bit almost nobody does, and it's where the compounding lives. Each time a draft comes back wrong, you have learned something specific about what your brief failed to say. Add it. Over a few months the brief stops being a framework you borrowed and becomes a written record of how you think about your market. That artefact is worth considerably more than any individual email it produces, and it's the only version of this that a colleague can pick up and use without being you.
 
-Write 2-3 sentences that make them nod in recognition.
-```
+## What this doesn't fix
 
-**Agitation Amplification:**
-```
-Based on this problem: [IDENTIFIED PROBLEM]
+It doesn't fix not knowing your buyer. If you cannot name, in one sentence, the thing your prospect is actually worried about at the moment they read your email, no framework and no model will find it for you. You will get faster mush, spelled correctly, delivered on schedule. Speed applied to an empty brief just gets you to the wrong place sooner.
 
-Amplify the consequences and frustration:
-- What happens if this continues?
-- What opportunities do they miss?
-- How does this affect their bigger goals?
-- What have they probably already tried that didn't work?
+That is the honest limit, and it's worth naming, because "AI for marketing" is usually sold as a substitute for the thinking rather than an amplifier of it. It's an amplifier. Amplifiers are indifferent to what you feed them.
 
-Write 2-3 paragraphs that build urgency without being negative.
-```
+So the sequence runs the other way round from how it's usually taught. Not: learn the tool, then find things to write. Rather: know your buyer, write the brief, and let the tool do the typing. The frameworks you already know are the format that brief comes in. They were always briefs. We just didn't have anyone fast enough to hand them to.
 
-**Solution Presentation:**
-```
-Present [YOUR SOLUTION] as the resolution to: [AGITATED PROBLEM]
+---
 
-Structure:
-- Direct connection: "Here's what changes everything..."
-- Key benefits that specifically address the agitated consequences
-- Proof point or credibility indicator
-- Clear next step
-
-Focus on transformation, not features.
-```
-
-### StoryBrand Framework AI Adaptation
-
-Transform the StoryBrand 7-point structure into prompts:
-
-1. **Character**: "Identify how [AUDIENCE] sees themselves in relation to [CHALLENGE]"
-2. **Problem**: "What external, internal, and philosophical problems do they face?"
-3. **Guide**: "Position [YOUR BRAND] as the experienced guide who understands their journey"
-4. **Plan**: "Outline clear steps they need to take"
-5. **Call to Action**: "Create direct and transitional CTAs"
-6. **Success**: "Paint the picture of their success"
-7. **Failure**: "Show what's at stake if they don't act"
-
-Each becomes a specific prompt in a chain that generates story-driven marketing content.
-
-## A Real Implementation: Marketing Agency Transformation
-
-One of my marketing agency clients came to me struggling with email campaign consistency. They knew frameworks but their team of five was producing wildly different quality levels, and their founder was spending hours reviewing and rewriting everything.
-
-We implemented the AIDA workflow system across their email marketing:
-
-**Before implementation:**
-- 4-6 hours per email campaign creation
-- Inconsistent brand voice across team members  
-- 22% average open rate, 3.1% click-through rate
-- Founder bottleneck reviewing all content
-
-**After 90 days with AIDA workflows:**
-- 45 minutes per email campaign (including review)
-- Consistent brand voice and messaging quality
-- 31% average open rate (+40% improvement)
-- 5.1% click-through rate (+65% improvement)
-- Team autonomy with founder spot-checking rather than rewriting
-
-The key insight: they weren't replacing human creativity—they were systematising the strategic thinking that had been trapped in the founder's head, making it accessible and repeatable for the entire team.
-
-The workflows ensured every email followed proven psychological principles while adapting to specific campaigns, audiences, and offers.
-
-## Implementation Strategy
-
-Ready to transform your messaging frameworks into operational AI workflows? Follow these three steps:
-
-### Step 1: Choose Your Primary Framework
-
-Start with the framework you use most often or understand best. For most B2B service providers, I recommend beginning with AIDA because it's versatile across email, social media, and website content.
-
-Map out the four stages and identify the specific thinking process you go through at each stage. This becomes your foundation for prompt development.
-
-### Step 2: Build and Test Your First Workflow
-
-Create prompts for each stage using the examples above as templates. Customise them for:
-- Your specific industry and audience
-- Your brand voice and positioning
-- Your most common content formats
-
-Test the workflow with 5-10 pieces of content, refining prompts based on output quality and consistency.
-
-### Step 3: Scale and Systematise
-
-Once your primary workflow produces consistent results:
-- Train team members to use the system
-- Create variations for different content types and audiences
-- Build a library of refined prompts and workflows
-- Document optimisation insights for continuous improvement
-
-The goal is creating systems that generate framework-based content faster and more consistently than manual application.
-
-## Takeaway
-
-Classic messaging frameworks provide the psychological foundation for effective marketing communication. AI workflows provide the operational system that makes those frameworks practical at scale.
-
-The businesses that systematically transform their marketing knowledge into AI workflows gain a massive competitive advantage: they can produce more content, maintain higher quality, and scale their expertise across larger teams without losing the strategic thinking that makes their messaging effective.
-
-Your frameworks are too valuable to remain as theoretical knowledge. Turn them into systematic workflows that generate consistent results every time.
-
-Want to know where your messaging is leaking? [Take the free Sales Scorecard](/scorecard) — ten questions, three minutes, an honest score and the one thing to fix first.
+If your messaging keeps coming out generic, the framework is rarely the problem — the missing brief usually is, and behind it, a fuzzy picture of who you're actually selling to. The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment: ten questions, an honest score, and the one thing to fix first.

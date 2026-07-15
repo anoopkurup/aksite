@@ -73,8 +73,7 @@ The work isn't dramatic. It is a series of unglamorous decisions made while thin
 
 Referral dependence isn't a problem of bad clients or slow months. It is the risk of building a business you cannot predict, cannot price with confidence, and cannot eventually sell. The right time to address it is while the referrals are still flowing — not the year they stop.
 
-If you want to see clearly where your own firm stands, start with the [Sales Scorecard](https://anoopkurup.com) — a short, honest diagnostic of how dependent your pipeline really is, and where the first fix lies.
+If you want to see clearly where your own firm stands, start with the [Sales Scorecard](/scorecard) — a short, honest diagnostic of how dependent your pipeline really is, and where the first fix lies.
 
 ---
 
-WORD COUNT: 1,180 words

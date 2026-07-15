@@ -16,31 +16,46 @@ tags: [clear, case-study]
 
 ---
 
-A B2B corporate training practice, built around a genuinely gifted communication-skills trainer. The work was good and the feedback from participants was warm. Yet winning corporate engagements was a grind — long conversations with HR that drifted, budgets that never quite materialised, and when a programme did close, a day-rate that felt far below what the trainer was worth.
+"Communication skills" is a line item. Somebody in every organisation is paid to trim line items.
 
-## Good training, sold into the wrong slot
+"Speak Like a Leader" is an outcome, and outcomes get sponsors — someone senior who will put their name on the request and carry it upstairs.
 
-The problem was the category the trainer was selling into. "Communication skills training" is, in the mind of an HR buyer, a commodity. There are hundreds of trainers offering some version of it, the outcome sounds soft and hard to measure, and it tends to be aimed at the broad middle of the organisation — the large, junior population where training budgets are thinnest and approvals hardest to push through. The trainer was excellent, but excellence didn't help, because the buyer wasn't comparing trainers on quality. They were comparing a long line of interchangeable "communication" programmes on price, and slotting them all into the same low-priority, low-budget box.
+Same trainer. Same craft. Recognisably the same work in the room. Only one of those two names gets funded, and it is never the first one.
 
-Selling harder into that box was never going to work. The category itself was the ceiling.
+I have watched that gap decide more engagements than any amount of skill in the room.
 
-## Changing the audience changed everything
+The practice I was called into was built around a genuinely gifted communication-skills trainer. The work was good and the feedback from participants was warm. Winning corporate engagements was still a grind — long conversations with HR that drifted, budgets that never quite materialised, and when a programme did close, a day-rate far below what the trainer was worth.
 
-The move was to stop selling to the broad middle and aim squarely at the top. The programme was repositioned for senior leaders — the people whose ability to communicate visibly shapes how an organisation is run — and renamed to say exactly that: Speak Like a Leader. The shift in audience did most of the work. A communication programme for junior staff is a cost to be minimised; a programme that sharpens how senior leaders carry themselves, hold a room, and articulate a direction is an investment in the people the company can least afford to have communicate poorly.
+## The category was the ceiling, not the man
 
-The renaming mattered as much as the repositioning. "Communication skills" describes an activity; "Speak Like a Leader" describes who the participant becomes. One sounds like a line item to trim, the other like an outcome a senior sponsor would be proud to back. The trainer's actual craft barely changed — what changed was who it was for and what it was called, and those two decisions moved the offer into an entirely different part of the buyer's mind.
+Nobody negotiates a cardiologist's fee the way they negotiate a general physician's, and it isn't because the cardiologist is the better doctor. The category sets the band before the person walks into the room.
 
-## Why the buyer now found it easy to say yes
+"Communication skills training" is, in the mind of an HR buyer, a commodity. There are hundreds of trainers offering some version of it. The outcome sounds soft and hard to measure. And it tends to be aimed at the broad middle of the organisation — the large, junior population where training budgets are thinnest and approvals hardest to push through.
 
-The repositioning also solved the approval problem, almost as a side effect. Leadership development sits in a different budget from general staff training — it has a clearer sponsor, a more obvious return, and far less resistance when an HR team takes it upward for sign-off. Framed for senior leadership, the programme became something HR could champion rather than something they had to defend on cost. Buy-in came quickly, because the buyer was no longer being asked to justify another generic training spend; they were being handed a credible way to invest in their most senior people.
+He was excellent, and I had to tell him that his excellence wasn't helping. The buyer wasn't comparing trainers on quality. They were comparing a long line of interchangeable "communication" programmes on price, and dropping all of them into the same low-priority, low-budget box. Selling harder into that box was never going to work.
 
-And because the audience was senior, the economics changed with it. Executive-level programmes command executive-level fees. The same trainer, doing recognisably the same work, was now paid in a band the old "communication skills" framing could never have supported.
+## Aim it higher, and rename it
 
-## The result
+So I stopped him selling to the broad middle and aimed the programme squarely at the top. It was repositioned for senior leaders — the people whose ability to communicate visibly shapes how an organisation is run — and renamed to say exactly that: Speak Like a Leader.
 
-The trainer moved out of a crowded commodity category and into a high-value one, simply by changing who the programme was for and what it was called. HR teams that had once let conversations drift now approved quickly, because a leadership programme is easy to sponsor in a way that generic training never is. The engagements were larger, the fees were higher, and the trainer was finally being valued for the calibre of the work rather than measured against a field of interchangeable alternatives.
+The change of audience did most of the work. A communication programme for junior staff is a cost to be minimised. A programme that sharpens how senior leaders carry themselves, hold a room, and articulate a direction is an investment in the people the company can least afford to have communicate poorly.
 
-The lesson sits in the contrast between the two names. The skill was never the problem; the category was. Aiming the same expertise at a more senior audience, and naming it as the outcome that audience cares about, is what lifted the offer out of the day-rate trap.
+The name mattered as much as the audience. "Communication skills" describes an activity. "Speak Like a Leader" describes who the participant becomes.
+
+## Why HR suddenly found it easy to say yes
+
+The repositioning solved the approval problem almost as a side effect. Leadership development sits in a different budget from general staff training. It has a clearer sponsor, a more obvious return, and far less resistance when an HR team takes it upward for sign-off.
+
+Framed for senior leadership, the programme became something HR could champion rather than something they had to defend on cost. Buy-in came quickly, because nobody was being asked to justify another generic training spend. They were being handed a credible way to invest in their most senior people.
+
+The economics followed the audience. Executive-level programmes command executive-level fees. The same trainer, doing recognisably the same work, was now paid in a band the old "communication skills" framing could never have supported.
+
+## What changed, and what didn't
+
+Conversations that had once drifted now closed, because a leadership programme is easy to sponsor in a way that generic training never is. The engagements were larger. The fees were higher. The trainer was finally being valued for the calibre of his work rather than measured against a field of interchangeable alternatives.
+
+What didn't change is the more interesting half, and it is the part I keep coming back to. His craft barely moved. He taught what he had always taught, to a different set of people, under a different name — and those two decisions carried the offer into an entirely different part of the buyer's mind.
+
+That is worth sitting with, if you are good at your work and still being ground down on price. The skill was never the problem. The shelf you put it on was.
 
 ---
-*Related: [[Case_Studies_Index]]*

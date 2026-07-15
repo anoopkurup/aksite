@@ -16,35 +16,50 @@ tags: [clear, case-study]
 
 ---
 
-A B2B corporate-video and brand-film studio, doing genuinely good work — brand films, founder stories, product explainers — led by a founder with a decade-deep network. The studio closed business reliably whenever an old relationship came calling. With anyone new, though, the conversation always slid to the same place: *what's your per-video rate?*
+*What's your per-video rate?*
 
-## Being good was not the problem; being a category was
+Every new prospect asked it. Old relationships never did — they simply called, and the studio closed the work. But with a stranger, the conversation slid to that same question every single time, and the founder had spent years answering it as though it were a reasonable question to be asked.
 
-The studio was being priced as a pair of hands. A prospect heard "video" and filed the firm into a mental box labelled "video editor", and in that box the only variable that matters is rate. The deeper cause was that the studio served everyone — "any business that needs video" — and a firm that is for everyone stands for nothing in particular. With no specific reason to value *this* studio over a freelancer with a good showreel, a buyer simply negotiated on price.
+It isn't. It is the sound of a buyer who has already decided what you are.
 
-The founder's relationships hid the problem for years, because trust closed those deals regardless of how the offer was framed. But the open market treated the studio as interchangeable, and that exposed something uncomfortable: a first engagement could still close on goodwill, yet the offer itself could never stand on its own. Strangers were never going to pay studio prices for something they had already priced as freelance work.
+## The box the word "video" puts you in
 
-## Fixing the fog before anything else
+Ask a chemist for paracetamol and you will compare strips on price, because you have already made the diagnosis and all that's left is procurement. Ask a doctor why you keep getting headaches, and price is nowhere near the first thing on your mind.
 
-Because the vague customer was the root cause, that is where the work began. The studio narrowed to B2B firms that needed to win trust at scale — companies whose buyers research them quietly before a high-value purchase. With the customer sharpened, the promise could change too. Instead of "you get a video", the studio started selling something closer to the buyer's real concern: your best sales conversations happen before you are even in the room, because your story is already doing the convincing. That single reframe lifted the firm off the editing bench and set it down next to the buyer's revenue problem, which is a very different place to be priced from.
+The studio was being treated as the chemist. A prospect heard "video" and filed the firm into a mental box labelled *video editor*, and inside that box the only variable that moves is rate. The work was genuinely good — brand films, founder stories, product explainers. None of that changed the box.
 
-## Selling a set with a purpose, not videos by the unit
+The deeper cause was that the studio served everyone. "Any business that needs video." A firm that is for everyone stands for nothing in particular, so a buyer had no specific reason to value this studio over a freelancer with a decent showreel. Naturally, they negotiated.
 
-Rather than quote for videos one at a time, the studio packaged a Trust-Building Film Set — a defined suite built to a documented purpose: a founder story, two customer-proof films, and a short explainer, with revision limits and usage rights spelled out plainly. The language moved with the structure, from "we make videos" to "we build the films that close your buyers before the sales call."
+The founder's decade-deep network hid this for years. Trust closed those deals regardless of how the offer was framed. The open market was less forgiving. It treated the studio as interchangeable, and strangers were never going to pay studio prices for something they had already priced as freelance work.
 
-Honesty about the market mattered here, and the studio didn't pretend otherwise. This was a warm offer by nature — it only worked once a buyer already believed that film would shift their numbers, which most cold buyers did not. So instead of forcing cold outreach the market would reject, the studio strengthened what it could: it documented the before-and-after on its own funnel, and de-risked the first engagement so trying the studio felt safe. Proof was the binding constraint, so the engagement was designed to manufacture documented cases rather than just produce more showreel.
+## Fixing the fog first
+
+The vague customer was the root cause, so that is where I started. The studio narrowed to B2B firms that need to win trust at scale — companies whose buyers research them quietly, at length, before a high-value purchase.
+
+With the customer sharpened, the promise could change. Not "you get a video", but something closer to the buyer's real concern: your best sales conversations happen before you are even in the room, because your story is already doing the convincing.
+
+That single reframe lifted the firm off the editing bench and set it down beside the buyer's revenue problem. That is a very different place to be priced from.
+
+## A set with a purpose, instead of videos by the unit
+
+The studio stopped quoting for videos one at a time and packaged a Trust-Building Film Set: a founder story, two customer-proof films, a short explainer. Built to a documented purpose, with revision limits and usage rights spelled out plainly. The language moved with the structure — "we make videos" became "we build the films that close your buyers before the sales call."
+
+The commercial terms protected the repositioning. Fixed scope, milestone payments, a written end-date on every engagement. This was deliberate. The old way of working — we'll shoot whatever you need, whenever — was precisely what had dragged the firm back into hourly thinking. Fixing the scope is what stopped the slide.
 
 ## Letting the work warm the market
 
-The studio's own content did much of the selling. It published the films it had made for itself, alongside short teardowns of why story beats specifications, so a prospect could spend several hours inside the firm's thinking before ever booking a call. That turned the studio's content into its warming engine — people entered through a free teardown and converted through a strategy conversation, by which point they were no longer comparing rate cards.
+The studio's own content did much of the selling. It published the films it had made for itself, alongside short teardowns of why story beats specifications, so a prospect could spend several hours inside the firm's thinking before ever booking a call.
 
-The commercial terms protected the repositioning. Scope was fixed, payments were tied to milestones, and every engagement had a written end-date. This was deliberate: the old way of working — "we'll shoot whatever you need, whenever" — was exactly what had dragged the firm back into hourly thinking. Fixing the scope was what stopped that slide. And once a client saw films actually move their numbers, the studio offered an ongoing content-engine retainer — but only as a graduation from a proven Set, never as the cold front door.
+People entered through a free teardown and converted through a strategy conversation, by which point they had stopped comparing rate cards. And once a client saw films actually move their numbers, the studio offered an ongoing content-engine retainer — as a graduation from a proven Set, never as the cold front door.
 
-## The result
+## The part I wouldn't let him skip
 
-The studio stopped competing on per-video rate and started selling a business outcome to a clearly defined buyer. The narrowed customer gave the work a reason to be valued; the packaged Set gave buyers something other than a rate card to weigh. The candid read on the market also produced the most useful lesson of the engagement: a relationship-led first sale is not the same thing as a validated offer. The studio went in knowing it had to manufacture documented proof before the offer could stand on its own with strangers, and it built the work to do precisely that, rather than mistaking one happy client for proof that the offer had found its market.
+The Set was a warm offer by nature. It only worked once a buyer already believed film would shift their numbers, and most cold buyers did not believe that. Forcing cold outreach into a market that rejects the premise would have cost the studio months for nothing.
 
-"Video" is a commodity; "the films that close your buyers before the sales call" is not. Narrowing the customer and reframing around their outcome is what moves a firm out of the category where price is the only lever left to pull.
+So we strengthened what could be strengthened. The studio documented the before-and-after on its own funnel, and de-risked the first engagement so trying the studio felt safe. Proof was the binding constraint, so the engagement was designed to manufacture documented cases rather than more showreel.
+
+What came out of it: the studio stopped competing on per-video rate and started selling a business outcome to a buyer it could name. The narrowed customer gave the work a reason to be valued. The packaged Set gave buyers something other than a rate card to weigh.
+
+The most useful thing in the whole engagement, though, was a correction to how the founder read his own history. A relationship-led first sale is not a validated offer. One happy client who was always going to say yes tells you nothing about whether a stranger will. He went in knowing he had to manufacture documented proof before the offer could stand on its own, and built the work to do exactly that.
 
 ---
-*Related: [[Case_Studies_Index]]*

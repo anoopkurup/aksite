@@ -58,7 +58,7 @@ If your input helps someone **solve the problem** — that's consulting.
 
 Marketing is free. Consulting is paid.
 
-A useful rule of thumb: if the client can take your input and execute without you, you have already given away too much. The work of a paid engagement is not the diagnosis. It is the implementation, the judgment calls along the way, the adjustments when things don't go as planned. When you compress all of that into a free conversation, you have nothing left to sell.
+A useful rule of thumb: if the client can take your input and execute without you, you have already given away too much. The work of a paid engagement is not the diagnosis. It is the implementation, the judgement calls along the way, the adjustments when things don't go as planned. When you compress all of that into a free conversation, you have nothing left to sell.
 
 ## Why Smart Founders Fall Into This
 
@@ -90,11 +90,11 @@ This distinction matters. A demand problem is solved by more marketing. A bounda
 
 To step out of the praise trap, three behavioural shifts matter more than anything else:
 
-**Stop extending conversations without a clear next step.** If a conversation is valuable, it either moves toward a proposal or it ends. "Let's stay in touch" and "let's keep talking" are not next steps. They are soft exits dressed up as continuity.
+**Stop extending conversations without a clear next step.** If a conversation is valuable, it either moves towards a proposal or it ends. "Let's stay in touch" and "let's keep talking" are not next steps. They are soft exits dressed up as continuity.
 
 **Stop giving away implementation-level thinking.** Frame the problem. Name the diagnosis. Describe the category of work that would be needed. But do not walk through the solution in an unpaid call. If the prospect wants the solution, that is the paid engagement.
 
-**Start moving discussions toward a paid engagement earlier.** Not at the end of a seven-call sequence. At the second or third call at the latest. A clear proposal is not rude — it is the actual invitation to work together. Delaying it is what makes it feel heavy.
+**Start moving discussions towards a paid engagement earlier.** Not at the end of a seven-call sequence. At the second or third call at the latest. A clear proposal is not rude — it is the actual invitation to work together. Delaying it is what makes it feel heavy.
 
 These shifts feel uncomfortable when you first try them. They will reduce the volume of pleasant conversations in your calendar. That is the point. A smaller number of conversations that lead to paid work is substantially better than a large number of conversations that lead nowhere.
 
@@ -114,6 +114,6 @@ If people follow your content, praise your thinking, and still don't hire you, t
 
 If someone truly values your thinking, they will pay for access to it. If they don't, they were never a client to begin with — regardless of how much praise they gave you along the way.
 
-The fastest way to improve your pipeline is usually not more marketing. It is tighter boundaries on the marketing you are already doing, and earlier, clearer moves toward paid work. That shift alone has changed more expert-founder businesses than any visibility strategy I have seen.
+The fastest way to improve your pipeline is usually not more marketing. It is tighter boundaries on the marketing you are already doing, and earlier, clearer moves towards paid work. That shift alone has changed more expert-founder businesses than any visibility strategy I have seen.
 
 Not sure whether you have a demand problem or a boundary problem? The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment that shows you where your pipeline is actually leaking — and what to fix first.

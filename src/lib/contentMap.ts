@@ -151,9 +151,9 @@ export const SEO_PAGES: Page[] = [
         'The hub: define the system end-to-end and link down to every spoke. 2,500+ words, the page everything points at.',
       outline: [
         'What a client acquisition system actually is (and is not)',
-        'Why service firms stall: founder-led sales, referral dependency, no repeatable motion',
+        'Why service firms stall: founder-led sales, referral dependency, no repeatable routine',
         'The five parts of the system (mapped to CLEAR: Clarify, Lead, Engage, Acquire, Retain)',
-        'How the parts connect into a weekly motion',
+        'How the parts connect into a weekly routine',
         'Where most firms should start (link to the Scorecard)',
         'Deep links out to each spoke',
       ],
@@ -229,7 +229,7 @@ export const SEO_PAGES: Page[] = [
         'Why founders close better than anyone (and why that becomes the problem)',
         'The three things locked inside the founder’s head',
         'Documenting the sale before delegating it',
-        'The first sales motion you can hand off',
+        'The first sales routine you can hand off',
         'What stays the founder’s job forever',
       ],
       handoffLine:
@@ -398,7 +398,7 @@ export const SEO_PAGES: Page[] = [
         'Where AI genuinely saves a founder time',
         'Research, drafting, and qualification with AI',
         'What AI should never touch in a high-trust sale',
-        'A simple AI-assisted weekly motion',
+        'A simple AI-assisted weekly routine',
         'Tools vs. system — why the system still matters',
       ],
       handoffLine:
@@ -561,7 +561,7 @@ export const SEO_PAGES: Page[] = [
         'What digital agency buyers actually want',
         'Positioning past the race to the bottom',
         'The offer that wins retainers',
-        'A weekly acquisition motion for agency founders',
+        'A weekly acquisition routine for agency founders',
       ],
       handoffLine:
         'Find your agency’s weakest link — take the free Sales Scorecard.',
@@ -656,7 +656,7 @@ export const SEO_PAGES: Page[] = [
       outline: [
         'Why ad clients churn',
         'Setting expectations that survive a bad month',
-        'The new-business motion',
+        'The new-business routine',
         'Building a referable reputation',
       ],
       handoffLine:
@@ -692,7 +692,7 @@ export const SEO_PAGES: Page[] = [
         'The overpromise trap',
         'Qualifying for accounts you can actually move',
         'Pricing on value, not ad spend',
-        'The acquisition motion',
+        'The acquisition routine',
       ],
       handoffLine:
         'Find your weakest link — take the free Sales Scorecard.',
@@ -754,7 +754,7 @@ export const SEO_PAGES: Page[] = [
         'Who actually buys training (and who blocks it)',
         'Reaching the problem-owner, not just L&D',
         'Packaging programmes that get approved',
-        'The acquisition motion',
+        'The acquisition routine',
       ],
       handoffLine:
         'Find your weakest link — take the free Sales Scorecard.',
@@ -821,7 +821,7 @@ export const SEO_PAGES: Page[] = [
         'Why “leadership training” all sounds the same',
         'Finding a sharper position',
         'Packaging a programme buyers trust',
-        'The acquisition motion',
+        'The acquisition routine',
       ],
       handoffLine:
         'Find your weakest link — take the free Sales Scorecard.',
@@ -885,7 +885,7 @@ export const SEO_PAGES: Page[] = [
         'What IP buyers actually evaluate',
         'Building trust before the need arises',
         'Packaging IP advisory clearly',
-        'The acquisition motion in a niche field',
+        'The acquisition routine in a niche field',
       ],
       handoffLine:
         'See where your pipeline breaks — take the free Sales Scorecard.',
@@ -916,7 +916,7 @@ export const SEO_PAGES: Page[] = [
         'Why AI buyers are skeptical and overwhelmed',
         'Positioning past the hype',
         'Packaging an AI engagement that de-risks the buyer',
-        'The acquisition motion',
+        'The acquisition routine',
       ],
       handoffLine:
         'Find your weakest link — take the free Sales Scorecard.',
@@ -947,7 +947,7 @@ export const SEO_PAGES: Page[] = [
         'When companies actually buy HR help',
         'Staying top of mind before the crisis',
         'Packaging HR advisory',
-        'The acquisition motion',
+        'The acquisition routine',
       ],
       handoffLine:
         'See where your pipeline breaks — take the free Sales Scorecard.',
@@ -959,7 +959,7 @@ export const SEO_PAGES: Page[] = [
     type: 'vertical',
     title: 'How to Get Clients for a CA Firm',
     metaDescription:
-      'Accounting firms rely heavily on referrals and renewals. Here is how a CA firm can add a deliberate client-acquisition motion without feeling salesy.',
+      'Accounting firms rely heavily on referrals and renewals. Here is how a CA firm can add a deliberate client-acquisition routine without feeling salesy.',
     primaryKeyword: 'how to get clients for a CA firm',
     secondaryKeywords: ['accounting firm clients', 'CA practice lead generation'],
     clearLetter: 'E',
@@ -979,7 +979,7 @@ export const SEO_PAGES: Page[] = [
         'Why accounting practices stay referral-bound',
         'Adding acquisition without feeling salesy',
         'Packaging advisory beyond compliance',
-        'The acquisition motion',
+        'The acquisition routine',
       ],
       handoffLine:
         'See where your pipeline breaks — take the free Sales Scorecard.',

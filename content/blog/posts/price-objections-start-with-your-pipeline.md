@@ -55,7 +55,7 @@ The alternative to discounting is structural flexibility — adjusting what the 
 
 In that proposal walkthrough, my response to the price question was immediate. I said: we don't discount the system. But we can adjust the scope or the risk. Three models.
 
-Standard Retainer — the full six-month programmeme, fixed monthly fee, complete scope of work.
+Standard Retainer — the full six-month programme, fixed monthly fee, complete scope of work.
 
 Shared-Risk — lower upfront investment, with a percentage tied to the revenue outcomes we deliver together.
 

@@ -16,35 +16,48 @@ tags: [clear, case-study]
 
 ---
 
-A B2B branding and creative agency, eight people, a strong portfolio, and a founder well-networked through a local business community. The work was excellent. The trouble was that revenue swung violently — a good quarter on the back of one big rebrand, then a dry stretch while the founder, buried in delivery, did no selling at all.
+A founder who is the only person able to sell has one gas ring in his kitchen. He can boil the milk or he can cook the dal. Not both. And whichever one he isn't watching is quietly going wrong while he attends to the other.
 
-## Two problems that fed each other
+That is the feast-and-famine cycle, and it is not a discipline problem. It is arithmetic. Selling and delivering compete for the same pair of hands, so the pipeline goes cold exactly when the firm is busiest, and the busy work runs out exactly when there is nothing behind it.
 
-The first problem was that the agency sold bespoke projects. Every engagement was scoped from scratch, every proposal a fresh custom document, so nothing was repeatable and the sales cycle restarted from zero with each new conversation. The second problem was that the founder was the only person who could sell, and he could only sell when he wasn't delivering. When projects were on, the pipeline went cold; when projects ended, he scrambled to fill it again. The two problems compounded: because selling depended entirely on the founder, and the founder was either selling or delivering but never both, the firm was structurally guaranteed to lurch between feast and famine.
+This particular firm was a B2B branding and creative agency — eight people, a strong portfolio, a founder well networked through a local business community. The work was excellent. Revenue swung violently: a good quarter on the back of one big rebrand, then a dry stretch while the founder, buried in delivery, did no selling at all.
 
-There was a third, quieter cost. The agency had no entry point smaller than a full commitment. A prospect who wasn't ready for a complete rebrand had nowhere to begin, so they drifted away, and the firm never heard from them again.
+## What made it worse than bad luck
 
-## Anchoring the firm to a moment the buyer could feel
+The agency scoped every engagement from scratch. Each proposal was a fresh custom document, so nothing was repeatable and the sales cycle restarted from zero with every new conversation. Selling was confined to one man, and it cost that man fresh effort every single time he did it.
 
-The work started by settling who the agency was for: growing B2B firms whose brand had fallen behind their ambition. That gave the firm a buying trigger it could recognise — a funding round, a move into a new market, a leadership change — any moment that suddenly made the old brand feel like an embarrassment. The promise shifted from "we'll redesign your brand" to "your brand finally matches where the business is going", tied to a specific moment rather than a vague sense that things could look better.
+Put the two together and the cycle stops being misfortune. Selling depended entirely on the founder, and the founder was either selling or delivering but never both, so the firm was structurally guaranteed to lurch. I treat that as the finding, not the symptom — there is no amount of effort that fixes a shape like this.
 
-## Making the offer repeatable, and the delivery delegable
+There was a third cost, quieter than the other two. The agency had no entry point smaller than a full commitment. A prospect who wasn't ready for a complete rebrand had nowhere to begin, so they drifted away, and the firm never heard from them again.
 
-The bespoke-every-time model was replaced with a productised Brand Clarity Sprint — a fixed scope, a fixed fee, and a named set of deliverables: positioning, an identity system, a messaging guide, with clear boundaries. The detail that mattered most was structural: the deliverables were defined so that the *team*, not only the founder, could run most of the work. That freed the founder to do the one thing only he could do, which was sell.
+## Anchoring to a moment the buyer could feel
 
-And selling was where the productised offer earned its keep. Because the founder had always been the bottleneck, his ability to sell was treated as the centre of the problem, not an afterthought. A repeatable offer made his pitch repeatable for the first time — the same offer, the same words, every conversation — so selling no longer required him to think it all through from scratch each time. That, in turn, meant he could sell in the gaps between delivery instead of only after a project had ended and the pipeline had already gone cold.
+I settled who the agency was for before touching anything else: growing B2B firms whose brand had fallen behind their ambition. That gave the founder a buying trigger he could recognise on sight — a funding round, a move into a new market, a leadership change. Any moment that suddenly makes the old brand feel like an embarrassment.
 
-## Keeping the firm alive while the new system took hold
+The promise moved with it. "We'll redesign your brand" became "your brand finally matches where the business is going", tied to a specific moment rather than a vague sense that things could look better.
 
-A defined four-stage process let the team carry delivery while the founder stayed in the market. Cash flow was checked openly, because it mattered: the agency could not survive a twelve-week warming sequence with no revenue coming in. So the offer was structured for a fast first close — a small, quick entry engagement that produced revenue inside the founder's runway, rather than a long nurture that would have starved the firm before it ever paid off.
+## Building a second gas ring
 
-The commercial terms held the line too. Fixed scope, milestone payments, a hard end-date — the structure that stopped the agency sliding back into open-ended, scope-creeping projects that ate both margin and the founder's time. And the Sprint fed a natural next step, an ongoing brand-and-campaign retainer, offered only to clients who had already been through the Sprint, which kept the cold entry point small and the deeper commitment proven.
+I killed the scoped-from-scratch model first, and replaced it with a productised Brand Clarity Sprint: fixed scope, fixed fee, a named set of deliverables — positioning, an identity system, a messaging guide — with clear boundaries.
 
-## The result
+The detail that mattered most was structural, and it had nothing to do with the fee. The deliverables were defined so that the team, not only the founder, could run most of the work. That freed him to do the one thing nobody else in the building could do, which was sell.
 
-The agency replaced bespoke chaos with one repeatable offer the founder could sell in any gap, and a delivery process the team could run without him. The feast-and-famine swing flattened, because selling no longer stopped the moment delivery started. The productised entry point gave the founder's network something specific to refer, and gave not-yet-ready prospects a small first step instead of a daunting all-or-nothing decision.
+The productised offer earned its keep on the selling side too. His pitch became repeatable for the first time — the same offer, the same words, every conversation — so a sales conversation no longer required him to think it all through from scratch. He could sell in the gaps between delivery, rather than only after a project had ended and the pipeline had already gone cold. A defined four-stage process let the team carry delivery while he stayed in the market.
 
-When the founder is the only seller and every project is built from scratch, the firm can only sell when it isn't working — which is what guarantees the cycle. Making the offer repeatable and the delivery delegable is what finally lets selling and delivering happen at the same time.
+## What changed
+
+The swing flattened, because selling no longer stopped the moment delivery started. That is the entire result, and it came from one structural change rather than any new-found discipline.
+
+The productised entry point gave the founder's network something specific to refer, and gave not-yet-ready prospects a small first step instead of a daunting all-or-nothing decision. The Sprint also fed a natural next step — an ongoing brand-and-campaign retainer, offered only to clients who had already been through it, which kept the cold entry point small and the deeper commitment proven.
+
+The terms held the line: fixed scope, milestone payments, a hard end-date. That is the structure that stops an agency sliding back into open-ended, scope-creeping projects that eat both margin and the founder's time.
+
+## The part that doesn't usually make it into a case study
+
+None of this would have mattered if the firm had run out of money while the new system took hold.
+
+So we checked the cash position openly and early. The agency could not survive a twelve-week warming sequence with no revenue coming in. That is a real constraint, and ignoring it is how good repositioning work quietly kills the firm it was meant to save. The offer was structured for a fast first close — a small, quick entry engagement that produced revenue inside the founder's runway — instead of a long nurture that would have starved the agency before it ever paid off.
+
+The strategy has to fit the runway. Otherwise it is a plan for a firm that won't be around to run it.
 
 ---
-*Related: [[Case_Studies_Index]]*

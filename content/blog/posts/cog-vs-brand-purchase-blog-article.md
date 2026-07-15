@@ -55,7 +55,7 @@ The instinct, once the pain shows up, is to treat it as a pricing problem. Raise
 
 A small client buying you as a brand purchase needs an open-ended owner — someone to define the work and carry it. But an open-ended engagement is precisely what a small client cannot co-manage and what you cannot afford to run at small-client scale. Charging more for an undefined, all-on-you engagement just makes an unsellable offer more expensive. The work still expands to fill whatever the client needs, and you are still absorbing the cost of owning it.
 
-The skeptic's version of this is reasonable: "Surely a small client is just a lower-margin big client — same work, smaller budget." But that misreads what changed. It is not the budget that shrank. It is the amount of unowned work that grew. The fix has to address the ownership, not the price tag.
+The sceptic's version of this is reasonable: "Surely a small client is just a lower-margin big client — same work, smaller budget." But that misreads what changed. It is not the budget that shrank. It is the amount of unowned work that grew. The fix has to address the ownership, not the price tag.
 
 ## What to do: build the firm for the way it's now being bought
 
@@ -79,4 +79,3 @@ If your firm grew up on large accounts and the smaller clients now feel like the
 
 ---
 
-WORD COUNT: 1,420 words

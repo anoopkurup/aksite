@@ -23,7 +23,7 @@ The Sales Scorecard and any other assessments on this site are self-assessment t
 
 ## Engagements and payment
 
-Paid work — the Pipeline Reality Check, CLEAR, or any other engagement — is governed by the specific terms, scope, and fees agreed in writing for that engagement. Where a fee is credited (for example, the Pipeline Reality Check fee credited toward CLEAR), the terms of that credit are set out at the time. Nothing on this site is itself an offer to contract; an engagement begins only when we both agree its terms.
+Paid work — the Pipeline Reality Check, CLEAR, or any other engagement — is governed by the specific terms, scope, and fees agreed in writing for that engagement. Where a fee is credited (for example, the Pipeline Reality Check fee credited towards CLEAR), the terms of that credit are set out at the time. Nothing on this site is itself an offer to contract; an engagement begins only when we both agree its terms.
 
 ## Third-party links
 
