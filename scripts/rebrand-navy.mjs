@@ -100,9 +100,10 @@ const hex = (c) => "#" + [c.r, c.g, c.b].map((v) => v.toString(16).padStart(2, "
 /**
  * ONLY the two directories generate-images.mjs writes to. This must never walk
  * public/images wholesale: the method assumes flat vector art over white, so on a
- * PHOTOGRAPH it reads dark tones as navy and recolours them — it turned the black
- * laptop keyboard in hero/homepage-heroimage.webp blue. Photos are not this
- * script's business; generated art is.
+ * PHOTOGRAPH it reads dark tones as navy and recolours them — pointed at the whole
+ * tree it once turned a black laptop keyboard in a stock photo blue. Photos
+ * (about/, and any future hero/) are not this script's business; generated art is.
+ * Don't widen this list without checking the target dir holds flat art, not photos.
  */
 const GENERATED_DIRS = ["public/images/pages", "public/images/blog"];
 

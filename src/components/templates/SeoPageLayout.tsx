@@ -118,8 +118,8 @@ export default function SeoPageLayout({
             <Image
               src={heroImage}
               alt=""
-              width={1536}
-              height={1024}
+              width={1200}
+              height={800}
               sizes="(max-width: 896px) 100vw, 896px"
               className="w-full h-auto grayscale"
             />

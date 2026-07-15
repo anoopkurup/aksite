@@ -110,8 +110,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <Image
               src={(post.frontmatter.hero_image || post.frontmatter.featured_image) as string}
               alt=""
-              width={1536}
-              height={1024}
+              width={1200}
+              height={800}
               sizes="(max-width: 896px) 100vw, 896px"
               priority
               className="w-full h-auto"

@@ -91,8 +91,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             <Image
               src={cs.heroImage}
               alt=""
-              width={1536}
-              height={1024}
+              width={1200}
+              height={800}
               sizes="(max-width: 896px) 100vw, 896px"
               priority
               className="w-full h-auto"

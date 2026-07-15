@@ -76,8 +76,8 @@ export default function ClearPage() {
               <Image
                 src="/images/pages/clear-stages.webp"
                 alt="CLEAR in three stages: Package, Prove and Sell, Systemise"
-                width={1536}
-                height={1024}
+                width={1200}
+                height={800}
                 sizes="(max-width: 768px) 100vw, 640px"
                 className="w-full h-auto"
               />

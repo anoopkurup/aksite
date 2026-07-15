@@ -30,7 +30,9 @@ export const pages = [
     id: 'page-home-funnel',
     out: 'public/images/pages/home-funnel.webp',
     size: W,
-    alt: 'The funnel: free Sales Scorecard to Pipeline Reality Check to the CLEAR engagement',
+    // Alt describes what is DRAWN, not what the section is about — the prompt below
+    // renders a prospect-filtering metaphor, not the three-step engagement ladder.
+    alt: 'A scatter of unqualified prospects drawn through a funnel and emerging as one committed client',
     prompt:
       'Metaphor: a wide scatter of thin grey line-dots (many unqualified prospects, all noise) on the left is drawn through a bold solid-filled navy funnel in the centre and emerges on the right as a single solid navy diamond lit with a soft orange radial glow — one committed client. The funnel is the confident focal object; the scattered dots are light grey line-art. Wide banner, lots of white space, no text.',
   },

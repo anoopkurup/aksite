@@ -193,8 +193,8 @@ export default function HomePage() {
             <Image
                 src="/images/pages/clear-stages.webp"
                 alt="The three stages: Package, Prove and Sell, Systemise"
-                width={1536}
-                height={1024}
+                width={1200}
+                height={800}
                 sizes="(max-width: 768px) 100vw, 640px"
                 className="w-full h-auto"
               />
@@ -207,10 +207,23 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-8">
           <Eyebrow>The path</Eyebrow>
           <h2 className="font-serif text-display text-navy-900 mb-4">From score to system</h2>
-          <p className="font-sans text-body text-slate-500 mb-14 max-w-2xl leading-relaxed">
+          <p className="font-sans text-body text-slate-500 mb-10 max-w-2xl leading-relaxed">
             One path, three steps. Start free — each step earns the next, and the ₹25,000
             diagnosis fee is credited to CLEAR if we go further.
           </p>
+
+          {/* Wide banner, deliberately unframed: the section above already uses a
+              framed diagram, and two framed diagrams in a row blur the sections
+              together. Sits above the stepper — it states the point (noise in, one
+              client out) that the three steps then deliver. */}
+          <Image
+            src="/images/pages/home-funnel.webp"
+            alt="A scatter of unqualified prospects drawn through a funnel and emerging as one committed client"
+            width={1200}
+            height={800}
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="w-full h-auto mb-14"
+          />
 
           <ol className="relative space-y-12">
             {/* the rail connecting the rungs */}
