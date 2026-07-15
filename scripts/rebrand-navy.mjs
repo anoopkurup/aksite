@@ -136,11 +136,18 @@ export async function rebrandNavy({ only = null, dry = false } = {}) {
       continue;
     }
     const touched = recolour(data, info.channels, N);
-    // Lossless: next/image re-encodes for delivery, so the file on disk is a source
-    // asset — no reason to bake generational loss into it. Still ~4x smaller than
-    // what the generator wrote.
+    // Lossy q82, NOT lossless. The "it's just a source asset, next/image re-encodes
+    // it for delivery" reasoning only holds where next/image is actually in the path.
+    // It isn't for inline post images: the generator injects those into the markdown
+    // body, which renders a plain <img> straight to the file. 39 of them were being
+    // served raw at ~1MB each — 36.7MB across 23 posts, and a 15s mobile LCP.
+    // On flat brand line-art q82 is visually indistinguishable from lossless
+    // (1376KB -> 16KB on a checked sample) and there is no generational-loss problem
+    // in practice: a re-run recolours the already-compressed file once more, and the
+    // art is flat vector shapes with no gradients to degrade.
     await sharp(data, { raw: { width: info.width, height: info.height, channels: info.channels } })
-      .webp({ lossless: true })
+      .resize({ width: 1200, withoutEnlargement: true })
+      .webp({ quality: 82 })
       .toFile(f + ".tmp");
     renameSync(f + ".tmp", f);
     console.log(`  ${hex(N)} -> #1f3d73  (${touched} px)  ${f}`);

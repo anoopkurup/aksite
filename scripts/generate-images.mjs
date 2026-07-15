@@ -19,6 +19,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import sharp from 'sharp';
 import { fileURLToPath } from 'url';
 import { BRAND_PREAMBLE, pages, posts } from './image-manifest.mjs';
 
@@ -137,10 +138,19 @@ async function ensureImage(dest, prompt, size, label) {
   }
   process.stdout.write(`  ${label} … `);
   try {
-    const buf = await generate(prompt, size);
+    const raw = await generate(prompt, size);
     fs.mkdirSync(path.dirname(dest), { recursive: true });
+    // Compress on the way in. gpt-image-1 hands back a ~1.4MB 1536px webp, and
+    // inline post images are served straight off disk (the markdown body renders a
+    // plain <img>, so next/image never sees them). Writing the raw buffer put 36.7MB
+    // of unoptimised art on the site. Flat line-art at q82/1200px is visually
+    // identical and ~85x smaller.
+    const buf = await sharp(raw)
+      .resize({ width: 1200, withoutEnlargement: true })
+      .webp({ quality: 82 })
+      .toBuffer();
     fs.writeFileSync(dest, buf);
-    console.log(`saved (${(buf.length / 1024).toFixed(0)} KB)`);
+    console.log(`saved (${(buf.length / 1024).toFixed(0)} KB, from ${(raw.length / 1024).toFixed(0)} KB)`);
     return 'made';
   } catch (err) {
     console.log('FAILED');
