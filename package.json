@@ -11,6 +11,9 @@
     "images": "node scripts/generate-images.mjs",
     "images:rebrand": "node scripts/rebrand-navy.mjs",
     "social:carousel": "node scripts/linkedin-carousel.mjs",
+    "social:instagram": "node scripts/instagram-carousel.mjs",
+    "social:card": "node scripts/linkedin-image.mjs",
+    "social:cover": "node scripts/social-cover.mjs",
     "seo:audit": "node --experimental-strip-types scripts/seo-link-audit.mjs"
   },
   "dependencies": {

@@ -161,6 +161,26 @@ export async function rebrandNavy({ only = null, dry = false } = {}) {
   return { fixed, clean, skipped, scanned: targets.length };
 }
 
+/**
+ * Recolour ONE file in place, for generated assets that live outside
+ * GENERATED_DIRS (e.g. social carousel covers in Social/). Same method and same
+ * caller responsibility: point it only at flat vector art on white, never a photo.
+ * Preserves the file's format (.png stays png, else webp q82). Returns a summary.
+ */
+export async function rebrandFile(file) {
+  const { data, info } = await sharp(file).raw().toBuffer({ resolveWithObject: true });
+  const N = findSourceNavy(data, info.channels);
+  if (!N) return { fixed: false, reason: "no navy" };
+  if (dist(N, BRAND) <= DRIFT_LIMIT) return { fixed: false, reason: "on-brand" };
+  const touched = recolour(data, info.channels, N);
+  const raw = { width: info.width, height: info.height, channels: info.channels };
+  const img = sharp(data, { raw });
+  const out = file.toLowerCase().endsWith(".png") ? img.png() : img.webp({ quality: 82 });
+  await out.toFile(file + ".tmp");
+  renameSync(file + ".tmp", file);
+  return { fixed: true, from: hex(N), touched };
+}
+
 // CLI entry — only when run directly, so generate-images.mjs can import the fn.
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
