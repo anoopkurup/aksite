@@ -2,7 +2,7 @@
 // from the content map so it tracks what's actually live (GEO / AI-visibility).
 import { getAllBlogPosts } from '@/lib/blog';
 import { getAllCaseStudies } from '@/lib/caseStudies';
-import { getLivePages } from '@/lib/contentMap';
+import { getLivePages, getPageBySlug } from '@/lib/contentMap';
 import { SITE } from '@/lib/seo';
 
 export const dynamic = 'force-static';
@@ -26,7 +26,10 @@ export function GET() {
     .map((c) => `- [${c.title}](${SITE.baseUrl}/case-studies/${c.slug}): ${c.industry}. ${c.salesProblem}`)
     .join('\n');
 
+  // Content-map pages are listed under "Guides" (live ones only); exclude them
+  // here so a live spoke isn't listed twice and a gated one never leaks.
   const posts = getAllBlogPosts()
+    .filter((p) => !getPageBySlug(p.slug))
     .map((p) => `- [${p.frontmatter.title}](${SITE.baseUrl}/blog/${p.slug}): ${p.frontmatter.description}`)
     .join('\n');
 

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { getPageBySlug } from './contentMap';
 
 const BLOG_POSTS_PATH = path.join(process.cwd(), 'content/blog/posts');
 
@@ -70,6 +71,24 @@ export function getBlogPostBySlug(slug: string): BlogPost | null {
   }
 }
 
+/**
+ * Content-map pages (SEO spokes) are gated by their `status`: until a page is
+ * `live` it must stay out of every human-facing listing (blog index, category,
+ * RSS, related, llms.txt), even though its markdown file exists so the page is
+ * reachable and the pillar's internal links to it don't 404. This is the drip
+ * gate — we flip spokes live one at a time. A normal post (no content-map entry)
+ * is always listable.
+ */
+export function isListable(slug: string): boolean {
+  const page = getPageBySlug(slug);
+  return !page || page.status === 'live';
+}
+
+/** All blog posts minus content-map pages that aren't live yet. */
+export function getListableBlogPosts(): BlogPost[] {
+  return getAllBlogPosts().filter((p) => isListable(p.slug));
+}
+
 export function getAllBlogSlugs(): string[] {
   const files = fs.readdirSync(BLOG_POSTS_PATH);
   return files
@@ -86,7 +105,7 @@ export function getAllBlogSlugs(): string[] {
  * pointed sideways and no topic ever clustered. This is the cheap fix for that.
  */
 export function getRelatedBlogPosts(slug: string, limit = 3): BlogPost[] {
-  const all = getAllBlogPosts();
+  const all = getListableBlogPosts();
   const post = all.find((p) => p.slug === slug);
   if (!post) return [];
 
@@ -105,7 +124,7 @@ export function getRelatedBlogPosts(slug: string, limit = 3): BlogPost[] {
 }
 
 export function getBlogCategories(): string[] {
-  const posts = getAllBlogPosts();
+  const posts = getListableBlogPosts();
   const categories = new Set<string>();
   
   posts.forEach(post => {
@@ -118,14 +137,14 @@ export function getBlogCategories(): string[] {
 }
 
 export function getBlogPostsByCategory(category: string): BlogPost[] {
-  const posts = getAllBlogPosts();
+  const posts = getListableBlogPosts();
   return posts.filter(post => 
     post.frontmatter.category?.toLowerCase() === category.toLowerCase()
   );
 }
 
 export function getFeaturedBlogPosts(limit?: number): BlogPost[] {
-  const posts = getAllBlogPosts();
+  const posts = getListableBlogPosts();
   const featured = posts.filter(post => post.frontmatter.featured);
   return limit ? featured.slice(0, limit) : featured;
 }

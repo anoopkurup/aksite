@@ -69,6 +69,30 @@ export const pages = [
       'Metaphor: three bold solid-filled navy concept-icons in a confident row on one clean baseline, joined by a fine navy line with small orange nodes, each with a very subtle soft shadow. (1) a solid navy stack of data rows / spreadsheet — twelve months of deals going in; (2) a solid navy clock or single calendar tile with a small orange marker — one week; (3) a solid navy report document with an orange wax-seal / verdict mark — a written verdict coming out. Premium, generous white space, no extra text.',
   },
   {
+    id: 'page-client-acquisition-system',
+    out: 'public/images/pages/client-acquisition-system.webp',
+    size: W,
+    alt: 'A machine that turns scattered strangers into a steady line of clients',
+    prompt:
+      'Metaphor: a confident client-producing machine. LEFT: a loose scatter of thin grey line-dots — strangers, noise. CENTRE: a bold solid-filled navy machine housing with two meshed navy gears visible and one small orange indicator lamp glowing softly — the system, running. RIGHT: the dots emerge as an orderly, evenly spaced queue of solid navy circles on one clean baseline, the front circle lit with a soft orange glow — clients arriving on purpose. Wide banner, generous white space, no text.',
+  },
+  {
+    id: 'page-client-acquisition-system-parts',
+    out: 'public/images/pages/client-acquisition-system-parts.webp',
+    size: W,
+    alt: 'Five connected parts of one system, in a row on a single baseline',
+    prompt:
+      'Metaphor: five bold solid-filled navy concept-icons in a confident row on one clean baseline, joined by a fine navy line with small orange nodes between them, each with a very subtle soft shadow. (1) a solid navy cube wrapped with a band — one packaged offer; (2) a solid navy magnet drawing three small grey dots toward it — the right prospects arriving; (3) a solid navy open document with a small rising-graph mark — proof building trust; (4) two solid navy speech forms meeting with a small orange spark at the touch point — the sales conversation; (5) a solid navy circular loop-arrow enclosing a small orange core — delivered work feeding the next client. Premium, generous white space, no text labels.',
+  },
+  {
+    id: 'page-client-acquisition-system-rhythm',
+    out: 'public/images/pages/client-acquisition-system-rhythm.webp',
+    size: W,
+    alt: 'A steady weekly pulse running above a row of calendar tiles',
+    prompt:
+      'Metaphor: a confident weekly rhythm. A long row of clean flat calendar-week tiles in light grey line-art runs along the bottom. Above them, one continuous bold navy pulse-line beats steadily left to right, with one small solid orange peak on every tile — the same small effort, every single week, never stopping. The final tile carries a solid navy circle lit with a soft orange glow — the compounding result. Wide banner, spare and mechanical, generous white space, no text.',
+  },
+  {
     id: 'page-about-pathway',
     out: 'public/images/pages/about-pathway.webp',
     size: W,
@@ -82,6 +106,106 @@ export const pages = [
 const img = (alt, prompt) => ({ size: W, alt, prompt });
 
 export const posts = [
+ {
+ slug: 'stop-relying-on-referrals',
+ hero: img(
+ 'A pipeline tap held by another hand versus a tap you own',
+ 'Metaphor: two water taps side by side feeding one pipeline channel below. LEFT: a light grey line-art tap turned by a detached grey hand from outside the frame — flow you do not control, drops falling irregularly. RIGHT: a bold solid-filled navy tap with its own handle, a steady even stream falling, the stream lit with a soft orange glow — flow you own. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'The feast-or-famine revenue wave',
+ 'Subject: a single bold navy line on a small clean axis rising into a high crest then collapsing into a deep trough, repeating twice — a boom-and-bust wave. One small solid orange dot marks the bottom of a trough. Beside it, a faint light-grey straight steady line shows the alternative. Minimal, calm, white background, no text.'
+ ),
+ img(
+ 'Trust, timing and framing rebuilt as three deliberate blocks',
+ 'Subject: three bold solid-filled navy blocks being placed onto one clean baseline by a fine line-art crane hook, the middle block accented with a small soft orange glow. To the left, faint grey outlines of the same three blocks floating loose — the advantages a referral carries by luck. Flat, spare, generous white space, no text.'
+ ),
+ img(
+ 'Four weeks, four small deliberate steps',
+ 'Subject: four clean flat calendar tiles in a confident row on one baseline, each holding one simple solid navy mark: a list, a wrapped cube, a clock face, a document. A fine navy line threads through all four with a small orange node at the final tile. Minimal, tidy grid, white background, no text.'
+ ),
+ img(
+ 'Two streams feeding one pipeline',
+ 'Subject: two channels converging into one wider channel. The upper channel is light grey line-art with irregular dots — referrals, arriving on luck. The lower channel is bold solid navy with evenly spaced dots — the deliberate channel. Where they merge, the combined stream is navy with one orange-lit dot at the front. Flat, spare, no text.'
+ ),
+ ],
+ },
+ {
+ slug: 'lead-generation-for-service-business',
+ hero: img(
+ 'A huge volume funnel versus one precise path to a few right clients',
+ 'Metaphor: a contrast banner. LEFT: a very large light-grey line-art funnel being filled by a dense cloud of tiny grey dots, a few dropping out below — the SaaS volume machine, all noise. RIGHT: a single bold solid navy path drawn from one navy figure directly to a short tidy row of five solid navy diamonds, the first diamond lit with a soft orange glow — few, chosen, right. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'The two leads worth having: a warm path and a lit beacon',
+ 'Subject: a two-panel minimal diagram. LEFT panel: three solid navy circles joined by fine lines, the connecting line highlighted — a warm introduction path through people who know each other. RIGHT panel: one small lighthouse-like beacon in solid navy casting a soft orange light cone, with two grey dots turning toward it — problem-aware prospects finding you. Flat, spare, white background, no text.'
+ ),
+ img(
+ 'A founder-sized week powering four small channels',
+ 'Subject: one small solid navy hourglass at the left, from which four fine navy lines run to four simple solid navy icons in a row: an envelope, a handshake, a document, a podium. One line carries a small orange node. The lines are thin and short — a little time, deliberately split. Minimal, tidy, white background, no text.'
+ ),
+ img(
+ 'Qualifying out: many enter, few pass, on purpose',
+ 'Subject: a bold solid navy gate or sieve in the centre of the frame. From the left, a loose crowd of light grey line-art shapes of mixed sizes approaches; to the right of the gate only three solid navy diamonds continue on a clean baseline, the front one lit with a soft orange glow. A few grey shapes turn politely away below. Flat, spare, no text.'
+ ),
+ img(
+ 'Lead generation as one gear inside a larger machine',
+ 'Subject: a train of four meshed flat gears. One gear is solid orange and slightly highlighted — lead generation; the other three are solid navy — offer, follow-up, closing. All four visibly mesh; none turns alone. Generous white space, flat 2D, subtle soft shadows, no text.'
+ ),
+ ],
+ },
+ {
+ slug: 'founder-led-sales-trap',
+ hero: img(
+ 'Every deal routed through one narrow point: the founder',
+ 'Metaphor: many fine grey lines from the left, each starting at a small grey circle — prospects — all converging into one narrow bold gap occupied by a single solid navy figure, then fanning out on the right as only a few finished navy diamonds. The figure glows softly orange at the centre — brilliant, and a bottleneck. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'Three bodies of knowledge locked in one vault',
+ 'Subject: a bold solid navy vault door, slightly ajar, with a soft orange glow escaping the gap. Inside, three simple shapes are visible in outline: a checklist, a speech form, a balance scale — the qualification instinct, the stories, the deal judgement. Flat, spare, subtle shadow, white background, no text.'
+ ),
+ img(
+ 'The sale, documented: from one head to four pages',
+ 'Subject: a small solid navy head-profile on the left; four fine lines flow from it to four clean flat document tiles standing in a row on one baseline, each with a simple navy mark — a checklist, a question mark, a quote block, a rule line. The third document is accented with a small orange corner. Minimal, tidy, no other text.'
+ ),
+ img(
+ 'Handing over the sale in stages, not in one leap',
+ 'Subject: a staircase of four broad flat steps rising left to right. On each step a baton-like solid navy bar is passed from one small navy figure to another; on the top step only one figure remains, lit with a soft orange glow — the part that stays the founder’s. Flat, spare, clean baseline, white background, no text.'
+ ),
+ img(
+ 'The founder reserved for the few deals that need them',
+ 'Subject: a row of eight small deal-circles on one clean baseline; six are solid navy and connected below to a simple gear — handled by the system; two larger circles at the right are lit with a soft orange glow and connect upward by a fine line to one small solid navy figure — the founder, applied only where it matters. Minimal, no text.'
+ ),
+ ],
+ },
+ {
+ slug: 'how-to-productize-your-service',
+ hero: img(
+ 'Bespoke chaos packaged into one clear offer with a price',
+ 'Metaphor: a transformation banner. LEFT: a loose pile of mismatched light-grey line-art shapes tangled with a thin thread — bespoke everything, reinvented each time. A bold solid orange arrow crosses the centre. RIGHT: one confident solid navy cube, cleanly wrapped with a band, with a small flat tag attached whose edge is solid orange — one named, priced, repeatable offer. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'Four commitments that make one package: scope, outcome, price, timeline',
+ 'Subject: four flat square tiles clicking together into one larger square, drawn slightly apart so the joins show. Three tiles are solid navy with simple marks — a boundary frame, a target, a clock; the fourth tile is solid navy with a small solid orange price-tag mark. Subtle soft shadows, tidy grid, white background, no text.'
+ ),
+ img(
+ 'Choosing the one engagement your history already proves',
+ 'Subject: a tidy grid of twelve light grey line-art project shapes; one shape near the centre is solid navy, ringed by a fine orange circle with a soft glow — the engagement run many times, valued, and worth packaging. Everything else stays quiet grey. Minimal, generous white space, no text.'
+ ),
+ img(
+ 'A stated price on the door instead of a negotiation',
+ 'Subject: a single solid navy storefront-like doorway on a clean baseline, with one flat clear tag hanging beside it, the tag solid orange and blank — the price, stated up front. Approaching from the left, three small grey line-art figures, the first stepping confidently toward the door. Flat, spare, no text.'
+ ),
+ img(
+ 'A productised front door, a custom back room',
+ 'Subject: a simple flat floor-plan view: a small bold solid navy doorway at the front lit with a soft orange glow — the packaged offer — opening into a larger, quieter room drawn in fine grey line-art containing three loose bespoke shapes — the custom work behind it. One fine navy path runs from the door into the room. Minimal, no text.'
+ ),
+ ],
+ },
  {
  slug: 'ad-agency-from-big-clients-to-many-small',
  hero: img(

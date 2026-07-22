@@ -1,4 +1,4 @@
-import { getAllBlogPosts } from '@/lib/blog';
+import { getListableBlogPosts } from '@/lib/blog';
 import { markdownToHtml } from '@/lib/markdown';
 
 export const dynamic = 'force-static';
@@ -15,7 +15,7 @@ function escapeXml(text: string): string {
 }
 
 export async function GET() {
-  const posts = getAllBlogPosts();
+  const posts = getListableBlogPosts();
 
   const items = await Promise.all(
     posts.map(async (post) => {

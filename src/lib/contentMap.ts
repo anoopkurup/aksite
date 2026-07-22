@@ -148,7 +148,8 @@ export const SEO_PAGES: Page[] = [
     siblings: [],
     schema: ['Article', 'BreadcrumbList', 'FAQPage'],
     publishWave: 1,
-    status: 'scaffold',
+    // Published 2026-07-23 (Wave 1, pillar). Spokes flip live one at a time.
+    status: 'live',
     brief: {
       angle:
         'The hub: define the system end-to-end and link down to every spoke. 2,500+ words, the page everything points at.',

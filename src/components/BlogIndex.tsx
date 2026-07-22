@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { getAllBlogPosts, getBlogCategories } from "@/lib/blog";
+import { getListableBlogPosts, getBlogCategories } from "@/lib/blog";
 import { formatDate, estimateReadingTime } from "@/lib/markdown";
 import CTAButton from "@/components/CTAButton";
 import JsonLd from "@/components/JsonLd";
@@ -21,7 +21,7 @@ export function categorySlug(name: string) {
  * as active, and silently ignored every click.)
  */
 export default function BlogIndex({ activeCategory }: { activeCategory?: string }) {
-  const allPosts = getAllBlogPosts();
+  const allPosts = getListableBlogPosts();
   const categories = getBlogCategories();
   const active = activeCategory ?? "All";
   const posts =
