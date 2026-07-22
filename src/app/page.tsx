@@ -20,7 +20,7 @@ const ladder = [
     price: "Free · 3 min",
     name: "Sales Scorecard",
     blurb:
-      "Ten questions, an honest score, and the one thing to fix first — an un-gated read on how predictable your pipeline really is.",
+      "Ten questions, an honest score, and the one thing to fix first: an un-gated read on how predictable your pipeline really is.",
     href: "/scorecard",
     linkText: "Take the Sales Scorecard",
     isCta: true,
@@ -29,7 +29,7 @@ const ladder = [
     price: "₹25,000 · 1 week",
     name: "Pipeline Reality Check",
     blurb:
-      "I take your last 12 months of actual deals and tell you exactly where your next clients will come from — and where they won't. Done for you; the fee is credited to CLEAR.",
+      "I take your last 12 months of actual deals and tell you exactly where your next clients will come from, and where they won't. Done for you; the fee is credited to CLEAR.",
     href: "/pipeline-reality-check",
     linkText: "See the Pipeline Reality Check",
     isCta: false,
@@ -38,7 +38,7 @@ const ladder = [
     price: "₹2.5L · 3 months",
     name: "The CLEAR engagement",
     blurb:
-      "We package your offer, prove it against real prospects together, and systemise what works — leaving you a sales system you own. ₹75K Lite tier; quoted after the diagnosis.",
+      "We package your offer, prove it against real prospects together, and systemise what works, leaving you a sales system you own. ₹75K Lite tier; quoted after the diagnosis.",
     href: "/clear",
     linkText: "See the CLEAR engagement",
     isCta: false,
@@ -55,7 +55,7 @@ const proofHighlights = [
   },
   {
     metric: "45 days",
-    caption: "from repackaging to a signed revenue-share deal — no more fee-by-fee negotiation.",
+    caption: "from repackaging to a signed revenue-share deal. No more fee-by-fee negotiation.",
     source: "Advertising agency",
   },
 ];
@@ -208,7 +208,7 @@ export default function HomePage() {
           <Eyebrow>The path</Eyebrow>
           <h2 className="font-serif text-display text-navy-900 mb-4">From score to system</h2>
           <p className="font-sans text-body text-slate-500 mb-10 max-w-2xl leading-relaxed">
-            One path, three steps. Start free — each step earns the next, and the ₹25,000
+            One path, three steps. Start free: each step earns the next, and the ₹25,000
             diagnosis fee is credited to CLEAR if we go further.
           </p>
 
@@ -345,7 +345,7 @@ export default function HomePage() {
               <ul className="space-y-3">
                 {content.qualification.not_for_you.items.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="text-slate-500 mt-1 flex-shrink-0">—</span>
+                    <span className="text-slate-500 mt-1 flex-shrink-0">–</span>
                     <p className="font-sans text-body text-slate-500">{item}</p>
                   </li>
                 ))}

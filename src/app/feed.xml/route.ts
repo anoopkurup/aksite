@@ -34,7 +34,7 @@ export async function GET() {
   const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Anoop Kurup — Blog</title>
+    <title>Anoop Kurup | Blog</title>
     <link>${BASE_URL}/blog</link>
     <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Sales systems for B2B services businesses: positioning, offers, outreach, and pipelines that don't depend on referrals.</description>

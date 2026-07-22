@@ -11,8 +11,8 @@ This site is operated by Anoop Kurup ("I", "me"). This policy explains what info
 
 ## What I collect
 
-- **Information you give me.** When you submit the Sales Scorecard for a written breakdown, or use the contact form, I collect the details you enter — typically your name, email address, and anything you write in the message. Form submissions are processed by [Formspree](https://formspree.io), which forwards them to my inbox.
-- **Usage data.** Like most websites, this site uses Google Analytics (GA4) to understand how pages are used — for example, which pages are visited and roughly where visitors come from. This data is aggregated and is not used to identify you personally.
+- **Information you give me.** When you submit the Sales Scorecard for a written breakdown, or use the contact form, I collect the details you enter: typically your name, email address, and anything you write in the message. Form submissions are processed by [Formspree](https://formspree.io), which forwards them to my inbox.
+- **Usage data.** Like most websites, this site uses Google Analytics (GA4) to understand how pages are used: for example, which pages are visited and roughly where visitors come from. This data is aggregated and is not used to identify you personally.
 
 ## How I use it
 

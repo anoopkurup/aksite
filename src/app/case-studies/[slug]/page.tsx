@@ -144,7 +144,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             Recognise your own pipeline here?
           </h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">
-            The Sales Scorecard tells you how predictable yours really is — three minutes, an honest
+            The Sales Scorecard tells you how predictable yours really is: three minutes, an honest
             score, and the one thing to fix first.
           </p>
           <CTAButton href="/scorecard">Take the Sales Scorecard</CTAButton>

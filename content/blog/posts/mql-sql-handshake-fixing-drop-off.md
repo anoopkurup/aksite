@@ -20,13 +20,13 @@ The pipeline was never strong. It was full of people who were interested. Intere
 
 ## The two-team story you have been sold
 
-The standard framing of this problem comes with an acronym on each side. Marketing produces an MQL — a marketing qualified lead, someone whose behaviour suggests interest. Sales accepts it as an SQL — a sales qualified lead, someone judged ready to actually buy. The gap between the two is treated as a handover problem: two departments, two definitions, a service agreement to hold them to a response time, a scoring model to grade the leads, a CRM to route them.
+The standard framing of this problem comes with an acronym on each side. Marketing produces an MQL, a marketing qualified lead, someone whose behaviour suggests interest. Sales accepts it as an SQL, a sales qualified lead, someone judged ready to actually buy. The gap between the two is treated as a handover problem: two departments, two definitions, a service agreement to hold them to a response time, a scoring model to grade the leads, a CRM to route them.
 
 That entire body of advice was written for companies with a marketing team on one floor and a sales team on another. It exists because in a large organisation, the person who generates interest and the person who tests for intent are different people, with different incentives and a reason to blame each other.
 
 You are not that company. You are a consulting firm, an agency, a training practice, and you are the only salesperson in it. There is no handover. There is no other department to align with. The lead does not travel anywhere.
 
-But the gap is real. It has just moved. In a founder-led firm, the handshake between interest and intent happens inside your own head — and it happens with nobody watching, no definition written down, and no one to argue with you when you wave a lead through because the conversation felt good.
+But the gap is real. It has just moved. In a founder-led firm, the handshake between interest and intent happens inside your own head, and it happens with nobody watching, no definition written down, and no one to argue with you when you wave a lead through because the conversation felt good.
 
 That is the actual problem. Not routing. Judgement.
 
@@ -48,7 +48,7 @@ Here is the uncomfortable part. The founder is not slightly biased about their o
 
 Consider what a good discovery call actually is, from your side of the table. You are talking about a problem you have spent a decade learning to solve, to somebody who is finally listening properly. They nod. They say the thing about how nobody has explained it that way before. You get to be useful for forty minutes. That is genuinely one of the better parts of the job.
 
-Now notice that you have received a real reward — being understood, being valued — and the prospect has received real value, free, and neither of you has been asked to commit to anything. You both leave feeling the conversation went well. And "it went well" is then recorded, in your head, as pipeline.
+Now notice that you have received a real reward: being understood, being valued. The prospect has received real value, free. Neither of you has been asked to commit to anything. You both leave feeling the conversation went well. And "it went well" is then recorded, in your head, as pipeline.
 
 Nothing about that mistake is stupidity. It is that the person judging the lead is the same person who was warmed up by the conversation. In a large firm, that is precisely why the closer is not the one who does the filtering, and why the filter is written down before the call rather than felt during it. You have no such separation. Your enthusiasm and your judgement are sitting in the same chair.
 
@@ -60,13 +60,13 @@ There is a second pressure, and it is quieter. When the pipeline is thin, the st
 
 If warmth is not the signal, what is?
 
-Intent shows up as cost. Not your cost — theirs. A prospect who genuinely means to buy will, without being pushed, spend something they cannot get back: time, political capital, information they would rather not share, or a slot in a diary that is already full.
+Intent shows up as cost. Not your cost. Theirs. A prospect who genuinely means to buy will, without being pushed, spend something they cannot get back: time, political capital, information they would rather not share, or a slot in a diary that is already full.
 
 That is the whole test, and it is more reliable than any scoring model. Ask what this person has actually spent.
 
-The founder who forwards your email to their partner and copies you in has spent political capital. The one who tells you, unprompted, the real number their business development produced last quarter has spent something too — that information is uncomfortable to hand over. The one who says "we've tried this twice and it didn't work, here's what happened" has spent pride. The one who moves an existing commitment to take your call at the only time you had free has spent convenience.
+The founder who forwards your email to their partner and copies you in has spent political capital. The one who tells you, unprompted, the real number their business development produced last quarter has spent something too: that information is uncomfortable to hand over. The one who says "we've tried this twice and it didn't work, here's what happened" has spent pride. The one who moves an existing commitment to take your call at the only time you had free has spent convenience.
 
-Compare that with the prospect who has spent nothing. They took a free call in a gap in their diary. They asked good questions, which cost them nothing, because good questions are enjoyable to ask. They accepted your thinking, which was free. They will "revert after the board meeting", which commits them to nothing at all. Warm, pleasant, high-quality conversation — and not a single rupee of their own currency laid on the table.
+Compare that with the prospect who has spent nothing. They took a free call in a gap in their diary. They asked good questions, which cost them nothing, because good questions are enjoyable to ask. They accepted your thinking, which was free. They will "revert after the board meeting", which commits them to nothing at all. Warm, pleasant, high-quality conversation, and not a single rupee of their own currency laid on the table.
 
 The prospect who has spent nothing has not decided anything. They have not decided against you either, which is exactly what makes them so easy to keep on the list.
 
@@ -78,9 +78,9 @@ There is a related signal worth watching: whether the problem has a deadline att
 
 None of this calls for machinery. You do not need lead scoring, and a CRM will not tell you anything your own honesty won't. What you need is a small routine that puts the judgement somewhere outside your head, before the warmth of the last call gets to it.
 
-**Write the standard down once, when you are calm.** Not a long document — four or five lines naming what a real opportunity looks like in your practice. There is a specific problem you solve, not a general interest in the area. There is a date that exists whether or not you are involved. The person talking to you can say yes, or can name the person who can. The fee is within a range they have already reacted to without flinching. The value of writing it down is not the document. It is that you decided the standard when you had nothing at stake in the answer.
+**Write the standard down once, when you are calm.** Not a long document: four or five lines naming what a real opportunity looks like in your practice. There is a specific problem you solve, not a general interest in the area. There is a date that exists whether or not you are involved. The person talking to you can say yes, or can name the person who can. The fee is within a range they have already reacted to without flinching. The value of writing it down is not the document. It is that you decided the standard when you had nothing at stake in the answer.
 
-**Ask for one small cost early, and see what happens.** Not a hard close. Something modest and reasonable — a document you need to look at their situation properly, twenty minutes with the partner who will actually decide, the last quarter's numbers. A prospect with intent finds this normal. A prospect with only interest goes quiet, or agrees enthusiastically and then does not do it. Either way, you have your answer in a week, and you learnt it without a single awkward conversation.
+**Ask for one small cost early, and see what happens.** Not a hard close. Something modest and reasonable: a document you need to look at their situation properly, twenty minutes with the partner who will actually decide, the last quarter's numbers. A prospect with intent finds this normal. A prospect with only interest goes quiet, or agrees enthusiastically and then does not do it. Either way, you have your answer in a week, and you learnt it without a single awkward conversation.
 
 **Keep a weekly rhythm of reviewing the list against the standard, not against your memory.** Half an hour, same slot every week. Go down the pipeline and, for each name, answer one question in writing: what has this person spent? Not "how did the call go", not "do they seem keen". What have they actually put on the table? Anyone who has spent nothing in three weeks moves off the pipeline and onto a long, low-effort list you write to occasionally. They are not enemies. They are simply not buyers this quarter, and pretending otherwise is what makes your forecast fiction.
 

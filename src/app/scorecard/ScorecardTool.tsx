@@ -59,7 +59,7 @@ const questions: Question[] = [
     observation:
       "There's no single offer a stranger can grasp and buy. Every deal starts from a blank page, which slows everything down.",
     options: [
-      { label: "Yes — it exists", score: 10 },
+      { label: "Yes, it exists", score: 10 },
       { label: "I could write it", score: 5 },
       { label: "Every deal is custom", score: 0 },
     ],
@@ -106,7 +106,7 @@ const questions: Question[] = [
     dimension: "Sales rhythm",
     text: "How many sales conversations did you have in the last 30 days?",
     observation:
-      "Too few real sales conversations are happening. Pipeline is an output of conversations — and the input is thin.",
+      "Too few real sales conversations are happening. Pipeline is an output of conversations, and the input is thin.",
     options: [
       { label: "8 or more", score: 10 },
       { label: "4–7", score: 6 },
@@ -121,7 +121,7 @@ const questions: Question[] = [
     observation:
       "You can't name where your next clients will come from. That's the difference between a pipeline and a hope.",
     options: [
-      { label: "Yes — I can name the sources", score: 10 },
+      { label: "Yes, I can name the sources", score: 10 },
       { label: "A rough idea", score: 5 },
       { label: "No", score: 0 },
     ],
@@ -131,7 +131,7 @@ const questions: Question[] = [
     dimension: "System independence",
     text: "What happens to your pipeline if you take four weeks off?",
     observation:
-      "The pipeline depends on you being present. Step away and it stalls — that's a person, not a system.",
+      "The pipeline depends on you being present. Step away and it stalls; that's a person, not a system.",
     options: [
       { label: "It keeps moving", score: 10 },
       { label: "It slows down", score: 5 },
@@ -145,9 +145,9 @@ const questions: Question[] = [
     observation:
       "Your offer has no built-in reason to act now. Without a cost to waiting, deals drift into “let's keep in touch.”",
     options: [
-      { label: "Yes — a clear cost to waiting", score: 10 },
+      { label: "Yes, a clear cost to waiting", score: 10 },
       { label: "Sometimes", score: 5 },
-      { label: "Not really — whenever they're ready", score: 0 },
+      { label: "Not really, whenever they're ready", score: 0 },
     ],
   },
 ];
@@ -170,7 +170,7 @@ function getBand(total: number): Band {
       name: "Referral-Dependent",
       range: "0–35",
       verdict:
-        "Your pipeline is your network — and networks plateau. Right now, growth depends on who happens to think of you, which means it depends on luck dressed up as relationships. The good news: the fix starts with packaging, not more outreach. Get the offer right and the channels open up.",
+        "Your pipeline is your network, and networks plateau. Right now, growth depends on who happens to think of you, which means it depends on luck dressed up as relationships. The good news: the fix starts with packaging, not more outreach. Get the offer right and the channels open up.",
     };
   }
   if (total <= 65) {
@@ -178,14 +178,14 @@ function getBand(total: number): Band {
       name: "One Engine Short",
       range: "36–65",
       verdict:
-        "Parts of a system are already in place — but one factor is sitting at zero. It might be the offer, the buying trigger, the channel, or your proof. A pipeline is a product of all four; when any one of them is missing, the whole thing stays unpredictable no matter how hard the others work. Find the zero, fix the zero.",
+        "Parts of a system are already in place, but one factor is sitting at zero. It might be the offer, the buying trigger, the channel, or your proof. A pipeline is a product of all four; when any one of them is missing, the whole thing stays unpredictable no matter how hard the others work. Find the zero, fix the zero.",
     };
   }
   return {
     name: "System-Ready",
     range: "66–100",
     verdict:
-      "Your foundation is solid. Your question isn't whether selling works — it's scale and consistency. You may need sharpening rather than rebuilding: tightening the offer, widening a channel, or making the weekly routine run without you. The fixes are small and the returns are real.",
+      "Your foundation is solid. Your question isn't whether selling works; it's scale and consistency. You may need sharpening rather than rebuilding: tightening the offer, widening a channel, or making the weekly routine run without you. The fixes are small and the returns are real.",
   };
 }
 
@@ -323,7 +323,7 @@ export default function ScorecardTool() {
         ) : (
           <div className="border border-slate-200 p-6">
             <p className="font-sans text-body text-slate-500 leading-relaxed">
-              No single factor is dragging you down — the work now is sharpening and consistency, not rebuilding.
+              No single factor is dragging you down. The work now is sharpening and consistency, not rebuilding.
             </p>
           </div>
         )}
@@ -335,7 +335,7 @@ export default function ScorecardTool() {
               Get the full written breakdown
             </h3>
             <p className="font-sans text-body text-slate-500 mb-6">
-              The detailed read on all ten of your answers — what each score means and the order to
+              The detailed read on all ten of your answers: what each score means and the order to
               fix them in. Enter your email and I&apos;ll send it over.
             </p>
             <label htmlFor="scorecard-email" className="sr-only">
@@ -377,7 +377,7 @@ export default function ScorecardTool() {
           </h3>
           <p className="font-sans text-body text-navy-200 leading-relaxed mb-6 max-w-xl mx-auto">
             The <span className="text-white font-medium">Pipeline Reality Check</span> takes your last
-            12 months of actual deals and tells you exactly where your next clients will come from —
+            12 months of actual deals and tells you exactly where your next clients will come from,
             and where they won&apos;t. ₹25,000 · one week · fully done for you.
           </p>
           <Link

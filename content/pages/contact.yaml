@@ -18,7 +18,7 @@ methods:
   items:
     - icon: "whatsapp"
       title: "WhatsApp"
-      description: "Message me directly. Tell me what's going on with your business — I read and reply to these myself, usually the same day."
+      description: "Message me directly. Tell me what's going on with your business. I read and reply to these myself, usually the same day."
       link_text: "+91 90360 14008"
       link_url: "https://wa.me/919036014008?text=Hi%20Anoop%2C%20I%20run%20a%20B2B%20services%20firm%20and%20want%20to%20talk%20about%20fixing%20our%20sales."
     - icon: "mail"
@@ -36,7 +36,7 @@ fit:
   section_title: "Before you reach out"
   for_title: "This is for you if..."
   for_items:
-    - "You run a B2B service firm — consulting, agency, training, professional services"
+    - "You run a B2B service firm: consulting, agency, training, professional services"
     - "Your business is established, and growth still depends on your personal network"
     - "You're the one closing every deal and you're exhausted by it"
     - "You've tried marketing tactics that didn't stick"

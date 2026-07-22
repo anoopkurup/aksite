@@ -88,7 +88,7 @@ export default function BookPRCButton({ from }: { from: string }) {
         disabled={status === "loading"}
         className="inline-flex items-center font-sans text-body text-white bg-navy-900 px-6 py-3 rounded hover:bg-navy-800 transition-colors duration-300 disabled:opacity-60"
       >
-        {status === "loading" ? "Opening secure checkout…" : "Book the Reality Check — ₹25,000"}
+        {status === "loading" ? "Opening secure checkout…" : "Book the Reality Check · ₹25,000"}
         <ArrowRight className="w-4 h-4 ml-2" />
       </button>
       {/* slate-600, not slate-500: this sits on the navy-50 terms box, where

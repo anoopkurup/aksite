@@ -6,7 +6,7 @@ title: >-
 seo_title: 'Pitching at Events: Lead With the Problem'
 date: '2026-04-02'
 description: >-
-  At a networking event, nobody buys a service they've just heard of. Lead with the problem instead — here's what to say when someone asks what you do.
+  At a networking event, nobody buys a service they've just heard of. Lead with the problem instead. Here's what to say when someone asks what you do.
 tags:
 - Positioning
 - Networking
@@ -15,7 +15,7 @@ category: Strategy
 read_time: 7 min read
 author: Anoop Kurup
 ---
-Most experts walk into networking events with a vague plan and walk out with a stack of business cards they will never use. This is not a failure of effort. It is a failure of approach. The defaults that most experts fall back on — stating a title, performatively listening, exchanging cards — are designed to feel productive while producing very little.
+Most experts walk into networking events with a vague plan and walk out with a stack of business cards they will never use. This is not a failure of effort. It is a failure of approach. The defaults that most experts fall back on are designed to feel productive while producing very little: stating a title, performatively listening, exchanging cards.
 
 There is a more effective way. It works in mixed rooms where your target market may not be present, and in rooms where it is. It is also one of the main reasons certain experts get referred consistently while others, often more skilled, do not.
 
@@ -27,7 +27,7 @@ Before getting to the reframe, it is worth naming why this matters.
 
 Most experts hesitate to commit to a clear target market because they fear it will limit their relevance in mixed rooms. The thinking goes: if I focus on young urban families, what do I say at a general business event where most people don't fit that profile?
 
-This hesitation is one of the main reasons experts stay generic. They keep their pitch broad, their service description vague, and their target market intentionally unclear — all in the hope that a wider net will catch more fish. It rarely does. A vague positioning does not help you in any room. It just makes you forgettable in all of them.
+This hesitation is one of the main reasons experts stay generic. They keep their pitch broad, their service description vague, and their target market intentionally unclear, all in the hope that a wider net will catch more fish. It rarely does. A vague positioning does not help you in any room. It just makes you forgettable in all of them.
 
 The fix is not to broaden your pitch. It is to change what you lead with.
 
@@ -43,7 +43,7 @@ Watch how experts behave at networking events and you will see roughly three pat
 
 ### 2. Performative Listening
 
-The expert lets the other person talk first. They nod, they ask surface questions, they appear engaged. But they are not really listening — they are waiting for their turn to deliver their own pitch. The result is two people delivering monologues with brief pauses in between, neither absorbing anything from the other. It looks like a conversation. It isn't one.
+The expert lets the other person talk first. They nod, they ask surface questions, they appear engaged. But they are not really listening; they are waiting for their turn to deliver their own pitch. The result is two people delivering monologues with brief pauses in between, neither absorbing anything from the other. It looks like a conversation. It isn't one.
 
 ### 3. The Business Card Exchange
 
@@ -59,7 +59,7 @@ The architect I worked with recently had committed to a clear target market: you
 
 Instead of "I'm an architect for young families," she could open with:
 
-"Our living spaces haven't kept up with how we actually live now. Modern households need different things — and most homes aren't being built with that in mind."
+"Our living spaces haven't kept up with how we actually live now. Modern households need different things, and most homes aren't being built with that in mind."
 
 That is a topic. Not a pitch. And the difference is significant.
 
@@ -83,15 +83,15 @@ This shift works the same way for any kind of expert. The pattern is consistent.
 
 **Tax advisor.** "I do tax planning" lands as transactional. "Most growing businesses are paying tax on profit they could have legitimately reinvested if they had structured their books differently in the first place" lands as a specialist in growth-stage tax structuring.
 
-In each case, the expert is doing the same work they always did. What changes is how the room remembers them — and therefore who refers them later.
+In each case, the expert is doing the same work they always did. What changes is how the room remembers them, and therefore who refers them later.
 
 ## When to Use Which Version
 
 A useful refinement: not every problem framing fits every room.
 
-In mixed-audience events — general business networking, industry-agnostic gatherings, social-professional crossover events — lead with broad problems. The framing should be wide enough that anyone in the room can engage, even if they are not in your target market. The architect's "modern households need different things" works for developers, parents, real estate agents, builders, and investors. Each has a relationship to the topic.
+In mixed-audience events, lead with broad problems. This covers general business networking, industry-agnostic gatherings, and social-professional crossover events. The framing should be wide enough that anyone in the room can engage, even if they are not in your target market. The architect's "modern households need different things" works for developers, parents, real estate agents, builders, and investors. Each has a relationship to the topic.
 
-In rooms where your actual target market is present — industry-specific events, peer gatherings, founder communities — you can lead with sharper, more specific problems. Go deeper. Ask better questions. The principle is the same. The resolution changes.
+Some rooms hold your actual target market: industry-specific events, peer gatherings, founder communities. There you can lead with sharper, more specific problems. Go deeper. Ask better questions. The principle is the same. The resolution changes.
 
 In both cases, the rule about who is doing the talking matters more than people realise. Do not dominate. Initiate the topic, but participate in it. Let the room think with you, not at you. The expert who lectures gets tolerated. The expert who facilitates a conversation gets remembered.
 
@@ -101,10 +101,10 @@ This is not really a networking tactic. It is a positioning principle.
 
 The expert who is known for what they do gets compared to every other expert who does the same thing. The expert who is known for what they think about gets remembered as a specific expert on a specific problem. The first version competes on price and credentials. The second version gets referred.
 
-When someone you met at a networking event later thinks "I know someone who thinks a lot about how homes should be built for modern families" — that is the moment your positioning starts paying off. It does not happen because you handed them a business card. It happens because you gave them a context to remember you in.
+When someone you met at a networking event later thinks "I know someone who thinks a lot about how homes should be built for modern families", that is the moment your positioning starts paying off. It does not happen because you handed them a business card. It happens because you gave them a context to remember you in.
 
 ---
 
-The next time you walk into a room, do not open with what you do. Open with the problem your best clients are dealing with. Then notice who leans in. Those are the conversations worth having — and the ones that lead, weeks or months later, to the referrals that actually convert.
+The next time you walk into a room, do not open with what you do. Open with the problem your best clients are dealing with. Then notice who leans in. Those are the conversations worth having, and the ones that lead, weeks or months later, to the referrals that actually convert.
 
-Not sure your positioning is sharp enough to lead with in any room? The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment that shows you where your positioning and pipeline are costing you referrals — and what to fix first.
+Not sure your positioning is sharp enough to lead with in any room? The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment that shows you where your positioning and pipeline are costing you referrals, and what to fix first.

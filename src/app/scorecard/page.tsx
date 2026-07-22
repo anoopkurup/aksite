@@ -20,7 +20,7 @@ const DIMENSIONS = [
   { name: "Who sells", what: "Whether the founder closes everything, only the big ones, or nothing. Founder-led selling is a ceiling, not a strategy." },
   { name: "Founder capacity", what: "Hours you personally spent inside delivery last week. Delivery time is the tax that stops selling from happening." },
   { name: "Reach beyond network", what: "When you last won a client who'd never heard of you that month. It's the cleanest test of whether marketing reaches strangers." },
-  { name: "Sales rhythm", what: "Sales conversations in the last 30 days. Pipeline is a rate, not a stock — it reflects the weekly rhythm behind it." },
+  { name: "Sales rhythm", what: "Sales conversations in the last 30 days. Pipeline is a rate, not a stock; it reflects the weekly rhythm behind it." },
   { name: "Pipeline visibility", what: "Whether you know today where your next three clients are likely to come from. If you can't name them, you're forecasting on hope." },
   { name: "System independence", what: "What happens to the pipeline if you take four weeks off. A system that stops when you do is a job." },
   { name: "Urgency & trigger", what: "Whether there's a real consequence to waiting. Without a trigger, 'not now' is always the safest answer a prospect can give." },
@@ -28,9 +28,9 @@ const DIMENSIONS = [
 
 // Ranges and names match getBand() in ScorecardTool.tsx.
 const BANDS = [
-  { range: "0–35", name: "Referral-Dependent", what: "Your pipeline is your network, and networks plateau. Growth depends on who happens to think of you — luck dressed up as relationships. The fix starts with packaging, not more outreach." },
+  { range: "0–35", name: "Referral-Dependent", what: "Your pipeline is your network, and networks plateau. Growth depends on who happens to think of you: luck dressed up as relationships. The fix starts with packaging, not more outreach." },
   { range: "36–65", name: "One Engine Short", what: "Parts of a system are in place, but one factor is sitting at zero: the offer, the buying trigger, the channel, or the proof. A pipeline is the product of all four, so one missing factor keeps the whole thing unpredictable. Find the zero, fix the zero." },
-  { range: "66–100", name: "System-Ready", what: "The foundation is solid. The question isn't whether selling works, it's scale and consistency — sharpening rather than rebuilding. The fixes are small and the returns are real." },
+  { range: "66–100", name: "System-Ready", what: "The foundation is solid. The question isn't whether selling works, it's scale and consistency: sharpening rather than rebuilding. The fixes are small and the returns are real." },
 ];
 
 const FAQS = [
@@ -46,7 +46,7 @@ const FAQS = [
   {
     question: "Who is it for?",
     answer:
-      "B2B services businesses — consulting firms, agencies, training practices, professional services. It assumes you sell expertise to other businesses and that the founder is close to the selling.",
+      "B2B services businesses: consulting firms, agencies, training practices, professional services. It assumes you sell expertise to other businesses and that the founder is close to the selling.",
   },
   {
     question: "What happens after I get my score?",
@@ -56,7 +56,7 @@ const FAQS = [
   {
     question: "Is the score a sales pitch?",
     answer:
-      "It's a measurement. The bands are honest — plenty of firms land in System-Ready and need nothing from me. The point is to tell you where your pipeline actually leaks, not to route everyone to the same answer.",
+      "It's a measurement. The bands are honest; plenty of firms land in System-Ready and need nothing from me. The point is to tell you where your pipeline actually leaks, not to route everyone to the same answer.",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function ScorecardPage() {
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
             How predictable is your pipeline, really? Most founders sense the answer but have never
-            measured it. Ten questions, three minutes, no email required to see your score — you&apos;ll
+            measured it. Ten questions, three minutes, no email required to see your score: you&apos;ll
             get an honest number and a plain read on what&apos;s holding your pipeline back.
           </p>
         </div>
@@ -110,7 +110,7 @@ export default function ScorecardPage() {
             Ten questions, ten ways a pipeline goes quiet.
           </h2>
           <p className="font-sans text-body-lg text-slate-500 leading-relaxed mb-12">
-            A pipeline doesn&apos;t fail in general — it fails somewhere specific. Each question
+            A pipeline doesn&apos;t fail in general; it fails somewhere specific. Each question
             scores one dimension out of ten. The total tells you how predictable your pipeline is;
             the low scores tell you where to start.
           </p>

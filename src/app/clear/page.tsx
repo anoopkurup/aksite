@@ -21,7 +21,7 @@ export default function ClearPage() {
       <JsonLd
         schema={[
           serviceSchema({
-            name: "CLEAR — the sales system, installed",
+            name: "CLEAR: the sales system, installed",
             description: content.meta.description,
             url: "/clear",
             serviceType: "Sales systems consulting",

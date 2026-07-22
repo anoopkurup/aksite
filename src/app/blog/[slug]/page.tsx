@@ -6,7 +6,9 @@ import { getBlogPostBySlug, getAllBlogSlugs, getRelatedBlogPosts } from '@/lib/b
 import { markdownToHtml, formatDate, estimateReadingTime } from '@/lib/markdown';
 import CTAButton from '@/components/CTAButton';
 import JsonLd from '@/components/JsonLd';
-import { blogPostingSchema, breadcrumbSchema, pageMetadata } from '@/lib/seo';
+import SpokeTemplate from '@/components/templates/SpokeTemplate';
+import { getPageBySlug } from '@/lib/contentMap';
+import { blogPostingSchema, breadcrumbSchema, buildPageMetadata, pageMetadata } from '@/lib/seo';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export async function generateStaticParams() {
@@ -33,6 +35,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const htmlContent = await markdownToHtml(post.content);
   const readingTime = estimateReadingTime(post.content);
   const related = getRelatedBlogPosts(slug);
+
+  // SEO content-map pages (spokes/verticals) render through the cluster
+  // template: breadcrumbs, up/sibling links, FAQ schema, CLEAR handoff.
+  const seoPage = getPageBySlug(slug);
+  if (seoPage) {
+    return (
+      <SpokeTemplate
+        page={seoPage}
+        bodyHtml={htmlContent}
+        datePublished={post.frontmatter.date}
+        heroImage={post.frontmatter.hero_image || post.frontmatter.featured_image}
+      />
+    );
+  }
 
   const postUrl = `/blog/${slug}`;
 
@@ -156,7 +172,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.frontmatter.author || "Anoop Kurup"}
               </h3>
               <p className="font-sans text-body text-slate-600 leading-relaxed mb-4">
-                I fix sales for B2B services businesses — one packaged offer, proven against real
+                I fix sales for B2B services businesses: one packaged offer, proven against real
                 prospects, with a weekly rhythm that produces conversations. Before this: a research
                 lab at GE, then patents and competitive strategy, then an intellectual-property firm
                 I built and exited. I work with founders one engagement at a time from Bangalore, and
@@ -231,6 +247,12 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     return {
       title: 'Post Not Found',
     };
+  }
+
+  // Content-map pages carry their own metadata, incl. the noindex-until-live gate.
+  const seoPage = getPageBySlug(slug);
+  if (seoPage) {
+    return buildPageMetadata(seoPage);
   }
 
   return pageMetadata({

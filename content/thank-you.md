@@ -15,6 +15,6 @@ I read every message myself and reply within 1–2 business days.
 
 In the meantime:
 
-- [Take the Sales Scorecard](/scorecard) — 10 questions, 3 minutes, and you'll know where your sales system is leaking.
-- [Read the case studies](/case-studies) — how these problems got fixed in past consulting engagements.
-- [Browse the blog](/blog) — how I think about pipelines, positioning, and founder-led sales.
+- [Take the Sales Scorecard](/scorecard): 10 questions, 3 minutes, and you'll know where your sales system is leaking.
+- [Read the case studies](/case-studies): how these problems got fixed in past consulting engagements.
+- [Browse the blog](/blog): how I think about pipelines, positioning, and founder-led sales.

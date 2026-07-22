@@ -24,7 +24,7 @@ export async function generateMetadata({
   const name = resolve(category);
   if (!name) return {};
   return pageMetadata({
-    title: `${name} — Blog`,
+    title: `${name} | Blog`,
     description: `Writing on ${name.toLowerCase()} for B2B services businesses.`,
     path: `/blog/category/${category}`,
   });

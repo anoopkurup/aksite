@@ -9,7 +9,7 @@ export const dynamic = 'force-static';
 
 export function GET() {
   const core = [
-    ['Sales Scorecard (free 3-min self-assessment — the primary CTA)', '/scorecard'],
+    ['Sales Scorecard (free 3-min self-assessment; the primary CTA)', '/scorecard'],
     ['Pipeline Reality Check (₹25K done-for-you diagnosis)', '/pipeline-reality-check'],
     ['The CLEAR engagement', '/clear'],
     ['About Anoop Kurup', '/about'],
@@ -23,7 +23,7 @@ export function GET() {
     .join('\n');
 
   const caseStudies = getAllCaseStudies()
-    .map((c) => `- [${c.title}](${SITE.baseUrl}/case-studies/${c.slug}): ${c.industry} — ${c.salesProblem}`)
+    .map((c) => `- [${c.title}](${SITE.baseUrl}/case-studies/${c.slug}): ${c.industry}. ${c.salesProblem}`)
     .join('\n');
 
   const posts = getAllBlogPosts()

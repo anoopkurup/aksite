@@ -45,7 +45,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.anoopkurup.com"),
   title: {
-    default: "Anoop Kurup — I Fix Sales for Services Businesses",
+    default: "Anoop Kurup | I Fix Sales for Services Businesses",
     template: "%s | Anoop Kurup",
   },
   description:
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     types: {
-      "application/rss+xml": [{ url: "/feed.xml", title: "Anoop Kurup — Blog" }],
+      "application/rss+xml": [{ url: "/feed.xml", title: "Anoop Kurup | Blog" }],
     },
   },
 };

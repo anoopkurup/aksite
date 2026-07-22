@@ -199,6 +199,7 @@ A mono label + value + segmented meter (orange fill = the needle). Used for the 
   - **Never the word "motion"** for a repeatable sales/pipeline activity — Anoop dislikes it. Say rhythm, routine, the thing you do weekly, or a repeatable activity. (Sitewide signature line uses "weekly rhythm".)
   - **Indian English**: -ise not -ize, colour/behaviour/centre, "programme" (except software), ₹ and lakh/crore. No American idioms (home run, ballpark, touch base…) or corporate jargon (leverage-as-filler, move the needle, low-hanging fruit, bandwidth…).
   - **No AI tells**: "in today's fast-paced world", "it's important to note", "let's dive in", "robust", and empty symmetry like "it's not just X, it's Y".
+  - **No em-dashes anywhere in site copy** (content files AND user-visible strings in TSX — meta titles, alt text, captions). Restructure with full stops, commas, semicolons, or colons; use " | " as the separator in title-style metadata. (Swept clean July 2026 — keep it that way. Code comments are exempt.)
   - Plain over clever, concrete over abstract, calm authority — state things, don't sell them. Open with a hook, teach through analogy, first-person experience as proof.
 - First person singular: "I fix," "I build," "I'm in the room." Never "we" (solo practice).
 - No "help/guide/coach/empower" in headlines. No "cutting-edge/bespoke/holistic".

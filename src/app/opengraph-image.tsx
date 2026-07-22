@@ -6,7 +6,7 @@ export const size = {
 };
 
 export const contentType = 'image/png';
-export const alt = 'Anoop Kurup — I fix sales for services businesses';
+export const alt = 'Anoop Kurup | I fix sales for services businesses';
 
 export default function OpenGraphImage() {
   return new ImageResponse(
@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
             fontFamily: 'system-ui, -apple-system, sans-serif',
           }}
         >
-          Anoop Kurup — anoopkurup.com
+          Anoop Kurup · anoopkurup.com
         </div>
       </div>
     ),

@@ -108,7 +108,7 @@ export default function PipelineRealityCheckPage() {
                 className="w-16 h-16 object-cover grayscale flex-shrink-0"
               />
               <p className="font-sans text-body text-slate-600">
-                You&apos;re dealing with me directly — I read your deals, I write the verdict.
+                You&apos;re dealing with me directly: I read your deals, I write the verdict.
                 No analyst, no account manager.
               </p>
             </div>
@@ -123,8 +123,8 @@ export default function PipelineRealityCheckPage() {
                 className="text-navy-900 border-b-2 border-cta-500 pb-0.5 hover:border-cta-600 transition-colors"
               >
                 WhatsApp me
-              </a>{" "}
-              — no pitch, a straight answer on whether it&apos;s worth your ₹25,000.
+              </a>
+              . No pitch, just a straight answer on whether it&apos;s worth your ₹25,000.
             </p>
           </div>
         </div>

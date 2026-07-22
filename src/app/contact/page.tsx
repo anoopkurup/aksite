@@ -107,7 +107,7 @@ export default function ContactPage() {
               <ul className="space-y-3">
                 {content.fit.not_for_items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-slate-500 mt-1 flex-shrink-0">—</span>
+                    <span className="text-slate-500 mt-1 flex-shrink-0">–</span>
                     <p className="font-sans text-body text-slate-500">{item}</p>
                   </li>
                 ))}

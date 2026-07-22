@@ -7,7 +7,7 @@ import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Case Studies — B2B Services Firms",
+  title: "Case Studies | B2B Services Firms",
   description:
     "How B2B services firms replaced referral dependence with one sellable offer. From past consulting engagements, anonymised at each client's request.",
   path: "/case-studies",
@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
             Is your offer the problem?
           </h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">
-            The Sales Scorecard finds out in three minutes — an honest read on how predictable your
+            The Sales Scorecard finds out in three minutes: an honest read on how predictable your
             pipeline really is, and the one thing to fix first.
           </p>
           <CTAButton href="/scorecard">Take the Sales Scorecard</CTAButton>

@@ -86,7 +86,7 @@ export const SEO_PAGES: Page[] = [
     type: 'spoke',
     title: 'How to Stop Relying on Referrals for Clients',
     metaDescription:
-      'Referrals feel free but leave your pipeline at the mercy of other people. Here is how founder-led firms build a system that produces clients on purpose.',
+      'Referrals feel free but leave your pipeline at the mercy of other people. Here is how B2B service firms build a system that produces clients on purpose.',
     primaryKeyword: 'stop relying on referrals',
     secondaryKeywords: [
       'referral dependency',
@@ -114,15 +114,18 @@ export const SEO_PAGES: Page[] = [
       faqs: [
         {
           question: 'Are referrals bad for a consulting business?',
-          answer: '',
+          answer:
+            'No. Referred clients are usually your best clients: pre-sold, trusting, and easy to start with. The problem is depending on them, because you control neither their timing nor their fit. Keep taking referrals; build a deliberate channel alongside them so a quiet month is an inconvenience, not a crisis.',
         },
         {
           question: 'How do I get clients without relying on referrals?',
-          answer: '',
+          answer:
+            'Build the parts a referral gives you for free: trust, timing, and framing. Package one clear offer, write a named list of organisations that fit it, publish something useful weekly, and reach out directly in small, researched batches. Two to three protected hours a week, sustained, is enough to start.',
         },
         {
           question: 'How long does it take to reduce referral dependency?',
-          answer: '',
+          answer:
+            'Expect the first non-referral conversations within a month of starting a weekly rhythm, and the first closed client within one to two quarters, since B2B service sales decide slowly. Meaningful independence, where referrals are a bonus rather than the whole pipeline, typically takes six to twelve months of consistency.',
         },
       ],
     },
@@ -133,7 +136,7 @@ export const SEO_PAGES: Page[] = [
     type: 'pillar',
     title: 'Client Acquisition System for Service Businesses',
     metaDescription:
-      'A client acquisition system is the repeatable way founder-led service firms win clients without depending on referrals. Here is how to build one.',
+      'A client acquisition system is the repeatable way B2B service firms win clients without depending on referrals. Here is how to build one.',
     primaryKeyword: 'client acquisition system',
     secondaryKeywords: [
       'predictable client acquisition',
@@ -158,16 +161,22 @@ export const SEO_PAGES: Page[] = [
         'Deep links out to each spoke',
       ],
       handoffLine:
-        'See which part of your system is weakest in three minutes — take the free Sales Scorecard.',
+        'See which part of your system is weakest in three minutes. Take the free Sales Scorecard.',
       faqs: [
-        { question: 'What is a client acquisition system?', answer: '' },
+        {
+          question: 'What is a client acquisition system?',
+          answer:
+            'It is the repeatable set of activities that takes your firm from stranger to paying client on purpose: one packaged offer, a deliberate flow of right-fit leads, proof and follow-up that build trust, a documented sales conversation, and machinery that turns delivered work into the next client. Written down, running weekly.',
+        },
         {
           question: 'How is client acquisition different from lead generation?',
-          answer: '',
+          answer:
+            'Lead generation is one part of the machine: producing conversations with the right prospects. Getting clients is the whole journey, from the offer those leads are shown, through follow-up and the sales conversation, to renewals and introductions after delivery. More leads fix nothing if the other parts leak.',
         },
         {
           question: 'How much does it cost to build a client acquisition system?',
-          answer: '',
+          answer:
+            'Built yourself, the cost is mostly discipline: two to three protected hours a week for a couple of quarters, and almost no tooling. If you want it installed with an experienced hand, my CLEAR engagement runs ₹2.5 lakh over three months, month to month, priced after a paid diagnosis.',
         },
       ],
     },
@@ -178,7 +187,7 @@ export const SEO_PAGES: Page[] = [
     type: 'spoke',
     title: 'Lead Generation for Consultants & Service Firms',
     metaDescription:
-      'Most lead-generation advice is built for SaaS, not consultants. Here is how founder-led service firms generate qualified leads that actually convert.',
+      'Most lead-generation advice is built for SaaS, not consultants. Here is how B2B service firms generate qualified leads that actually convert.',
     primaryKeyword: 'lead generation for consultants',
     secondaryKeywords: [
       'lead generation for service business',
@@ -233,7 +242,7 @@ export const SEO_PAGES: Page[] = [
         'What stays the founder’s job forever',
       ],
       handoffLine:
-        'Find out how much of your sale only you can do — take the free Sales Scorecard.',
+        'Find out how much of your sale only you can do. Take the free Sales Scorecard.',
     },
   },
   {
@@ -242,7 +251,7 @@ export const SEO_PAGES: Page[] = [
     type: 'spoke',
     title: 'How to Productize Your Service (Step by Step)',
     metaDescription:
-      'A productized service is easier to sell, price, and scale. Here is how to package what you do into one clear offer founder-led firms can repeat.',
+      'A productized service is easier to sell, price, and scale. Here is how to package what you do into one clear offer your firm can repeat.',
     primaryKeyword: 'how to productize a service',
     secondaryKeywords: ['productized service', 'productized consulting'],
     clearLetter: 'L',
@@ -264,8 +273,16 @@ export const SEO_PAGES: Page[] = [
       handoffLine:
         'Is your offer clear enough to repeat? The free Sales Scorecard will tell you.',
       faqs: [
-        { question: 'What is a productized service?', answer: '' },
-        { question: 'Can consulting really be productized?', answer: '' },
+        {
+          question: 'What is a productized service?',
+          answer:
+            'A service packaged like a product: a named engagement with a fixed scope, a defined outcome, a stated price, and a set timeline, all decided in advance and written on one page. Buyers can understand it, compare it, and say yes to it without a bespoke proposal cycle.',
+        },
+        {
+          question: 'Can consulting really be productized?',
+          answer:
+            'Most of it, yes. Look at your delivery history: the engagements you have quietly run eight or ten times already have a repeatable shape, and that is what you package. Genuinely novel, high-stakes advisory work stays custom, and usually arrives through the packaged offer that made strangers trust you.',
+        },
       ],
     },
   },
@@ -369,7 +386,7 @@ export const SEO_PAGES: Page[] = [
         'Scaling the system, not the hours',
       ],
       handoffLine:
-        'See how dependent the business is on you — take the free Sales Scorecard.',
+        'See how dependent the business is on you. Take the free Sales Scorecard.',
     },
   },
   {
@@ -402,7 +419,7 @@ export const SEO_PAGES: Page[] = [
         'Tools vs. system — why the system still matters',
       ],
       handoffLine:
-        'Before automating, see what to fix first — take the free Sales Scorecard.',
+        'Before automating, see what to fix first. Take the free Sales Scorecard.',
     },
   },
   {
@@ -434,7 +451,7 @@ export const SEO_PAGES: Page[] = [
         'Following up without being annoying',
       ],
       handoffLine:
-        'Outreach only works if the offer lands — check yours with the free Sales Scorecard.',
+        'Outreach only works if the offer lands. Check yours with the free Sales Scorecard.',
     },
   },
   {
@@ -466,7 +483,7 @@ export const SEO_PAGES: Page[] = [
         'Handing the process to someone else',
       ],
       handoffLine:
-        'See how leaky your pipeline is right now — take the free Sales Scorecard.',
+        'See how leaky your pipeline is right now. Take the free Sales Scorecard.',
     },
   },
   {
@@ -498,7 +515,7 @@ export const SEO_PAGES: Page[] = [
         'How long it really takes',
       ],
       handoffLine:
-        'Traffic without a system doesn’t convert — start with the free Sales Scorecard.',
+        'Traffic without a system doesn’t convert. Start with the free Sales Scorecard.',
     },
   },
 
@@ -532,7 +549,7 @@ export const SEO_PAGES: Page[] = [
         'Links to each agency type',
       ],
       handoffLine:
-        'See where your agency’s pipeline breaks — take the free Sales Scorecard.',
+        'See where your agency’s pipeline breaks. Take the free Sales Scorecard.',
     },
   },
   {
@@ -564,7 +581,7 @@ export const SEO_PAGES: Page[] = [
         'A weekly acquisition routine for agency founders',
       ],
       handoffLine:
-        'Find your agency’s weakest link — take the free Sales Scorecard.',
+        'Find your agency’s weakest link. Take the free Sales Scorecard.',
     },
   },
   {
@@ -596,7 +613,7 @@ export const SEO_PAGES: Page[] = [
         'Finding buyers who already value brand',
       ],
       handoffLine:
-        'See how clearly your value lands — take the free Sales Scorecard.',
+        'See how clearly your value lands. Take the free Sales Scorecard.',
     },
   },
   {
@@ -628,7 +645,7 @@ export const SEO_PAGES: Page[] = [
         'Recurring revenue after launch',
       ],
       handoffLine:
-        'Stop competing on price — see where to start with the free Sales Scorecard.',
+        'Stop competing on price. See where to start with the free Sales Scorecard.',
     },
   },
   {
@@ -637,7 +654,7 @@ export const SEO_PAGES: Page[] = [
     type: 'vertical',
     title: 'How to Get Clients for an Ad Agency',
     metaDescription:
-      'Ad agencies live and die by results — and so does their own pipeline. Here is how to win clients who stay past the first campaign.',
+      'Ad agencies live and die by results, and so does their own pipeline. Here is how to win clients who stay past the first campaign.',
     primaryKeyword: 'how to get clients for an ad agency',
     secondaryKeywords: ['ad agency clients', 'advertising agency new business'],
     clearLetter: 'E',
@@ -660,7 +677,7 @@ export const SEO_PAGES: Page[] = [
         'Building a referable reputation',
       ],
       handoffLine:
-        'See what’s leaking clients — take the free Sales Scorecard.',
+        'See what’s leaking clients. Take the free Sales Scorecard.',
     },
   },
   {
@@ -669,7 +686,7 @@ export const SEO_PAGES: Page[] = [
     type: 'vertical',
     title: 'How to Get Clients for a Performance Agency',
     metaDescription:
-      'Performance marketing is measurable — which cuts both ways. Here is how performance agencies win clients and prove value without overpromising.',
+      'Performance marketing is measurable, which cuts both ways. Here is how performance agencies win clients and prove value without overpromising.',
     primaryKeyword: 'how to get clients for a performance marketing agency',
     secondaryKeywords: [
       'performance marketing agency clients',
@@ -695,7 +712,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'Find your weakest link — take the free Sales Scorecard.',
+        'Find your weakest link. Take the free Sales Scorecard.',
     },
   },
 
@@ -727,7 +744,7 @@ export const SEO_PAGES: Page[] = [
         'Links to each training type',
       ],
       handoffLine:
-        'See where your training pipeline breaks — take the free Sales Scorecard.',
+        'See where your training pipeline breaks. Take the free Sales Scorecard.',
     },
   },
   {
@@ -757,7 +774,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'Find your weakest link — take the free Sales Scorecard.',
+        'Find your weakest link. Take the free Sales Scorecard.',
     },
   },
   {
@@ -766,7 +783,7 @@ export const SEO_PAGES: Page[] = [
     type: 'vertical',
     title: 'How to Get Public Speaking Clients (B2B)',
     metaDescription:
-      'For B2B speakers and communication trainers, the gig is the marketing — if you treat it as a system. Here is how to turn talks into a corporate pipeline.',
+      'For B2B speakers and communication trainers, the gig is the marketing, provided you treat it as a system. Here is how to turn talks into a corporate pipeline.',
     primaryKeyword: 'how to get public speaking clients',
     secondaryKeywords: [
       'communication skills training clients',
@@ -791,7 +808,7 @@ export const SEO_PAGES: Page[] = [
         'The pipeline behind the stage',
       ],
       handoffLine:
-        'See where your pipeline breaks — take the free Sales Scorecard.',
+        'See where your pipeline breaks. Take the free Sales Scorecard.',
     },
   },
   {
@@ -824,7 +841,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'Find your weakest link — take the free Sales Scorecard.',
+        'Find your weakest link. Take the free Sales Scorecard.',
     },
   },
 
@@ -856,7 +873,7 @@ export const SEO_PAGES: Page[] = [
         'Links to each advisory type',
       ],
       handoffLine:
-        'See where your pipeline breaks — take the free Sales Scorecard.',
+        'See where your pipeline breaks. Take the free Sales Scorecard.',
     },
   },
   {
@@ -888,7 +905,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine in a niche field',
       ],
       handoffLine:
-        'See where your pipeline breaks — take the free Sales Scorecard.',
+        'See where your pipeline breaks. Take the free Sales Scorecard.',
     },
   },
   {
@@ -919,7 +936,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'Find your weakest link — take the free Sales Scorecard.',
+        'Find your weakest link. Take the free Sales Scorecard.',
     },
   },
   {
@@ -928,7 +945,7 @@ export const SEO_PAGES: Page[] = [
     type: 'vertical',
     title: 'How to Get Clients for HR Consulting',
     metaDescription:
-      'HR consulting buyers act when there’s pain. Here is how to position your firm so you’re the obvious call — and build a pipeline that isn’t all referrals.',
+      'HR consulting buyers act when there’s pain. Here is how to position your firm so you’re the obvious call, and build a pipeline that isn’t all referrals.',
     primaryKeyword: 'how to get clients for HR consulting',
     secondaryKeywords: ['HR consultancy clients', 'HR consulting lead generation'],
     clearLetter: 'E',
@@ -950,7 +967,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'See where your pipeline breaks — take the free Sales Scorecard.',
+        'See where your pipeline breaks. Take the free Sales Scorecard.',
     },
   },
   {
@@ -982,7 +999,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'See where your pipeline breaks — take the free Sales Scorecard.',
+        'See where your pipeline breaks. Take the free Sales Scorecard.',
     },
   },
 ];

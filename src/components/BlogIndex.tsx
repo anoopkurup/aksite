@@ -34,7 +34,7 @@ export default function BlogIndex({ activeCategory }: { activeCategory?: string 
       <JsonLd
         schema={[
           collectionPageSchema({
-            name: active === "All" ? "Blog" : `${active} — Blog`,
+            name: active === "All" ? "Blog" : `${active} | Blog`,
             description:
               active === "All"
                 ? "Practical writing on sales for B2B services businesses."

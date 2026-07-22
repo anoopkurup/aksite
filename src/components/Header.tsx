@@ -38,7 +38,7 @@ export default function Header() {
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-slate-100">
       <div className="max-w-6xl mx-auto px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" aria-label="Anoop Kurup — home" className="inline-flex items-center hover:opacity-80 transition-opacity">
+          <Link href="/" aria-label="Anoop Kurup, home" className="inline-flex items-center hover:opacity-80 transition-opacity">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/logo.svg" alt="Anoop Kurup" className="h-10 w-auto" />
           </Link>

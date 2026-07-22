@@ -1,14 +1,14 @@
-# Homepage Content — "I fix sales for B2B services businesses"
+# Homepage Content: "I fix sales for B2B services businesses"
 # Last updated: 2026-06-30 (CLEAR v5 copy)
 
 meta:
-  title: "Anoop Kurup — I Fix Sales for Services Businesses"
+  title: "Anoop Kurup: I Fix Sales for Services Businesses"
   description: "I fix sales for B2B services businesses: one packaged offer, proven against real prospects, and a weekly rhythm that produces conversations."
 
 hero:
   headline: "I fix sales for B2B services businesses."
   body:
-    - "Your clients love the work. But new business still arrives through referrals you can't predict — and through you personally selling every deal. When referrals slow down, the pipeline goes quiet. There's no second engine."
+    - "Your clients love the work. But new business still arrives through referrals you can't predict, and through you personally selling every deal. When referrals slow down, the pipeline goes quiet. There's no second engine."
     - "I package what you're best at into one offer the market responds to, then build the weekly routine that keeps producing sales conversations. Your pipeline stops depending on luck."
   cta_text: "Take the Sales Scorecard"
   cta_link: "/scorecard"
@@ -18,23 +18,23 @@ sound_familiar:
   section_title: "Sound familiar?"
   items:
     - symptom: "Referrals convert. Everything else falls flat."
-      reframe: "Referrals feel safe — they arrive pre-sold, convert well, and cost nothing. That's exactly what makes them dangerous: a channel you can't switch on or off is just luck. The fix is an offer a stranger can say yes to without a referral doing the convincing."
+      reframe: "Referrals feel safe: they arrive pre-sold, convert well, and cost nothing. That's exactly what makes them dangerous: a channel you can't switch on or off is just luck. The fix is an offer a stranger can say yes to without a referral doing the convincing."
     - symptom: "Every deal is a fresh negotiation."
-      reframe: "When nothing is packaged, every sale starts from zero — custom scope, custom price, custom doubt. That's not a pricing problem. It's the absence of a fixed, repeatable unit to sell."
+      reframe: "When nothing is packaged, every sale starts from zero: custom scope, custom price, custom doubt. That's not a pricing problem. It's the absence of a fixed, repeatable unit to sell."
     - symptom: "I'm the only one who can sell what we do."
-      reframe: "If the pitch only works in your mouth, that's a packaging problem. The offer is trapped in your head as judgement — never written down as something anyone else could carry into a conversation."
+      reframe: "If the pitch only works in your mouth, that's a packaging problem. The offer is trapped in your head as judgement, never written down as something anyone else could carry into a conversation."
     - symptom: "Prospects nod, then go quiet."
-      reframe: "Nodding is not buying. With no trigger and no clear next step, the deal dissolves into “let's stay in touch” — interest evaporates between the meeting and the follow-up."
+      reframe: "Nodding is not buying. With no trigger and no clear next step, the deal dissolves into “let's stay in touch”, and interest evaporates between the meeting and the follow-up."
 
 how_i_fix_it:
   section_title: "How I fix it"
   stages:
     - number: "1"
       name: "Package"
-      description: "We extract the skill your best clients actually paid for and shape it into one offer with a clear outcome and a clear price. Not a rebrand — a sellable unit a stranger can understand in one sentence."
+      description: "We extract the skill your best clients actually paid for and shape it into one offer with a clear outcome and a clear price. Not a rebrand, but a sellable unit a stranger can understand in one sentence."
     - number: "2"
       name: "Prove & Sell"
-      description: "We put the offer in front of real prospects and sell it together — I'm on the calls with you, handling objections and closing. Warm contacts first, then a cold channel I build so you don't run out of names. The market decides the final shape of the offer."
+      description: "We put the offer in front of real prospects and sell it together. I'm on the calls with you, handling objections and closing. Warm contacts first, then a cold channel I build so you don't run out of names. The market decides the final shape of the offer."
     - number: "3"
       name: "Systemise"
       description: "What survived the market becomes your sales system: the words that got replies, the weekly routine, the scripts and checklists. Written down. Run at least once already. Yours to keep."
@@ -52,19 +52,19 @@ proof:
       result: "3× the previous per-engagement rate."
 
 qualification:
-  section_title: "Who this is for — and who it isn't"
+  section_title: "Who this is for, and who it isn't"
   for_you:
     heading: "It's for you if…"
     items:
-      - "You run a B2B services firm — consulting, agency, training, or professional services."
+      - "You run a B2B services firm: consulting, agency, training, or professional services."
       - "You're mostly out of day-to-day delivery: your team or your systems handle the work, so your time can go into selling and building."
       - "Growth still depends on your network and your personal selling, and you can feel that ceiling."
       - "You want a working pipeline, not another marketing experiment."
   not_for_you:
     heading: "It's not for you if…"
     items:
-      - "You're still hands-on in most client delivery — fix capacity first; a sales system competes with billable hours you can't spare, and the Scorecard will flag this."
-      - "You want someone to run your ads — hire an agency; that's a different job."
+      - "You're still hands-on in most client delivery. Fix capacity first; a sales system competes with billable hours you can't spare, and the Scorecard will flag this."
+      - "You want someone to run your ads. Hire an agency; that's a different job."
       - "You're looking for hacks. This is a system, built deliberately, that you have to run."
 
 final_cta:

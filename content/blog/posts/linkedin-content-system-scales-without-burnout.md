@@ -12,7 +12,7 @@ category: "Strategy"
 
 Every few months, a founder tells me they've decided to get serious about LinkedIn. They post for three weeks. Then the posts stop. When I ask what happened, the answer is almost always some version of the same two things: they ran out of things to say, and nothing came of the things they'd already said.
 
-The first half isn't true. The second half is — and it's the half nobody wants to look at directly, because the first half is a much more comfortable story to tell yourself. Running dry sounds like a creative problem, and creative problems are forgivable. Posting into silence for three weeks sounds like you were wrong about the channel.
+The first half isn't true. The second half is. And it's the half nobody wants to look at directly, because the first half is a much more comfortable story to tell yourself. Running dry sounds like a creative problem, and creative problems are forgivable. Posting into silence for three weeks sounds like you were wrong about the channel.
 
 You weren't wrong. You were just early, and you were expecting the wrong thing.
 
@@ -20,7 +20,7 @@ You weren't wrong. You were just early, and you were expecting the wrong thing.
 
 Twenty years into a service business, you have a settled opinion about nearly everything in your field. You know why most clients brief the work badly. You know which shortcut always costs more later. You know the question that separates a serious buyer from a browser, because you ask it every week without thinking about it.
 
-The blank composer isn't an empty head. It's an empty shelf. The ideas were there — in a call on Tuesday, in an argument with a client on Thursday, in the thing you explained twice this month to two different people — and none of them got written down. So on Monday morning you sit down to invent from nothing what you already knew on Thursday and forgot by Friday.
+The blank composer isn't an empty head. It's an empty shelf. The ideas were there: in a call on Tuesday, in an argument with a client on Thursday, in the thing you explained twice this month to two different people. And none of them got written down. So on Monday morning you sit down to invent from nothing what you already knew on Thursday and forgot by Friday.
 
 That's the actual cost of daily posting. Not the writing. The inventing. Writing a post you've already had the thought for takes fifteen minutes. Manufacturing a thought on demand, at 9am, because the calendar says so, takes an hour and produces something thinner than what you'd have said out loud for free.
 
@@ -38,7 +38,7 @@ I've written before about what followers actually are, and it's worth repeating 
 
 So when a founder tells me their content isn't working, my first question isn't about the content. It's: what were you expecting it to do?
 
-If the expectation was clients, it was never going to work, and no amount of consistency would have fixed it. An audience is not a pipeline. Content on LinkedIn produces conversations — someone reads three posts over two months, recognises their own problem in one of them, and eventually replies to something, or turns up on a call already half-convinced. That's real, and it's valuable, and it takes months, and you cannot see it happening while it happens. The signal arrives long after the work.
+If the expectation was clients, it was never going to work, and no amount of consistency would have fixed it. An audience is not a pipeline. Content on LinkedIn produces conversations: someone reads three posts over two months, recognises their own problem in one of them, and eventually replies to something, or turns up on a call already half-convinced. That's real, and it's valuable, and it takes months, and you cannot see it happening while it happens. The signal arrives long after the work.
 
 That's what makes it a genuinely difficult channel to stay honest about. The people selling you on LinkedIn will not tell you it's slow, because slow doesn't sell a course. And the people who quit at week three quit exactly one lap short of the point where a slow channel starts showing anything at all.
 
@@ -52,7 +52,7 @@ For most service businesses, the honest answer is: send a vague message and hope
 
 So the conversation never starts, the content looks like it failed, and the founder concludes LinkedIn doesn't work for their kind of business. LinkedIn worked. There was nothing at the other end of it.
 
-This is why I'd rather a founder spend the first month defining one buyable thing than spend it posting. Content is a channel, and a channel only carries what you give it. Fix the offer, then feed the channel. Doing it in the other order is how you end up with 200 posts, a warm audience, and a quarter with no new work in it — which is not a content problem at all, but it will feel like one.
+This is why I'd rather a founder spend the first month defining one buyable thing than spend it posting. Content is a channel, and a channel only carries what you give it. Fix the offer, then feed the channel. Doing it in the other order is how you end up with 200 posts, a warm audience, and a quarter with no new work in it, which is not a content problem at all, but it will feel like one.
 
 ## Where the ideas actually live
 
@@ -62,11 +62,11 @@ Assume the offer exists. Now make the content cheap, because cheap is the only v
 
 Everything you need is in the work you're already doing. The trick is catching it in the moment rather than trying to recall it later. Three places it lives:
 
-**The conversations.** Every client call contains at least one thing you said that the client hadn't considered. At the end of the call, before you open the next tab, write down the underlying principle — not the client's situation, not anything confidential, just the general shape of what you told them. Two lines. That's the post. You've already done the thinking; you're just not keeping the receipt.
+**The conversations.** Every client call contains at least one thing you said that the client hadn't considered. At the end of the call, before you open the next tab, write down the underlying principle: not the client's situation, not anything confidential, just the general shape of what you told them. Two lines. That's the post. You've already done the thinking; you're just not keeping the receipt.
 
 **The patterns.** You see across a dozen businesses. They each see one. That's an unfair advantage and it's the most useful thing you have to say. The same mistake showing up in three different firms this quarter is a post that nobody inside those firms could write, because none of them can see the other two.
 
-**The routines you never wrote down.** You have a way of diagnosing a problem. You have four questions you always ask a new client. You've never called that a framework, because to you it's just how you work. Write it down once and it isn't one post — it's the overview, then each question in its own post, then the mistake people make with each one.
+**The routines you never wrote down.** You have a way of diagnosing a problem. You have four questions you always ask a new client. You've never called that a framework, because to you it's just how you work. Write it down once and it isn't one post; it's the overview, then each question in its own post, then the mistake people make with each one.
 
 None of this needs a tool. A notes app works. What matters is the capture happening at the moment of the thought, not on Monday when you need something.
 
@@ -74,11 +74,11 @@ None of this needs a tool. A notes app works. What matters is the capture happen
 
 Batching isn't a productivity trick. It's a way of paying the thinking cost once instead of five times.
 
-Block ninety minutes, once a week. Open the notes, pick the five ideas that still look good with a few days' distance — and some won't, which is the point — and write them all in that sitting. Schedule them. Close the tab.
+Block ninety minutes, once a week. Open the notes and pick the five ideas that still look good with a few days' distance; some won't, which is the point. Write them all in that sitting. Schedule them. Close the tab.
 
-That's it. That's the whole routine. Not because ninety minutes is a magic number, but because the alternative — deciding daily, in the composer, with the day already started — is where the cost lives. You're not saving writing time. You're removing the daily decision, and the daily decision is what actually wears people down.
+That's it. That's the whole routine. Not because ninety minutes is a magic number, but because the alternative is where the cost lives: deciding daily, in the composer, with the day already started. You're not saving writing time. You're removing the daily decision, and the daily decision is what actually wears people down.
 
-If you want a second block, make it a longer monthly one for the pieces that need real thought — the ones with data behind them, or an argument that takes more than a screen to make. Those are the posts that do the most work for you, and they're the first casualty of a daily rhythm, because they never fit into a morning.
+If you want a second block, make it a longer monthly one for the pieces that need real thought: the ones with data behind them, or an argument that takes more than a screen to make. Those are the posts that do the most work for you, and they're the first casualty of a daily rhythm, because they never fit into a morning.
 
 ## One idea, several angles
 
@@ -86,7 +86,7 @@ If you want a second block, make it a longer monthly one for the pieces that nee
 
 The founders who sustain this aren't producing more ideas than you. They're getting more out of each one.
 
-A single insight — say, why most discovery calls fail — is not one post. It's the claim itself. It's the three questions that fix it, one at a time. It's the mistake people make when they try. It's the version of the story where it went wrong for you before you learned it. That's six weeks from one Thursday afternoon's thought.
+A single insight, such as why most discovery calls fail, is not one post. It's the claim itself. It's the three questions that fix it, one at a time. It's the mistake people make when they try. It's the version of the story where it went wrong for you before you learned it. That's six weeks from one Thursday afternoon's thought.
 
 This isn't padding. Most readers won't see most of your posts; the feed guarantees it. And an idea stated once has been stated for the handful of people online at that hour. An idea approached from six angles over six weeks is the only way it gets through at all. Repetition feels like laziness from inside your own head and reads as clarity from outside it.
 
@@ -96,16 +96,16 @@ The same goes across formats. The post that landed becomes the article. The arti
 
 Be clear about the return, so you can judge it honestly instead of quitting at week three on a feeling.
 
-A weekly rhythm like this costs you roughly two hours. In exchange you get visibility — someone who's about to engage you will look you up, and they will find a person who has been thinking in public about their exact problem for a year. You get shorter conversations, because the prospect arrives having read the argument already and doesn't need it made again. And you get the occasional reply that turns into real work, on a timeline you don't control.
+A weekly rhythm like this costs you roughly two hours. In exchange you get visibility: someone who's about to engage you will look you up, and they will find a person who has been thinking in public about their exact problem for a year. You get shorter conversations, because the prospect arrives having read the argument already and doesn't need it made again. And you get the occasional reply that turns into real work, on a timeline you don't control.
 
 What you don't get is a pipeline. Nobody does. Content warms the people who were already going to find you and makes them easier to talk to when they do. That's worth two hours a week. It is not worth an hour a day, and it is not worth doing at all until there's an offer at the end of it.
 
 ## Takeaway
 
-If your content is quiet, look past the content. Ask whether there's a defined, priced, buyable thing waiting for anyone it warms up — and whether the rhythm you've chosen is one you'll still be running in six months, or one you're already dreading on a Sunday night.
+If your content is quiet, look past the content. Ask whether there's a defined, priced, buyable thing waiting for anyone it warms up, and whether the rhythm you've chosen is one you'll still be running in six months, or one you're already dreading on a Sunday night.
 
 Fix the offer first. Then make the routine cheap enough to be boring. Boring survives; that's the only quality that matters in a slow channel.
 
 ---
 
-If you're not sure whether the gap is the content, the offer, or the pipeline behind both, [take the free Sales Scorecard](/scorecard) — ten questions, three minutes, an honest score and the one thing to fix first.
+If you're not sure whether the gap is the content, the offer, or the pipeline behind both, [take the free Sales Scorecard](/scorecard): ten questions, three minutes, an honest score and the one thing to fix first.

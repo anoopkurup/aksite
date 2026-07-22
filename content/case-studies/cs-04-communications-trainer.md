@@ -18,25 +18,25 @@ tags: [clear, case-study]
 
 "Communication skills" is a line item. Somebody in every organisation is paid to trim line items.
 
-"Speak Like a Leader" is an outcome, and outcomes get sponsors — someone senior who will put their name on the request and carry it upstairs.
+"Speak Like a Leader" is an outcome, and outcomes get sponsors: someone senior who will put their name on the request and carry it upstairs.
 
 Same trainer. Same craft. Recognisably the same work in the room. Only one of those two names gets funded, and it is never the first one.
 
 I have watched that gap decide more engagements than any amount of skill in the room.
 
-The practice I was called into was built around a genuinely gifted communication-skills trainer. The work was good and the feedback from participants was warm. Winning corporate engagements was still a grind — long conversations with HR that drifted, budgets that never quite materialised, and when a programme did close, a day-rate far below what the trainer was worth.
+The practice I was called into was built around a genuinely gifted communication-skills trainer. The work was good and the feedback from participants was warm. Winning corporate engagements was still a grind: long conversations with HR that drifted, budgets that never quite materialised, and when a programme did close, a day-rate far below what the trainer was worth.
 
 ## The category was the ceiling, not the man
 
 Nobody negotiates a cardiologist's fee the way they negotiate a general physician's, and it isn't because the cardiologist is the better doctor. The category sets the band before the person walks into the room.
 
-"Communication skills training" is, in the mind of an HR buyer, a commodity. There are hundreds of trainers offering some version of it. The outcome sounds soft and hard to measure. And it tends to be aimed at the broad middle of the organisation — the large, junior population where training budgets are thinnest and approvals hardest to push through.
+"Communication skills training" is, in the mind of an HR buyer, a commodity. There are hundreds of trainers offering some version of it. The outcome sounds soft and hard to measure. And it tends to be aimed at the broad middle of the organisation: the large, junior population where training budgets are thinnest and approvals hardest to push through.
 
 He was excellent, and I had to tell him that his excellence wasn't helping. The buyer wasn't comparing trainers on quality. They were comparing a long line of interchangeable "communication" programmes on price, and dropping all of them into the same low-priority, low-budget box. Selling harder into that box was never going to work.
 
 ## Aim it higher, and rename it
 
-So I stopped him selling to the broad middle and aimed the programme squarely at the top. It was repositioned for senior leaders — the people whose ability to communicate visibly shapes how an organisation is run — and renamed to say exactly that: Speak Like a Leader.
+So I stopped him selling to the broad middle and aimed the programme squarely at the top. It was repositioned for senior leaders, the people whose ability to communicate visibly shapes how an organisation is run, and renamed to say exactly that: Speak Like a Leader.
 
 The change of audience did most of the work. A communication programme for junior staff is a cost to be minimised. A programme that sharpens how senior leaders carry themselves, hold a room, and articulate a direction is an investment in the people the company can least afford to have communicate poorly.
 
@@ -54,7 +54,7 @@ The economics followed the audience. Executive-level programmes command executiv
 
 Conversations that had once drifted now closed, because a leadership programme is easy to sponsor in a way that generic training never is. The engagements were larger. The fees were higher. The trainer was finally being valued for the calibre of his work rather than measured against a field of interchangeable alternatives.
 
-What didn't change is the more interesting half, and it is the part I keep coming back to. His craft barely moved. He taught what he had always taught, to a different set of people, under a different name — and those two decisions carried the offer into an entirely different part of the buyer's mind.
+What didn't change is the more interesting half, and it is the part I keep coming back to. His craft barely moved. He taught what he had always taught, to a different set of people, under a different name. Those two decisions carried the offer into an entirely different part of the buyer's mind.
 
 That is worth sitting with, if you are good at your work and still being ground down on price. The skill was never the problem. The shelf you put it on was.
 

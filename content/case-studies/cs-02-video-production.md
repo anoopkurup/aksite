@@ -18,7 +18,7 @@ tags: [clear, case-study]
 
 *What's your per-video rate?*
 
-Every new prospect asked it. Old relationships never did — they simply called, and the studio closed the work. But with a stranger, the conversation slid to that same question every single time, and the founder had spent years answering it as though it were a reasonable question to be asked.
+Every new prospect asked it. Old relationships never did; they simply called, and the studio closed the work. But with a stranger, the conversation slid to that same question every single time, and the founder had spent years answering it as though it were a reasonable question to be asked.
 
 It isn't. It is the sound of a buyer who has already decided what you are.
 
@@ -26,7 +26,7 @@ It isn't. It is the sound of a buyer who has already decided what you are.
 
 Ask a chemist for paracetamol and you will compare strips on price, because you have already made the diagnosis and all that's left is procurement. Ask a doctor why you keep getting headaches, and price is nowhere near the first thing on your mind.
 
-The studio was being treated as the chemist. A prospect heard "video" and filed the firm into a mental box labelled *video editor*, and inside that box the only variable that moves is rate. The work was genuinely good — brand films, founder stories, product explainers. None of that changed the box.
+The studio was being treated as the chemist. A prospect heard "video" and filed the firm into a mental box labelled *video editor*, and inside that box the only variable that moves is rate. The work was genuinely good: brand films, founder stories, product explainers. None of that changed the box.
 
 The deeper cause was that the studio served everyone. "Any business that needs video." A firm that is for everyone stands for nothing in particular, so a buyer had no specific reason to value this studio over a freelancer with a decent showreel. Naturally, they negotiated.
 
@@ -34,7 +34,7 @@ The founder's decade-deep network hid this for years. Trust closed those deals r
 
 ## Fixing the fog first
 
-The vague customer was the root cause, so that is where I started. The studio narrowed to B2B firms that need to win trust at scale — companies whose buyers research them quietly, at length, before a high-value purchase.
+The vague customer was the root cause, so that is where I started. The studio narrowed to B2B firms that need to win trust at scale, companies whose buyers research them quietly, at length, before a high-value purchase.
 
 With the customer sharpened, the promise could change. Not "you get a video", but something closer to the buyer's real concern: your best sales conversations happen before you are even in the room, because your story is already doing the convincing.
 
@@ -42,15 +42,15 @@ That single reframe lifted the firm off the editing bench and set it down beside
 
 ## A set with a purpose, instead of videos by the unit
 
-The studio stopped quoting for videos one at a time and packaged a Trust-Building Film Set: a founder story, two customer-proof films, a short explainer. Built to a documented purpose, with revision limits and usage rights spelled out plainly. The language moved with the structure — "we make videos" became "we build the films that close your buyers before the sales call."
+The studio stopped quoting for videos one at a time and packaged a Trust-Building Film Set: a founder story, two customer-proof films, a short explainer. Built to a documented purpose, with revision limits and usage rights spelled out plainly. The language moved with the structure. "We make videos" became "we build the films that close your buyers before the sales call."
 
-The commercial terms protected the repositioning. Fixed scope, milestone payments, a written end-date on every engagement. This was deliberate. The old way of working — we'll shoot whatever you need, whenever — was precisely what had dragged the firm back into hourly thinking. Fixing the scope is what stopped the slide.
+The commercial terms protected the repositioning. Fixed scope, milestone payments, a written end-date on every engagement. This was deliberate. The old way of working was "we'll shoot whatever you need, whenever", and that is precisely what had dragged the firm back into hourly thinking. Fixing the scope is what stopped the slide.
 
 ## Letting the work warm the market
 
 The studio's own content did much of the selling. It published the films it had made for itself, alongside short teardowns of why story beats specifications, so a prospect could spend several hours inside the firm's thinking before ever booking a call.
 
-People entered through a free teardown and converted through a strategy conversation, by which point they had stopped comparing rate cards. And once a client saw films actually move their numbers, the studio offered an ongoing content-engine retainer — as a graduation from a proven Set, never as the cold front door.
+People entered through a free teardown and converted through a strategy conversation, by which point they had stopped comparing rate cards. And once a client saw films actually move their numbers, the studio offered an ongoing content-engine retainer, as a graduation from a proven Set, never as the cold front door.
 
 ## The part I wouldn't let him skip
 
