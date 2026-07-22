@@ -88,9 +88,9 @@ export const pages = [
     id: 'page-client-acquisition-system-rhythm',
     out: 'public/images/pages/client-acquisition-system-rhythm.webp',
     size: W,
-    alt: 'A steady weekly pulse running above a row of calendar tiles',
+    alt: 'A steady weekly pulse running above a row of blank tiles',
     prompt:
-      'Metaphor: a confident weekly rhythm. A long row of clean flat calendar-week tiles in light grey line-art runs along the bottom. Above them, one continuous bold navy pulse-line beats steadily left to right, with one small solid orange peak on every tile — the same small effort, every single week, never stopping. The final tile carries a solid navy circle lit with a soft orange glow — the compounding result. Wide banner, spare and mechanical, generous white space, no text.',
+      'Metaphor: a confident weekly rhythm. A long row of seven identical clean flat empty square tiles in light grey line-art runs along the bottom, evenly spaced, each tile completely blank inside. Above the tiles, one continuous bold navy pulse-line beats steadily left to right, with one small solid orange peak positioned directly above each tile — the same small effort, every single week, never stopping. At the far right the pulse-line ends in a solid navy circle lit with a soft orange glow — the compounding result. Wide banner, spare and mechanical, generous white space. ABSOLUTELY NO text, NO letters, NO numbers, NO words anywhere in the image — the tiles must be empty.',
   },
   {
     id: 'page-about-pathway',
