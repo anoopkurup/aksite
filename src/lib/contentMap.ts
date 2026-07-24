@@ -98,7 +98,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['founder-led-sales-trap'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 1,
-    status: 'scaffold',
+    // Published 2026-07-24 (Wave 1, spoke 1 of 4).
+    status: 'live',
     brief: {
       angle:
         'Referrals are a great source but a terrible system — the flagship piece that names the pain and points to the pillar.',
