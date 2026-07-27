@@ -44,7 +44,7 @@ The gap between them isn't knowledge or willingness. It's that the second requir
 
 ## The Business Model Shift AI Actually Requires
 
-![Effort-driven work versus leverage](/images/blog/ai-adoption-business-model-problem/inline-1.webp)
+![Effort-driven work versus system-driven work](/images/blog/ai-adoption-business-model-problem/inline-1.webp)
 
 Here's the reframe worth sitting with: AI adoption for service businesses is not primarily a tool problem. It's a business model problem.
 

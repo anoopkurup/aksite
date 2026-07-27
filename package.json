@@ -14,7 +14,9 @@
     "social:instagram": "node scripts/instagram-carousel.mjs",
     "social:card": "node scripts/linkedin-image.mjs",
     "social:cover": "node scripts/social-cover.mjs",
-    "seo:audit": "node --experimental-strip-types scripts/seo-link-audit.mjs"
+    "seo:audit": "node --experimental-strip-types scripts/seo-link-audit.mjs",
+    "lint:tone": "node scripts/tone-lint.mjs",
+    "research": "node scripts/article-research.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
