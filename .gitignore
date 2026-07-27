@@ -35,8 +35,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Claude Code and development files
-.claude/
+# Claude Code and development files (skills are versioned)
+.claude/*
+!.claude/skills/
 .playwright-mcp/
 context/
 
