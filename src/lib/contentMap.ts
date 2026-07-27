@@ -200,7 +200,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['cold-outreach-for-consultants', 'founder-led-sales-trap'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 1,
-    status: 'scaffold',
+    // Published 2026-07-27 (Wave 1, spoke 3 of 5).
+    status: 'live',
     brief: {
       angle:
         'Lead gen for high-trust service sales is different from volume SaaS funnels — quality over quantity.',
