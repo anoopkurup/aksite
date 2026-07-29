@@ -1,11 +1,16 @@
 import ContentPage from "@/components/ContentPage";
 import { getContentPage } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   const contentData = getContentPage('legal/terms-conditions');
   return contentData
-    ? { title: contentData.frontmatter.title, description: contentData.frontmatter.description, alternates: { canonical: "/legal/terms-conditions" } }
+    ? pageMetadata({
+        title: contentData.frontmatter.title,
+        description: contentData.frontmatter.description || '',
+        path: '/legal/terms-conditions',
+      })
     : {};
 }
 

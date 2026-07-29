@@ -7,6 +7,7 @@ updated: 2026-06-26
 industry: Advertising Creative / Performance Agency
 sales-problem: Dependent on a few large clients; built to fulfil briefs, not own outcomes
 tags: [clear, case-study]
+description: "How an ad-creative agency moved from a few large clients to many smaller ones, and from replaceable execution to owning the whole outcome."
 ---
 
 # From a Few Big Clients to Many Small Ones

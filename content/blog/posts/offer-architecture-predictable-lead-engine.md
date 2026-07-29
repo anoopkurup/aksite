@@ -2,7 +2,7 @@
 title: "Why Prospects Say 'Not Now': Your Firm Only Sells One Big Thing"
 seo_title: Why Prospects Say Not Now
 date: 2025-08-26
-description: "A single large offer makes every prospect decide everything at once, so most defer. A small, paid, contained first step lets a stranger buy before they trust you."
+description: "A single large offer makes every prospect decide everything at once, so most defer. A small, paid first step lets a stranger buy before they trust you."
 tags: ["Strategy", "Offers", "Lead Generation"]
 read_time: "7 min read"
 author: "Anoop Kurup"

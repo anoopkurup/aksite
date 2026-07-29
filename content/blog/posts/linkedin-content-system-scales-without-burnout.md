@@ -3,7 +3,7 @@ hero_image: "/images/blog/linkedin-content-system-scales-without-burnout/hero.we
 title: "A LinkedIn Content Rhythm That Doesn't Burn You Out"
 seo_title: LinkedIn Content Without the Burnout
 date: 2025-08-26
-description: "Most founders quit LinkedIn at week three. Not because they run out of ideas, but because nothing came of the posts. Here's the honest version: what content can do, what it can't, and the weekly routine that makes it cheap enough to keep."
+description: "Most founders quit LinkedIn by week three because nothing comes of the posts. What content can and cannot do, and the weekly routine that keeps it cheap."
 tags: ["LinkedIn", "Content Systems", "Marketing"]
 read_time: "8 min read"
 author: "Anoop Kurup"

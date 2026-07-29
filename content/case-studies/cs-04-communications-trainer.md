@@ -7,6 +7,8 @@ updated: 2026-06-26
 industry: Corporate Training / Communication Skills
 sales-problem: Generic "communication skills" training is a commodity HR struggles to fund
 tags: [clear, case-study]
+seo_title: "From Day-Rate Trainer to Leadership Budgets"
+description: "How a corporate trainer repositioned from generic communication skills to a leadership offer, and stopped competing on day-rate."
 ---
 
 # From "Communication Skills" to "Speak Like a Leader"

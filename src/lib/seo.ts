@@ -68,6 +68,11 @@ export function pageMetadata(input: {
       url: path,
       siteName: SITE.name,
       locale: SITE.locale,
+      // Declaring `openGraph` drops the root opengraph-image.tsx (file-based
+      // metadata only applies to its own segment), so every page here lost
+      // og:image. Point back at that same branded card; a closer file-based
+      // image (e.g. blog/[slug]/opengraph-image) still overrides this.
+      images: ['/opengraph-image'],
       ...openGraph,
     },
   };
@@ -100,6 +105,7 @@ export function buildPageMetadata(page: Page): Metadata {
       type: page.type === 'pillar' || page.type === 'subpillar' ? 'website' : 'article',
       siteName: SITE.name,
       locale: SITE.locale,
+      images: ['/opengraph-image'],
     },
     twitter: {
       card: SITE.twitterCard,

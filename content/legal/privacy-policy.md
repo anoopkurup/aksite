@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: "How anoopkurup.com collects, uses, and protects your information."
+description: "How anoopkurup.com collects, uses, and protects your information: what the forms and analytics gather, why, and the choices you have."
 ---
 
 # Privacy Policy

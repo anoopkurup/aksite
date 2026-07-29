@@ -7,6 +7,8 @@ updated: 2026-06-26
 industry: Business Consulting / Advisory
 sales-problem: Generic "business growth consultant" is undifferentiated and hard to sell
 tags: [clear, case-study]
+seo_title: "The Family-Business Succession Specialist"
+description: "How a growth consultant turned his own family-business experience into a succession niche, and a two-year engagement to match."
 ---
 
 # From Generic Growth Consultant to Family-Business Succession Specialist

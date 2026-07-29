@@ -54,13 +54,19 @@ export default function SeoPageLayout({
   heroImage,
   authorNote,
 }: SeoPageLayoutProps) {
-  const parent = page.parent ? getPageBySlug(page.parent) : undefined;
-  const siblings = getSiblings(page.slug);
+  // Only link to pages that are actually live — a non-live target either 404s
+  // (no body yet) or renders noindex, and either way crawlers flag the link.
+  // Links appear by themselves when the target's status flips to 'live'.
+  const rawParent = page.parent ? getPageBySlug(page.parent) : undefined;
+  const parent = rawParent?.status === 'live' ? rawParent : undefined;
+  const siblings = getSiblings(page.slug).filter((s) => s.status === 'live');
 
-  // Breadcrumb trail: Home → ancestors → this page.
+  // Breadcrumb trail: Home → live ancestors → this page.
   const crumbs: Crumb[] = [
     { name: 'Home', url: '/' },
-    ...getAncestors(page.slug).map((a) => ({ name: a.title, url: a.url })),
+    ...getAncestors(page.slug)
+      .filter((a) => a.status === 'live')
+      .map((a) => ({ name: a.title, url: a.url })),
     { name: page.title, url: page.url },
   ];
 

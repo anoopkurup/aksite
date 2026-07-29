@@ -3,7 +3,7 @@ hero_image: "/images/blog/aida-to-ai-messaging-frameworks-workflows/hero.webp"
 title: "From AIDA to AI: Your Old Frameworks Are the Brief"
 seo_title: 'From AIDA to AI: Frameworks as AI Briefs'
 date: 2025-08-26
-description: "AIDA and PAS aren't dated theory. They're the structure an AI needs to stop producing mush. A framework is a brief, and a model without a brief writes about nothing."
+description: "AIDA and PAS are not dated theory. They are the structure an AI needs to stop producing mush. A framework is a brief; without one, a model writes about nothing."
 tags: ["AI Workflows", "Marketing", "Automation"]
 read_time: "7 min read"
 author: "Anoop Kurup"

@@ -7,6 +7,7 @@ updated: 2026-06-26
 industry: Corporate Video / Film Production
 sales-problem: Commoditised as "just a video editor"; vague ICP collapses price
 tags: [clear, case-study]
+description: "How a corporate-video studio escaped hourly editing rates, packaged its work around outcomes, and started being bought instead of priced."
 ---
 
 # Out of the Editing-Rate Trap

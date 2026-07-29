@@ -1,6 +1,6 @@
 ---
 title: "Thank You"
-description: "Your message has been received. I reply personally within 1–2 business days."
+description: "Your message has been received. I reply personally within one to two business days. Meanwhile, the free Sales Scorecard takes three minutes."
 cta:
   title: "While you wait"
   subtitle: "The Sales Scorecard takes 3 minutes and shows you exactly where your sales system is leaking. Score shown immediately, no email required."

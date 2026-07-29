@@ -3,7 +3,7 @@ hero_image: "/images/blog/complete-guide-marketing-systems-scale-beyond-referral
 title: "Complete Guide: Marketing Systems That Scale Beyond Referrals"
 seo_title: Marketing Systems Beyond Referrals
 date: 2025-09-16
-description: "Referrals are weather, not a channel. Here's how a B2B services firm builds a marketing system that reaches strangers: offer, proof, channel, and a weekly rhythm, in that order."
+description: "Referrals are weather, not a channel. How a B2B services firm builds a marketing system that reaches strangers: offer, proof, channel, then a weekly rhythm."
 tags: ["Marketing Systems", "Lead Generation", "Professional Services", "Business Growth"]
 read_time: "9 min read"
 author: "Anoop Kurup"

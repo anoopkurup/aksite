@@ -1,6 +1,6 @@
 ---
 title: "Terms & Conditions"
-description: "The terms that govern your use of anoopkurup.com."
+description: "The terms that govern your use of anoopkurup.com: what the content is for, what it is not, and the limits of liability."
 ---
 
 # Terms & Conditions

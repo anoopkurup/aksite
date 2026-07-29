@@ -9,6 +9,10 @@ export interface CaseStudy {
   /** Brand hero art. Inherited from the blog copies these stories used to duplicate. */
   heroImage?: string;
   title: string;        // first H1 in the body
+  /** Frontmatter override for the <title> tag, kept under ~47 chars so the "| Anoop Kurup" template fits in 60. */
+  seoTitle?: string;
+  /** Frontmatter override for the meta description (110–160 chars); falls back to the subtitle. */
+  description?: string;
   subtitle: string;     // first H3 in the body
   industry: string;
   salesProblem: string;
@@ -39,6 +43,8 @@ function parse(file: string): CaseStudy {
     slug,
     heroImage: (data.hero_image as string) ?? undefined,
     title,
+    seoTitle: (data.seo_title as string) ?? undefined,
+    description: (data.description as string) ?? undefined,
     subtitle,
     industry: (data.industry as string) ?? '',
     salesProblem: (data['sales-problem'] as string) ?? '',

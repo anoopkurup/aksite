@@ -7,6 +7,8 @@ updated: 2026-06-26
 industry: Legal Services (boutique commercial law firm)
 sales-problem: Pure referral dependence; no productised offer; partner-bound selling
 tags: [clear, case-study]
+seo_title: "A Law Firm Bought, Not Just Referred"
+description: "How a boutique commercial law firm productised its advisory work so new clients could buy it directly, not just arrive by referral."
 ---
 
 # A Law Firm That Could Finally Be Bought, Not Just Referred

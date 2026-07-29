@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
   const cs = getCaseStudyBySlug(slug);
   if (!cs) return { title: "Case Study Not Found" };
   return pageMetadata({
-    title: cs.title,
-    description: cs.subtitle || cs.salesProblem,
+    title: cs.seoTitle || cs.title,
+    description: cs.description || cs.subtitle || cs.salesProblem,
     path: `/case-studies/${slug}`,
     type: "article",
   });

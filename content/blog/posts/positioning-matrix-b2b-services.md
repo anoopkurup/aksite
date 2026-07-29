@@ -3,7 +3,7 @@ hero_image: "/images/blog/positioning-matrix-b2b-services/hero.webp"
 title: "Positioning Is a Problem, Not a Profile"
 seo_title: "Positioning for B2B Services: Name the Problem"
 date: 2025-08-26
-description: "Positioning by industry, client size or service list describes you, not the client's situation. The position that gets you called by name is a specific, painful problem."
+description: "Positioning by industry, client size or service list describes you, not the client. The position that gets you called by name is a specific, painful problem."
 tags: ["Strategy", "Positioning", "B2B Services"]
 read_time: "8 min read"
 author: "Anoop Kurup"

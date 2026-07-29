@@ -3,7 +3,7 @@ hero_image: "/images/blog/mql-sql-handshake-fixing-drop-off/hero.webp"
 title: "Interest Is Not Intent: The Handshake Happens Inside Your Head"
 seo_title: "Interest Is Not Intent"
 date: 2025-08-26
-description: "For a founder-led firm, the gap between a lead showing interest and a buyer showing intent isn't a handover between teams. It's a judgement you make alone, and usually badly."
+description: "For a founder-led firm, the gap between interest and intent is not a handover between teams. It is a judgement you make alone, and usually badly."
 tags: ["Lead Generation", "Sales Process", "Marketing"]
 read_time: "8 min read"
 author: "Anoop Kurup"

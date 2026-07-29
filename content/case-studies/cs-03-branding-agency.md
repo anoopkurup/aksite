@@ -7,6 +7,7 @@ updated: 2026-06-26
 industry: Branding / Creative Agency
 sales-problem: Project feast-and-famine; founder is the only seller; no repeatable pipeline
 tags: [clear, case-study]
+description: "How an eight-person creative agency built a repeatable, productised offer and broke the feast-and-famine cycle of living project to project."
 ---
 
 # Breaking the Feast-and-Famine Cycle

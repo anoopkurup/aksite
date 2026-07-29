@@ -7,6 +7,8 @@ updated: 2026-06-26
 industry: Advertising / Outdoor Media
 sales-problem: Referral-dependent, sells scattered services, no productised entry point
 tags: [clear, case-study]
+seo_title: "One Campaign a Stranger Could Buy"
+description: "How a B2B advertising agency replaced referral dependence with one packaged campaign offer a stranger could understand and buy."
 ---
 
 # From "We Do Everything" to One Campaign a Stranger Could Buy
