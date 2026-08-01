@@ -233,7 +233,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['stop-relying-on-referrals', 'lead-generation-for-service-business'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 1,
-    status: 'scaffold',
+    // Published 2026-08-01 (Wave 1, spoke 4 of 5).
+    status: 'live',
     brief: {
       angle:
         'Founder-led sales is a feature early and a ceiling later — name the trap and the way out.',
