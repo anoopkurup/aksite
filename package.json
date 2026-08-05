@@ -12,6 +12,7 @@
     "images:rebrand": "node scripts/rebrand-navy.mjs",
     "social:carousel": "node scripts/linkedin-carousel.mjs",
     "social:instagram": "node scripts/instagram-carousel.mjs",
+    "social:ig-post": "node scripts/instagram-templates.mjs",
     "social:card": "node scripts/linkedin-image.mjs",
     "social:cover": "node scripts/social-cover.mjs",
     "seo:audit": "node --experimental-strip-types scripts/seo-link-audit.mjs",

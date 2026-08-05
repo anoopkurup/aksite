@@ -69,10 +69,15 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, 
 // `|` in a heading = manual line break.
 const headingHtml = (h) => h.split('|').map((l) => esc(l.trim())).join('<br>');
 
-// Optional cover illustration: Social/<slug>.cover.png, embedded as a data URI.
+// Cover illustration for slide 1, embedded as a data URI: Social/<slug>.cover.png
+// (social-cover.mjs) if present, else the post's blog hero image.
 function coverArt(slug) {
-  const p = join(DIR, `${slug}.cover.png`);
-  return existsSync(p) ? `data:image/png;base64,${readFileSync(p).toString('base64')}` : '';
+  const cover = join(DIR, `${slug}.cover.png`);
+  if (existsSync(cover)) return `data:image/png;base64,${readFileSync(cover).toString('base64')}`;
+  const hero = join(process.cwd(), 'public', 'images', 'blog', slug, 'hero.webp');
+  if (existsSync(hero)) return `data:image/webp;base64,${readFileSync(hero).toString('base64')}`;
+  console.warn(`  (no cover art: neither Social/${slug}.cover.png nor a blog hero.webp exists)`);
+  return '';
 }
 
 function slideHtml(s, i, total, cover) {
@@ -98,7 +103,10 @@ function slideHtml(s, i, total, cover) {
 }
 
 function docHtml(slides, cover) {
-  return `<!doctype html><html><head><meta charset="utf-8"><style>
+  return `<!doctype html><html><head><meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+    <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     @page { size:${SIZE}px ${SIZE}px; margin:0; }
     body { font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
@@ -143,7 +151,8 @@ async function main() {
     const page = await browser.newPage();
     for (const slug of slugs) {
       const slides = parseCarousel(readFileSync(join(DIR, `${slug}.md`), 'utf8'), slug);
-      await page.setContent(docHtml(slides, coverArt(slug)), { waitUntil: 'load' });
+      await page.setContent(docHtml(slides, coverArt(slug)), { waitUntil: 'networkidle' });
+      await page.evaluate(() => document.fonts.ready);
       if (args.includes('--png')) {
         const sections = await page.locator('.slide').all();
         for (let i = 0; i < sections.length; i++)

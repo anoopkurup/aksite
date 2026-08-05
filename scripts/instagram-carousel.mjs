@@ -11,8 +11,9 @@
  *     hashtags), with a link-in-bio close appended.
  *   - Slide 1 embeds `Social/<slug>.cover.png` if present (social-cover.mjs).
  *
- * Same instrument-panel brand style as linkedin-carousel.mjs (white ground, navy
- * #1F3D73 headings, one orange #F97316 accent; Newsreader / Inter / IBM Plex Mono).
+ * Slides render through the six-layout template system (instagram-templates.mjs,
+ * from the Aug 2026 Claude Design handoff): slide 1 = navy cover, body slides =
+ * story layout with a NN / NN counter, closing CTA = promo layout.
  *
  *   node scripts/instagram-carousel.mjs <slug|file.md>
  *   node scripts/instagram-carousel.mjs --all
@@ -23,21 +24,14 @@
  */
 import { chromium } from 'playwright';
 import sharp from 'sharp';
-import { readFileSync, readdirSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, basename } from 'node:path';
+import { slideHtml } from './instagram-templates.mjs';
 
 const DIR = join(process.cwd(), 'Social');
 const OUT = join(DIR, 'instagram');
 const W = 1080;
 const H = 1350;
-
-// anoopkurup.com brand palette (tailwind.config.ts) — navy / grey / orange / white.
-const NAVY = '#1F3D73';
-const GREY = '#475569';
-const ACCENT = '#F97316';
-const GROUND = '#FFFFFF';
-const GRID = 'rgba(31,61,115,0.06)';
-const SITE_LABEL = 'anoopkurup.com';
 
 function section(md, marker) {
   const at = md.indexOf(marker);
@@ -71,60 +65,20 @@ function parseCarousel(md) {
   return slides;
 }
 
-const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-// `|` in a heading = manual line break (same convention as the LinkedIn scripts).
-const headingHtml = (h) => h.split('|').map((l) => esc(l.trim())).join('<br>');
-
-// Optional AI cover illustration (social-cover.mjs), embedded as a data URI.
-function coverArt(slug) {
-  const p = join(DIR, `${slug}.cover.png`);
-  return existsSync(p) ? `data:image/png;base64,${readFileSync(p).toString('base64')}` : '';
-}
-
-function slideHtml(s, i, total, coverUri) {
-  const cover = i === 0;
-  const cta = i === total - 1;
-  const size = s.heading.length <= 30 ? 96 : s.heading.length <= 55 ? 74 : 58;
-  const body = cta
-    ? s.body.split('\n').map((l, j) => `<p class="${j === 0 ? 'body' : 'tag'}">${esc(l)}</p>`).join('')
-    : s.body
-      ? `<p class="body">${esc(s.body)}</p>`
-      : '';
-  const art = cover && coverUri ? `<img class="cover-art" src="${coverUri}" alt="">` : '';
-  return `<!doctype html><html><head><meta charset="utf-8"><style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html,body { width:${W}px; height:${H}px; }
-    body {
-      background-color:${GROUND};
-      background-image:
-        linear-gradient(${GRID} 1px, transparent 1px),
-        linear-gradient(90deg, ${GRID} 1px, transparent 1px);
-      background-size:54px 54px;
-      font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
-      -webkit-font-smoothing:antialiased;
-      padding:120px 88px;
-      position:relative;
-    }
-    .kicker { color:${GREY}; font-family:'IBM Plex Mono','Courier New',monospace; font-size:24px; font-weight:600; text-transform:uppercase; letter-spacing:4px; margin-bottom:32px; }
-    h1 { color:${NAVY}; font-family:'Newsreader',Georgia,'Times New Roman',serif; font-weight:600; line-height:1.08; letter-spacing:-0.5px; max-width:904px; font-size:${size}px; }
-    .rule { width:88px; height:8px; background:${ACCENT}; margin:44px 0; }
-    .body { color:${GREY}; font-size:40px; line-height:1.45; max-width:880px; }
-    .tag { color:${NAVY}; font-family:'IBM Plex Mono','Courier New',monospace; font-size:36px; font-weight:700; margin-top:26px; background:${ACCENT}; display:table; padding:8px 16px; }
-    .swipe { position:absolute; right:88px; bottom:190px; color:${NAVY}; font-size:34px; font-weight:700; }
-    .mark { position:absolute; right:96px; bottom:112px; width:26px; height:26px; background:${ACCENT}; }
-    .wordmark { position:absolute; left:88px; bottom:112px; color:${GREY}; font-family:'IBM Plex Mono','Courier New',monospace; font-size:26px; font-weight:600; }
-    .cover-art { display:block; width:100%; max-height:540px; object-fit:contain; margin-bottom:44px; }
-  </style></head><body>
-    ${art}
-    <div class="kicker">${cover ? SITE_LABEL : cta ? 'Next step' : `${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`}</div>
-    <h1>${headingHtml(s.heading)}</h1>
-    <div class="rule"></div>
-    ${body}
-    ${cover ? '<div class="swipe">Swipe &rarr;</div>' : ''}
-    <div class="mark"></div>
-    <div class="wordmark">${SITE_LABEL}</div>
-  </body></html>`;
+// Map a parsed heading/body slide onto the template layouts: cover, then
+// story-layout body slides with a NN / NN counter, then the CTA as a promo.
+function slideSpec(s, i, total) {
+  if (i === 0) return { type: 'cover', headline: s.heading };
+  if (i === total - 1) {
+    const [description, cta] = s.body.split('\n');
+    return { type: 'promo', name: s.heading, description, cta };
+  }
+  return {
+    type: 'story',
+    opener: s.heading,
+    followUp: s.body,
+    footerRight: `${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`,
+  };
 }
 
 // Caption = the file's `--- INSTAGRAM ---` section (caption + hashtags), else the
@@ -143,10 +97,10 @@ async function render(browser, slug) {
   const dir = join(OUT, slug);
   mkdirSync(dir, { recursive: true });
 
-  const cover = coverArt(slug);
   const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 2 });
   for (let i = 0; i < slides.length; i++) {
-    await page.setContent(slideHtml(slides[i], i, slides.length, cover), { waitUntil: 'load' });
+    await page.setContent(slideHtml(slideSpec(slides[i], i, slides.length)), { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
     const png = await page.screenshot({ type: 'png' });
     await sharp(png).resize(W, H).jpeg({ quality: 90 }).toFile(join(dir, `${String(i + 1).padStart(2, '0')}.jpg`));
   }
