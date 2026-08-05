@@ -263,7 +263,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['value-based-pricing-for-consultants'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 1,
-    status: 'scaffold',
+    // Published 2026-08-05 (Wave 1, spoke 5 of 5 — wave complete).
+    status: 'live',
     brief: {
       angle:
         'Productizing is the lever that makes everything downstream (pricing, sales, scaling) easier.',
