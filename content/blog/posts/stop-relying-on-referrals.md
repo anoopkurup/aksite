@@ -2,7 +2,7 @@
 hero_image: "/images/blog/stop-relying-on-referrals/hero.webp"
 title: How to Stop Relying on Referrals for Clients
 seo_title: How to Stop Relying on Referrals
-date: '2026-07-22'
+date: '2026-07-24'
 description: >-
   Referrals feel free but leave your pipeline at the mercy of other people.
   Here is how B2B service firms build a system that produces clients on

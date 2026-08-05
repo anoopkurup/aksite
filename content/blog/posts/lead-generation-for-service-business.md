@@ -2,7 +2,7 @@
 hero_image: "/images/blog/lead-generation-for-service-business/hero.webp"
 title: Lead Generation for Consultants & Service Firms
 seo_title: Lead Generation for Consultants
-date: '2026-07-22'
+date: '2026-07-27'
 description: >-
   Most lead-generation advice is built for SaaS, not consultants. Here is how
   B2B service firms generate qualified leads that actually convert.

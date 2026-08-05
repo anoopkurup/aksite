@@ -2,7 +2,7 @@
 hero_image: "/images/blog/how-to-productize-your-service/hero.webp"
 title: How to Productize Your Service (Step by Step)
 seo_title: How to Productize Your Service
-date: '2026-07-22'
+date: '2026-08-05'
 description: >-
   A productized service is easier to sell, price, and scale. Here is how to
   package what you do into one clear offer your firm can repeat.

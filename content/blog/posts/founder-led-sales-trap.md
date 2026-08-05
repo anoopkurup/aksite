@@ -2,7 +2,7 @@
 hero_image: "/images/blog/founder-led-sales-trap/hero.webp"
 title: The Founder-Led Sales Trap (and How to Escape)
 seo_title: The Founder-Led Sales Trap
-date: '2026-07-22'
+date: '2026-08-01'
 description: >-
   When you are the only one who can close, growth stops the moment you get
   busy. Here is how to get out of founder-led sales without losing the magic.
