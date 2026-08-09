@@ -207,6 +207,27 @@ export const posts = [
  ],
  },
  {
+ slug: 'best-b2b-marketing-bangalore-wont-fix-offer',
+ hero: img(
+ 'Marketing amplifies whatever offer it is given',
+ 'Metaphor: a flat side-view of a simple megaphone form drawn in bold solid navy, pointing right. Feeding into its mouthpiece from the left is a tangled, wavering fine grey line — the vague offer. Emerging from the bell on the right, the same wavering line, only larger and repeated three times — vagueness, amplified. Beneath the megaphone one small solid orange square sits untouched, the signal that was never fed in. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'Three agencies replaced, one offer unchanged',
+ 'Subject: three identical light-grey line-art amplifier boxes in a row on one clean baseline, each crossed out with a single fine grey stroke. Feeding all three from the left is one continuous bold solid navy tangled knot — the same unchanged offer passed to each. A small orange arrow curves back from the third box toward the knot, pointing at the real problem. Flat, spare, white background, no text.'
+ ),
+ img(
+ 'Two checks separate a marketing problem from an offer problem',
+ 'Subject: a simple flat two-way junction: one fine grey path enters from the left and splits at a small solid navy signpost into two clean paths. The upper path ends at a small navy megaphone icon; the lower path ends at a small navy package-box icon with a solid orange corner tag. Minimal, tidy geometry, generous white space, no text.'
+ ),
+ img(
+ 'Sharpen the offer first, then promotion compounds',
+ 'Subject: a left-to-right sequence on one baseline: a light grey blurred-edge blob, then a fine navy arrow into a crisp solid navy diamond — the sharpened offer — then a second arrow into three evenly spaced navy diamonds rising like steps, the last one accented with a soft orange glow. Flat, spare, clean rhythm, white background, no text.'
+ ),
+ ],
+ },
+ {
  slug: 'ad-agency-from-big-clients-to-many-small',
  hero: img(
  'Shifting from a few big clients to many small ones',

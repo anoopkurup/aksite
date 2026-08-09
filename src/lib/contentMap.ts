@@ -310,7 +310,8 @@ export const SEO_PAGES: Page[] = [
     siblings: [],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
-    status: 'scaffold',
+    // Published 2026-08-09 (Wave 2, spoke 1 of 7).
+    status: 'live',
     brief: {
       angle:
         'The ONE local asset — intercept the “marketing agency Bangalore” query and reframe: better marketing can’t fix a broken offer. Do NOT compete as an agency.',
