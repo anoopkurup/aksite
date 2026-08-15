@@ -214,20 +214,17 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Workshops section redirects
-      {
-        source: '/workshops',
-        destination: '/clear',
-        permanent: true,
-      },
+      // Workshops section redirects. /workshops itself is a REAL page again
+      // (Aug 2026) — no bare redirect here, it would shadow the route. Old
+      // workshop sub-URLs land on the new workshops page.
       {
         source: '/workshops/100-day-lead-generation-sprint',
-        destination: '/clear',
+        destination: '/workshops',
         permanent: true,
       },
       {
         source: '/workshops/linkedin-sales-activation',
-        destination: '/clear',
+        destination: '/workshops',
         permanent: true,
       },
 
@@ -313,12 +310,12 @@ const nextConfig = {
       // Archived workshops redirects
       {
         source: '/workshops/ai-lead-machine',
-        destination: '/clear',
+        destination: '/workshops',
         permanent: true,
       },
       {
         source: '/workshops/100-days-sprint',
-        destination: '/clear',
+        destination: '/workshops',
         permanent: true,
       },
 
