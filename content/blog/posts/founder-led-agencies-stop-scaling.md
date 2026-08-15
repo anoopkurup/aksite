@@ -115,4 +115,4 @@ That is a solvable problem. It is almost never a quick one.
 
 ---
 
-If you're running a founder-led agency that has plateaued and you suspect this pattern is part of why, the [Sales Scorecard](/scorecard) is a free 3-minute self-assessment that shows you how much of your pipeline depends on the founder, and which part of the commercial architecture to fix first.
+If you're running a founder-led agency that has plateaued and you suspect this pattern is part of why, [get in touch](/contact) and tell me what you're seeing. I'll tell you honestly how much of the pipeline depends on you, and which part of the commercial architecture to fix first.

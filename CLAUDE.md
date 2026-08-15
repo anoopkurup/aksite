@@ -3,14 +3,16 @@
 ## Project Overview
 Professional website for Anoop Kurup. Built with Next.js 15, Tailwind CSS, YAML-driven content.
 
-**Core message**: "I fix sales for B2B services businesses."
+**Core message**: "Your sales problem is usually a marketing problem." Anoop is a **marketing consultant for B2B services businesses**: he fixes the positioning, visibility, and lead generation behind weak sales. (Replaced "I fix sales..." in the Aug 2026 consulting-first repositioning.)
 **Audience**: B2B service firms (consulting, agency, training, professional services). (Avoid the term "founder-led" as an audience descriptor in page copy — it read as confusing; say "B2B". The *concept* "founder-led sales" — the founder being the only salesperson — is a distinct term and stays where it names that problem, e.g. the `founder-led-sales-trap` post. Never state client revenue/earnings figures — it's a social taboo in India.)
 
-**The one funnel** — every page drives to the Sales Scorecard:
+**Repositioned Aug 2026 (consulting-first)**: the site now leads with marketing consulting; the productised packaging is deemphasised. The Sales Scorecard was removed, **all prices came off the site** (a standing rule: no ₹ figures anywhere in site copy; engagements are "scoped after a conversation"), and three services are presented: Positioning & messaging · Marketing strategy & systems · Workshops & training.
+
+**The one funnel** — every page drives to Contact:
 ```
-Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
-  → Pipeline Reality Check (₹25K, 1 week, done-for-you diagnosis)
-  → CLEAR engagement (₹2.5L over 3 months: ₹50K + ₹1L×2; ₹75K Lite tier; quoted after diagnosis)
+Get in touch (/contact — the ONE primary CTA sitewide)
+  → Pipeline Reality Check (1 week, done-for-you diagnosis; no published price)
+  → consulting engagement (the CLEAR method; scoped after a conversation)
 ```
 
 ## Current Site Structure (Repositioned June 2026)
@@ -18,11 +20,11 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 ### Pages
 | Route | Purpose | Content source |
 |-------|---------|---------------|
-| `/` | Homepage — hero, "Sound familiar?", Package/Prove/Systemise, proof, Scorecard CTA | `content/pages/home.yaml` |
-| `/scorecard` | **Sales Scorecard** — interactive 10-question self-assessment (the centrepiece) | `src/app/scorecard/ScorecardTool.tsx` |
-| `/pipeline-reality-check` | ₹25,000 done-for-you diagnosis offer page | `content/pages/pipeline-reality-check.yaml` |
-| `/clear` | The CLEAR engagement (₹2.5L; ₹75K Lite) | `content/pages/clear.yaml` |
-| `/about` | Bio + funnel + podcast | `content/pages/about.yaml` |
+| `/` | Homepage — hero, "Sound familiar?", Package/Prove/Systemise, services, proof, contact CTA | `content/pages/home.yaml` |
+| `/pipeline-reality-check` | One-week done-for-you diagnosis (no published price) | `content/pages/pipeline-reality-check.yaml` |
+| `/clear` | The CLEAR method — "How I Work" methodology page | `content/pages/clear.yaml` |
+| `/workshops` | Workshops & training (3 curricula, no prices) | `content/pages/workshops.yaml` |
+| `/about` | Bio + services + podcast | `content/pages/about.yaml` |
 | `/blog` | Markdown blog system | `content/blog/posts/*.md` |
 | `/blog/category/[category]` | Filtered index (static, one per category) | `src/components/BlogIndex.tsx` |
 | `/case-studies` | Case study index + detail pages | `content/case-studies/*.md` |
@@ -31,14 +33,15 @@ Sales Scorecard (free, 3 min — the ONE primary CTA sitewide)
 | `/legal/*` | Privacy policy, terms | `content/legal/*.md` |
 
 ### Navigation
-**Desktop**: Anoop Kurup | How I Fix Sales (`/clear`) | Pipeline Reality Check | Case Studies | Blog | About | **[Take the Sales Scorecard]**
+**Desktop**: Anoop Kurup | How I Work (`/clear`) | Pipeline Reality Check | Workshops | Case Studies | Blog | About | **[Get in touch]**
 
-(No Services dropdown. Contact lives in the footer, not the top nav. Case Studies is in the top nav and the footer, and is linked from the homepage proof section.)
+(No Services dropdown. Contact is the header CTA button and lives in the footer, not the nav links. Case Studies is in the top nav and the footer, and is linked from the homepage proof section.)
 
 ### Removed Pages (June 2026 repositioning)
-- `/diagnose` — replaced by the free Scorecard (301 → `/scorecard`)
+- `/scorecard` — **Sales Scorecard removed Aug 2026** (301 → `/contact`). The interactive 10-question self-assessment (`ScorecardTool.tsx`, Reading meter climax, Formspree email capture) was the primary CTA of the June-2026 "I fix sales" positioning; with the shift to marketing consulting it no longer had a funnel to feed. Deleted `src/app/scorecard/` and `public/images/pages/scorecard-bands.webp`; every CTA now points at `/contact`.
+- `/diagnose` — replaced by the funnel (301 → `/contact`)
 - `/build` — replaced by `/clear` (301 → `/clear`)
-- `/postie` — Postie retired (301 → `/scorecard`)
+- `/postie` — Postie retired (301 → `/contact`)
 - `/framework`, `/partner` — 301 → `/clear`, `/contact`
 - `/podcast` — retired July 2026 (301 → `/about`). It was a stub: 9 episodes and 4 platform links all pointing at `#`, copy selling the retired "Lead Machine Method™", and no internal links to it. `/about` carries the podcast mention. Bring it back only with real episode URLs.
 - `/videos` never existed — old `/resources/*` redirects now point to `/blog`
@@ -78,9 +81,9 @@ aksite-nextjs/
 │   ├── app/
 │   │   ├── page.tsx              # Homepage
 │   │   ├── about/page.tsx        # About
-│   │   ├── scorecard/            # Sales Scorecard (page.tsx + ScorecardTool.tsx)
-│   │   ├── pipeline-reality-check/page.tsx  # ₹25K diagnosis offer
-│   │   ├── clear/page.tsx        # CLEAR engagement
+│   │   ├── pipeline-reality-check/page.tsx  # Diagnosis offer (no published price)
+│   │   ├── clear/page.tsx        # The CLEAR method (How I Work)
+│   │   ├── workshops/page.tsx    # Workshops & training
 │   │   ├── blog/                 # Blog (list + [slug] pages)
 │   │   ├── contact/page.tsx      # Contact
 │   │   ├── podcast/page.tsx      # Podcast
@@ -89,10 +92,10 @@ aksite-nextjs/
 │   ├── components/
 │   │   ├── Header.tsx            # Simplified nav
 │   │   ├── Footer.tsx            # Clean footer
-│   │   ├── CTAButton.tsx         # THE Scorecard button (navy-950 label on cta-500)
-│   │   ├── UnderlineLink.tsx     # Every non-Scorecard link: navy label + orange underline
+│   │   ├── CTAButton.tsx         # THE "Get in touch" button (navy-950 label on cta-500)
+│   │   ├── UnderlineLink.tsx     # Every non-primary link: navy label + orange underline
 │   │   ├── BlogIndex.tsx         # Shared by /blog and /blog/category/[category]
-│   │   ├── ContentPage.tsx       # MD-driven page wrapper (always ends with the Scorecard)
+│   │   ├── ContentPage.tsx       # MD-driven page wrapper (always ends with the contact CTA)
 │   │   ├── PageTemplate.tsx      # Hero + layout template (no <main> — layout.tsx owns it)
 │   │   └── templates/            # SEO page templates (SeoPageLayout + pillar/subpillar/spoke/vertical)
 │   └── lib/
@@ -101,7 +104,7 @@ aksite-nextjs/
 │       ├── analytics.ts          # trackEvent() — dataLayer/gtag-safe events
 │       ├── blog.ts               # Blog post loaders (content/blog/posts)
 │       ├── markdown.ts           # remark/rehype markdown → HTML
-│       ├── contentMap.ts         # SEO content map (27-page build; status gates indexability)
+│       ├── contentMap.ts         # SEO content map (35-page build; status gates indexability)
 │       └── seo.ts                # Metadata + JSON-LD schema builders
 ├── public/images/                # Static images (blog images: public/images/blog/<slug>/)
 └── tailwind.config.ts
@@ -143,7 +146,7 @@ npm run images -- --selftest    # test the count + wiring logic, no API calls
 
 ## Design System — "Instrument panel"
 
-The site reads like a diagnostic instrument: honest, measured, mechanical. The product IS a reading (Scorecard → diagnosis → fix), so data is set in mono like a gauge readout, and a recurring meter is the signature. Four colours only: navy / grey / orange / white.
+The site reads like a diagnostic instrument: honest, measured, mechanical. The product IS a reading (diagnosis → fix), so data is set in mono like a gauge readout, and a recurring meter is the signature. Four colours only: navy / grey / orange / white.
 
 ### Colors
 - `navy-900` = `#1F3D73` — true navy. Headlines and dark sections. (Clearly blue and authoritative, not near-black. The whole `navy` ramp in `tailwind.config.ts` is tuned to this hue. Do **not** revert it to the old electric `#000080`, nor to the near-black `#0E1A2B` ink it briefly was.)
@@ -158,13 +161,13 @@ The site reads like a diagnostic instrument: honest, measured, mechanical. The p
 - Scale: Hero 4.5rem, Display 3rem, Title 1.875rem, Body 1.125rem.
 
 ### The signature — "the Reading" (`src/components/Reading.tsx`)
-A mono label + value + segmented meter (orange fill = the needle). Used for the Scorecard result (the climax) and anywhere an honest measurement fits. Don't scatter meters where the data isn't a clean reading — prose results stay mono text, not meters. (It was removed from the homepage hero so orange there belongs to the CTA alone; the meter's home is the Scorecard.)
+A mono label + value + segmented meter (orange fill = the needle). Used anywhere an honest measurement fits (blog meta readouts). Don't scatter meters where the data isn't a clean reading — prose results stay mono text, not meters. (It was removed from the homepage hero so orange there belongs to the CTA alone. Its original climax, the Scorecard result, was removed with the Scorecard in Aug 2026.)
 
 ### CTA rule (one action sitewide)
-- **Filled-orange button = Take the Sales Scorecard, always.** Use `src/components/CTAButton.tsx` (`<CTAButton href={...}>`). It appears in the header, page heroes, and every page-end. Reads on white and on `navy-900`.
+- **Filled-orange button = Get in touch (`/contact`), always.** Use `src/components/CTAButton.tsx` (`<CTAButton href={...}>`). It appears in the header, page heroes, and every page-end. Reads on white and on `navy-900`. (Was the Sales Scorecard until Aug 2026.)
 - **The label is `navy-950`, never white.** White on `cta-500` is 2.80:1 and fails WCAG AA. Darkening the fill instead (`cta-700` + white) passes on white but drops to 2.06:1 against the `navy-900` closer, where the button disappears. `navy-950` on `cta-500` is 5.07:1 and keeps the signal orange exactly as specified. Hover *lightens* (`cta-400`) because the label is dark.
-- **Every other link = orange underline** (`border-b-2 border-cta-500`) with a **navy label**: use `src/components/UnderlineLink.tsx`. PRC links, "Learn more", contact methods, inline links. Never give a non-Scorecard link the filled treatment, and never use bare orange *text* for a link — the navy label carries contrast, the orange is the underline.
-- **Mobile sticky bar leads with the Scorecard** (`FloatingWhatsApp.tsx`): on a phone the header CTA is inside the hamburger and the hero CTA is below the fold, so this bar is the only Scorecard visible on first paint. WhatsApp/Call sit beside it, secondary.
+- **Every other link = orange underline** (`border-b-2 border-cta-500`) with a **navy label**: use `src/components/UnderlineLink.tsx`. PRC links, "Learn more", contact methods, inline links. Never give a non-primary link the filled treatment, and never use bare orange *text* for a link — the navy label carries contrast, the orange is the underline.
+- **Mobile sticky bar leads with Get in touch** (`FloatingWhatsApp.tsx`): on a phone the header CTA is inside the hamburger and the hero CTA is below the fold, so this bar is the only primary CTA visible on first paint. WhatsApp/Call sit beside it, secondary.
 
 ### Contrast floor (measured, don't regress)
 - `text-slate-400` is a **hairline value, not a text colour** — 2.56:1 on white. Body/meta text is `slate-500` (4.76:1) minimum; on a `navy-50` or `slate-50` panel use `slate-600`.
@@ -185,14 +188,14 @@ A mono label + value + segmented meter (orange fill = the needle). Used for the 
 - Simple markdown pages: `content/podcast.md`, `content/thank-you.md`, `content/legal/*.md` (loaded by `getContentPage()`)
 - TypeScript interfaces for all YAML structures in `src/lib/content.ts`, each with a typed loader
 - Each YAML page has a bespoke `page.tsx` renderer (not a generic section renderer)
-- The Scorecard is the one code-driven page (client component `ScorecardTool.tsx`)
 - When updating copy, edit the YAML/markdown file; only edit TSX for hardcoded pages
 
 ## Key Principles
-- Exactly ONE primary CTA type sitewide: the Sales Scorecard. Every page ends with it. No competing CTAs (no newsletter pop-ups, no "book a call" as primary).
-- The Scorecard score is shown immediately, un-gated; email is asked only after the score, for the written breakdown.
+- Exactly ONE primary CTA type sitewide: Get in touch (`/contact`). Every page ends with it. No competing CTAs (no newsletter pop-ups, no scorecards, no "book a call" as primary).
+- **No prices anywhere in site copy** (Aug 2026 rule). Engagements are scoped after a conversation. Blog posts may use ₹ figures as illustrative examples, but never as statements of Anoop's current prices.
 - Cases are labelled "From past consulting engagements" — original numbers only, never attributed to CLEAR.
-- Funnel: Scorecard (free) → Pipeline Reality Check (₹25K, fee credited to CLEAR) → CLEAR (₹2.5L over 3 months, month-to-month; ₹75K Lite tier).
+- Funnel: Contact → Pipeline Reality Check (one-week diagnosis) → consulting engagement (CLEAR method, scoped after a conversation).
+- Voice lexicon (see Tone of Voice Guide): avoid "client acquisition" as a phrase in page copy — say lead generation, getting clients, enquiries. (The SEO keyword layer in `contentMap.ts` keeps its client-acquisition keywords; that's search language, not page voice.)
 
 ## Brand Voice
 - **The voice authority is Anoop's Tone of Voice Guide**: `/Users/anoopkurup/Documents/CMWebsite/PRD/Tone of Voice Guide.md` (writing samples in `voice-samples/` beside it). Read it before writing or editing any site copy. The non-negotiables:
@@ -206,14 +209,13 @@ A mono label + value + segmented meter (orange fill = the needle). Used for the 
 - Direct, honest, problem-first. Short declarative sentences. Prices in ₹, stated plainly.
 - Colours: navy / grey / orange / white only. Orange reserved for CTAs and accents.
 
-## Payments & WhatsApp (July 2026)
-- **PRC booking is paid via Razorpay** (live since July 2026): `BookPRCButton.tsx` on the PRC hero + price box → `/api/prc/order` (server-side order, price hardcoded server-side) → Razorpay Checkout → `/api/prc/verify` (HMAC signature check) → inline "Booked" state (no redirect). Env: `RAZORPAY_KEY_ID` + `RAZORPAY_KEY_SECRET` in `.env.local` and Vercel (Production). The button is **navy-filled** — the one deliberate exception to "every non-Scorecard link is an underline"; it must never be orange.
+## Payments & WhatsApp (July 2026; checkout retired Aug 2026)
+- **PRC Razorpay checkout removed from the page in Aug 2026** (no-prices rule): the PRC page now uses the contact CTA. The full flow stays dormant in the repo for later: `BookPRCButton.tsx` (navy-filled, never orange) → `/api/prc/order` (price hardcoded server-side) → Razorpay Checkout → `/api/prc/verify` (HMAC check). Env: `RAZORPAY_KEY_ID` + `RAZORPAY_KEY_SECRET` in `.env.local` and Vercel (Production). To resurrect, re-import `BookPRCButton` on the PRC page.
 - **WhatsApp (+91 90360 14008)** is a first-class channel: `FloatingWhatsApp.tsx` (desktop pill after one screen of scroll; mobile sticky WhatsApp+Call bar — body has `pb-12 md:pb-0` to clear it), first method on /contact, and a "prefer to talk first?" underline link in the PRC price box. Events: `whatsapp_click`, `call_click`, `prc_book_click`, `prc_paid`.
 
-## Scorecard lead capture & analytics
-- Email capture posts to Formspree (`FORMSPREE_ENDPOINT` in `ScorecardTool.tsx`, form id `xdavwodo`).
+## Analytics
 - GA4 (`G-0X2P577TSX`) is loaded via `next/script` in `src/app/layout.tsx`.
-- `trackEvent()` (`src/lib/analytics.ts`) fires `scorecard_started`, `scorecard_completed`, `scorecard_email`, `prc_cta_click` to `dataLayer`/`gtag`.
+- `trackEvent()` (`src/lib/analytics.ts`) fires `contact_cta_click`, `clear_handoff_click`, `whatsapp_click`, `call_click`, `prc_book_click`, `prc_paid` to `dataLayer`/`gtag`. (The `scorecard_*` events died with the Scorecard, Aug 2026.)
 
 ## TODO
 - [ ] Set up SEO meta tags with target keywords on each page

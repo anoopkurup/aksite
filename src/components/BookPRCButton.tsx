@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
 // Books the ₹25,000 Pipeline Reality Check via Razorpay Checkout.
-// Navy fill, deliberately NOT orange — filled orange belongs to the Scorecard alone.
+// Navy fill, deliberately NOT orange — filled orange belongs to the primary CTA alone.
 // On success the button is replaced inline with the next step, so no
 // redirect to the (contact-form-flavoured) thank-you page.
 

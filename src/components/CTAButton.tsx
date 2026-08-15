@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 /**
- * The one filled-orange action sitewide: Take the Sales Scorecard.
+ * The one filled-orange action sitewide: Get in touch.
  * Filled orange ALWAYS means this single action (header, hero, page-end).
  * Every other link uses an orange underline — never this treatment.
  * Reads correctly on both white and navy-900 backgrounds.

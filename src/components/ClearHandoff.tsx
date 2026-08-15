@@ -1,7 +1,7 @@
 'use client';
 
 // The CLEAR handoff CTA. Per the site's one-CTA rule (CLAUDE.md), the primary
-// action is ALWAYS the free Sales Scorecard — the `clearLetter` only themes the
+// action is ALWAYS "Get in touch" (/contact) — the `clearLetter` only themes the
 // framing copy, it never introduces a competing CTA. Fires `clear_handoff_click`
 // for attribution (which page / which CLEAR letter drove the click).
 import Link from 'next/link';
@@ -46,11 +46,11 @@ export default function ClearHandoff({
         )}
         <h2 className="font-serif text-display text-white mb-6">{lead}</h2>
         <p className="font-sans text-body-lg text-navy-200 mb-12">
-          Ten questions, three minutes, an honest score and the one thing to fix
-          first. Free, no sign-up to see your result.
+          Tell me what you&apos;re seeing in your pipeline. I&apos;ll tell you honestly
+          if I can help, and where I&apos;d start.
         </p>
         <Link
-          href="/scorecard"
+          href="/contact"
           onClick={() =>
             trackEvent('clear_handoff_click', {
               from: fromSlug ?? 'unknown',
@@ -59,7 +59,7 @@ export default function ClearHandoff({
           }
           className="inline-flex items-center font-sans text-body text-white border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors duration-300"
         >
-          Take the Sales Scorecard
+          Get in touch
           <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
         </Link>
       </div>

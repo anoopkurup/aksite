@@ -94,4 +94,4 @@ So the sequence runs the other way round from how it's usually taught. Not: lear
 
 ---
 
-If your messaging keeps coming out generic, the framework is rarely the problem. The missing brief usually is, and behind it, a fuzzy picture of who you're actually selling to. The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment: ten questions, an honest score, and the one thing to fix first.
+If your messaging keeps coming out generic, the framework is rarely the problem. The missing brief usually is, and behind it, a fuzzy picture of who you're actually selling to. If you want a second pair of eyes on yours, [get in touch](/contact) and tell me what you're seeing.

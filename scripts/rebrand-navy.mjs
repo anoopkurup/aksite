@@ -19,7 +19,7 @@
  * Runs automatically at the end of `npm run images`; also available standalone:
  *   node scripts/rebrand-navy.mjs --dry            # report drift, write nothing
  *   node scripts/rebrand-navy.mjs                  # fix every drifted image
- *   node scripts/rebrand-navy.mjs --only scorecard # fix matching paths
+ *   node scripts/rebrand-navy.mjs --only prc-flow # fix matching paths
  */
 
 import sharp from "sharp";

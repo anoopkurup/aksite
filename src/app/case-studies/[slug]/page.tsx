@@ -144,10 +144,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             Recognise your own pipeline here?
           </h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">
-            The Sales Scorecard tells you how predictable yours really is: three minutes, an honest
-            score, and the one thing to fix first.
+            Tell me what&apos;s going on with your sales. I&apos;ll tell you honestly if I can
+            help, and where I&apos;d start.
           </p>
-          <CTAButton href="/scorecard">Take the Sales Scorecard</CTAButton>
+          <CTAButton href="/contact">Get in touch</CTAButton>
         </div>
       </section>
     </article>

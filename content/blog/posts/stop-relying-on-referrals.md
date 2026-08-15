@@ -86,4 +86,4 @@ In week four, write one piece of proof. A single case study from a past engageme
 
 Do that for thirty days and you will not have transformed the business. You will have something better: the first month of a pipeline you own, and a clear view of what to strengthen next. Referrals will keep arriving, and you will be delighted to take them. You will just no longer be waiting for them.
 
-If you want to know exactly how dependent your pipeline is today, that is what my Sales Scorecard measures. Ten questions, three minutes, an honest score, and the one thing to fix first.
+If you want to know exactly how dependent your pipeline is today, [get in touch](/contact) and tell me what you are seeing. I will give you an honest read, and the one thing to fix first.

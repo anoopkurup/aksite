@@ -168,10 +168,9 @@ export default function BlogIndex({ activeCategory }: { activeCategory?: string 
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-serif text-display text-white mb-6">Want help applying these ideas?</h2>
           <p className="font-sans text-body-lg text-navy-200 mb-8">
-            Find out how predictable your pipeline really is. Ten questions, three minutes, an honest
-            score and the one thing to fix first.
+            Tell me what&apos;s going on with your sales. I&apos;ll tell you honestly if I can help.
           </p>
-          <CTAButton href="/scorecard">Take the Sales Scorecard</CTAButton>
+          <CTAButton href="/contact">Get in touch</CTAButton>
         </div>
       </section>
     </>

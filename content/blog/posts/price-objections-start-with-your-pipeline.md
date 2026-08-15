@@ -89,4 +89,4 @@ The price objection is a lagging indicator. It reflects the pipeline health that
 
 You don't fix your negotiation posture in the meeting. You fix it well before you get there. Build the pipeline that gives you options, and the room you walk into will be a different one entirely.
 
-Not sure how thin your pipeline really is? The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment that shows you where your pipeline stands, and what's quietly costing you posture in the room.
+Not sure how thin your pipeline really is? [Get in touch](/contact) and tell me what you're seeing. I'll tell you where your pipeline stands, and what's quietly costing you posture in the room.

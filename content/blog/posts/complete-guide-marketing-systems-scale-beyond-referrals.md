@@ -95,4 +95,4 @@ The firms that get out of referral dependence are almost never the ones that dis
 
 Most firms reading this already know which of the four parts is missing. They just haven't said it out loud.
 
-If you'd like it named for you, the [Sales Scorecard](/scorecard) is a free three-minute self-assessment. Ten questions, a score at the end, and a fairly blunt reading of how much of your pipeline is weather.
+If you'd like it named for you, [get in touch](/contact) and tell me what you're seeing. You'll get a fairly blunt reading of how much of your pipeline is weather.

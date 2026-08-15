@@ -2,9 +2,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 /**
- * The documented treatment for every link that is NOT the Sales Scorecard:
+ * The documented treatment for every link that is NOT the primary CTA:
  * navy label + orange underline. Never a filled button — filled orange means the
- * Scorecard, and only the Scorecard.
+ * primary CTA, and only the primary CTA.
  *
  * This exists because the same bare `text-cta-600` link (orange text, no
  * underline) had been copied to /about, /blog, /case-studies and the prose

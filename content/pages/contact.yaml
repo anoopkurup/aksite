@@ -3,7 +3,7 @@
 
 meta:
   title: "Contact"
-  description: "Get in touch. If you run a B2B service business and you're ready to stop depending on referrals, I'd like to hear about it."
+  description: "Get in touch. If you run a B2B services business and marketing isn't producing the sales it should, I'd like to hear about it."
 
 hero:
   tier_label: "Get in Touch"
@@ -20,7 +20,7 @@ methods:
       title: "WhatsApp"
       description: "Message me directly. Tell me what's going on with your business. I read and reply to these myself, usually the same day."
       link_text: "+91 90360 14008"
-      link_url: "https://wa.me/919036014008?text=Hi%20Anoop%2C%20I%20run%20a%20B2B%20services%20firm%20and%20want%20to%20talk%20about%20fixing%20our%20sales."
+      link_url: "https://wa.me/919036014008?text=Hi%20Anoop%2C%20I%20run%20a%20B2B%20services%20firm%20and%20want%20to%20talk%20about%20our%20marketing."
     - icon: "mail"
       title: "Email"
       description: "Send me a note. Tell me what's going on with your business and what you're looking for. I typically respond within 24–48 hours."
@@ -43,7 +43,7 @@ fit:
     - "You want a system, not another experiment"
   not_for_title: "This is not for you if..."
   not_for_items:
-    - "You want someone to run your marketing forever (I build systems, not retainers)"
+    - "You want to hand marketing off and never think about it again. I consult and build systems your team runs; I'm not an execution retainer."
     - "You're looking for quick hacks"
     - "You're building a software product"
     - "You're not willing to question how you currently do things"
@@ -55,10 +55,10 @@ location:
     - "If you're outside India and think we might be a fit, reach out anyway. The work isn't location-dependent."
 
 cta:
-  title: "Still relying on referrals for your next client?"
-  subtitle: "Take the Sales Scorecard. Three minutes, an honest score, and you'll know exactly how predictable your pipeline really is."
-  button_text: "Take the Sales Scorecard"
-  button_url: "/scorecard"
+  title: "Not sure what to say?"
+  subtitle: "Two or three sentences about your business and what's stuck is plenty. I'll take it from there."
+  button_text: "Message me on WhatsApp"
+  button_url: "https://wa.me/919036014008?text=Hi%20Anoop%2C%20I%20run%20a%20B2B%20services%20firm%20and%20want%20to%20talk%20about%20our%20marketing."
   secondary_text: "Or if you already know what's broken:"
   secondary_link_text: "Book the Pipeline Reality Check"
   secondary_link_url: "/pipeline-reality-check"

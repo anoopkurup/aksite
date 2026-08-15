@@ -15,11 +15,7 @@ You may read and share the content here for your own use. The site, its text, an
 
 ## Content and intellectual property
 
-All content on this site, including the writing, frameworks, and the Sales Scorecard, is owned by me unless stated otherwise. You're welcome to quote or link to it with attribution. Please don't republish substantial portions as your own.
-
-## Tools and assessments
-
-The Sales Scorecard and any other assessments on this site are self-assessment tools. They give you an indicative view, not professional advice tailored to your situation. Decisions you make based on them are your own.
+All content on this site, including the writing and frameworks, is owned by me unless stated otherwise. You're welcome to quote or link to it with attribution. Please don't republish substantial portions as your own.
 
 ## Engagements and payment
 

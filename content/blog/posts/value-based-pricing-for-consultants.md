@@ -73,4 +73,4 @@ Expect to lose a client or two at the bottom of the list, the ones who bought yo
 
 Pricing is one part of a larger machine. The offer, the pipeline, and the weekly rhythm that produces conversations all have to work together, which is the subject of my guide to building a [client acquisition system](/client-acquisition-system). But pricing is often the cheapest fix with the largest effect, because it changes the economics of every engagement you already win.
 
-Is pricing your weakest link, or is the real constraint somewhere else? My free Sales Scorecard takes three minutes and tells you honestly which part of your sales to fix first.
+Is pricing your weakest link, or is the real constraint somewhere else? [Get in touch](/contact) and tell me what you're seeing. I'll tell you honestly which part of your sales to fix first.

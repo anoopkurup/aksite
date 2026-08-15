@@ -17,28 +17,19 @@ export function generateMetadata(): Metadata {
 
 const ladder = [
   {
-    price: "Free · 3 min",
-    name: "Sales Scorecard",
-    blurb:
-      "Ten questions, an honest score, and the one thing to fix first: an un-gated read on how predictable your pipeline really is.",
-    href: "/scorecard",
-    linkText: "Take the Sales Scorecard",
-    isCta: true,
-  },
-  {
-    price: "₹25,000 · 1 week",
+    price: "One week · done for you",
     name: "Pipeline Reality Check",
     blurb:
-      "I take your last 12 months of actual deals and tell you exactly where your next clients will come from, and where they won't. Done for you; the fee is credited to CLEAR.",
+      "I take your last 12 months of actual deals and tell you exactly where your next clients will come from, and where they won't. A written verdict, built from your own numbers.",
     href: "/pipeline-reality-check",
     linkText: "See the Pipeline Reality Check",
     isCta: false,
   },
   {
-    price: "₹2.5L · 3 months",
+    price: "Three months · alongside you",
     name: "The CLEAR engagement",
     blurb:
-      "We package your offer, prove it against real prospects together, and systemise what works, leaving you a sales system you own. ₹75K Lite tier; quoted after the diagnosis.",
+      "We position and package your offer, prove it against real prospects together, and systemise what works, leaving you a marketing system you own. Scoped after the diagnosis.",
     href: "/clear",
     linkText: "See the CLEAR engagement",
     isCta: false,
@@ -115,7 +106,7 @@ export default function HomePage() {
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-navy-600 mt-4">
                 Anoop Kurup
                 <span className="block text-slate-500 normal-case tracking-normal mt-1">
-                  In the room on the sales calls with you.
+                  In the room with you, from positioning to pipeline.
                 </span>
               </p>
             </div>
@@ -202,14 +193,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── The path — a real vertical stepper on white. ponytail: hardcoded ladder. ── */}
+      {/* ── Services — bordered cards on white, serif names ── */}
       <section className="py-section bg-white">
+        <div className="max-w-5xl mx-auto px-8">
+          <Eyebrow>{content.services.section_title}</Eyebrow>
+          <h2 className="font-serif text-display text-navy-900 mb-12">
+            Three ways I work with firms
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {content.services.items.map((service, index) => (
+              <div key={index} className="border border-slate-200 p-8 flex flex-col">
+                <h3 className="font-serif text-title text-navy-900 mb-4">{service.name}</h3>
+                <p className="font-sans text-body text-slate-600 leading-relaxed mb-6 flex-1">
+                  {service.description}
+                </p>
+                <Link
+                  href={service.link}
+                  className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 self-start hover:border-cta-600 hover:text-navy-700 transition-colors"
+                >
+                  {service.link_text}
+                  <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── The path — a real vertical stepper on slate. ponytail: hardcoded ladder. ── */}
+      <section className="py-section bg-slate-50">
         <div className="max-w-3xl mx-auto px-8">
           <Eyebrow>The path</Eyebrow>
-          <h2 className="font-serif text-display text-navy-900 mb-4">From score to system</h2>
+          <h2 className="font-serif text-display text-navy-900 mb-4">From diagnosis to system</h2>
           <p className="font-sans text-body text-slate-500 mb-10 max-w-2xl leading-relaxed">
-            One path, three steps. Start free: each step earns the next, and the ₹25,000
-            diagnosis fee is credited to CLEAR if we go further.
+            One path, two steps. The diagnosis comes first; anything larger is scoped
+            after it, from your own numbers.
           </p>
 
           {/* Wide banner, deliberately unframed: the section above already uses a
@@ -273,7 +291,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Proof — full cases, spaced apart ── */}
-      <section className="py-section bg-slate-50">
+      <section className="py-section bg-white">
         <div className="max-w-4xl mx-auto px-8">
           <div className="text-center mb-16">
             <Eyebrow>Proof</Eyebrow>
@@ -316,7 +334,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Fit — who this is for / not for ── */}
-      <section className="py-section bg-white">
+      <section className="py-section bg-slate-50">
         <div className="max-w-4xl mx-auto px-8">
           <div className="text-center mb-16">
             <Eyebrow>Fit</Eyebrow>
@@ -325,7 +343,7 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="border border-slate-200 p-8">
+            <div className="bg-white border border-slate-200 p-8">
               <h3 className="font-serif text-title text-navy-900 mb-6">
                 {content.qualification.for_you.heading}
               </h3>
@@ -338,7 +356,7 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
-            <div className="border border-slate-200 p-8">
+            <div className="bg-white border border-slate-200 p-8">
               <h3 className="font-serif text-title text-slate-600 mb-6">
                 {content.qualification.not_for_you.heading}
               </h3>

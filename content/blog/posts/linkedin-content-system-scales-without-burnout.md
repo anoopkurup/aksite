@@ -108,4 +108,4 @@ Fix the offer first. Then make the routine cheap enough to be boring. Boring sur
 
 ---
 
-If you're not sure whether the gap is the content, the offer, or the pipeline behind both, [take the free Sales Scorecard](/scorecard): ten questions, three minutes, an honest score and the one thing to fix first.
+If you're not sure whether the gap is the content, the offer, or the pipeline behind both, [get in touch](/contact) and tell me what you're seeing. I'll tell you honestly where I'd start.

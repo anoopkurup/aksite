@@ -96,4 +96,4 @@ The two-team framing was never your problem. Your problem is that the only filte
 
 ---
 
-If you want to see where your own pipeline is confusing interest for intent, the [Sales Scorecard](/scorecard) is a free 3-minute self-assessment. It shows you how much of your pipeline is real, and which part to fix first.
+If you want to see where your own pipeline is confusing interest for intent, [get in touch](/contact) and tell me what you're seeing. I'll tell you how much of your pipeline is real, and which part to fix first.

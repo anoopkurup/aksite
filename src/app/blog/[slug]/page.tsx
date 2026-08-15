@@ -172,11 +172,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.frontmatter.author || "Anoop Kurup"}
               </h3>
               <p className="font-sans text-body text-slate-600 leading-relaxed mb-4">
-                I fix sales for B2B services businesses: one packaged offer, proven against real
-                prospects, with a weekly rhythm that produces conversations. Before this: a research
-                lab at GE, then patents and competitive strategy, then an intellectual-property firm
-                I built and exited. I work with founders one engagement at a time from Bangalore, and
-                I&apos;m in the room on your sales calls.
+                I&apos;m a marketing consultant for B2B services businesses. I fix the positioning,
+                visibility, and lead generation behind weak sales. Before this: a research lab at
+                GE, then patents and competitive strategy, then an intellectual-property firm I
+                built and exited. I work with founders one engagement at a time from Bangalore.
               </p>
               <Link
                 href="/about"
@@ -230,9 +229,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             Still depending on referrals?
           </h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">
-            Find out how predictable your pipeline really is. Ten questions, three minutes, an honest score and the one thing to fix first.
+            Tell me what&apos;s going on with your sales. I&apos;ll tell you honestly if I can help.
           </p>
-          <CTAButton href="/scorecard">Take the Sales Scorecard</CTAButton>
+          <CTAButton href="/contact">Get in touch</CTAButton>
         </div>
       </section>
     </article>

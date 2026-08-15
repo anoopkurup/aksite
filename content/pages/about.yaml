@@ -1,40 +1,42 @@
 # About Page Content
-# Last updated: 2026-06-30 (CLEAR v5 copy)
+# Last updated: 2026-08-15 (consulting-first repositioning)
 
 meta:
-  title: "About Anoop Kurup, Sales-Systems Consultant"
-  description: "I'm a sales-systems consultant for B2B services businesses. I don't stop at the roadmap. I build the selling system itself, and stay until it runs."
+  title: "About Anoop Kurup, Marketing Consultant"
+  description: "I'm a marketing consultant for B2B services businesses. Twenty years of positioning, brand building, and lead generation, applied to firms that are better at the work than at selling it."
 
 hero:
-  headline: "I'm a sales-systems consultant."
+  headline: "I'm a marketing consultant."
   body:
-    - "After a decade helping founders get strategic clarity, I kept seeing the same ending: perfect clarity, and still no pipeline. The strategy was right, the positioning was sharp, and nothing was selling, because a roadmap doesn't make calls or close deals. So I stopped stopping at the roadmap. Now I build the selling system itself, and I stay until it runs."
+    - "Most B2B services firms I meet are far better at their work than at marketing it. They can't answer three questions cleanly: how are we different, what exactly are we selling, and how do we reach the right buyers on purpose. Twenty years of positioning, brand work, and lead generation have convinced me those three questions are most of the job. Answer them properly and sales stops being a mystery."
     - "My route here wasn't a straight line. I started in a research lab at GE, testing whether a new plastic could survive commercial production. The machines did the work, and I learned what a real system looks like. Then patents and competitive strategy. Then an intellectual-property firm I built and exited, and marketing brands after that. The common thread was always the same: finding the pattern inside a business that its founder is too close to see."
-    - "I've also sold my own work all along, so I know the founder-selling trap from the inside. I work with founders directly, one engagement at a time, from Bangalore. I don't run a team you'll never meet or hand you to an account manager: when you work with me, you work with me, including on your sales calls."
+    - "I've sold my own work all along, so I know from the inside what a thin pipeline feels like. I work with founders directly, one engagement at a time, from Bangalore. I don't run a team you'll never meet or hand you to an account manager: when you work with me, you work with me."
 
 pattern:
   section_title: "What I care about."
   paragraphs:
-    - "Most B2B services firms are far better at the work than they are at selling it, and that gap closes with a system, not with working harder. Building that system, and being in the room while it starts to work, is the job."
+    - "Strategy before tactics. Most marketing fails at the foundations, not the execution: unclear positioning, an offer nobody can repeat, no reason to choose you. Fix those first and ordinary tactics start working."
+    - "Clarity before complexity. If the strategy doesn't fit on a page, it isn't finished. Complexity is where marketing budgets go to die."
+    - "Systems over improvisation. A modest routine run every week beats a brilliant campaign run once. The firms that grow are rarely the cleverest; they're the most consistent."
 
 what_i_do:
   section_title: "How it works."
   items:
-    - label: "Start with the Sales Scorecard."
-      description: "A free, three-minute self-assessment that tells you how predictable your pipeline really is, and the one thing to fix first."
-      link: "/scorecard"
-    - label: "Then the Pipeline Reality Check."
-      description: "A ₹25,000 done-for-you diagnosis of your last 12 months of deals: where your next clients will come from, and where they won't. One week, a written verdict."
-      link: "/pipeline-reality-check"
-    - label: "Then CLEAR."
-      description: "The engagement where I install the sales system: one packaged offer the market has responded to, a routine you've already run with me on the calls beside you, written down and yours."
+    - label: "Positioning & messaging."
+      description: "We work out who you serve, why you over the alternatives, and the words that carry it. Everything downstream depends on this, so it comes first."
       link: "/clear"
+    - label: "Marketing strategy & systems."
+      description: "The plan and the weekly rhythm that executes it: visibility, lead generation, follow-up. Engagements usually start with a Pipeline Reality Check, a one-week diagnosis of where your clients actually come from."
+      link: "/pipeline-reality-check"
+    - label: "Workshops & training."
+      description: "Intensive working sessions on positioning, offer design, and go-to-market systems, for founders and teams who want to build the capability in-house."
+      link: "/workshops"
 
 podcast:
   text: "I co-host the **Click, Brand & Beyond** podcast with Nisha Prakash: conversations about marketing, positioning, and building businesses that don't depend on the founder for everything."
 
 final_cta:
-  title: "Find out how predictable your pipeline really is."
-  body: "Ten questions. Three minutes. An honest score and the one thing to fix first."
-  cta_text: "Take the Sales Scorecard"
-  cta_link: "/scorecard"
+  title: "Tell me what's not working."
+  body: "Tell me what's going on with your marketing. I'll tell you honestly if I can help."
+  cta_text: "Get in touch"
+  cta_link: "/contact"

@@ -53,14 +53,6 @@ export const pages = [
       'Metaphor: a confident three-milestone payment timeline on one bold navy baseline. Three solid-filled milestone circles with very subtle soft shadows — the first accented in solid orange with a soft glow to mark the start, the other two solid navy. One short word-label beneath each circle in a clean geometric sans-serif, exactly: "Month 1", "Month 2", "Month 3". Do NOT draw any currency amounts, rupee symbols or numbers other than 1, 2, 3. Premium, spare, lots of white space.',
   },
   {
-    id: 'page-scorecard-bands',
-    out: 'public/images/pages/scorecard-bands.webp',
-    size: W,
-    alt: 'Three scorecard bands from Referral-Dependent to System-Ready',
-    prompt:
-      'Metaphor: a confident diagnostic gauge — one bold semicircular dial reading left (low) to right (high), divided into three arcs. The low arc light grey, the middle arc navy, the highest arc solid orange with a soft orange glow, and a bold solid navy needle swinging toward the orange. Short labels beneath the arcs in a clean geometric sans-serif: "Referral-Dependent", "One Engine Short", "System-Ready". Premium instrument-panel feel, lots of white space.',
-  },
-  {
     id: 'page-prc-flow',
     out: 'public/images/pages/prc-flow.webp',
     size: W,

@@ -2,7 +2,7 @@
  * The Reading — the site's signature device.
  *
  * A mono label + value with a segmented meter track (orange fill = the needle).
- * Used for the Scorecard teaser, before→after proof, prices, and section eyebrows —
+ * Used for before→after proof, prices, and section eyebrows —
  * everywhere the brand takes an honest measurement of the sales engine.
  */
 
@@ -12,7 +12,7 @@ type ReadingProps = {
   value?: string;
   /** Meter fill, 0–1. Omit to render a label/value row with no track. */
   fill?: number;
-  /** Number of meter segments. Default 10 (a Scorecard out of 10). */
+  /** Number of meter segments. Default 10. */
   segments?: number;
   /** Quiet line under the meter. */
   note?: string;

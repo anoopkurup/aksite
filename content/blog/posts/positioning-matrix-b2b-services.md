@@ -106,4 +106,4 @@ Your positioning isn't a description of your firm. It's the sentence a client sa
 
 ---
 
-If you're not sure whether your prospects can name the problem you solve, or whether you're stuck in the vague-and-intense crowd competing on price, the [Sales Scorecard](/scorecard) is a free three-minute self-assessment. It shows you where your pipeline is leaking and what to fix first.
+If you're not sure whether your prospects can name the problem you solve, or whether you're stuck in the vague-and-intense crowd competing on price, [get in touch](/contact) and tell me what you're seeing. I'll tell you where your pipeline is leaking and what to fix first.

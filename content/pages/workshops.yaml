@@ -1,0 +1,74 @@
+# Workshops Page
+# Created: 2026-08-15 (consulting-first repositioning). Curricula seeded from the
+# old Hugo site's workshops.md; prices deliberately omitted (no prices sitewide).
+
+meta:
+  title: "Workshops | Positioning, Offers, Go-to-Market"
+  description: "Working sessions for B2B services businesses: positioning, offer architecture, and go-to-market systems. You leave with decisions made and frameworks in hand, not notes."
+
+hero:
+  tier_label: "Workshops & Training"
+  title: "Workshops that end in decisions, not notes."
+  body:
+    - "Most growth problems trace back to three unanswered questions: how are we different, what exactly should we sell, and how do we reach the right buyers on purpose. These workshops answer them, with your team in the room and your business on the whiteboard."
+    - "Each one is a working session, not a lecture. You leave with the decisions made and the frameworks documented: positioning you can say out loud, offers a stranger can buy, a go-to-market plan your team can run."
+
+why:
+  section_title: "Why they work"
+  items:
+    - title: "Strategy before tactics"
+      description: "Positioning, offers, and go-to-market get decided before any tactic is discussed. Tactics chosen first are guesses."
+    - title: "Built on your business"
+      description: "No generic frameworks filled with someone else's examples. We work on your market, your competitors, your numbers."
+    - title: "Capability, not dependency"
+      description: "Your team learns the method while we use it, so the thinking stays in-house after I leave."
+
+workshops:
+  section_title: "The workshops"
+  items:
+    - name: "Business Clarity Foundation"
+      duration: "Two days"
+      description: "Positioning and differentiation: who you serve, why you over the alternatives, and the messaging that carries it."
+      build:
+        - "A positioning statement that separates you from the next firm"
+        - "An ideal client profile specific enough to say no with"
+        - "A competitive read of your market and where you win"
+        - "A messaging framework your whole team can use"
+      best_for: "Firms whose prospects can't tell them apart from competitors."
+    - name: "Offer Architecture Design"
+      duration: "Two days"
+      description: "Structuring what you sell: a clear ladder from first purchase to flagship engagement, packaged so buying is easy."
+      build:
+        - "A service ladder from entry point to premium work"
+        - "Pricing logic aligned with the value delivered"
+        - "Packaging and proposal frameworks that shorten sales cycles"
+        - "Natural progression paths from small engagements to large"
+      best_for: "Firms with scattered services and every deal negotiated from scratch."
+      note: "Builds on Business Clarity Foundation, or equivalent positioning clarity."
+    - name: "Go-to-Market Systems"
+      duration: "Three days"
+      description: "The complete system for winning clients: channels, content, lead generation, follow-up, and measurement, designed as one weekly rhythm."
+      build:
+        - "A channel strategy matched to where your buyers actually look"
+        - "A content plan aligned with your positioning"
+        - "Lead generation workflows with clear qualification"
+        - "A documented sales process from first contact to close"
+        - "Measurement that shows what's working"
+      best_for: "Firms with clear positioning and offers, ready to build the engine."
+      note: "Builds on the first two workshops, or equivalent clarity."
+
+formats:
+  section_title: "Formats"
+  items:
+    - name: "Private intensive"
+      description: "One firm, working 1:1. The whole session works on your business; the format I recommend for founders who want depth and speed."
+    - name: "Small group"
+      description: "A cohort of up to five non-competing businesses. Shared frameworks, individual application."
+    - name: "Virtual or in person"
+      description: "Live online sessions, or in person in Bangalore and by arrangement elsewhere."
+
+final_cta:
+  title: "Not sure which one fits?"
+  body: "Tell me where your marketing is stuck. I'll tell you honestly which workshop fits, or whether a workshop is even the right first step."
+  cta_text: "Get in touch"
+  cta_link: "/contact"

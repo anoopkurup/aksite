@@ -80,10 +80,10 @@ export default function CaseStudiesPage() {
             Is your offer the problem?
           </h2>
           <p className="font-sans text-body-lg text-navy-200 mb-12">
-            The Sales Scorecard finds out in three minutes: an honest read on how predictable your
-            pipeline really is, and the one thing to fix first.
+            Tell me what&apos;s going on with your sales. I&apos;ll tell you honestly if I can
+            help, and where I&apos;d start.
           </p>
-          <CTAButton href="/scorecard">Take the Sales Scorecard</CTAButton>
+          <CTAButton href="/contact">Get in touch</CTAButton>
         </div>
       </section>
     </>

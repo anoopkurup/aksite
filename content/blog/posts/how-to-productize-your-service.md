@@ -81,4 +81,4 @@ But be honest about the ratio, because "our work is too custom to package" is th
 
 The workable structure for most B2B service firms is a productised front door and a custom back room. One packaged offer that is easy to find, easy to grasp, and easy to buy; and behind it, the deeper custom work for clients whose situation genuinely demands it, most of whom arrived through the front door. The package is not a limit on the firm's sophistication. It is the mechanism by which strangers become clients, and it is one of the five parts of a working [client acquisition system](/client-acquisition-system).
 
-If you are not sure whether your offer is the weak link in your sales, that is measurable. My Sales Scorecard takes three minutes and tells you honestly whether the first thing to fix is your offer, your pipeline, or something else entirely.
+If you are not sure whether your offer is the weak link in your sales, [get in touch](/contact) and tell me what you are seeing. I will tell you honestly whether the first thing to fix is your offer, your pipeline, or something else entirely.

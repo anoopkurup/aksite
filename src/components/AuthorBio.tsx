@@ -23,7 +23,7 @@ export default function AuthorBio({ note }: AuthorBioProps) {
             </h3>
             <p className="font-sans text-body text-slate-600 leading-relaxed mb-4">
               {note ||
-                'Sales-systems consultant for B2B services businesses. I fix sales: one packaged offer, proven against real prospects, with a weekly rhythm that produces conversations. Based in Bangalore.'}
+                'Marketing consultant for B2B services businesses. I fix the marketing behind weak sales: positioning, visibility, and lead generation that produces a pipeline you can predict. Based in Bangalore.'}
             </p>
             <Link
               href="/about"

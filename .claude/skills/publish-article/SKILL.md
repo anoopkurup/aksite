@@ -37,7 +37,7 @@ Voice rules live in CLAUDE.md and the Tone of Voice Guide.
      AND the strongest People Also Ask questions near the end.
    - Weave the top secondary keywords into headings and body naturally; cover the
      sub-topics the competitor titles and related searches reveal.
-   - End with the `brief.handoffLine` — the CTA is ALWAYS the Sales Scorecard.
+   - End with the `brief.handoffLine` — the CTA is ALWAYS "Get in touch" (/contact).
    - Up-link to the `parent` page and cross-link the `siblings` in the body.
 
 3. **Draft** the markdown in `content/blog/posts/<slug>.md` (frontmatter: title, date,
@@ -76,7 +76,14 @@ Voice rules live in CLAUDE.md and the Tone of Voice Guide.
 
 ## Notes
 
-- Exactly ONE primary CTA sitewide: the Sales Scorecard. No competing CTAs.
+- Exactly ONE primary CTA sitewide: Get in touch (/contact). No competing CTAs.
+- **Consulting-first vantage (Aug 2026)**: articles are written by a marketing
+  consultant, not a sales-systems installer. Frame it as sales symptom → marketing
+  cause (positioning, visibility, lead generation). Reference CLEAR as the method
+  and the Pipeline Reality Check as the diagnostic first step — never as priced
+  products. **No prices anywhere**; ₹ figures only as illustrative examples.
+- Avoid "client acquisition" as a phrase in body prose (say lead generation,
+  getting clients, enquiries) — keywords/slugs/titles chosen for search are exempt.
 - Never state client revenue/earnings figures; never fabricate metrics. Cases are
   labelled "From past consulting engagements".
 - An Obsidian draft can replace step 3's hand-drafting:

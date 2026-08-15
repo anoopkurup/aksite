@@ -2,7 +2,6 @@ import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { getPipelineRealityCheckContent } from "@/lib/content";
 import CTAButton from "@/components/CTAButton";
-import BookPRCButton from "@/components/BookPRCButton";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/seo";
 import { pageMetadata } from "@/lib/seo";
@@ -30,8 +29,8 @@ export default function PipelineRealityCheckPage() {
               name: "Pipeline Reality Check",
               description: content.meta.description,
               url: "/pipeline-reality-check",
-              serviceType: "Sales pipeline diagnosis",
-              price: 25000, // flat, published, paid up front via Razorpay
+              serviceType: "Pipeline diagnosis",
+              // No price: no-prices-on-site rule (Aug 2026); scoped on contact.
             }),
             breadcrumbSchema([
               { name: "Home", url: "/" },
@@ -57,7 +56,9 @@ export default function PipelineRealityCheckPage() {
               <p key={i}>{p}</p>
             ))}
           </div>
-          <BookPRCButton from="prc_hero" />
+          {/* Razorpay checkout removed Aug 2026 (no prices on site); booking
+              starts with a conversation. BookPRCButton + /api/prc stay dormant. */}
+          <CTAButton href="/contact">Get in touch</CTAButton>
         </div>
       </section>
 
@@ -95,8 +96,7 @@ export default function PipelineRealityCheckPage() {
         <div className="max-w-4xl mx-auto px-8">
           <div className="bg-navy-50 border border-slate-200 p-8 md:p-12">
             <p className="font-mono text-title text-navy-900 mb-3">{content.terms.headline}</p>
-            <p className="font-sans text-body text-slate-600 mb-4">{content.terms.body}</p>
-            <p className="font-sans text-body text-navy-900 font-medium mb-8">{content.terms.credit_note}</p>
+            <p className="font-sans text-body text-slate-600 mb-8">{content.terms.body}</p>
 
             {/* Who you're paying — the face behind the verdict */}
             <div className="flex items-center gap-4 border-t border-navy-100 pt-8 mb-8">
@@ -113,7 +113,7 @@ export default function PipelineRealityCheckPage() {
               </p>
             </div>
 
-            <BookPRCButton from="prc_terms" />
+            <CTAButton href="/contact">Get in touch</CTAButton>
             <p className="font-sans text-body text-slate-600 mt-6">
               Prefer to talk it through first?{" "}
               <a
@@ -124,7 +124,7 @@ export default function PipelineRealityCheckPage() {
               >
                 WhatsApp me
               </a>
-              . No pitch, just a straight answer on whether it&apos;s worth your ₹25,000.
+              . No pitch, just a straight answer on whether it&apos;s worth doing.
             </p>
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function PipelineRealityCheckPage() {
         </div>
       </section>
 
-      {/* Final CTA — Scorecard */}
+      {/* Final CTA — contact */}
       <section className="py-section bg-navy-900">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-serif text-display text-white mb-6">{content.final_cta.title}</h2>

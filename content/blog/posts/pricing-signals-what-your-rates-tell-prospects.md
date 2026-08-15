@@ -86,4 +86,4 @@ So the honest sequence runs backwards from where most people start it. Build eno
 
 Your rate has been speaking about you this whole time. The only question is whether it's been saying what you'd have chosen.
 
-If you're not sure what your pricing is signalling, the more useful place to look is usually the pipeline sitting behind it. The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment that shows you where that pipeline actually stands, and what's quietly setting your prices for you.
+If you're not sure what your pricing is signalling, the more useful place to look is usually the pipeline sitting behind it. [Get in touch](/contact) and tell me what you're seeing. I'll tell you where that pipeline actually stands, and what's quietly setting your prices for you.

@@ -75,7 +75,7 @@ Most service firms that struggle down-market are not underpriced. They are being
 
 ---
 
-If your firm grew up on large accounts and the smaller clients now feel like they cost more than they pay, the first step is to see clearly where your pipeline and your offer are misaligned with how clients actually buy you. My free Sales Scorecard is a quick way to pressure-test exactly that. Take a few minutes with it before you decide the problem is your pricing.
+If your firm grew up on large accounts and the smaller clients now feel like they cost more than they pay, the first step is to see clearly where your pipeline and your offer are misaligned with how clients actually buy you. [Get in touch](/contact) and tell me what you're seeing before you decide the problem is your pricing.
 
 ---
 

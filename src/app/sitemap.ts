@@ -24,9 +24,9 @@ function fileModified(...segments: string[]): Date {
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { route: '', priority: 1.0 },
-    { route: '/scorecard', priority: 0.9 },
-    { route: '/pipeline-reality-check', priority: 0.9 },
-    { route: '/clear', priority: 0.9 },
+    { route: '/clear', priority: 0.8 },
+    { route: '/pipeline-reality-check', priority: 0.8 },
+    { route: '/workshops', priority: 0.8 },
     { route: '/about', priority: 0.7 },
     { route: '/case-studies', priority: 0.7 },
     { route: '/blog', priority: 0.7 },

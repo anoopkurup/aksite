@@ -33,22 +33,20 @@ export default async function ContentPage({ contentData, heroBackground = "white
         </section>
       )}
 
-      {/* Every page ends with the Scorecard. The closer renders whether or not the
-          markdown defines a `cta:` block — /podcast had none, so it was the one
-          page with no primary CTA at all. The defaults are the Scorecard, never
-          "Get in touch": a non-Scorecard primary CTA was previously the built-in
-          fallback here. */}
+      {/* Every page ends with the primary CTA. The closer renders whether or not
+          the markdown defines a `cta:` block — /podcast had none, so it was the
+          one page with no primary CTA at all. */}
       <section className="py-section-sm px-6 bg-navy-900">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-title text-white mb-4">
-            {frontmatter.cta?.title || "Find out how predictable your pipeline really is."}
+            {frontmatter.cta?.title || "Tell me what's not working."}
           </h2>
           <p className="font-sans text-body text-navy-200 leading-relaxed mb-8 max-w-xl mx-auto">
             {frontmatter.cta?.subtitle ||
-              "Ten questions. Three minutes. An honest score, and the one thing to fix first."}
+              "Tell me what's going on with your sales. I'll tell you honestly if I can help."}
           </p>
-          <CTAButton href={frontmatter.cta?.button?.url || "/scorecard"}>
-            {frontmatter.cta?.button?.text || "Take the Sales Scorecard"}
+          <CTAButton href={frontmatter.cta?.button?.url || "/contact"}>
+            {frontmatter.cta?.button?.text || "Get in touch"}
           </CTAButton>
         </div>
       </section>

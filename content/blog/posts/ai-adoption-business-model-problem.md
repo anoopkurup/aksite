@@ -78,4 +78,4 @@ AI is the engine for that business. But first, the business has to be built.
 
 ---
 
-If your business still runs through you personally, that's the real constraint, on AI adoption and on growth. The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment that shows you where your sales depend on you, and what to systemise first.
+If your business still runs through you personally, that's the real constraint, on AI adoption and on growth. If you want an honest read on where your sales depend on you, [get in touch](/contact) and tell me what you're seeing.

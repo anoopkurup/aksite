@@ -21,18 +21,16 @@ export default function ClearPage() {
       <JsonLd
         schema={[
           serviceSchema({
-            name: "CLEAR: the sales system, installed",
+            name: "The CLEAR method",
             description: content.meta.description,
             url: "/clear",
-            serviceType: "Sales systems consulting",
-            // Quoted after a Pipeline Reality Check, so a range, not a price:
-            // 75,000 Lite tier through 2,50,000 for the full three months.
-            minPrice: 75000,
-            maxPrice: 250000,
+            serviceType: "Marketing consulting",
+            // No price: engagements are scoped after a conversation (Aug 2026,
+            // no-prices-on-site rule), so the schema carries no Offer node.
           }),
           breadcrumbSchema([
             { name: "Home", url: "/" },
-            { name: "How I Fix Sales", url: "/clear" },
+            { name: "How I Work", url: "/clear" },
           ]),
         ]}
       />
@@ -117,66 +115,17 @@ export default function ClearPage() {
         </div>
       </section>
 
-      {/* Pace + Investment */}
+      {/* Pace */}
       <section className="py-section bg-slate-50">
-        <div className="max-w-4xl mx-auto px-8 space-y-12">
-          <div className="border border-slate-200 p-8">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="bg-white border border-slate-200 p-8 md:p-12">
             <h2 className="font-serif text-title text-navy-900 mb-3">{content.pace.section_title}</h2>
             <p className="font-sans text-body text-slate-600 leading-relaxed">{content.pace.body}</p>
-          </div>
-          <div className="bg-white p-8 md:p-12 border border-slate-100">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div>
-                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-3">
-                  {content.investment.section_title}
-                </p>
-                <p className="font-mono text-display-sm text-navy-900 mb-4">{content.investment.title}</p>
-                <p className="font-sans text-body text-slate-600 mb-4">{content.investment.description}</p>
-                <p className="font-sans text-body text-navy-900 font-medium">
-                  {content.investment.credit_note}
-                </p>
-              </div>
-              {/* Payment schedule — drawn in code so the amounts stay crisp and correct */}
-              <div className="border border-slate-200 bg-white p-8 md:p-10">
-                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-8">
-                  Payment schedule
-                </p>
-                <div className="relative">
-                  <span className="absolute left-5 right-5 top-5 h-0.5 -translate-y-1/2 bg-navy-900" aria-hidden />
-                  <ol className="relative grid grid-cols-3 text-center">
-                    {[
-                      { month: "Month 1", amount: "₹50,000", start: true },
-                      { month: "Month 2", amount: "₹1,00,000" },
-                      { month: "Month 3", amount: "₹1,00,000" },
-                    ].map((m) => (
-                      <li key={m.month} className="flex flex-col items-center">
-                        {/* Navy, not orange: a step dot is decoration, and a second
-                            orange focal point competes with the Scorecard button. */}
-                        <span
-                          className={`w-10 h-10 rounded-full ${
-                            m.start
-                              ? "bg-navy-900 ring-4 ring-navy-200"
-                              : "bg-navy-300"
-                          }`}
-                        />
-                        <span className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-navy-600 mt-5">
-                          {m.month}
-                        </span>
-                        <span className="font-mono text-sm text-navy-900 mt-1">{m.amount}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-                <p className="font-mono text-[0.7rem] text-slate-500 uppercase tracking-[0.18em] mt-8 text-center">
-                  Paid month to month, in advance
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA — Scorecard first, PRC secondary */}
+      {/* Final CTA — contact first, PRC secondary */}
       <section className="py-section bg-navy-900">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-serif text-display text-white mb-6">{content.final_cta.title}</h2>

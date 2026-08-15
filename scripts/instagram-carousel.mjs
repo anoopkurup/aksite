@@ -59,7 +59,7 @@ function parseCarousel(md) {
   // Instagram CTA: no clickable links, so point at the bio, not a URL.
   slides.push({
     heading: 'How predictable is your pipeline?',
-    body: 'Free Sales Scorecard: ten questions, three minutes, an honest score.\nLink in bio.',
+    body: 'Tell me what is going on with your sales. I reply personally.\nLink in bio.',
   });
   if (slides.length > 10) throw new Error(`${slides.length} slides — Instagram caps carousels at 10`);
   return slides;
@@ -87,7 +87,7 @@ function caption(md) {
   const ig = section(md, '--- INSTAGRAM ---');
   const base = ig || section(md, '--- POST ---');
   // Only add the close if the caption doesn't already point at the bio.
-  const close = /link in bio/i.test(base) ? '' : '\n\nFull article and free Sales Scorecard: link in bio.';
+  const close = /link in bio/i.test(base) ? '' : '\n\nFull article: link in bio.';
   return `${base}${close}\n`;
 }
 

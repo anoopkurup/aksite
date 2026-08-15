@@ -11,7 +11,7 @@
  *   ### Slide heading
  *   One or two short body lines.
  *
- * A closing CTA slide (Scorecard + article URL) is appended automatically —
+ * A closing CTA slide (contact + article URL) is appended automatically —
  * never author it. Output: `Social/<slug>.carousel.pdf` (gitignored folder).
  *
  * Usage:
@@ -59,7 +59,7 @@ function parseCarousel(md, slug) {
   const source = md.match(/^Source:\s*(\S+)/m)?.[1] ?? `/blog/${slug}`;
   slides.push({
     heading: 'How predictable is your pipeline?',
-    body: `Free Sales Scorecard: ten questions, three minutes, an honest score.\n${SITE_LABEL}/scorecard\nFull article: ${SITE_LABEL}${source}`,
+    body: `Tell me what is going on with your sales. I reply personally.\n${SITE_LABEL}/contact\nFull article: ${SITE_LABEL}${source}`,
   });
   return slides;
 }

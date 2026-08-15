@@ -107,4 +107,4 @@ When someone you met at a networking event later thinks "I know someone who thin
 
 The next time you walk into a room, do not open with what you do. Open with the problem your best clients are dealing with. Then notice who leans in. Those are the conversations worth having, and the ones that lead, weeks or months later, to the referrals that actually convert.
 
-Not sure your positioning is sharp enough to lead with in any room? The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment that shows you where your positioning and pipeline are costing you referrals, and what to fix first.
+Not sure your positioning is sharp enough to lead with in any room? [Get in touch](/contact) and tell me what you're seeing. I'll tell you where your positioning and pipeline are costing you referrals, and what to fix first.

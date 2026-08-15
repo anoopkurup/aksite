@@ -1,16 +1,16 @@
-# CLEAR Engagement Page
-# Last updated: 2026-06-30 (CLEAR v5 copy + 26-Jun-2026 commercial model)
+# CLEAR Method Page
+# Last updated: 2026-08-15 (consulting-first repositioning; pricing removed)
 
 meta:
-  title: "CLEAR: The Sales System, Installed"
-  description: "The engagement where I install your sales system: one packaged offer the market has responded to, and a weekly routine you've run with me on the calls."
+  title: "The CLEAR Method | How I Work"
+  description: "How I fix marketing for B2B services businesses: name the constraint, sharpen the positioning, package one offer, prove it against real prospects, and systemise what works."
 
 hero:
-  tier_label: "The Engagement"
-  title: "CLEAR: the sales system, installed."
+  tier_label: "How I Work"
+  title: "CLEAR: the method behind the work."
   body:
-    - "One packaged offer your market has already responded to. A working outreach routine you've already run, with me on the calls beside you. Written down, repeatable, and yours to keep."
-    - "Most consultants hand you a strategy and leave. CLEAR doesn't stop at the plan; it stays until the selling actually works. Over three months we build the offer, prove it against real buyers, and turn what survives into a system you can run without me."
+    - "Most B2B services firms don't have a talent problem. They have a marketing problem with three heads: unclear positioning, an offer that's hard to buy, and no weekly rhythm producing leads. CLEAR fixes all three, in order."
+    - "The failure mode of consulting is the strategy that stops at the document. So this method doesn't end with a plan. We build the positioning and the offer, prove them against real buyers, and turn what survives into a system your firm runs without me."
 
 stages:
   section_title: "How it works"
@@ -43,19 +43,13 @@ dont_promise:
 
 pace:
   section_title: "The pace"
-  body: "Three stages over three months. The offer is built and the first outreach goes live inside the first three weeks; the rest of the time is spent selling alongside you and turning what works into a system. The work is paced by milestones, not a rigid calendar. We move at the speed your decisions and conversations allow, and I hold you to clear turnaround windows so it never drifts."
-
-investment:
-  section_title: "The investment"
-  title: "₹2.5 lakh over three months"
-  description: "₹50,000 to start, then ₹1 lakh at the beginning of months 2 and 3, each month paid in advance and month-to-month, so you continue only if it's working. You're not betting ₹2.5 lakh up front; the work earns each renewal, and if it isn't delivering you stop at the next month and keep everything we've built. A ₹75,000 Lite tier serves smaller firms (under ₹1 Cr). The price is quoted after a Pipeline Reality Check, so you see your situation in your own numbers before committing to anything larger."
-  credit_note: "The ₹25,000 Pipeline Reality Check fee counts toward your CLEAR kickoff."
+  body: "Three stages over roughly a quarter. The offer is built and the first outreach goes live inside the first three weeks; the rest of the time is spent proving it alongside you and turning what works into a system. The work is paced by milestones, not a rigid calendar, and every engagement is scoped after a conversation and a proper look at your numbers."
 
 final_cta:
-  title: "Find out how predictable your pipeline really is."
-  body: "Start with the free Sales Scorecard. Ten questions, three minutes, an honest score and the one thing to fix first."
-  cta_text: "Take the Sales Scorecard"
-  cta_link: "/scorecard"
-  secondary_text: "Already taken it?"
+  title: "Tell me what's not working."
+  body: "Tell me what's going on with your sales. I'll tell you honestly whether CLEAR is the right fix, and what I'd do first."
+  cta_text: "Get in touch"
+  cta_link: "/contact"
+  secondary_text: "Already know what's broken?"
   secondary_link_text: "Book the Pipeline Reality Check"
   secondary_link: "/pipeline-reality-check"

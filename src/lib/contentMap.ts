@@ -10,7 +10,7 @@
 // See SEO/claude-SEO-instructions.md (§3, §6) and SEO/seo-build-checklist.md.
 //
 // Conventions for this site (decided 2026-06-26):
-//   - Primary CTA sitewide is ALWAYS the Sales Scorecard. The `clearLetter`
+//   - Primary CTA sitewide is ALWAYS Get in touch (/contact). The `clearLetter`
 //     only *themes* a page's CLEAR handoff copy; it never introduces a
 //     competing CTA. (CLAUDE.md: exactly one primary CTA.)
 //   - Pillar lives at /client-acquisition-system; everything else under /blog.
@@ -28,7 +28,7 @@ export type SchemaType =
   | 'Service'
   | 'Person';
 
-export type PublishWave = 1 | 2 | 3 | 4;
+export type PublishWave = 1 | 2 | 3 | 4 | 5;
 
 // status gates indexability — only 'live' renders index,follow + appears in sitemap
 export type PageStatus = 'scaffold' | 'brief' | 'authored' | 'approved' | 'live';
@@ -43,7 +43,7 @@ export interface PageBrief {
   angle: string;
   /** H2/H3 outline the body should follow. */
   outline: string[];
-  /** The CLEAR handoff line (themed to clearLetter, but CTA = Scorecard). */
+  /** The CLEAR handoff line (themed to clearLetter, but CTA = contact). */
   handoffLine: string;
   /** FAQ questions (answers drafted at authoring time → FAQPage schema). */
   faqs?: FaqItem[];
@@ -74,8 +74,10 @@ export interface Page {
 const PILLAR = 'client-acquisition-system';
 
 // ============================================================================
-// The 27 SEO pages. All seeded as `scaffold` — nothing is live until its wave
+// The 35 SEO pages. All seeded as `scaffold` — nothing is live until its wave
 // is active AND its body content is approved (Policy B: drafted → reviewed).
+// Wave 5 (Aug 2026): the consulting-first clusters — positioning &
+// differentiation, visibility & brand, and service-intent consultant pages.
 // ============================================================================
 
 export const SEO_PAGES: Page[] = [
@@ -111,7 +113,7 @@ export const SEO_PAGES: Page[] = [
         'A 30-day first step that does not require more luck',
       ],
       handoffLine:
-        'Want to know how dependent your pipeline really is? Take the free Sales Scorecard.',
+        'Want to know how dependent your pipeline really is?',
       faqs: [
         {
           question: 'Are referrals bad for a consulting business?',
@@ -159,11 +161,11 @@ export const SEO_PAGES: Page[] = [
         'Why service firms stall: founder-led sales, referral dependency, no repeatable routine',
         'The five parts of the system (mapped to CLEAR: Clarify, Lead, Engage, Acquire, Retain)',
         'How the parts connect into a weekly routine',
-        'Where most firms should start (link to the Scorecard)',
+        'Where most firms should start',
         'Deep links out to each spoke',
       ],
       handoffLine:
-        'See which part of your system is weakest in three minutes. Take the free Sales Scorecard.',
+        'See which part of your system is weakest.',
       faqs: [
         {
           question: 'What is a client acquisition system?',
@@ -178,7 +180,7 @@ export const SEO_PAGES: Page[] = [
         {
           question: 'How much does it cost to build a client acquisition system?',
           answer:
-            'Built yourself, the cost is mostly discipline: two to three protected hours a week for a couple of quarters, and almost no tooling. If you want it installed with an experienced hand, my CLEAR engagement runs ₹2.5 lakh over three months, month to month, priced after a paid diagnosis.',
+            'Built yourself, the cost is mostly discipline: two to three protected hours a week for a couple of quarters, and almost no tooling. If you want it installed with an experienced hand, that is the consulting work I do; engagements are scoped after a conversation.',
         },
       ],
     },
@@ -213,7 +215,7 @@ export const SEO_PAGES: Page[] = [
         'Connecting lead gen to the rest of the system',
       ],
       handoffLine:
-        'Not sure your leads are the problem? The free Sales Scorecard shows you where the gap is.',
+        'Not sure your leads are the problem?',
     },
   },
   {
@@ -246,7 +248,7 @@ export const SEO_PAGES: Page[] = [
         'What stays the founder’s job forever',
       ],
       handoffLine:
-        'Find out how much of your sale only you can do. Take the free Sales Scorecard.',
+        'Find out how much of your sale only you can do.',
     },
   },
   {
@@ -276,7 +278,7 @@ export const SEO_PAGES: Page[] = [
         'When to stay custom (and when not to)',
       ],
       handoffLine:
-        'Is your offer clear enough to repeat? The free Sales Scorecard will tell you.',
+        'Is your offer clear enough to repeat?',
       faqs: [
         {
           question: 'What is a productized service?',
@@ -323,7 +325,7 @@ export const SEO_PAGES: Page[] = [
         'Fixing the offer first (then marketing compounds)',
       ],
       handoffLine:
-        'Marketing problem or offer problem? The free Sales Scorecard separates the two.',
+        'Marketing problem or offer problem?',
     },
   },
   {
@@ -356,7 +358,7 @@ export const SEO_PAGES: Page[] = [
         'Raising prices on existing clients',
       ],
       handoffLine:
-        'Is pricing your weakest link? Find out in three minutes with the free Sales Scorecard.',
+        'Is pricing your weakest link?',
       faqs: [
         {
           question: 'What is value-based pricing?',
@@ -401,7 +403,7 @@ export const SEO_PAGES: Page[] = [
         'Scaling the system, not the hours',
       ],
       handoffLine:
-        'See how dependent the business is on you. Take the free Sales Scorecard.',
+        'See how dependent the business is on you.',
     },
   },
   {
@@ -434,7 +436,7 @@ export const SEO_PAGES: Page[] = [
         'Tools vs. system — why the system still matters',
       ],
       handoffLine:
-        'Before automating, see what to fix first. Take the free Sales Scorecard.',
+        'Before automating, see what to fix first.',
     },
   },
   {
@@ -466,7 +468,7 @@ export const SEO_PAGES: Page[] = [
         'Following up without being annoying',
       ],
       handoffLine:
-        'Outreach only works if the offer lands. Check yours with the free Sales Scorecard.',
+        'Outreach only works if the offer lands.',
     },
   },
   {
@@ -498,7 +500,7 @@ export const SEO_PAGES: Page[] = [
         'Handing the process to someone else',
       ],
       handoffLine:
-        'See how leaky your pipeline is right now. Take the free Sales Scorecard.',
+        'See how leaky your pipeline is right now.',
     },
   },
   {
@@ -530,7 +532,7 @@ export const SEO_PAGES: Page[] = [
         'How long it really takes',
       ],
       handoffLine:
-        'Traffic without a system doesn’t convert. Start with the free Sales Scorecard.',
+        'Traffic without a system doesn’t convert.',
     },
   },
 
@@ -564,7 +566,7 @@ export const SEO_PAGES: Page[] = [
         'Links to each agency type',
       ],
       handoffLine:
-        'See where your agency’s pipeline breaks. Take the free Sales Scorecard.',
+        'See where your agency’s pipeline breaks.',
     },
   },
   {
@@ -596,7 +598,7 @@ export const SEO_PAGES: Page[] = [
         'A weekly acquisition routine for agency founders',
       ],
       handoffLine:
-        'Find your agency’s weakest link. Take the free Sales Scorecard.',
+        'Find your agency’s weakest link.',
     },
   },
   {
@@ -628,7 +630,7 @@ export const SEO_PAGES: Page[] = [
         'Finding buyers who already value brand',
       ],
       handoffLine:
-        'See how clearly your value lands. Take the free Sales Scorecard.',
+        'See how clearly your value lands.',
     },
   },
   {
@@ -660,7 +662,7 @@ export const SEO_PAGES: Page[] = [
         'Recurring revenue after launch',
       ],
       handoffLine:
-        'Stop competing on price. See where to start with the free Sales Scorecard.',
+        'Stop competing on price.',
     },
   },
   {
@@ -692,7 +694,7 @@ export const SEO_PAGES: Page[] = [
         'Building a referable reputation',
       ],
       handoffLine:
-        'See what’s leaking clients. Take the free Sales Scorecard.',
+        'See what’s leaking clients.',
     },
   },
   {
@@ -727,7 +729,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'Find your weakest link. Take the free Sales Scorecard.',
+        'Find your weakest link.',
     },
   },
 
@@ -759,7 +761,7 @@ export const SEO_PAGES: Page[] = [
         'Links to each training type',
       ],
       handoffLine:
-        'See where your training pipeline breaks. Take the free Sales Scorecard.',
+        'See where your training pipeline breaks.',
     },
   },
   {
@@ -789,7 +791,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'Find your weakest link. Take the free Sales Scorecard.',
+        'Find your weakest link.',
     },
   },
   {
@@ -823,7 +825,7 @@ export const SEO_PAGES: Page[] = [
         'The pipeline behind the stage',
       ],
       handoffLine:
-        'See where your pipeline breaks. Take the free Sales Scorecard.',
+        'See where your pipeline breaks.',
     },
   },
   {
@@ -856,7 +858,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'Find your weakest link. Take the free Sales Scorecard.',
+        'Find your weakest link.',
     },
   },
 
@@ -888,7 +890,7 @@ export const SEO_PAGES: Page[] = [
         'Links to each advisory type',
       ],
       handoffLine:
-        'See where your pipeline breaks. Take the free Sales Scorecard.',
+        'See where your pipeline breaks.',
     },
   },
   {
@@ -920,7 +922,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine in a niche field',
       ],
       handoffLine:
-        'See where your pipeline breaks. Take the free Sales Scorecard.',
+        'See where your pipeline breaks.',
     },
   },
   {
@@ -951,7 +953,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'Find your weakest link. Take the free Sales Scorecard.',
+        'Find your weakest link.',
     },
   },
   {
@@ -982,7 +984,7 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'See where your pipeline breaks. Take the free Sales Scorecard.',
+        'See where your pipeline breaks.',
     },
   },
   {
@@ -1014,7 +1016,311 @@ export const SEO_PAGES: Page[] = [
         'The acquisition routine',
       ],
       handoffLine:
-        'See where your pipeline breaks. Take the free Sales Scorecard.',
+        'See where your pipeline breaks.',
+    },
+  },
+
+  // ---- WAVE 5 — consulting-first clusters (Aug 2026 repositioning) ---------
+  // Cluster 1: positioning & differentiation
+  {
+    slug: 'positioning-for-consulting-firms',
+    url: '/blog/positioning-for-consulting-firms',
+    type: 'spoke',
+    title: 'Positioning for Consulting Firms',
+    metaDescription:
+      'Most consulting firms describe themselves the same way. Here is how to choose a position your market actually cares about, and own it.',
+    primaryKeyword: 'positioning for consultants',
+    secondaryKeywords: [
+      'consulting firm positioning',
+      'how to position a consulting business',
+      'niche positioning for consultants',
+    ],
+    clearLetter: 'C',
+    parent: PILLAR,
+    siblings: ['how-to-differentiate-b2b-services-firm', 'b2b-messaging-framework'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
+    publishWave: 5,
+    status: 'scaffold',
+    brief: {
+      angle:
+        'The positioning cluster anchor: a position is a choice of problem, buyer, and method that competitors have not claimed — not a tagline. Seeds from the live positioning-matrix post.',
+      outline: [
+        'Why “strategy consulting for growing businesses” positions nobody',
+        'The three choices that make a position: problem, buyer, method',
+        'The narrowing fear (and why narrower firms bill more)',
+        'How to test a position before you commit to it',
+        'Writing it down: one sentence a stranger can repeat',
+      ],
+      handoffLine: 'Not sure what your firm should be known for?',
+      faqs: [
+        {
+          question: 'What does positioning mean for a consulting firm?',
+          answer:
+            'Positioning is the choice of which problem you solve, for which buyer, and why your way of solving it beats the alternatives. It is a business decision, not a marketing slogan; the slogan only records the decision. A firm without that decision competes with everyone and is chosen mostly on price.',
+        },
+        {
+          question: 'Will narrowing my positioning cost me revenue?',
+          answer:
+            'Usually the opposite. A narrower position makes you the obvious choice for a specific buyer, which raises win rates and fees, and referrals become easier because people can repeat what you do. You can still take work outside the niche; you just stop marketing for it.',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'how-to-differentiate-b2b-services-firm',
+    url: '/blog/how-to-differentiate-b2b-services-firm',
+    type: 'spoke',
+    title: 'How to Differentiate a B2B Services Firm',
+    metaDescription:
+      'When prospects cannot tell you apart, they choose on price. Here is how a B2B services firm builds real differentiation, beyond claiming quality.',
+    primaryKeyword: 'how to differentiate a b2b company',
+    secondaryKeywords: [
+      'differentiation strategy for services',
+      'how to stand out from competitors b2b',
+    ],
+    clearLetter: 'C',
+    parent: PILLAR,
+    siblings: ['positioning-for-consulting-firms', 'b2b-messaging-framework'],
+    schema: ['BlogPosting', 'BreadcrumbList'],
+    publishWave: 5,
+    status: 'scaffold',
+    brief: {
+      angle:
+        '“We do quality work” is not differentiation — real difference comes from choices competitors will not copy: who you refuse, how you package, what you guarantee, what you publish.',
+      outline: [
+        'The sameness test: swap your logo onto a competitor’s site',
+        'Why quality, experience, and passion differentiate nothing',
+        'Four sources of difference competitors will not copy',
+        'Proving difference instead of claiming it',
+        'When differentiation is really a positioning problem',
+      ],
+      handoffLine: 'Sounding like every other firm in your market?',
+    },
+  },
+  {
+    slug: 'b2b-messaging-framework',
+    url: '/blog/b2b-messaging-framework',
+    type: 'spoke',
+    title: 'A B2B Messaging Framework That Sells Services',
+    metaDescription:
+      'A messaging framework for B2B services firms: what to say, in what order, so prospects understand what you do and why it is worth paying for.',
+    primaryKeyword: 'b2b messaging framework',
+    secondaryKeywords: [
+      'messaging framework for services',
+      'value proposition for consultants',
+    ],
+    clearLetter: 'C',
+    parent: PILLAR,
+    siblings: ['positioning-for-consulting-firms', 'how-to-differentiate-b2b-services-firm'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
+    publishWave: 5,
+    status: 'scaffold',
+    brief: {
+      angle:
+        'Messaging fails from order, not vocabulary — say the problem before the method and the outcome before the credentials, then keep every page saying the same thing.',
+      outline: [
+        'Why smart firms produce confusing messaging',
+        'The order that works: problem, outcome, method, proof',
+        'One message hierarchy, every channel (site, LinkedIn, proposals)',
+        'The founder test: can you say it out loud without a script?',
+        'Keeping messaging consistent as the team writes',
+      ],
+      handoffLine: 'Does your messaging say what only you can say?',
+      faqs: [
+        {
+          question: 'What is a messaging framework?',
+          answer:
+            'A messaging framework is the written hierarchy of what your firm says about itself: the problem you solve, the outcome you produce, how you work, and the proof, in that order. It exists so every page, proposal, and post says the same thing instead of each one improvising.',
+        },
+        {
+          question: 'How is messaging different from positioning?',
+          answer:
+            'Positioning is the decision about who you serve and why you win; messaging is the language that carries that decision. Weak messaging is often a symptom of a positioning decision that was never made, which is why rewriting the words alone rarely fixes it.',
+        },
+      ],
+    },
+  },
+
+  // Cluster 2: visibility & brand
+  {
+    slug: 'brand-building-for-professional-services',
+    url: '/blog/brand-building-for-professional-services',
+    type: 'spoke',
+    title: 'Brand Building for Professional Services Firms',
+    metaDescription:
+      'Professional services firms live on trust, yet most have no brand beyond their referral circle. Here is how to build one deliberately.',
+    primaryKeyword: 'brand building for professional services',
+    secondaryKeywords: [
+      'professional services branding',
+      'b2b brand strategy for small firms',
+    ],
+    clearLetter: 'E',
+    parent: PILLAR,
+    siblings: ['b2b-brand-awareness-small-firms', 'founder-brand-vs-company-brand'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
+    publishWave: 5,
+    status: 'scaffold',
+    brief: {
+      angle:
+        'Trust businesses need brands most and build them least — a services brand is a reputation made repeatable, and it compounds like interest.',
+      outline: [
+        'What a brand actually is for a services firm (not a logo)',
+        'Why referral-dependent firms feel branded but are not',
+        'The three assets: a point of view, a body of work, a recognisable name',
+        'A brand-building rhythm a busy firm can sustain',
+        'Measuring a brand without vanity metrics',
+      ],
+      handoffLine: 'Great work, but nobody has heard of you?',
+      faqs: [
+        {
+          question: 'Do small professional services firms really need a brand?',
+          answer:
+            'Yes, because they sell trust, and a brand is trust that arrives before you do. Without one, every deal starts from zero or depends on a referrer lending you their credibility. A brand does not require an ad budget; it requires a consistent point of view published where your buyers already look.',
+        },
+        {
+          question: 'How long does brand building take for a B2B firm?',
+          answer:
+            'Expect early signals, such as inbound enquiries that mention your content, within one to two quarters of consistent publishing. A brand that meaningfully pre-sells you typically takes a year or more. The pace depends far more on consistency than on volume.',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'b2b-brand-awareness-small-firms',
+    url: '/blog/b2b-brand-awareness-small-firms',
+    type: 'spoke',
+    title: 'B2B Brand Awareness Without an Ad Budget',
+    metaDescription:
+      'Brand awareness is not an ad budget problem. Here is how a small B2B firm becomes known to its next hundred buyers without burning cash.',
+    primaryKeyword: 'b2b brand awareness',
+    secondaryKeywords: [
+      'how to build brand awareness b2b',
+      'brand visibility for consultants',
+    ],
+    clearLetter: 'E',
+    parent: PILLAR,
+    siblings: ['brand-building-for-professional-services', 'founder-brand-vs-company-brand'],
+    schema: ['BlogPosting', 'BreadcrumbList'],
+    publishWave: 5,
+    status: 'scaffold',
+    brief: {
+      angle:
+        'Awareness for a services firm is narrow and deep, not broad — become known to a named hundred buyers, not “the market”. Reach without relevance is rent, not equity.',
+      outline: [
+        'The awareness trap: copying consumer-brand playbooks',
+        'Name the hundred: awareness as a list, not a percentage',
+        'Showing up where those hundred already look',
+        'Repetition without self-promotion: the point-of-view engine',
+        'When paid visibility is worth it (and when it is a bonfire)',
+      ],
+      handoffLine: 'Visible to your referral circle, invisible beyond it?',
+    },
+  },
+  {
+    slug: 'founder-brand-vs-company-brand',
+    url: '/blog/founder-brand-vs-company-brand',
+    type: 'spoke',
+    title: 'Founder Brand vs Company Brand in B2B Services',
+    metaDescription:
+      'The founder’s name opens doors the company name cannot. Here is how to use a founder brand without the business depending on it forever.',
+    primaryKeyword: 'founder brand vs company brand',
+    secondaryKeywords: [
+      'personal brand vs business brand',
+      'founder personal branding b2b',
+    ],
+    clearLetter: 'R',
+    parent: PILLAR,
+    siblings: ['brand-building-for-professional-services', 'b2b-brand-awareness-small-firms'],
+    schema: ['BlogPosting', 'BreadcrumbList'],
+    publishWave: 5,
+    status: 'scaffold',
+    brief: {
+      angle:
+        'The founder brand is a feature early and a risk later — the same shape as founder-led sales. Use it deliberately, then transfer its equity to the firm on a schedule.',
+      outline: [
+        'Why the founder’s name outperforms the logo (and should, early)',
+        'The dependence problem: valuation, hiring, and holidays',
+        'What stays personal, what moves to the firm',
+        'Building the transfer: named methods, team voices, firm-owned proof',
+        'The blended model most B2B services firms should run',
+      ],
+      handoffLine: 'Is the brand the business, or is it you?',
+    },
+  },
+
+  // Cluster 3: service-intent consultant pages
+  {
+    slug: 'b2b-marketing-consultant-india',
+    url: '/blog/b2b-marketing-consultant-india',
+    type: 'vertical',
+    title: 'B2B Marketing Consultant in India: A Buyer’s Guide',
+    metaDescription:
+      'What a B2B marketing consultant actually does, when hiring one makes sense, and the questions that separate advisors from vendors.',
+    primaryKeyword: 'b2b marketing consultant india',
+    secondaryKeywords: [
+      'marketing consultant for b2b companies',
+      'hire a marketing consultant india',
+    ],
+    clearLetter: 'A',
+    parent: PILLAR,
+    siblings: ['marketing-consultant-for-agencies'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'Service', 'FAQPage'],
+    publishWave: 5,
+    status: 'scaffold',
+    brief: {
+      angle:
+        'Service-intent page: an honest buyer’s guide to hiring a B2B marketing consultant in India, written by one — what the work is, when to hire, when not to, and the questions that expose a vendor dressed as an advisor.',
+      outline: [
+        'What a marketing consultant does that an agency does not',
+        'The problems worth hiring for: positioning, visibility, lead generation',
+        'When you should not hire one (capacity, product, founder time)',
+        'Questions to ask before you engage anyone (including me)',
+        'How I work, and what a first conversation looks like',
+      ],
+      handoffLine: 'Wondering whether a consultant is the right next step?',
+      faqs: [
+        {
+          question: 'What does a B2B marketing consultant do?',
+          answer:
+            'A consultant diagnoses why marketing is not producing sales, then fixes the causes: positioning, messaging, visibility, and the lead generation rhythm. Unlike an agency, the deliverable is a working system and the capability to run it, not a stream of executed campaigns billed monthly.',
+        },
+        {
+          question: 'When should a B2B services firm hire a marketing consultant?',
+          answer:
+            'When the work is good but new business is unpredictable: clients arrive only through referrals, prospects cannot tell you apart from competitors, or marketing activity keeps starting and stopping without producing a pipeline. If the constraint is delivery capacity or a weak service itself, fix that first.',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'marketing-consultant-for-agencies',
+    url: '/blog/marketing-consultant-for-agencies',
+    type: 'vertical',
+    title: 'Marketing Consulting for Agencies and Studios',
+    metaDescription:
+      'Agencies market everyone but themselves. Here is what marketing consulting looks like for an agency, and when it pays for itself.',
+    primaryKeyword: 'marketing consultant for agencies',
+    secondaryKeywords: [
+      'agency marketing strategy',
+      'new business strategy for agencies',
+    ],
+    clearLetter: 'A',
+    parent: 'client-acquisition-for-marketing-agencies',
+    siblings: ['b2b-marketing-consultant-india'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
+    publishWave: 5,
+    status: 'scaffold',
+    brief: {
+      angle:
+        'Service-intent vertical: the cobbler’s-children problem solved from outside — why agencies, of all firms, benefit from an external marketing consultant for their own growth.',
+      outline: [
+        'Why agencies are the worst marketers of themselves',
+        'The client-work excuse, and what it costs in pipeline',
+        'What an outside consultant sees that the agency cannot',
+        'Positioning an agency past “full service”',
+        'A new-business rhythm that survives busy delivery months',
+      ],
+      handoffLine: 'An agency with no marketing of its own?',
     },
   },
 ];

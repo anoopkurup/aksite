@@ -116,4 +116,4 @@ If someone truly values your thinking, they will pay for access to it. If they d
 
 The fastest way to improve your pipeline is usually not more marketing. It is tighter boundaries on the marketing you are already doing, and earlier, clearer moves towards paid work. That shift alone has changed more expert-founder businesses than any visibility strategy I have seen.
 
-Not sure whether you have a demand problem or a boundary problem? The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment that shows you where your pipeline is actually leaking, and what to fix first.
+Not sure whether you have a demand problem or a boundary problem? [Get in touch](/contact) and tell me what you're seeing. I'll tell you where your pipeline is actually leaking, and what to fix first.

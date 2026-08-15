@@ -65,4 +65,4 @@ If your studio has felt stuck for years despite real talent and effort, this is 
 
 The founders who grow are not the most gifted ones. They are the ones who chose.
 
-If you want an honest assessment of how much of your revenue still depends on you, the founder, personally, and where a more repeatable business would begin, the [Sales Scorecard](/scorecard) is a free diagnostic that shows you where you stand and what to fix first.
+If you want an honest assessment of how much of your revenue still depends on you, the founder, personally, and where a more repeatable business would begin, [get in touch](/contact) and tell me what you're seeing. I'll tell you where you stand and what to fix first.

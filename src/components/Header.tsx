@@ -11,8 +11,9 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: "How I Fix Sales", href: "/clear" },
+    { name: "How I Work", href: "/clear" },
     { name: "Pipeline Reality Check", href: "/pipeline-reality-check" },
+    { name: "Workshops", href: "/workshops" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
@@ -55,8 +56,8 @@ export default function Header() {
               </Link>
             ))}
 
-            <Link href="/scorecard" className={`${CTA_CLASSES} text-sm whitespace-nowrap px-4 py-2`}>
-              Take the Sales Scorecard
+            <Link href="/contact" className={`${CTA_CLASSES} text-sm whitespace-nowrap px-4 py-2`}>
+              Get in touch
             </Link>
           </nav>
 
@@ -85,7 +86,7 @@ export default function Header() {
                   {link.name}
                 </Link>
               ))}
-              <Link href="/scorecard" className={`${CTA_CLASSES} text-sm px-4 py-3 mt-4 justify-center`} onClick={() => setIsMobileMenuOpen(false)}>Take the Sales Scorecard</Link>
+              <Link href="/contact" className={`${CTA_CLASSES} text-sm px-4 py-3 mt-4 justify-center`} onClick={() => setIsMobileMenuOpen(false)}>Get in touch</Link>
             </nav>
           </div>
         )}

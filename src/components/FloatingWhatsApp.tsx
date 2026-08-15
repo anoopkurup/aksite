@@ -9,15 +9,14 @@ import { trackEvent } from "@/lib/analytics";
 // Desktop: a WhatsApp pill, bottom-right, revealed after ~1 screen of scroll so
 // it never competes with the hero CTA. Mobile: a sticky bar in the thumb zone.
 //
-// The mobile bar LEADS with the Scorecard. On a phone the header CTA is inside
-// the hamburger and the hero CTA is below the fold, so this bar was previously
-// the only visible action on first paint — which made WhatsApp the de-facto
-// primary CTA and contradicted the one-funnel rule. WhatsApp/Call stay, demoted.
+// The mobile bar LEADS with the contact CTA. On a phone the header CTA is inside
+// the hamburger and the hero CTA is below the fold, so this bar is the only
+// primary action visible on first paint. WhatsApp/Call sit beside it, secondary.
 
 const PHONE = "+919036014008";
 const WHATSAPP_URL =
   "https://wa.me/919036014008?text=" +
-  encodeURIComponent("Hi Anoop, I run a B2B services firm and want to talk about fixing our sales.");
+  encodeURIComponent("Hi Anoop, I run a B2B services firm and want to talk about our marketing.");
 const REVEAL_AFTER_PX = 500;
 
 function WhatsAppGlyph({ className }: { className?: string }) {
@@ -57,16 +56,16 @@ export default function FloatingWhatsApp() {
         WhatsApp
       </a>
 
-      {/* Mobile — sticky bar in the thumb zone. Scorecard first and widest: it is
+      {/* Mobile — sticky bar in the thumb zone. Contact first and widest: it is
           the one primary action, and on a phone this is the only place it is
           visible without scrolling. */}
       <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-[1.4fr_1fr_0.8fr] border-t border-slate-200 md:hidden">
         <Link
-          href="/scorecard"
-          onClick={() => trackEvent("scorecard_cta_click", { from: "sticky_mobile" })}
+          href="/contact"
+          onClick={() => trackEvent("contact_cta_click", { from: "sticky_mobile" })}
           className="flex min-h-[3rem] items-center justify-center gap-1.5 bg-cta-500 py-3 font-sans text-sm font-semibold text-navy-950"
         >
-          Sales Scorecard
+          Get in touch
           <ArrowRight className="h-4 w-4" aria-hidden focusable={false} />
         </Link>
         <a

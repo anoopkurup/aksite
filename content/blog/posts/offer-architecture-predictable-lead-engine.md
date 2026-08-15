@@ -64,19 +64,19 @@ Most attempts at a smaller offer fail because the firm builds a sample rather th
 
 ![A small paid first step ahead of the larger engagement](/images/blog/offer-architecture-predictable-lead-engine/inline-2.webp)
 
-I'd rather show you mine than describe a hypothetical one, because I sell exactly this way and you can check the pages yourself.
+I'd rather show you mine than describe a hypothetical one, because this is how I have sold my own work.
 
-There are three things on my site, and only two of them are for sale.
+There are two things for sale on my site, and a free layer in front of them.
 
-The **Sales Scorecard** is free. Ten questions, three minutes, and the score appears on screen straight away; I don't hold it back for an email address. It costs nothing because it costs me nothing to run. It is not the first step in the sense above; it's the window in the restaurant wall. It exists so a stranger can see something real before deciding whether to walk in.
+The free layer is the writing: the blog, the guides, the case studies. It costs nothing because it costs me nothing to run. It is not the first step in the sense above; it's the window in the restaurant wall. It exists so a stranger can see something real before deciding whether to walk in.
 
-The **Pipeline Reality Check** is ₹25,000, takes one week, and is done entirely by me. You send your last twelve months of deals: where each came from, roughly how big, how long it took to close, who did the selling. A week later you get a written verdict: how much of your revenue arrives pre-sold through referrals, where your client concentration risk sits, what your current way of selling will produce over the next six months if nothing changes, the three moves that change it in the order I'd make them, and a straight answer on whether the larger engagement is your next step, including an honest "not yet" when that's the truth.
+The **Pipeline Reality Check** is a small paid diagnostic: one week, done entirely by me. You send your last twelve months of deals: where each came from, roughly how big, how long it took to close, who did the selling. A week later you get a written verdict: how much of your revenue arrives pre-sold through referrals, where your client concentration risk sits, what your current way of selling will produce over the next six months if nothing changes, the three moves that change it in the order I'd make them, and a straight answer on whether the larger engagement is your next step, including an honest "not yet" when that's the truth.
 
-Test it against what I just argued. It ends. You keep the document. If you never speak to me again, you paid ₹25,000 for an accurate read of your own pipeline, which is a fair trade. And it is not a thinner version of the engagement; it answers a different question entirely.
+Test it against what I just argued. It ends. You keep the document. If you never speak to me again, you paid a modest fee for an accurate read of your own pipeline, which is a fair trade. And it is not a thinner version of the engagement; it answers a different question entirely.
 
-**CLEAR** is the engagement: ₹2.5 lakh over three months, ₹50,000 to start and ₹1 lakh at the beginning of months two and three. There's a ₹75,000 Lite tier for smaller firms. I quote it only after a Reality Check, because nobody should commit to it without first seeing their situation in their own numbers.
+**CLEAR** is the engagement: three months, quoted only after a Reality Check, because nobody should commit to it without first seeing their situation in their own numbers.
 
-Two things about that structure are the same idea repeating. Each month is paid in advance and month-to-month, so nobody is betting ₹2.5 lakh on a stranger. They bet ₹50,000 on the first month, and the work has to earn every renewal after that. And the ₹25,000 Reality Check fee counts toward the CLEAR kickoff, which removes the last objection to the small step: that it's money spent twice.
+One thing about that structure is the first-step idea repeating: each month is paid in advance and month-to-month, so nobody bets the whole engagement on a stranger. The work has to earn every renewal.
 
 Two paid rungs and a window. That's the whole ladder. It isn't elaborate, and it doesn't need to be.
 
@@ -94,4 +94,4 @@ The reason your flagship doesn't sell is rarely that the market can't afford it,
 
 Give them something smaller to buy. Something that finishes, costs real money, and leaves them holding something worth having. Do that and the big engagement stops being the first thing you have to sell. It becomes the thing they ask you for.
 
-Want to see where your own pipeline actually stands before you rearrange anything? The [Sales Scorecard](/scorecard) is a free 3-minute self-assessment: ten questions, an honest score, and the one thing to fix first.
+Want to see where your own pipeline actually stands before you rearrange anything? [Get in touch](/contact) and tell me what you're seeing. I'll tell you honestly where I'd start.

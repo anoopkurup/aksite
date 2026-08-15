@@ -45,11 +45,11 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.anoopkurup.com"),
   title: {
-    default: "Anoop Kurup | I Fix Sales for Services Businesses",
+    default: "Anoop Kurup | Marketing Consultant for B2B Services",
     template: "%s | Anoop Kurup",
   },
   description:
-    "I fix sales for B2B services businesses: one packaged offer, proven against real prospects, and a weekly rhythm that produces conversations.",
+    "Marketing consultant for B2B services businesses. I fix the marketing behind weak sales: positioning, visibility, and lead generation that produces a pipeline you can predict.",
   // No `url` here on purpose. Routes that don't declare their own `openGraph`
   // inherit this whole object, so a hardcoded url made every such page announce
   // itself as the homepage. Pages set it via pageMetadata() in lib/seo.ts.

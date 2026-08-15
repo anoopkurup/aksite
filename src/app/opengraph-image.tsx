@@ -6,7 +6,7 @@ export const size = {
 };
 
 export const contentType = 'image/png';
-export const alt = 'Anoop Kurup | I fix sales for services businesses';
+export const alt = 'Anoop Kurup | Marketing consultant for B2B services businesses';
 
 export default function OpenGraphImage() {
   return new ImageResponse(
@@ -41,7 +41,7 @@ export default function OpenGraphImage() {
             marginBottom: 32,
           }}
         >
-          I fix sales for services businesses.
+          Your sales problem is usually a marketing problem.
         </div>
         <div
           style={{

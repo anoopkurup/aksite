@@ -61,7 +61,7 @@ export interface PageContent<T> {
 // TypeScript Interfaces for YAML Content Structure
 // ============================================================================
 
-// Homepage Content — "I fix sales for B2B services businesses"
+// Homepage Content — "Your sales problem is usually a marketing problem."
 export interface HomePageContent {
   meta: {
     title: string;
@@ -87,6 +87,15 @@ export interface HomePageContent {
       number: string;
       name: string;
       description: string;
+    }>;
+  };
+  services: {
+    section_title: string;
+    items: Array<{
+      name: string;
+      description: string;
+      link: string;
+      link_text: string;
     }>;
   };
   proof: {
@@ -192,12 +201,6 @@ export interface ClearPageContent {
     section_title: string;
     body: string;
   };
-  investment: {
-    section_title: string;
-    title: string;
-    description: string;
-    credit_note: string;
-  };
   final_cta: {
     title: string;
     body: string;
@@ -228,7 +231,6 @@ export interface PipelineRealityCheckContent {
   terms: {
     headline: string;
     body: string;
-    credit_note: string;
   };
   faqs: {
     title: string;
@@ -269,6 +271,50 @@ export interface AboutPageContent {
   };
   podcast: {
     text: string;
+  };
+  final_cta: {
+    title: string;
+    body: string;
+    cta_text: string;
+    cta_link: string;
+  };
+}
+
+// Workshops Page Content
+export interface WorkshopsPageContent {
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    tier_label: string;
+    title: string;
+    body: string[];
+  };
+  why: {
+    section_title: string;
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  workshops: {
+    section_title: string;
+    items: Array<{
+      name: string;
+      duration: string;
+      description: string;
+      build: string[];
+      best_for: string;
+      note?: string;
+    }>;
+  };
+  formats: {
+    section_title: string;
+    items: Array<{
+      name: string;
+      description: string;
+    }>;
   };
   final_cta: {
     title: string;
@@ -339,4 +385,11 @@ export function getAboutPageContent(): PageContent<AboutPageContent> {
  */
 export function getContactPageContent(): PageContent<ContactPageContent> {
   return loadYamlContent<ContactPageContent>('pages/contact.yaml');
+}
+
+/**
+ * Get Workshops page content
+ */
+export function getWorkshopsPageContent(): PageContent<WorkshopsPageContent> {
+  return loadYamlContent<WorkshopsPageContent>('pages/workshops.yaml');
 }

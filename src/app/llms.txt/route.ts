@@ -9,9 +9,9 @@ export const dynamic = 'force-static';
 
 export function GET() {
   const core = [
-    ['Sales Scorecard (free 3-min self-assessment; the primary CTA)', '/scorecard'],
-    ['Pipeline Reality Check (₹25K done-for-you diagnosis)', '/pipeline-reality-check'],
-    ['The CLEAR engagement', '/clear'],
+    ['The CLEAR method (how I work)', '/clear'],
+    ['Pipeline Reality Check (one-week done-for-you diagnosis)', '/pipeline-reality-check'],
+    ['Workshops (positioning, offer architecture, go-to-market)', '/workshops'],
     ['About Anoop Kurup', '/about'],
     ['Case studies', '/case-studies'],
     ['Blog', '/blog'],
@@ -35,9 +35,9 @@ export function GET() {
 
   const body = `# ${SITE.name}
 
-> ${SITE.authorRole}. Core message: "I fix sales for B2B services businesses."
+> ${SITE.authorRole}. Core message: "Your sales problem is usually a marketing problem."
 
-Funnel: Sales Scorecard (free) → Pipeline Reality Check (₹25K) → CLEAR (₹2.5L over 3 months; ₹75K Lite tier).
+Engagement path: get in touch (/contact) → Pipeline Reality Check (one-week diagnosis) → consulting engagement, scoped after a conversation. No prices are published.
 
 ## Key pages
 ${core.map(([t, u]) => `- [${t}](${SITE.baseUrl}${u})`).join('\n')}

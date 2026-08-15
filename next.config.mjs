@@ -70,13 +70,21 @@ const nextConfig = {
       // ===========================================
       // REPOSITIONING REDIRECTS (Jun 2026)
       // "I fix sales for services businesses"
-      // Funnel: Scorecard → Pipeline Reality Check → CLEAR
+      // Funnel: Contact → Pipeline Reality Check → CLEAR
       // ===========================================
+
+      // Scorecard retired Aug 2026: site refocused on marketing consulting,
+      // so the free self-assessment no longer has a funnel to feed.
+      {
+        source: '/scorecard',
+        destination: '/contact',
+        permanent: true,
+      },
 
       // Retired offer pages → new funnel (point to FINAL destinations, no chains)
       {
         source: '/diagnose',
-        destination: '/scorecard',
+        destination: '/contact',
         permanent: true,
       },
       {
@@ -96,7 +104,7 @@ const nextConfig = {
       },
       {
         source: '/postie',
-        destination: '/scorecard',
+        destination: '/contact',
         permanent: true,
       },
       // Podcast retired July 2026: the page was a stub — 9 episodes and 4 platform
@@ -298,7 +306,7 @@ const nextConfig = {
       },
       {
         source: '/find-your-tg',
-        destination: '/scorecard',
+        destination: '/contact',
         permanent: true,
       },
 
@@ -356,7 +364,7 @@ const nextConfig = {
       // Consulting page redirect
       {
         source: '/consulting',
-        destination: '/scorecard',
+        destination: '/contact',
         permanent: true,
       },
 

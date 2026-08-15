@@ -75,4 +75,4 @@ The largest deals will always want the founder in the room, because at a certain
 
 Escaping the trap was never about removing yourself from sales. It is about reserving yourself for the fraction of selling that genuinely requires you, and building a system that runs the rest. The founder as the firm's closing weapon is a strength. The founder as the firm's only working part is the trap; and the same logic extends beyond sales to the whole of how the firm [wins its clients](/client-acquisition-system).
 
-If you want to know how much of your sale currently depends on you alone, my Sales Scorecard will show you in about three minutes. Ten questions, an honest score, and the first thing to fix. The founders with the most to gain from it are usually the ones who suspect they are the bottleneck and would rather find out than keep wondering.
+If you want to know how much of your sale currently depends on you alone, [get in touch](/contact) and tell me what you are seeing. The founders with the most to gain are usually the ones who suspect they are the bottleneck and would rather find out than keep wondering.

@@ -3,7 +3,7 @@
 //
 // No analytics provider is installed yet. trackEvent() pushes to the GTM
 // dataLayer and calls gtag() if either is present, and no-ops otherwise — so
-// scorecard/funnel events fire automatically once GA4 or GTM is added, with
+// funnel events fire automatically once GA4 or GTM is added, with
 // zero further code changes.
 // ============================================================================
 

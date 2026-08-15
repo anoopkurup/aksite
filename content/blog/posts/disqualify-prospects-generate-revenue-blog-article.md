@@ -71,4 +71,4 @@ None of this is about arrogance, or turning away perfectly good business out of 
 
 The founders who escape referral dependence and build predictable pipelines are rarely the ones having the most conversations. They are the ones having the right ones. If your last quarter was full of calls that went nowhere, the problem is not that you need more leads. It is that too much of your time is going to prospects you should have disqualified early.
 
-If you want to know where your pipeline is leaking, the [Sales Scorecard](/scorecard) is a free way to see it. It is a short diagnostic that shows you where the wrong conversations are quietly costing you revenue, and what to fix first.
+If you want to know where your pipeline is leaking, [get in touch](/contact) and tell me what you're seeing. I'll tell you where the wrong conversations are quietly costing you revenue, and what to fix first.
