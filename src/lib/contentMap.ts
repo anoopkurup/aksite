@@ -332,7 +332,7 @@ export const SEO_PAGES: Page[] = [
     type: 'spoke',
     title: 'Value-Based Pricing for Consultants: A Guide',
     metaDescription:
-      'Charging by the hour caps your income and rewards being slow. Here is how founder-led consultants move to value-based pricing without scaring clients off.',
+      'Charging by the hour caps your income and rewards being slow. Here is how consultants move to value-based pricing without scaring clients off.',
     primaryKeyword: 'value-based pricing for consultants',
     secondaryKeywords: [
       'how to price consulting services',
@@ -343,7 +343,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['how-to-productize-your-service', 'scale-beyond-the-founder'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 2,
-    status: 'scaffold',
+    // Published 2026-08-15 (Wave 2, spoke 2 of 7).
+    status: 'live',
     brief: {
       angle:
         'Price the outcome, not the hours — the pricing companion to productizing.',
@@ -357,8 +358,16 @@ export const SEO_PAGES: Page[] = [
       handoffLine:
         'Is pricing your weakest link? Find out in three minutes with the free Sales Scorecard.',
       faqs: [
-        { question: 'What is value-based pricing?', answer: '' },
-        { question: 'How do I move from hourly to value-based pricing?', answer: '' },
+        {
+          question: 'What is value-based pricing?',
+          answer:
+            'Pricing an engagement as a share of what the outcome is worth to the client, instead of charging for the hours it takes. The value is quantified first, in the client’s own numbers: what the problem costs them in a year and what solving it is worth. The fee then sits well below that first-year value, typically ten to twenty percent of it, and is stated as a fixed price with no hours mentioned.',
+        },
+        {
+          question: 'How do I move from hourly to value-based pricing?',
+          answer:
+            'New clients simply get the new model from today. For existing clients, make the change at a natural boundary, a renewal or the next new engagement, with plain notice: from January, engagements are priced per outcome rather than per hour. Grandfather a treasured relationship or two for a defined period if you must, and expect to lose a client at the bottom of the list who was buying cheap hours. That loss is the system working.',
+        },
       ],
     },
   },

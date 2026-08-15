@@ -228,6 +228,27 @@ export const posts = [
  ],
  },
  {
+ slug: 'value-based-pricing-for-consultants',
+ hero: img(
+ 'Price the outcome, not the hours',
+ 'Metaphor: a transformation banner. LEFT: a light grey line-art clock face with a thin counter strip beneath it, ticking off hours — expertise metered by time. A bold solid orange arrow crosses the centre. RIGHT: one confident solid navy upward step-line ending in a small peak, with a flat clean tag attached whose edge is solid orange — the outcome, priced as a whole. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'Three anchors set a value-based price',
+ 'Subject: a simple flat balance illustration: one clean horizontal baseline carrying three evenly spaced solid navy markers of rising height — the cost of the problem, the value of solving it, the cost of alternatives. Between the second and third stands one distinct flat tag with a solid orange edge, placed where the price belongs. Tidy geometry, white background, no text.'
+ ),
+ img(
+ 'A small fee beside a large problem',
+ 'Subject: a flat side-by-side comparison on one baseline: LEFT a large solid navy block with a fine crack running through it — the yearly cost of the problem; RIGHT, much smaller, a neat solid orange square — the fee. A fine grey bracket spans the gap between their heights, making the difference the argument. Minimal, generous white space, no text.'
+ ),
+ img(
+ 'Raise prices at the natural boundary',
+ 'Subject: a single fine grey timeline running left to right with evenly spaced small navy ticks; at one tick a clean vertical solid navy gate-line crosses the timeline, and beyond it the line continues slightly higher and in bolder navy, with one small solid orange dot marking the gate — the renewal where the new price begins. Flat, spare, no text.'
+ ),
+ ],
+ },
+ {
  slug: 'ad-agency-from-big-clients-to-many-small',
  hero: img(
  'Shifting from a few big clients to many small ones',
