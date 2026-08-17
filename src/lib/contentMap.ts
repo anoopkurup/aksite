@@ -391,7 +391,7 @@ export const SEO_PAGES: Page[] = [
     siblings: ['value-based-pricing-for-consultants'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
-    status: 'scaffold',
+    status: 'live',
     brief: {
       angle:
         'Scaling is subtraction — take the founder out of what doesn’t need them.',

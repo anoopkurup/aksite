@@ -241,6 +241,23 @@ export const posts = [
  ],
  },
  {
+ slug: 'scale-beyond-the-founder',
+ hero: img(
+ 'The founder steps out and the business keeps running',
+ 'Metaphor: a flat side-view of a simple machine made of three connected solid navy gears on one clean baseline, all turning. To the right, a single bold navy figure icon walks away from the machine along the baseline. Where the figure once stood inside the machine, a small solid orange gear has taken its place and meshes cleanly with the others. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ "Sorting the founder's work into keep and delegate",
+ 'Subject: a flat sorting diagram: on the left one tall stack of fine grey line-art task cards; from it two clean navy arrows diverge right into two columns. The upper column holds two solid navy cards, the short list only the founder keeps. The lower column holds five light grey cards, one stamped with a small solid orange checkmark, ready to hand over. Tidy geometry, white background, no text.'
+ ),
+ img(
+ 'Project spikes versus a steady retainer floor',
+ 'Subject: a minimal flat chart form: a fine grey jagged spiky line runs left to right, rising and crashing, the feast and famine of project revenue. Beneath it a calm solid navy horizontal band spans the full width, the recurring revenue floor, with one small solid orange dot at its right end. One clean baseline, generous white space, no text.'
+ ),
+ ],
+ },
+ {
  slug: 'ad-agency-from-big-clients-to-many-small',
  hero: img(
  'Shifting from a few big clients to many small ones',
