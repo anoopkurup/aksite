@@ -424,7 +424,7 @@ export const SEO_PAGES: Page[] = [
     siblings: ['sales-system-for-small-service-business'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
-    status: 'scaffold',
+    status: 'live',
     brief: {
       angle:
         'The differentiator — practical AI in the acquisition system, not hype.',

@@ -258,6 +258,23 @@ export const posts = [
  ],
  },
  {
+ slug: 'ai-for-client-acquisition',
+ hero: img(
+ 'AI as an accelerator bolted onto a working machine',
+ 'Metaphor: a flat side-view of a simple conveyor-belt machine drawn in fine grey and navy line-art, moving three solid navy circles left to right along one clean baseline. Bolted on top of the machine sits one compact solid orange booster module with two small speed lines behind each circle, showing the same machine now running faster. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'The bright line between AI grunt work and human trust moments',
+ 'Subject: a flat two-zone diagram split by one thin vertical orange line. Left zone: three small grey line-art icons in a tidy column, a document, a magnifying glass, a checklist, the repeatable grunt work. Right zone: two bold solid navy figure icons facing each other in conversation, the human trust moment. Clean geometry, white background, no text.'
+ ),
+ img(
+ 'A weekly rhythm with AI preparing each step',
+ 'Subject: a minimal flat weekly strip: five evenly spaced squares in a row on one baseline, four in fine grey line-art and one solid navy, each with a small dot beneath. A thin navy line threads through all five, and one small solid orange gear sits below the strip feeding a short arrow up into it. Tidy, spare, generous white space, no text.'
+ ),
+ ],
+ },
+ {
  slug: 'ad-agency-from-big-clients-to-many-small',
  hero: img(
  'Shifting from a few big clients to many small ones',
