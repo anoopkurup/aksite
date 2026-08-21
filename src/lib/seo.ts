@@ -20,9 +20,15 @@ export const SITE = {
   locale: 'en_IN',
   twitterCard: 'summary_large_image' as const,
   linkedin: 'https://www.linkedin.com/in/anoopkurup',
+  youtube: 'https://www.youtube.com/@ClickBrandandBeyond',
+  // Reciprocal entity link to the productised execution arm (GEO — two-brand link).
+  clientmagnet: 'https://clientmagnet.in',
   email: 'mail@anoopkurup.com',
   telephone: '+91-90360-14008',
 } as const;
+
+/** Stable @id for the canonical Anoop Kurup Person entity (GEO — WO-14 Part B). */
+export const PERSON_ID = `${SITE.baseUrl}/#anoop-kurup`;
 
 export function absoluteUrl(path: string): string {
   if (path.startsWith('http')) return path;
@@ -127,11 +133,20 @@ export function personSchema(): Json {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': PERSON_ID,
     name: SITE.author,
     url: SITE.baseUrl,
     jobTitle: 'Marketing Consultant',
     description: SITE.authorRole,
-    sameAs: [SITE.linkedin],
+    knowsAbout: [
+      'positioning',
+      'B2B marketing strategy',
+      'go-to-market strategy',
+      'lead generation',
+      'sales pipeline',
+      'service productisation',
+    ],
+    sameAs: [SITE.linkedin, SITE.youtube, SITE.clientmagnet],
   };
 }
 
@@ -142,7 +157,7 @@ export function organizationSchema(): Json {
     '@type': 'ProfessionalService',
     name: SITE.name,
     url: SITE.baseUrl,
-    founder: { '@type': 'Person', name: SITE.author },
+    founder: { '@id': PERSON_ID },
     areaServed: 'Worldwide',
     description:
       'Marketing consulting for B2B services businesses: positioning, brand visibility, and lead generation systems that produce a predictable pipeline.',
@@ -170,7 +185,7 @@ export function websiteSchema(): Json {
     name: SITE.name,
     url: SITE.baseUrl,
     inLanguage: 'en',
-    publisher: { '@type': 'Person', name: SITE.author },
+    publisher: { '@id': PERSON_ID },
   };
 }
 
@@ -195,11 +210,11 @@ export function blogPostingSchema(input: BlogPostingInput): Json {
     ...(input.image ? { image: absoluteUrl(input.image) } : {}),
     ...(input.datePublished ? { datePublished: input.datePublished } : {}),
     dateModified: input.dateModified || input.datePublished,
-    author: { '@type': 'Person', name: SITE.author, url: SITE.baseUrl },
+    author: { '@type': 'Person', '@id': PERSON_ID, name: SITE.author, url: SITE.baseUrl },
     // Solo practice in Anoop's own name: he is both author and publisher. Valid
     // per schema.org; Google dropped the Organization+logo requirement for Article.
-    // The site's brand entity lives in the sitewide ProfessionalService (layout.tsx).
-    publisher: { '@type': 'Person', name: SITE.author, url: SITE.baseUrl },
+    // Both reference the canonical Person node (@id) rendered sitewide (layout.tsx).
+    publisher: { '@type': 'Person', '@id': PERSON_ID, name: SITE.author, url: SITE.baseUrl },
   };
 }
 
