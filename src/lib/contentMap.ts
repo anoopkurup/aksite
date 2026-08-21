@@ -456,7 +456,7 @@ export const SEO_PAGES: Page[] = [
     siblings: ['lead-generation-for-service-business'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
-    status: 'scaffold',
+    status: 'live',
     brief: {
       angle:
         'Outreach that leads with the prospect’s problem, not your credentials.',

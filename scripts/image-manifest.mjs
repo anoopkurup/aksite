@@ -275,6 +275,23 @@ export const posts = [
  ],
  },
  {
+ slug: 'cold-outreach-for-consultants',
+ hero: img(
+ 'One aimed message versus a scatter of ignored ones',
+ 'Metaphor: a flat composition of many fine grey line-art paper-plane icons scattered loosely across the upper area, all drifting in different directions. Below them, one bold solid navy paper plane flies on a single clean orange dotted trajectory line straight toward one solid navy circle target at the right. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'The four-part problem-first message structure',
+ 'Subject: exactly four horizontal rectangular bars stacked vertically with even gaps, aligned on one clean left edge, drawn as fine navy outlines on a completely plain pure-white background. Only the second bar from the top is filled solid orange; the other three stay as empty outlines. Nothing else in the frame, no texture, no pattern, no extra shapes, no text.'
+ ),
+ img(
+ 'Three spaced follow-ups, then the long game',
+ 'Subject: a flat horizontal timeline on one thin grey baseline: three evenly spaced solid navy envelope icons left to right, each slightly smaller than the last, with fine grey tick marks between them. After the third, the baseline continues as a long calm orange dotted line toward a small navy circle far right. Spare, clean, generous white space, no text.'
+ ),
+ ],
+ },
+ {
  slug: 'ad-agency-from-big-clients-to-many-small',
  hero: img(
  'Shifting from a few big clients to many small ones',
