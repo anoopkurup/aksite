@@ -292,6 +292,27 @@ export const posts = [
  ],
  },
  {
+ slug: 'sales-system-for-small-service-business',
+ hero: img(
+ 'Deals leaking between stages of an ad-hoc sales pipeline',
+ 'Metaphor: a flat horizontal pipe drawn in fine navy line-art running left to right across the frame, made of five short segments joined by small gaps. From three of the gaps, small solid navy droplets fall downward and pool on a thin grey baseline. One single orange droplet falls from the widest gap. Flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'The five stages of a service sale, from enquiry to won',
+ 'Subject: exactly five solid navy circles in one straight horizontal row with even spacing, connected by a single thin grey line running through their centres. The circles grow very slightly larger from left to right. Only the last circle on the right is filled solid orange instead of navy. Completely plain pure-white background, nothing else in the frame, no text.'
+ ),
+ img(
+ 'The weekly pipeline review: three questions, thirty minutes',
+ 'Subject: a simple flat kanban board of five tall narrow navy-outlined columns side by side on white. A few small rounded rectangle cards sit inside the columns as fine navy outlines. One single card is filled solid orange and sits in the third column. A small navy circular clock icon floats above the board at the top right. Spare, clean, generous white space, no text.'
+ ),
+ img(
+ 'Handing the first three stages to someone else',
+ 'Subject: two flat navy line-art hands drawn in profile, one on the left passing a small flat rectangular clipboard to the other on the right. The clipboard shows three short horizontal navy lines. A single thin orange dotted line runs from the right hand onward to the right edge. Flat premium vector, generous white space, no text.'
+ ),
+ ],
+ },
+ {
  slug: 'ad-agency-from-big-clients-to-many-small',
  hero: img(
  'Shifting from a few big clients to many small ones',

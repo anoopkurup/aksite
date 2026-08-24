@@ -488,7 +488,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['ai-for-client-acquisition'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
-    status: 'scaffold',
+    // Published 2026-08-24 (Wave 2, spoke 6 of 7).
+    status: 'live',
     brief: {
       angle:
         'A sales process simple enough that a busy founder actually follows it.',
