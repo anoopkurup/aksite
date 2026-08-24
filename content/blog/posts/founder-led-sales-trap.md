@@ -9,7 +9,8 @@ description: >-
 tags:
 - Sales Systems
 - Business Model
-category: Strategy
+category: "Scaling beyond the founder"
+featured: true
 read_time: 8 min read
 author: Anoop Kurup
 ---

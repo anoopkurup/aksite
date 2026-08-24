@@ -7,7 +7,7 @@ description: "For a founder-led firm, the gap between interest and intent is not
 tags: ["Lead Generation", "Sales Process", "Marketing"]
 read_time: "8 min read"
 author: "Anoop Kurup"
-category: "Strategy"
+category: "Getting clients beyond referrals"
 ---
 
 Everyone has that acquaintance who ends every meeting with "we must catch up soon, let's fix a date." They mean it warmly. They will not fix a date. You have known this for years, and yet each time you walk away with a vague sense that something has been arranged.

@@ -57,7 +57,8 @@ export default function PipelineRealityCheckPage() {
             ))}
           </div>
           {/* Razorpay checkout removed Aug 2026 (no prices on site); booking
-              starts with a conversation. BookPRCButton + /api/prc stay dormant. */}
+              starts with a conversation. BookPRCButton + /api/prc were deleted;
+              see git history before the thought-leader repositioning if needed. */}
           <CTAButton href="/contact">Get in touch</CTAButton>
         </div>
       </section>

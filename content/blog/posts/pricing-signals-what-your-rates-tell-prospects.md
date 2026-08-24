@@ -7,7 +7,7 @@ description: "Your rate is a message the prospect reads before you say a word. H
 tags: ["Strategy", "Pricing", "Positioning"]
 read_time: "7 min read"
 author: "Anoop Kurup"
-category: "Strategy"
+category: "Positioning and pricing"
 ---
 
 You're in an unfamiliar town and a tooth starts to hurt. Two clinics on the same street. One charges ₹300 for a consultation, the other ₹1,500. You know nothing about either dentist. No referral, no reviews you trust, no way to inspect the work before it's done in your mouth.

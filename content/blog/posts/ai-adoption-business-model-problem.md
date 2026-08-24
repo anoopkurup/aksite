@@ -12,7 +12,7 @@ tags:
 - AI
 - Business Model
 - Strategy
-category: Strategy
+category: "AI and marketing systems"
 read_time: 5 min read
 author: Anoop Kurup
 ---

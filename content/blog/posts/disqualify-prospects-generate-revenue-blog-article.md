@@ -9,7 +9,7 @@ description: >-
 tags:
 - Sales Process
 - Lead Generation
-category: Strategy
+category: "Positioning and pricing"
 read_time: 8 min read
 author: Anoop Kurup
 ---

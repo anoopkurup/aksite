@@ -9,7 +9,7 @@ description: >-
 tags:
 - Positioning
 - Business Model
-category: Strategy
+category: "Scaling beyond the founder"
 read_time: 7 min read
 author: Anoop Kurup
 ---

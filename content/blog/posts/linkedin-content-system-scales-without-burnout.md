@@ -7,7 +7,7 @@ description: "Most founders quit LinkedIn by week three because nothing comes of
 tags: ["LinkedIn", "Content Systems", "Marketing"]
 read_time: "8 min read"
 author: "Anoop Kurup"
-category: "Strategy"
+category: "Getting clients beyond referrals"
 ---
 
 Every few months, a founder tells me they've decided to get serious about LinkedIn. They post for three weeks. Then the posts stop. When I ask what happened, the answer is almost always some version of the same two things: they ran out of things to say, and nothing came of the things they'd already said.

@@ -7,7 +7,7 @@ tags: ["Strategy", "Offers", "Lead Generation"]
 read_time: "7 min read"
 author: "Anoop Kurup"
 hero_image: "/images/blog/offer-architecture-predictable-lead-engine/hero.webp"
-category: "Strategy"
+category: "Getting clients beyond referrals"
 ---
 
 Picture a restaurant with one thing on the menu. A nine-course tasting menu, ₹6,000 a head, three hours at the table. No à la carte. No starters. No walking in for a coffee and a look at the room. The kitchen is excellent. The chef spent twenty years getting that good, and everything that leaves the pass proves it.

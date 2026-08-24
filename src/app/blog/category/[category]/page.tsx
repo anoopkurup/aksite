@@ -24,8 +24,8 @@ export async function generateMetadata({
   const name = resolve(category);
   if (!name) return {};
   return pageMetadata({
-    title: `${name} | Blog`,
-    description: `Writing on ${name.toLowerCase()} for B2B services businesses.`,
+    title: `${name} | Writing`,
+    description: `Writing on ${name.toLowerCase()} for B2B service firms in India.`,
     path: `/blog/category/${category}`,
   });
 }

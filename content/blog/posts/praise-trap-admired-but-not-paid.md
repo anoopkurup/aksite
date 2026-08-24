@@ -9,7 +9,7 @@ description: >-
 tags:
 - Sales Process
 - Positioning
-category: Strategy
+category: "Positioning and pricing"
 read_time: 8 min read
 author: Anoop Kurup
 ---

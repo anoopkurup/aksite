@@ -7,7 +7,7 @@ tags: ["Linkedin", "Lead Generation"]
 read_time: "5 min read"
 author: "Anoop Kurup"
 hero_image: "/images/blog/social-media-followers-to-clients/hero.webp"
-category: "Lead Generation"
+category: "Getting clients beyond referrals"
 ---
 
 We follow people on social media who entertain, educate, inspire, or inform. We follow brands we like, purchase from regularly, or aspire to buy products from at some point in the future. 

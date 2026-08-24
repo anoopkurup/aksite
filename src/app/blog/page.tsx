@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import BlogIndex from "@/components/BlogIndex";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Blog | Marketing for B2B Services Firms",
+  title: "Writing | Growth Problems of B2B Service Firms in India",
   description:
-    "Practical writing on marketing for B2B services firms: positioning, packaging an offer, generating leads, and building a weekly rhythm that holds.",
+    "Writing on the four growth problems of B2B service firms in India: getting clients beyond referrals, positioning and pricing, scaling beyond the founder, and AI.",
   path: "/blog",
 });
 

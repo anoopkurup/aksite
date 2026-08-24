@@ -11,7 +11,7 @@ tags:
 - Positioning
 - Networking
 - Marketing
-category: Strategy
+category: "Getting clients beyond referrals"
 read_time: 7 min read
 author: Anoop Kurup
 ---

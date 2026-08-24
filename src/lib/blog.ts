@@ -123,17 +123,20 @@ export function getRelatedBlogPosts(slug: string, limit = 3): BlogPost[] {
     .map((r) => r.post);
 }
 
-export function getBlogCategories(): string[] {
-  const posts = getListableBlogPosts();
-  const categories = new Set<string>();
-  
-  posts.forEach(post => {
-    if (post.frontmatter.category) {
-      categories.add(post.frontmatter.category);
-    }
-  });
+/**
+ * The four growth challenges the writing is organised around, in display order.
+ * Every post's `category` must be one of these (the index and homepage rely on it).
+ */
+export const BLOG_CATEGORIES = [
+  'Getting clients beyond referrals',
+  'Positioning and pricing',
+  'Scaling beyond the founder',
+  'AI and marketing systems',
+] as const;
 
-  return Array.from(categories).sort();
+export function getBlogCategories(): string[] {
+  const present = new Set(getListableBlogPosts().map((p) => p.frontmatter.category));
+  return BLOG_CATEGORIES.filter((c) => present.has(c));
 }
 
 export function getBlogPostsByCategory(category: string): BlogPost[] {

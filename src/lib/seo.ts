@@ -16,7 +16,7 @@ export const SITE = {
   name: 'Anoop Kurup',
   baseUrl: 'https://www.anoopkurup.com',
   author: 'Anoop Kurup',
-  authorRole: 'Marketing consultant for B2B services businesses',
+  authorRole: 'Marketing consultant for B2B service firms in India',
   locale: 'en_IN',
   twitterCard: 'summary_large_image' as const,
   linkedin: 'https://www.linkedin.com/in/anoopkurup',
@@ -143,9 +143,9 @@ export function organizationSchema(): Json {
     name: SITE.name,
     url: SITE.baseUrl,
     founder: { '@type': 'Person', name: SITE.author },
-    areaServed: 'Worldwide',
+    areaServed: 'India',
     description:
-      'Marketing consulting for B2B services businesses: positioning, brand visibility, and lead generation systems that produce a predictable pipeline.',
+      'Marketing consulting for B2B service firms in India: positioning, brand visibility, and lead generation systems that produce a predictable pipeline.',
     logo: absoluteUrl('/images/logo.svg'),
     image: absoluteUrl('/images/about/anoop-bw.webp'),
     email: SITE.email,
@@ -158,7 +158,6 @@ export function organizationSchema(): Json {
       addressRegion: 'Karnataka',
       addressCountry: 'IN',
     },
-    priceRange: '₹₹',
     sameAs: [SITE.linkedin],
   };
 }
@@ -247,34 +246,9 @@ export function serviceSchema(input: {
   name: string;
   description: string;
   url: string;
-  /** A fixed, publicly-quoted price — e.g. the PRC's flat 25000. */
-  price?: number;
-  /**
-   * Use instead of `price` when the fee is quoted after a diagnosis, as CLEAR is.
-   * Publishing a single `price` there would state a number the buyer isn't
-   * actually offered; a min/max is the honest shape.
-   */
-  minPrice?: number;
-  maxPrice?: number;
   serviceType?: string;
 }): Json {
-  const { name, description, url, price, minPrice, maxPrice, serviceType } = input;
-
-  let offers: Json | undefined;
-  if (price !== undefined) {
-    offers = { '@type': 'Offer', price, priceCurrency: 'INR' };
-  } else if (minPrice !== undefined && maxPrice !== undefined) {
-    offers = {
-      '@type': 'Offer',
-      priceCurrency: 'INR',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        priceCurrency: 'INR',
-        minPrice,
-        maxPrice,
-      },
-    };
-  }
+  const { name, description, url, serviceType } = input;
 
   return {
     '@context': 'https://schema.org',
@@ -284,10 +258,7 @@ export function serviceSchema(input: {
     url: absoluteUrl(url),
     ...(serviceType ? { serviceType } : {}),
     provider: { '@type': 'Person', name: SITE.author, url: SITE.baseUrl },
-    areaServed: 'Worldwide',
-    ...(offers
-      ? { offers: { ...offers, url: absoluteUrl(url), availability: 'https://schema.org/InStock' } }
-      : {}),
+    areaServed: 'India',
   };
 }
 

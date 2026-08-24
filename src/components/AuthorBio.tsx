@@ -1,6 +1,7 @@
 // Author bio block reinforcing E-E-A-T. The matching Person JSON-LD is emitted
 // site-wide in layout.tsx; this is the visible counterpart.
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { SITE } from '@/lib/seo';
 
@@ -14,8 +15,19 @@ export default function AuthorBio({ note }: AuthorBioProps) {
     <section className="py-12 bg-white">
       <div className="max-w-3xl mx-auto px-8">
         <div className="flex items-start gap-6 p-8 bg-slate-50 border border-slate-200">
+          {/* The experience is the point: a reader arriving cold from search has no
+              reason to trust the byline, and the specifics (a lab, an exit, being on
+              the calls) are what /about uses to earn it. Keep them here too. */}
+          <Image
+            src="/images/about/anoop-bw.webp"
+            alt="Anoop Kurup"
+            width={96}
+            height={96}
+            sizes="96px"
+            className="w-24 h-24 object-cover flex-shrink-0 hidden sm:block"
+          />
           <div className="flex-1">
-            <p className="font-sans text-sm text-slate-500 uppercase tracking-wide mb-2">
+            <p className="font-mono text-xs text-slate-500 uppercase tracking-[0.18em] mb-2">
               About the Author
             </p>
             <h3 className="font-serif text-title text-navy-900 mb-3">
@@ -23,7 +35,7 @@ export default function AuthorBio({ note }: AuthorBioProps) {
             </h3>
             <p className="font-sans text-body text-slate-600 leading-relaxed mb-4">
               {note ||
-                'Marketing consultant for B2B services businesses. I fix the marketing behind weak sales: positioning, visibility, and lead generation that produces a pipeline you can predict. Based in Bangalore.'}
+                'I\'m a marketing consultant for B2B service firms in India. I fix the positioning, visibility, and lead generation behind weak sales. Before this: a research lab at GE, then patents and competitive strategy, then an intellectual-property firm I built and exited. I work with founders one engagement at a time from Bangalore.'}
             </p>
             <Link
               href="/about"

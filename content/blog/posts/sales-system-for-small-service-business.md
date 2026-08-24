@@ -9,7 +9,7 @@ description: >-
 tags:
 - Sales Systems
 - Lead Generation
-category: Strategy
+category: "Scaling beyond the founder"
 read_time: 8 min read
 author: Anoop Kurup
 ---

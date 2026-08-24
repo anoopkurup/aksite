@@ -7,7 +7,7 @@ description: "AIDA and PAS are not dated theory. They are the structure an AI ne
 tags: ["AI Workflows", "Marketing", "Automation"]
 read_time: "7 min read"
 author: "Anoop Kurup"
-category: "Strategy"
+category: "AI and marketing systems"
 ---
 
 Ask a model to write a sales email for your consulting firm and you will get a sales email. Greeting, three tidy paragraphs, a line about understanding the challenges businesses face, and a close that invites the reader to hop on a quick call. It arrives in four seconds. It is grammatical. It is about nothing.

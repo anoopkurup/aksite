@@ -5,11 +5,12 @@ import Link from 'next/link';
 import { getBlogPostBySlug, getAllBlogSlugs, getRelatedBlogPosts } from '@/lib/blog';
 import { markdownToHtml, formatDate, estimateReadingTime } from '@/lib/markdown';
 import CTAButton from '@/components/CTAButton';
+import AuthorBio from '@/components/AuthorBio';
 import JsonLd from '@/components/JsonLd';
 import SpokeTemplate from '@/components/templates/SpokeTemplate';
 import { getPageBySlug } from '@/lib/contentMap';
 import { blogPostingSchema, breadcrumbSchema, buildPageMetadata, pageMetadata } from '@/lib/seo';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 export async function generateStaticParams() {
   const slugs = getAllBlogSlugs();
@@ -151,43 +152,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="h-px bg-slate-200"></div>
       </div>
 
-      {/* Author Bio */}
-      <section className="py-12 bg-white">
-        <div className="max-w-3xl mx-auto px-8">
-          <div className="flex items-start gap-6 p-8 bg-slate-50 border border-slate-200">
-            {/* The experience is the point: a reader arriving cold from search has no
-                reason to trust the byline, and the specifics (a lab, an exit, being on
-                the calls) are what /about uses to earn it. Keep them here too. */}
-            <Image
-              src="/images/about/anoop-bw.webp"
-              alt="Anoop Kurup"
-              width={96}
-              height={96}
-              sizes="96px"
-              className="w-24 h-24 object-cover flex-shrink-0 hidden sm:block"
-            />
-            <div className="flex-1">
-              <p className="font-mono text-xs text-slate-500 uppercase tracking-[0.18em] mb-2">About the Author</p>
-              <h3 className="font-serif text-title text-navy-900 mb-3">
-                {post.frontmatter.author || "Anoop Kurup"}
-              </h3>
-              <p className="font-sans text-body text-slate-600 leading-relaxed mb-4">
-                I&apos;m a marketing consultant for B2B services businesses. I fix the positioning,
-                visibility, and lead generation behind weak sales. Before this: a research lab at
-                GE, then patents and competitive strategy, then an intellectual-property firm I
-                built and exited. I work with founders one engagement at a time from Bangalore.
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex items-center font-sans text-sm text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-400 transition-colors"
-              >
-                More about me
-                <ArrowRight className="w-3 h-3 ml-2" aria-hidden focusable={false} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AuthorBio />
 
       {/* Related — the only sideways links on the site. Without these every post
           hangs off the index alone and no topic clusters. */}

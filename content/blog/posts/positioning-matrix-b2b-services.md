@@ -7,7 +7,8 @@ description: "Positioning by industry, client size or service list describes you
 tags: ["Strategy", "Positioning", "B2B Services"]
 read_time: "8 min read"
 author: "Anoop Kurup"
-category: "Strategy"
+category: "Positioning and pricing"
+featured: true
 ---
 
 Imagine walking into a doctor's clinic and, when she asks what's wrong, you say: "I'm forty-two. I run a mid-sized business. I'm based in Pune."

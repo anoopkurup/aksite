@@ -7,8 +7,7 @@ description: "Referrals are weather, not a channel. How a B2B services firm buil
 tags: ["Marketing Systems", "Lead Generation", "Professional Services", "Business Growth"]
 read_time: "9 min read"
 author: "Anoop Kurup"
-category: "Marketing Systems & Process Optimisation"
-featured: true
+category: "Getting clients beyond referrals"
 ---
 
 Ask a farmer in a rain-fed district how the year went and you will get a good answer or a bad one. What you will never get is a planned one. The skill is real: the seed, the timing, the reading of the soil. But the harvest belongs to the sky. A good year proves nothing about the next one.

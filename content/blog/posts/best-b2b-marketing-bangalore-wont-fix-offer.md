@@ -9,7 +9,7 @@ description: >-
 tags:
 - Positioning
 - Marketing Strategy
-category: Strategy
+category: "Positioning and pricing"
 read_time: 8 min read
 author: Anoop Kurup
 ---

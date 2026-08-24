@@ -10,7 +10,8 @@ description: >-
 tags:
 - AI
 - Lead Generation
-category: Strategy
+category: "AI and marketing systems"
+featured: true
 read_time: 8 min read
 author: Anoop Kurup
 ---

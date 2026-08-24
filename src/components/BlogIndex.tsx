@@ -2,6 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { getListableBlogPosts, getBlogCategories } from "@/lib/blog";
+
+/** One line per growth challenge, shown on that category's page. */
+const CATEGORY_INTRO: Record<string, string> = {
+  "Getting clients beyond referrals":
+    "Referrals got you here and they will not take you further. How B2B service firms build lead generation they can switch on: outreach, LinkedIn, offers, and follow-up.",
+  "Positioning and pricing":
+    "When prospects cannot tell you apart, price is the only lever left. Positioning, packaging, and pricing for firms that are better at the work than at selling it.",
+  "Scaling beyond the founder":
+    "The founder is the only salesperson, and that is the ceiling. How to build a sales and marketing system that runs when you are not in the room.",
+  "AI and marketing systems":
+    "What AI actually changes about getting clients, and what it does not. Systems first, tools second.",
+};
 import { formatDate, estimateReadingTime } from "@/lib/markdown";
 import CTAButton from "@/components/CTAButton";
 import JsonLd from "@/components/JsonLd";
@@ -34,11 +46,11 @@ export default function BlogIndex({ activeCategory }: { activeCategory?: string 
       <JsonLd
         schema={[
           collectionPageSchema({
-            name: active === "All" ? "Blog" : `${active} | Blog`,
+            name: active === "All" ? "Writing" : `${active} | Writing`,
             description:
               active === "All"
-                ? "Practical writing on sales for B2B services businesses."
-                : `Writing on ${active.toLowerCase()} for B2B services businesses.`,
+                ? "Writing on the growth problems of B2B service firms in India."
+                : CATEGORY_INTRO[active] ?? `Writing on ${active.toLowerCase()} for B2B service firms in India.`,
             url: path,
             items: posts.map((p) => ({ title: p.frontmatter.title, url: `/blog/${p.slug}` })),
           }),
@@ -46,11 +58,11 @@ export default function BlogIndex({ activeCategory }: { activeCategory?: string 
             active === "All"
               ? [
                   { name: "Home", url: "/" },
-                  { name: "Blog", url: "/blog" },
+                  { name: "Writing", url: "/blog" },
                 ]
               : [
                   { name: "Home", url: "/" },
-                  { name: "Blog", url: "/blog" },
+                  { name: "Writing", url: "/blog" },
                   { name: active, url: path },
                 ]
           ),
@@ -59,14 +71,14 @@ export default function BlogIndex({ activeCategory }: { activeCategory?: string 
       {/* Hero */}
       <section className="min-h-[50vh] flex items-center bg-white">
         <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">Blog</p>
+          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">Writing</p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
-            Sales, offers, and pipeline.
+            {active === "All" ? "The growth problems of B2B service firms in India, thought through." : active}
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed">
-            Practical writing for B2B services businesses: packaging an offer the market responds
-            to, proving it against real prospects, and building a weekly rhythm that keeps producing
-            conversations.
+            {active === "All"
+              ? "Four problems come up in nearly every firm I meet: getting clients beyond referrals, positioning and pricing, scaling beyond the founder, and what AI changes about all of it. I write about them here, from twenty years of doing the work."
+              : CATEGORY_INTRO[active]}
           </p>
         </div>
       </section>

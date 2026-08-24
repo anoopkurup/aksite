@@ -9,7 +9,7 @@ tags:
 - Pricing
 - Sales Process
 - Pipeline
-category: Strategy
+category: "Positioning and pricing"
 read_time: 6 min read
 author: Anoop Kurup
 ---

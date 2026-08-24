@@ -169,6 +169,10 @@ const nextConfig = {
         destination: '/case-studies',
         permanent: true,
       },
+      // Aug 2026: posts regrouped into four growth-challenge categories.
+      { source: '/blog/category/strategy', destination: '/blog/category/positioning-and-pricing', permanent: true },
+      { source: '/blog/category/lead-generation', destination: '/blog/category/getting-clients-beyond-referrals', permanent: true },
+      { source: '/blog/category/marketing-systems-and-process-optimisation', destination: '/blog/category/getting-clients-beyond-referrals', permanent: true },
 
       // Services section redirects
       {

@@ -9,7 +9,7 @@ description: >-
 tags:
 - Lead Generation
 - Sales Systems
-category: Strategy
+category: "Getting clients beyond referrals"
 read_time: 8 min read
 author: Anoop Kurup
 ---

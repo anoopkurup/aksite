@@ -9,7 +9,7 @@ description: >-
 tags:
 - Pricing
 - Business Model
-category: Strategy
+category: "Positioning and pricing"
 read_time: 9 min read
 author: Anoop Kurup
 ---
