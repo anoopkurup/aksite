@@ -11,11 +11,11 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: "How I Work", href: "/clear" },
-    { name: "Pipeline Reality Check", href: "/pipeline-reality-check" },
-    { name: "Workshops", href: "/workshops" },
+    // Slim nav (Aug 2026, thought-leader repositioning): the writing leads.
+    // PRC and Workshops stay live, reachable from /clear, /contact and the footer.
+    { name: "Writing", href: "/blog" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "Blog", href: "/blog" },
+    { name: "How I Work", href: "/clear" },
     { name: "About", href: "/about" },
   ];
 

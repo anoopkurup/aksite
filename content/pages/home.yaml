@@ -1,33 +1,30 @@
 # Homepage Content: "Your sales problem is usually a marketing problem."
-# Last updated: 2026-08-15 (consulting-first repositioning)
+# Last updated: 2026-08-24 (thought-leader repositioning: ideas first, India explicit)
 
 meta:
-  title: "Anoop Kurup: Marketing Consultant for B2B Services"
-  description: "Marketing consultant for B2B services businesses. I fix the marketing behind weak sales: positioning, visibility, and lead generation that produces a pipeline you can predict."
+  title: "Anoop Kurup | Marketing Consultant for B2B Service Firms in India"
+  description: "Marketing consultant for B2B service firms in India. I write about, and fix, the growth problems behind weak sales: getting clients beyond referrals, positioning and pricing, and scaling beyond the founder."
 
 hero:
   headline: "Your sales problem is usually a marketing problem."
   body:
     - "A thin pipeline. Prospects who can't tell you apart from the next firm. A brand nobody has heard of outside your referral circle. These look like sales problems, and they are; but they start upstream, in marketing that was never built."
-    - "I'm a marketing consultant for B2B services businesses. I fix the positioning, the visibility, and the lead generation behind weak sales, so your pipeline stops depending on luck."
+    - "I'm a marketing consultant for B2B service firms in India: consulting, agency, training, and professional-services businesses that have outgrown referrals but not yet built the marketing to replace them. I write about that problem here, and I fix it in a handful of engagements a year."
   cta_text: "Get in touch"
   cta_link: "/contact"
   cta_note: "Tell me what's going on. I read and reply to every message myself."
 
-sound_familiar:
-  section_title: "Sound familiar?"
-  items:
-    - symptom: "Nobody's heard of you outside your referral circle."
-      reframe: "Your best work is invisible. Prospects can't buy from a firm they've never come across, so every new client has to arrive pre-sold by someone else. That's not a sales weakness; it's absent visibility, and visibility can be built deliberately."
-    - symptom: "Prospects can't tell you apart from the next firm."
-      reframe: "When your website and your pitch say what every competitor says, the only lever left is price. That's a positioning problem: the market hasn't been given a reason to choose you, so it chooses the cheapest."
-    - symptom: "Marketing happens in bursts, then stops."
-      reframe: "A post here, a campaign there, silence whenever delivery gets busy. Tactics without a strategy behind them produce activity, not pipeline. The fix is a smaller set of things done every week, not more things done occasionally."
-    - symptom: "Leads arrive, then quietly disappear."
-      reframe: "Most firms don't lose deals in the meeting; they lose them in the gap after it, because no system owns what happens next. Interest without follow-up is rent paid on a shop that's never open."
+argument:
+  section_title: "Why good firms stall"
+  paragraphs:
+    - "Most B2B service firms in India grow on referrals for the first few years, and referrals are wonderful right up to the point where they stop. They arrive when a past client happens to be asked, not when you need them. A firm built on them has a pipeline it cannot switch on, and a founder who is the only person who can sell."
+    - "The usual response is more tactics: a website refresh, a burst of LinkedIn posts, an agency running ads. They rarely work, because the problem sits upstream. Prospects cannot tell the firm apart from the next one, the offer cannot be explained in one sentence, and there is no reason to choose it beyond who recommended it. Marketing built on that foundation produces activity, not enquiries."
+    - "Fix the positioning, then the offer, then the weekly rhythm that keeps the firm visible to the right buyers, and sales stops being a mystery. That is the whole argument. The writing below works through it one problem at a time."
 
 how_i_fix_it:
   section_title: "How I fix it"
+  link_text: "See how an engagement works"
+  link: "/clear"
   stages:
     - number: "1"
       name: "Package"
@@ -39,24 +36,21 @@ how_i_fix_it:
       name: "Systemise"
       description: "What survived the market becomes your marketing system: the words that got replies, the weekly rhythm of visibility and outreach, the scripts and checklists. Written down. Run at least once already. Yours to keep."
 
-services:
-  section_title: "What I do"
-  items:
-    - name: "Positioning & messaging"
-      description: "Who you serve, why you over the alternatives, and the words that carry it. The answer to prospects who can't tell you apart."
-      link: "/clear"
-      link_text: "See how I work"
-    - name: "Marketing strategy & systems"
-      description: "The plan, and the weekly rhythm that executes it: visibility, lead generation, and follow-up that don't stop when delivery gets busy."
-      link: "/clear"
-      link_text: "See how I work"
-    - name: "Workshops & training"
-      description: "Intensive working sessions on positioning, offer design, and go-to-market systems, with your team in the room."
-      link: "/workshops"
-      link_text: "See the workshops"
+writing:
+  section_title: "Four growth problems, thought through"
+  intro: "Nearly every firm I meet is stuck on one of these. Start with the one that sounds like yours."
+  link_text: "All writing"
+  link: "/blog"
 
 proof:
   section_title: "From past consulting engagements"
+  highlights:
+    - metric: "3×"
+      caption: "the previous per-engagement rate, after repackaging the offer around the outcome."
+      source: "Public-speaking trainer"
+    - metric: "45 days"
+      caption: "from repackaging to a signed revenue-share deal. No more fee-by-fee negotiation."
+      source: "Advertising agency"
   items:
     - type: "Advertising agency"
       before: "Project-by-project, every fee negotiated from scratch."
@@ -72,7 +66,7 @@ qualification:
   for_you:
     heading: "It's for you if…"
     items:
-      - "You run a B2B services firm: consulting, agency, training, or professional services."
+      - "You run a B2B services firm in India: consulting, agency, training, or professional services."
       - "You're mostly out of day-to-day delivery: your team or your systems handle the work, so your time can go into growth."
       - "New business still depends on your network and your personal selling, and you can feel that ceiling."
       - "You want a working pipeline, not another marketing experiment."

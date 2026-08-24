@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Users, RefreshCw, Lock, MessageSquare } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { getHomePageContent } from "@/lib/content";
+import { getFeaturedBlogPosts, BLOG_CATEGORIES } from "@/lib/blog";
 import CTAButton from "@/components/CTAButton";
 import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
@@ -15,45 +16,6 @@ export function generateMetadata(): Metadata {
   };
 }
 
-const ladder = [
-  {
-    price: "One week · done for you",
-    name: "Pipeline Reality Check",
-    blurb:
-      "I take your last 12 months of actual deals and tell you exactly where your next clients will come from, and where they won't. A written verdict, built from your own numbers.",
-    href: "/pipeline-reality-check",
-    linkText: "See the Pipeline Reality Check",
-    isCta: false,
-  },
-  {
-    price: "Three months · alongside you",
-    name: "The CLEAR engagement",
-    blurb:
-      "We position and package your offer, prove it against real prospects together, and systemise what works, leaving you a marketing system you own. Scoped after the diagnosis.",
-    href: "/clear",
-    linkText: "See the CLEAR engagement",
-    isCta: false,
-  },
-];
-
-// Curated proof highlights — pulled metrics (not in the YAML, which holds full
-// sentences). ponytail: hardcoded 2 items, symmetric on purpose.
-const proofHighlights = [
-  {
-    metric: "3×",
-    caption: "the previous per-engagement rate, after repackaging the offer around the outcome.",
-    source: "Public-speaking trainer",
-  },
-  {
-    metric: "45 days",
-    caption: "from repackaging to a signed revenue-share deal. No more fee-by-fee negotiation.",
-    source: "Advertising agency",
-  },
-];
-
-// One icon per symptom, in content order.
-const symptomIcons = [Users, RefreshCw, Lock, MessageSquare];
-
 // Small mono section label — wayfinding + rhythm, deliberately navy (never orange,
 // which belongs to the CTA alone).
 function Eyebrow({ children }: { children: React.ReactNode }) {
@@ -62,8 +24,17 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
+const underline =
+  "inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors";
+
 export default function HomePage() {
   const { data: content } = getHomePageContent();
+  // One featured post per growth challenge, in category order (see BLOG_CATEGORIES).
+  const featured = getFeaturedBlogPosts().sort(
+    (a, b) =>
+      BLOG_CATEGORIES.indexOf(a.frontmatter.category as (typeof BLOG_CATEGORIES)[number]) -
+      BLOG_CATEGORIES.indexOf(b.frontmatter.category as (typeof BLOG_CATEGORIES)[number])
+  );
 
   return (
     <>
@@ -71,7 +42,6 @@ export default function HomePage() {
       <section className="min-h-[85vh] flex items-center bg-white">
         <div className="max-w-6xl mx-auto px-8 py-24 w-full">
           <div className="grid md:grid-cols-[1.5fr_1fr] gap-12 md:gap-16 items-center">
-            {/* Text column */}
             <div>
               <h1 className="font-serif text-hero-mobile md:text-hero text-navy-900 mb-8 leading-tight">
                 {content.hero.headline}
@@ -89,8 +59,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Portrait column — a real face, framed neutrally in brand grayscale.
-                Stays AFTER the headline on mobile: the proposition leads, not the photo. */}
+            {/* Portrait column — stays AFTER the headline on mobile: the proposition leads. */}
             <div className="max-w-[280px] md:max-w-none mx-auto md:mx-0 w-full">
               <div className="border border-slate-200">
                 <Image
@@ -106,7 +75,7 @@ export default function HomePage() {
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-navy-600 mt-4">
                 Anoop Kurup
                 <span className="block text-slate-500 normal-case tracking-normal mt-1">
-                  In the room with you, from positioning to pipeline.
+                  Marketing consultant, Bangalore. Twenty years of positioning and lead generation.
                 </span>
               </p>
             </div>
@@ -114,12 +83,74 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Proof band — symmetric readouts, high on the page (full cases live below) ── */}
-      <section className="bg-slate-50 border-y border-slate-200">
-        <div className="max-w-4xl mx-auto px-8 py-12">
-          <Eyebrow>From past engagements</Eyebrow>
-          <div className="grid sm:grid-cols-2 gap-10">
-            {proofHighlights.map((h, index) => (
+      {/* ── The argument — a single column of prose on slate. No cards: this is a point of view. ── */}
+      <section className="py-section bg-slate-50">
+        <div className="max-w-3xl mx-auto px-8">
+          <Eyebrow>The argument</Eyebrow>
+          <h2 className="font-serif text-display text-navy-900 mb-10">
+            {content.argument.section_title}
+          </h2>
+          <div className="font-sans text-body-lg text-slate-600 leading-relaxed space-y-6">
+            {content.argument.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Writing — one featured post per growth challenge, spaced cards on white ── */}
+      <section className="py-section bg-white">
+        <div className="max-w-6xl mx-auto px-8">
+          <Eyebrow>Writing</Eyebrow>
+          <h2 className="font-serif text-display text-navy-900 mb-4">
+            {content.writing.section_title}
+          </h2>
+          <p className="font-sans text-body text-slate-500 mb-12 max-w-2xl leading-relaxed">
+            {content.writing.intro}
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {featured.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group border border-slate-200 p-8 flex flex-col hover:border-navy-300 transition-colors"
+              >
+                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-4">
+                  {post.frontmatter.category}
+                </p>
+                <h3 className="font-serif text-title text-navy-900 mb-3 leading-tight">
+                  {post.frontmatter.title}
+                </h3>
+                <p className="font-sans text-body text-slate-600 leading-relaxed mb-6 flex-1">
+                  {post.frontmatter.description}
+                </p>
+                <span className="font-sans text-sm text-navy-900 flex items-center gap-1">
+                  Read
+                  <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-12">
+            <Link href={content.writing.link} className={underline}>
+              {content.writing.link_text}
+              <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Proof — readouts + full cases on slate ── */}
+      <section className="py-section bg-slate-50">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="text-center mb-16">
+            <Eyebrow>Proof</Eyebrow>
+            <h2 className="font-serif text-display text-navy-900">
+              {content.proof.section_title}
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-10 mb-16">
+            {content.proof.highlights.map((h, index) => (
               <div key={index}>
                 <p className="font-mono text-display text-cta-600 leading-none">{h.metric}</p>
                 <p className="font-sans text-body text-slate-600 mt-3 leading-relaxed">{h.caption}</p>
@@ -129,37 +160,39 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── The problem — icon cards on white ── */}
-      <section className="py-section bg-white">
-        <div className="max-w-4xl mx-auto px-8">
-          <div className="text-center mb-16">
-            <Eyebrow>The problem</Eyebrow>
-            <h2 className="font-serif text-display text-navy-900">
-              {content.sound_familiar.section_title}
-            </h2>
-          </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {content.sound_familiar.items.map((item, index) => {
-              const Icon = symptomIcons[index % symptomIcons.length];
-              return (
-                <div key={index} className="border border-slate-200 p-8">
-                  <Icon className="w-7 h-7 text-navy-900 mb-5" strokeWidth={1.5} />
-                  <h3 className="font-serif text-title text-navy-900 mb-3">“{item.symptom}”</h3>
-                  <p className="font-sans text-body text-slate-500 leading-relaxed">{item.reframe}</p>
+            {content.proof.items.map((item, index) => (
+              <div key={index} className="bg-white border border-slate-200 p-8 md:p-10 flex flex-col">
+                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-6">
+                  {item.type}
+                </p>
+                <p className="font-mono text-title text-cta-600 leading-snug mb-6">{item.result}</p>
+                <div className="mt-auto space-y-3 pt-6 border-t border-slate-100">
+                  <div>
+                    <span className="font-mono text-[0.65rem] text-slate-500 uppercase tracking-[0.18em]">Before</span>
+                    <p className="font-sans text-sm text-slate-600 leading-relaxed">{item.before}</p>
+                  </div>
+                  <div>
+                    <span className="font-mono text-[0.65rem] text-slate-500 uppercase tracking-[0.18em]">What I did</span>
+                    <p className="font-sans text-sm text-slate-600 leading-relaxed">{item.what_we_did}</p>
+                  </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/case-studies" className={underline}>
+              See all case studies
+              <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── The method — numbered circles on slate, diagram framed ── */}
-      <section className="py-section bg-slate-50">
+      {/* ── How I work — numbered circles on white, diagram framed ── */}
+      <section className="py-section bg-white">
         <div className="max-w-3xl mx-auto px-8">
-          <Eyebrow>The method</Eyebrow>
+          <Eyebrow>How I work</Eyebrow>
           <h2 className="font-serif text-display text-navy-900 mb-12">
             {content.how_i_fix_it.section_title}
           </h2>
@@ -178,155 +211,19 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
-          {/* Diagram — the three stages at a glance, framed so it reads as an instrument */}
-          <div className="mt-14 bg-white border border-slate-200 p-6 md:p-8">
+          <div className="mt-14 border border-slate-200 p-6 md:p-8">
             <Image
-                src="/images/pages/clear-stages.webp"
-                alt="The three stages: Package, Prove and Sell, Systemise"
-                width={1200}
-                height={800}
-                sizes="(max-width: 768px) 100vw, 640px"
-                className="w-full h-auto"
-              />
-          </div>
-        </div>
-      </section>
-
-      {/* ── Services — bordered cards on white, serif names ── */}
-      <section className="py-section bg-white">
-        <div className="max-w-5xl mx-auto px-8">
-          <Eyebrow>{content.services.section_title}</Eyebrow>
-          <h2 className="font-serif text-display text-navy-900 mb-12">
-            Three ways I work with firms
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {content.services.items.map((service, index) => (
-              <div key={index} className="border border-slate-200 p-8 flex flex-col">
-                <h3 className="font-serif text-title text-navy-900 mb-4">{service.name}</h3>
-                <p className="font-sans text-body text-slate-600 leading-relaxed mb-6 flex-1">
-                  {service.description}
-                </p>
-                <Link
-                  href={service.link}
-                  className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 self-start hover:border-cta-600 hover:text-navy-700 transition-colors"
-                >
-                  {service.link_text}
-                  <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── The path — a real vertical stepper on slate. ponytail: hardcoded ladder. ── */}
-      <section className="py-section bg-slate-50">
-        <div className="max-w-3xl mx-auto px-8">
-          <Eyebrow>The path</Eyebrow>
-          <h2 className="font-serif text-display text-navy-900 mb-4">From diagnosis to system</h2>
-          <p className="font-sans text-body text-slate-500 mb-10 max-w-2xl leading-relaxed">
-            One path, two steps. The diagnosis comes first; anything larger is scoped
-            after it, from your own numbers.
-          </p>
-
-          {/* Wide banner, deliberately unframed: the section above already uses a
-              framed diagram, and two framed diagrams in a row blur the sections
-              together. Sits above the stepper — it states the point (noise in, one
-              client out) that the three steps then deliver. */}
-          <Image
-            src="/images/pages/home-funnel.webp"
-            alt="A scatter of unqualified prospects drawn through a funnel and emerging as one committed client"
-            width={1200}
-            height={800}
-            sizes="(max-width: 768px) 100vw, 768px"
-            className="w-full h-auto mb-14"
-          />
-
-          <ol className="relative space-y-12">
-            {/* the rail connecting the rungs */}
-            <span
-              aria-hidden
-              className="absolute left-[1.375rem] top-4 bottom-4 w-px bg-slate-200"
+              src="/images/pages/clear-stages.webp"
+              alt="The three stages: Package, Prove and Sell, Systemise"
+              width={1200}
+              height={800}
+              sizes="(max-width: 768px) 100vw, 640px"
+              className="w-full h-auto"
             />
-            {ladder.map((step, index) => {
-              const isLast = index === ladder.length - 1;
-              return (
-                <li key={index} className="relative flex gap-6">
-                  {/* node — outline rungs climbing to a filled destination */}
-                  <div
-                    className={`relative z-10 flex-shrink-0 w-11 h-11 rounded-full flex items-center justify-center font-mono text-sm ${
-                      isLast
-                        ? "bg-navy-900 text-white border-2 border-navy-900"
-                        : "bg-white text-navy-900 border-2 border-navy-900"
-                    }`}
-                  >
-                    {index + 1}
-                  </div>
-                  <div className="flex-1 pt-1">
-                    {/* cta-700, not cta-600: at 14px this is body-sized text and
-                        cta-600 on white is only 3.56:1. cta-700 is 5.18:1. */}
-                    <p className="font-mono text-sm text-cta-700 mb-1">{step.price}</p>
-                    <h3 className="font-serif text-title text-navy-900 mb-2">{step.name}</h3>
-                    <p className="font-sans text-body text-slate-500 leading-relaxed mb-5">
-                      {step.blurb}
-                    </p>
-                    {step.isCta ? (
-                      <CTAButton href={step.href}>{step.linkText}</CTAButton>
-                    ) : (
-                      <Link
-                        href={step.href}
-                        className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors"
-                      >
-                        {step.linkText}
-                        <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
-                      </Link>
-                    )}
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
-        </div>
-      </section>
-
-      {/* ── Proof — full cases, spaced apart ── */}
-      <section className="py-section bg-white">
-        <div className="max-w-4xl mx-auto px-8">
-          <div className="text-center mb-16">
-            <Eyebrow>Proof</Eyebrow>
-            <h2 className="font-serif text-display text-navy-900">
-              {content.proof.section_title}
-            </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {content.proof.items.map((item, index) => (
-              <div key={index} className="bg-white border border-slate-200 p-8 md:p-10 flex flex-col">
-                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-6">
-                  {item.type}
-                </p>
-                <p className="font-mono text-title text-cta-600 leading-snug mb-6">
-                  {item.result}
-                </p>
-                <div className="mt-auto space-y-3 pt-6 border-t border-slate-100">
-                  <div>
-                    <span className="font-mono text-[0.65rem] text-slate-500 uppercase tracking-[0.18em]">Before</span>
-                    <p className="font-sans text-sm text-slate-600 leading-relaxed">{item.before}</p>
-                  </div>
-                  <div>
-                    <span className="font-mono text-[0.65rem] text-slate-500 uppercase tracking-[0.18em]">What I did</span>
-                    <p className="font-sans text-sm text-slate-600 leading-relaxed">{item.what_we_did}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors"
-            >
-              See all case studies
+          <div className="mt-10">
+            <Link href={content.how_i_fix_it.link} className={underline}>
+              {content.how_i_fix_it.link_text}
               <ArrowRight className="w-4 h-4 ml-2 text-cta-500" />
             </Link>
           </div>

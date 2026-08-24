@@ -10,16 +10,34 @@ export default function Footer() {
           {/* Brand Column */}
           <div>
             <p className="font-serif text-lg text-navy-900 mb-2">Anoop Kurup</p>
-            <p className="font-sans text-sm text-slate-500">Marketing Consulting for B2B Services Businesses · Based in Bangalore</p>
+            <p className="font-sans text-sm text-slate-500">Marketing consultant for B2B service firms in India · Bangalore</p>
           </div>
 
           {/* Links Column */}
-          <div className="flex items-center gap-8">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+            <Link
+              href="/blog"
+              className="font-sans text-sm text-slate-600 hover:text-navy-900 transition-colors"
+            >
+              Writing
+            </Link>
             <Link
               href="/case-studies"
               className="font-sans text-sm text-slate-600 hover:text-navy-900 transition-colors"
             >
               Case Studies
+            </Link>
+            <Link
+              href="/pipeline-reality-check"
+              className="font-sans text-sm text-slate-600 hover:text-navy-900 transition-colors"
+            >
+              Pipeline Reality Check
+            </Link>
+            <Link
+              href="/workshops"
+              className="font-sans text-sm text-slate-600 hover:text-navy-900 transition-colors"
+            >
+              Workshops
             </Link>
             <Link
               href="/contact"
@@ -40,8 +58,7 @@ export default function Footer() {
 
         {/* Copyright + legal. Privacy and Terms live here rather than in the links
             row above: they're obligations, not navigation. They must be reachable
-            from every page — the site takes live payments, and buyers look for them
-            in the footer. Leaving them sitemap-only made them unreachable in the UI. */}
+            from every page; buyers look for them in the footer. Leaving them sitemap-only made them unreachable in the UI. */}
         <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-3">
           <p className="font-sans text-xs text-slate-500">
             © {currentYear} Anoop Kurup. All rights reserved.

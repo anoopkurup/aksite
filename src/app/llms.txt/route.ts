@@ -9,12 +9,12 @@ export const dynamic = 'force-static';
 
 export function GET() {
   const core = [
+    ['Writing (four growth problems of B2B service firms in India)', '/blog'],
     ['The CLEAR method (how I work)', '/clear'],
     ['Pipeline Reality Check (one-week done-for-you diagnosis)', '/pipeline-reality-check'],
     ['Workshops (positioning, offer architecture, go-to-market)', '/workshops'],
     ['About Anoop Kurup', '/about'],
     ['Case studies', '/case-studies'],
-    ['Blog', '/blog'],
     ['Contact', '/contact'],
   ];
 

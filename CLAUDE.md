@@ -3,7 +3,9 @@
 ## Project Overview
 Professional website for Anoop Kurup. Built with Next.js 15, Tailwind CSS, YAML-driven content.
 
-**Core message**: "Your sales problem is usually a marketing problem." Anoop is a **marketing consultant for B2B services businesses**: he fixes the positioning, visibility, and lead generation behind weak sales. (Replaced "I fix sales..." in the Aug 2026 consulting-first repositioning.)
+**Core message**: "Your sales problem is usually a marketing problem." Anoop is a **marketing consultant for B2B service firms in India**: he fixes the positioning, visibility, and lead generation behind weak sales. (Replaced "I fix sales..." in the Aug 2026 consulting-first repositioning.)
+
+**Thought-leader repositioning (24 Aug 2026)**: the site now leads with ideas, not services. "India" is explicit in hero, meta, footer and JSON-LD (`areaServed: India`). The homepage is ideas-first (argument → writing → proof → how I work → fit → contact); services live on `/clear` and `/about`. The writing is organised around **four growth challenges**, which are the only allowed blog `category` values (`BLOG_CATEGORIES` in `src/lib/blog.ts`): Getting clients beyond referrals · Positioning and pricing · Scaling beyond the founder · AI and marketing systems. One post per category carries `featured: true` and is shown on the homepage (`getFeaturedBlogPosts()`). The nav calls the blog "Writing" (route stays `/blog`). No newsletter: Get in touch stays the only CTA.
 **Audience**: B2B service firms (consulting, agency, training, professional services). (Avoid the term "founder-led" as an audience descriptor in page copy — it read as confusing; say "B2B". The *concept* "founder-led sales" — the founder being the only salesperson — is a distinct term and stays where it names that problem, e.g. the `founder-led-sales-trap` post. Never state client revenue/earnings figures — it's a social taboo in India.)
 
 **Repositioned Aug 2026 (consulting-first)**: the site now leads with marketing consulting; the productised packaging is deemphasised. The Sales Scorecard was removed, **all prices came off the site** (a standing rule: no ₹ figures anywhere in site copy; engagements are "scoped after a conversation"), and three services are presented: Positioning & messaging · Marketing strategy & systems · Workshops & training.
@@ -20,7 +22,7 @@ Get in touch (/contact — the ONE primary CTA sitewide)
 ### Pages
 | Route | Purpose | Content source |
 |-------|---------|---------------|
-| `/` | Homepage — hero, "Sound familiar?", Package/Prove/Systemise, services, proof, contact CTA | `content/pages/home.yaml` |
+| `/` | Homepage — hero, the argument (3 paragraphs), writing (4 featured posts), proof, how I work, fit, contact CTA. YAML is the full source of truth (no hardcoded sections) | `content/pages/home.yaml` |
 | `/pipeline-reality-check` | One-week done-for-you diagnosis (no published price) | `content/pages/pipeline-reality-check.yaml` |
 | `/clear` | The CLEAR method — "How I Work" methodology page | `content/pages/clear.yaml` |
 | `/workshops` | Workshops & training (3 curricula, no prices) | `content/pages/workshops.yaml` |
@@ -33,9 +35,9 @@ Get in touch (/contact — the ONE primary CTA sitewide)
 | `/legal/*` | Privacy policy, terms | `content/legal/*.md` |
 
 ### Navigation
-**Desktop**: Anoop Kurup | How I Work (`/clear`) | Pipeline Reality Check | Workshops | Case Studies | Blog | About | **[Get in touch]**
+**Desktop**: Anoop Kurup | Writing (`/blog`) | Case Studies | How I Work (`/clear`) | About | **[Get in touch]**
 
-(No Services dropdown. Contact is the header CTA button and lives in the footer, not the nav links. Case Studies is in the top nav and the footer, and is linked from the homepage proof section.)
+(Slim nav since Aug 2026. Pipeline Reality Check and Workshops are live but out of the header: linked from `/clear`, `/contact` and the footer. Contact is the header CTA button and lives in the footer, not the nav links.)
 
 ### Removed Pages (June 2026 repositioning)
 - `/scorecard` — **Sales Scorecard removed Aug 2026** (301 → `/contact`). The interactive 10-question self-assessment (`ScorecardTool.tsx`, Reading meter climax, Formspree email capture) was the primary CTA of the June-2026 "I fix sales" positioning; with the shift to marketing consulting it no longer had a funnel to feed. Deleted `src/app/scorecard/` and `public/images/pages/scorecard-bands.webp`; every CTA now points at `/contact`.
@@ -209,13 +211,13 @@ A mono label + value + segmented meter (orange fill = the needle). Used anywhere
 - Direct, honest, problem-first. Short declarative sentences. Prices in ₹, stated plainly.
 - Colours: navy / grey / orange / white only. Orange reserved for CTAs and accents.
 
-## Payments & WhatsApp (July 2026; checkout retired Aug 2026)
-- **PRC Razorpay checkout removed from the page in Aug 2026** (no-prices rule): the PRC page now uses the contact CTA. The full flow stays dormant in the repo for later: `BookPRCButton.tsx` (navy-filled, never orange) → `/api/prc/order` (price hardcoded server-side) → Razorpay Checkout → `/api/prc/verify` (HMAC check). Env: `RAZORPAY_KEY_ID` + `RAZORPAY_KEY_SECRET` in `.env.local` and Vercel (Production). To resurrect, re-import `BookPRCButton` on the PRC page.
-- **WhatsApp (+91 90360 14008)** is a first-class channel: `FloatingWhatsApp.tsx` (desktop pill after one screen of scroll; mobile sticky WhatsApp+Call bar — body has `pb-12 md:pb-0` to clear it), first method on /contact, and a "prefer to talk first?" underline link in the PRC price box. Events: `whatsapp_click`, `call_click`, `prc_book_click`, `prc_paid`.
+## Payments & WhatsApp (July 2026; checkout deleted Aug 2026)
+- **PRC Razorpay checkout deleted 24 Aug 2026** (it still carried "₹25,000"). `BookPRCButton.tsx`, `/api/prc/order` and `/api/prc/verify` are in git history only; `RAZORPAY_*` env vars are unused. The PRC page uses the contact CTA.
+- **WhatsApp (+91 90360 14008)** is a first-class channel: `FloatingWhatsApp.tsx` (desktop pill after one screen of scroll; mobile sticky WhatsApp+Call bar — body has `pb-12 md:pb-0` to clear it), first method on /contact, and a "prefer to talk first?" underline link in the PRC price box. Events: `whatsapp_click`, `call_click`.
 
 ## Analytics
 - GA4 (`G-0X2P577TSX`) is loaded via `next/script` in `src/app/layout.tsx`.
-- `trackEvent()` (`src/lib/analytics.ts`) fires `contact_cta_click`, `clear_handoff_click`, `whatsapp_click`, `call_click`, `prc_book_click`, `prc_paid` to `dataLayer`/`gtag`. (The `scorecard_*` events died with the Scorecard, Aug 2026.)
+- `trackEvent()` (`src/lib/analytics.ts`) fires `contact_cta_click`, `clear_handoff_click`, `whatsapp_click`, `call_click` to `dataLayer`/`gtag`. (`scorecard_*` and `prc_*` events died with the Scorecard and the checkout, Aug 2026.)
 
 ## TODO
 - [ ] Set up SEO meta tags with target keywords on each page

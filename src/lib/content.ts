@@ -74,32 +74,33 @@ export interface HomePageContent {
     cta_link: string;
     cta_note?: string;
   };
-  sound_familiar: {
+  argument: {
     section_title: string;
-    items: Array<{
-      symptom: string;
-      reframe: string;
-    }>;
+    paragraphs: string[];
   };
   how_i_fix_it: {
     section_title: string;
+    link_text: string;
+    link: string;
     stages: Array<{
       number: string;
       name: string;
       description: string;
     }>;
   };
-  services: {
+  writing: {
     section_title: string;
-    items: Array<{
-      name: string;
-      description: string;
-      link: string;
-      link_text: string;
-    }>;
+    intro: string;
+    link_text: string;
+    link: string;
   };
   proof: {
     section_title: string;
+    highlights: Array<{
+      metric: string;
+      caption: string;
+      source: string;
+    }>;
     items: Array<{
       type: string;
       before: string;
