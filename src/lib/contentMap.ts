@@ -421,7 +421,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['sales-system-for-small-service-business'],
+    siblings: ['sales-system-for-small-service-business', 'seo-for-consultants'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
     status: 'live',
@@ -453,7 +453,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['lead-generation-for-service-business'],
+    siblings: ['lead-generation-for-service-business', 'seo-for-consultants'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
     status: 'live',
@@ -518,10 +518,11 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: [],
+    siblings: ['cold-outreach-for-consultants', 'ai-for-client-acquisition'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
-    status: 'scaffold',
+    // Published 2026-08-28 (Wave 2, spoke 7 of 7 — wave complete).
+    status: 'live',
     brief: {
       angle:
         'Lowest-priority spoke — focused SEO for a solo expert, not a media operation.',

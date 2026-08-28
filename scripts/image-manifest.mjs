@@ -691,4 +691,29 @@ export const posts = [
  ),
  ],
  },
+ {
+ slug: 'seo-for-consultants',
+ hero: img(
+ 'A few chosen pages outranking a pile of unread posts',
+ 'Metaphor: on the left, a tall untidy stack of many small identical grey document rectangles, slightly askew, fading in tone towards the bottom. On the right, standing clear of the stack, exactly five neat navy-outlined document rectangles arranged in a tidy vertical column with even spacing, the topmost one filled solid orange. Fine navy line-art, flat premium vector, generous white space, no text.'
+ ),
+ inlines: [
+ img(
+ 'Three reasons a consultant blog goes nowhere',
+ 'Subject: three small flat navy line-art vignettes in a single horizontal row, evenly spaced on white. Left: a speech bubble pointing at two identical figures facing each other. Middle: a scattered cluster of many small squares with no centre. Right: a simple round clock with a short line-arrow beside it. One small orange dot sits under the middle vignette. Spare, clean, no text.'
+ ),
+ img(
+ 'Buyer intent beats search volume',
+ 'Subject: two vertical bars side by side on a thin grey baseline. Left bar is very tall and drawn as a faint grey outline, hollow. Right bar is much shorter but filled solid orange, with a small solid navy circle sitting on top of it like a marker. Flat 2D, plain white background, generous white space, no text.'
+ ),
+ img(
+ 'A pillar page surrounded by linked spokes',
+ 'Subject: one large solid navy circle at the centre with eight small navy-outlined circles arranged evenly around it, each joined to the centre by a thin grey line; the neighbouring small circles are also joined to each other by fainter grey lines forming a ring. One of the eight small circles is filled solid orange. Flat vector, pure-white background, no text.'
+ ),
+ img(
+ 'Pages keep working long after you stop writing them',
+ 'Subject: a single smooth navy line curve on white, starting flat at the lower left, rising slowly, then steepening gently towards the upper right, drawn over a faint grey horizontal baseline. Three small solid orange dots sit on the curve at even horizontal intervals. Minimal, no axes labels, no text.'
+ ),
+ ],
+ },
 ];
