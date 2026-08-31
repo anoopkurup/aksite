@@ -538,7 +538,11 @@ export const SEO_PAGES: Page[] = [
     },
   },
 
-  // ---- WAVE 3 — marketing & creative agency family ------------------------
+  // ---- WAVE 3 — marketing & creative agency family (PARKED Aug 2026) ------
+  // Parked by the thought-leader repositioning: the "get clients for X" frame
+  // belongs to the old sales positioning. Reframe each brief to "marketing and
+  // positioning for X" (see marketing-consultant-for-agencies as the template)
+  // before authoring. Wave 5 publishes first.
   {
     slug: 'client-acquisition-for-marketing-agencies',
     url: '/client-acquisition-for-marketing-agencies',
@@ -735,7 +739,7 @@ export const SEO_PAGES: Page[] = [
     },
   },
 
-  // ---- WAVE 4 — training & coaching ---------------------------------------
+  // ---- WAVE 4 — training & coaching (PARKED Aug 2026, same reframe rule) ---
   {
     slug: 'client-acquisition-for-training-businesses',
     url: '/client-acquisition-for-training-businesses',
@@ -864,7 +868,9 @@ export const SEO_PAGES: Page[] = [
     },
   },
 
-  // ---- WAVE 4 — professional & advisory -----------------------------------
+  // ---- WAVE 4 — professional & advisory (PARKED Aug 2026, same reframe ----
+  // rule; exception: get-clients-for-ip-consulting-firm is first-hand
+  // authority and can be pulled forward once reframed) ----------------------
   {
     slug: 'client-acquisition-for-professional-services',
     url: '/client-acquisition-for-professional-services',
@@ -1023,6 +1029,11 @@ export const SEO_PAGES: Page[] = [
   },
 
   // ---- WAVE 5 — consulting-first clusters (Aug 2026 repositioning) ---------
+  // ACTIVE WAVE (decided 2026-08-31): publishes next, ahead of waves 3–4, in
+  // the order listed here. Blog category for drafts: cluster 1 → "Positioning
+  // and pricing"; cluster 2 → "Getting clients beyond referrals". The two
+  // service-intent pages go last, once the ideas pages exist to link down from.
+  // After each publish, consider taking the featured slot for its category.
   // Cluster 1: positioning & differentiation
   {
     slug: 'positioning-for-consulting-firms',
@@ -1042,7 +1053,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['how-to-differentiate-b2b-services-firm', 'b2b-messaging-framework'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 5,
-    status: 'scaffold',
+    // Published 2026-08-31 (Wave 5, spoke 1 of 8 — positioning cluster anchor).
+    status: 'live',
     brief: {
       angle:
         'The positioning cluster anchor: a position is a choice of problem, buyer, and method that competitors have not claimed — not a tagline. Seeds from the live positioning-matrix post.',

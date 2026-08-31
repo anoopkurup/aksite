@@ -716,4 +716,21 @@ export const posts = [
  ),
  ],
  },
+  {
+    slug: 'positioning-for-consulting-firms',
+    hero: img(
+      'One claimed position among identical unclaimed slots',
+      'Metaphor: a neat 4x3 grid of identical hollow grey rounded rectangles like empty name-tag slots, evenly spaced on white. Exactly one slot, slightly off-centre, is drawn in solid navy with a small solid orange flag pin planted on its top edge, as if claimed. Fine navy line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A position is the intersection of problem, buyer, and method',
+        'Subject: three large thin navy-outlined circles overlapping in a classic three-way arrangement on white, drawn with fine even line weight. The small central area where all three circles overlap is filled solid orange. No labels, no text, flat 2D vector, generous white space.'
+      ),
+      img(
+        'The narrow position goes deeper and earns more',
+        'Subject: two simple downward wedge shapes side by side over a thin grey baseline. Left: a very wide, shallow wedge drawn as a faint grey outline, barely dipping below the line. Right: a narrow wedge in solid navy reaching much deeper below the line, with a small solid orange circle at its lowest tip. Flat 2D, pure-white background, no text.'
+      ),
+    ],
+  },
 ];
