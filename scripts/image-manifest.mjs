@@ -733,4 +733,26 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'how-to-differentiate-b2b-services-firm',
+    hero: img(
+      'Four identical firms, one that cannot be mistaken for the others',
+      'Metaphor: exactly four tall rounded rectangles like blank website cards, evenly spaced in one row on white with clear gaps between them, never overlapping. Three cards are faint grey outlines with the same three short grey lines inside. The third card from the left is filled solid navy and carries one small solid orange square at its top-right where the others have a grey line. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Four sources of difference: refuse, package, guarantee, publish',
+        'Subject: a two-by-two grid of four navy line-art icons of equal size on white, centred in the frame with generous space around the grid. Top-left: a ring with one diagonal slash through it. Top-right: a closed cube box. Bottom-left: a shield outline. Bottom-right: a single sheet of paper with three short horizontal lines. Only the cube has a small solid orange dot at its top corner. Nothing else in the frame. Flat 2D vector, uniform fine line weight, no text.'
+      ),
+      img(
+        'Show the mechanism: proof, not adjectives',
+        'Subject: left half shows a thin grey speech bubble outline containing three short wavy grey placeholder lines, faint. Right half shows an open navy line-art mechanism: three interlocking gears drawn in fine navy outline, with exactly one gear tooth filled solid orange. A thin grey vertical divider separates the halves. Flat 2D, pure-white background, no text.'
+      ),
+      img(
+        'Position first, then differentiation, then messaging',
+        'Subject: three thin navy horizontal bars stacked vertically like steps of a staircase descending left to right on white, each bar connected to the next by a short navy downward arrow. The topmost bar has a small solid orange circle at its left end. Flat 2D vector, fine even line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
+

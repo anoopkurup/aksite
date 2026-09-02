@@ -1097,7 +1097,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['positioning-for-consulting-firms', 'b2b-messaging-framework'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 5,
-    status: 'scaffold',
+    // Published 2026-09-02 (Wave 5, spoke 2 of 8 — positioning cluster).
+    status: 'live',
     brief: {
       angle:
         '“We do quality work” is not differentiation — real difference comes from choices competitors will not copy: who you refuse, how you package, what you guarantee, what you publish.',
