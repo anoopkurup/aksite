@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
-  const { data: content } = getHomePageContent();
+  const content = getHomePageContent();
   return {
     ...pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/" }),
     // Absolute: the homepage title is the full brand line; skip the "%s | Anoop Kurup" template
@@ -28,7 +28,7 @@ const underline =
   "inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors";
 
 export default function HomePage() {
-  const { data: content } = getHomePageContent();
+  const content = getHomePageContent();
   // One featured post per growth challenge, in category order (see BLOG_CATEGORIES).
   const featured = getFeaturedBlogPosts().sort(
     (a, b) =>

@@ -1354,15 +1354,6 @@ export function getLivePages(): Page[] {
   return SEO_PAGES.filter((p) => p.status === 'live');
 }
 
-export function isLive(slug: string): boolean {
-  return getPageBySlug(slug)?.status === 'live';
-}
-
-/** Direct children (pages whose `parent` is this slug). */
-export function getChildren(slug: string): Page[] {
-  return SEO_PAGES.filter((p) => p.parent === slug);
-}
-
 /** Resolved sibling pages (from the `siblings` slug list). */
 export function getSiblings(slug: string): Page[] {
   const page = getPageBySlug(slug);

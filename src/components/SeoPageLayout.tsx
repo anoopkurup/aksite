@@ -1,7 +1,7 @@
 import Image from "next/image";
-// Shared assembly for every SEO page type. Pillar/SubPillar/Spoke/Vertical
-// templates configure this with the right schema mix; everything else
-// (breadcrumbs, internal links, CLEAR handoff, author bio, JSON-LD) is common.
+// Shared assembly for every SEO page type (pillar, sub-pillar, spoke, vertical).
+// The schema mix comes off `page.type`; everything else (breadcrumbs, internal
+// links, CLEAR handoff, author bio, JSON-LD) is common to all four.
 //
 // Body content can be supplied either as rendered HTML (`bodyHtml`, e.g. from
 // the markdown pipeline) or as `children`. Either way it lands inside the prose

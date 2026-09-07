@@ -21,5 +21,5 @@ export default function ThankYouPage() {
     return <div>Content not found</div>;
   }
 
-  return <ContentPage contentData={contentData} heroBackground="gradient" />;
+  return <ContentPage contentData={contentData} />;
 }

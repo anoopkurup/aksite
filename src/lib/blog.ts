@@ -79,7 +79,7 @@ export function getBlogPostBySlug(slug: string): BlogPost | null {
  * gate — we flip spokes live one at a time. A normal post (no content-map entry)
  * is always listable.
  */
-export function isListable(slug: string): boolean {
+function isListable(slug: string): boolean {
   const page = getPageBySlug(slug);
   return !page || page.status === 'live';
 }
@@ -137,13 +137,6 @@ export const BLOG_CATEGORIES = [
 export function getBlogCategories(): string[] {
   const present = new Set(getListableBlogPosts().map((p) => p.frontmatter.category));
   return BLOG_CATEGORIES.filter((c) => present.has(c));
-}
-
-export function getBlogPostsByCategory(category: string): BlogPost[] {
-  const posts = getListableBlogPosts();
-  return posts.filter(post => 
-    post.frontmatter.category?.toLowerCase() === category.toLowerCase()
-  );
 }
 
 export function getFeaturedBlogPosts(limit?: number): BlogPost[] {

@@ -6,12 +6,12 @@ import { breadcrumbSchema, serviceSchema, pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
-  const { data: content } = getWorkshopsPageContent();
+  const content = getWorkshopsPageContent();
   return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/workshops" });
 }
 
 export default function WorkshopsPage() {
-  const { data: content } = getWorkshopsPageContent();
+  const content = getWorkshopsPageContent();
 
   return (
     <>

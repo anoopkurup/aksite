@@ -12,12 +12,12 @@ const WHATSAPP_URL =
   encodeURIComponent("Hi Anoop, I have a question about the Pipeline Reality Check.");
 
 export function generateMetadata(): Metadata {
-  const { data: content } = getPipelineRealityCheckContent();
+  const content = getPipelineRealityCheckContent();
   return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/pipeline-reality-check" });
 }
 
 export default function PipelineRealityCheckPage() {
-  const { data: content } = getPipelineRealityCheckContent();
+  const content = getPipelineRealityCheckContent();
 
   return (
     <>

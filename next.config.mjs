@@ -29,19 +29,20 @@ const nextConfig = {
           // hydration inline bootstrap and GA4; tightening those needs per-request
           // nonces, which would force every static page to render dynamically —
           // not worth trading the CDN for on a brochure site. The value here still
-          // constrains where scripts, frames and connections may come from, which is
-          // what matters with Razorpay checkout in the page.
+          // constrains where scripts, frames and connections may come from.
+          // The Razorpay and Formspree allowances came off with the PRC checkout
+          // and the Scorecard (Aug 2026); the Postie form posts same-origin.
           {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.razorpay.com https://*.googletagmanager.com https://*.google-analytics.com",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com",
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https://img.youtube.com https://*.google-analytics.com https://*.googletagmanager.com",
               "font-src 'self' data:",
-              "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://api.razorpay.com https://lumberjack.razorpay.com https://formspree.io",
-              "frame-src https://api.razorpay.com https://checkout.razorpay.com https://www.youtube.com https://www.youtube-nocookie.com",
-              "form-action 'self' https://formspree.io",
+              "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
+              "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
+              "form-action 'self'",
               "base-uri 'self'",
               "object-src 'none'",
               "frame-ancestors 'self'",

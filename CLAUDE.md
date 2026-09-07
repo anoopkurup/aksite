@@ -98,8 +98,7 @@ aksite-nextjs/
 │   │   ├── UnderlineLink.tsx     # Every non-primary link: navy label + orange underline
 │   │   ├── BlogIndex.tsx         # Shared by /blog and /blog/category/[category]
 │   │   ├── ContentPage.tsx       # MD-driven page wrapper (always ends with the contact CTA)
-│   │   ├── PageTemplate.tsx      # Hero + layout template (no <main> — layout.tsx owns it)
-│   │   └── templates/            # SEO page templates (SeoPageLayout + pillar/subpillar/spoke/vertical)
+│   │   └── SeoPageLayout.tsx     # The one SEO cluster template (pillar/spoke/vertical all render through it)
 │   └── lib/
 │       ├── content.ts            # YAML + markdown content loaders, TS interfaces
 │       ├── prose.ts              # THE prose treatment for every markdown body (was copy-pasted 4x)
@@ -162,8 +161,8 @@ The site reads like a diagnostic instrument: honest, measured, mechanical. The p
 - **Data/utility** (`font-mono` → **IBM Plex Mono**): every number, price, score, section eyebrow, meter label, and metadata. This is the instrument-readout tell — when in doubt, data and labels go mono.
 - Scale: Hero 4.5rem, Display 3rem, Title 1.875rem, Body 1.125rem.
 
-### The signature — "the Reading" (`src/components/Reading.tsx`)
-A mono label + value + segmented meter (orange fill = the needle). Used anywhere an honest measurement fits (blog meta readouts). Don't scatter meters where the data isn't a clean reading — prose results stay mono text, not meters. (It was removed from the homepage hero so orange there belongs to the CTA alone. Its original climax, the Scorecard result, was removed with the Scorecard in Aug 2026.)
+### The signature — "the Reading" (retired Sept 2026)
+A mono label + value + segmented meter (orange fill = the needle). `Reading.tsx` was deleted in the Sept 2026 audit: it had no callers left once the homepage hero dropped it (so orange there belongs to the CTA alone) and the Scorecard result, its original climax, went in Aug 2026. Recover it from git history if an honest measurement ever needs one; don't scatter meters where the data isn't a clean reading.
 
 ### CTA rule (one action sitewide)
 - **Filled-orange button = Get in touch (`/contact`), always.** Use `src/components/CTAButton.tsx` (`<CTAButton href={...}>`). It appears in the header, page heroes, and every page-end. Reads on white and on `navy-900`. (Was the Sales Scorecard until Aug 2026.)
@@ -188,7 +187,7 @@ A mono label + value + segmented meter (orange fill = the needle). Used anywhere
 - Blog posts: markdown in `content/blog/posts/` (published via `npm run publish`)
 - Case studies: markdown in `content/case-studies/*.md` (loaded by `src/lib/caseStudies.ts`, which lifts the H1/H3/disclaimer out of the body); index at `/case-studies`, detail at `/case-studies/[slug]`. Source drafts live in the git-ignored `Case Studies/` folder.
 - Simple markdown pages: `content/podcast.md`, `content/thank-you.md`, `content/legal/*.md` (loaded by `getContentPage()`)
-- TypeScript interfaces for all YAML structures in `src/lib/content.ts`, each with a typed loader
+- TypeScript interfaces for all YAML structures in `src/lib/content.ts`, each with a typed loader that returns the shape directly (no `{ data }` wrapper)
 - Each YAML page has a bespoke `page.tsx` renderer (not a generic section renderer)
 - When updating copy, edit the YAML/markdown file; only edit TSX for hardcoded pages
 
@@ -218,9 +217,14 @@ A mono label + value + segmented meter (orange fill = the needle). Used anywhere
 ## Postie (`/postie`, Sept 2026)
 - Standalone landing page for the Postie subscription. Not in the header nav (the copy calls for no nav chrome); link to it from wherever you promote it.
 - Its CTA is **not** the sitewide Get in touch: the page's one action is its own enquiry form, so the filled-orange treatment goes to three "Ask about a subscription" anchors that all scroll to `#enquire`.
-- `PostieEnquiryForm.tsx` posts to `src/app/api/postie/route.ts`, which sends the enquiry to `mail@anoopkurup.com` through the Resend REST API (one fetch, no SDK). Needs `RESEND_API_KEY` in the environment (Vercel + `.env.local`), and `RESEND_FROM` if the sending address is not `postie@anoopkurup.com` on a Resend-verified domain. Without the key the form shows a mailto fallback. A hidden honeypot field drops bots.
+- `PostieEnquiryForm.tsx` posts to `src/app/api/postie/route.ts`, which sends the enquiry to `mail@anoopkurup.com` through the Resend REST API (one fetch, no SDK). Needs `RESEND_API_KEY` in the environment (Vercel + `.env.local`), and `RESEND_FROM` only to override the sender, which defaults to `enquiry@t2.anoopkurup.com` (the subdomain verified in Resend). Without the key the form shows a mailto fallback. A hidden honeypot field drops bots.
 - No prices on the page (standing site rule). Plans are described, not priced.
 - Event: `postie_enquiry_submit`.
+
+## Housekeeping (Sept 2026 audit)
+- Deleted, all with zero callers: `Reading.tsx`, the four one-line template wrappers (`Pillar`/`SubPillar`/`Spoke`/`Vertical` — every SEO page renders through `SeoPageLayout` directly), `PageTemplate.tsx` (folded into its only caller, `ContentPage.tsx`), the `heroBackground`/`heroIcon` props nothing read, and the `PageContent<T>` wrapper around every YAML loader.
+- Deleted the untracked-from-the-site `design-system/` package and `.design-sync/` previews: 1417 lines the site never imported, including Scorecard components retired in Aug 2026. In git history if the Claude Design sync needs them back.
+- CSP no longer allowlists Razorpay or Formspree (both integrations are gone; the Postie form posts same-origin), and the privacy policy names Resend as the form processor.
 
 ## Analytics
 - GA4 (`G-0X2P577TSX`) is loaded via `next/script` in `src/app/layout.tsx`.

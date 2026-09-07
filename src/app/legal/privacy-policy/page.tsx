@@ -21,5 +21,5 @@ export default function PrivacyPolicyPage() {
     return <div>Content not found</div>;
   }
 
-  return <ContentPage contentData={contentData} heroBackground="white" />;
+  return <ContentPage contentData={contentData} />;
 }

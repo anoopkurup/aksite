@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import PillarTemplate from '@/components/templates/PillarTemplate';
+import SeoPageLayout from '@/components/SeoPageLayout';
 import { getPageBySlug } from '@/lib/contentMap';
 import { markdownToHtml } from '@/lib/markdown';
 import { buildPageMetadata } from '@/lib/seo';
@@ -22,7 +22,7 @@ export default async function ClientAcquisitionSystemPage() {
   const bodyHtml = await markdownToHtml(content);
 
   return (
-    <PillarTemplate
+    <SeoPageLayout
       page={page}
       bodyHtml={bodyHtml}
       datePublished={data.date}

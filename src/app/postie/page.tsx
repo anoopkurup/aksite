@@ -7,7 +7,7 @@ import { breadcrumbSchema, serviceSchema, pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
-  const { data: content } = getPostiePageContent();
+  const content = getPostiePageContent();
   return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/postie" });
 }
 
@@ -26,7 +26,7 @@ function EnquireButton({ children }: { children: React.ReactNode }) {
 }
 
 export default function PostiePage() {
-  const { data: content } = getPostiePageContent();
+  const content = getPostiePageContent();
 
   return (
     <>

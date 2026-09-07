@@ -9,12 +9,12 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, serviceSchema } from "@/lib/seo";
 
 export function generateMetadata(): Metadata {
-  const { data: content } = getClearPageContent();
+  const content = getClearPageContent();
   return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/clear" });
 }
 
 export default function ClearPage() {
-  const { data: content } = getClearPageContent();
+  const content = getClearPageContent();
 
   return (
     <>

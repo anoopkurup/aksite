@@ -28,9 +28,9 @@ export const SITE = {
 } as const;
 
 /** Stable @id for the canonical Anoop Kurup Person entity (GEO — WO-14 Part B). */
-export const PERSON_ID = `${SITE.baseUrl}/#anoop-kurup`;
+const PERSON_ID = `${SITE.baseUrl}/#anoop-kurup`;
 
-export function absoluteUrl(path: string): string {
+function absoluteUrl(path: string): string {
   if (path.startsWith('http')) return path;
   return `${SITE.baseUrl}${path.startsWith('/') ? '' : '/'}${path}`;
 }

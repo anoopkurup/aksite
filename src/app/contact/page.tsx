@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
-  const { data: content } = getContactPageContent();
+  const content = getContactPageContent();
   return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/contact" });
 }
 
@@ -17,7 +17,7 @@ const METHOD_ICONS = {
 } as const;
 
 export default function ContactPage() {
-  const { data: content } = getContactPageContent();
+  const content = getContactPageContent();
 
   return (
     <>

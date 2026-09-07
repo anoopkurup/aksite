@@ -7,7 +7,7 @@ import { markdownToHtml, formatDate, estimateReadingTime } from '@/lib/markdown'
 import CTAButton from '@/components/CTAButton';
 import AuthorBio from '@/components/AuthorBio';
 import JsonLd from '@/components/JsonLd';
-import SpokeTemplate from '@/components/templates/SpokeTemplate';
+import SeoPageLayout from '@/components/SeoPageLayout';
 import { getPageBySlug } from '@/lib/contentMap';
 import { blogPostingSchema, breadcrumbSchema, buildPageMetadata, pageMetadata } from '@/lib/seo';
 import { ArrowLeft } from 'lucide-react';
@@ -42,7 +42,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const seoPage = getPageBySlug(slug);
   if (seoPage) {
     return (
-      <SpokeTemplate
+      <SeoPageLayout
         page={seoPage}
         bodyHtml={htmlContent}
         datePublished={post.frontmatter.date}

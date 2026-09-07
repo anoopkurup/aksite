@@ -8,12 +8,12 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/seo";
 
 export function generateMetadata(): Metadata {
-  const { data: content } = getAboutPageContent();
+  const content = getAboutPageContent();
   return pageMetadata({ title: content.meta.title, description: content.meta.description, path: "/about" });
 }
 
 export default function AboutPage() {
-  const { data: content } = getAboutPageContent();
+  const content = getAboutPageContent();
 
   return (
     <>
