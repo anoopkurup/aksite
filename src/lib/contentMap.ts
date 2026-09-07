@@ -1129,7 +1129,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['positioning-for-consulting-firms', 'how-to-differentiate-b2b-services-firm'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 5,
-    status: 'scaffold',
+    // Published 2026-09-07 (Wave 5, spoke 3 of 8 — positioning cluster complete).
+    status: 'live',
     brief: {
       angle:
         'Messaging fails from order, not vocabulary — say the problem before the method and the outcome before the credentials, then keep every page saying the same thing.',

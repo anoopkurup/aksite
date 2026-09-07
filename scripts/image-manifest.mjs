@@ -754,5 +754,26 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'b2b-messaging-framework',
+    hero: img(
+      'Four blocks reordered so the buyer reads them in the right sequence',
+      'Metaphor: a single vertical column of four stacked rounded rectangles of equal size on white, evenly spaced with clear gaps. The top block is filled solid navy; the three below are faint grey outlines. A slim orange curved arrow on the right side sweeps from the bottom of the column up to the top block, indicating a reordering. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'The buyer\u2019s four questions in order: problem, outcome, method, proof',
+        'Subject: four thin navy-outlined circles in one horizontal row on white, connected left to right by three short straight navy arrows. The first circle on the left is filled solid orange; the other three stay as fine navy outlines. Nothing else in the frame. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'One written message, four surfaces saying it identically',
+        'Subject: a small solid navy square at the centre of the frame, with four fine navy lines radiating out to four identical faint grey rounded rectangles arranged at the corners, like screens. Each grey rectangle contains the same single short navy horizontal line in the same position. One thin orange ring surrounds the central navy square. Flat 2D vector, pure-white background, no text.'
+      ),
+      img(
+        'Positioning decided first, then the words that carry it',
+        'Subject: a fine navy line-art foundation block at the bottom, wide and solid navy, with a lighter navy outlined block resting squarely on top of it, and a small solid orange triangle marker sitting on the upper block. A thin grey dotted line runs along the join between the two blocks. Flat 2D vector, pure-white background, generous white space, no text.'
+      ),
+    ],
+  },
 ];
 
