@@ -26,6 +26,7 @@ Get in touch (/contact — the ONE primary CTA sitewide)
 | `/pipeline-reality-check` | One-week done-for-you diagnosis (no published price) | `content/pages/pipeline-reality-check.yaml` |
 | `/clear` | The CLEAR method — "How I Work" methodology page | `content/pages/clear.yaml` |
 | `/workshops` | Workshops & training (3 curricula, no prices) | `content/pages/workshops.yaml` |
+| `/postie` | Postie landing page (LinkedIn first-draft subscription). PAS spine, one action: the enquiry form at `#enquire`, emailed to Anoop via Resend (`/api/postie`) | `content/pages/postie.yaml` |
 | `/about` | Bio + services + podcast | `content/pages/about.yaml` |
 | `/blog` | Markdown blog system | `content/blog/posts/*.md` |
 | `/blog/category/[category]` | Filtered index (static, one per category) | `src/components/BlogIndex.tsx` |
@@ -43,7 +44,6 @@ Get in touch (/contact — the ONE primary CTA sitewide)
 - `/scorecard` — **Sales Scorecard removed Aug 2026** (301 → `/contact`). The interactive 10-question self-assessment (`ScorecardTool.tsx`, Reading meter climax, Formspree email capture) was the primary CTA of the June-2026 "I fix sales" positioning; with the shift to marketing consulting it no longer had a funnel to feed. Deleted `src/app/scorecard/` and `public/images/pages/scorecard-bands.webp`; every CTA now points at `/contact`.
 - `/diagnose` — replaced by the funnel (301 → `/contact`)
 - `/build` — replaced by `/clear` (301 → `/clear`)
-- `/postie` — Postie retired (301 → `/contact`)
 - `/framework`, `/partner` — 301 → `/clear`, `/contact`
 - `/podcast` — retired July 2026 (301 → `/about`). It was a stub: 9 episodes and 4 platform links all pointing at `#`, copy selling the retired "Lead Machine Method™", and no internal links to it. `/about` carries the podcast mention. Bring it back only with real episode URLs.
 - `/videos` never existed — old `/resources/*` redirects now point to `/blog`
@@ -214,6 +214,13 @@ A mono label + value + segmented meter (orange fill = the needle). Used anywhere
 ## Payments & WhatsApp (July 2026; checkout deleted Aug 2026)
 - **PRC Razorpay checkout deleted 24 Aug 2026** (it still carried "₹25,000"). `BookPRCButton.tsx`, `/api/prc/order` and `/api/prc/verify` are in git history only; `RAZORPAY_*` env vars are unused. The PRC page uses the contact CTA.
 - **WhatsApp (+91 90360 14008)** is a first-class channel: `FloatingWhatsApp.tsx` (desktop pill after one screen of scroll; mobile sticky WhatsApp+Call bar — body has `pb-12 md:pb-0` to clear it), first method on /contact, and a "prefer to talk first?" underline link in the PRC price box. Events: `whatsapp_click`, `call_click`.
+
+## Postie (`/postie`, Sept 2026)
+- Standalone landing page for the Postie subscription. Not in the header nav (the copy calls for no nav chrome); link to it from wherever you promote it.
+- Its CTA is **not** the sitewide Get in touch: the page's one action is its own enquiry form, so the filled-orange treatment goes to three "Ask about a subscription" anchors that all scroll to `#enquire`.
+- `PostieEnquiryForm.tsx` posts to `src/app/api/postie/route.ts`, which sends the enquiry to `mail@anoopkurup.com` through the Resend REST API (one fetch, no SDK). Needs `RESEND_API_KEY` in the environment (Vercel + `.env.local`), and `RESEND_FROM` if the sending address is not `postie@anoopkurup.com` on a Resend-verified domain. Without the key the form shows a mailto fallback. A hidden honeypot field drops bots.
+- No prices on the page (standing site rule). Plans are described, not priced.
+- Event: `postie_enquiry_submit`.
 
 ## Analytics
 - GA4 (`G-0X2P577TSX`) is loaded via `next/script` in `src/app/layout.tsx`.

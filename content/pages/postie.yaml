@@ -1,0 +1,128 @@
+# Postie landing page (/postie)
+# PAS spine: problem → agitate → solution. Do not reorder the first sections.
+# Prices are deliberately absent (site rule: no figures in copy).
+
+meta:
+  title: "Postie | Finished LinkedIn posts in your inbox every week"
+  description: "Postie writes your LinkedIn first draft. Finished posts, researched on your topics and written in your voice, delivered by email every week. You edit and publish."
+
+hero:
+  eyebrow: "Postie"
+  title: "You don't have a LinkedIn problem. You have a first draft problem."
+  subhead: "Postie writes the first draft for you. Finished posts, researched on your topics and written in your voice, land in your inbox every week. You read, tweak a line, publish. The blank page never comes up again."
+  cta_text: "Ask about a subscription"
+  cta_note: "Run by me, not a platform. Limited seats."
+
+problem:
+  title: "The post you never wrote was never about ideas."
+  body:
+    - "You have plenty to say. You say it every week, on calls, in proposals, in the answer you give a client for the fourth time this month. You know your market better than almost anyone posting into it."
+    - "Then you open LinkedIn to write it down, and something odd happens. The cursor sits there. You start a sentence, delete it, start again. Twenty minutes go by. You tell yourself you will do it properly at the weekend."
+    - "That is not a discipline problem or a content strategy problem. It is the first draft problem. Starting from nothing is a completely different job from having an opinion, and it is the job almost nobody enjoys."
+
+agitate:
+  title: "What the blank page quietly costs you."
+  body:
+    - "You post twice in a good week, then nothing for a month. The people who were starting to recognise your name stop seeing it. The next time they need someone who does what you do, you are not the one they think of. Someone with worse answers and a steadier posting habit is."
+    - "So you try the usual fixes."
+    - "You hire a writer, brief them for an hour, and get back something polished and weightless. It reads like it could have been written about any firm in your category, because it was written by someone who has never sat in your client calls."
+    - "You try ChatGPT. It writes fast. But you still have to decide what to write about, which is half the work, and what comes back is the same three-word-line LinkedIn voice everyone else is pasting in. Three posts in, you can hear it. So can your audience."
+    - "You buy a course, fill a Notion board with ideas, and never touch it again. The board was never the bottleneck. Sitting down to a blank page on a Tuesday morning was."
+    - "Meanwhile the compounding you wanted from LinkedIn, the inbound conversation that starts with \"I have been reading your posts\", never gets going. It needs months of consistency, and consistency is precisely the thing the blank page takes from you."
+
+solution:
+  title: "Postie hands you a finished draft. Your job becomes editing."
+  body:
+    - "Postie is a small service I built and run. Every week it researches what is being discussed in your field, picks topics that fit the themes you actually want to be known for, and writes complete posts in your voice. They arrive by email, ready to post, with an image."
+    - "You are not staring at a blank page. You are reading something and thinking \"yes, but I would say it this way\". That takes ten minutes, not an hour, and it is a job you can do on a Monday morning with a coffee, tired, without motivation. That is the whole point."
+    - "Nothing is posted for you. Postie never touches your LinkedIn account and never asks for your password. The last word stays yours, every time."
+  cta_text: "Ask about a subscription"
+
+how_it_works:
+  title: "Three steps, then it runs."
+  steps:
+    - title: "Onboarding, about an hour of your time."
+      body: "We go through who you sell to, the handful of themes you want to own, and what you actually believe about them. You send me a few posts or pieces of writing that sound like you. That becomes your voice profile."
+    - title: "Postie researches and writes, every week."
+      body: "It looks for what is current in your field, checks each idea against everything it has already written for you, and drafts the posts. Every draft is checked for length, tone, and the tics that make writing sound automated."
+    - title: "Posts arrive in your inbox on a fixed schedule."
+      body: "Same days, every week. Read, edit, publish. Or skip one, and the topic goes back in the queue for later."
+
+what_you_get:
+  title: "What lands in your inbox."
+  items:
+    - title: "Finished LinkedIn posts on a fixed weekly schedule."
+      body: "Not outlines, not prompts, not bullet points to expand. Complete posts you could publish unedited, though you probably will not."
+    - title: "An image with every post,"
+      body: "made for the post rather than pulled from a stock library."
+    - title: "Topics researched fresh each week,"
+      body: "drawn from what is actually being discussed in your field right now, not recycled from a fixed idea bank."
+    - title: "A weekly long-form article as a Word document,"
+      body: "on the higher plan. Yours to publish as a newsletter, a blog post, or a client mailer. It comes with a companion LinkedIn post that points at it."
+    - title: "A calendar view"
+      body: "of what is coming, so you always know what is scheduled."
+    - title: "Me, on email."
+      body: "If a post misses, tell me and I fix the instructions behind it. You are not filing a ticket with a support queue."
+  cta_text: "Ask about a subscription"
+
+why_not_ai:
+  title: "The boring engineering is the whole product."
+  intro: "Anyone can get a language model to write a LinkedIn post. Getting it to write fifty of them across a year without drifting into repetition, sameness, and tells is a different problem. Most of Postie is the machinery that stops that happening."
+  points:
+    - title: "It will not repeat itself."
+      body: "Three separate checks run before any topic is accepted, including one that catches the same idea coming back with new words on it. The reworded repeat is the failure everyone else ships."
+    - title: "It rotates across your themes on purpose."
+      body: "You set how much weight each theme carries. If you want two posts a week on the thing that wins you work and one on the thing that builds credibility, that is what you get, week after week, instead of whatever the model found most interesting that morning."
+    - title: "It writes in your voice, not the LinkedIn voice."
+      body: "No hashtags. No one-line-per-sentence stacking. No \"Here's the thing:\". No dashes for drama. These are not requests in a prompt, they are rules in code, which means they hold on every post rather than most of them."
+    - title: "It never ends with a templated call to action."
+      body: "No \"What do you think? Let me know below\" bolted onto the bottom of every post. That closer is the fastest way to look automated."
+    - title: "Everything is validated before it reaches you."
+      body: "If a draft comes out wrong, it is caught and rewritten rather than emailed to you."
+
+fit:
+  title: "This works if you sell on expertise."
+  for_title: "A good fit if you are:"
+  for_items:
+    - "A consultant, advisor, or professional services owner whose next client is someone who already trusts your judgement."
+    - "A founder or partner who knows LinkedIn matters and has proven to yourself, repeatedly, that you will not sit down and write."
+    - "Someone with real opinions about your market and no interest in outsourcing them to a writer who does not have them."
+    - "Willing to spend ten minutes a week editing. That part cannot be removed, and you would not want it removed."
+  not_for_title: "Not a good fit if you:"
+  not_for_items:
+    - "Want follower growth, viral hooks, or engagement pods. Postie writes to be read by the few hundred people who could actually hire you."
+    - "Want to publish without reading first. Postie is a first draft service, and a first draft is meant to be read."
+    - "Want a full ghostwriting relationship with strategy calls and revision rounds. That is a good thing to buy. It is not this."
+
+plans:
+  title: "Two plans."
+  items:
+    - name: "Posts"
+      description: "Finished LinkedIn posts every week, with images, on a fixed schedule."
+    - name: "Posts and article"
+      description: "Everything above, plus a long-form article every week as a Word document, with a companion post."
+  note: "Both are monthly. No annual lock-in. Onboarding is a one-time session included in the first month."
+
+faq:
+  title: "Questions people ask."
+  items:
+    - question: "Does it post to LinkedIn for me?"
+      answer: "No. Everything arrives by email and you publish it yourself. I do not ask for your LinkedIn login and Postie has no access to your account."
+    - question: "What if I do not like a post?"
+      answer: "Edit it, which is the expected use, or skip it. A skipped topic goes back in the queue. If posts keep missing in the same way, email me and I change the instructions behind your account. That is what you are paying for as much as the posts themselves."
+    - question: "How long does onboarding take?"
+      answer: "About an hour of your time, and posts start the following week."
+    - question: "Will it sound like me?"
+      answer: "It is trained on writing you supply, and it improves in the first few weeks as you edit. Expect the first week to need more editing than the fourth. If it is not close by week three, tell me, because that is a fixable problem and not a you problem."
+    - question: "Can I pause it?"
+      answer: "Yes. Tell me and delivery stops. Your themes and voice profile are kept, so restarting takes an email."
+    - question: "Do you work with my competitors?"
+      answer: "No. One client per niche per market. Seats are limited for that reason as much as any other."
+    - question: "Who actually runs this?"
+      answer: "I do. I built it, I run it, and I read the output. It is not a reseller account on somebody else's tool."
+
+final:
+  title: "Stop negotiating with a blank page."
+  body: "Tell me what you do and who you want to reach. If Postie fits, I will show you what a week of your posts would look like before you commit to anything."
+  form_heading: "Ask about a subscription"
+  form_note: "I reply to these myself, usually within a working day."

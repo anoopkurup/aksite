@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: '/clear', priority: 0.8 },
     { route: '/pipeline-reality-check', priority: 0.8 },
     { route: '/workshops', priority: 0.8 },
+    { route: '/postie', priority: 0.8 },
     { route: '/about', priority: 0.7 },
     { route: '/case-studies', priority: 0.7 },
     { route: '/blog', priority: 0.7 },

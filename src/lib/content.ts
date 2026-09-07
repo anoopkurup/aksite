@@ -281,6 +281,56 @@ export interface AboutPageContent {
   };
 }
 
+// ============================================================================
+// Postie Page Content (/postie)
+// ============================================================================
+export interface PostiePageContent {
+  meta: { title: string; description: string };
+  hero: {
+    eyebrow: string;
+    title: string;
+    subhead: string;
+    cta_text: string;
+    cta_note: string;
+  };
+  problem: { title: string; body: string[] };
+  agitate: { title: string; body: string[] };
+  solution: { title: string; body: string[]; cta_text: string };
+  how_it_works: {
+    title: string;
+    steps: Array<{ title: string; body: string }>;
+  };
+  what_you_get: {
+    title: string;
+    items: Array<{ title: string; body: string }>;
+    cta_text: string;
+  };
+  why_not_ai: {
+    title: string;
+    intro: string;
+    points: Array<{ title: string; body: string }>;
+  };
+  fit: {
+    title: string;
+    for_title: string;
+    for_items: string[];
+    not_for_title: string;
+    not_for_items: string[];
+  };
+  plans: {
+    title: string;
+    items: Array<{ name: string; description: string }>;
+    note: string;
+  };
+  faq: { title: string; items: Array<{ question: string; answer: string }> };
+  final: {
+    title: string;
+    body: string;
+    form_heading: string;
+    form_note: string;
+  };
+}
+
 // Workshops Page Content
 export interface WorkshopsPageContent {
   meta: {
@@ -393,4 +443,11 @@ export function getContactPageContent(): PageContent<ContactPageContent> {
  */
 export function getWorkshopsPageContent(): PageContent<WorkshopsPageContent> {
   return loadYamlContent<WorkshopsPageContent>('pages/workshops.yaml');
+}
+
+/**
+ * Get Postie page content
+ */
+export function getPostiePageContent(): PageContent<PostiePageContent> {
+  return loadYamlContent<PostiePageContent>('pages/postie.yaml');
 }
