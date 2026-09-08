@@ -33,7 +33,8 @@ const TOL = 12; // how far off the navy→white line a pixel may sit
 const MIN_COVERAGE = 0.3; // below this, leave it (pale fringe + light greys)
 const RAMP = 0.15; // smooth the cut-in so there's no seam
 const DRIFT_LIMIT = 20; // RGB distance from BRAND we accept as "already on-brand"
-const WHITE_FLOOR = 250; // ground: anything this pale on all three channels is meant to be white
+const GROUND_MIN = 235; // a pixel this pale on every channel is a candidate ground pixel
+const GROUND_TOL = 5;   // how far from the ground colour a pixel may sit and still be ground
 
 const dist = (a, b) => Math.hypot(a.r - b.r, a.g - b.g, a.b - b.b);
 
@@ -85,30 +86,54 @@ function findSourceNavy(data, channels) {
  * coverage are untouched.
  */
 /**
- * Is the ground actually off-white? Decided on the DOMINANT pale colour, not a
- * pixel count: q82 leaves ±1 noise scattered through any flat area, so counting
- * near-white pixels never converges and every run would rewrite every file. The
- * mode does converge, because after one pass the ground really is #FFFFFF.
+ * The ground colour the model actually painted: the dominant pale pixel value.
+ *
+ * Per image, not a fixed threshold. The grounds are not all flat #FEFEFC; some
+ * are a mottled warm off-white whose dominant value sits at #FEFDF9 with a
+ * scatter of neighbours around it. A fixed floor splits a ground like that,
+ * whitening the pale half and leaving the rest, which puts white blotches on a
+ * cream field. Finding the ground first and clearing everything around it does
+ * not have that failure.
+ *
+ * Returns null when the image has no meaningful pale ground to speak of.
  */
-function groundIsOffWhite(data, channels) {
+function findGround(data, channels) {
   const counts = new Map();
+  let pale = 0;
   for (let i = 0; i < data.length; i += channels) {
     const r = data[i], g = data[i + 1], b = data[i + 2];
-    if (r < WHITE_FLOOR || g < WHITE_FLOOR || b < WHITE_FLOOR) continue;
+    if (r < GROUND_MIN || g < GROUND_MIN || b < GROUND_MIN) continue;
     const key = (r << 16) | (g << 8) | b;
     counts.set(key, (counts.get(key) || 0) + 1);
+    pale++;
   }
-  let best = 0, bestN = 0;
+  if (pale < 1000) return null;
+  let best = -1, bestN = 0;
   for (const [key, n] of counts) if (n > bestN) { best = key; bestN = n; }
-  return bestN > 0 && best !== 0xffffff;
+  return { r: (best >> 16) & 255, g: (best >> 8) & 255, b: best & 255 };
 }
 
-function whiten(data, channels) {
+/**
+ * Flatten the ground to pure white.
+ *
+ * Second drift the model has: BRAND_PREAMBLE asks for "pure flat white #FFFFFF,
+ * edge to edge" and gpt-image-1 returns a warm off-white. Invisible in isolation
+ * and obvious on the site, where the art sits on real white and the frame shows
+ * up as a faint rectangle.
+ *
+ * A pixel is ground if it sits within GROUND_TOL of the ground colour, or is at
+ * least as bright as the ground on every channel (already closer to white). The
+ * orange glow fails both tests by a wide margin on its blue channel, and so does
+ * every anti-alias fringe with real coverage.
+ */
+function whiten(data, channels, G) {
   let touched = 0;
   for (let i = 0; i < data.length; i += channels) {
     const r = data[i], g = data[i + 1], b = data[i + 2];
-    if (r < WHITE_FLOOR || g < WHITE_FLOOR || b < WHITE_FLOOR) continue;
     if (r === 255 && g === 255 && b === 255) continue;
+    const near = Math.hypot(r - G.r, g - G.g, b - G.b) <= GROUND_TOL;
+    const lighter = r >= G.r && g >= G.g && b >= G.b;
+    if (!near && !lighter) continue;
     data[i] = data[i + 1] = data[i + 2] = 255;
     touched++;
   }
@@ -176,7 +201,9 @@ export async function rebrandNavy({ only = null, dry = false } = {}) {
     const drift = N ? dist(N, BRAND) : 0;
     const needsNavy = Boolean(N) && drift > DRIFT_LIMIT;
     // Mutates the in-memory copy only; dry mode never writes it back.
-    const whitened = groundIsOffWhite(data, info.channels) ? whiten(data, info.channels) : 0;
+    const G = findGround(data, info.channels);
+    const offWhite = Boolean(G) && !(G.r === 255 && G.g === 255 && G.b === 255);
+    const whitened = offWhite ? whiten(data, info.channels, G) : 0;
     if (!needsNavy && !whitened) { N ? clean++ : skipped++; continue; }
 
     if (dry) {
@@ -223,7 +250,9 @@ export async function rebrandFile(file) {
   const { data, info } = await sharp(file).raw().toBuffer({ resolveWithObject: true });
   const N = findSourceNavy(data, info.channels);
   const needsNavy = Boolean(N) && dist(N, BRAND) > DRIFT_LIMIT;
-  const whitened = groundIsOffWhite(data, info.channels) ? whiten(data, info.channels) : 0;
+  const G = findGround(data, info.channels);
+  const offWhite = Boolean(G) && !(G.r === 255 && G.g === 255 && G.b === 255);
+  const whitened = offWhite ? whiten(data, info.channels, G) : 0;
   if (!needsNavy && !whitened) return { fixed: false, reason: N ? "on-brand" : "no navy" };
   const touched = needsNavy ? recolour(data, info.channels, N) : 0;
   const raw = { width: info.width, height: info.height, channels: info.channels };
@@ -236,18 +265,33 @@ export async function rebrandFile(file) {
 
 /** node scripts/rebrand-navy.mjs --selftest — the ground pass, no files, no API. */
 function selftest() {
-  const px = (...rgb) => Uint8Array.from(rgb);
-  const warmGround = px(254, 254, 252, 254, 254, 252, 255, 250, 240, 31, 61, 115);
-  if (!groundIsOffWhite(warmGround, 3)) throw new Error("warm #FEFEFC ground not detected");
-  const whitened = whiten(warmGround, 3);
-  if (whitened !== 2) throw new Error(`expected 2 ground px whitened, got ${whitened}`);
-  if (warmGround[6] !== 255 || warmGround[7] !== 250 || warmGround[8] !== 240)
-    throw new Error("orange glow pixel was flattened");
-  if (warmGround[9] !== 31) throw new Error("navy pixel was flattened");
+  const pixels = (...rgb) => Uint8Array.from(rgb);
+  const rep = (px, n) => Array.from({ length: n }, () => px).flat();
 
-  const clean = px(255, 255, 255, 255, 255, 255, 254, 254, 252, 31, 61, 115);
-  if (groundIsOffWhite(clean, 3)) throw new Error("pure-white ground reported as drifted (would never converge)");
-  console.log("selftest: ok — off-white ground detected and flattened, white ground left alone");
+  // A mottled warm ground: the dominant value sits BELOW any sensible fixed
+  // floor, with paler neighbours scattered through it. Both must end up white,
+  // or the image gets blotches.
+  const mottled = pixels(
+    ...rep([254, 253, 249], 900), // the ground the model painted
+    ...rep([255, 255, 253], 200), // paler mottling
+    ...rep([255, 240, 225], 50),  // orange glow
+    ...rep([31, 61, 115], 50),    // navy line work
+  );
+  const G = findGround(mottled, 3);
+  if (!G || G.r !== 254 || G.g !== 253 || G.b !== 249) throw new Error(`ground misread: ${JSON.stringify(G)}`);
+  const touched = whiten(mottled, 3, G);
+  if (touched !== 1100) throw new Error(`expected 1100 ground px whitened, got ${touched}`);
+  const at = (i) => [mottled[i * 3], mottled[i * 3 + 1], mottled[i * 3 + 2]].join(",");
+  if (at(0) !== "255,255,255" || at(1000) !== "255,255,255") throw new Error("ground not flattened");
+  if (at(1100) !== "255,240,225") throw new Error("orange glow was flattened");
+  if (at(1150) !== "31,61,115") throw new Error("navy line work was flattened");
+
+  // Already clean: the pass must be a no-op, or every run rewrites every file.
+  const clean = pixels(...rep([255, 255, 255], 1000), ...rep([31, 61, 115], 50));
+  const G2 = findGround(clean, 3);
+  if (!G2 || G2.r !== 255 || G2.g !== 255 || G2.b !== 255) throw new Error("clean ground misread");
+
+  console.log("selftest: ok — mottled ground flattened, art untouched, white ground left alone");
 }
 
 // CLI entry — only when run directly, so generate-images.mjs can import the fn.
