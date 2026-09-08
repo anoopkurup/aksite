@@ -281,28 +281,43 @@ export interface PostiePageContent {
   hero: {
     eyebrow: string;
     title: string;
-    subhead: string;
+    subhead: string[];
     cta_text: string;
     cta_note: string;
+    strip: string[];
   };
-  problem: { title: string; body: string[] };
-  agitate: { title: string; body: string[] };
-  solution: { title: string; body: string[]; cta_text: string };
+  problem: {
+    eyebrow: string;
+    title: string;
+    body: string[];
+    pull_quote: string;
+  };
+  alternatives: {
+    eyebrow: string;
+    title: string;
+    items: Array<{ label: string; title: string; body: string }>;
+    answer_eyebrow: string;
+    answer_title: string;
+    answer_body: string[];
+  };
   how_it_works: {
+    eyebrow: string;
     title: string;
     steps: Array<{ title: string; body: string }>;
   };
   what_you_get: {
+    eyebrow: string;
     title: string;
     items: Array<{ title: string; body: string }>;
-    cta_text: string;
   };
-  why_not_ai: {
+  engineering: {
+    eyebrow: string;
     title: string;
-    intro: string;
+    intro: string[];
     points: Array<{ title: string; body: string }>;
   };
   fit: {
+    eyebrow: string;
     title: string;
     for_title: string;
     for_items: string[];
@@ -310,14 +325,19 @@ export interface PostiePageContent {
     not_for_items: string[];
   };
   plans: {
+    eyebrow: string;
     title: string;
-    items: Array<{ name: string; description: string }>;
+    items: Array<{ name: string; description: string; includes: string[] }>;
     note: string;
   };
-  faq: { title: string; items: Array<{ question: string; answer: string }> };
+  faq: {
+    eyebrow: string;
+    title: string;
+    items: Array<{ question: string; answer: string }>;
+  };
   final: {
     title: string;
-    body: string;
+    body: string[];
     form_heading: string;
     form_note: string;
   };

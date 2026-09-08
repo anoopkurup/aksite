@@ -61,6 +61,38 @@ export const pages = [
       'Metaphor: three bold solid-filled navy concept-icons in a confident row on one clean baseline, joined by a fine navy line with small orange nodes, each with a very subtle soft shadow. (1) a solid navy stack of data rows / spreadsheet — twelve months of deals going in; (2) a solid navy clock or single calendar tile with a small orange marker — one week; (3) a solid navy report document with an orange wax-seal / verdict mark — a written verdict coming out. Premium, generous white space, no extra text.',
   },
   {
+    id: 'page-postie-inbox',
+    out: 'public/images/pages/postie-inbox.webp',
+    size: W,
+    alt: 'An empty page on one side, a neat stack of finished pages arriving in an inbox tray on the other',
+    prompt:
+      'Metaphor: the blank page problem solved. LEFT: a single thin grey outlined rectangle, completely empty, with a faint grey cursor mark in its top corner — the blank page, drawn light and lifeless. A fine navy line carries across the composition to the RIGHT, where a bold solid-filled navy inbox tray holds a neat, evenly stacked pile of finished navy pages with fine grey text-lines ruled on them; the top page in the stack is lit with a soft orange radial glow and carries one small solid orange mark. The stack is the confident focal object. Wide banner, generous white space, no text.',
+  },
+  {
+    id: 'page-postie-doors',
+    out: 'public/images/pages/postie-doors.webp',
+    size: W,
+    alt: 'Three closed grey doorways beside one open navy doorway with orange light coming through',
+    prompt:
+      'Metaphor: three doors that close and one that opens. THREE thin grey line-art doorways stand in a row, each firmly shut, drawn light and flat and slightly recessive. To their RIGHT, set apart with clear white space, ONE bold solid-filled navy doorway stands open, with a soft warm orange glow spilling out through the opening onto the floor line. All four doorways sit on one clean implied baseline. Restrained, architectural, generous negative space, no text or labels.',
+  },
+  {
+    id: 'page-postie-week',
+    out: 'public/images/pages/postie-week.webp',
+    size: W,
+    alt: 'An hour of setup feeding a gear that delivers posts on evenly spaced days',
+    prompt:
+      'Metaphor: one hour of setup, then a weekly rhythm running by itself. THREE bold solid-filled navy concept-icons in a confident row on one clean baseline, joined by a fine navy line with small solid orange nodes between them, each icon casting a very subtle soft shadow. (1) a solid navy clock face showing a single hour sweep — the onboarding hour; (2) a solid navy gear meshed with a smaller solid orange gear — the machinery running; (3) a row of four evenly spaced solid navy calendar tiles on one baseline, each carrying a small page mark, the nearest tile lit with a soft orange glow — posts landing on fixed days. Premium, spare, lots of white space, no text labels.',
+  },
+  {
+    id: 'page-postie-filter',
+    out: 'public/images/pages/postie-filter.webp',
+    size: W,
+    alt: 'A stream of drafts passing through filter gates, repeats falling away, one approved draft emerging',
+    prompt:
+      'Metaphor: the quality machinery that catches bad drafts. LEFT: a loose stream of thin grey line-art page shapes moving right, several of them visibly identical to each other — repetition, noise. CENTRE: two or three bold solid-filled navy filter gates or sieve bars stacked in sequence; the duplicate grey pages catch on the bars and fall away downward as light grey discards. RIGHT: a single solid-filled navy page emerges cleanly onto a baseline, lit with a soft orange radial glow and carrying one small solid orange check mark. Wide banner, mechanical and precise, generous white space, no text.',
+  },
+  {
     id: 'page-client-acquisition-system',
     out: 'public/images/pages/client-acquisition-system.webp',
     size: W,

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowRight, Phone } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
@@ -29,6 +30,9 @@ function WhatsAppGlyph({ className }: { className?: string }) {
 
 export default function FloatingWhatsApp() {
   const [shown, setShown] = useState(false);
+  // /postie has its own primary action (the enquiry form), so the bar leads with
+  // that instead of sending a Postie visitor to the generic contact page.
+  const onPostie = usePathname() === "/postie";
 
   useEffect(() => {
     const onScroll = () => setShown(window.scrollY > REVEAL_AFTER_PX);
@@ -60,14 +64,25 @@ export default function FloatingWhatsApp() {
           the one primary action, and on a phone this is the only place it is
           visible without scrolling. */}
       <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-[1.4fr_1fr_0.8fr] border-t border-slate-200 md:hidden">
-        <Link
-          href="/contact"
-          onClick={() => trackEvent("contact_cta_click", { from: "sticky_mobile" })}
-          className="flex min-h-[3rem] items-center justify-center gap-1.5 bg-cta-500 py-3 font-sans text-sm font-semibold text-navy-950"
-        >
-          Get in touch
-          <ArrowRight className="h-4 w-4" aria-hidden focusable={false} />
-        </Link>
+        {onPostie ? (
+          <a
+            href="#enquire"
+            onClick={() => trackEvent("postie_enquiry_scroll", { from: "sticky_mobile" })}
+            className="flex min-h-[3rem] items-center justify-center gap-1.5 bg-cta-500 py-3 font-sans text-sm font-semibold text-navy-950"
+          >
+            Ask about Postie
+            <ArrowRight className="h-4 w-4" aria-hidden focusable={false} />
+          </a>
+        ) : (
+          <Link
+            href="/contact"
+            onClick={() => trackEvent("contact_cta_click", { from: "sticky_mobile" })}
+            className="flex min-h-[3rem] items-center justify-center gap-1.5 bg-cta-500 py-3 font-sans text-sm font-semibold text-navy-950"
+          >
+            Get in touch
+            <ArrowRight className="h-4 w-4" aria-hidden focusable={false} />
+          </Link>
+        )}
         <a
           href={WHATSAPP_URL}
           target="_blank"
