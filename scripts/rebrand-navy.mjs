@@ -16,6 +16,8 @@
  * below MIN_COVERAGE (the palest anti-alias fringe and the light greys, which sit
  * near white) are skipped so the greys stay neutral.
  *
+ * It also snaps the near-white ground to pure #FFFFFF; see whiten() below.
+ *
  * Runs automatically at the end of `npm run images`; also available standalone:
  *   node scripts/rebrand-navy.mjs --dry            # report drift, write nothing
  *   node scripts/rebrand-navy.mjs                  # fix every drifted image
@@ -31,6 +33,7 @@ const TOL = 12; // how far off the navy→white line a pixel may sit
 const MIN_COVERAGE = 0.3; // below this, leave it (pale fringe + light greys)
 const RAMP = 0.15; // smooth the cut-in so there's no seam
 const DRIFT_LIMIT = 20; // RGB distance from BRAND we accept as "already on-brand"
+const WHITE_FLOOR = 250; // ground: anything this pale on all three channels is meant to be white
 
 const dist = (a, b) => Math.hypot(a.r - b.r, a.g - b.g, a.b - b.b);
 
@@ -67,6 +70,49 @@ function findSourceNavy(data, channels) {
   if (R.length < 200) return null; // not a navy illustration
   const mid = (arr) => { arr.sort((a, b) => a - b); return arr[arr.length >> 1]; };
   return { r: mid(R), g: mid(G), b: mid(B) };
+}
+
+/**
+ * Snap the near-white ground to pure white.
+ *
+ * Second drift the model has: BRAND_PREAMBLE asks for "pure flat white #FFFFFF,
+ * edge to edge" and gpt-image-1 returns a warm off-white (#FEFEFC is the usual
+ * one). It is invisible in isolation and obvious on the site, where the art sits
+ * on real white and the frame shows up as a faint rectangle.
+ *
+ * Only pixels already pale on all three channels move, so the orange glow (whose
+ * blue channel is far below the floor) and every anti-alias fringe with real
+ * coverage are untouched.
+ */
+/**
+ * Is the ground actually off-white? Decided on the DOMINANT pale colour, not a
+ * pixel count: q82 leaves ±1 noise scattered through any flat area, so counting
+ * near-white pixels never converges and every run would rewrite every file. The
+ * mode does converge, because after one pass the ground really is #FFFFFF.
+ */
+function groundIsOffWhite(data, channels) {
+  const counts = new Map();
+  for (let i = 0; i < data.length; i += channels) {
+    const r = data[i], g = data[i + 1], b = data[i + 2];
+    if (r < WHITE_FLOOR || g < WHITE_FLOOR || b < WHITE_FLOOR) continue;
+    const key = (r << 16) | (g << 8) | b;
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  let best = 0, bestN = 0;
+  for (const [key, n] of counts) if (n > bestN) { best = key; bestN = n; }
+  return bestN > 0 && best !== 0xffffff;
+}
+
+function whiten(data, channels) {
+  let touched = 0;
+  for (let i = 0; i < data.length; i += channels) {
+    const r = data[i], g = data[i + 1], b = data[i + 2];
+    if (r < WHITE_FLOOR || g < WHITE_FLOOR || b < WHITE_FLOOR) continue;
+    if (r === 255 && g === 255 && b === 255) continue;
+    data[i] = data[i + 1] = data[i + 2] = 255;
+    touched++;
+  }
+  return touched;
 }
 
 function recolour(data, channels, N) {
@@ -127,16 +173,19 @@ export async function rebrandNavy({ only = null, dry = false } = {}) {
   for (const f of targets) {
     const { data, info } = await sharp(f).raw().toBuffer({ resolveWithObject: true });
     const N = findSourceNavy(data, info.channels);
-    if (!N) { skipped++; continue; }
-    const drift = dist(N, BRAND);
-    if (drift <= DRIFT_LIMIT) { clean++; continue; }
+    const drift = N ? dist(N, BRAND) : 0;
+    const needsNavy = Boolean(N) && drift > DRIFT_LIMIT;
+    // Mutates the in-memory copy only; dry mode never writes it back.
+    const whitened = groundIsOffWhite(data, info.channels) ? whiten(data, info.channels) : 0;
+    if (!needsNavy && !whitened) { N ? clean++ : skipped++; continue; }
 
     if (dry) {
-      console.log(`  drift ${String(Math.round(drift)).padStart(3)}  ${hex(N)} -> #1f3d73  ${f}`);
+      const why = needsNavy ? `drift ${String(Math.round(drift)).padStart(3)}  ${hex(N)} -> #1f3d73` : `ground -> #ffffff (${whitened} px)`;
+      console.log(`  ${why}  ${f}`);
       fixed++;
       continue;
     }
-    const touched = recolour(data, info.channels, N);
+    const touched = needsNavy ? recolour(data, info.channels, N) : 0;
     // Lossy q82, NOT lossless. The "it's just a source asset, next/image re-encodes
     // it for delivery" reasoning only holds where next/image is actually in the path.
     // It isn't for inline post images: the generator injects those into the markdown
@@ -151,7 +200,10 @@ export async function rebrandNavy({ only = null, dry = false } = {}) {
       .webp({ quality: 82 })
       .toFile(f + ".tmp");
     renameSync(f + ".tmp", f);
-    console.log(`  ${hex(N)} -> #1f3d73  (${touched} px)  ${f}`);
+    const parts = [];
+    if (needsNavy) parts.push(`${hex(N)} -> #1f3d73 (${touched} px)`);
+    if (whitened) parts.push(`ground -> #ffffff (${whitened} px)`);
+    console.log(`  ${parts.join("  ")}  ${f}`);
     fixed++;
   }
 
@@ -170,20 +222,38 @@ export async function rebrandNavy({ only = null, dry = false } = {}) {
 export async function rebrandFile(file) {
   const { data, info } = await sharp(file).raw().toBuffer({ resolveWithObject: true });
   const N = findSourceNavy(data, info.channels);
-  if (!N) return { fixed: false, reason: "no navy" };
-  if (dist(N, BRAND) <= DRIFT_LIMIT) return { fixed: false, reason: "on-brand" };
-  const touched = recolour(data, info.channels, N);
+  const needsNavy = Boolean(N) && dist(N, BRAND) > DRIFT_LIMIT;
+  const whitened = groundIsOffWhite(data, info.channels) ? whiten(data, info.channels) : 0;
+  if (!needsNavy && !whitened) return { fixed: false, reason: N ? "on-brand" : "no navy" };
+  const touched = needsNavy ? recolour(data, info.channels, N) : 0;
   const raw = { width: info.width, height: info.height, channels: info.channels };
   const img = sharp(data, { raw });
   const out = file.toLowerCase().endsWith(".png") ? img.png() : img.webp({ quality: 82 });
   await out.toFile(file + ".tmp");
   renameSync(file + ".tmp", file);
-  return { fixed: true, from: hex(N), touched };
+  return { fixed: true, from: N ? hex(N) : null, touched, whitened };
+}
+
+/** node scripts/rebrand-navy.mjs --selftest — the ground pass, no files, no API. */
+function selftest() {
+  const px = (...rgb) => Uint8Array.from(rgb);
+  const warmGround = px(254, 254, 252, 254, 254, 252, 255, 250, 240, 31, 61, 115);
+  if (!groundIsOffWhite(warmGround, 3)) throw new Error("warm #FEFEFC ground not detected");
+  const whitened = whiten(warmGround, 3);
+  if (whitened !== 2) throw new Error(`expected 2 ground px whitened, got ${whitened}`);
+  if (warmGround[6] !== 255 || warmGround[7] !== 250 || warmGround[8] !== 240)
+    throw new Error("orange glow pixel was flattened");
+  if (warmGround[9] !== 31) throw new Error("navy pixel was flattened");
+
+  const clean = px(255, 255, 255, 255, 255, 255, 254, 254, 252, 31, 61, 115);
+  if (groundIsOffWhite(clean, 3)) throw new Error("pure-white ground reported as drifted (would never converge)");
+  console.log("selftest: ok — off-white ground detected and flattened, white ground left alone");
 }
 
 // CLI entry — only when run directly, so generate-images.mjs can import the fn.
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
+  if (args.includes("--selftest")) { selftest(); process.exit(0); }
   const onlyIdx = args.indexOf("--only");
   await rebrandNavy({
     only: onlyIdx !== -1 ? args[onlyIdx + 1] : null,
