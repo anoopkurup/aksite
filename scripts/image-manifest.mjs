@@ -807,5 +807,30 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'brand-building-for-professional-services',
+    hero: img(
+      'A reputation that travels beyond the circle that already knows you',
+      'Metaphor: on white, a small tight cluster of solid navy dots enclosed by a thin grey circle in the left third of the frame. From the cluster, three concentric fine navy arcs ripple outward to the right, reaching a loose scatter of small navy-outlined dots spread across the right of the frame. One small solid orange dot sits at the centre of the cluster. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Three assets that compound: a point of view, a body of work, a recognisable name',
+        'Subject: three fine navy line-art objects in one horizontal row on white, evenly spaced: a single navy-outlined speech bubble on the left, a neat stack of five thin navy-outlined sheets in the middle, and a navy-outlined name tag shape on the right with one short solid orange bar across it. Nothing else in the frame. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small, steady weekly rhythm instead of a burst followed by silence',
+        'Subject: two thin horizontal lines stacked on white. On the upper line, drawn in faint grey, four small grey dots sit crowded together at the far left end, and the rest of the line is bare. On the lower line, drawn in navy, ten identical small solid navy dots sit at perfectly even intervals from end to end, like beads on a string, and only the last dot on the right is solid orange. All dots are the same size. Flat 2D vector, pure-white background, generous white space, no text.'
+      ),
+      img(
+        'The signal that matters: an enquiry that arrives without an introduction',
+        'Subject: a fine navy-outlined envelope at the centre of the frame on white, with a small solid orange circle marker at its top-right corner. To its left, a faint grey dotted line trails in and stops short of the envelope, never touching it. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A position decided first, then the brand that amplifies it',
+        'Subject: a short solid navy horizontal bar at the left, from which a fine navy-outlined megaphone opens to the right, with three thin arcs radiating from its mouth; the two outer arcs are navy and the smallest arc nearest the mouth is orange. Flat 2D vector, pure-white background, generous white space, no text.'
+      ),
+    ],
+  },
 ];
 

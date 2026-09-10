@@ -1175,7 +1175,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['b2b-brand-awareness-small-firms', 'founder-brand-vs-company-brand'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 5,
-    status: 'scaffold',
+    // Published 2026-09-10 (Wave 5, spoke 4 of 8 — visibility & brand cluster anchor).
+    status: 'live',
     brief: {
       angle:
         'Trust businesses need brands most and build them least — a services brand is a reputation made repeatable, and it compounds like interest.',
