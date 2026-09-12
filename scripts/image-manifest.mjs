@@ -832,5 +832,30 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'b2b-brand-awareness-small-firms',
+    hero: img(
+      'A narrow beam reaching a small named group instead of a wide wash over a crowd',
+      'Metaphor: on white, a small solid navy circle at the far left of the frame. From it, a single narrow solid navy beam extends to the right and lands on a tight group of five small navy-outlined dots near the right edge; the dot at the centre of the group is solid orange. Above and below the beam, a very wide faint grey fan of thin lines spreads across the frame and fades out, reaching a loose scatter of tiny faint grey dots that the beam ignores. Fine line-art plus one bold solid beam, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Awareness for a services firm is a named list, not a share of a crowd',
+        'Subject: two objects side by side on white. On the left, a large faint grey pie chart drawn as a thin circle with one small wedge shaded light grey. On the right, a single navy-outlined sheet of paper with a short column of ten thin solid navy horizontal lines like entries in a list, and the third line is solid orange. Nothing else in the frame. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Three places the hundred already spend attention, and a firm present in each',
+        'Subject: three fine navy-outlined circles in one horizontal row on white, evenly spaced, each containing a loose cluster of small navy dots. One identical small solid orange dot sits inside each of the three circles. Far apart from the row, in the top corners, a few faint grey empty circles with nothing inside them. Flat 2D vector, uniform fine line weight, pure-white background, generous white space, no text.'
+      ),
+      img(
+        'One opinion, repeated from many angles, becomes familiar without becoming a pitch',
+        'Subject: a single solid navy circle at the centre of the frame on white. Seven thin navy lines radiate outward from it at even angles, like spokes, each ending in a small navy-outlined circle. One of the seven end circles, at the upper right, is solid orange. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Paid visibility amplifies a message that already works; it cannot create one',
+        'Subject: a small solid navy square at the left on white, from which a fine navy-outlined megaphone shape opens to the right. Inside the mouth of the megaphone sits one small solid orange circle. To the far right, three thin navy arcs, each larger than the last. Flat 2D vector, pure-white background, generous white space, no text.'
+      ),
+    ],
+  },
 ];
 

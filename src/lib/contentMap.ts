@@ -1219,7 +1219,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['brand-building-for-professional-services', 'founder-brand-vs-company-brand'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 5,
-    status: 'scaffold',
+    // Published 2026-09-12 (Wave 5, spoke 5 of 8 — visibility & brand cluster).
+    status: 'live',
     brief: {
       angle:
         'Awareness for a services firm is narrow and deep, not broad — become known to a named hundred buyers, not “the market”. Reach without relevance is rent, not equity.',
