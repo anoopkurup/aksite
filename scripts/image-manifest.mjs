@@ -857,5 +857,30 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'founder-brand-vs-company-brand',
+    hero: img(
+      'A founder brand handing its weight to the firm over time',
+      'Metaphor: on white, a single solid navy circle at the left, like a head, sitting on a thin navy line. From it, a fine navy arrow curves rightward and downward into a navy-outlined rectangle, like a building or a nameplate, at the right. Inside the rectangle, one small solid orange square. The circle is slightly larger than the rectangle at the left; the composition reads left to right as a transfer. Fine line-art plus one bold solid form, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'The founder holding up the firm, with nothing yet underneath the logo',
+        'Subject: a wide thin navy-outlined rectangle floating near the top of the frame on white, like a roof or a nameplate. It rests on a single solid navy vertical line at the left, like one pillar. Under the rest of the rectangle, where more pillars would be, three faint grey dotted vertical lines. A small solid orange dot sits at the top of the one solid pillar. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Sorting what stays with the founder from what the firm should own',
+        'Subject: two navy-outlined columns side by side on white, separated by a thin vertical navy line. The left column holds three small solid navy circles stacked vertically. The right column holds three small navy-outlined squares stacked vertically. One thin navy arrow crosses from the left column to the right column at mid-height, and the square it points at is solid orange. Flat 2D vector, uniform fine line weight, pure-white background, generous white space, no text.'
+      ),
+      img(
+        'Equity moving from the founder to the firm along three channels',
+        'Subject: a single solid navy circle at the left of the frame on white. Three thin parallel navy lines run from it to the right, evenly spaced, each ending at a small navy-outlined square stacked vertically at the right edge. The middle square is solid orange. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'The blended model: founder voice in front, firm-owned method and proof behind',
+        'Subject: on white, a small solid navy circle in the foreground at the lower left. Behind it and slightly to the right, a larger navy-outlined rectangle, and behind that a still larger faint grey rectangle, the three overlapping like layered cards receding. One small solid orange dot sits on the front circle. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
 

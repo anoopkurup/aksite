@@ -1251,7 +1251,8 @@ export const SEO_PAGES: Page[] = [
     siblings: ['brand-building-for-professional-services', 'b2b-brand-awareness-small-firms'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 5,
-    status: 'scaffold',
+    // Published 2026-09-15 (Wave 5, spoke 6 of 8 — visibility & brand cluster).
+    status: 'live',
     brief: {
       angle:
         'The founder brand is a feature early and a risk later — the same shape as founder-led sales. Use it deliberately, then transfer its equity to the firm on a schedule.',
