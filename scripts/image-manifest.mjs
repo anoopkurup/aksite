@@ -882,5 +882,26 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'b2b-marketing-consultant-india',
+    hero: img(
+      'Choosing an advisor from a crowd of identical vendors',
+      'Metaphor: on white, a neat grid of twelve small navy-outlined squares, all identical, filling the left two thirds of the frame. To the right, standing apart with generous space around it, one slightly larger navy-outlined circle with a small solid orange dot at its centre. A single fine navy line runs from the grid to the circle. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A sales symptom traced back to its three marketing causes',
+        'Subject: on white, one small solid navy circle at the right of the frame. Three thin navy lines branch leftward from it, like roots, each ending at a small navy-outlined square stacked vertically at the left. The top square is solid orange. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Five questions that sort advisors from vendors',
+        'Subject: on white, a thin navy-outlined funnel shape in the centre of the frame, wide at the top and narrow at the bottom. Above it, a scatter of small navy-outlined circles. Five thin horizontal navy lines cross the funnel at even intervals, like a sieve. Below the narrow end, a single small solid orange circle. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'From first conversation to a system the firm runs itself',
+        'Subject: on white, a thin navy horizontal line running left to right across the frame, with four small navy-outlined circles spaced evenly along it like milestones. The final circle at the right is larger and solid navy, with a small solid orange dot beside it. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
 

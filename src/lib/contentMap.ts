@@ -1285,7 +1285,7 @@ export const SEO_PAGES: Page[] = [
     siblings: ['marketing-consultant-for-agencies'],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service', 'FAQPage'],
     publishWave: 5,
-    status: 'scaffold',
+    status: 'live',
     brief: {
       angle:
         'Service-intent page: an honest buyer’s guide to hiring a B2B marketing consultant in India, written by one — what the work is, when to hire, when not to, and the questions that expose a vendor dressed as an advisor.',
