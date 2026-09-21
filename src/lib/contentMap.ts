@@ -1315,7 +1315,7 @@ export const SEO_PAGES: Page[] = [
     slug: 'marketing-consultant-for-agencies',
     url: '/blog/marketing-consultant-for-agencies',
     type: 'vertical',
-    title: 'Marketing Consulting for Agencies and Studios',
+    title: 'Marketing Consultant for Agencies and Studios',
     metaDescription:
       'Agencies market everyone but themselves. Here is what marketing consulting looks like for an agency, and when it pays for itself.',
     primaryKeyword: 'marketing consultant for agencies',
@@ -1328,7 +1328,7 @@ export const SEO_PAGES: Page[] = [
     siblings: ['b2b-marketing-consultant-india'],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 5,
-    status: 'scaffold',
+    status: 'live',
     brief: {
       angle:
         'Service-intent vertical: the cobbler’s-children problem solved from outside — why agencies, of all firms, benefit from an external marketing consultant for their own growth.',

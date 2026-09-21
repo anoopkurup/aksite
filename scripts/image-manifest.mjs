@@ -903,5 +903,26 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'marketing-consultant-for-agencies',
+    hero: img(
+      'The agency that markets everyone but itself',
+      'Metaphor: on white, a row of five small navy-outlined houses along the bottom of the frame, each with a tiny solid navy lit window. At the left, one slightly larger navy-outlined workshop building with its own window left empty and outlined only. Thin navy lines run from the workshop to each of the five houses. A single small solid orange dot sits in the empty window of the workshop. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A delivery-heavy month followed by an empty pipeline three months later',
+        'Subject: on white, a simple horizontal timeline in thin navy line. Above it, a row of evenly spaced vertical navy bars that are tall on the left and fall to almost nothing on the right, like a tide going out. Below the timeline, a second row of bars that are short on the left and rise on the right, offset by a gap. One small solid orange marker sits on the timeline at the lowest point of the gap. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Moving from a full-service menu to one clear specialisation',
+        'Subject: on white, at the left, a tall navy-outlined rectangle divided into eight equal horizontal rows, like a long menu card. A thin navy arrow points right to a single small navy-outlined square card standing alone, with one solid orange dot at its centre. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'The agency treated as its own client, with a weekly new-business routine',
+        'Subject: on white, a thin navy-outlined calendar grid of five columns and four rows. Every cell in the first column holds an identical small solid orange square, a straight vertical line of four orange squares, like the same slot kept every week. A few other cells hold small navy-outlined squares, irregularly placed. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
 
