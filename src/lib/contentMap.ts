@@ -910,12 +910,13 @@ export const SEO_PAGES: Page[] = [
     type: 'vertical',
     title: 'Marketing for IP Firms: Getting Clients Beyond Referrals',
     metaDescription:
-      'IP firms in India grow by introduction and are limited in how they advertise. How an IP practice earns trust before the need, from someone who ran one.',
+      "Patent search, drafting and analytics firms do their best work under someone else's name. How an IP services firm gets known, from someone who ran one.",
     primaryKeyword: 'marketing for ip firms',
     secondaryKeywords: [
       'marketing for ip firms in india',
       'how to get IPR clients',
       'patent firm marketing',
+      'marketing for patent search firms',
     ],
     clearLetter: 'E',
     parent: 'client-acquisition-for-professional-services',
@@ -931,12 +932,13 @@ export const SEO_PAGES: Page[] = [
     status: 'live',
     brief: {
       angle:
-        'Vertical: IP / patent firms, Anoop’s own background (built and exited an IPR firm). Lead with first-hand credibility; sales symptom (referral-only, casualty-ward timing) → marketing cause (no position, nothing to buy before the need, invisible between filings).',
+        'Vertical: IP services firms (private limited companies doing patent search, drafting, landscapes and analytics; no legal opinions). Anoop’s own background (built and exited an IPR firm). Sales symptom (referral-only, price-per-search comparison) → marketing cause (white-labelled work, no position, nothing a stranger can try).',
       outline: [
         'What IP buyers actually evaluate',
-        'Can IP firms in India advertise? What the rules leave open',
-        'Building trust before the need arises',
-        'Packaging IP advisory clearly',
+        'Your best work carries someone else’s name',
+        'Building trust before the request arrives',
+        'Positioning past “full-service IP support”',
+        'Packaging IP work so a stranger can buy it',
         'A marketing routine for a niche field',
         'What marketing consulting for an IP firm looks like',
       ],

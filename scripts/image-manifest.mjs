@@ -932,15 +932,15 @@ export const posts = [
     ),
     inlines: [
       img(
-        'An IP firm visible only at the moment of crisis, versus one present throughout the buyer journey',
+        "A firm visible only when a request arrives, versus one present throughout the buyer's year",
         'Subject: on white, two parallel horizontal navy timelines, one above the other. On the upper timeline, a single small navy-outlined square sits only at the far right end. On the lower timeline, small navy-outlined squares sit at even intervals along its whole length, and one of them, at the far right end, is filled solid orange with crisp hard edges and pure white directly around it. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
       ),
       img(
-        'Open-ended hourly IP work turned into a small defined first engagement',
+        'Open-ended work turned into a small defined first engagement',
         'Subject: on white, at the left, a long thin navy line that wanders in loose irregular loops and trails off with no end. A thin navy arrow points right to a single small navy-outlined square with neat straight edges and one solid orange dot at its centre. Flat 2D vector, uniform fine line weight, generous white space, no text.'
       ),
       img(
-        'A small weekly routine that keeps running through busy filing months',
+        'A small weekly routine that keeps running through busy delivery months',
         'Subject: on white, a thin navy-outlined calendar grid of five columns and four rows. Most cells are densely filled with small navy-outlined stacked rectangles, like piled files. Every cell in the second column holds one identical small solid orange square, a straight vertical line of four, kept clear of the files. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
       ),
     ],
