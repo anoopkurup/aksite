@@ -869,7 +869,7 @@ export const SEO_PAGES: Page[] = [
   },
 
   // ---- WAVE 4 — professional & advisory (PARKED Aug 2026, same reframe ----
-  // rule; exception: get-clients-for-ip-consulting-firm is first-hand
+  // rule; exception: marketing-for-ip-firms is first-hand
   // authority and can be pulled forward once reframed) ----------------------
   {
     slug: 'client-acquisition-for-professional-services',
@@ -902,35 +902,45 @@ export const SEO_PAGES: Page[] = [
     },
   },
   {
-    slug: 'get-clients-for-ip-consulting-firm',
-    url: '/blog/get-clients-for-ip-consulting-firm',
+    // Reframed 2026-09-24 from "how to get clients for an IP consulting firm"
+    // (zero India search data) to the "marketing for X" frame, and pulled
+    // forward ahead of the rest of Wave 4.
+    slug: 'marketing-for-ip-firms',
+    url: '/blog/marketing-for-ip-firms',
     type: 'vertical',
-    title: 'How to Get Clients for an IP Consulting Firm',
+    title: 'Marketing for IP Firms: Getting Clients Beyond Referrals',
     metaDescription:
-      'IP and patent consulting is high-trust and niche. Drawing on years inside the field, here is how to build a steady client pipeline without chasing.',
-    primaryKeyword: 'how to get clients for an IP consulting firm',
-    secondaryKeywords: ['patent consulting clients', 'IP firm lead generation'],
+      'IP firms in India grow by introduction and are limited in how they advertise. How an IP practice earns trust before the need, from someone who ran one.',
+    primaryKeyword: 'marketing for ip firms',
+    secondaryKeywords: [
+      'marketing for ip firms in india',
+      'how to get IPR clients',
+      'patent firm marketing',
+    ],
     clearLetter: 'E',
     parent: 'client-acquisition-for-professional-services',
     siblings: [
+      'b2b-marketing-consultant-india',
       'get-clients-for-ai-consulting-firm',
       'get-clients-for-hr-consulting',
       'get-clients-for-ca-firm',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
-    status: 'scaffold',
+    // Published 2026-09-24 (pulled forward from Wave 4).
+    status: 'live',
     brief: {
       angle:
-        'Vertical: IP / patent consulting — Anoop’s own background, strongest authority page. Lead with first-hand credibility.',
+        'Vertical: IP / patent firms, Anoop’s own background (built and exited an IPR firm). Lead with first-hand credibility; sales symptom (referral-only, casualty-ward timing) → marketing cause (no position, nothing to buy before the need, invisible between filings).',
       outline: [
         'What IP buyers actually evaluate',
+        'Can IP firms in India advertise? What the rules leave open',
         'Building trust before the need arises',
         'Packaging IP advisory clearly',
-        'The acquisition routine in a niche field',
+        'A marketing routine for a niche field',
+        'What marketing consulting for an IP firm looks like',
       ],
-      handoffLine:
-        'See where your pipeline breaks.',
+      handoffLine: 'An IP firm that only grows by introduction?',
     },
   },
   {
@@ -945,7 +955,7 @@ export const SEO_PAGES: Page[] = [
     clearLetter: 'E',
     parent: 'client-acquisition-for-professional-services',
     siblings: [
-      'get-clients-for-ip-consulting-firm',
+      'marketing-for-ip-firms',
       'get-clients-for-hr-consulting',
       'get-clients-for-ca-firm',
     ],
@@ -976,7 +986,7 @@ export const SEO_PAGES: Page[] = [
     clearLetter: 'E',
     parent: 'client-acquisition-for-professional-services',
     siblings: [
-      'get-clients-for-ip-consulting-firm',
+      'marketing-for-ip-firms',
       'get-clients-for-ai-consulting-firm',
       'get-clients-for-ca-firm',
     ],
@@ -1007,7 +1017,7 @@ export const SEO_PAGES: Page[] = [
     clearLetter: 'E',
     parent: 'client-acquisition-for-professional-services',
     siblings: [
-      'get-clients-for-ip-consulting-firm',
+      'marketing-for-ip-firms',
       'get-clients-for-ai-consulting-firm',
       'get-clients-for-hr-consulting',
     ],
@@ -1282,7 +1292,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'A',
     parent: PILLAR,
-    siblings: ['marketing-consultant-for-agencies'],
+    siblings: ['marketing-consultant-for-agencies', 'marketing-for-ip-firms'],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service', 'FAQPage'],
     publishWave: 5,
     status: 'live',
