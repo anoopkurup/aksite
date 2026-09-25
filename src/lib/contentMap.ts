@@ -872,33 +872,65 @@ export const SEO_PAGES: Page[] = [
   // rule; exception: marketing-for-ip-firms is first-hand
   // authority and can be pulled forward once reframed) ----------------------
   {
-    slug: 'client-acquisition-for-professional-services',
-    url: '/client-acquisition-for-professional-services',
+    // Reframed 2026-09-25 from "client acquisition for professional services"
+    // (zero India search data) to the "marketing for X" frame.
+    slug: 'marketing-for-professional-services',
+    url: '/marketing-for-professional-services',
     type: 'subpillar',
-    title: 'Client Acquisition for Professional Services',
+    title: 'Marketing for Professional Services Firms in India',
     metaDescription:
-      'Professional services sell expertise and trust, which makes marketing feel awkward. Here is a client-acquisition system built for advisory firms.',
-    primaryKeyword: 'client acquisition for professional services',
+      "Buyers can't judge expert work before they hire it, so they buy on trust or on fees. How a professional services firm earns trust before the first call.",
+    primaryKeyword: 'marketing for professional services',
     secondaryKeywords: [
-      'lead generation for professional services',
-      'how advisory firms get clients',
+      'marketing for professional services firms',
+      'marketing strategy for professional services',
+      'content marketing for professional services firms',
+      'digital marketing for professional services',
+      'marketing plan for professional services',
     ],
     clearLetter: 'E',
     parent: PILLAR,
     siblings: [],
     schema: ['Article', 'BreadcrumbList', 'FAQPage'],
     publishWave: 4,
-    status: 'scaffold',
+    // Published 2026-09-25 (Wave 4 hub, pulled forward after its IP vertical).
+    status: 'live',
     brief: {
-      angle: 'Sub-pillar hub for professional & advisory. Links down to 24–27.',
+      angle:
+        'Sub-pillar hub for professional & advisory firms. Buyers cannot judge expertise before buying, so they fall back on referrals or fees. Sales symptom (price comparison, silent proposals, referral-only) → marketing cause (nothing public answers "do you understand my problem, can I trust your judgement, what is working with you like"). Links down to 24–27 as they go live.',
       outline: [
-        'Why advisory sales feels awkward',
-        'Trust-first acquisition',
-        'The system applied to professional services',
-        'Links to each advisory type',
+        'Why marketing professional services feels awkward',
+        'What buyers of professional services are really buying',
+        'A marketing strategy for professional services firms',
+        'Content marketing for professional services firms',
+        'Digital and social media marketing: where it fits',
+        'A marketing plan a busy practice can run',
+        'How marketing changes by type of firm',
+        'What marketing consulting for a professional firm looks like',
       ],
-      handoffLine:
-        'See where your pipeline breaks.',
+      handoffLine: 'Good at the work, quiet on the marketing?',
+      faqs: [
+        {
+          question: 'What is the best marketing strategy for a professional services firm?',
+          answer:
+            'One that answers a buyer’s three questions before the first meeting: do you understand my problem, can I trust your judgement, and what will it be like to work with you. In practice that means a clear position, published work that shows how you think, presence where buyers look when the need appears, and a small first engagement a stranger can try. Tactics come after those four.',
+        },
+        {
+          question: 'Does digital marketing work for professional services?',
+          answer:
+            'Yes, when it is the right kind. Search and LinkedIn work well because buyers of expert services research before they call, and they work best when they carry genuinely useful content from people inside the firm. Paid ads work poorly on their own, because they add reach without adding trust.',
+        },
+        {
+          question: 'How is marketing professional services different from marketing products?',
+          answer:
+            'A product can be seen, compared and often tried before purchase. Expert advice cannot, so buyers judge the people instead. That makes trust, reputation and visible judgement the core of the marketing, and it makes volume tactics built for products, such as discounts and broad advertising, much less useful.',
+        },
+        {
+          question: 'Can CA firms and law firms in India do marketing?',
+          answer:
+            'Both work under professional rules that limit advertising and solicitation, so check your institute’s current guidelines before doing anything promotional. Publishing useful knowledge, speaking at events and being easy to find online are generally allowed, and they are the most effective parts of professional services marketing anyway.',
+        },
+      ],
     },
   },
   {
@@ -919,7 +951,7 @@ export const SEO_PAGES: Page[] = [
       'marketing for patent search firms',
     ],
     clearLetter: 'E',
-    parent: 'client-acquisition-for-professional-services',
+    parent: 'marketing-for-professional-services',
     siblings: [
       'b2b-marketing-consultant-india',
       'get-clients-for-ai-consulting-firm',
@@ -955,7 +987,7 @@ export const SEO_PAGES: Page[] = [
     primaryKeyword: 'how to get clients for an AI consulting firm',
     secondaryKeywords: ['data consulting clients', 'AI consultancy lead generation'],
     clearLetter: 'E',
-    parent: 'client-acquisition-for-professional-services',
+    parent: 'marketing-for-professional-services',
     siblings: [
       'marketing-for-ip-firms',
       'get-clients-for-hr-consulting',
@@ -986,7 +1018,7 @@ export const SEO_PAGES: Page[] = [
     primaryKeyword: 'how to get clients for HR consulting',
     secondaryKeywords: ['HR consultancy clients', 'HR consulting lead generation'],
     clearLetter: 'E',
-    parent: 'client-acquisition-for-professional-services',
+    parent: 'marketing-for-professional-services',
     siblings: [
       'marketing-for-ip-firms',
       'get-clients-for-ai-consulting-firm',
@@ -1017,7 +1049,7 @@ export const SEO_PAGES: Page[] = [
     primaryKeyword: 'how to get clients for a CA firm',
     secondaryKeywords: ['accounting firm clients', 'CA practice lead generation'],
     clearLetter: 'E',
-    parent: 'client-acquisition-for-professional-services',
+    parent: 'marketing-for-professional-services',
     siblings: [
       'marketing-for-ip-firms',
       'get-clients-for-ai-consulting-firm',

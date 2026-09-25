@@ -117,6 +117,30 @@ export const pages = [
       'Metaphor: a confident weekly rhythm. A long row of seven identical clean flat empty square tiles in light grey line-art runs along the bottom, evenly spaced, each tile completely blank inside. Above the tiles, one continuous bold navy pulse-line beats steadily left to right, with one small solid orange peak positioned directly above each tile — the same small effort, every single week, never stopping. At the far right the pulse-line ends in a solid navy circle lit with a soft orange glow — the compounding result. Wide banner, spare and mechanical, generous white space. ABSOLUTELY NO text, NO letters, NO numbers, NO words anywhere in the image — the tiles must be empty.',
   },
   {
+    id: 'page-marketing-for-professional-services',
+    out: 'public/images/pages/marketing-for-professional-services.webp',
+    size: W,
+    alt: 'An expert firm behind a closed door, and a stranger judging it from outside',
+    prompt:
+      'Metaphor: judging expertise you cannot see. On white, a single tall navy-outlined door, closed, standing flat-on at the centre-right of the frame. At the left, one small navy-outlined figure stands facing the door. Between them, three small navy-outlined panes set into the door at eye level, like windows, and only one of them is filled solid orange with crisp hard edges: the one thing the stranger can see through. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.',
+  },
+  {
+    id: 'page-marketing-for-professional-services-parts',
+    out: 'public/images/pages/marketing-for-professional-services-parts.webp',
+    size: W,
+    alt: 'Four parts that let a stranger trust an expert firm before the first meeting',
+    prompt:
+      'Subject: on white, four small navy-outlined shapes in an even row on one thin navy baseline, joined left to right by a thin navy line. (1) a narrow navy-outlined arrow pointing at a single dot: a clear position; (2) a navy-outlined open page with three short lines: published judgement; (3) a navy-outlined signal mast with two small arcs: presence; (4) a small navy-outlined square with one solid orange dot at its centre, crisp hard edges: a first step a stranger can take. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
+  },
+  {
+    id: 'page-marketing-for-professional-services-rhythm',
+    out: 'public/images/pages/marketing-for-professional-services-rhythm.webp',
+    size: W,
+    alt: 'A small weekly routine that keeps going through busy client months',
+    prompt:
+      'Subject: on white, a thin navy-outlined calendar grid of five columns and four rows. Most cells hold small navy-outlined stacked rectangles, like piled client files, some cells crowded. The leftmost column is different: ALL FOUR of its cells, top to bottom, each hold exactly one identical small solid orange square with crisp hard edges and no files at all, so four orange squares form one straight vertical line down the left side of the grid. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
+  },
+  {
     id: 'page-about-pathway',
     out: 'public/images/pages/about-pathway.webp',
     size: W,
