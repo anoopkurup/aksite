@@ -62,7 +62,7 @@ Voice rules live in CLAUDE.md and the Tone of Voice Guide.
 5. **Flip the map.** In `src/lib/contentMap.ts`, set the page's `status: 'live'`
    (status gates indexability + sitemap). Only within its active wave.
 
-6. **Social assets.** Draft the LinkedIn post into the git-ignored `Linkedin Posts/`
+6. **Social assets.** Draft the LinkedIn post into the git-ignored `Social/`
    folder in the established format, then render:
    `npm run social:cover -- <slug> "<visual metaphor>"` (AI cover, optional but preferred),
    `npm run social:card -- <slug>` (LinkedIn post image),
