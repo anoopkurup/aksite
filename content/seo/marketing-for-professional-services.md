@@ -104,7 +104,7 @@ The four parts stay the same across professional services. What changes is who t
 
 **IP and patent services firms** have a particular problem: their best work is filed under someone else's name, and confidentiality agreements stop them showing it. The answer is to show the method rather than the client. I ran an IPR firm for years, and I wrote the full version in [marketing for IP firms](/blog/marketing-for-ip-firms).
 
-**AI and data consultancies** sell into a market full of noise, where buyers have been burned by pilots that went nowhere. Proof of judgement matters more than anywhere else, and the most useful content is often about what not to build.
+**AI and data consultancies** sell into a market full of noise, where buyers have been burned by pilots that went nowhere. Proof of judgement matters more than anywhere else, and the most useful content is often about what not to build. I go through the whole approach in [marketing for AI consulting firms](/blog/marketing-for-ai-consulting-firms).
 
 **HR consultancies** are usually bought in a moment of pain: a senior resignation, a compliance notice, a team that has grown faster than its policies. The marketing job is to be the firm a company already knows when that moment comes.
 

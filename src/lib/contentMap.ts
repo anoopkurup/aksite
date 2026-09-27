@@ -954,7 +954,7 @@ export const SEO_PAGES: Page[] = [
     parent: 'marketing-for-professional-services',
     siblings: [
       'b2b-marketing-consultant-india',
-      'get-clients-for-ai-consulting-firm',
+      'marketing-for-ai-consulting-firms',
       'get-clients-for-hr-consulting',
       'get-clients-for-ca-firm',
     ],
@@ -978,14 +978,24 @@ export const SEO_PAGES: Page[] = [
     },
   },
   {
-    slug: 'get-clients-for-ai-consulting-firm',
-    url: '/blog/get-clients-for-ai-consulting-firm',
+    // Reframed 2026-09-28 from "how to get clients for an AI consulting firm"
+    // (zero India search data; the adjacent demand is "ai consulting business")
+    // to the "marketing for X" frame.
+    slug: 'marketing-for-ai-consulting-firms',
+    url: '/blog/marketing-for-ai-consulting-firms',
     type: 'vertical',
-    title: 'How to Get Clients for an AI Consulting Firm',
+    title: 'Marketing for AI Consulting Firms: Proof Over Hype',
     metaDescription:
-      'AI consulting is booming and noisy. Here is how to cut through the hype, prove real value, and build a pipeline of clients who are ready to act.',
-    primaryKeyword: 'how to get clients for an AI consulting firm',
-    secondaryKeywords: ['data consulting clients', 'AI consultancy lead generation'],
+      'Every firm now claims AI. Buyers have seen pilots fail and cannot tell who is real. How an AI or data consulting firm earns trust before the first call.',
+    primaryKeyword: 'marketing for ai consulting firms',
+    secondaryKeywords: [
+      'how to get clients for an ai consulting firm',
+      'how to market ai consulting services',
+      'ai consulting business',
+      'ai business consulting',
+      'boutique ai consulting firms',
+      'ai consulting business in india',
+    ],
     clearLetter: 'E',
     parent: 'marketing-for-professional-services',
     siblings: [
@@ -995,17 +1005,21 @@ export const SEO_PAGES: Page[] = [
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
-    status: 'scaffold',
+    // Published 2026-09-28 (Wave 4, reframed).
+    status: 'live',
     brief: {
-      angle: 'Vertical: data / AI consulting — cutting through hype to real value.',
+      angle:
+        'Vertical: boutique AI and data consulting firms. Anoop’s vantage: automating his own work since 2006 and installing AI systems in service firms. Sales symptom (long pilots that stall, price comparison with freelancers and big firms, enquiries that are curiosity not intent) → marketing cause (everyone claims AI, so nothing public shows judgement; no position by problem or industry; no small first step that de-risks the buyer).',
       outline: [
-        'Why AI buyers are skeptical and overwhelmed',
-        'Positioning past the hype',
-        'Packaging an AI engagement that de-risks the buyer',
-        'The acquisition routine',
+        'Why AI consulting is hard to buy',
+        'Everyone claims AI now',
+        'Positioning by problem, not by technology',
+        'Proof of judgement: what you would not build',
+        'A first engagement that lowers the risk',
+        'Where AI consulting clients come from in India',
+        'What marketing consulting for an AI firm looks like',
       ],
-      handoffLine:
-        'Find your weakest link.',
+      handoffLine: 'An AI firm that sounds like every other AI firm?',
     },
   },
   {
@@ -1021,7 +1035,7 @@ export const SEO_PAGES: Page[] = [
     parent: 'marketing-for-professional-services',
     siblings: [
       'marketing-for-ip-firms',
-      'get-clients-for-ai-consulting-firm',
+      'marketing-for-ai-consulting-firms',
       'get-clients-for-ca-firm',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
@@ -1052,7 +1066,7 @@ export const SEO_PAGES: Page[] = [
     parent: 'marketing-for-professional-services',
     siblings: [
       'marketing-for-ip-firms',
-      'get-clients-for-ai-consulting-firm',
+      'marketing-for-ai-consulting-firms',
       'get-clients-for-hr-consulting',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],

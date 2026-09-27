@@ -969,5 +969,30 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'marketing-for-ai-consulting-firms',
+    hero: img(
+      'An AI consulting firm that shows its reasoning among firms that only make the claim',
+      'Metaphor: on white, a neat horizontal row of seven identical small navy-outlined signboards, evenly spaced, all blank and flat-on. The fifth signboard is slightly taller and, instead of being blank, shows a small navy-outlined flowchart of three connected boxes, with a single small solid orange dot on the last box. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Many firms making the same claim, one firm showing its reasoning',
+        'Subject: on white, a grid of twelve identical small navy-outlined speech bubbles, three rows of four, each containing the same short navy horizontal line. One bubble in the second row instead contains three small navy-outlined steps rising left to right, with a solid orange dot on the top step. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'An open-ended AI project turned into a small defined first step',
+        'Subject: on white, at the left, a large navy-outlined cloud shape with a tangle of thin navy lines inside it and no clear edge where they end. A thin navy arrow points right to a single small navy-outlined square with neat straight edges and one solid orange dot at its centre. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small weekly routine that keeps running through delivery weeks',
+        'Subject: on white, a thin navy-outlined horizontal track of eight equal segments, like weeks. Above most segments sit tall stacks of small navy-outlined rectangles of uneven height, like piles of delivery work. Directly on the track, under every segment, sits one identical small solid orange circle, an unbroken evenly spaced line of eight. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A firm described by its tools, versus one described by the problem it solves',
+        'Subject: on white, two panels side by side. Left panel: a loose scatter of six small navy-outlined geometric shapes (a circle, a hexagon, a triangle, a square, a diamond, a small grid) with no connection between them. Right panel: a single navy-outlined gear meshed neatly into a navy-outlined keyhole shape, with one small solid orange dot where they meet. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
 
