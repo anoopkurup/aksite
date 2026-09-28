@@ -994,5 +994,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'marketing-for-hr-consulting-firms',
+    hero: img(
+      'The HR firm a company already knows when something goes wrong',
+      'Metaphor: on white, a navy-outlined wall-mounted utility box with its small door swung open. Inside the door, in place of writing, sits one small navy-outlined rectangular card with a single solid orange dot on it. Beside the box, a thin navy zigzag line like a tripped circuit. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A firm listing everything it does, versus one known for one kind of company',
+        'Subject: on white, two panels side by side. Left panel: a tall navy-outlined list of eight identical short horizontal lines, like a long menu. Right panel: a single navy-outlined small factory building, and beside it one short thick navy line with one solid orange dot at its end. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A steady line of small signals kept up through quiet months, before one urgent call',
+        'Subject: on white, a thin navy horizontal timeline running left to right. Along it sit ten small evenly spaced navy-outlined envelopes. At the far right end, a navy-outlined telephone handset with one solid orange dot beside it. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A large open-ended HR project turned into a small defined first step',
+        'Subject: on white, at the left, a large navy-outlined organisation chart of many small connected boxes, loosely drawn and sprawling. A thin navy arrow points right to a single small navy-outlined clipboard with three short navy lines on it and one solid orange tick mark. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small weekly routine that keeps running through busy client weeks',
+        'Subject: on white, a thin navy-outlined horizontal track of eight equal segments, like weeks. Above some segments sit tall navy-outlined stacks of folders of uneven height, like busy client weeks. Directly on the track, under every segment, sits one identical small solid orange circle, an unbroken evenly spaced line of eight. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
-

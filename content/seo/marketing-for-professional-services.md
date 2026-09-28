@@ -106,7 +106,7 @@ The four parts stay the same across professional services. What changes is who t
 
 **AI and data consultancies** sell into a market full of noise, where buyers have been burned by pilots that went nowhere. Proof of judgement matters more than anywhere else, and the most useful content is often about what not to build. I go through the whole approach in [marketing for AI consulting firms](/blog/marketing-for-ai-consulting-firms).
 
-**HR consultancies** are usually bought in a moment of pain: a senior resignation, a compliance notice, a team that has grown faster than its policies. The marketing job is to be the firm a company already knows when that moment comes.
+**HR consultancies** are usually bought in a moment of pain: a senior resignation, a compliance notice, a team that has grown faster than its policies. The marketing job is to be the firm a company already knows when that moment comes. I go through how to become that firm in [marketing for HR consulting firms](/blog/marketing-for-hr-consulting-firms).
 
 **CA and accounting firms** live on renewals and referrals, with tight rules on advertising. For them, being known for one kind of client and publishing clear notes when regulations change does most of the work.
 

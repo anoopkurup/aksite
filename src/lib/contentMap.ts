@@ -955,7 +955,7 @@ export const SEO_PAGES: Page[] = [
     siblings: [
       'b2b-marketing-consultant-india',
       'marketing-for-ai-consulting-firms',
-      'get-clients-for-hr-consulting',
+      'marketing-for-hr-consulting-firms',
       'get-clients-for-ca-firm',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
@@ -1000,7 +1000,7 @@ export const SEO_PAGES: Page[] = [
     parent: 'marketing-for-professional-services',
     siblings: [
       'marketing-for-ip-firms',
-      'get-clients-for-hr-consulting',
+      'marketing-for-hr-consulting-firms',
       'get-clients-for-ca-firm',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
@@ -1023,14 +1023,22 @@ export const SEO_PAGES: Page[] = [
     },
   },
   {
-    slug: 'get-clients-for-hr-consulting',
-    url: '/blog/get-clients-for-hr-consulting',
+    // Reframed 2026-09-28 from "how to get clients for HR consulting" (10
+    // searches/month in India) to the "marketing for X" frame.
+    slug: 'marketing-for-hr-consulting-firms',
+    url: '/blog/marketing-for-hr-consulting-firms',
     type: 'vertical',
-    title: 'How to Get Clients for HR Consulting',
+    title: 'Marketing for HR Consulting Firms: Known Before the Crisis',
     metaDescription:
-      'HR consulting buyers act when there’s pain. Here is how to position your firm so you’re the obvious call, and build a pipeline that isn’t all referrals.',
-    primaryKeyword: 'how to get clients for HR consulting',
-    secondaryKeywords: ['HR consultancy clients', 'HR consulting lead generation'],
+      'Companies call an HR consultant when something breaks, and they call the one they already know. How an HR consultancy gets known before that day.',
+    primaryKeyword: 'marketing for hr consulting firms',
+    secondaryKeywords: [
+      'how to get clients for hr consulting business',
+      'marketing strategies for hr consulting',
+      'how to market your hr consulting business',
+      'marketing for hr consulting firms in india',
+      'hr consultancy clients',
+    ],
     clearLetter: 'E',
     parent: 'marketing-for-professional-services',
     siblings: [
@@ -1040,17 +1048,22 @@ export const SEO_PAGES: Page[] = [
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
-    status: 'scaffold',
+    // Published 2026-09-28 (Wave 4, reframed).
+    status: 'live',
     brief: {
-      angle: 'Vertical: HR consulting — being the obvious call when pain hits.',
+      angle:
+        'Vertical: HR consultancies in India (HR set-up, policies and compliance, compensation, performance systems, outsourced HR for growing companies). HR help is bought in a moment of pain, from whoever is already known. Sales symptom (enquiries only when something breaks, price comparison against recruiters and payroll vendors, projects that end and never renew) → marketing cause (generic "end-to-end HR solutions" position, nothing public between crises, no small first step).',
       outline: [
         'When companies actually buy HR help',
-        'Staying top of mind before the crisis',
-        'Packaging HR advisory',
-        'The acquisition routine',
+        'Why HR consultancies get compared on price',
+        'Positioning past “end-to-end HR solutions”',
+        'Staying known before the crisis',
+        'A first engagement a stranger can buy',
+        'Where HR consulting clients come from in India',
+        'A marketing routine for a busy practice',
+        'What marketing consulting for an HR firm looks like',
       ],
-      handoffLine:
-        'See where your pipeline breaks.',
+      handoffLine: 'An HR firm that only gets the call after something breaks?',
     },
   },
   {
@@ -1067,7 +1080,7 @@ export const SEO_PAGES: Page[] = [
     siblings: [
       'marketing-for-ip-firms',
       'marketing-for-ai-consulting-firms',
-      'get-clients-for-hr-consulting',
+      'marketing-for-hr-consulting-firms',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
