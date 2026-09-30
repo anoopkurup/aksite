@@ -141,6 +141,38 @@ export const pages = [
       'Subject: on white, a thin navy-outlined calendar grid of five columns and four rows. Most cells hold small navy-outlined stacked rectangles, like piled client files, some cells crowded. The leftmost column is different: ALL FOUR of its cells, top to bottom, each hold exactly one identical small solid orange square with crisp hard edges and no files at all, so four orange squares form one straight vertical line down the left side of the grid. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
   },
   {
+    id: 'page-lead-generation-for-marketing-agencies',
+    out: 'public/images/pages/lead-generation-for-marketing-agencies.webp',
+    size: W,
+    alt: 'An agency sending leads out to clients while its own funnel sits empty',
+    prompt:
+      'Metaphor: the agency that fills everyone else\'s pipeline but not its own. On white, at the centre, one simple navy-outlined building shape with a flat roof. From its right side, four thin navy lines run out to four small navy-outlined funnels on the right, each funnel holding a few small navy dots. At the left of the building stands one more navy-outlined funnel, the same size, completely empty except for a single small solid orange dot resting at its narrow bottom, crisp hard edges. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.',
+  },
+  {
+    id: 'page-lead-generation-for-marketing-agencies-channels',
+    out: 'public/images/pages/lead-generation-for-marketing-agencies-channels.webp',
+    size: W,
+    alt: 'Six ways work reaches an agency, and the few that it controls',
+    prompt:
+      'Subject: on white, six small navy-outlined circles arranged in an even arc across the top of the frame, each holding one simple navy line icon: two linked rings, a folded document, a magnifying glass, a paper plane, two overlapping squares, a small star. Thin navy lines run down from every circle to one navy-outlined rectangle at the bottom centre. Three of those lines, from the magnifying glass, the paper plane and the overlapping squares, are drawn in solid orange instead of navy, crisp hard edges. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
+  },
+  {
+    id: 'page-lead-generation-for-marketing-agencies-parts',
+    out: 'public/images/pages/lead-generation-for-marketing-agencies-parts.webp',
+    size: W,
+    alt: 'Four parts that turn an agency\'s capabilities into a reason to be chosen',
+    prompt:
+      'Subject: on white, at the left, a tall navy-outlined menu card with many short identical navy lines stacked down it: a long list of capabilities. A thin navy arrow leads right from it to four small navy-outlined shapes in an even row on one thin navy baseline: (1) a narrow arrow pointing at a single dot; (2) an open page with three short lines; (3) a signal mast with two small arcs; (4) a small square with one solid orange dot at its centre, crisp hard edges. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
+  },
+  {
+    id: 'page-lead-generation-for-marketing-agencies-rhythm',
+    out: 'public/images/pages/lead-generation-for-marketing-agencies-rhythm.webp',
+    size: W,
+    alt: 'A small weekly new-business routine that keeps running in busy delivery months',
+    prompt:
+      'Subject: on white, a long horizontal row of eight tall navy-outlined columns of different heights, like a bar chart of delivery workload, some very tall and some short, uneven. Running straight through all eight columns at the same low height is one thin continuous navy line, and on that line, one inside each column, sits one identical small solid orange square with crisp hard edges: the same small effort every week, whatever the workload. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
+  },
+  {
     id: 'page-about-pathway',
     out: 'public/images/pages/about-pathway.webp',
     size: W,

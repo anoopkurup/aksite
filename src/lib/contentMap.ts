@@ -544,35 +544,69 @@ export const SEO_PAGES: Page[] = [
   // positioning for X" (see marketing-consultant-for-agencies as the template)
   // before authoring. Wave 5 publishes first.
   {
-    slug: 'client-acquisition-for-marketing-agencies',
-    url: '/client-acquisition-for-marketing-agencies',
+    // Reframed 2026-09-30 from the "client acquisition" frame to the
+    // consulting-first "marketing for X" angle. Primary kept: it is the only
+    // agency-owner term with India volume (90/mo); "marketing for agencies"
+    // is dominated by people looking to hire an agency.
+    slug: 'lead-generation-for-marketing-agencies',
+    url: '/lead-generation-for-marketing-agencies',
     type: 'subpillar',
-    title: 'Lead Generation for Marketing Agencies',
+    title: 'Lead Generation for Marketing Agencies in India',
     metaDescription:
-      'Marketing agencies are great at getting clients leads and bad at getting their own. Here is a client-acquisition system built for agency founders.',
+      'Agencies generate leads for clients and wait on referrals for their own. How an agency builds a pipeline it controls, without free pitches.',
     primaryKeyword: 'lead generation for marketing agencies',
     secondaryKeywords: [
-      'client acquisition for agencies',
-      'how agencies get clients',
+      'leads for marketing agencies',
+      'lead generation for digital marketing agencies',
+      'how to market a marketing agency',
+      'how to market a digital marketing agency',
+      'agency marketing strategy',
+      'marketing agency growth strategy',
     ],
     clearLetter: 'E',
     parent: PILLAR,
     siblings: [],
     schema: ['Article', 'BreadcrumbList', 'FAQPage'],
     publishWave: 3,
-    status: 'scaffold',
+    // Published 2026-09-30 (Wave 3 hub, pulled forward so its live child
+    // marketing-consultant-for-agencies has a parent to link up to).
+    status: 'live',
     brief: {
       angle:
-        'Sub-pillar hub for the agency family — proof-led (Origami / Manik). Links down to verticals 14–18.',
+        'Sub-pillar hub for marketing and creative agencies, proof-led from past agency engagements. Sales symptom (feast and famine, a few big accounts, pitches lost on price, free audits that go nowhere) → marketing cause (a capabilities menu instead of a position, craft shown instead of proof, no small paid first step). Links down to verticals 14–18 as they go live.',
       outline: [
-        'The cobbler’s-children problem for agencies',
-        'Why agency sales is different from client delivery',
-        'The system applied to agencies',
-        'Proof: what worked for agency founders',
-        'Links to each agency type',
+        'Why lead generation for marketing agencies is harder than it looks',
+        'Where agency clients actually come from',
+        'The proof problem: every agency says it gets results',
+        'Why free audits and spec pitches keep agencies stuck',
+        'An agency marketing strategy in four parts',
+        'How it changes by type of agency',
+        'A new-business rhythm that survives delivery',
+        'What working with me looks like',
       ],
-      handoffLine:
-        'See where your agency’s pipeline breaks.',
+      handoffLine: 'Selling leads, short on your own?',
+      faqs: [
+        {
+          question: 'How do marketing agencies get clients?',
+          answer:
+            'Most agencies in India get the majority of their clients from referrals, repeat work and the founder’s network. The agencies that grow steadily add three things on top: a clear position a stranger can remember, public proof of how they think and what their work changed, and a small paid first engagement that lets a new buyer try them. Pitches, cold outreach and search all work better once those three are in place.',
+        },
+        {
+          question: 'What is the best lead generation strategy for a digital marketing agency?',
+          answer:
+            'Narrow first, then publish. A digital agency that serves one sector or solves one problem can write specific content, run specific outreach and show specific case studies, which a generalist cannot. Pair that with steady conversations with past clients and a paid audit as the entry point. Paid ads for the agency itself rarely work early, because every competitor is bidding on the same words.',
+        },
+        {
+          question: 'Should an agency do free audits or spec work to win clients?',
+          answer:
+            'Rarely. Free audits attract people shopping for free advice, and spec work trains buyers to judge you on a guess made without a brief. A short, paid, clearly scoped diagnostic does the same job better: it filters for serious buyers, shows your thinking on their real problem, and often turns into the larger engagement.',
+        },
+        {
+          question: 'How can I market my agency with no budget?',
+          answer:
+            'Most of what works for an agency costs time, not money: a point of view published weekly in the founder’s name, five genuine conversations a week with past clients and warm contacts, and one case study a quarter from work already delivered. The constraint is usually not budget. It is that client work always comes first, so the routine needs an owner and a fixed slot.',
+        },
+      ],
     },
   },
   {
@@ -585,7 +619,7 @@ export const SEO_PAGES: Page[] = [
     primaryKeyword: 'how to get clients for a digital marketing agency',
     secondaryKeywords: ['digital marketing agency clients', 'agency lead generation'],
     clearLetter: 'E',
-    parent: 'client-acquisition-for-marketing-agencies',
+    parent: 'lead-generation-for-marketing-agencies',
     siblings: [
       'get-clients-for-branding-agency',
       'get-clients-for-web-design-agency',
@@ -617,7 +651,7 @@ export const SEO_PAGES: Page[] = [
     primaryKeyword: 'how to get clients for a branding agency',
     secondaryKeywords: ['branding agency clients', 'branding agency lead generation'],
     clearLetter: 'L',
-    parent: 'client-acquisition-for-marketing-agencies',
+    parent: 'lead-generation-for-marketing-agencies',
     siblings: [
       'get-clients-for-digital-marketing-agency',
       'get-clients-for-web-design-agency',
@@ -649,7 +683,7 @@ export const SEO_PAGES: Page[] = [
     primaryKeyword: 'how to get clients for a web design agency',
     secondaryKeywords: ['web design agency clients', 'web design leads'],
     clearLetter: 'L',
-    parent: 'client-acquisition-for-marketing-agencies',
+    parent: 'lead-generation-for-marketing-agencies',
     siblings: [
       'get-clients-for-digital-marketing-agency',
       'get-clients-for-branding-agency',
@@ -681,7 +715,7 @@ export const SEO_PAGES: Page[] = [
     primaryKeyword: 'how to get clients for an ad agency',
     secondaryKeywords: ['ad agency clients', 'advertising agency new business'],
     clearLetter: 'E',
-    parent: 'client-acquisition-for-marketing-agencies',
+    parent: 'lead-generation-for-marketing-agencies',
     siblings: [
       'get-clients-for-digital-marketing-agency',
       'get-clients-for-branding-agency',
@@ -716,7 +750,7 @@ export const SEO_PAGES: Page[] = [
       'performance agency lead generation',
     ],
     clearLetter: 'A',
-    parent: 'client-acquisition-for-marketing-agencies',
+    parent: 'lead-generation-for-marketing-agencies',
     siblings: [
       'get-clients-for-digital-marketing-agency',
       'get-clients-for-branding-agency',
@@ -1395,7 +1429,7 @@ export const SEO_PAGES: Page[] = [
       'new business strategy for agencies',
     ],
     clearLetter: 'A',
-    parent: 'client-acquisition-for-marketing-agencies',
+    parent: 'lead-generation-for-marketing-agencies',
     siblings: ['b2b-marketing-consultant-india'],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 5,

@@ -110,7 +110,7 @@ The four parts stay the same across professional services. What changes is who t
 
 **CA and accounting firms** live on renewals and referrals, with tight rules on advertising. For them, being known for one kind of client and publishing clear notes when regulations change does most of the work.
 
-**Agencies and creative studios** are a professional service too, with their own twist: they market everyone except themselves. That is covered in [marketing consultant for agencies](/blog/marketing-consultant-for-agencies).
+**Agencies and creative studios** are a professional service too, with their own twist: they market everyone except themselves. The full approach is in [lead generation for marketing agencies](/lead-generation-for-marketing-agencies).
 
 ## What Marketing Consulting for a Professional Firm Looks Like
 

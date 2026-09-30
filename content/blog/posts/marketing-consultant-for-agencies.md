@@ -90,7 +90,7 @@ Then keep the routine small enough to survive a bad week. For most agencies I wo
 - **Five conversations a week** with past clients, dormant contacts and people who once asked for a proposal. Not pitches; genuine check-ins. Agencies sit on years of goodwill and almost never use it. [Cold outreach for consultants](/blog/cold-outreach-for-consultants) covers how to do this without sounding like a sales script.
 - **One case study a quarter**, taken from work you have already delivered. Agencies have more raw material for this than any other firm. Every finished project is a story; almost none of them get told.
 
-None of this needs an ad budget. It needs a routine that someone other than the founder owns, which is the whole point. When the rhythm runs whether or not the founder has time, the pipeline stops following the delivery calendar. For the wider system around it, see [brand awareness without an ad budget](/blog/b2b-brand-awareness-small-firms) and the [pillar guide on getting clients beyond referrals](/client-acquisition-system).
+None of this needs an ad budget. It needs a routine that someone other than the founder owns, which is the whole point. When the rhythm runs whether or not the founder has time, the pipeline stops following the delivery calendar. The whole agency version of that system, from channels to proof to the first paid step, is in [lead generation for marketing agencies](/lead-generation-for-marketing-agencies). For the wider picture, see [brand awareness without an ad budget](/blog/b2b-brand-awareness-small-firms) and the [pillar guide on getting clients beyond referrals](/client-acquisition-system).
 
 ## What Marketing Consulting for an Agency Looks Like
 
