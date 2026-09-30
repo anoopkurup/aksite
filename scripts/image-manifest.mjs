@@ -152,9 +152,9 @@ export const pages = [
     id: 'page-lead-generation-for-marketing-agencies-channels',
     out: 'public/images/pages/lead-generation-for-marketing-agencies-channels.webp',
     size: W,
-    alt: 'Six ways work reaches an agency, and the few that it controls',
+    alt: 'Ways work reaches an agency, and the few that it controls',
     prompt:
-      'Subject: on white, six small navy-outlined circles arranged in an even arc across the top of the frame, each holding one simple navy line icon: two linked rings, a folded document, a magnifying glass, a paper plane, two overlapping squares, a small star. Thin navy lines run down from every circle to one navy-outlined rectangle at the bottom centre. Three of those lines, from the magnifying glass, the paper plane and the overlapping squares, are drawn in solid orange instead of navy, crisp hard edges. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
+      'Subject: on white, EXACTLY SIX navy-outlined circles, the same size, in ONE straight horizontal row across the upper half of the frame, evenly spaced, no other circles anywhere. Each holds one different simple navy line icon, no repeats: two linked rings, a folded document, a magnifying glass, a paper plane, two overlapping squares, a small star. From the bottom of every circle a thin straight vertical line drops down to one wide navy-outlined rectangle below them. Exactly three of the six lines, the ones under the magnifying glass, the paper plane and the overlapping squares, are solid orange with crisp hard edges; the other three are navy. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
   },
   {
     id: 'page-lead-generation-for-marketing-agencies-parts',
@@ -162,7 +162,7 @@ export const pages = [
     size: W,
     alt: 'Four parts that turn an agency\'s capabilities into a reason to be chosen',
     prompt:
-      'Subject: on white, at the left, a tall navy-outlined menu card with many short identical navy lines stacked down it: a long list of capabilities. A thin navy arrow leads right from it to four small navy-outlined shapes in an even row on one thin navy baseline: (1) a narrow arrow pointing at a single dot; (2) an open page with three short lines; (3) a signal mast with two small arcs; (4) a small square with one solid orange dot at its centre, crisp hard edges. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
+      'Subject: on white, EXACTLY FIVE shapes and one arrow, nothing else. At the left, a tall navy-outlined card with many short identical navy lines stacked down it, like a long menu. One single thin navy arrow points right from it. To the right of the arrow, four small navy-outlined shapes sit in an even row on one thin navy baseline: (1) a narrow arrow pointing at a single dot; (2) an open page with three short lines; (3) a signal mast with two small arcs; (4) a small square with one solid orange dot at its centre, crisp hard edges. No other arrows, squares or lines. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
   },
   {
     id: 'page-lead-generation-for-marketing-agencies-rhythm',

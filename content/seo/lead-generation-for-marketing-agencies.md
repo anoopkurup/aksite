@@ -22,6 +22,8 @@ There is also a structural reason agencies neglect this: the client always comes
 
 ## Where Agency Clients Actually Come From
 
+![Ways work reaches an agency, and the few that it controls](/images/pages/lead-generation-for-marketing-agencies-channels.webp)
+
 Before building anything, it helps to be honest about the channels. Here is how I see the main sources of agency work in India, and what each is really good for.
 
 **Referrals and repeat clients.** The foundation for almost every agency, and the one you cannot turn on when you need it. Keep them, earn more of them, but do not plan on them. [How to stop relying on referrals](/blog/stop-relying-on-referrals) covers the shift in detail.
@@ -67,6 +69,8 @@ The alternative is a small, paid, clearly scoped first step. A two-week brand di
 
 ## An Agency Marketing Strategy in Four Parts
 
+![Four parts that turn an agency's capabilities into a reason to be chosen](/images/pages/lead-generation-for-marketing-agencies-parts.webp)
+
 The marketing agency growth strategy I use has four parts. They follow the [CLEAR method](/clear) I work with, but the parts matter more than the names, and they are the same four I describe in [marketing for professional services firms](/marketing-for-professional-services), applied to agencies.
 
 **A position a stranger can remember.** "Full service" is a menu, not a position. An agency can narrow in three ways: by sector (branding for healthcare firms), by problem (launching regional brands in a new city), or by buying moment (the rebrand after a funding round). You do not have to turn away other work. You are choosing what you are known for. An advertising agency I worked with could not describe what it sold in two sentences, so we built one clearly defined campaign a stranger could understand and buy; it is written up in [one campaign a stranger could buy](/case-studies/cs-01-advertising-agency). [Positioning for consulting firms](/blog/positioning-for-consulting-firms) applies to agencies almost word for word.
@@ -98,6 +102,8 @@ The four parts hold across the agency world. What changes is the buyer, what the
 I will write a dedicated guide for each of these agency types in time, and link them here as they go live.
 
 ## A New-Business Rhythm That Survives Delivery
+
+![A small weekly new-business routine that keeps running in busy delivery months](/images/pages/lead-generation-for-marketing-agencies-rhythm.webp)
 
 Strategy tells the agency what to say. The rhythm is what makes it happen every week, including the weeks when three clients are unhappy at once.
 

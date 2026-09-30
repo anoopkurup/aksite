@@ -3,7 +3,7 @@ name: publish-article
 description: >-
   Write and publish the next anoopkurup.com blog article end to end — pick the
   next page from the SEO content map, draft against its brief, generate brand
-  images, flip it live, render social assets, verify links, commit and push.
+  images, flip it live, verify links, commit and push.
   Use whenever asked to write/publish a new article, work the publish drip, or
   draft the next queued spoke/subpillar.
 ---
@@ -62,15 +62,7 @@ Voice rules live in CLAUDE.md and the Tone of Voice Guide.
 5. **Flip the map.** In `src/lib/contentMap.ts`, set the page's `status: 'live'`
    (status gates indexability + sitemap). Only within its active wave.
 
-6. **Social assets.** Draft the LinkedIn post into the git-ignored `Social/`
-   folder in the established format, then render:
-   `npm run social:cover -- <slug> "<visual metaphor>"` (AI cover, optional but preferred),
-   `npm run social:card -- <slug>` (LinkedIn post image),
-   `npm run social:carousel -- <slug>` (LinkedIn document-post PDF),
-   `npm run social:instagram -- <slug>` (Instagram slides + caption).
-   The scripts own the colours; never hand-pick different ones.
-
-7. **Gates + ship.** Run `npm run lint:tone && npm run build && npm run seo:audit`.
+6. **Gates + ship.** Run `npm run lint:tone && npm run build && npm run seo:audit`.
    All must pass (0 errors, no broken internal links). Then commit and push to
    `master` — Vercel deploys.
 
@@ -86,5 +78,8 @@ Voice rules live in CLAUDE.md and the Tone of Voice Guide.
   getting clients, enquiries) — keywords/slugs/titles chosen for search are exempt.
 - Never state client revenue/earnings figures; never fabricate metrics. Cases are
   labelled "From past consulting engagements".
+- **No social assets (decided 2026-09-30).** Do not draft LinkedIn/Instagram/
+  Facebook posts or run any `social:*` script as part of publishing. Only make
+  them if Anoop asks for a specific piece.
 - An Obsidian draft can replace step 3's hand-drafting:
   `npm run publish -- "/path/to/note.md"` normalises it into `content/blog/posts/`.
