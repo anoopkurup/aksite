@@ -1051,4 +1051,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'marketing-for-digital-marketing-agencies',
+    hero: img(
+      'A digital agency whose own marketing is the sample of its work',
+      'Metaphor: on white, a navy-outlined tailor\'s dress form (a mannequin torso on a thin stand) wearing a neatly fitted navy-outlined shirt, with a navy-outlined measuring tape draped around its neck. One small solid orange button on the shirt. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A firm offering every digital service, versus one known for one kind of client',
+        'Subject: on white, two panels side by side. Left panel: a navy-outlined full circle divided into eight equal wedges, each wedge holding a tiny different navy-outlined icon shape, all the same weight. Right panel: the same navy-outlined circle with only one wedge filled solid orange and the other seven left empty. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A buyer inspecting the agency\'s own channels before the first meeting',
+        'Subject: on white, a navy-outlined magnifying glass held over a navy-outlined smartphone. On the phone screen, three small navy-outlined rectangles stacked like posts in a feed, the top one marked with one small solid orange dot. To the right, a small navy-outlined closed door, not yet opened. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small paid first step leading to a longer retainer',
+        'Subject: on white, a short navy-outlined single step at the left with one small solid orange dot on it, followed to the right by a long navy-outlined horizontal bar divided into twelve equal segments, like months. A thin navy arrow joins the step to the bar. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small weekly routine for the agency\'s own marketing, kept up through busy delivery weeks',
+        'Subject: on white, a thin navy-outlined horizontal track of eight equal segments, like weeks. Above most segments sit navy-outlined stacks of small browser-window rectangles of uneven height, like piles of client work. Directly on the track, under every segment, sits one identical small solid orange circle, an unbroken evenly spaced line of eight. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];

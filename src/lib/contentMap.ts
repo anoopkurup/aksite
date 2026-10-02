@@ -610,17 +610,27 @@ export const SEO_PAGES: Page[] = [
     },
   },
   {
-    slug: 'get-clients-for-digital-marketing-agency',
-    url: '/blog/get-clients-for-digital-marketing-agency',
+    // Reframed 2026-10-02 from "how to get clients for a digital marketing
+    // agency" (sales-advice frame, no India volume data) to the "marketing
+    // for X" frame; the old phrase stays as a secondary keyword.
+    slug: 'marketing-for-digital-marketing-agencies',
+    url: '/blog/marketing-for-digital-marketing-agencies',
     type: 'vertical',
-    title: 'How to Get Clients for a Digital Marketing Agency',
+    title: 'Marketing for Digital Marketing Agencies: Client Zero',
     metaDescription:
-      'Stop selling deliverables and start selling outcomes. Here is how digital marketing agency founders build a steady pipeline of the right clients.',
-    primaryKeyword: 'how to get clients for a digital marketing agency',
-    secondaryKeywords: ['digital marketing agency clients', 'agency lead generation'],
+      'Buyers inspect a digital agency’s own marketing before the first call. How to turn it into your best case study and stop competing on price.',
+    primaryKeyword: 'marketing for digital marketing agencies',
+    secondaryKeywords: [
+      'how to get clients for a digital marketing agency',
+      'how to find clients for a digital marketing agency',
+      'how to promote a digital marketing agency',
+      'how to get clients for a digital marketing agency in india',
+      'how to get international clients for digital marketing',
+    ],
     clearLetter: 'E',
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
+      'marketing-consultant-for-agencies',
       'get-clients-for-branding-agency',
       'get-clients-for-web-design-agency',
       'get-clients-for-ad-agency',
@@ -628,17 +638,22 @@ export const SEO_PAGES: Page[] = [
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 3,
-    status: 'scaffold',
+    // Published 2026-10-02 (Wave 3, reframed).
+    status: 'live',
     brief: {
-      angle: 'Vertical: digital marketing agency, led with proof.',
+      angle:
+        'Vertical: digital marketing agencies in India. The one firm whose own marketing is a sample of the product, inspected by the buyer before the first call. Sales symptom (compared on deliverables per rupee, free audits that go nowhere, clients who leave at month three) → marketing cause ("360-degree" position, the agency’s own channels neglected, no paid first step). The agency treats itself as client zero.',
       outline: [
         'What digital agency buyers actually want',
-        'Positioning past the race to the bottom',
+        'Why digital agencies get compared on price',
+        'Positioning past “360-degree digital marketing”',
+        'Client zero: your own marketing is the first case study',
         'The offer that wins retainers',
-        'A weekly acquisition routine for agency founders',
+        'Where digital marketing agency clients come from in India',
+        'A weekly routine for client zero',
+        'What marketing consulting for a digital agency looks like',
       ],
-      handoffLine:
-        'Find your agency’s weakest link.',
+      handoffLine: 'A digital agency with no digital marketing of its own?',
     },
   },
   {
@@ -653,7 +668,7 @@ export const SEO_PAGES: Page[] = [
     clearLetter: 'L',
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
-      'get-clients-for-digital-marketing-agency',
+      'marketing-for-digital-marketing-agencies',
       'get-clients-for-web-design-agency',
       'get-clients-for-ad-agency',
       'get-clients-for-performance-marketing-agency',
@@ -685,7 +700,7 @@ export const SEO_PAGES: Page[] = [
     clearLetter: 'L',
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
-      'get-clients-for-digital-marketing-agency',
+      'marketing-for-digital-marketing-agencies',
       'get-clients-for-branding-agency',
       'get-clients-for-ad-agency',
       'get-clients-for-performance-marketing-agency',
@@ -717,7 +732,7 @@ export const SEO_PAGES: Page[] = [
     clearLetter: 'E',
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
-      'get-clients-for-digital-marketing-agency',
+      'marketing-for-digital-marketing-agencies',
       'get-clients-for-branding-agency',
       'get-clients-for-web-design-agency',
       'get-clients-for-performance-marketing-agency',
@@ -752,7 +767,7 @@ export const SEO_PAGES: Page[] = [
     clearLetter: 'A',
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
-      'get-clients-for-digital-marketing-agency',
+      'marketing-for-digital-marketing-agencies',
       'get-clients-for-branding-agency',
       'get-clients-for-web-design-agency',
       'get-clients-for-ad-agency',
@@ -1430,7 +1445,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'A',
     parent: 'lead-generation-for-marketing-agencies',
-    siblings: ['b2b-marketing-consultant-india'],
+    siblings: ['b2b-marketing-consultant-india', 'marketing-for-digital-marketing-agencies'],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 5,
     status: 'live',

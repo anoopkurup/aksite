@@ -87,7 +87,7 @@ Most agencies I meet have none of these four in a clear form, and a few have a v
 
 The four parts hold across the agency world. What changes is the buyer, what they fear, and where the proof has to come from.
 
-**Digital marketing agencies** compete in the most crowded category of all, with the most claims of results. Narrowing matters more here than anywhere, and the proof has to be about business outcomes, not channel metrics.
+**Digital marketing agencies** compete in the most crowded category of all, with the most claims of results. Narrowing matters more here than anywhere, and the proof has to be about business outcomes, not channel metrics. The full guide is [marketing for digital marketing agencies](/blog/marketing-for-digital-marketing-agencies).
 
 **Performance marketing agencies** sell numbers, which is both their strength and their trap: the buyer can switch to whoever quotes the lowest cost per lead. The way out is to own more of the outcome. An ad-creative agency I worked with learned this when it tried to move from a few large clients to many smaller ones, and found smaller clients were buying the whole process, not the ads; that story is in [from a few big clients to many small ones](/case-studies/cs-08-ad-creative-agency-sme-shift).
 
