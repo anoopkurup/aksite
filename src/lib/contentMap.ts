@@ -631,7 +631,7 @@ export const SEO_PAGES: Page[] = [
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
       'marketing-consultant-for-agencies',
-      'get-clients-for-branding-agency',
+      'marketing-for-branding-agencies',
       'get-clients-for-web-design-agency',
       'get-clients-for-ad-agency',
       'get-clients-for-performance-marketing-agency',
@@ -657,17 +657,27 @@ export const SEO_PAGES: Page[] = [
     },
   },
   {
-    slug: 'get-clients-for-branding-agency',
-    url: '/blog/get-clients-for-branding-agency',
+    // Reframed 2026-10-06 from "how to get clients for a branding agency"
+    // (sales-advice frame, no India volume data) to the "marketing for X"
+    // frame; the old phrase stays as a secondary keyword.
+    slug: 'marketing-for-branding-agencies',
+    url: '/blog/marketing-for-branding-agencies',
     type: 'vertical',
-    title: 'How to Get Clients for a Branding Agency',
+    title: 'Marketing for Branding Agencies: Gold Without a Hallmark',
     metaDescription:
-      'Branding agencies sell something hard to measure. Here is how to position, package, and pitch so the right clients see the value and say yes.',
-    primaryKeyword: 'how to get clients for a branding agency',
-    secondaryKeywords: ['branding agency clients', 'branding agency lead generation'],
+      'A buyer cannot judge brand work by looking, so they compare taste and price. How a branding agency makes its thinking visible and gets chosen for it.',
+    primaryKeyword: 'marketing for branding agencies',
+    secondaryKeywords: [
+      'how to get clients for a branding agency',
+      'how to get clients for a branding agency in india',
+      'branding agency clients',
+      'branding agency lead generation',
+      'how to market a branding agency',
+    ],
     clearLetter: 'L',
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
+      'marketing-consultant-for-agencies',
       'marketing-for-digital-marketing-agencies',
       'get-clients-for-web-design-agency',
       'get-clients-for-ad-agency',
@@ -675,17 +685,22 @@ export const SEO_PAGES: Page[] = [
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 3,
-    status: 'scaffold',
+    // Published 2026-10-06 (Wave 3, reframed).
+    status: 'live',
     brief: {
-      angle: 'Vertical: branding agency — selling the intangible.',
+      angle:
+        'Vertical: branding and design agencies in India. Selling the intangible: the buyer cannot inspect the thinking, so they judge what they can see. Sales symptom ("just the logo", free concepts, proposals compared on revisions, feast and famine) → marketing cause (a positioning firm with no position, portfolios that show artefacts instead of reasoning, no paid first step). The agency builds its own hallmark. Proof from cs-03 and cs-07.',
       outline: [
         'Why branding is a hard sell',
-        'Making the value concrete',
-        'Packaging brand work into a clear offer',
-        'Finding buyers who already value brand',
+        'Why branding agencies get judged on taste and price',
+        'A positioning firm with no position',
+        'The hallmark: show the reasoning, not only the logo',
+        'Packaging brand work into a first step',
+        'Where branding agency clients come from in India',
+        'A weekly routine that survives a rebrand deadline',
+        'What marketing consulting for a branding agency looks like',
       ],
-      handoffLine:
-        'See how clearly your value lands.',
+      handoffLine: 'A branding agency judged on taste and price?',
     },
   },
   {
@@ -701,7 +716,7 @@ export const SEO_PAGES: Page[] = [
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
       'marketing-for-digital-marketing-agencies',
-      'get-clients-for-branding-agency',
+      'marketing-for-branding-agencies',
       'get-clients-for-ad-agency',
       'get-clients-for-performance-marketing-agency',
     ],
@@ -733,7 +748,7 @@ export const SEO_PAGES: Page[] = [
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
       'marketing-for-digital-marketing-agencies',
-      'get-clients-for-branding-agency',
+      'marketing-for-branding-agencies',
       'get-clients-for-web-design-agency',
       'get-clients-for-performance-marketing-agency',
     ],
@@ -768,7 +783,7 @@ export const SEO_PAGES: Page[] = [
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
       'marketing-for-digital-marketing-agencies',
-      'get-clients-for-branding-agency',
+      'marketing-for-branding-agencies',
       'get-clients-for-web-design-agency',
       'get-clients-for-ad-agency',
     ],
@@ -1445,7 +1460,11 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'A',
     parent: 'lead-generation-for-marketing-agencies',
-    siblings: ['b2b-marketing-consultant-india', 'marketing-for-digital-marketing-agencies'],
+    siblings: [
+      'b2b-marketing-consultant-india',
+      'marketing-for-digital-marketing-agencies',
+      'marketing-for-branding-agencies',
+    ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 5,
     status: 'live',

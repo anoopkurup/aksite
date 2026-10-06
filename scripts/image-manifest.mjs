@@ -1076,4 +1076,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'marketing-for-branding-agencies',
+    hero: img(
+      'Brand work as gold without a hallmark: the buyer cannot see what is inside',
+      'Metaphor: on white, two identical navy-outlined gold bars (simple trapezoid ingots) side by side. The left bar is plain. The right bar carries one small solid orange circular stamp on its face. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A studio that takes every kind of brand work, beside one known in a single field',
+        'Subject: on white, two panels side by side. Left panel: a navy-outlined flag pole with six small navy-outlined flags pointing in different directions, all the same size. Right panel: a navy-outlined small hill with one single flag planted on top, the flag filled solid orange. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A finished mark with the reasoning behind it laid out for the buyer to see',
+        'Subject: on white, three small navy-outlined squares in a horizontal row, evenly spaced, each holding a different simple navy-outlined shape (a triangle, a circle, a diamond). The left and right squares each have a thin navy diagonal line struck through them. The middle square is not struck through and has one small solid orange dot directly below it. Outlines only, white interiors, nothing behind the squares. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small first engagement that opens into the full identity programme',
+        'Subject: on white, a horizontal row of five navy-outlined squares joined by a thin navy line, like stages in sequence. The first square at the left is clearly smaller than the rest and is filled solid orange. The other four are equal, larger, and outlined only with pure white interiors. No screens, no devices, no grey. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small weekly routine that carries on through heavy project months',
+        'Subject: on white, a thin navy-outlined horizontal track of eight equal segments, like weeks. Above the track, a navy-outlined wave rises into two tall peaks and falls into two deep troughs, like busy and quiet months. Directly on the track, under every segment, sits one identical small solid orange circle, an unbroken evenly spaced line of eight. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
