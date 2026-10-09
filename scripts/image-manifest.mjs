@@ -1101,4 +1101,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'marketing-for-web-design-agencies',
+    hero: img(
+      'Web design sold by the page, like a house quoted by the square foot',
+      'Metaphor: on white, a simple navy-outlined house floor plan seen from above, a rectangle divided into six rooms by thin navy lines, all rooms with pure white interiors. One single room is filled solid orange. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A studio building every kind of website, beside one known for a single kind of client',
+        'Subject: on white, two panels side by side. Left panel: six small identical navy-outlined browser windows (plain rectangles with a thin top bar) scattered at slightly different angles, all with white interiors. Right panel: one single larger navy-outlined browser window, upright and centred, its thin top bar filled solid orange. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A website judged by what it brings in, not by the number of pages',
+        'Subject: on white, a navy-outlined stack of five identical thin horizontal sheets on the left, like pages. A thin navy arrow runs from the stack to the right, ending at one single solid orange circle. Outlines only, white interiors, nothing else. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A paid blueprint that comes before the build',
+        'Subject: on white, a horizontal row of five navy-outlined squares joined by a thin navy line, like stages in sequence. The first square at the left is clearly smaller than the rest, is filled solid orange, and sits before the others. The other four are equal, larger, and outlined only with pure white interiors. No screens, no devices, no grey. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small weekly routine that carries on through launch weeks',
+        'Subject: on white, a thin navy-outlined horizontal track of eight equal segments, like weeks. Above the track, a navy-outlined line of bars of uneven height, two very tall and the rest short, like busy and quiet weeks. Directly on the track, under every segment, sits one identical small solid orange circle, an unbroken evenly spaced line of eight. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];

@@ -93,7 +93,7 @@ The four parts hold across the agency world. What changes is the buyer, what the
 
 **Branding and design agencies** are judged on aesthetics and then pushed on price, because good-looking portfolios all look alike to a buyer. Specialising by sector and leading with what a brand is bought for, rather than the deliverables, is usually the turning point. Two branding engagements of mine show different routes: [specialising by sector](/case-studies/cs-07-brand-agency-specialisation) and [breaking the feast-and-famine cycle](/case-studies/cs-03-branding-agency). The full guide is [marketing for branding agencies](/blog/marketing-for-branding-agencies).
 
-**Web design and development agencies** get compared line by line on quotes. The ones that escape this sell the business result of the website, and they qualify hard before quoting, because a large share of rebuild enquiries do not need a rebuild.
+**Web design and development agencies** get compared line by line on quotes. The ones that escape this sell the business result of the website, and they qualify hard before quoting, because a large share of rebuild enquiries do not need a rebuild. The full guide is [marketing for web design agencies](/blog/marketing-for-web-design-agencies).
 
 **Advertising agencies** often sell a list of media and capabilities. Packaging one clear campaign offer around one kind of buyer changes how a stranger reads them, as in the [advertising agency case](/case-studies/cs-01-advertising-agency).
 

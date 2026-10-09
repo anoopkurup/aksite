@@ -632,7 +632,7 @@ export const SEO_PAGES: Page[] = [
     siblings: [
       'marketing-consultant-for-agencies',
       'marketing-for-branding-agencies',
-      'get-clients-for-web-design-agency',
+      'marketing-for-web-design-agencies',
       'get-clients-for-ad-agency',
       'get-clients-for-performance-marketing-agency',
     ],
@@ -679,7 +679,7 @@ export const SEO_PAGES: Page[] = [
     siblings: [
       'marketing-consultant-for-agencies',
       'marketing-for-digital-marketing-agencies',
-      'get-clients-for-web-design-agency',
+      'marketing-for-web-design-agencies',
       'get-clients-for-ad-agency',
       'get-clients-for-performance-marketing-agency',
     ],
@@ -704,17 +704,27 @@ export const SEO_PAGES: Page[] = [
     },
   },
   {
-    slug: 'get-clients-for-web-design-agency',
-    url: '/blog/get-clients-for-web-design-agency',
+    // Reframed 2026-10-09 from "how to get clients for a web design agency"
+    // (sales-advice frame, no India volume data) to the "marketing for X"
+    // frame; the old phrase stays as a secondary keyword.
+    slug: 'marketing-for-web-design-agencies',
+    url: '/blog/marketing-for-web-design-agencies',
     type: 'vertical',
-    title: 'How to Get Clients for a Web Design Agency',
+    title: 'Marketing for Web Design Agencies: The Per-Page Quote',
     metaDescription:
-      'Web design is crowded and commoditised. Here is how design and dev studios escape price competition and build a pipeline of better-fit clients.',
-    primaryKeyword: 'how to get clients for a web design agency',
-    secondaryKeywords: ['web design agency clients', 'web design leads'],
+      'Web design agencies get quoted by the page and compared line by line. How a studio sells what the website is for, and stops competing on price.',
+    primaryKeyword: 'marketing for web design agencies',
+    secondaryKeywords: [
+      'how to get clients for a web design agency',
+      'how to get web design clients in india',
+      'web design agency clients',
+      'web design leads',
+      'how to market a web design agency',
+    ],
     clearLetter: 'L',
     parent: 'lead-generation-for-marketing-agencies',
     siblings: [
+      'marketing-consultant-for-agencies',
       'marketing-for-digital-marketing-agencies',
       'marketing-for-branding-agencies',
       'get-clients-for-ad-agency',
@@ -722,17 +732,23 @@ export const SEO_PAGES: Page[] = [
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 3,
-    status: 'scaffold',
+    // Published 2026-10-09 (Wave 3, reframed).
+    status: 'live',
     brief: {
-      angle: 'Vertical: web design / development studio — escaping commoditisation.',
+      angle:
+        'Vertical: web design and development studios in India. The contractor quoted per square foot versus the architect asked what to build. Sales symptom ("how much for a ten-page website?", quotes compared row by row, free mock-ups, the freelancer at a fifth of the price, launch then silence) → marketing cause ("websites for everyone", portfolios of screenshots, an enquiry form that itself asks for page count and budget, no paid first step). The studio sells what the website is for. Proof from cs-02 and cs-03.',
       outline: [
-        'Why web work gets price-shopped',
-        'Productizing the build',
-        'Selling outcomes (revenue, conversions) not pages',
-        'Recurring revenue after launch',
+        'Why web design gets quoted by the page',
+        'Why web design agencies get compared line by line',
+        'A position past “we build websites”',
+        'Sell what the website is for',
+        'A blueprint before the build',
+        'After launch: the revenue most studios leave behind',
+        'Where web design agency clients come from in India',
+        'A weekly routine that survives launch week',
+        'What marketing consulting for a web design agency looks like',
       ],
-      handoffLine:
-        'Stop competing on price.',
+      handoffLine: 'A web design agency quoted by the page?',
     },
   },
   {
@@ -749,7 +765,7 @@ export const SEO_PAGES: Page[] = [
     siblings: [
       'marketing-for-digital-marketing-agencies',
       'marketing-for-branding-agencies',
-      'get-clients-for-web-design-agency',
+      'marketing-for-web-design-agencies',
       'get-clients-for-performance-marketing-agency',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
@@ -784,7 +800,7 @@ export const SEO_PAGES: Page[] = [
     siblings: [
       'marketing-for-digital-marketing-agencies',
       'marketing-for-branding-agencies',
-      'get-clients-for-web-design-agency',
+      'marketing-for-web-design-agencies',
       'get-clients-for-ad-agency',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
@@ -1464,6 +1480,7 @@ export const SEO_PAGES: Page[] = [
       'b2b-marketing-consultant-india',
       'marketing-for-digital-marketing-agencies',
       'marketing-for-branding-agencies',
+      'marketing-for-web-design-agencies',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 5,
