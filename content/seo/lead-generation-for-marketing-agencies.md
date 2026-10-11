@@ -95,7 +95,7 @@ The four parts hold across the agency world. What changes is the buyer, what the
 
 **Web design and development agencies** get compared line by line on quotes. The ones that escape this sell the business result of the website, and they qualify hard before quoting, because a large share of rebuild enquiries do not need a rebuild. The full guide is [marketing for web design agencies](/blog/marketing-for-web-design-agencies).
 
-**Advertising agencies** often sell a list of media and capabilities. Packaging one clear campaign offer around one kind of buyer changes how a stranger reads them, as in the [advertising agency case](/case-studies/cs-01-advertising-agency).
+**Advertising agencies** often sell a list of media and capabilities. Packaging one clear campaign offer around one kind of buyer changes how a stranger reads them, as in the [advertising agency case](/case-studies/cs-01-advertising-agency). The full guide is [marketing for ad agencies](/blog/marketing-for-ad-agencies).
 
 **Video and content studios** get filed as vendors and asked for a per-video rate. Tying the work to the buyer's real business question moves them out of that box; the full story is in [out of the editing-rate trap](/case-studies/cs-02-video-production).
 

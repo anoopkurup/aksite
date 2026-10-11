@@ -1126,4 +1126,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'marketing-for-ad-agencies',
+    hero: img(
+      'The idea handed over free, with only the execution paid for',
+      'Metaphor: on white, one single navy-outlined gift box seen from the front, a plain square box with a simple ribbon bow on top, white interior. Inside the box outline sits one small solid orange circle. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Several agencies pitch a full campaign, and one is chosen',
+        'Subject: on white, one horizontal row of exactly six identical upright navy-outlined rectangles, evenly spaced, like six presentation boards standing side by side. Five have pure white interiors. Exactly one, the fourth from the left, is filled solid orange. Nothing else on the canvas: no lines between them, no circles, no arrows. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A menu of media and capabilities, beside one campaign a stranger can buy',
+        'Subject: on white, two panels side by side. Left panel: eight small navy-outlined squares of equal size scattered loosely at slightly different angles, all with white interiors. Right panel: one single larger navy-outlined square, upright and centred, filled solid orange. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Expectations agreed before the campaign, so one bad month does not end the account',
+        'Subject: on white, a simple line chart with thin navy axes and one navy line that rises steadily from left to right with one single clear dip in the middle. The point at the bottom of the dip is marked with one small solid orange circle. The line continues rising after the dip. No grid, no numbers, no labels. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small weekly routine that carries on through pitch season',
+        'Subject: on white, a thin navy-outlined horizontal track of eight equal segments, like weeks. Above the track, a navy-outlined line of bars of uneven height, one very tall and the rest short, like a pitch week among quiet weeks. Directly on the track, under every segment, sits one identical small solid orange circle, an unbroken evenly spaced line of eight. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
