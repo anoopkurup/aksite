@@ -1151,4 +1151,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'marketing-for-performance-marketing-agencies',
+    hero: img(
+      'A marksheet, with one number that everything is judged on',
+      'Metaphor: on white, one single navy-outlined upright sheet of paper seen from the front, white interior, with five short evenly spaced horizontal navy lines inside it like rows on a report. At the right end of the middle row sits one small solid orange circle. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Every agency shows the same big number, so a buyer cannot tell them apart',
+        'Subject: on white, one horizontal row of exactly five identical upright navy-outlined rectangles, evenly spaced, like five hoardings standing side by side, all with white interiors. In the centre of each rectangle sits one identical small solid orange circle, the same size and position in all five. Nothing else on the canvas: no lines between them, no arrows. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A marksheet with two columns: what the agency controls and what the client controls',
+        'Subject: on white, one large navy-outlined upright rectangle divided into two equal columns by one thin vertical navy line. Each column holds four short horizontal navy lines stacked evenly. In the left column each line ends in one small solid orange circle. In the right column each line ends in one small navy-outlined circle with a white interior. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Testing an account before taking it on, so only the ones that can be moved come through',
+        'Subject: on white, a thin vertical navy line in the centre with one small gap in the middle, like a gate. To the left of it, six small navy-outlined circles with white interiors, loosely grouped. To the right of it, exactly two small solid orange circles. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A small weekly routine that carries on through sale season',
+        'Subject: on white, a thin navy-outlined horizontal track of eight equal segments, like weeks. Above the track, one thin navy line that runs low and flat with one single tall sharp peak in the middle, like a sale week among quiet weeks. Directly on the track, under every segment, sits one identical small solid orange circle, an unbroken evenly spaced line of eight. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
