@@ -27,9 +27,6 @@ export default function AuthorBio({ note }: AuthorBioProps) {
             className="w-24 h-24 object-cover flex-shrink-0 hidden sm:block"
           />
           <div className="flex-1">
-            <p className="font-mono text-xs text-slate-500 uppercase tracking-[0.18em] mb-2">
-              About the Author
-            </p>
             <h3 className="font-serif text-title text-navy-900 mb-3">
               {SITE.author}
             </h3>

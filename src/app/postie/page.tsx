@@ -26,14 +26,6 @@ function EnquireButton({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Eyebrow({ children, onDark = false }: { children: React.ReactNode; onDark?: boolean }) {
-  return (
-    <p className={`font-mono text-xs uppercase tracking-[0.18em] mb-6 ${onDark ? "text-navy-200" : "text-navy-600"}`}>
-      {children}
-    </p>
-  );
-}
-
 export default function PostiePage() {
   const content = getPostiePageContent();
 
@@ -57,10 +49,9 @@ export default function PostiePage() {
 
       {/* Hero — copy left, the blank page becoming finished drafts on the right */}
       <section className="bg-white">
-        <div className="max-w-6xl mx-auto px-8 pt-20 pb-24 md:pt-28 md:pb-32">
+        <div className="max-w-6xl mx-auto px-8 pt-32 pb-24 md:pt-40 md:pb-32">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7">
-              <Eyebrow>{content.hero.eyebrow}</Eyebrow>
               <h1 className="font-serif text-hero-mobile md:text-hero text-navy-900 leading-[1.05] mb-8">
                 {content.hero.title}
               </h1>
@@ -99,7 +90,6 @@ export default function PostiePage() {
       {/* The problem — narrow prose closing on a pull quote */}
       <section className="py-section bg-slate-50">
         <div className="max-w-3xl mx-auto px-8">
-          <Eyebrow>{content.problem.eyebrow}</Eyebrow>
           <h2 className="font-serif text-display-sm md:text-display text-navy-900 mb-10">
             {content.problem.title}
           </h2>
@@ -119,7 +109,6 @@ export default function PostiePage() {
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-12 gap-12 items-center mb-20">
             <div className="lg:col-span-5">
-              <Eyebrow>{content.alternatives.eyebrow}</Eyebrow>
               <h2 className="font-serif text-display-sm md:text-display text-navy-900">
                 {content.alternatives.title}
               </h2>
@@ -139,9 +128,6 @@ export default function PostiePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {content.alternatives.items.map((item, i) => (
               <div key={i} className="border-t-2 border-slate-300 pt-6">
-                <p className="font-mono text-xs uppercase tracking-[0.18em] text-navy-600 mb-4">
-                  {item.label}
-                </p>
                 <h3 className="font-serif text-title text-navy-900 mb-4">{item.title}</h3>
                 <p className="font-sans text-body text-slate-600 leading-relaxed">{item.body}</p>
               </div>
@@ -151,7 +137,6 @@ export default function PostiePage() {
           <div className="mt-16 bg-navy-900 p-10 md:p-16">
             <div className="grid lg:grid-cols-12 gap-10">
               <div className="lg:col-span-5">
-                <Eyebrow onDark>{content.alternatives.answer_eyebrow}</Eyebrow>
                 <h3 className="font-serif text-display-sm text-white leading-tight">
                   {content.alternatives.answer_title}
                 </h3>
@@ -172,7 +157,6 @@ export default function PostiePage() {
       <section className="py-section bg-slate-50">
         <div className="max-w-6xl mx-auto px-8">
           <div className="max-w-3xl mb-12">
-            <Eyebrow>{content.how_it_works.eyebrow}</Eyebrow>
             <h2 className="font-serif text-display-sm md:text-display text-navy-900">
               {content.how_it_works.title}
             </h2>
@@ -207,7 +191,6 @@ export default function PostiePage() {
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-5">
               <div className="lg:sticky lg:top-28">
-                <Eyebrow>{content.what_you_get.eyebrow}</Eyebrow>
                 <h2 className="font-serif text-display-sm md:text-display text-navy-900 mb-8">
                   {content.what_you_get.title}
                 </h2>
@@ -237,7 +220,6 @@ export default function PostiePage() {
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16">
             <div className="lg:col-span-6">
-              <Eyebrow onDark>{content.engineering.eyebrow}</Eyebrow>
               <h2 className="font-serif text-display-sm md:text-display text-white mb-8">
                 {content.engineering.title}
               </h2>
@@ -273,7 +255,6 @@ export default function PostiePage() {
       {/* Fit */}
       <section className="py-section bg-white">
         <div className="max-w-5xl mx-auto px-8">
-          <Eyebrow>{content.fit.eyebrow}</Eyebrow>
           <h2 className="font-serif text-display-sm md:text-display text-navy-900 mb-12">
             {content.fit.title}
           </h2>
@@ -307,7 +288,6 @@ export default function PostiePage() {
       {/* Plans — no figures, per the site rule */}
       <section className="py-section bg-slate-50">
         <div className="max-w-5xl mx-auto px-8">
-          <Eyebrow>{content.plans.eyebrow}</Eyebrow>
           <h2 className="font-serif text-display-sm md:text-display text-navy-900 mb-12">
             {content.plans.title}
           </h2>
@@ -338,7 +318,6 @@ export default function PostiePage() {
       {/* FAQ — two columns */}
       <section className="py-section bg-white">
         <div className="max-w-6xl mx-auto px-8">
-          <Eyebrow>{content.faq.eyebrow}</Eyebrow>
           <h2 className="font-serif text-display-sm md:text-display text-navy-900 mb-14">
             {content.faq.title}
           </h2>

@@ -33,7 +33,7 @@ const newsreader = Newsreader({
   display: 'swap',
 });
 
-// Data/utility: IBM Plex Mono — every number, price, score, eyebrow and meter label
+// Data/utility: IBM Plex Mono — every number, price, score, data label and meter label
 // (the instrument readout). 400 + 500; 600 was declared but never used.
 const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],

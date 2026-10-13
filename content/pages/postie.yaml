@@ -10,7 +10,6 @@ meta:
   description: "Postie writes your LinkedIn first draft. Finished posts, researched on your topics and written in your voice, land in your inbox every week. You edit for ten minutes and publish."
 
 hero:
-  eyebrow: "Postie"
   title: "Your LinkedIn problem is a first draft problem."
   subhead:
     - "You are not short of things to say. You say them every week on calls, in proposals, in the answer you have now given four clients in a row. The trouble starts at the empty page, when saying it well is suddenly a different job."
@@ -23,7 +22,6 @@ hero:
     - "Monthly, no lock-in"
 
 problem:
-  eyebrow: "The real problem"
   title: "Nobody stops posting for want of ideas."
   body:
     - "Think about the last proposal one of your people sent you to review. You read it, marked the three sentences that were wrong, sharpened the opening and sent it back inside ten minutes. You may even have enjoyed it. Now think about writing that same proposal from nothing on a Tuesday morning. Same document, entirely different amount of will required."
@@ -32,26 +30,20 @@ problem:
   pull_quote: "Editing is a ten minute job you can do while tired. Starting is not."
 
 alternatives:
-  eyebrow: "What you have already tried"
   title: "Three doors, and why each one closes."
   items:
-    - label: "Door one"
-      title: "The AI tool"
+    - title: "The AI tool"
       body: "ChatGPT will hand you a post in seconds. But you still have to decide what the post is about, which was the hard half of the work, and what comes back is the same LinkedIn voice everyone else is pasting in. It also has no memory of what you published last month, so sooner or later it returns an idea you have already used, wearing new words. Your readers spot that before you do."
-    - label: "Door two"
-      title: "The writer you hire"
+    - title: "The writer you hire"
       body: "You brief them for an hour and get back something smooth and weightless that could have been written about any firm in your category. In a sense it was. They have never sat in one of your client calls, so the opinions are borrowed and the sentences hedge in exactly the places where you would commit."
-    - label: "Door three"
-      title: "Waiting to feel like it"
+    - title: "Waiting to feel like it"
       body: "Some weeks the mood turns up and you write three good posts in an evening. Then a project lands and it goes quiet for a month. LinkedIn only pays out on consistency held over months, and the mood is precisely the input you cannot put in a calendar."
-  answer_eyebrow: "The fourth door"
-  answer_title: "Change the job, not your willpower."
+  answer_title: "The fourth door: change the job, not your willpower."
   answer_body:
     - "Every one of those three asks you to supply something you have already proved you will not reliably supply: the starting effort, the brief, or the mood. Postie asks for none of them. It changes what the task is."
     - "A finished draft is sitting in your inbox on the same days each week. The work left in front of you is reading and correcting, which is the job you are good at and can do without motivation, tired, on a Monday morning, with a coffee. That is the entire mechanism, and it is why it survives a busy month when the other three do not."
 
 how_it_works:
-  eyebrow: "How it runs"
   title: "An hour to set up. Then it just runs."
   steps:
     - title: "You give me an hour."
@@ -62,7 +54,6 @@ how_it_works:
       body: "Read, edit, publish. Skip one and that topic goes back in the queue for later. If a post misses the mark, tell me and I change the instructions behind your account, which is the part you cannot get from a tool."
 
 what_you_get:
-  eyebrow: "What lands in your inbox"
   title: "Finished work, not raw material."
   items:
     - title: "Complete posts on a fixed weekly schedule."
@@ -79,7 +70,6 @@ what_you_get:
       body: "You are not filing a ticket with a support queue. You are telling the person who built the thing what it got wrong, and he changes it."
 
 engineering:
-  eyebrow: "Why it does not read like AI"
   title: "The dull machinery is the actual product."
   intro:
     - "I have been automating my own work since 2006, when the first thing I did was repurpose the Caps Lock key into a search bar. Twenty years of that teaches you one lesson: the first version of anything automated is easy, and the fiftieth is the one that exposes you."
@@ -97,7 +87,6 @@ engineering:
       body: "A draft that comes out wrong is caught and rewritten inside the system. You see the ones that passed."
 
 fit:
-  eyebrow: "Fit"
   title: "This works if you sell on expertise."
   for_title: "A good fit if you are"
   for_items:
@@ -112,7 +101,6 @@ fit:
     - "Want a full ghostwriting relationship with strategy calls and revision rounds. That is a good thing to buy. It is not this."
 
 plans:
-  eyebrow: "Plans"
   title: "Two plans, both monthly."
   items:
     - name: "Posts"
@@ -130,7 +118,6 @@ plans:
   note: "No annual lock-in. Onboarding is a one time session included in your first month. Engagements are scoped in the conversation, not off a price list."
 
 faq:
-  eyebrow: "Before you ask"
   title: "The questions I get every time."
   items:
     - question: "Does it post to LinkedIn for me?"

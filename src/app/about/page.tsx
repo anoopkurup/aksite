@@ -25,8 +25,7 @@ export default function AboutPage() {
       />
       {/* Hero */}
       <section className="min-h-[60vh] flex items-center bg-white">
-        <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-navy-600 mb-8">About</p>
+        <div className="max-w-4xl mx-auto px-8 pt-36 pb-24">
           <h1 className="font-serif text-display text-navy-900 mb-8">{content.hero.headline}</h1>
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="w-48 md:w-56 flex-shrink-0">

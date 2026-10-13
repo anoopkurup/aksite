@@ -41,15 +41,12 @@ export default function PipelineRealityCheckPage() {
       ) : null}
       {/* Hero */}
       <section className="min-h-[60vh] flex items-center bg-white">
-        <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
-            {content.hero.tier_label}
-          </p>
+        <div className="max-w-4xl mx-auto px-8 pt-36 pb-24">
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-4">
             {content.hero.title}
           </h1>
           <p className="font-serif text-xl md:text-2xl text-slate-500 mb-8">
-            {content.hero.subtitle}
+            <span className="text-navy-900">{content.hero.subtitle_lead}</span> {content.hero.subtitle}
           </p>
           <div className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed space-y-4 mb-10">
             {content.hero.body.map((p, i) => (

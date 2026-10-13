@@ -6,6 +6,7 @@ import { getBlogPostBySlug, getAllBlogSlugs, getRelatedBlogPosts } from '@/lib/b
 import { markdownToHtml, formatDate, estimateReadingTime } from '@/lib/markdown';
 import CTAButton from '@/components/CTAButton';
 import AuthorBio from '@/components/AuthorBio';
+import { categorySlug } from '@/components/BlogIndex';
 import JsonLd from '@/components/JsonLd';
 import SeoPageLayout from '@/components/SeoPageLayout';
 import { getPageBySlug } from '@/lib/contentMap';
@@ -86,9 +87,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
             {post.frontmatter.category && (
-              <span className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em]">
+              <Link
+                href={`/blog/category/${categorySlug(post.frontmatter.category)}`}
+                className="font-mono text-xs text-navy-900 hover:text-navy-700 transition-colors"
+              >
                 {post.frontmatter.category}
-              </span>
+              </Link>
             )}
             <span className="font-mono text-xs text-slate-500">
               {formatDate(post.frontmatter.date)}
@@ -169,17 +173,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   href={`/blog/${r.slug}`}
                   className="group block bg-white border border-slate-200 p-6 hover:border-navy-300 transition-colors"
                 >
-                  {r.frontmatter.category && (
-                    <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-3">
-                      {r.frontmatter.category}
-                    </p>
-                  )}
                   <h3 className="font-serif text-title text-navy-900 mb-3 leading-snug">
                     {r.frontmatter.title}
                   </h3>
                   <p className="font-sans text-sm text-slate-600 leading-relaxed line-clamp-3">
                     {r.frontmatter.description}
                   </p>
+                  {r.frontmatter.category && (
+                    <p className="font-mono text-xs text-slate-500 mt-4">{r.frontmatter.category}</p>
+                  )}
                 </Link>
               ))}
             </div>

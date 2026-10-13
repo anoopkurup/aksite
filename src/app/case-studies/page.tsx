@@ -27,15 +27,12 @@ export default function CaseStudiesPage() {
 
       {/* Hero */}
       <section className="min-h-[50vh] flex items-center bg-white">
-        <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
-            Case Studies
-          </p>
+        <div className="max-w-4xl mx-auto px-8 pt-36 pb-24">
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
             When the offer was the problem.
           </h1>
           <p className="font-sans text-body-lg text-slate-500 max-w-3xl leading-relaxed">
-            Eight B2B services firms, each stuck selling capability instead of an outcome.
+            Eight case studies from B2B services firms, each stuck selling capability instead of an outcome.
             Here is what changed when the offer became something a stranger could understand and buy.
           </p>
           <p className="font-mono text-xs text-slate-500 mt-6">
@@ -54,15 +51,13 @@ export default function CaseStudiesPage() {
                 href={`/case-studies/${cs.slug}`}
                 className="group border border-slate-200 bg-white p-8 md:p-10 flex flex-col hover:bg-navy-50 transition-colors"
               >
-                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-5">
-                  {cs.industry}
-                </p>
                 <h2 className="font-serif text-title text-navy-900 mb-3 leading-tight">
                   {cs.title}
                 </h2>
                 <p className="font-sans text-body text-slate-600 leading-relaxed mb-6 flex-1">
                   {cs.salesProblem}
                 </p>
+                <p className="font-mono text-xs text-navy-600 mb-4">{cs.industry}</p>
                 <span className="inline-flex items-center self-start font-sans text-sm text-navy-900 border-b-2 border-cta-500 pb-0.5">
                   Read the case
                   <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5" />

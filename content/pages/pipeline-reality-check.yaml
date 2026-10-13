@@ -6,9 +6,9 @@ meta:
   description: "Send me your last 12 months of deals. One week later, a written verdict on where your next clients will come from, and where they won't."
 
 hero:
-  tier_label: "One Week · Done-for-You Diagnosis"
   title: "Pipeline Reality Check"
-  subtitle: "Where your next clients are coming from, and where they're not."
+  subtitle_lead: "A one-week, done-for-you diagnosis"
+  subtitle: "of where your next clients are coming from, and where they're not."
   body:
     - "This is the truth from your own numbers. Send me your last 12 months of deals: source, size, time-to-close, and who sold each one. One week later, you get a written verdict on the state of your pipeline and the three moves that change it."
     - "No call that evaporates. No generic advice. A document built entirely from your actual data, that you can read, keep, and act on."

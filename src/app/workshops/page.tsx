@@ -32,10 +32,7 @@ export default function WorkshopsPage() {
 
       {/* Hero */}
       <section className="min-h-[60vh] flex items-center bg-white">
-        <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
-            {content.hero.tier_label}
-          </p>
+        <div className="max-w-4xl mx-auto px-8 pt-36 pb-24">
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
             {content.hero.title}
           </h1>
@@ -73,9 +70,6 @@ export default function WorkshopsPage() {
           <div className="space-y-12">
             {content.workshops.items.map((w, i) => (
               <div key={i} className="border border-slate-200 p-8 md:p-10">
-                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-2">
-                  {String(i + 1).padStart(2, "0")} · {w.duration}
-                </p>
                 <h3 className="font-serif text-title text-navy-900 mb-3">{w.name}</h3>
                 <p className="font-sans text-body text-slate-600 leading-relaxed mb-6">{w.description}</p>
                 <div className="space-y-3 mb-6">
@@ -86,6 +80,10 @@ export default function WorkshopsPage() {
                     </div>
                   ))}
                 </div>
+                <p className="font-mono text-[0.7rem] text-slate-500 uppercase tracking-[0.18em]">
+                  Duration
+                </p>
+                <p className="font-mono text-body text-navy-900 mt-1 mb-4">{w.duration}</p>
                 <p className="font-mono text-[0.7rem] text-slate-500 uppercase tracking-[0.18em]">
                   Best for
                 </p>

@@ -39,13 +39,20 @@ export default function ClearHandoff({
   return (
     <section className="py-section bg-navy-900">
       <div className="max-w-3xl mx-auto px-8 text-center">
-        {theme && (
-          <p className="font-sans text-xs text-cta-400 uppercase tracking-widest mb-4">
-            CLEAR · {theme.label}
-          </p>
-        )}
         <h2 className="font-serif text-display text-white mb-6">{lead}</h2>
         <p className="font-sans text-body-lg text-navy-200 mb-12">
+          {theme && (
+            <>
+              This is the <span className="text-white">{theme.label}</span> stage of the{' '}
+              <Link
+                href="/clear"
+                className="text-white border-b-2 border-cta-500 hover:border-cta-400 transition-colors duration-300"
+              >
+                CLEAR method
+              </Link>
+              .{' '}
+            </>
+          )}
           Tell me what you&apos;re seeing in your pipeline. I&apos;ll tell you honestly
           if I can help, and where I&apos;d start.
         </p>

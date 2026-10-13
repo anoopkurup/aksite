@@ -4,10 +4,6 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-6">
       <div className="max-w-2xl mx-auto text-center">
-        <p className="font-sans text-sm text-slate-500 uppercase tracking-wide mb-4">
-          404
-        </p>
-
         <h1 className="font-serif text-display text-navy-900 mb-4">
           Blog post not found
         </h1>

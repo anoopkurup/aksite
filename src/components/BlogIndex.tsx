@@ -70,8 +70,7 @@ export default function BlogIndex({ activeCategory }: { activeCategory?: string 
       />
       {/* Hero */}
       <section className="min-h-[50vh] flex items-center bg-white">
-        <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">Writing</p>
+        <div className="max-w-4xl mx-auto px-8 pt-36 pb-24">
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
             {active === "All" ? "The growth problems of B2B service firms in India, thought through." : active}
           </h1>
@@ -138,9 +137,19 @@ export default function BlogIndex({ activeCategory }: { activeCategory?: string 
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    {post.frontmatter.category && (
-                      <span className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em]">
+                  <h3 className="font-serif text-title text-navy-900 mb-3 leading-tight">
+                    {post.frontmatter.title}
+                  </h3>
+
+                  <p className="font-sans text-body text-slate-600 leading-relaxed mb-4 line-clamp-3">
+                    {post.frontmatter.description}
+                  </p>
+
+                  {/* Meta sits below the title. The category is dropped on a
+                      category page, where every card would repeat it. */}
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4">
+                    {active === "All" && post.frontmatter.category && (
+                      <span className="font-mono text-xs text-navy-600">
                         {post.frontmatter.category}
                       </span>
                     )}
@@ -150,14 +159,6 @@ export default function BlogIndex({ activeCategory }: { activeCategory?: string 
                         estimateReadingTime(post.content)}
                     </span>
                   </div>
-
-                  <h3 className="font-serif text-title text-navy-900 mb-3 leading-tight">
-                    {post.frontmatter.title}
-                  </h3>
-
-                  <p className="font-sans text-body text-slate-600 leading-relaxed mb-4 line-clamp-3">
-                    {post.frontmatter.description}
-                  </p>
 
                   <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                     <span className="font-mono text-xs text-slate-500">

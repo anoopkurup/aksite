@@ -18,12 +18,6 @@ export function generateMetadata(): Metadata {
 
 // Small mono section label — wayfinding + rhythm, deliberately navy (never orange,
 // which belongs to the CTA alone).
-function Eyebrow({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="font-mono text-xs uppercase tracking-[0.18em] text-navy-600 mb-4">{children}</p>
-  );
-}
-
 const underline =
   "inline-flex items-center font-sans text-body text-navy-900 border-b-2 border-cta-500 pb-1 hover:border-cta-600 hover:text-navy-700 transition-colors";
 
@@ -86,7 +80,6 @@ export default function HomePage() {
       {/* ── The argument — a single column of prose on slate. No cards: this is a point of view. ── */}
       <section className="py-section bg-slate-50">
         <div className="max-w-3xl mx-auto px-8">
-          <Eyebrow>The argument</Eyebrow>
           <h2 className="font-serif text-display text-navy-900 mb-10">
             {content.argument.section_title}
           </h2>
@@ -101,7 +94,6 @@ export default function HomePage() {
       {/* ── Writing — one featured post per growth challenge, spaced cards on white ── */}
       <section className="py-section bg-white">
         <div className="max-w-6xl mx-auto px-8">
-          <Eyebrow>Writing</Eyebrow>
           <h2 className="font-serif text-display text-navy-900 mb-4">
             {content.writing.section_title}
           </h2>
@@ -115,19 +107,19 @@ export default function HomePage() {
                 href={`/blog/${post.slug}`}
                 className="group border border-slate-200 p-8 flex flex-col hover:border-navy-300 transition-colors"
               >
-                <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-4">
-                  {post.frontmatter.category}
-                </p>
                 <h3 className="font-serif text-title text-navy-900 mb-3 leading-tight">
                   {post.frontmatter.title}
                 </h3>
                 <p className="font-sans text-body text-slate-600 leading-relaxed mb-6 flex-1">
                   {post.frontmatter.description}
                 </p>
-                <span className="font-sans text-sm text-navy-900 flex items-center gap-1">
-                  Read
-                  <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
-                </span>
+                <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+                  <span className="font-mono text-xs text-navy-600">{post.frontmatter.category}</span>
+                  <span className="font-sans text-sm text-navy-900 flex items-center gap-1">
+                    Read
+                    <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -144,7 +136,6 @@ export default function HomePage() {
       <section className="py-section bg-slate-50">
         <div className="max-w-4xl mx-auto px-8">
           <div className="text-center mb-16">
-            <Eyebrow>Proof</Eyebrow>
             <h2 className="font-serif text-display text-navy-900">
               {content.proof.section_title}
             </h2>
@@ -192,7 +183,6 @@ export default function HomePage() {
       {/* ── How I work — numbered circles on white, diagram framed ── */}
       <section className="py-section bg-white">
         <div className="max-w-3xl mx-auto px-8">
-          <Eyebrow>How I work</Eyebrow>
           <h2 className="font-serif text-display text-navy-900 mb-12">
             {content.how_i_fix_it.section_title}
           </h2>
@@ -234,7 +224,6 @@ export default function HomePage() {
       <section className="py-section bg-slate-50">
         <div className="max-w-4xl mx-auto px-8">
           <div className="text-center mb-16">
-            <Eyebrow>Fit</Eyebrow>
             <h2 className="font-serif text-display text-navy-900">
               {content.qualification.section_title}
             </h2>

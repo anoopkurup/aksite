@@ -23,10 +23,7 @@ export default function ContactPage() {
     <>
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center bg-white">
-        <div className="max-w-4xl mx-auto px-8 py-24">
-          <p className="font-mono text-xs text-navy-600 tracking-[0.18em] uppercase mb-8">
-            {content.hero.tier_label}
-          </p>
+        <div className="max-w-4xl mx-auto px-8 pt-36 pb-24">
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-6">
             {content.hero.title}
           </h1>

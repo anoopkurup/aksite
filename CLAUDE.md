@@ -159,7 +159,7 @@ The site reads like a diagnostic instrument: honest, measured, mechanical. The p
 ### Typography — three roles
 - **Display** (`font-serif` → **Newsreader**): headlines. Clean editorial serif with conventional letterforms. (Replaced Fraunces, whose flared `F` read as a quirk; and Cormorant Garamond before it — don't reintroduce either.)
 - **Body** (`font-sans` → Inter): paragraphs.
-- **Data/utility** (`font-mono` → **IBM Plex Mono**): every number, price, score, section eyebrow, meter label, and metadata. This is the instrument-readout tell — when in doubt, data and labels go mono.
+- **Data/utility** (`font-mono` → **IBM Plex Mono**): every number, price, score, data label, meter label, and metadata. This is the instrument-readout tell — when in doubt, data and labels go mono.
 - Scale: Hero 4.5rem, Display 3rem, Title 1.875rem, Body 1.125rem.
 
 ### The signature — "the Reading" (retired Sept 2026)
@@ -177,7 +177,7 @@ A mono label + value + segmented meter (orange fill = the needle). `Reading.tsx`
 - 11 pages currently measure **zero** text-contrast failures. `scripts/` has no linter for this; re-check in the browser after colour changes.
 
 ### Patterns
-- Section eyebrows: `font-mono text-xs uppercase tracking-[0.18em] text-navy-600` — **always navy, never orange** (they're labels, not CTAs).
+- **No eyebrows (removed Oct 2026).** Nothing in caps sits above a heading, on sections, page heroes or cards. What an eyebrow would have said goes into the heading or lede, or into a metadata line *below* the title in sentence-case mono (`font-mono text-xs`): `navy-600`/`navy-900` when the reader uses the fact to decide or find their place (a duration, a post's growth problem, a case study's industry), `slate-500` when it is secondary. Never orange. Small caps mono labels survive only as data labels inside a card ("Before", "Best for", "Duration") or as a section's only heading ("Related reading").
 - Cards: neutral full border `border border-slate-200`, spaced apart (`gap-8`, never touching). **Don't** repeat the 4px orange/navy left-bar on every card — that sameness makes sections blend.
 - **Section distinction:** consecutive sections must not look alike. Give each its own device (icon cards / numbered circles / a vertical stepper / spaced cards) and alternate the background `white → slate-50 → white → … → navy-900` (dark closer). No two neighbours share the same background + device.
 - Section spacing: 8rem between sections. Minimal shadows, generous whitespace.

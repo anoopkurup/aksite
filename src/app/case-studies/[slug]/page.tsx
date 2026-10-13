@@ -67,9 +67,6 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             All case studies
           </Link>
 
-          <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-6">
-            {cs.industry}
-          </p>
           <h1 className="font-serif text-display-sm md:text-display text-navy-900 mb-5 leading-tight">
             {cs.title}
           </h1>
@@ -78,8 +75,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               {cs.subtitle}
             </p>
           )}
+          <p className="font-mono text-xs text-navy-600 mt-8">{cs.industry}</p>
           {cs.disclaimer && (
-            <p className="font-mono text-xs text-slate-500 mt-8 max-w-2xl">{cs.disclaimer}</p>
+            <p className="font-mono text-xs text-slate-500 mt-2 max-w-2xl">{cs.disclaimer}</p>
           )}
         </div>
       </section>
@@ -125,11 +123,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                   href={`/case-studies/${o.slug}`}
                   className="block bg-white border border-slate-200 p-6 hover:border-navy-300 transition-colors"
                 >
-                  <p className="font-mono text-xs text-navy-600 uppercase tracking-[0.18em] mb-3">
-                    {o.industry}
-                  </p>
                   <h3 className="font-serif text-title text-navy-900 mb-3 leading-snug">{o.title}</h3>
                   <p className="font-sans text-sm text-slate-600 leading-relaxed">{o.salesProblem}</p>
+                  <p className="font-mono text-xs text-slate-500 mt-4">{o.industry}</p>
                 </Link>
               ))}
             </div>
