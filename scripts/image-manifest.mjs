@@ -141,8 +141,32 @@ export const pages = [
       'Subject: on white, a thin navy-outlined calendar grid of five columns and four rows. Most cells hold small navy-outlined stacked rectangles, like piled client files, some cells crowded. The leftmost column is different: ALL FOUR of its cells, top to bottom, each hold exactly one identical small solid orange square with crisp hard edges and no files at all, so four orange squares form one straight vertical line down the left side of the grid. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
   },
   {
+    id: 'page-marketing-for-training-companies',
+    out: 'public/images/pages/marketing-for-training-companies.webp',
+    size: W,
+    alt: "A training firm's topics filed in a pile, and one programme lifted out as a named outcome",
+    prompt:
+      'Metaphor: the topic pile versus one named outcome. On white, at the left, a neat navy-outlined stack of about eight identical flat rectangles, like brochures piled on a desk, all the same size and plain. From the top of the stack, one single rectangle has been lifted out and placed to the right, standing upright and slightly larger, with one small solid orange square with crisp hard edges at its top-left corner: the one programme a sponsor can name. A thin navy line joins the stack to the lifted card. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.',
+  },
+  {
+    id: 'page-marketing-for-training-companies-parts',
+    out: 'public/images/pages/marketing-for-training-companies-parts.webp',
+    size: W,
+    alt: 'Four parts that turn a training topic into a programme a buyer can sponsor',
+    prompt:
+      'Subject: on white, four small navy-outlined shapes in an even row on one thin navy baseline, joined left to right by a thin navy line. (1) a narrow navy-outlined arrow pointing at a single dot inside a small group of three dots: a problem and a group; (2) two small navy-outlined bars side by side, the right one taller: proof of change; (3) a navy-outlined signal mast with two small arcs: presence; (4) a small navy-outlined square with one solid orange dot at its centre, crisp hard edges: a first step a stranger can take. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
+  },
+  {
+    id: 'page-marketing-for-training-companies-rhythm',
+    out: 'public/images/pages/marketing-for-training-companies-rhythm.webp',
+    size: W,
+    alt: 'A small weekly routine that keeps running through busy delivery months',
+    prompt:
+      'Subject: on white, EXACTLY SEVEN tall navy-outlined rectangles of different heights standing side by side on one thin navy baseline, like a bar chart of a training calendar, tall in the middle and shorter at the ends. The rectangles are empty inside, no figures, no icons. Running straight through all seven rectangles at the same low height is one thin continuous navy line. On that line sit EXACTLY SEVEN identical small solid orange squares with crisp hard edges, ONE INSIDE EVERY SINGLE RECTANGLE with none skipped, so the orange squares form an unbroken evenly spaced row: the same small effort every week, whatever the season. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.',
+  },
+  {
     id: 'page-lead-generation-for-marketing-agencies',
-    out: 'public/images/pages/lead-generation-for-marketing-agencies.webp',
+    out:'public/images/pages/lead-generation-for-marketing-agencies.webp',
     size: W,
     alt: 'An agency sending leads out to clients while its own funnel sits empty',
     prompt:

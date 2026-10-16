@@ -849,33 +849,68 @@ export const SEO_PAGES: Page[] = [
 
   // ---- WAVE 4 — training & coaching (PARKED Aug 2026, same reframe rule) ---
   {
-    slug: 'client-acquisition-for-training-businesses',
-    url: '/client-acquisition-for-training-businesses',
+    // Reframed 2026-10-16 from "corporate training lead generation" (no India
+    // volume; the SERP is lead-generation *courses*) to the "marketing for X"
+    // frame. "how to market corporate training" carries the owner intent.
+    // "how to get corporate training clients" stays with the child vertical.
+    slug: 'marketing-for-training-companies',
+    url: '/marketing-for-training-companies',
     type: 'subpillar',
-    title: 'Corporate Training Lead Generation',
+    title: 'Marketing for Corporate Training Companies in India',
     metaDescription:
-      'Training businesses run on relationships and word of mouth, until they don’t. Here is a client-acquisition system for corporate training firms.',
-    primaryKeyword: 'corporate training lead generation',
+      'Training is bought as a topic and compared on day rate. How a corporate training firm markets the problem it solves, and gets past the L&D brochure pile.',
+    primaryKeyword: 'how to market corporate training',
     secondaryKeywords: [
-      'client acquisition for trainers',
-      'how training businesses get clients',
+      'marketing for training companies',
+      'how to market corporate training programs',
+      'corporate training lead generation',
+      'marketing for corporate trainers',
+      'how to grow a training company',
     ],
     clearLetter: 'E',
     parent: PILLAR,
     siblings: [],
     schema: ['Article', 'BreadcrumbList', 'FAQPage'],
     publishWave: 4,
-    status: 'scaffold',
+    // Published 2026-10-16 (Wave 4 hub, training & coaching).
+    status: 'live',
     brief: {
-      angle: 'Sub-pillar hub for training & coaching. Links down to 20–22.',
+      angle:
+        'Sub-pillar hub for corporate training and coaching firms, proof-led from the communication-trainer engagement. Sales symptom (L&D conversations that drift, day-rate haggling, one or two repeat accounts, the "send us your calendar" brush-off) → marketing cause (training sold as a topic instead of a business problem, aimed at L&D instead of the person who owns the problem, nothing public that shows outcomes, no small first step). Links down to 20–22 as they go live.',
       outline: [
-        'Why training sales is relationship-heavy',
-        'Building a pipeline beyond repeat L&D buyers',
-        'The system applied to training',
-        'Links to each training type',
+        'Why corporate training is hard to market',
+        'Who actually buys corporate training',
+        'The topic trap: why good trainers get compared on day rate',
+        'How to market corporate training: four parts',
+        'Content and LinkedIn for training companies',
+        'Corporate training lead generation in India: where the work comes from',
+        'How it changes by type of training',
+        'A weekly routine that survives training season',
+        'What marketing consulting for a training company looks like',
       ],
-      handoffLine:
-        'See where your training pipeline breaks.',
+      handoffLine: 'Excellent in the room, invisible outside it?',
+      faqs: [
+        {
+          question: 'How do I market corporate training programmes?',
+          answer:
+            'Market the problem, not the topic. Name the business problem a programme solves and the group it is for, show what changed for past participants, be visible to the business heads who own that problem as well as to L&D, and offer a small first step such as a short diagnostic or a pilot cohort. A brochure of topics, however well designed, gets compared on day rate.',
+        },
+        {
+          question: 'How do corporate training companies get clients in India?',
+          answer:
+            'Most get them through repeat L&D buyers, past participants who move into new roles, and the founder’s network. The firms that grow steadily add a sharp position, published proof of outcomes, and relationships with the business heads who feel the problem. Vendor empanelment helps you get paid, but it rarely decides who gets chosen.',
+        },
+        {
+          question: 'Should a training company run free demo sessions?',
+          answer:
+            'Rarely as a habit. A free demo puts you on a shortlist with every other trainer who offered one, and it shows delivery style, not results. A short, paid needs assessment or a pilot with one cohort does the job better: it filters for buyers with a real budget and shows how you think about their specific problem.',
+        },
+        {
+          question: 'Is LinkedIn useful for marketing corporate training?',
+          answer:
+            'Yes, for B2B training in India it is where L&D heads and business leaders look you up before they reply. It works when the trainer posts in their own name about what they see in rooms: the mistakes managers repeat, what changed after a programme, what they advise against. It works poorly as a feed of workshop photographs and certificates.',
+        },
+      ],
     },
   },
   {
@@ -888,7 +923,7 @@ export const SEO_PAGES: Page[] = [
     primaryKeyword: 'how to get corporate training clients',
     secondaryKeywords: ['corporate training sales', 'L&D clients'],
     clearLetter: 'E',
-    parent: 'client-acquisition-for-training-businesses',
+    parent: 'marketing-for-training-companies',
     siblings: [
       'get-public-speaking-clients',
       'get-leadership-training-clients',
@@ -921,7 +956,7 @@ export const SEO_PAGES: Page[] = [
       'how to get paid speaking gigs',
     ],
     clearLetter: 'L',
-    parent: 'client-acquisition-for-training-businesses',
+    parent: 'marketing-for-training-companies',
     siblings: [
       'get-clients-for-corporate-training',
       'get-leadership-training-clients',
@@ -955,7 +990,7 @@ export const SEO_PAGES: Page[] = [
       'executive coaching clients',
     ],
     clearLetter: 'L',
-    parent: 'client-acquisition-for-training-businesses',
+    parent: 'marketing-for-training-companies',
     siblings: [
       'get-clients-for-corporate-training',
       'get-public-speaking-clients',
