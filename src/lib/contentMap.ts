@@ -914,14 +914,23 @@ export const SEO_PAGES: Page[] = [
     },
   },
   {
+    // Reframed 2026-10-19 to the consulting point of view (the catalogue
+    // problem, the approval note, proof past the feedback form, growing
+    // inside accounts). Slug and keyword kept: the hub owns "how to market
+    // corporate training", and this is the only child term with India volume.
     slug: 'get-clients-for-corporate-training',
     url: '/blog/get-clients-for-corporate-training',
     type: 'vertical',
-    title: 'How to Get Corporate Training Clients',
+    title: 'How to Get Corporate Training Clients: The Menu Problem',
     metaDescription:
-      'Winning corporate training work means getting past procurement to the people with the problem. Here is how to build that pipeline deliberately.',
+      'A training firm with forty programmes looks like a multi-cuisine restaurant: able to cook everything, trusted for nothing. How to get chosen for one thing.',
     primaryKeyword: 'how to get corporate training clients',
-    secondaryKeywords: ['corporate training sales', 'L&D clients'],
+    secondaryKeywords: [
+      'how to get clients for corporate training',
+      'how to get corporate training clients online',
+      'corporate training sales',
+      'L&D clients',
+    ],
     clearLetter: 'E',
     parent: 'marketing-for-training-companies',
     siblings: [
@@ -930,17 +939,25 @@ export const SEO_PAGES: Page[] = [
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
-    status: 'scaffold',
+    // Published 2026-10-19 (Wave 4, reframed).
+    status: 'live',
     brief: {
-      angle: 'Vertical: corporate training — selling into L&D and the business.',
+      angle:
+        'Vertical: the multi-programme corporate training firm. The multi-cuisine restaurant: a forty-programme catalogue that can cook everything and is trusted for nothing. Sales symptom ("send us your calendar", day-rate counter-offers, the same three repeat accounts) → marketing cause (no signature programme, proposals L&D cannot forward upstairs, feedback forms as the only proof). Signature programme named for the outcome, the approval note, proof of change via built-in follow-up, pricing per programme not per day, growing inside existing accounts. Proof from cs-04.',
       outline: [
-        'Who actually buys training (and who blocks it)',
+        'Why a long training catalogue loses',
+        'How corporate training clients actually decide',
+        'The note L&D has to write',
+        'From catalogue to a signature programme',
         'Reaching the problem-owner, not just L&D',
-        'Packaging programmes that get approved',
-        'The acquisition routine',
+        'Proof beyond the feedback form',
+        'How to get corporate training clients online',
+        'Pricing past the day rate',
+        'Growing inside the accounts you already have',
+        'A weekly routine for a firm that is always delivering',
+        'What marketing consulting for a corporate training firm looks like',
       ],
-      handoffLine:
-        'Find your weakest link.',
+      handoffLine: 'Good in the room, lost in the catalogue?',
     },
   },
   {

@@ -1200,4 +1200,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'get-clients-for-corporate-training',
+    hero: img(
+      'A long menu of training programmes, with one dish the firm is known for',
+      'Metaphor: on white, one tall navy-outlined upright rectangle like a long restaurant menu card, white interior, filled with twelve short evenly spaced horizontal navy lines. Beside it on the right, standing apart, one small navy-outlined square card with a white interior holding one single small solid orange circle in its centre. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A training proposal turned into a single page that L&D can carry upstairs',
+        'Subject: on white, on the left a loose stack of four overlapping navy-outlined sheets of paper with white interiors. One thin navy arrow points right to a single upright navy-outlined sheet with a white interior holding exactly five short horizontal navy lines, the top line ending in one small solid orange circle. Nothing else on the canvas: no other arrows or marks. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Many training programmes in a list, with one lifted out as the programme the firm leads with',
+        'Subject: on white, one vertical column of eight identical small navy-outlined horizontal rectangles with white interiors, evenly stacked like a list. One slot near the middle of the column is empty, and the rectangle that belongs there sits raised to the right of the column, slightly larger, with one small solid orange circle inside it. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A feedback score that fades after the training day, and one that is checked again weeks later',
+        'Subject: on white, a simple line chart with no axes. Two separate thin navy lines both begin at the same point at the upper left. The lower line curves steeply down and ends near the bottom right. The upper line stays high and almost level all the way to the right edge, and three small solid orange circles sit evenly spaced along this upper line only. The two lines are clearly far apart on the right. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'One training account branching out into other departments of the same company',
+        'Subject: on white, one large navy-outlined rectangle divided by thin straight navy lines into a regular grid of two rows and three columns: six equal square rooms with white interiors. The top-left room holds one small solid orange circle. The room to its right and the room below it each hold one small navy-outlined circle with a white interior. The other three rooms are completely empty. No lines connect the circles. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];
