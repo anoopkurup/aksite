@@ -1225,4 +1225,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'get-public-speaking-clients',
+    hero: img(
+      'A talk as the sample, the engagement as the product',
+      'Metaphor: on white, on the left one small navy-outlined podium shape, a narrow upright trapezoid with a short vertical navy line rising from its top like a microphone stand. One thin navy arrow points right from the podium to a single large navy-outlined square card with a white interior holding one solid orange circle in its centre. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A small event budget beside a much larger company budget',
+        'Subject: on white, two navy-outlined upright rectangles with white interiors standing side by side on the same baseline. The left one is short, about a quarter of the height of the right one. The right one is tall and holds one small solid orange circle near its top. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Two listeners in a large audience, marked as the ones to follow up with',
+        'Subject: on white, a regular grid of small navy-outlined circles with white interiors, six columns by five rows, evenly spaced like seats in an audience. Exactly two of the circles, in different rows and not adjacent, are solid orange instead. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Three offers stepping up from a talk to a full programme',
+        'Subject: on white, three navy-outlined squares with white interiors arranged left to right on one baseline, each larger than the one before, like three steps. The smallest on the left, the largest on the right. The largest square holds one solid orange circle in its centre. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A speaker page that leads with the problem it solves, not a showreel',
+        'Subject: on white, one navy-outlined landscape rectangle like a web page with a thin horizontal navy line across the top like a browser bar. Inside, in the upper left, one short thick horizontal navy line like a headline, with three thinner shorter navy lines beneath it. In the lower right corner, one small solid orange circle. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];

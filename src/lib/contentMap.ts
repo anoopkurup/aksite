@@ -961,16 +961,22 @@ export const SEO_PAGES: Page[] = [
     },
   },
   {
+    // Reframed 2026-10-21 to the consulting point of view: the talk is the
+    // sample, not the product; the gig buyer (event budget) vs the company
+    // buyer (leadership budget); the offer behind the stage. Anchored to
+    // B2B/corporate, NOT B2C motivational, which is what the SERP is full of.
     slug: 'get-public-speaking-clients',
     url: '/blog/get-public-speaking-clients',
     type: 'vertical',
-    title: 'How to Get Public Speaking Clients (B2B)',
+    title: 'How to Get Public Speaking Clients: The Talk Is the Sample',
     metaDescription:
-      'For B2B speakers and communication trainers, the gig is the marketing, provided you treat it as a system. Here is how to turn talks into a corporate pipeline.',
+      'Applause, forty LinkedIn requests, no clients. For B2B speakers and communication trainers the talk is the sample. How to build what sits behind it.',
     primaryKeyword: 'how to get public speaking clients',
     secondaryKeywords: [
       'communication skills training clients',
       'how to get paid speaking gigs',
+      'how to get public speaking clients online',
+      'corporate speaking engagements',
     ],
     clearLetter: 'L',
     parent: 'marketing-for-training-companies',
@@ -980,18 +986,24 @@ export const SEO_PAGES: Page[] = [
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
-    status: 'scaffold',
+    // Published 2026-10-21 (Wave 4, reframed).
+    status: 'live',
     brief: {
       angle:
-        'Vertical: communication skills / public speaking — anchor to B2B/corporate, NOT B2C motivational.',
+        'Vertical: the B2B speaker and communication trainer. The sweet-shop sample: a talk is the tasting at the counter, not the thing the shop makes its money on. Sales symptom (a full calendar of free and token-fee talks, applause, LinkedIn requests, "send us your profile and fee", the same two companies booking) → marketing cause (the talk treated as the product; selling to event organisers who buy a slot instead of companies that buy an outcome; positioned by topic, "communication skills", not by the problem a business head owns; nothing to buy behind the stage; no follow-up routine). The offer ladder behind the stage, the two-people rule, naming for the outcome. Proof from cs-04.',
       outline: [
         'Why B2B speaking is a different business from keynotes',
+        'How to get paid speaking gigs, and why it is the wrong goal',
+        'What a company is actually buying when it books you',
         'Turning a talk into a corporate engagement',
-        'Packaging communication training',
+        'Packaging communication training behind the stage',
+        'Where corporate speaking work comes from in India',
+        'How to get public speaking clients online',
+        'Pricing: the honorarium and the programme',
         'The pipeline behind the stage',
+        'What marketing consulting for a speaker looks like',
       ],
-      handoffLine:
-        'See where your pipeline breaks.',
+      handoffLine: 'Applause in the room, silence in the inbox?',
     },
   },
   {

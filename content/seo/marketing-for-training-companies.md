@@ -101,7 +101,7 @@ The four parts hold across training and coaching. What changes is the problem, t
 
 **Corporate training firms** with a wide catalogue usually suffer most from the topic trap, because a long menu is the hardest thing to position. The way out is to pick one or two problems and become known for them, even while the catalogue stays available. The full guide is [how to get corporate training clients](/blog/get-clients-for-corporate-training).
 
-**Communication skills and public speaking trainers** face the commodity problem most sharply, as the case above shows. They also have an advantage: a talk at an industry event is a live demonstration of the product. The trap is treating the talk as the end. A speaking slot that leads to no follow-up conversation is a performance, not marketing.
+**Communication skills and public speaking trainers** face the commodity problem most sharply, as the case above shows. They also have an advantage: a talk at an industry event is a live demonstration of the product. The trap is treating the talk as the end. A speaking slot that leads to no follow-up conversation is a performance, not marketing. The full guide is [how to get public speaking clients](/blog/get-public-speaking-clients).
 
 **Leadership development firms** sell into a crowded promise, where every brochure says "transformational" and buyers have been disappointed before. Proof of change matters more here than anywhere else, along with a clear point of view about what good leadership looks like in a particular kind of company.
 

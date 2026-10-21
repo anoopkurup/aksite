@@ -15,7 +15,7 @@ import os from "node:os";
 const RULES = [
   // American spellings — Indian/British forms are mandatory.
   { name: "American -ize/-ization", re: /\b\w*i[z](e|es|ed|ing|ation|ations)\b/gi, note: "use -ise/-isation" },
-  { name: "American -or spelling", re: /\b(color|behavior|favor|honor|labor|flavor|neighbor|rumor|vapor|valor|odor)\w*\b/gi, note: "use -our" },
+  { name: "American -or spelling", re: /\b(color|behavior|favor|honor(?!ari)|labor|flavor|neighbor|rumor|vapor|valor|odor)\w*\b/gi, note: "use -our" },
   // "meter" excluded: the device sense (taxi meter, consultant's meter) is correct British usage.
   { name: "American -er spelling", re: /\b(center|theater|liter|fiber|somber)s?\b/gi, note: "use -re" },
   { name: "catalog/dialog (US)", re: /\b(catalog|dialog|analog)\b/gi, note: "use catalogue/dialogue/analogue" },
