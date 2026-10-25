@@ -125,7 +125,7 @@ npm run publish -- "/path/to/note.md" --push      # also git commit + push (auto
 
 ## Generating Images (brand diagrams + blog images)
 
-Brand-styled images (page explainer diagrams, blog hero + inline images) are generated with OpenAI `gpt-image-1` and wired into the site automatically.
+Brand-styled images (page explainer diagrams, blog hero + inline images) are generated with OpenAI `gpt-image-1.5` (switched 25 Oct 2026: `gpt-image-1` was retired at the generations endpoint; same request shape, same navy drift) and wired into the site automatically.
 
 ```bash
 npm run images                  # generate every MISSING image, then wire all posts

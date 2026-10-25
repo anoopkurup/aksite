@@ -1026,7 +1026,7 @@ export const SEO_PAGES: Page[] = [
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
-    status: 'scaffold',
+    status: 'live',
     brief: {
       angle: 'Vertical: leadership development — differentiating a crowded promise.',
       outline: [

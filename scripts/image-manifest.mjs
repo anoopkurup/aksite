@@ -1250,4 +1250,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'get-leadership-training-clients',
+    hero: img(
+      'A row of identical shopfronts with one that stands apart',
+      'Metaphor: on white, a row of five small navy-outlined upright rectangles with white interiors standing side by side on one baseline like shopfronts, each with a thin horizontal navy line near its top like a signboard. The fourth one from the left is slightly taller than the others and holds one solid orange circle in its centre. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Three groups of leaders, with one chosen as the firm\'s position',
+        'Subject: on white, three navy-outlined circles of equal size arranged in a horizontal row with generous gaps between them. The middle circle contains one smaller solid orange circle at its centre. The other two are empty with white interiors. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'The classroom as the smallest part of how leaders develop',
+        'Subject: on white, one wide navy-outlined horizontal bar divided by two thin vertical navy lines into three segments of very different widths: a very wide left segment, a narrower middle segment, and a small right segment. The small right segment is filled solid orange. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A signature programme with the sponsor built in',
+        'Subject: on white, four small navy-outlined squares with white interiors in a horizontal row on one baseline, connected by a thin horizontal navy line running through their centres like steps in a sequence. Above the row, centred, one solid orange circle with a thin vertical navy line dropping from it to the connecting line. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A past participant now senior in another company',
+        'Subject: on white, on the left one small navy-outlined circle with a white interior. One thin navy arrow curves up and to the right from it, ending at a larger navy-outlined circle placed higher on the canvas. The larger circle holds one small solid orange circle at its centre. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];

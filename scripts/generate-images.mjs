@@ -109,7 +109,7 @@ async function generate(prompt, size) {
       Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
     },
     body: JSON.stringify({
-      model: 'gpt-image-1',
+      model: 'gpt-image-1.5', // gpt-image-1 retired at the generations endpoint Oct 2026
       prompt: `${BRAND_PREAMBLE}\n\n${prompt}`,
       n: 1,
       size: size || '1536x1024',
