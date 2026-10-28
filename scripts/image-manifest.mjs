@@ -1275,4 +1275,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'get-clients-for-ca-firm',
+    hero: img(
+      'A row of identical doors with one that people seek out',
+      'Metaphor: on white, a row of five small navy-outlined upright rectangles with white interiors standing side by side on one baseline like doors, each with a tiny navy dot as a handle. Three thin navy dotted paths approach from the lower edge of the canvas and all converge on the fourth door, which holds one solid orange circle at its centre. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Identical compliance services compared only on fee',
+        'Subject: on white, four identical navy-outlined rectangles with white interiors in a horizontal row, each holding the same three thin horizontal navy lines like a document. Below each rectangle a short vertical navy bar, the bars descending in height from left to right. The shortest bar on the right is solid orange. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A practice that grows from compliance into advisory',
+        'Subject: on white, a wide low navy-outlined rectangle forming a base, with a narrower navy-outlined rectangle stacked centred on top of it, and a smaller solid orange square stacked centred on top of that, like a three-step stack. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Other advisors around the client, with the firm at the table',
+        'Subject: on white, one navy-outlined circle at the centre with a white interior. Around it, five small navy-outlined squares with white interiors evenly spaced in a ring, and one small solid orange square in the same ring. Thin navy lines connect each square to the centre circle. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A new practice building its first ring of clients',
+        'Subject: on white, one solid orange circle at the centre, surrounded by a ring of six small navy-outlined circles with white interiors evenly spaced around it, each connected to the centre by a thin navy line. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];

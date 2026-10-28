@@ -1239,14 +1239,25 @@ export const SEO_PAGES: Page[] = [
     },
   },
   {
+    // Reframed 2026-10-28: dropped the "lower priority, keep light" stub for a
+    // full vertical built on the ICAI angle (no soliciting, so get found).
+    // "how to get clients for a CA firm" has no India volume data; the
+    // secondaries carry what little the category searches for.
     slug: 'get-clients-for-ca-firm',
     url: '/blog/get-clients-for-ca-firm',
     type: 'vertical',
     title: 'How to Get Clients for a CA Firm',
     metaDescription:
-      'Accounting firms rely heavily on referrals and renewals. Here is how a CA firm can add a deliberate client-acquisition routine without feeling salesy.',
+      'A CA cannot solicit work, so most practices wait for referrals. How a CA firm in India gets found instead: a sharper position and advisory work.',
     primaryKeyword: 'how to get clients for a CA firm',
-    secondaryKeywords: ['accounting firm clients', 'CA practice lead generation'],
+    secondaryKeywords: [
+      'marketing for chartered accountants',
+      'digital marketing for chartered accountants',
+      'marketing strategy for chartered accountants',
+      'personal branding for CA',
+      'accounting firm clients',
+      'CA practice lead generation',
+    ],
     clearLetter: 'E',
     parent: 'marketing-for-professional-services',
     siblings: [
@@ -1256,18 +1267,23 @@ export const SEO_PAGES: Page[] = [
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
-    status: 'scaffold',
+    // Published 2026-10-28 (Wave 4, reframed; closes Wave 4).
+    status: 'live',
     brief: {
       angle:
-        'Vertical: CA / accounting — lower priority (historically low conversion). Keep light until traction.',
+        'Vertical: CA practices in India. A CA is inherited like the family doctor, and ICAI rules bar soliciting work, so most practices wait for referrals. Sales symptom (referral-only growth, compliance fees haggled down by rivals and filing software) → marketing cause (sold as interchangeable compliance, nothing public to be found by). The rules close off chasing, not being found: position, packaged advisory, knowledge sharing.',
       outline: [
-        'Why accounting practices stay referral-bound',
-        'Adding acquisition without feeling salesy',
+        'Why CA practices stay referral-bound',
+        'What the ICAI rules actually close off',
+        'Why compliance work ends in a fee haggle',
+        'Positioning past “audit, tax and compliance”',
         'Packaging advisory beyond compliance',
-        'The acquisition routine',
+        'Getting found without asking for work',
+        'How to get your first clients as a new CA practice',
+        'A marketing routine that survives tax season',
+        'What marketing consulting for a CA firm looks like',
       ],
-      handoffLine:
-        'See where your pipeline breaks.',
+      handoffLine: 'A CA practice that only grows when a client mentions you?',
     },
   },
 
