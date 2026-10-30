@@ -20,7 +20,7 @@ Most founders fail this test, and most know it without running it. The business 
 
 Nearly everything written about how to scale a consulting business treats scaling as addition: hire more people, sell more services, open more markets. Twenty years of building and exiting firms has taught me the opposite. Scaling starts as subtraction. You take the founder out of everything that does not need the founder, and the business grows into the space you vacate.
 
-## The Founder Bottleneck, Mapped
+## Why Consulting Businesses Stop Scaling: The Founder Bottleneck
 
 Before fixing the bottleneck, look at it honestly. Take a sheet of paper and list every recurring activity in the business: lead follow-ups, proposals, kick-offs, delivery, reviews, invoicing, the newsletter you keep meaning to restart. Against each one, note who does it. For most solo and small consulting firms the list has one name on it, repeated all the way down.
 
@@ -62,7 +62,7 @@ One warning about the retainer model, because the bad version is common: "unlimi
 
 The strategic effect is larger than the cash flow. A floor of recurring revenue is what buys the founder room to stop selling desperately and start building deliberately. It funds the systemising described above. Stability is not the reward for scaling; it is the precondition.
 
-## Scale the System, Not the Hours
+## How to Scale a Consulting Firm: Scale the System, Not the Hours
 
 Here is where the threads join. A consulting business scales when three systems run without the founder inside them: a delivery system, which is the templates, processes and people above; a revenue floor, which is the recurring work; and a marketing system, which is the one founders build last and should build first. A weekly rhythm that produces qualified enquiries whether or not you networked that week is what makes every other part safe to grow. That system is its own subject, and I have laid it out in full in my guide to building a [client acquisition system](/client-acquisition-system).
 

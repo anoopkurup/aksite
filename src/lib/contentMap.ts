@@ -28,7 +28,7 @@ export type SchemaType =
   | 'Service'
   | 'Person';
 
-export type PublishWave = 1 | 2 | 3 | 4 | 5;
+export type PublishWave = 1 | 2 | 3 | 4 | 5 | 6;
 
 // status gates indexability — only 'live' renders index,follow + appears in sitemap
 export type PageStatus = 'scaffold' | 'brief' | 'authored' | 'approved' | 'live';
@@ -382,6 +382,8 @@ export const SEO_PAGES: Page[] = [
       'Growth stalls when everything runs through the founder. Here is how to scale a consulting business by removing yourself from the parts that don’t need you.',
     primaryKeyword: 'how to scale a consulting business',
     secondaryKeywords: [
+      'scaling a consulting business',
+      'how to scale a consulting firm',
       'remove yourself from your business',
       'recurring revenue for consultants',
       'retainer model',
@@ -389,7 +391,9 @@ export const SEO_PAGES: Page[] = [
     clearLetter: 'R',
     parent: PILLAR,
     siblings: ['value-based-pricing-for-consultants'],
-    schema: ['BlogPosting', 'BreadcrumbList'],
+    // FAQs + FAQPage added 2026-10-30: GSC showed ~12 "scale a consulting
+    // business" variants at positions 14–30, with no FAQ block to answer them.
+    schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 2,
     status: 'live',
     brief: {
@@ -404,6 +408,28 @@ export const SEO_PAGES: Page[] = [
       ],
       handoffLine:
         'See how dependent the business is on you.',
+      faqs: [
+        {
+          question: 'How long does it take to scale a consulting business?',
+          answer:
+            'Longer than founders hope and shorter than they fear. Mapping the bottleneck takes a week. Codifying your most common engagement into a process someone else can run takes a few months of steady work. A revenue floor and a marketing system that produces enquiries without you take a year or more to settle. The order matters more than the speed.',
+        },
+        {
+          question: 'Should I productise my consulting before I scale it?',
+          answer:
+            'Usually, yes. A bespoke engagement can only be delivered by the person whose judgement shapes it. A defined offer with a fixed scope and a named outcome can be taught, priced, and sold by someone other than you. If your work refuses to be written down, the offer is probably still too shapeless to scale.',
+        },
+        {
+          question: 'Who should be the first hire in a small consulting firm?',
+          answer:
+            'Rarely a junior copy of yourself. The first hire should take the work that does not need your judgement: delivery support, research, coordination, operations. That buys back the hours only you can spend on positioning, senior relationships, and the thinking clients actually pay for.',
+        },
+        {
+          question: 'Can a boutique consulting firm scale without losing quality?',
+          answer:
+            'Yes, if the founder stays the one who sets and checks the standard rather than the one who does every piece of work. Quality drops when people deliver from memory and guesswork. It holds when the method is written down, the quality bar is explicit, and the founder reviews outcomes instead of doing every task.',
+        },
+      ],
     },
   },
   {
@@ -421,7 +447,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['sales-system-for-small-service-business', 'seo-for-consultants'],
+    siblings: ['sales-system-for-small-service-business', 'seo-for-consultants', 'ai-marketing-consultant'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
     status: 'live',
@@ -1343,11 +1369,15 @@ export const SEO_PAGES: Page[] = [
     slug: 'how-to-differentiate-b2b-services-firm',
     url: '/blog/how-to-differentiate-b2b-services-firm',
     type: 'spoke',
-    title: 'How to Differentiate a B2B Services Firm',
+    // Retargeted 2026-10-30: GSC showed Google matching this page to
+    // "differentiate professional services firm" (46 impr, pos ~80), not the
+    // original "b2b company" keyword. Slug unchanged.
+    title: 'How to Differentiate a Professional Services Firm',
     metaDescription:
-      'When prospects cannot tell you apart, they choose on price. Here is how a B2B services firm builds real differentiation, beyond claiming quality.',
-    primaryKeyword: 'how to differentiate a b2b company',
+      'When prospects cannot tell you apart, they choose on price. Here is how a professional services firm builds real differentiation, beyond claiming quality.',
+    primaryKeyword: 'how to differentiate a professional services firm',
     secondaryKeywords: [
+      'how to differentiate a b2b company',
       'differentiation strategy for services',
       'how to stand out from competitors b2b',
     ],
@@ -1541,7 +1571,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'A',
     parent: PILLAR,
-    siblings: ['marketing-consultant-for-agencies', 'marketing-for-ip-firms'],
+    siblings: ['marketing-consultant-for-agencies', 'marketing-for-ip-firms', 'ai-marketing-consultant'],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service', 'FAQPage'],
     publishWave: 5,
     status: 'live',
@@ -1606,6 +1636,67 @@ export const SEO_PAGES: Page[] = [
         'A new-business rhythm that survives busy delivery months',
       ],
       handoffLine: 'An agency with no marketing of its own?',
+    },
+  },
+
+  // ---- WAVE 6 — evidence-led (Oct 2026) ----------------------------------
+  // Pages added once the 35-page map was complete, chosen from GSC queries
+  // the site already surfaces for but has no page to answer.
+  {
+    slug: 'ai-marketing-consultant',
+    url: '/blog/ai-marketing-consultant',
+    type: 'vertical',
+    title: 'AI Marketing Consultant: What to Hire One For',
+    metaDescription:
+      'What an AI marketing consultant should do for a B2B services firm, where AI earns its place in marketing, where it does not, and what to ask before hiring.',
+    primaryKeyword: 'ai marketing consultant',
+    secondaryKeywords: [
+      'ai marketing consultant india',
+      'ai in b2b marketing',
+      'ai for professional services marketing',
+    ],
+    clearLetter: 'E',
+    parent: PILLAR,
+    siblings: ['ai-for-client-acquisition', 'b2b-marketing-consultant-india'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'Service', 'FAQPage'],
+    publishWave: 6,
+    // Published 2026-10-30 (Wave 6, page 1). GSC: "ai marketing consultant"
+    // surfacing at pos ~63 with no page targeting it.
+    status: 'live',
+    brief: {
+      angle:
+        'Service-intent buyer’s guide: AI is an accelerant, so the marketing has to work before AI can speed it up. Marketing judgement first, tools second; written by an operator who has automated his own work since 2006.',
+      outline: [
+        'What an AI marketing consultant actually does (vs AI agency, vs AI consultant)',
+        'The marketing has to work before AI can speed it up',
+        'Where AI earns its place in B2B services marketing',
+        'What AI should not do for a services firm',
+        'Questions to ask before you hire an AI marketing consultant',
+        'How I work as an AI marketing consultant',
+      ],
+      handoffLine: 'Thinking about AI for your marketing?',
+      faqs: [
+        {
+          question: 'What does an AI marketing consultant do?',
+          answer:
+            'A good one makes your marketing work first, then makes it faster and cheaper to run with AI. That means settling who you serve and what you say, choosing a few channels, and building AI into the repetitive parts of the weekly routine: research, first drafts, repurposing, sorting enquiries, and reporting. The judgement stays with your firm.',
+        },
+        {
+          question: 'Is AI marketing worth it for a small B2B services firm?',
+          answer:
+            'Yes, once the basics are in place. AI makes whatever you already do faster, so it pays off when your positioning and message are clear and you have a routine worth running every week. Pointed at vague marketing, it mostly produces more vague marketing.',
+        },
+        {
+          question: 'How much does an AI marketing consultant cost in India?',
+          answer:
+            'It depends on scope more than on the AI. The main drivers are whether the marketing itself needs fixing first, how many workflows are being built, and whether your team or the consultant runs them afterwards. Be wary of an ongoing subscription to tools only the consultant can operate; a fair engagement ends with workflows your firm owns.',
+        },
+        {
+          question: 'Will AI replace marketing consultants?',
+          answer:
+            'It is replacing the parts of marketing work that were never the valuable part: first drafts, research summaries, reporting. The parts a services firm actually pays an adviser for, deciding who to serve, what to say, and what not to do, depend on judgement about your market. That is getting more valuable as AI makes generic content free.',
+        },
+      ],
     },
   },
 ];

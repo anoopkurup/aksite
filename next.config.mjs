@@ -61,6 +61,13 @@ const nextConfig = {
         permanent: true,
       },
 
+      // Legacy LinkedIn + AI guide URL still drew visits (GA4, Oct 2026) and 404'd.
+      {
+        source: '/getting-started-linkedin-ai',
+        destination: '/postie',
+        permanent: true,
+      },
+
       // RSS: the feed lives at /feed.xml; /rss.xml is the conventional alias.
       {
         source: '/rss.xml',

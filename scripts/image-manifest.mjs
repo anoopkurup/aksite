@@ -984,6 +984,27 @@ export const posts = [
     ],
   },
   {
+    slug: 'ai-marketing-consultant',
+    hero: img(
+      'Marketing judgement first, the machine second',
+      'Metaphor: on white, a simple navy-outlined hand-drawn compass rose on the left of the frame, and to its right a small neat navy-outlined gear. A single fine navy line runs from the compass needle to the gear, so the compass clearly directs the gear. The compass needle tip is solid orange. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A new motor bolted onto the old factory floor',
+        'Subject: on white, a plan view of a simple factory floor drawn in thin navy lines: one long horizontal shaft across the frame with five small navy-outlined squares (machines) hanging below it on thin belt lines. At the centre of the shaft, one navy-outlined circle (the motor) with a small solid orange dot inside it. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'The dull parts of the weekly rhythm, handed to the machine',
+        'Subject: on white, a thin navy circular loop in the centre of the frame with five small navy-outlined circles spaced evenly around it, like stations on a weekly cycle. Three of the stations have a tiny navy gear inside them; one station at the top is solid orange and empty of any gear. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Separating marketing judgement from tool enthusiasm',
+        'Subject: on white, a thin navy-outlined sieve shape in the centre of the frame, drawn as a shallow bowl with a fine grid across it. Above it, a scatter of small navy-outlined squares and circles. Below it, only one small solid orange circle has passed through. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
+  {
     slug: 'marketing-consultant-for-agencies',
     hero: img(
       'The agency that markets everyone but itself',

@@ -1,11 +1,11 @@
 ---
 hero_image: "/images/blog/how-to-differentiate-b2b-services-firm/hero.webp"
-title: 'How to Differentiate a B2B Services Firm'
-seo_title: 'How to Differentiate a B2B Company: Beyond "Quality Work"'
+title: 'How to Differentiate a Professional Services Firm'
+seo_title: 'How to Differentiate a Professional Services Firm'
 date: '2026-09-02'
 description: >-
-  When prospects cannot tell you apart, they choose on price. Here is how a B2B
-  services firm builds real differentiation, beyond claiming quality.
+  When prospects cannot tell you apart, they choose on price. Here is how a
+  professional services firm builds real differentiation, beyond claiming quality.
 tags:
 - Differentiation
 - Positioning
@@ -18,7 +18,7 @@ Here is a test I run in the first hour with a new client, and nobody enjoys it. 
 
 About half the time they hesitate. More than once, a founder has pointed at a competitor. The copy is that interchangeable: "quality work", "experienced team", "client-first approach", "end-to-end solutions", a wall of client logos, a photograph of people gathered around a laptop. The firms are genuinely different. The founders know it, and the clients who have stayed for years know it. But nothing on the page carries the difference across to a stranger, and a stranger is exactly who a prospect is.
 
-That is what "how to differentiate a B2B company" really asks. Not how to look different, which is a design problem, but how to be different in a way a buyer can see before they have paid you anything. When prospects cannot tell four firms apart, they do the only sensible thing available to them: they compare the one variable they can read, and that variable is the price. A firm nobody can tell apart is a line item.
+That is what "how do we differentiate our professional services firm?" really asks. Not how to look different, which is a design problem, but how to be different in a way a buyer can see before they have paid you anything. It applies to any firm that sells expertise rather than a product: consultancies, agencies, training companies, law, IP and accounting practices. In each of them the service is invisible until it is delivered, so the buyer has to judge the firm from the outside. When prospects cannot tell four firms apart, they do the only sensible thing available to them: they compare the one variable they can read, and that variable is the price. A firm nobody can tell apart is a line item.
 
 ## The Sameness Test
 
@@ -28,7 +28,7 @@ If the answer is no, the problem is not your writing. Copy that could belong to 
 
 ## Why Quality, Experience, and Passion Differentiate Nothing
 
-The three most common claims in B2B services are quality, experience, and passion, and all three fail the same test. The buyer cannot verify them before purchase, and every competitor makes them. A claim everyone makes is an entry requirement for the category, not a difference within it. Nobody chooses the restaurant that promises fresh ingredients, because every restaurant promises fresh ingredients.
+The three most common claims in professional services are quality, experience, and passion, and all three fail the same test. The buyer cannot verify them before purchase, and every competitor makes them. A claim everyone makes is an entry requirement for the category, not a difference within it. Nobody chooses the restaurant that promises fresh ingredients, because every restaurant promises fresh ingredients.
 
 Michael Porter's version of a differentiation strategy is simple enough to state in one sentence: charge more because buyers see a difference they value. The important word is "see". The difference has to exist in the buyer's view, before the engagement, not merely in your delivery afterwards. Your quality may be real. Your twenty years may be real. If the buyer cannot see them from outside, they do not count, and the firm charging less wins the comparison it never should have been in.
 
@@ -38,7 +38,7 @@ Michael Porter's version of a differentiation strategy is simple enough to state
 
 ![Four sources of difference: refuse, package, guarantee, publish](/images/blog/how-to-differentiate-b2b-services-firm/inline-1.webp)
 
-Real differentiation comes from decisions a competitor could copy but will not, because copying them costs something. That cost is the whole point. A difference that costs nothing is one every competitor can adopt by Monday, and by Tuesday it is table decoration again. For services firms in particular, I keep finding the durable differences in four places.
+Real differentiation comes from decisions a competitor could copy but will not, because copying them costs something. That cost is the whole point. A difference that costs nothing is one every competitor can adopt by Monday, and by Tuesday it is table decoration again. For professional services firms in particular, I keep finding the durable differences in four places. (If your firm is a practice of experts, my wider view on [marketing for professional services firms](/marketing-for-professional-services) sets this in context.)
 
 **Who you refuse.** A firm that takes every client is, by construction, like every other firm. The clearest differentiation strategy for services is a refusal: a defined type of work, or client, or engagement length, that you will not take. A training firm that refuses one-day workshops and only runs ninety-day programmes is instantly unlike the hundred firms that will do either. Competitors will not copy this because refusing revenue hurts this quarter, and most founders are not willing to pay that. Which is precisely why the ones who do stand out.
 
