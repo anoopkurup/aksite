@@ -199,7 +199,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['cold-outreach-for-consultants', 'founder-led-sales-trap'],
+    siblings: ['cold-outreach-for-consultants', 'founder-led-sales-trap', 'lead-generation-for-professional-services'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 1,
     // Published 2026-07-27 (Wave 1, spoke 3 of 5).
@@ -1155,6 +1155,7 @@ export const SEO_PAGES: Page[] = [
       'marketing-for-ai-consulting-firms',
       'marketing-for-hr-consulting-firms',
       'get-clients-for-ca-firm',
+      'lead-generation-for-professional-services',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
@@ -1290,6 +1291,7 @@ export const SEO_PAGES: Page[] = [
       'marketing-for-ip-firms',
       'marketing-for-ai-consulting-firms',
       'marketing-for-hr-consulting-firms',
+      'lead-generation-for-professional-services',
     ],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service'],
     publishWave: 4,
@@ -1695,6 +1697,65 @@ export const SEO_PAGES: Page[] = [
           question: 'Will AI replace marketing consultants?',
           answer:
             'It is replacing the parts of marketing work that were never the valuable part: first drafts, research summaries, reporting. The parts a services firm actually pays an adviser for, deciding who to serve, what to say, and what not to do, depend on judgement about your market. That is getting more valuable as AI makes generic content free.',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'lead-generation-for-professional-services',
+    url: '/blog/lead-generation-for-professional-services',
+    type: 'spoke',
+    title: 'Lead Generation for Professional Services Firms',
+    metaDescription:
+      'Professional services clients arrive at a trigger moment, looking for someone they already trust. How a firm generates leads by being that someone.',
+    primaryKeyword: 'lead generation for professional services',
+    secondaryKeywords: [
+      'lead generation for professional services firms',
+      'how can a professional services company generate leads',
+      'lead generation for consulting companies',
+    ],
+    clearLetter: 'E',
+    parent: 'marketing-for-professional-services',
+    siblings: ['lead-generation-for-service-business', 'get-clients-for-ca-firm', 'marketing-for-ip-firms'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
+    publishWave: 6,
+    // Published 2026-11-01 (Wave 6, page 2). GSC: "lead generation for
+    // professional services" / "consulting companies" at pos 60–90, matched to
+    // the consultants spoke. This spoke sits under the professional services hub.
+    status: 'live',
+    brief: {
+      angle:
+        'Professional services leads start with a trigger event, not a campaign. Lead generation is making sure the firm is the obvious name, or the first useful answer, when the trigger arrives.',
+      outline: [
+        'Why lead generation feels wrong to most professionals',
+        'Every professional services lead starts with a trigger',
+        'Three ways clients find a professional services firm',
+        'Turn attention into a conversation',
+        'Should you hire a lead generation company?',
+        'How it changes by type of firm',
+        'Measure where your clients really come from',
+      ],
+      handoffLine: 'Good at the work, but enquiries still arrive only by chance?',
+      faqs: [
+        {
+          question: 'How can a professional services firm generate leads?',
+          answer:
+            'Map the trigger events that make someone need your service, then make sure you are found or remembered at that moment. In practice that means deliberate referral relationships with adjacent professionals, useful pages that answer the questions buyers search when the trigger arrives, and a visible point of view through writing or speaking. Then make the next step easy: a clear statement of who you help, a low-risk first step, and a same-day reply.',
+        },
+        {
+          question: 'Can a law or CA firm in India do lead generation without advertising?',
+          answer:
+            'Yes. The professional rules restrict soliciting work and advertising, so outreach and promotional campaigns are largely off the table. Being findable, publishing useful knowledge, speaking, and building relationships with other professionals generally remain open, and they are the channels that work best for trust-based services anyway. Check the current rules of your own professional body before publishing anything promotional.',
+        },
+        {
+          question: 'Is LinkedIn good for lead generation in professional services?',
+          answer:
+            'It is good for the third source: being known for your thinking before anyone needs you. A partner who posts a clear, useful view when a new rule or ruling lands becomes familiar to the right people. It is poor as a cold outreach channel for most professional firms, because automated connection requests and pitches undermine the trust you are selling.',
+        },
+        {
+          question: 'How long does lead generation take to work for a professional services firm?',
+          answer:
+            'Faster fixes, like a clearer website, a defined first step, and same-day replies, can change enquiries within weeks. Search pages and published thinking take several months of steady work before they bring enquiries you can measure, and they keep paying for years after. Deliberate referral relationships sit in between.',
         },
       ],
     },

@@ -984,6 +984,27 @@ export const posts = [
     ],
   },
   {
+    slug: 'lead-generation-for-professional-services',
+    hero: img(
+      'Being the name that comes to mind at the trigger moment',
+      'Metaphor: on white, a small navy-outlined bell on the left of the frame with three short fine navy lines radiating from it, as if it has just rung. To the right, with generous space between, a row of five small navy-outlined circles; the nearest one is solid orange. A single fine navy line runs from the bell to the orange circle. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'A trigger event, and the firm that comes to mind',
+        'Subject: on white, a thin navy horizontal timeline across the frame. At one point along it, a small solid orange lightning-bolt shape sits just above the line. From that point, one fine navy line rises to a single navy-outlined square above. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'From a first visit to a first conversation',
+        'Subject: on white, three small navy-outlined shapes in a row from left to right: a rectangle like a web page, a short arrow, and two overlapping speech-bubble outlines. The final speech bubble has a small solid orange dot inside it. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'The same system, tuned to each profession',
+        'Subject: on white, one navy-outlined circle in the centre of the frame with four thin navy lines running out to four smaller navy-outlined circles, each with a different tiny navy icon inside (a balance scale, a document, a light bulb, a person). One small solid orange dot sits at the centre circle. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
+  {
     slug: 'ai-marketing-consultant',
     hero: img(
       'Marketing judgement first, the machine second',
