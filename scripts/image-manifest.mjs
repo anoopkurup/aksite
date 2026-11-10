@@ -984,6 +984,27 @@ export const posts = [
     ],
   },
   {
+    slug: 'business-growth-consultant',
+    hero: img(
+      'Release the handbrake before pressing harder',
+      'Metaphor: on white, a simple navy-outlined car handbrake lever seen from the side, drawn in fine line-art, tilted down to the released position. A thin curved navy arrow arcs beside it showing the downward release. The small button at the tip of the lever is solid orange. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'The handbrake, not the engine',
+        'Subject: on white, four small navy-outlined circles in a row across the frame, each joined to the next by a short thin navy line, like links in a chain. The second circle is solid orange. Above the row, a single thin navy arrow points right, blocked at the orange circle by a short vertical navy bar. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Four stages, in order',
+        'Subject: on white, four navy-outlined steps rising from left to right like a simple staircase, each step a plain rectangle in fine navy line. A small solid orange dot sits on the top step. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Separating diagnosis from a ready-made prescription',
+        'Subject: on white, a simple navy-outlined magnifying glass on the left of the frame held over a small navy-outlined square grid. To the right, with generous space between, a single navy-outlined clipboard. A thin navy line runs from the magnifying glass to the clipboard, and one small solid orange tick sits on the clipboard. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
+  {
     slug: 'lead-generation-for-professional-services',
     hero: img(
       'Being the name that comes to mind at the trigger moment',

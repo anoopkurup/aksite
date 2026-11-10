@@ -232,7 +232,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'C',
     parent: PILLAR,
-    siblings: ['stop-relying-on-referrals', 'lead-generation-for-service-business'],
+    siblings: ['stop-relying-on-referrals', 'lead-generation-for-service-business', 'business-growth-consultant'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 1,
     // Published 2026-08-01 (Wave 1, spoke 4 of 5).
@@ -390,7 +390,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'R',
     parent: PILLAR,
-    siblings: ['value-based-pricing-for-consultants'],
+    siblings: ['value-based-pricing-for-consultants', 'business-growth-consultant'],
     // FAQs + FAQPage added 2026-10-30: GSC showed ~12 "scale a consulting
     // business" variants at positions 14–30, with no FAQ block to answer them.
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
@@ -1573,7 +1573,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'A',
     parent: PILLAR,
-    siblings: ['marketing-consultant-for-agencies', 'marketing-for-ip-firms', 'ai-marketing-consultant'],
+    siblings: ['marketing-consultant-for-agencies', 'marketing-for-ip-firms', 'ai-marketing-consultant', 'business-growth-consultant'],
     schema: ['BlogPosting', 'BreadcrumbList', 'Service', 'FAQPage'],
     publishWave: 5,
     status: 'live',
@@ -1756,6 +1756,66 @@ export const SEO_PAGES: Page[] = [
           question: 'How long does lead generation take to work for a professional services firm?',
           answer:
             'Faster fixes, like a clearer website, a defined first step, and same-day replies, can change enquiries within weeks. Search pages and published thinking take several months of steady work before they bring enquiries you can measure, and they keep paying for years after. Deliberate referral relationships sit in between.',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'business-growth-consultant',
+    url: '/blog/business-growth-consultant',
+    type: 'vertical',
+    title: 'Business Growth Consultant: What One Should Fix First',
+    metaDescription:
+      'What a business growth consultant should do for a B2B services firm, why growth stalls in marketing rather than sales, and what to ask before you hire.',
+    primaryKeyword: 'business growth consultant',
+    secondaryKeywords: [
+      'business scaling consultant',
+      'business growth strategy consultant',
+      'small business growth consultant',
+      'scale up consulting',
+    ],
+    clearLetter: 'C',
+    parent: PILLAR,
+    siblings: ['scale-beyond-the-founder', 'b2b-marketing-consultant-india', 'founder-led-sales-trap'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'Service', 'FAQPage'],
+    publishWave: 6,
+    // Published 2026-11-10 (Wave 6, page 3). GSC: ~11 "business scaling
+    // consultant" / "scale-up consulting" variants at pos 11–88 with no page;
+    // DataForSEO puts the volume on "business growth consultant" (India).
+    status: 'live',
+    brief: {
+      angle:
+        'Service-intent buyer’s guide: growth stalls on a handbrake (vague position, no visibility, burst marketing, founder bottleneck), not a weak engine. Release it before pressing harder.',
+      outline: [
+        'What a business growth consultant actually does (strategy/ops vs sales coach vs marketing)',
+        'Why growth stalls in a B2B services firm',
+        'Growing a firm is not the same as scaling it',
+        'What a good growth consultant should fix first',
+        'When you should not hire a growth consultant',
+        'Questions to ask before you hire a business growth consultant',
+        'How I work as a growth consultant',
+      ],
+      handoffLine: 'Growth has stalled and you are not sure why?',
+      faqs: [
+        {
+          question: 'What does a business growth consultant do?',
+          answer:
+            'It depends on the kind. Strategy and operations consultants work on the business model, organisation, and expansion. Sales coaches work on the people who sell. A marketing growth consultant fixes why good buyers are not finding or choosing the firm: positioning, visibility, and a repeatable way of generating enquiries. For most B2B services firms the stall sits in that last area.',
+        },
+        {
+          question: 'What is the difference between growing and scaling a business?',
+          answer:
+            'Growth means more revenue. Scaling means revenue grows faster than the effort, cost, and founder time needed to produce it. A consulting firm can grow by working longer hours and hiring as fast as it wins work; it scales when new clients arrive without the founder personally finding each one.',
+        },
+        {
+          question: 'How much does a business growth consultant charge in India?',
+          answer:
+            'Fees vary widely with the scope, the size of the practice, and whether the consultant advises or also delivers. Compare engagements on what you will own at the end, such as a clear position, a message, and a routine your team runs, rather than on the monthly figure. Be wary of anything that only works while the consultant stays.',
+        },
+        {
+          question: 'When should a B2B services firm hire a growth consultant?',
+          answer:
+            'When the work is good, delivery has room for more clients, and enquiries still depend on referrals and the founder. Do not hire one when you cannot deliver more work, when clients are leaving unhappy, or when the founder is not willing to change anything about who the firm serves or how it sells.',
         },
       ],
     },
