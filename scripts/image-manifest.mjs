@@ -1363,4 +1363,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'thought-leadership-for-services-firms',
+    hero: img(
+      'An open kitchen: letting buyers watch the firm think',
+      'Metaphor: on white, a large navy-outlined rectangle like a pane of glass, with two thin diagonal navy glint lines in its upper corner. Behind the glass, a simple navy-outlined cooking pot on a short navy line for a counter, with three thin wavy navy lines of steam rising from it. The lid handle of the pot is a small solid orange circle. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Fine line-art, flat premium vector, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Volume is not a point of view',
+        'Subject: on white, on the left a dense grid of twelve small identical navy-outlined squares with white interiors. On the right, with generous space between, one single navy-outlined square of the same size holding a small solid orange arrow pointing up. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Five forms of published thinking',
+        'Subject: on white, five small navy-outlined circles with white interiors arranged in a gentle arc across the frame, each joined to a single small solid orange circle below the arc by a thin navy line, like spokes meeting at one point. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'From idea to conversation',
+        'Subject: on white, a thin navy horizontal line across the frame with four small navy-outlined circles spaced along it, the gaps between them widening slightly from left to right. At the right end of the line, two small navy-outlined speech bubbles overlap, and one of them is solid orange. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'The argument stays human; the drafting can be shared',
+        'Subject: on white, a navy-outlined fountain pen nib on the left of the frame. On the right, with generous space between, three thin navy horizontal lines like lines of text. A small solid orange dot sits at the tip of the nib. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];

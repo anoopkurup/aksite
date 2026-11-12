@@ -544,7 +544,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['cold-outreach-for-consultants', 'ai-for-client-acquisition'],
+    siblings: ['cold-outreach-for-consultants', 'ai-for-client-acquisition', 'thought-leadership-for-services-firms'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
     // Published 2026-08-28 (Wave 2, spoke 7 of 7 — wave complete).
@@ -1463,7 +1463,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['b2b-brand-awareness-small-firms', 'founder-brand-vs-company-brand'],
+    siblings: ['b2b-brand-awareness-small-firms', 'founder-brand-vs-company-brand', 'thought-leadership-for-services-firms'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 5,
     // Published 2026-09-10 (Wave 5, spoke 4 of 8 — visibility & brand cluster anchor).
@@ -1539,7 +1539,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'R',
     parent: PILLAR,
-    siblings: ['brand-building-for-professional-services', 'b2b-brand-awareness-small-firms'],
+    siblings: ['brand-building-for-professional-services', 'b2b-brand-awareness-small-firms', 'thought-leadership-for-services-firms'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 5,
     // Published 2026-09-15 (Wave 5, spoke 6 of 8 — visibility & brand cluster).
@@ -1816,6 +1816,71 @@ export const SEO_PAGES: Page[] = [
           question: 'When should a B2B services firm hire a growth consultant?',
           answer:
             'When the work is good, delivery has room for more clients, and enquiries still depend on referrals and the founder. Do not hire one when you cannot deliver more work, when clients are leaving unhappy, or when the founder is not willing to change anything about who the firm serves or how it sells.',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'thought-leadership-for-services-firms',
+    url: '/blog/thought-leadership-for-services-firms',
+    type: 'spoke',
+    title: 'Thought Leadership for B2B Services Firms',
+    metaDescription:
+      'What thought leadership means for a B2B services firm, examples that work, and how to build a point of view that brings in enquiries.',
+    primaryKeyword: 'thought leadership',
+    secondaryKeywords: [
+      'what is thought leadership',
+      'thought leadership examples',
+      'thought leadership strategy',
+      'thought leadership marketing',
+    ],
+    clearLetter: 'E',
+    parent: PILLAR,
+    siblings: ['seo-for-consultants', 'brand-building-for-professional-services', 'founder-brand-vs-company-brand'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
+    publishWave: 6,
+    // Published 2026-11-12 (Wave 6, page 4). GSC had no uncovered query; picked from
+    // the DataForSEO topic list: "thought leadership" 1,600/mo India, mostly
+    // definitional, and no live page targets the head term.
+    status: 'live',
+    brief: {
+      angle:
+        'The open kitchen: a buyer cannot inspect a service before buying it, so published thinking is the glass that lets them watch you work. Thought leadership is a point of view on the client’s problem, not content volume.',
+      outline: [
+        'What is thought leadership?',
+        'What thought leadership is not',
+        'Why it matters more for a services firm',
+        'Thought leadership examples for a B2B services firm',
+        'How to build a thought leadership strategy without a content team',
+        'How thought leadership turns into enquiries',
+        'What AI changed about thought leadership',
+      ],
+      handoffLine: 'Know your field, but nobody outside your network can see it?',
+      faqs: [
+        {
+          question: 'What is the concept of thought leadership?',
+          answer:
+            'Thought leadership means publishing a clear, useful point of view on your clients’ problems, consistently enough that the right buyers come to see your firm as the one that understands those problems best. It is a description buyers give you after they have read your thinking, not a title you give yourself.',
+        },
+        {
+          question: 'Can you give me some examples of thought leadership?',
+          answer:
+            'For a B2B services firm the forms that work are an argument the firm will defend in one sentence, a named way of diagnosing the client’s problem, patterns drawn from the firm’s own work, a respectful disagreement with common advice in the field, and worked examples that show the reasoning behind a decision. Commentary on industry news is not one of them.',
+        },
+        {
+          question: 'Is thought leadership the same as content marketing?',
+          answer:
+            'No. Content marketing is the publishing activity: articles, posts, newsletters, talks. Thought leadership is what that publishing says. A firm can publish every day and have no thought leadership, because nothing it publishes is a position a reader could disagree with.',
+        },
+        {
+          question: 'How long does thought leadership take to bring in clients?',
+          answer:
+            'Expect six to twelve months of steady publishing before it shows up in enquiries. The early signs come sooner: prospects quoting a piece back to you, first calls that start from the problem rather than your credentials, and fewer conversations about price.',
+        },
+        {
+          question: 'Can a small firm do thought leadership without a content team?',
+          answer:
+            'Yes. One protected slot a week is enough: one idea, written properly, then reused as posts, talks, and conversation openers. AI can produce first drafts, but the argument and the examples have to come from the firm’s own work, or the result is generic content.',
         },
       ],
     },
