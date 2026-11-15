@@ -1388,4 +1388,25 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'how-to-market-a-consulting-firm',
+    hero: img(
+      'The tailor in a new city: good work the market has not met yet',
+      'Metaphor: on white, a simple navy-outlined shirt on a navy-outlined hanger, centred. To its right, with generous space between, a thin navy horizontal line like a street with three small navy-outlined doorways along it. A single small solid orange button sits on the shirt front. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        "Four parts of a consulting firm's marketing",
+        'Subject: on white, four navy-outlined squares with white interiors in a horizontal row, joined left to right by thin navy lines. The fourth square on the right holds a small solid orange circle. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Channels that fit a consulting firm',
+        'Subject: on white, a navy-outlined circle in the centre with five thin navy lines radiating out to five small navy-outlined circles around it. Two of the five outer circles are filled solid orange. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A weekly rhythm',
+        'Subject: on white, seven small navy-outlined squares in a horizontal row like the days of a week, evenly spaced. One square near the start of the row is filled solid orange. Below the row, a thin navy line with a small curved arrow returning from its right end to its left end. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];

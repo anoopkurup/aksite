@@ -199,7 +199,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['cold-outreach-for-consultants', 'founder-led-sales-trap', 'lead-generation-for-professional-services'],
+    siblings: ['cold-outreach-for-consultants', 'founder-led-sales-trap', 'lead-generation-for-professional-services', 'how-to-market-a-consulting-firm'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 1,
     // Published 2026-07-27 (Wave 1, spoke 3 of 5).
@@ -544,7 +544,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['cold-outreach-for-consultants', 'ai-for-client-acquisition', 'thought-leadership-for-services-firms'],
+    siblings: ['cold-outreach-for-consultants', 'ai-for-client-acquisition', 'thought-leadership-for-services-firms', 'how-to-market-a-consulting-firm'],
     schema: ['BlogPosting', 'BreadcrumbList'],
     publishWave: 2,
     // Published 2026-08-28 (Wave 2, spoke 7 of 7 — wave complete).
@@ -1337,7 +1337,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'C',
     parent: PILLAR,
-    siblings: ['how-to-differentiate-b2b-services-firm', 'b2b-messaging-framework'],
+    siblings: ['how-to-differentiate-b2b-services-firm', 'b2b-messaging-framework', 'how-to-market-a-consulting-firm'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 5,
     // Published 2026-08-31 (Wave 5, spoke 1 of 8 — positioning cluster anchor).
@@ -1836,7 +1836,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['seo-for-consultants', 'brand-building-for-professional-services', 'founder-brand-vs-company-brand'],
+    siblings: ['seo-for-consultants', 'brand-building-for-professional-services', 'founder-brand-vs-company-brand', 'how-to-market-a-consulting-firm'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 6,
     // Published 2026-11-12 (Wave 6, page 4). GSC had no uncovered query; picked from
@@ -1881,6 +1881,72 @@ export const SEO_PAGES: Page[] = [
           question: 'Can a small firm do thought leadership without a content team?',
           answer:
             'Yes. One protected slot a week is enough: one idea, written properly, then reused as posts, talks, and conversation openers. AI can produce first drafts, but the argument and the examples have to come from the firm’s own work, or the result is generic content.',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'how-to-market-a-consulting-firm',
+    url: '/blog/how-to-market-a-consulting-firm',
+    type: 'spoke',
+    title: 'How to Market a Consulting Firm',
+    metaDescription:
+      'How to market a consulting firm when clients buy judgement they cannot inspect: positioning first, then proof, visibility, and an easy first step.',
+    primaryKeyword: 'how to market a consulting firm',
+    secondaryKeywords: [
+      'consulting marketing',
+      'marketing for consulting services',
+      'how to market your consulting services',
+      'marketing strategy for consulting firms',
+      'digital marketing for consulting',
+    ],
+    clearLetter: 'E',
+    parent: 'marketing-for-professional-services',
+    siblings: ['positioning-for-consulting-firms', 'lead-generation-for-service-business', 'thought-leadership-for-services-firms', 'seo-for-consultants'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
+    publishWave: 6,
+    // Published 2026-11-15 (Wave 6, page 5). DataForSEO topic list #1:
+    // "consulting marketing" 1,300/mo India, split intent (hire vs market your
+    // own firm); this page takes the second and links to the hiring guide.
+    status: 'live',
+    brief: {
+      angle:
+        'The tailor in a new city: skill travels, reputation does not. A consulting firm sells judgement buyers cannot inspect, so marketing must answer three silent questions for strangers. Strategy = position, proof, visibility, a way in; most firms have one or two.',
+      outline: [
+        'Why marketing a consulting firm is different',
+        'Start with positioning, not channels',
+        'A marketing strategy for a consulting firm: the four parts',
+        'Digital marketing for consulting firms: which channels earn their place',
+        'Turning attention into enquiries',
+        'A weekly marketing routine for a busy consulting firm',
+        'How to measure consulting marketing',
+      ],
+      handoffLine: 'Great work, but only the people who know you can find it?',
+      faqs: [
+        {
+          question: 'How do I market my consulting services?',
+          answer:
+            'Decide your position first: the problem you solve, for which buyer, with what method. Then turn past engagements into proof, pick two channels your buyers already use (usually your own writing, LinkedIn, or industry events), and offer a small first step such as a short diagnostic. Keep it on a weekly rhythm rather than in bursts.',
+        },
+        {
+          question: 'What is the best marketing strategy for a consulting company?',
+          answer:
+            'There is no single best channel. A strategy that works for a small consulting firm has four parts: a clear position, proof from past work, visibility where buyers already look, and an easy first step into working together. Most firms that say their marketing is not working are missing one of the four.',
+        },
+        {
+          question: 'What is marketing consulting?',
+          answer:
+            'Marketing consulting is outside advice on a firm’s positioning, marketing strategy, and lead generation, as opposed to an agency that runs campaigns. It is a different thing from marketing a consulting firm, which is what this guide covers. A consulting firm can do its own marketing; outside help is useful when the positioning is unclear or the founder has no time to build the system.',
+        },
+        {
+          question: 'How long does it take for marketing to bring a consulting firm clients?',
+          answer:
+            'Expect six to twelve months of steady work before marketing produces enquiries reliably on its own. Earlier signs show up within a few months: prospects quoting your ideas back to you, and first calls that start from their problem rather than your credentials.',
+        },
+        {
+          question: 'Will AI replace consultants?',
+          answer:
+            'AI replaces the generic parts of consulting: research summaries, first drafts, standard frameworks. It does not replace judgement earned from real engagements, which is what clients pay a consultant for. For marketing, that makes a firm’s specific point of view more valuable, because generic advice is now free.',
         },
       ],
     },
