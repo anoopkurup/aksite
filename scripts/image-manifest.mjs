@@ -1409,4 +1409,29 @@ export const posts = [
       ),
     ],
   },
+  {
+    slug: 'b2b-marketing-strategy-for-services',
+    hero: img(
+      'A captain sets the field: strategy is choosing where to stand',
+      'Metaphor: on white, a large navy-outlined oval like a cricket ground seen from above, with a small navy-outlined rectangle at its centre for the pitch. Six small navy dots are placed clustered on one side of the oval, leaving the other side deliberately empty. One small solid orange dot sits among the cluster. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+    ),
+    inlines: [
+      img(
+        'Five decisions in a marketing strategy',
+        'Subject: on white, five navy-outlined circles stacked vertically and joined top to bottom by a thin navy line, like steps in a sequence. The second circle from the top is filled solid orange. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'One idea, reused across channels',
+        'Subject: on white, one solid orange circle on the left with three thin navy lines branching out to the right, each ending at a small navy-outlined rectangle. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'A marketing strategy on one page',
+        'Subject: on white, a single navy-outlined sheet of paper, portrait, centred, with five short thin navy horizontal lines on it like five written lines. A small solid orange tick mark sits beside the first line. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+      img(
+        'Strategy, then a weekly routine',
+        'Subject: on white, a navy-outlined square on the left joined by a thin navy arrow to a horizontal row of seven small navy-outlined squares on the right. One of the seven small squares is filled solid orange. Nothing else on the canvas. Strictly flat colour: no glow, no halo, no gradient, no shadow. Flat 2D vector, uniform fine line weight, generous white space, no text.'
+      ),
+    ],
+  },
 ];

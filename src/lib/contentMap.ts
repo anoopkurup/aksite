@@ -1337,7 +1337,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'C',
     parent: PILLAR,
-    siblings: ['how-to-differentiate-b2b-services-firm', 'b2b-messaging-framework', 'how-to-market-a-consulting-firm'],
+    siblings: ['how-to-differentiate-b2b-services-firm', 'b2b-messaging-framework', 'how-to-market-a-consulting-firm', 'b2b-marketing-strategy-for-services'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 5,
     // Published 2026-08-31 (Wave 5, spoke 1 of 8 — positioning cluster anchor).
@@ -1716,7 +1716,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: 'marketing-for-professional-services',
-    siblings: ['lead-generation-for-service-business', 'get-clients-for-ca-firm', 'marketing-for-ip-firms'],
+    siblings: ['lead-generation-for-service-business', 'get-clients-for-ca-firm', 'marketing-for-ip-firms', 'b2b-marketing-strategy-for-services'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 6,
     // Published 2026-11-01 (Wave 6, page 2). GSC: "lead generation for
@@ -1836,7 +1836,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: PILLAR,
-    siblings: ['seo-for-consultants', 'brand-building-for-professional-services', 'founder-brand-vs-company-brand', 'how-to-market-a-consulting-firm'],
+    siblings: ['seo-for-consultants', 'brand-building-for-professional-services', 'founder-brand-vs-company-brand', 'how-to-market-a-consulting-firm', 'b2b-marketing-strategy-for-services'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 6,
     // Published 2026-11-12 (Wave 6, page 4). GSC had no uncovered query; picked from
@@ -1902,7 +1902,7 @@ export const SEO_PAGES: Page[] = [
     ],
     clearLetter: 'E',
     parent: 'marketing-for-professional-services',
-    siblings: ['positioning-for-consulting-firms', 'lead-generation-for-service-business', 'thought-leadership-for-services-firms', 'seo-for-consultants'],
+    siblings: ['positioning-for-consulting-firms', 'lead-generation-for-service-business', 'thought-leadership-for-services-firms', 'seo-for-consultants', 'b2b-marketing-strategy-for-services'],
     schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
     publishWave: 6,
     // Published 2026-11-15 (Wave 6, page 5). DataForSEO topic list #1:
@@ -1947,6 +1947,74 @@ export const SEO_PAGES: Page[] = [
           question: 'Will AI replace consultants?',
           answer:
             'AI replaces the generic parts of consulting: research summaries, first drafts, standard frameworks. It does not replace judgement earned from real engagements, which is what clients pay a consultant for. For marketing, that makes a firm’s specific point of view more valuable, because generic advice is now free.',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'b2b-marketing-strategy-for-services',
+    url: '/blog/b2b-marketing-strategy-for-services',
+    type: 'spoke',
+    title: 'B2B Marketing Strategy for Services Firms',
+    metaDescription:
+      'A B2B marketing strategy for a services firm is a short list of decisions: who you serve, what you are known for, your proof, two channels, and a way in.',
+    primaryKeyword: 'b2b marketing strategy',
+    secondaryKeywords: [
+      'marketing strategy for b2b',
+      'b2b content marketing strategy',
+      'b2b marketing strategy example',
+      'b2b marketing strategy framework',
+      'how to create a b2b marketing strategy',
+    ],
+    clearLetter: 'C',
+    parent: 'marketing-for-professional-services',
+    siblings: ['how-to-market-a-consulting-firm', 'positioning-for-consulting-firms', 'thought-leadership-for-services-firms', 'lead-generation-for-professional-services'],
+    schema: ['BlogPosting', 'BreadcrumbList', 'FAQPage'],
+    publishWave: 6,
+    // Published 2026-11-17 (Wave 6, page 6). DataForSEO topic list #2:
+    // "b2b marketing strategy" 880/mo India. Briefed as "strategy" (what to
+    // decide) so it does not cannibalise the pillar's "system" (what to run).
+    status: 'live',
+    brief: {
+      angle:
+        'The cricket captain setting the field: nine fielders, too much ground, so strategy is choosing where to stand and leaving gaps on purpose. For a services firm it is five decisions (who, known for, proof, two channels, a way in) plus one weekly routine.',
+      outline: [
+        'What is a B2B marketing strategy?',
+        'Why a services firm needs a different strategy',
+        'The five decisions in a B2B marketing strategy',
+        'Positioning does most of the work',
+        'A B2B content marketing strategy: one idea a week',
+        'Which platform works best for B2B marketing?',
+        'A B2B marketing strategy example',
+        'How to create a B2B marketing strategy on one page',
+        'How do you attract B2B customers?',
+      ],
+      handoffLine: 'Busy with activity, but the enquiries still come from the same three people?',
+      faqs: [
+        {
+          question: 'What does B2B mean in marketing terms?',
+          answer:
+            'B2B means business to business: the buyer is a company, not a consumer. In marketing that means a decision made by several people, over weeks or months, with someone else’s money, so the buyer needs evidence they can defend to a boss or a board.',
+        },
+        {
+          question: 'What should a B2B marketing strategy include?',
+          answer:
+            'For a services firm, five decisions: who you serve, what you want to be known for, the proof you can show, the two channels your buyers already use, and a small first step into working together. A content calendar and a budget are the plan that follows, not the strategy.',
+        },
+        {
+          question: 'Which platform is best for B2B marketing in India?',
+          answer:
+            'For most B2B services firms in India, LinkedIn is where buyers already spend part of their working day, so it is usually one of the two channels. The other is often your own articles, or talks at industry associations. The right answer is whichever your chosen buyer uses when they have your problem.',
+        },
+        {
+          question: 'How is a B2B marketing strategy for services different from one for software?',
+          answer:
+            'A software buyer can try the product before buying; a services buyer cannot try you. So a services firm’s strategy is almost entirely about building trust: a clear position, proof from past work, and a low-risk first step, rather than trials, demos, and paid campaigns.',
+        },
+        {
+          question: 'How long does a B2B marketing strategy take to work?',
+          answer:
+            'Expect six to twelve months of steady work before it produces enquiries reliably. Earlier signs show up within a few months: prospects quoting your ideas back to you, and first calls that start from their problem rather than your credentials.',
         },
       ],
     },
